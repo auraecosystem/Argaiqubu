@@ -61,12 +61,12 @@
           labelFor="events-start-datepicker"
         >
           <o-datepicker
-            v-model="dateFilter"
+            v-model="datePick"
             :first-day-of-week="firstDayOfWeek"
             id="events-start-datepicker"
           />
           <o-button
-            @click="dateFilter = new Date()"
+            @click="datePick = new Date()"
             class="reset-area !h-auto"
             icon-left="close"
             :title="t('Clear date filter field')"
@@ -250,27 +250,43 @@ const futurePage = ref(1);
 const pastPage = ref(1);
 const limit = ref(10);
 
+function startOfDay(d: Date): string {
+  const pad = (n: int): string => {
+    return (n > 9 ? "" : "0") + n.toString();
+  };
+  return (
+    d.getFullYear() +
+    "-" +
+    pad(d.getMonth() + 1) +
+    "-" +
+    pad(d.getDate()) +
+    "T00:00:00Z"
+  );
+}
+
 const showUpcoming = useRouteQuery("showUpcoming", true, booleanTransformer);
 const showDrafts = useRouteQuery("showDrafts", true, booleanTransformer);
 const showAttending = useRouteQuery("showAttending", true, booleanTransformer);
 const showMyGroups = useRouteQuery("showMyGroups", false, booleanTransformer);
-const dateFilter = useRouteQuery("dateFilter", new Date(), {
+const dateFilter = useRouteQuery("dateFilter", startOfDay(new Date()), {
   fromQuery(query) {
     if (query && /(\d{4}-\d{2}-\d{2})/.test(query)) {
-      return new Date(`${query}T00:00:00Z`);
+      return `${query}T00:00:00Z`;
     }
-    return new Date();
+    return startOfDay(new Date());
   },
-  toQuery(value: Date) {
-    const pad = (number: number) => {
-      if (number < 10) {
-        return "0" + number;
-      }
-      return number;
-    };
-    return `${value.getFullYear()}-${pad(value.getMonth() + 1)}-${pad(
-      value.getDate()
-    )}`;
+  toQuery(value: string) {
+    return value.slice(0, 10);
+  },
+});
+
+// bridge between datepicker expecting a Date object and dateFilter being a string
+const datePick = computed({
+  get: () => {
+    return new Date(dateFilter.value);
+  },
+  set: (d: Date) => {
+    dateFilter.value = startOfDay(d);
   },
 });
 
