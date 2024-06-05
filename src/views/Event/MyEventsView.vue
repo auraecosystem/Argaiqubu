@@ -352,19 +352,12 @@ const monthlyEvents = (
     }
     return element.beginsOn != null;
   });
-  if (revertSort) {
-    res.sort((a: Eventable, b: Eventable) => {
-      const aTime = "role" in a ? a.event.beginsOn : a.beginsOn;
-      const bTime = "role" in b ? b.event.beginsOn : b.beginsOn;
-      return new Date(bTime).getTime() - new Date(aTime).getTime();
-    });
-  } else {
-    res.sort((a: Eventable, b: Eventable) => {
-      const aTime = "role" in a ? a.event.beginsOn : a.beginsOn;
-      const bTime = "role" in b ? b.event.beginsOn : b.beginsOn;
-      return new Date(aTime).getTime() - new Date(bTime).getTime();
-    });
-  }
+  const sign = revertSort ? -1 : 1;
+  res.sort((a: Eventable, b: Eventable) => {
+    const aTime = "role" in a ? a.event.beginsOn : a.beginsOn;
+    const bTime = "role" in b ? b.event.beginsOn : b.beginsOn;
+    return sign * (new Date(aTime).getTime() - new Date(bTime).getTime());
+  });
   return res.reduce((acc: Map<string, Eventable[]>, element: Eventable) => {
     const month = new Date(
       "role" in element ? element.event.beginsOn : element.beginsOn
