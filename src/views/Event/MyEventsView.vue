@@ -23,10 +23,27 @@
       <div
         class="rounded p-3 flex-auto md:flex-none bg-zinc-300 dark:bg-zinc-700"
       >
-        <o-field>
-          <o-switch v-model="showUpcoming">{{
-            showUpcoming ? t("Upcoming events") : t("Past events")
-          }}</o-switch>
+        <o-field
+          class="date-filter"
+          expanded
+          :label="
+            showUpcoming
+              ? t('Showing events starting on')
+              : t('Showing events before')
+          "
+          labelFor="events-start-datepicker"
+        >
+          <o-datepicker
+            v-model="datePick"
+            :first-day-of-week="firstDayOfWeek"
+            id="events-start-datepicker"
+          />
+          <o-button
+            @click="datePick = new Date()"
+            class="reset-area !h-auto"
+            icon-left="close"
+            :title="t('Clear date filter field')"
+          />
         </o-field>
         <o-field v-if="showUpcoming">
           <o-checkbox v-model="showDrafts">{{ t("Drafts") }}</o-checkbox>
@@ -50,28 +67,6 @@
             )
           }}
         </p>
-        <o-field
-          class="date-filter"
-          expanded
-          :label="
-            showUpcoming
-              ? t('Showing events starting on')
-              : t('Showing events before')
-          "
-          labelFor="events-start-datepicker"
-        >
-          <o-datepicker
-            v-model="datePick"
-            :first-day-of-week="firstDayOfWeek"
-            id="events-start-datepicker"
-          />
-          <o-button
-            @click="datePick = new Date()"
-            class="reset-area !h-auto"
-            icon-left="close"
-            :title="t('Clear date filter field')"
-          />
-        </o-field>
       </div>
       <div class="flex-1 min-w-[300px]">
         <section
