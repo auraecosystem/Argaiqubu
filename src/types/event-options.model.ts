@@ -23,7 +23,7 @@ export interface IEventOptions {
   attendees: string[];
   program: string;
   commentModeration: CommentModeration;
-  showParticipationPrice: boolean;
+  showParticipationFee: boolean;
   hideNumberOfParticipants: boolean;
   showStartTime: boolean;
   showEndTime: boolean;
@@ -52,7 +52,7 @@ export class EventOptions implements IEventOptions {
 
   commentModeration = CommentModeration.ALLOW_ALL;
 
-  showParticipationPrice = false;
+  showParticipationFee = false;
 
   hideNumberOfParticipants = false;
 

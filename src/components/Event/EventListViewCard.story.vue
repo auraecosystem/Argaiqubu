@@ -113,7 +113,7 @@ const baseEvent: IEvent = {
     attendees: [],
     program: "",
     commentModeration: CommentModeration.ALLOW_ALL,
-    showParticipationPrice: false,
+    showParticipationFee: false,
     showStartTime: false,
     showEndTime: false,
     timezone: null,

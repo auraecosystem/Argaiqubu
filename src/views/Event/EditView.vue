@@ -355,8 +355,8 @@
           </o-field>
 
           <o-field>
-            <o-switch v-model="eventOptions.showParticipationPrice">
-              {{ t('Display participation price') }}
+            <o-switch v-model="eventOptions.showParticipationFee">
+              {{ t('Display participation fee') }}
             </o-switch>
           </o-field>-->
         </div>

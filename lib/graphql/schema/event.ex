@@ -259,8 +259,8 @@ defmodule Mobilizon.GraphQL.Schema.EventType do
       description: "The policy on public comment moderation under the event"
     )
 
-    field(:show_participation_price, :boolean,
-      description: "Whether or not to show the participation price"
+    field(:show_participation_fee, :boolean,
+      description: "Whether or not to show the participation fee"
     )
 
     field(:hide_number_of_participants, :boolean,
@@ -316,8 +316,8 @@ defmodule Mobilizon.GraphQL.Schema.EventType do
       description: "The policy on public comment moderation under the event"
     )
 
-    field(:show_participation_price, :boolean,
-      description: "Whether or not to show the participation price"
+    field(:show_participation_fee, :boolean,
+      description: "Whether or not to show the participation fee"
     )
 
     field(:hide_number_of_participants, :boolean,
