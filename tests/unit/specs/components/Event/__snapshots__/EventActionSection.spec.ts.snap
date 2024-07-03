@@ -1,0 +1,158 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`EventActionSection > renders correctly 1`] = `
+"<div class="">
+  <div>
+    <div class="event-participation">
+      <div class="ml-auto w-min"><a href="/events/1/participate/with-account" class="o-btn o-btn--large o-btn--primary" role="button" data-oruga="button" rel="nofollow"><span class="o-btn__wrapper"><!----><span class="o-btn__label">Participate</span>
+          <!----></span>
+        </a></div>
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <!--teleport start-->
+    <transition-stub name="zoom-out" appear="false" persisted="false" css="true">
+      <div has-modal-card="" close-button-aria-label="Close" data-oruga="modal" class="o-modal" tabindex="-1" aria-modal="false" style="display: none;">
+        <div class="o-modal__overlay" tabindex="-1" aria-hidden="true"></div>
+        <div class="o-modal__content" style="max-width: 960px;">
+          <div class="modal-card">
+            <header class="modal-card-head">
+              <p class="modal-card-title">About anonymous participation</p>
+            </header>
+            <section class="modal-card-body">
+              <!--v-if-->
+              <p>Your participation status is saved only on this device and will be deleted one month after the event's passed.</p>
+              <!--v-if-->
+              <!--v-if-->
+            </section>
+          </div><span class="o-icon o-icon--clickable o-icon--medium o-modal__close" data-oruga="icon" style="display: none;"><i class="mdi mdi-close mdi-36px"></i></span>
+        </div>
+      </div>
+    </transition-stub>
+    <!--teleport end-->
+  </div>
+  <div class="flex flex-col gap-1 mt-1">
+    <p class="inline-flex gap-2 ml-auto"><span aria-hidden="true" class="material-design-icon ticket-confirmation-outline-icon" role="img"><svg fill="currentColor" class="material-design-icon__svg" width="24" height="24" viewBox="0 0 24 24"><path d="M22 10V6C22 4.89 21.1 4 20 4H4C2.9 4 2 4.89 2 6V10C3.11 10 4 10.9 4 12S3.11 14 2 14V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V14C20.9 14 20 13.1 20 12S20.9 10 22 10M20 8.54C18.81 9.23 18 10.53 18 12S18.81 14.77 20 15.46V18H4V15.46C5.19 14.77 6 13.47 6 12C6 10.5 5.2 9.23 4 8.54L4 6H20V8.54M11 15H13V17H11M11 11H13V13H11M11 7H13V9H11Z"><!--v-if--></path></svg></span><span><span>No one is participating</span></span>
+      <!--v-if-->
+    </p>
+    <p class="inline-flex gap-2 ml-auto"><span aria-hidden="true" class="material-design-icon cash-icon" role="img"><svg fill="currentColor" class="material-design-icon__svg" width="24" height="24" viewBox="0 0 24 24"><path d="M3,6H21V18H3V6M12,9A3,3 0 0,1 15,12A3,3 0 0,1 12,15A3,3 0 0,1 9,12A3,3 0 0,1 12,9M7,8A2,2 0 0,1 5,10V14A2,2 0 0,1 7,16H17A2,2 0 0,1 19,14V10A2,2 0 0,1 17,8H7Z"><!--v-if--></path></svg></span><span class="">25,00&nbsp;€ per person</span></p>
+    <div data-oruga="dropdown" class="o-drop o-drop--position-bottom-left ml-auto">
+      <div tabindex="0" class="o-drop__trigger" aria-haspopup="true"><button type="button" class="o-btn" role="button" data-oruga="button"><span class="o-btn__wrapper"><!----><span class="o-btn__label">Actions</span><span class="o-icon o-btn__icon o-btn__icon-right" data-oruga="icon"><i class="mdi mdi-dots-horizontal mdi-24px"></i></span></span></button></div>
+      <!--teleport start-->
+      <transition-stub name="fade" appear="false" persisted="false" css="true">
+        <!---->
+      </transition-stub>
+      <transition-stub name="fade" appear="false" persisted="false" css="true">
+        <div class="o-drop__menu o-drop__menu--bottom-left" role="list" aria-hidden="true" aria-modal="true" style="display: none;">
+          <div class="o-drop__item o-drop__item--clickable" role="listitem" tabindex="0" data-oruga="dropdown-item" has-link=""><a href="/events/1/participations" class="flex gap-1"><span aria-hidden="true" class="material-design-icon account-multiple-icon" role="img"><svg fill="currentColor" class="material-design-icon__svg" width="24" height="24" viewBox="0 0 24 24"><path d="M16 17V19H2V17S2 13 9 13 16 17 16 17M12.5 7.5A3.5 3.5 0 1 0 9 11A3.5 3.5 0 0 0 12.5 7.5M15.94 13A5.32 5.32 0 0 1 18 17V19H22V17S22 13.37 15.94 13M15 4A3.39 3.39 0 0 0 13.07 4.59A5 5 0 0 1 13.07 10.41A3.39 3.39 0 0 0 15 11A3.5 3.5 0 0 0 15 4Z"><!--v-if--></path></svg></span> Participations</a></div>
+          <div class="o-drop__item o-drop__item--clickable" role="listitem" tabindex="0" data-oruga="dropdown-item" has-link=""><a href="/events/1/announcements" class="flex gap-1"><span aria-hidden="true" class="material-design-icon bullhorn-icon" role="img"><svg fill="currentColor" class="material-design-icon__svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12,8H4A2,2 0 0,0 2,10V14A2,2 0 0,0 4,16H5V20A1,1 0 0,0 6,21H8A1,1 0 0,0 9,20V16H12L17,20V4L12,8M21.5,12C21.5,13.71 20.54,15.26 19,16V8C20.53,8.75 21.5,10.3 21.5,12Z"><!--v-if--></path></svg></span> Announcements</a></div>
+          <div class="o-drop__item o-drop__item--clickable" role="listitem" tabindex="0" data-oruga="dropdown-item" has-link=""><a href="/events/edit/1" class="flex gap-1"><span aria-hidden="true" class="material-design-icon pencil-icon" role="img"><svg fill="currentColor" class="material-design-icon__svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.12,5.12L18.87,8.87M3,17.25V21H6.75L17.81,9.93L14.06,6.18L3,17.25Z"><!--v-if--></path></svg></span> Edit</a></div>
+          <div class="o-drop__item o-drop__item--clickable" role="listitem" tabindex="0" data-oruga="dropdown-item" has-link=""><a href="/events/duplicate/1" class="flex gap-1"><span aria-hidden="true" class="material-design-icon content-duplicate-icon" role="img"><svg fill="currentColor" class="material-design-icon__svg" width="24" height="24" viewBox="0 0 24 24"><path d="M11,17H4A2,2 0 0,1 2,15V3A2,2 0 0,1 4,1H16V3H4V15H11V13L15,16L11,19V17M19,21V7H8V13H6V7A2,2 0 0,1 8,5H19A2,2 0 0,1 21,7V21A2,2 0 0,1 19,23H8A2,2 0 0,1 6,21V19H8V21H19Z"><!--v-if--></path></svg></span> Duplicate</a></div>
+          <div class="o-drop__item o-drop__item--clickable" role="listitem" tabindex="0" data-oruga="dropdown-item"><span class="flex gap-1"><span aria-hidden="true" class="material-design-icon delete-icon" role="img"><svg fill="currentColor" class="material-design-icon__svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19,4H15.5L14.5,3H9.5L8.5,4H5V6H19M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19Z"><!--v-if--></path></svg></span> Delete</span></div>
+          <hr role="presentation" class="dropdown-divider" aria-role="o-dropdown-item">
+          <!--v-if-->
+          <!--v-if-->
+          <!--v-if-->
+        </div>
+      </transition-stub>
+      <!--teleport end-->
+    </div>
+  </div>
+</div>
+<!--teleport start-->
+<transition-stub name="zoom-out" appear="false" persisted="false" css="true">
+  <div has-modal-card="" close-button-aria-label="Close" data-oruga="modal" class="o-modal" tabindex="-1" aria-modal="false" style="display: none;">
+    <div class="o-modal__overlay" tabindex="-1" aria-hidden="true"></div>
+    <div class="o-modal__content" style="max-width: 960px;">
+      <div data-v-e0cceef3="" class="p-2">
+        <header data-v-e0cceef3="" class="mb-3">
+          <h2 data-v-e0cceef3="" class="text-2xl">Report this event</h2>
+        </header>
+        <section data-v-e0cceef3="">
+          <div data-v-e0cceef3="" class="flex gap-1 flex-row mb-3 bg-mbz-yellow dark:text-black p-3 rounded items-center"><span data-v-e0cceef3="" class="o-icon o-icon--warning hidden md:block flex-1" data-oruga="icon"><i class="mdi mdi-alert 48"></i></span>
+            <p data-v-e0cceef3="">The report will be sent to the moderators of your instance. You can explain why you report this content below.</p>
+          </div>
+          <div data-v-e0cceef3="">
+            <!--v-if-->
+            <div data-v-e0cceef3="" data-oruga="field" class="o-field"><label for="DYNAMIC_VALUE" class="o-field__label">Additional comments</label>
+              <div class="o-field__body">
+                <div class="o-field o-field--addons">
+                  <div data-v-e0cceef3="" data-oruga="input" class="o-input__wrapper o-input__wrapper--expanded"><textarea autofocus="" id="DYNAMIC_VALUE" data-oruga-input="textarea" class="o-input o-input__textarea"></textarea>
+                    <!---->
+                    <!---->
+                    <!---->
+                  </div>
+                </div>
+              </div>
+              <!---->
+            </div>
+            <!--v-if-->
+          </div>
+        </section>
+        <footer data-v-e0cceef3="" class="flex gap-2 py-3"><button data-v-e0cceef3="" type="button" class="o-btn o-btn--outlined" role="button" data-oruga="button"><span class="o-btn__wrapper"><!----><span class="o-btn__label">Cancel</span>
+            <!----></span>
+          </button><button data-v-e0cceef3="" type="button" class="o-btn o-btn--primary" role="button" data-oruga="button"><span class="o-btn__wrapper"><!----><span class="o-btn__label">Send the report</span>
+            <!----></span>
+          </button></footer>
+      </div><span class="o-icon o-icon--clickable o-icon--medium o-modal__close" data-oruga="icon" style="display: none;"><i class="mdi mdi-close mdi-36px"></i></span>
+    </div>
+  </div>
+</transition-stub>
+<!--teleport end-->
+<!--teleport start-->
+<transition-stub name="zoom-out" appear="false" persisted="false" css="true">
+  <div close-button-aria-label="Close" has-modal-card="" data-oruga="modal" class="o-modal" tabindex="-1" aria-modal="false" style="display: none;">
+    <div class="o-modal__overlay" tabindex="-1" aria-hidden="true"></div>
+    <div class="o-modal__content" style="max-width: 960px;">
+      <!----><span class="o-icon o-icon--clickable o-icon--medium o-modal__close" data-oruga="icon" style="display: none;"><i class="mdi mdi-close mdi-36px"></i></span>
+    </div>
+  </div>
+</transition-stub>
+<!--teleport end-->
+<!--teleport start-->
+<transition-stub name="zoom-out" appear="false" persisted="false" css="true">
+  <div has-modal-card="" close-button-aria-label="Close" data-oruga="modal" class="o-modal" tabindex="-1" aria-modal="false" style="display: none;">
+    <div class="o-modal__overlay" tabindex="-1" aria-hidden="true"></div>
+    <div class="o-modal__content" style="max-width: 960px;">
+      <!----><span class="o-icon o-icon--clickable o-icon--medium o-modal__close" data-oruga="icon" style="display: none;"><i class="mdi mdi-close mdi-36px"></i></span>
+    </div>
+  </div>
+</transition-stub>
+<!--teleport end-->
+<!--teleport start-->
+<transition-stub name="zoom-out" appear="false" persisted="false" css="true">
+  <div has-modal-card="" close-button-aria-label="Close" data-oruga="modal" class="o-modal" tabindex="-1" aria-modal="false" style="display: none;">
+    <div class="o-modal__overlay" tabindex="-1" aria-hidden="true"></div>
+    <div class="o-modal__content" style="max-width: 960px;">
+      <div class="modal-card">
+        <header class="modal-card-head">
+          <p class="modal-card-title">Participation confirmation</p>
+        </header>
+        <section class="modal-card-body">
+          <p>The event organiser has chosen to validate manually participations. Do you want to add a little note to explain why you want to participate to this event?</p>
+          <form>
+            <div data-oruga="field" class="o-field"><label class="o-field__label" for="DYNAMIC_VALUE">Message</label>
+              <div class="o-field__body">
+                <div class="o-field o-field--addons">
+                  <div data-oruga="input" class="o-input__wrapper"><textarea minlength="10" id="DYNAMIC_VALUE" data-oruga-input="textarea" class="o-input o-input--medium o-input__textarea"></textarea>
+                    <!---->
+                    <!---->
+                    <!---->
+                  </div>
+                </div>
+              </div>
+              <!---->
+            </div>
+            <div class="buttons"><button type="button" class="o-btn button" role="button" data-oruga="button"><span class="o-btn__wrapper"><!----><span class="o-btn__label">Cancel</span>
+                <!----></span>
+              </button><button type="submit" class="o-btn o-btn--primary" role="button" data-oruga="button"><span class="o-btn__wrapper"><!----><span class="o-btn__label">Confirm my participation</span>
+                <!----></span>
+              </button></div>
+          </form>
+        </section>
+      </div><span class="o-icon o-icon--clickable o-icon--medium o-modal__close" data-oruga="icon" style="display: none;"><i class="mdi mdi-close mdi-36px"></i></span>
+    </div>
+  </div>
+</transition-stub>
+<!--teleport end-->"
+`;
