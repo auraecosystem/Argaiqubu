@@ -334,10 +334,7 @@ const pastParticipations = computed(
     }
 );
 
-const monthlyEvents = (
-  elements: Eventable[],
-  revertSort = false
-): Map<string, Eventable[]> => {
+const monthlyEvents = (elements: Eventable[]): Map<string, Eventable[]> => {
   const res = elements.filter((element: Eventable) => {
     if ("role" in element) {
       return (
@@ -347,11 +344,11 @@ const monthlyEvents = (
     }
     return element.beginsOn != null;
   });
-  const sign = revertSort ? -1 : 1;
+  // sort by start date, ascending
   res.sort((a: Eventable, b: Eventable) => {
     const aTime = "role" in a ? a.event.beginsOn : a.beginsOn;
     const bTime = "role" in b ? b.event.beginsOn : b.beginsOn;
-    return sign * (new Date(aTime).getTime() - new Date(bTime).getTime());
+    return new Date(aTime).getTime() - new Date(bTime).getTime();
   });
   return res.reduce((acc: Map<string, Eventable[]>, element: Eventable) => {
     const month = new Date(
