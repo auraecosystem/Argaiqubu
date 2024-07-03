@@ -104,6 +104,16 @@
           </template>
         </VTooltip>
       </p>
+      <p
+        class="inline-flex gap-2 ml-auto"
+        v-if="event.options.showParticipationFee"
+      >
+        <inline-money-with-currency
+          :participationFee="event?.options?.participationFee"
+          :locale="$i18n.locale"
+          :showIcon="true"
+        />
+      </p>
       <o-dropdown class="ml-auto">
         <template #trigger>
           <o-button icon-right="dots-horizontal">
@@ -344,6 +354,7 @@ import { IEvent } from "@/types/event.model";
 import ParticipationSection from "@/components/Participation/ParticipationSection.vue";
 import ReportModal from "@/components/Report/ReportModal.vue";
 import IdentityPicker from "@/components/Account/IdentityPicker.vue";
+import InlineMoneyWithCurrency from "@/components/Event/InlineMoneyWithCurrency.vue";
 import { EventJoinOptions, ParticipantRole, MemberRole } from "@/types/enums";
 import { GRAPHQL_API_ENDPOINT } from "@/api/_entrypoint";
 import { computed, defineAsyncComponent, inject, onMounted, ref } from "vue";

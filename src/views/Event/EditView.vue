@@ -360,7 +360,49 @@
             </o-switch>
           </o-field>-->
         </div>
+        <o-field
+          :label="t('Pricing')"
+          v-show="registerOption === RegisterOption.MOBILIZON"
+        >
+          <o-switch v-model="event.options.showParticipationFee">
+            {{ t("Display participation fee") }}
+          </o-switch>
+        </o-field>
+
+        <div
+          v-if="
+            event.options.showParticipationFee &&
+            registerOption === RegisterOption.MOBILIZON
+          "
+        >
+          <o-field
+            :label="t('Participation fee')"
+            label-for="participation-fee"
+          >
+            <CurrencyInput
+              id="participation-fee"
+              v-model="eventOptions.participationFee.amount"
+              :options="{
+                locale: `${$i18n.locale}`,
+                currency: eventOptions.participationFee.currency,
+                currencyDisplay: CurrencyDisplay.hidden,
+              }"
+            />
+            <o-select
+              v-model="eventOptions.participationFee.currency"
+              id="participation-fee-currency"
+            >
+              <option
+                v-for="currencyCode in Currencies"
+                v-bind:key="currencyCode"
+              >
+                {{ currencyCode }}
+              </option>
+            </o-select>
+          </o-field>
+        </div>
       </section>
+
       <section class="my-4">
         <h2>{{ t("Public comment moderation") }}</h2>
 
@@ -590,6 +632,7 @@ import PictureUpload from "@/components/PictureUpload.vue";
 import EditorComponent from "@/components/TextEditor.vue";
 import TagInput from "@/components/Event/TagInput.vue";
 import EventMetadataList from "@/components/Event/EventMetadataList.vue";
+import CurrencyInput from "@/components/Event/CurrencyInput.vue";
 import {
   NavigationGuardNext,
   onBeforeRouteLeave,
@@ -601,6 +644,7 @@ import {
   ActorType,
   CommentModeration,
   EventJoinOptions,
+  Currencies,
   EventStatus,
   EventVisibility,
   GroupVisibility,
@@ -675,6 +719,7 @@ import { useOruga } from "@oruga-ui/oruga-next";
 import type { Locale } from "date-fns";
 import sortBy from "lodash/sortBy";
 import { escapeHtml } from "@/utils/html";
+import { CurrencyDisplay } from "vue-currency-input";
 
 const DEFAULT_LIMIT_NUMBER_OF_PLACES = 10;
 
@@ -1064,6 +1109,17 @@ const buildVariables = async () => {
     ...toEditJSON(new EventModel(event.value)),
     options: eventOptions.value,
   };
+
+  const participationFee = eventOptions.value?.participationFee;
+  if (participationFee) {
+    res = {
+      ...res,
+      options: {
+        ...res.options,
+        participationFee: JSON.stringify(participationFee),
+      },
+    };
+  }
 
   const localOrganizerActor = event.value?.organizerActor?.id
     ? event.value.organizerActor

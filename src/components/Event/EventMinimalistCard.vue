@@ -120,6 +120,13 @@
           </o-button>
         </span>
       </p>
+      <p class="flex gap-1" v-if="event.options.showParticipationFee">
+        <inline-money-with-currency
+          :participationFee="event.options.participationFee"
+          :locale="$i18n.locale"
+          :showIcon="true"
+        />
+      </p>
     </div>
   </router-link>
 </template>
@@ -130,6 +137,7 @@ import { EventStatus, ParticipantRole } from "@/types/enums";
 import RouteName from "../../router/name";
 import LazyImageWrapper from "@/components/Image/LazyImageWrapper.vue";
 import InlineAddress from "@/components/Address/InlineAddress.vue";
+import InlineMoneyWithCurrency from "@/components/Event/InlineMoneyWithCurrency.vue";
 import Video from "vue-material-design-icons/Video.vue";
 import AccountCircle from "vue-material-design-icons/AccountCircle.vue";
 import AccountMultiple from "vue-material-design-icons/AccountMultiple.vue";

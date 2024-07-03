@@ -22,6 +22,7 @@ import { IActor } from "@/types/actor";
 import {
   ActorType,
   CommentModeration,
+  Currencies,
   EventJoinOptions,
   EventStatus,
   EventVisibility,
@@ -114,6 +115,10 @@ const baseEvent: IEvent = {
     program: "",
     commentModeration: CommentModeration.ALLOW_ALL,
     showParticipationFee: false,
+    participationFee: {
+      amount: 0,
+      currency: Currencies.EUR,
+    },
     showStartTime: false,
     showEndTime: false,
     timezone: null,

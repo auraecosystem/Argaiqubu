@@ -24,6 +24,7 @@ export const EVENT_OPTIONS_FRAGMENT = gql`
     program
     commentModeration
     showParticipationFee
+    participationFee
     hideOrganizerWhenGroupEvent
     isOnline
   }

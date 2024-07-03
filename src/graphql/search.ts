@@ -93,6 +93,8 @@ export const SEARCH_EVENTS_AND_GROUPS = gql`
         }
         options {
           isOnline
+          showParticipationFee
+          participationFee
         }
         __typename
       }
