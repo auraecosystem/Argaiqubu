@@ -2704,6 +2704,8 @@ type Resource implements ActivityObject {
   ): PaginatedResourceList
 }
 
+scalar MoneyWithCurrency
+
 "Event options"
 input EventOptionsInput {
   "The maximum attendee capacity for this event"
@@ -2735,6 +2737,9 @@ input EventOptionsInput {
 
   "Whether or not to show the participation fee"
   showParticipationFee: Boolean
+
+  "The participation fee for this event"
+  participationFee: MoneyWithCurrency
 
   "Show event start time"
   showStartTime: Boolean
@@ -3102,6 +3107,9 @@ type EventOptions {
 
   "Whether or not to show the participation fee"
   showParticipationFee: Boolean
+
+  "The participation fee for this event"
+  participationFee: MoneyWithCurrency
 
   "Show event start time"
   showStartTime: Boolean

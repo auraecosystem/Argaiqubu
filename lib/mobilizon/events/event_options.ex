@@ -23,6 +23,7 @@ defmodule Mobilizon.Events.EventOptions do
           program: String.t(),
           comment_moderation: CommentModeration.t(),
           show_participation_fee: boolean,
+          participation_fee: Money.t(),
           offers: [EventOffer.t()],
           participation_condition: [EventParticipationCondition.t()],
           hide_number_of_participants: boolean,
@@ -42,6 +43,7 @@ defmodule Mobilizon.Events.EventOptions do
     :program,
     :comment_moderation,
     :show_participation_fee,
+    :participation_fee,
     :hide_number_of_participants,
     :show_start_time,
     :show_end_time,
@@ -61,6 +63,7 @@ defmodule Mobilizon.Events.EventOptions do
     field(:program, :string)
     field(:comment_moderation, CommentModeration)
     field(:show_participation_fee, :boolean)
+    field(:participation_fee, Money.Ecto.Map.Type)
     field(:hide_number_of_participants, :boolean, default: false)
     field(:show_start_time, :boolean, default: true)
     field(:show_end_time, :boolean, default: true)

@@ -263,6 +263,10 @@ defmodule Mobilizon.GraphQL.Schema.EventType do
       description: "Whether or not to show the participation fee"
     )
 
+    field(:participation_fee, :money_with_currency,
+      description: "The participation fee for this event"
+    )
+
     field(:hide_number_of_participants, :boolean,
       description: "Whether or not the number of participants is hidden"
     )
@@ -318,6 +322,10 @@ defmodule Mobilizon.GraphQL.Schema.EventType do
 
     field(:show_participation_fee, :boolean,
       description: "Whether or not to show the participation fee"
+    )
+
+    field(:participation_fee, :money_with_currency,
+      description: "The participation fee for this event"
     )
 
     field(:hide_number_of_participants, :boolean,

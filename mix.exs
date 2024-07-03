@@ -222,6 +222,7 @@ defmodule Mobilizon.Mixfile do
       {:hammer, "~> 6.1"},
       {:tls_certificate_check, "~> 1.20"},
       {:bandit, "~> 1.0"},
+      {:money, "~> 1.12"},
       # Dev and test dependencies
       {:phoenix_live_reload, "~> 1.2", only: [:dev, :e2e]},
       {:ex_machina, "~> 2.3", only: [:dev, :test]},
