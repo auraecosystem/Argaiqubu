@@ -19,6 +19,8 @@ import Clock from "vue-material-design-icons/ClockTimeTenOutline.vue";
 
 const { locale } = useI18n({ useScope: "global" });
 
+const localeConverted = locale.replace("_", "-");
+
 const props = withDefaults(
   defineProps<{
     date: string;
@@ -30,7 +32,7 @@ const props = withDefaults(
 const dateObj = computed<Date>(() => new Date(props.date));
 
 const time = computed<string>(() =>
-  dateObj.value.toLocaleTimeString(locale, {
+  dateObj.value.toLocaleTimeString(localeConverted, {
     hour: "2-digit",
     minute: "2-digit",
   })
