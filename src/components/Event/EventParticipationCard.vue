@@ -183,6 +183,16 @@
               </o-button>
             </span>
           </div>
+          <div
+            v-if="participation.event.options.showParticipationFee"
+            class="flex gap-1"
+          >
+            <inline-money-with-currency
+              :participationFee="participation.event.options.participationFee"
+              :locale="$i18n.locale"
+              :showIcon="true"
+            />
+          </div>
         </div>
 
         <o-dropdown
@@ -328,6 +338,7 @@ import RouteName from "@/router/name";
 import { changeIdentity } from "@/utils/identity";
 import LazyImageWrapper from "@/components/Image/LazyImageWrapper.vue";
 import InlineAddress from "@/components/Address/InlineAddress.vue";
+import InlineMoneyWithCurrency from "@/components/Event/InlineMoneyWithCurrency.vue";
 import { RouteLocationRaw, useRouter } from "vue-router";
 import Pencil from "vue-material-design-icons/Pencil.vue";
 import ContentDuplicate from "vue-material-design-icons/ContentDuplicate.vue";

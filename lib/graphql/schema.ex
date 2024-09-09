@@ -32,6 +32,7 @@ defmodule Mobilizon.GraphQL.Schema do
   import_types(Custom.UUID)
   import_types(Custom.Point)
   import_types(Custom.Timezone)
+  import_types(Custom.MoneyWithCurrency)
 
   import_types(Schema.ActivityType)
   import_types(Schema.UserType)

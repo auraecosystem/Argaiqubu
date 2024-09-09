@@ -1,4 +1,4 @@
-import { CommentModeration } from "./enums";
+import { CommentModeration, Currencies } from "./enums";
 
 export interface IParticipationCondition {
   title: string;
@@ -12,6 +12,11 @@ export interface IOffer {
   url: string;
 }
 
+export interface IMoneyWithCurrency {
+  amount: number;
+  currency: Currencies;
+}
+
 export interface IEventOptions {
   maximumAttendeeCapacity: number;
   remainingAttendeeCapacity: number;
@@ -23,7 +28,8 @@ export interface IEventOptions {
   attendees: string[];
   program: string;
   commentModeration: CommentModeration;
-  showParticipationPrice: boolean;
+  showParticipationFee: boolean;
+  participationFee: IMoneyWithCurrency;
   hideNumberOfParticipants: boolean;
   showStartTime: boolean;
   showEndTime: boolean;
@@ -52,7 +58,12 @@ export class EventOptions implements IEventOptions {
 
   commentModeration = CommentModeration.ALLOW_ALL;
 
-  showParticipationPrice = false;
+  showParticipationFee = false;
+
+  participationFee: IMoneyWithCurrency = {
+    amount: 0,
+    currency: Currencies.EUR,
+  };
 
   hideNumberOfParticipants = false;
 

@@ -1,0 +1,9 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`CurrencyInput > renders correctly 1`] = `
+"<div data-oruga="input" class="o-input__wrapper"><input id="DYNAMIC_VALUE" data-oruga-input="text" type="text" class="o-input" autocomplete="off" inputmode="decimal">
+  <!---->
+  <!---->
+  <!---->
+</div>"
+`;

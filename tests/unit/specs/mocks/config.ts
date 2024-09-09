@@ -154,3 +154,31 @@ export const anonymousActorIdMock = {
     },
   },
 };
+
+export const anonymousParticipationConfigMock = {
+  data: {
+    config: {
+      __typename: "Config",
+      anonymous: {
+        __typename: "Anonymous",
+        actorId: "1",
+        participation: {
+          __typename: "AnonymousParticipation",
+          allowed: true,
+          validation: {
+            __typename: "AnonymousParticipationValidation",
+            captcha: {
+              __typename: "AnonymousParticipationValidationCaptcha",
+              enabled: false,
+            },
+            email: {
+              __typename: "AnonymousParticipationValidationEmail",
+              confirmationRequired: true,
+              enabled: true,
+            },
+          },
+        },
+      },
+    },
+  },
+};

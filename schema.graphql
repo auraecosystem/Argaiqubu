@@ -2704,6 +2704,8 @@ type Resource implements ActivityObject {
   ): PaginatedResourceList
 }
 
+scalar MoneyWithCurrency
+
 "Event options"
 input EventOptionsInput {
   "The maximum attendee capacity for this event"
@@ -2733,8 +2735,11 @@ input EventOptionsInput {
   "The policy on public comment moderation under the event"
   commentModeration: EventCommentModeration
 
-  "Whether or not to show the participation price"
-  showParticipationPrice: Boolean
+  "Whether or not to show the participation fee"
+  showParticipationFee: Boolean
+
+  "The participation fee for this event"
+  participationFee: MoneyWithCurrency
 
   "Show event start time"
   showStartTime: Boolean
@@ -3100,8 +3105,11 @@ type EventOptions {
   "The policy on public comment moderation under the event"
   commentModeration: EventCommentModeration
 
-  "Whether or not to show the participation price"
-  showParticipationPrice: Boolean
+  "Whether or not to show the participation fee"
+  showParticipationFee: Boolean
+
+  "The participation fee for this event"
+  participationFee: MoneyWithCurrency
 
   "Show event start time"
   showStartTime: Boolean

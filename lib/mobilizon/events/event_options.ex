@@ -22,7 +22,8 @@ defmodule Mobilizon.Events.EventOptions do
           attendees: [String.t()],
           program: String.t(),
           comment_moderation: CommentModeration.t(),
-          show_participation_price: boolean,
+          show_participation_fee: boolean,
+          participation_fee: Money.t(),
           offers: [EventOffer.t()],
           participation_condition: [EventParticipationCondition.t()],
           hide_number_of_participants: boolean,
@@ -41,7 +42,8 @@ defmodule Mobilizon.Events.EventOptions do
     :attendees,
     :program,
     :comment_moderation,
-    :show_participation_price,
+    :show_participation_fee,
+    :participation_fee,
     :hide_number_of_participants,
     :show_start_time,
     :show_end_time,
@@ -60,7 +62,8 @@ defmodule Mobilizon.Events.EventOptions do
     field(:attendees, {:array, :string})
     field(:program, :string)
     field(:comment_moderation, CommentModeration)
-    field(:show_participation_price, :boolean)
+    field(:show_participation_fee, :boolean)
+    field(:participation_fee, Money.Ecto.Map.Type)
     field(:hide_number_of_participants, :boolean, default: false)
     field(:show_start_time, :boolean, default: true)
     field(:show_end_time, :boolean, default: true)

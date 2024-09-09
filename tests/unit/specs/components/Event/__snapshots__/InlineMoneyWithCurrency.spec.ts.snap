@@ -1,0 +1,6 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`InlineMoneyWithCurrency > renders correctly 1`] = `
+"<!--v-if-->
+<span class="">25,50&nbsp;€ per person</span>"
+`;

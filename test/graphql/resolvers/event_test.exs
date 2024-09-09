@@ -135,7 +135,9 @@ defmodule Mobilizon.Web.Resolvers.EventTest do
         options {
           maximumAttendeeCapacity,
           showRemainingAttendeeCapacity,
-          showEndTime
+          showEndTime,
+          showParticipationFee,
+          participationFee
         }
         picture {
           url
@@ -414,7 +416,9 @@ defmodule Mobilizon.Web.Resolvers.EventTest do
             options: %{
               maximumAttendeeCapacity: 30,
               showRemainingAttendeeCapacity: true,
-              showEndTime: false
+              showEndTime: false,
+              showParticipationFee: true,
+              participationFee: Jason.encode!(Money.new(12, :EUR))
             }
           }
         )
@@ -434,6 +438,8 @@ defmodule Mobilizon.Web.Resolvers.EventTest do
       assert event["options"]["maximumAttendeeCapacity"] == 30
       assert event["options"]["showRemainingAttendeeCapacity"] == true
       assert event["options"]["showEndTime"] == false
+      assert event["options"]["showParticipationFee"] == true
+      assert event["options"]["participationFee"] == %{"amount" => "12.00", "currency" => "EUR"}
       {event_id_int, ""} = Integer.parse(event["id"])
 
       assert_enqueued(

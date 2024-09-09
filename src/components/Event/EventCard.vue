@@ -138,6 +138,18 @@
               <span class="ltr:pl-2 rtl:pr-2">{{ t("Online") }}</span>
             </div>
             <div
+              class="flex items-center text-sm"
+              dir="auto"
+              v-if="event.options.showParticipationFee"
+            >
+              <inline-money-with-currency
+                :participationFee="event.options.participationFee"
+                :locale="$i18n.locale"
+                :showIcon="true"
+                textClass="ltr:pl-2 rtl:pr-2"
+              />
+            </div>
+            <div
               class="mt-1 no-underline gap-1 items-center hidden"
               :class="{ 'sm:flex': mode === 'row' }"
               v-if="
@@ -212,6 +224,7 @@ import LazyImageWrapper from "@/components/Image/LazyImageWrapper.vue";
 import { EventStatus } from "@/types/enums";
 import RouteName from "../../router/name";
 import InlineAddress from "@/components/Address/InlineAddress.vue";
+import InlineMoneyWithCurrency from "@/components/Event/InlineMoneyWithCurrency.vue";
 
 import { computed, inject } from "vue";
 import MobilizonTag from "@/components/TagElement.vue";
