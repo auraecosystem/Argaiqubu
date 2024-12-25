@@ -9,6 +9,7 @@ import {
 import { TAG_FRAGMENT } from "./tags";
 import { CONVERSATIONS_QUERY_FRAGMENT } from "./conversations";
 import { GROUP_MINIMAL_FIELDS_FRAGMENTS } from "./group";
+import { ParticipantRole } from "@/types/enums";
 
 const FULL_EVENT_FRAGMENT = gql`
   fragment FullEvent on Event {
@@ -56,6 +57,15 @@ const FULL_EVENT_FRAGMENT = gql`
       going
       notApproved
       participant
+    }
+    participants(page: 1, limit: 1000, roles:"${ParticipantRole.PARTICIPANT}") {
+      total
+      elements {
+        role
+        actor {
+          ...ActorFragment
+        }
+      }
     }
     tags {
       ...TagFragment

@@ -87,7 +87,7 @@ defmodule Mobilizon.GraphQL.Schema.EventType do
 
     field(:participants, :paginated_participant_list,
       description: "The event's participants",
-      meta: [private: true, rule: :"read:event:participants"]
+      meta: [private: false, rule: :"read:event:participants"]
     ) do
       arg(:page, :integer,
         default_value: 1,

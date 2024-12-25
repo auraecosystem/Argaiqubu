@@ -56,7 +56,7 @@ defmodule Mobilizon.GraphQL.Schema.Events.ParticipantType do
   A paginated list of participants
   """
   object :paginated_participant_list do
-    meta(:authorize, :user)
+    meta(:authorize, :all)
     field(:elements, list_of(:participant), description: "A list of participants")
     field(:total, :integer, description: "The total number of participants in the list")
   end

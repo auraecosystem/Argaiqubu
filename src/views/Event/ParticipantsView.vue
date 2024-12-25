@@ -110,38 +110,24 @@
         :label="t('Participant')"
         v-slot="props"
       >
-        <article class="flex gap-2">
-          <figure v-if="props.row.actor.avatar">
-            <img
-              class="rounded-full w-12 h-12 object-cover"
-              :src="props.row.actor.avatar.url"
-              alt=""
-              height="48"
-              width="48"
-            />
-          </figure>
-          <Incognito
-            v-else-if="props.row.actor.preferredUsername === 'anonymous'"
-            :size="48"
+        <router-link
+          v-if="currentUser?.role == ICurrentUserRole.ADMINISTRATOR"
+          class="hover:underline"
+          :to="{
+            name: RouteName.ADMIN_PROFILE,
+            params: { id: props.row.actor.id },
+          }"
+        >
+          <CompactActorCard
+            :actor="props.row.actor"
+            :current-actor="currentActor"
           />
-          <AccountCircle v-else :size="48" />
-          <div>
-            <div class="prose dark:prose-invert">
-              <p v-if="props.row.actor.preferredUsername !== 'anonymous'">
-                <span v-if="props.row.actor.name">{{
-                  props.row.actor.name
-                }}</span
-                ><br />
-                <span class="text-sm"
-                  >@{{ usernameWithDomain(props.row.actor) }}</span
-                >
-              </p>
-              <span v-else>
-                {{ t("Anonymous participant") }}
-              </span>
-            </div>
-          </div>
-        </article>
+        </router-link>
+        <CompactActorCard
+          v-else
+          :actor="props.row.actor"
+          :current-actor="currentActor"
+        />
       </o-table-column>
       <o-table-column field="role" :label="t('Role')" v-slot="props">
         <tag
@@ -263,10 +249,11 @@ import {
   PARTICIPANTS,
   UPDATE_PARTICIPANT,
 } from "@/graphql/event";
-import { usernameWithDomain } from "@/types/actor";
 import { asyncForEach } from "@/utils/asyncForEach";
 import RouteName from "@/router/name";
+import { ICurrentUserRole } from "@/types/enums";
 import { useCurrentActorClient } from "@/composition/apollo/actor";
+import { useCurrentUserClient } from "@/composition/apollo/user";
 import { useParticipantsExportFormats } from "@/composition/config";
 import { useMutation, useQuery } from "@vue/apollo-composable";
 import {
@@ -277,13 +264,12 @@ import {
 import { computed, inject, ref } from "vue";
 import { formatDateString, formatTimeString } from "@/filters/datetime";
 import { useI18n } from "vue-i18n";
-import AccountCircle from "vue-material-design-icons/AccountCircle.vue";
-import Incognito from "vue-material-design-icons/Incognito.vue";
 import EmptyContent from "@/components/Utils/EmptyContent.vue";
 import { Notifier } from "@/plugins/notifier";
 import Tag from "@/components/TagElement.vue";
 import { useHead } from "@/utils/head";
 import { IMember } from "@/types/actor/member.model";
+import CompactActorCard from "../../components/Account/CompactActorCard.vue";
 
 const PARTICIPANTS_PER_PAGE = 10;
 const MESSAGE_ELLIPSIS_LENGTH = 130;
@@ -299,6 +285,7 @@ const emit = defineEmits(["sort"]);
 const { t } = useI18n({ useScope: "global" });
 
 const { currentActor } = useCurrentActorClient();
+const { currentUser } = useCurrentUserClient();
 const participantsExportFormats = useParticipantsExportFormats();
 
 const ellipsize = (text?: string) =>
