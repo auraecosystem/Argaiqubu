@@ -8,7 +8,7 @@
 ## to merge POT files into PO files.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-05-14 10:19+0000\n"
+"PO-Revision-Date: 2025-05-15 15:40+0000\n"
 "Last-Translator: Balázs Meskó <mesko.balazs@fsf.hu>\n"
 "Language-Team: Hungarian <https://weblate.framasoft.org/projects/mobilizon/"
 "backend/hu/>\n"
@@ -631,18 +631,32 @@ msgstr "Az Ön tartalma és viselkedése"
 msgctxt "terms"
 msgid "<b>%{instance_name}</b> makes no claim or representation regarding, and accepts no responsibility for third party websites accessible by hyperlink from the Service or websites linking to the Service. When you leave the Service, you should be aware that these Terms and our policies no longer govern. The inclusion of any link does not imply endorsement by <b>%{instance_name}</b> of the site. Use of any such linked website is at the user's own risk."
 msgstr ""
+"A(z) <b>%{instance_name}</b> nem vállal felelősséget a Szolgáltatásról "
+"hiperhivatkozásokon keresztül elérhető külső webhelyekért vagy a "
+"Szolgáltatásra mutató hivatkozásokkal rendelkező webhelyekért. Ha elhagyja a "
+"Szolgáltatást, akkor vegye figyelembe, hogy ezek a Feltételek és az "
+"irányelveik többé nem mérvadóak. Bármilyen hivatkozás megléte nem jelenti "
+"azt, hogy a(z) <b>%{instance_name}</b> támogatná az adott webhelyet. Az "
+"ilyen hivatkozott webhelyek használata a felhasználó saját felelősségére "
+"történik."
 
 #: lib/web/templates/api/terms.html.heex:224
 #, elixir-autogen, elixir-format
 msgctxt "terms"
 msgid "Finally, your use of the Service is also subject to acceptance of <a href=\"/rules\">the instance's own specific rules</a> regarding the code of conduct and moderation rules. Breaking those rules may also result in your account being disabled or suspended."
 msgstr ""
+"Végezetül, a Szolgáltatás használata a <a href=\"/rules\">a példány saját, a "
+"magatartási kódexre és a moderálási szabályokra vonatkozó speciális "
+"szabályainak</a> elfogadásához is kötött. Ezen szabályok megszegése a fiókja "
+"letiltását vagy felfüggesztését is eredményezheti."
 
 #: lib/web/templates/api/terms.html.heex:254
 #, elixir-autogen, elixir-format
 msgctxt "terms"
 msgid "For full details about the Mobilizon software <a href=\"https://mobilizon.org\">see here</a>."
 msgstr ""
+"A Mobilizon szoftverre vonatkozó további részleteket <a href="
+"\"https://joinmobilizon.org\">lásd itt</a>."
 
 #: lib/web/templates/api/terms.html.heex:47
 #, elixir-autogen, elixir-format
@@ -660,18 +674,27 @@ msgstr ""
 msgctxt "terms"
 msgid "If we make major changes, we will notify our users in a clear and prominent manner. Minor changes may only be highlighted in the footer of our website. It is your responsibility to check the website regularly for changes to these Terms."
 msgstr ""
+"Ha jelentős változtatásokat eszközlünk, erről egyértelműen és jól látható "
+"módon értesítjük felhasználóinkat. A kisebb változásokra lehet, hogy csak a "
+"weboldalunk láblécében hívjuk fel a figyelmet. Az Ön felelőssége, hogy "
+"rendszeresen ellenőrizze a webhelyet a jelen Feltételek változásai miatt."
 
 #: lib/web/templates/api/terms.html.heex:158
 #, elixir-autogen, elixir-format
 msgctxt "terms"
 msgid "In order to make <b>%{instance_name}</b> a great place for all of us, please do not post, link and otherwise make available on or through the Service any of the following:"
 msgstr ""
+"Annak érdekében, hogy a(z) <b>%{instance_name}</b> mindannyiunk számára "
+"nagyszerű hely legyen, ne tegye közzé, ne hivatkozza és más módon se tegye "
+"elérhetővé a Szolgáltatásban vagy azon keresztül az alábbiakat:"
 
 #: lib/web/templates/api/terms.html.heex:179
 #, elixir-autogen, elixir-format
 msgctxt "terms"
 msgid "Private information of any third party (e.g., addresses, phone numbers, email addresses, Social Security numbers and credit card numbers); and"
 msgstr ""
+"Harmadik felek személyes információt (például címét, telefonszám, e-mail-"
+"címét, TAJ-számát és bankkártyaszámát); és"
 
 #: lib/web/templates/api/terms.html.heex:152
 #, elixir-autogen, elixir-format
