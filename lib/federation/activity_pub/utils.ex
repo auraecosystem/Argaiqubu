@@ -685,7 +685,7 @@ defmodule Mobilizon.Federation.ActivityPub.Utils do
     case :public_key.pem_decode(pem) do
       [key_code] ->
         public_key = pem_to_public_key(key_code)
-        public_key = :public_key.pem_entry_encode(:RSAPublicKey, public_key)
+        public_key = :public_key.pem_entry_encode(:SubjectPublicKeyInfo, public_key)
         :public_key.pem_encode([public_key])
 
       _ ->
