@@ -19,6 +19,13 @@
           :textFallback="t('Headline picture')"
           :defaultImage="event.picture"
         />
+        <small>
+          {{
+            t(
+              "For best results, use an image size between 640x320px (best for mobile) and 1536x320px (best for desktop)."
+            )
+          }}
+        </small>
       </o-field>
 
       <o-field
