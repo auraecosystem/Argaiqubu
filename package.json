@@ -14,8 +14,8 @@
     "story:build": "histoire build",
     "story:preview": "histoire preview",
     "test": "vitest",
-    "coverage": "vitest run --coverage",
-    "ping": "vitest --version",
+    "coverage": "vitest run --coverage --config vite.config.js",
+    "ping": "strace vitest run --coverage",
     "prepare": "husky",
     "pre-commit": "lint-staged",
     "postinstall": "patch-package"

@@ -74,7 +74,6 @@ lint-front:
   script:
     - npm run lint || export EXITVALUE=1
     - npx prettier -c . || export EXITVALUE=1
-    - npx vitest run --coverage
     - exit $EXITVALUE
 
 build-frontend:
@@ -110,6 +109,7 @@ vitest:
   image: node:20
   stage: test
   before_script:
+    - apt install strace
     - npm ci
   script:
     - env | sort
