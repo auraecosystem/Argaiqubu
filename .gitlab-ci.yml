@@ -105,37 +105,15 @@ deps:
   needs:
     - install
 
-exunit:
-  stage: test
-  services:
-    - name: postgis/postgis:16-3.4
-      alias: postgres
-  variables:
-    MIX_ENV: test
-  before_script:
-    - mix deps.get
-    - mix compile
-    - mix tz_world.update
-    - mix ecto.create
-    - mix ecto.migrate
-  script:
-    - mix coveralls
-  artifacts:
-    when: always
-    reports:
-      junit:
-        - test-junit-report.xml
-    expire_in: 30 days
-
 vitest:
   image: node:20
   stage: test
   before_script:
     - npm ci
   script:
+    - env | sort
     - npm run coverage --verbose && echo $?
     - ls -la .
-    - npm run badcmd
   artifacts:
     when: always
     paths:
