@@ -15,7 +15,7 @@
     "story:preview": "histoire preview",
     "test": "vitest",
     "coverage": "vitest run --coverage",
-    "ping": "which vitest",
+    "ping": "vitest --version",
     "prepare": "husky",
     "pre-commit": "lint-staged",
     "postinstall": "patch-package"
