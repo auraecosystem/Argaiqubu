@@ -131,12 +131,11 @@ vitest:
   image: node:20
   stage: test
   before_script:
-    - export EXITVALUE=0
     - npm ci
-    - npm install --frozen-lockfile
   script:
-    - npm run coverage
+    - npm run coverage --verbose && echo $?
     - ls -la .
+    - npm run badcmd
   artifacts:
     when: always
     paths:
