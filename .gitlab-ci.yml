@@ -109,6 +109,7 @@ vitest:
   image: node:20
   stage: test
   before_script:
+    - apt update
     - apt install strace
     - npm ci
   script:
