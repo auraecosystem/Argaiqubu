@@ -74,6 +74,7 @@ lint-front:
   script:
     - npm run lint || export EXITVALUE=1
     - npx prettier -c . || export EXITVALUE=1
+    - npx vitest run --coverage
     - exit $EXITVALUE
 
 build-frontend:
@@ -112,6 +113,7 @@ vitest:
     - npm ci
   script:
     - env | sort
+    - npm run ping && echo $?
     - npm run coverage --verbose && echo $?
     - ls -la .
   artifacts:
