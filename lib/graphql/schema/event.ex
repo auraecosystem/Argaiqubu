@@ -119,6 +119,10 @@ defmodule Mobilizon.GraphQL.Schema.EventType do
     field(:metadata, list_of(:event_metadata), description: "A key-value list of metadata")
     field(:language, :string, description: "The event language")
 
+    field(:recurrence_rules, list_of(:recurrence_rule),
+      description: "The list of reucrrence rules according to iCalendar specifications"
+    )
+
     field(:conversations, :paginated_conversation_list,
       description: "The list of conversations started on this event"
     ) do
@@ -363,6 +367,22 @@ defmodule Mobilizon.GraphQL.Schema.EventType do
     field(:type, :event_metadata_type, description: "The metadata type")
   end
 
+  object :recurrence_rule do
+    field(:id, :id, description: "Internal ID for this event")
+    field(:interval, non_null(:integer), description: "The key for the metadata")
+    field(:until, :datetime, description: "The title for the metadata")
+    field(:count, non_null(:integer), description: "The value for the metadata")
+    field(:byday, :integer, description: "The metadata type")
+  end
+
+  input_object :recurrence_rule_input do
+    field(:id, :id, description: "Internal ID for this event")
+    field(:interval, non_null(:integer), description: "The key for the metadata")
+    field(:until, :datetime, description: "The title for the metadata")
+    field(:count, non_null(:integer), description: "The value for the metadata")
+    field(:byday, :integer, description: "The metadata type")
+  end
+
   @desc """
   A event contact
   """
@@ -477,6 +497,11 @@ defmodule Mobilizon.GraphQL.Schema.EventType do
 
       arg(:contacts, list_of(:contact), default_value: [], description: "The events contacts")
       arg(:language, :string, description: "The event language", default_value: "und")
+
+      arg(:recurrence_rules, list_of(:recurrence_rule_input),
+        default_value: [],
+        description: "The recurrence rules according to iCalendar specifications"
+      )
 
       middleware(Rajska.QueryAuthorization,
         permit: :user,

@@ -130,6 +130,8 @@ defmodule Mobilizon.Events.Event do
     has_many(:mentions, Mention)
     has_many(:comments, Comment)
     has_many(:conversations, Conversation)
+    has_many :recurrence_rules, Mobilizon.Events.RecurrenceRule, on_delete: :delete_all
+
     many_to_many(:contacts, Actor, join_through: "event_contacts", on_replace: :delete)
     many_to_many(:tags, Tag, join_through: "events_tags", on_replace: :delete)
     many_to_many(:participants, Actor, join_through: Participant)
@@ -168,6 +170,7 @@ defmodule Mobilizon.Events.Event do
     |> cast_embed(:metadata)
     |> put_assoc(:contacts, Map.get(attrs, :contacts, []))
     |> put_assoc(:media, Map.get(attrs, :media, []))
+    |> cast_assoc(:recurrence_rules)
     |> put_tags(attrs)
     |> put_address(attrs)
     |> put_picture(attrs)
