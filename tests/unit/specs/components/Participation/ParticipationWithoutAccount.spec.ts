@@ -78,7 +78,7 @@ describe("ParticipationWithoutAccount", () => {
   ) => {
     mockClient = createMockClient({
       cache,
-      resolvers: defaultResolvers,
+      resolvers: defaultResolvers(cache),
     });
     requestHandlers = {
       anonymousActorIdQueryHandler: vi
@@ -127,6 +127,7 @@ describe("ParticipationWithoutAccount", () => {
       uuid: eventData.uuid,
     });
     await flushPromises();
+    expect(wrapper.vm.error).toBe(false);
 
     expect(wrapper.find(".container").isVisible()).toBeTruthy();
     expect(wrapper.find(".o-notification--info").text()).toBe(
@@ -139,9 +140,10 @@ describe("ParticipationWithoutAccount", () => {
 
     await flushPromises();
 
-    expect(requestHandlers.joinEventMutationHandler).toHaveBeenCalledWith({
-      ...joinEventMock,
-    });
+    expect(requestHandlers.joinEventMutationHandler).toHaveBeenCalledWith(
+      joinEventMock
+    );
+    expect(wrapper.vm.error).toBe(false);
 
     const cachedData = mockClient?.cache.readQuery<{ event: IEvent }>({
       query: FETCH_EVENT_BASIC,
@@ -196,6 +198,7 @@ describe("ParticipationWithoutAccount", () => {
     });
 
     await flushPromises();
+    expect(wrapper.vm.error).toBe(false);
 
     // expect(wrapper.vm.$data.event.joinOptions).toBe(
     //   EventJoinOptions.RESTRICTED
@@ -216,9 +219,10 @@ describe("ParticipationWithoutAccount", () => {
 
     await flushPromises();
 
-    expect(requestHandlers.joinEventMutationHandler).toHaveBeenCalledWith({
-      ...joinEventMock,
-    });
+    expect(requestHandlers.joinEventMutationHandler).toHaveBeenCalledWith(
+      joinEventMock
+    );
+    expect(wrapper.vm.error).toBe(false);
 
     const cachedData = mockClient?.cache.readQuery<{ event: IEvent }>({
       query: FETCH_EVENT_BASIC,
@@ -260,9 +264,9 @@ describe("ParticipationWithoutAccount", () => {
 
     await flushPromises();
 
-    expect(requestHandlers.joinEventMutationHandler).toHaveBeenCalledWith({
-      ...joinEventMock,
-    });
+    expect(requestHandlers.joinEventMutationHandler).toHaveBeenCalledWith(
+      joinEventMock
+    );
     await flushPromises();
     expect(wrapper.find("form").exists()).toBeTruthy();
     expect(wrapper.find(".o-notification--danger").text()).toContain(

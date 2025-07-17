@@ -105,6 +105,15 @@ deps:
   needs:
     - install
 
+i18n-frontend:
+  image: python:alpine
+  stage: check
+  script:
+    - python3 check_i18n.py
+  allow_failure: true
+  needs:
+    - install
+
 exunit:
   stage: test
   services:
@@ -120,6 +129,7 @@ exunit:
     - mix ecto.migrate
   script:
     - mix coveralls
+  coverage: '/\[TOTAL\]\s+([0-9\.]{1,5}%)/'
   artifacts:
     when: always
     reports:
@@ -130,13 +140,16 @@ exunit:
 vitest:
   image: node:20
   stage: test
+  variables:
+    LANG: "fr_FR.UTF-8"
+    TZ: "Europe/Paris"
   before_script:
     - export EXITVALUE=0
     - npm ci
     - npm install --frozen-lockfile
   script:
     - npm run coverage
-    - ls -la .
+  coverage: '/All files\s+\|\s+([0-9\.]{1,5})\s+\|.*/'
   artifacts:
     when: always
     paths:
@@ -171,6 +184,9 @@ e2e:
       - BROWSER: ["firefox", "chromium"]
   artifacts:
     expire_in: 2 days
+    reports:
+      junit:
+        - results-*.xml
     paths:
       - playwright-report/
       - test-results/

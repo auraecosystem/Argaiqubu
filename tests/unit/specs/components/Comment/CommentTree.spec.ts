@@ -27,6 +27,8 @@ import { InMemoryCache } from "@apollo/client/cache";
 import { createRouter, createWebHistory, Router } from "vue-router";
 import { routes } from "@/router";
 import { dialogPlugin } from "@/plugins/dialog";
+import { IDENTITIES } from "@/graphql/actor";
+import { defaultIdentityMock } from "../../mocks/auth";
 
 config.global.plugins.push(Oruga);
 config.global.plugins.push(notifierPlugin);
@@ -51,7 +53,7 @@ describe("CommentTree", () => {
 
     mockClient = createMockClient({
       cache,
-      resolvers: defaultResolvers,
+      resolvers: defaultResolvers(cache),
     });
 
     requestHandlers = {
@@ -61,6 +63,7 @@ describe("CommentTree", () => {
       createCommentForEventMutationHandler: vi
         .fn()
         .mockResolvedValue(newCommentForEventResponse),
+      identityHandler: vi.fn().mockResolvedValue(defaultIdentityMock),
       ...handlers,
     };
 
@@ -72,6 +75,7 @@ describe("CommentTree", () => {
       CREATE_COMMENT_FROM_EVENT,
       requestHandlers.createCommentForEventMutationHandler
     );
+    mockClient.setRequestHandler(IDENTITIES, requestHandlers.identityHandler);
     wrapper = shallowMount(CommentTree, {
       props: {
         event: { ...eventData },

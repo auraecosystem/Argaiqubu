@@ -6,11 +6,68 @@
     <div class="container mx-auto flex flex-wrap items-center gap-2 sm:gap-4">
       <router-link
         :to="{ name: RouteName.HOME }"
+        :aria-label="t('Back to homepage')"
         class="flex items-center"
         :class="{ 'flex-1': !currentActor?.id }"
       >
         <MobilizonLogo class="w-40" />
       </router-link>
+      <div
+        class="justify-between items-center w-full md:flex md:w-auto md:order-1"
+        id="mobile-menu-2"
+        :class="{ hidden: !showMobileMenu }"
+      >
+        <ul
+          class="flex flex-col md:flex-row md:space-x-8 mt-2 md:mt-0 md:font-lightbold"
+        >
+          <li class="m-auto">
+            <router-link
+              :to="{ name: RouteName.SEARCH }"
+              class="block relative py-2 pr-4 pl-3 text-zinc-700 border-b border-gray-100 hover:bg-zinc-50 md:hover:bg-transparent md:border-0 md:hover:text-mbz-purple-700 md:p-0 dark:text-zinc-400 md:dark:hover:text-white dark:hover:bg-zinc-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+              >{{ t("Search") }}</router-link
+            >
+          </li>
+
+          <li class="m-auto">
+            <router-link
+              :to="{ name: RouteName.EVENT_CALENDAR }"
+              class="block relative py-2 pr-4 pl-3 text-zinc-700 border-b border-gray-100 hover:bg-zinc-50 md:hover:bg-transparent md:border-0 md:hover:text-mbz-purple-700 md:p-0 dark:text-zinc-400 md:dark:hover:text-white dark:hover:bg-zinc-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+              >{{ t("Calendar")
+              }}<span class="absolute right-0 text-xs"
+                ><br />(beta)</span
+              ></router-link
+            >
+          </li>
+          <li class="m-auto" v-if="currentActor?.id">
+            <router-link
+              :to="{ name: RouteName.MY_EVENTS }"
+              class="block py-2 pr-4 pl-3 text-zinc-700 border-b border-gray-100 hover:bg-zinc-50 md:hover:bg-transparent md:border-0 md:hover:text-mbz-purple-700 md:p-0 dark:text-zinc-400 md:dark:hover:text-white dark:hover:bg-zinc-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+              >{{ t("My events") }}</router-link
+            >
+          </li>
+          <li class="m-auto" v-if="currentActor?.id">
+            <router-link
+              :to="{ name: RouteName.MY_GROUPS }"
+              class="block py-2 pr-4 pl-3 text-zinc-700 border-b border-gray-100 hover:bg-zinc-50 md:hover:bg-transparent md:border-0 md:hover:text-mbz-purple-700 md:p-0 dark:text-zinc-400 md:dark:hover:text-white dark:hover:bg-zinc-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+              >{{ t("My groups") }}</router-link
+            >
+          </li>
+          <li class="m-auto" v-if="!currentUser?.isLoggedIn">
+            <router-link
+              :to="{ name: RouteName.LOGIN }"
+              class="block py-2 pr-4 pl-3 text-zinc-700 border-b border-gray-100 hover:bg-zinc-50 md:hover:bg-transparent md:border-0 md:hover:text-mbz-purple-700 md:p-0 dark:text-zinc-400 md:dark:hover:text-white dark:hover:bg-zinc-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+              >{{ t("Login") }}</router-link
+            >
+          </li>
+          <li class="m-auto" v-if="!currentUser?.isLoggedIn && canRegister">
+            <router-link
+              :to="{ name: RouteName.REGISTER }"
+              class="block py-2 pr-4 pl-3 text-zinc-700 border-b border-gray-100 hover:bg-zinc-50 md:hover:bg-transparent md:border-0 md:hover:text-mbz-purple-700 md:p-0 dark:text-zinc-400 md:dark:hover:text-white dark:hover:bg-zinc-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+              >{{ t("Register") }}</router-link
+            >
+          </li>
+        </ul>
+      </div>
       <div
         class="flex items-center md:order-2 ml-auto gap-2"
         v-if="currentUser?.isLoggedIn"
@@ -171,64 +228,25 @@
           ></path>
         </svg>
       </button>
-      <div
-        class="justify-between items-center w-full md:flex md:w-auto md:order-1"
-        id="mobile-menu-2"
-        :class="{ hidden: !showMobileMenu }"
-      >
-        <ul
-          class="flex flex-col md:flex-row md:space-x-8 mt-2 md:mt-0 md:font-lightbold"
-        >
-          <li class="m-auto">
-            <router-link
-              :to="{ name: RouteName.SEARCH }"
-              class="block relative py-2 pr-4 pl-3 text-zinc-700 border-b border-gray-100 hover:bg-zinc-50 md:hover:bg-transparent md:border-0 md:hover:text-mbz-purple-700 md:p-0 dark:text-zinc-400 md:dark:hover:text-white dark:hover:bg-zinc-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-              >{{ t("Search") }}</router-link
-            >
-          </li>
-
-          <li class="m-auto">
-            <router-link
-              :to="{ name: RouteName.EVENT_CALENDAR }"
-              class="block relative py-2 pr-4 pl-3 text-zinc-700 border-b border-gray-100 hover:bg-zinc-50 md:hover:bg-transparent md:border-0 md:hover:text-mbz-purple-700 md:p-0 dark:text-zinc-400 md:dark:hover:text-white dark:hover:bg-zinc-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-              >{{ t("Calendar")
-              }}<span class="absolute right-0 text-xs"
-                ><br />(beta)</span
-              ></router-link
-            >
-          </li>
-          <li class="m-auto" v-if="currentActor?.id">
-            <router-link
-              :to="{ name: RouteName.MY_EVENTS }"
-              class="block py-2 pr-4 pl-3 text-zinc-700 border-b border-gray-100 hover:bg-zinc-50 md:hover:bg-transparent md:border-0 md:hover:text-mbz-purple-700 md:p-0 dark:text-zinc-400 md:dark:hover:text-white dark:hover:bg-zinc-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-              >{{ t("My events") }}</router-link
-            >
-          </li>
-          <li class="m-auto" v-if="currentActor?.id">
-            <router-link
-              :to="{ name: RouteName.MY_GROUPS }"
-              class="block py-2 pr-4 pl-3 text-zinc-700 border-b border-gray-100 hover:bg-zinc-50 md:hover:bg-transparent md:border-0 md:hover:text-mbz-purple-700 md:p-0 dark:text-zinc-400 md:dark:hover:text-white dark:hover:bg-zinc-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-              >{{ t("My groups") }}</router-link
-            >
-          </li>
-          <li class="m-auto" v-if="!currentUser?.isLoggedIn">
-            <router-link
-              :to="{ name: RouteName.LOGIN }"
-              class="block py-2 pr-4 pl-3 text-zinc-700 border-b border-gray-100 hover:bg-zinc-50 md:hover:bg-transparent md:border-0 md:hover:text-mbz-purple-700 md:p-0 dark:text-zinc-400 md:dark:hover:text-white dark:hover:bg-zinc-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-              >{{ t("Login") }}</router-link
-            >
-          </li>
-          <li class="m-auto" v-if="!currentUser?.isLoggedIn && canRegister">
-            <router-link
-              :to="{ name: RouteName.REGISTER }"
-              class="block py-2 pr-4 pl-3 text-zinc-700 border-b border-gray-100 hover:bg-zinc-50 md:hover:bg-transparent md:border-0 md:hover:text-mbz-purple-700 md:p-0 dark:text-zinc-400 md:dark:hover:text-white dark:hover:bg-zinc-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-              >{{ t("Register") }}</router-link
-            >
-          </li>
-        </ul>
-      </div>
     </div>
   </nav>
+  <div v-if="currentUser?.id && !currentActor?.id" class="p-5">
+    <o-notification variant="warning">
+      <div class="flex place-content-between items-center">
+        <span>
+          {{
+            t("You have to create and select a profile to fully use Mobilizon.")
+          }}
+        </span>
+        <o-button
+          :label="t('Create a new profile')"
+          variant="primary"
+          size="small"
+          @click="createProfile()"
+        />
+      </div>
+    </o-notification>
+  </div>
 </template>
 
 <script lang="ts" setup>
@@ -260,11 +278,11 @@ import { ICurrentUser } from "@/types/current-user.model";
 
 const { currentUser } = useCurrentUserClient();
 const { currentActor } = useCurrentActorClient();
+const { identities } = useCurrentUserIdentities();
 
 const router = useRouter();
 const route = useRoute();
 
-const { identities } = useCurrentUserIdentities();
 const { registrationsOpen, registrationsAllowlist, databaseLogin } =
   useRegistrationConfig();
 
@@ -333,21 +351,6 @@ watch(currentActor, async (currentActorValue, previousActorValue) => {
 
 onMounted(() => {});
 
-watch(identities, () => {
-  // If we don't have any identities, the user has validated their account,
-  // is logging for the first time but didn't create an identity somehow
-  if (identities.value && identities.value.length === 0) {
-    console.warn(
-      "We have no identities listed for current user",
-      identities.value
-    );
-    console.info("Pushing route to CREATE_IDENTITY");
-    router.push({
-      name: RouteName.CREATE_IDENTITY,
-    });
-  }
-});
-
 const { onDone, mutate: setIdentity } = useMutation<{
   changeDefaultActor: { id: string; defaultActor: { id: string } };
 }>(UPDATE_DEFAULT_ACTOR);
@@ -377,5 +380,11 @@ const performLogout = async () => {
   if (route.meta["requiredAuth"] === true) {
     return router.push({ name: RouteName.HOME });
   }
+};
+
+const createProfile = () => {
+  router.push({
+    name: RouteName.CREATE_IDENTITY,
+  });
 };
 </script>

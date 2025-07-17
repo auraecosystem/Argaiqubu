@@ -5,7 +5,7 @@ import { VitePWA } from "vite-plugin-pwa";
 import { visualizer } from "rollup-plugin-visualizer";
 
 export default defineConfig(({ command }) => {
-  const isDev = command !== "build";
+  const isDev = command !== "build" && !process.env.GITLAB_CI;
   if (isDev) {
     // Terminate the watcher when Phoenix quits
     process.stdin.on("close", () => {
@@ -114,6 +114,7 @@ export default defineConfig(({ command }) => {
       reporter: ["junit", "default"],
       outputFile: path.resolve(__dirname, "./junit.xml"),
       coverage: {
+        reportOnFailure: true,
         reporter: ["text", "json", "html"],
         reportsDirectory: path.resolve(__dirname, "./coverage"),
         include: ["src/**/*.{vue,js,ts}"],

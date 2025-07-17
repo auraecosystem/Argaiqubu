@@ -6,47 +6,53 @@ import {
 } from "@/graphql/actor";
 import { IPerson } from "@/types/actor";
 import { ICurrentUser } from "@/types/current-user.model";
-import { useLazyQuery, useQuery } from "@vue/apollo-composable";
+import { useQuery } from "@vue/apollo-composable";
 import { computed, Ref, unref } from "vue";
 import { useCurrentUserClient } from "./user";
 
 export function useCurrentActorClient() {
+  const { identities } = useCurrentUserIdentities();
+
+  // There is a current actor only if there is at least one identity
+  const enabled = computed(
+    () => identities.value != undefined && identities.value?.length > 0
+  );
+
   const {
     result: currentActorResult,
     error,
     loading,
-  } = useQuery<{ currentActor: IPerson }>(CURRENT_ACTOR_CLIENT);
-  const currentActor = computed<IPerson | undefined>(
-    () => currentActorResult.value?.currentActor
-  );
-  return { currentActor, error, loading };
-}
+  } = useQuery<{ currentActor: IPerson }>(CURRENT_ACTOR_CLIENT, {}, () => ({
+    enabled: enabled,
+  }));
 
-export function useLazyCurrentUserIdentities() {
-  return useLazyQuery<{
-    loggedUser: Pick<ICurrentUser, "actors">;
-  }>(
-    IDENTITIES,
-    {},
-    {
-      fetchPolicy: "network-only",
-    }
+  const currentActor = computed<IPerson | undefined>(() =>
+    enabled.value ? currentActorResult.value?.currentActor : undefined
   );
+
+  return { currentActor, error, loading };
 }
 
 export function useCurrentUserIdentities() {
   const { currentUser } = useCurrentUserClient();
 
+  const enabled = computed(
+    () =>
+      currentUser.value?.id !== undefined &&
+      currentUser.value?.id !== null &&
+      currentUser.value?.isLoggedIn === true
+  );
+
   const { result, error, loading } = useQuery<{
     loggedUser: Pick<ICurrentUser, "actors">;
   }>(IDENTITIES, {}, () => ({
-    enabled:
-      currentUser.value?.id !== undefined &&
-      currentUser.value?.id !== null &&
-      currentUser.value?.isLoggedIn === true,
+    enabled: enabled,
   }));
 
-  const identities = computed(() => result.value?.loggedUser?.actors);
+  const identities = computed(() =>
+    enabled.value ? result.value?.loggedUser?.actors : undefined
+  );
+
   return { identities, error, loading };
 }
 
