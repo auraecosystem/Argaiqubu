@@ -74,18 +74,28 @@ defmodule Mobilizon.Events.RecurrenceRule do
   def changeset(rule, attrs) do
     rule
     |> cast(attrs, @attrs)
-    |> validate_required([:freq, :event_id])
+    |> validate_required([:freq])
+    |> validate_only_one_required(:until, :count)
     |> validate_number(:interval, greater_than: 0)
     |> validate_inclusion(:wkst, ~w(MO TU WE TH FR SA SU))
   end
 
-  defp validate_mutual_exclusion(changeset, fields) do
-    present = Enum.filter(fields, fn field -> get_field(changeset, field) end)
+  @doc """
+  Ensures exactly one of the two fields is present (not both, not neither).
+  """
+  def validate_only_one_required(changeset, field1, field2) do
+    val1 = get_field(changeset, field1)
+    val2 = get_field(changeset, field2)
 
-    if length(present) > 1 do
-      add_error(changeset, hd(fields), "only one of #{Enum.join(fields, " or ")} can be set")
-    else
-      changeset
+    cond do
+      is_nil(val1) and is_nil(val2) ->
+        add_error(changeset, field1, "either #{field1} or #{field2} must be present")
+
+      not is_nil(val1) and not is_nil(val2) ->
+        add_error(changeset, field2, "only one of #{field1} or #{field2} can be present")
+
+      true ->
+        changeset
     end
   end
 end

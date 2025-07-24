@@ -83,7 +83,8 @@ defmodule Mobilizon.Events do
     :physical_address,
     :picture,
     :contacts,
-    :media
+    :media,
+    :recurrence_rules
   ]
 
   @participant_preloads [:event, :actor]

@@ -42,7 +42,7 @@ defmodule Mobilizon.Factory do
   @spec actor_factory :: Mobilizon.Actors.Actor.t()
   def actor_factory do
     preferred_username = sequence("thomas")
-    url = Actor.build_url(preferred_username, :page)
+    # url = Actor.build_url(preferred_username, :page)
 
     %Mobilizon.Actors.Actor{
       preferred_username: preferred_username,

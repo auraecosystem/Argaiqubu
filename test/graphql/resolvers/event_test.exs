@@ -1,5 +1,5 @@
 defmodule Mobilizon.Web.Resolvers.EventTest do
-  use Mobilizon.Web.ConnCase
+  use Mobilizon.Web.ConnCase, assync: true
   use Oban.Testing, repo: Mobilizon.Storage.Repo
 
   import Mobilizon.Factory
@@ -7,10 +7,12 @@ defmodule Mobilizon.Web.Resolvers.EventTest do
   alias Mobilizon.Actors.Actor
   alias Mobilizon.{Events, Users}
   alias Mobilizon.Events.Event
+
   alias Mobilizon.Service.Workers
-  alias Mobilizon.Users.User
 
   alias Mobilizon.GraphQL.AbsintheHelpers
+  alias Mobilizon.Users.User
+
   import Swoosh.TestAssertions
 
   @event %{
@@ -83,11 +85,12 @@ defmodule Mobilizon.Web.Resolvers.EventTest do
       $online_address: String,
       $options: EventOptionsInput,
       $draft: Boolean,
-      $language: String
-      $picture: MediaInput
-      $tags: [String]
-      $physicalAddress: AddressInput
-      $category: EventCategory
+      $language: String,
+      $picture: MediaInput,
+      $tags: [String],
+      $recurrence_rules: [RecurrenceRuleInput],
+      $physicalAddress: AddressInput,
+      $category: EventCategory,
       ) {
       createEvent(
           title: $title,
@@ -105,6 +108,7 @@ defmodule Mobilizon.Web.Resolvers.EventTest do
           language: $language
           physicalAddress: $physicalAddress
           category: $category
+          recurrence_rules: $recurrence_rules
           tags: $tags
       ) {
         id,
@@ -179,14 +183,14 @@ defmodule Mobilizon.Web.Resolvers.EventTest do
     test "create_event/3 should check that end time is after start time", %{
       conn: conn,
       actor: actor,
-      user: user
+      user: _user
     } do
       begins_on = DateTime.utc_now() |> DateTime.truncate(:second)
       ends_on = DateTime.add(begins_on, -2 * 3600)
 
       res =
         conn
-        |> auth_conn(user)
+        |> auth_conn(actor.user)
         |> AbsintheHelpers.graphql_query(
           query: @create_event_mutation,
           variables: %{
@@ -200,6 +204,29 @@ defmodule Mobilizon.Web.Resolvers.EventTest do
 
       assert hd(res["errors"])["message"] ==
                ["ends_on cannot be set before begins_on"]
+    end
+
+    test "create_event/3 creates an event with recurrence rules", %{
+      conn: conn,
+      actor: actor,
+      user: user
+    } do
+      begins_on = DateTime.utc_now()
+
+      res =
+        conn
+        |> auth_conn(user)
+        |> AbsintheHelpers.graphql_query(
+          query: @create_event_mutation,
+          variables: %{
+            title: "come to my event",
+            description: "it will be fine",
+            begins_on: "#{DateTime.add(begins_on, 3600 * 24)}",
+            organizer_actor_id: actor.id
+          }
+        )
+
+      assert res["data"]["createEvent"]["title"] == "come to my event"
     end
 
     test "create_event/3 creates an event", %{conn: conn, actor: actor, user: user} do
@@ -1692,6 +1719,44 @@ defmodule Mobilizon.Web.Resolvers.EventTest do
 
       assert hd(tl(json_response(res, 200)["data"]["event"]["related_events"]))["uuid"] ==
                event3.uuid
+    end
+  end
+
+  describe "create events with reocurring rules /3" do
+    test "an event create with re-ocurring rules should create the re-ocurring events as well", %{
+      conn: conn,
+      actor: actor,
+      user: user
+    } do
+      begins_on = DateTime.to_string(DateTime.utc_now())
+
+      ends_on =
+        DateTime.to_string(Timex.add(DateTime.utc_now(), Timex.Duration.from_minutes(120)))
+
+      end_of_reocurring_events =
+        DateTime.to_string(Timex.add(DateTime.utc_now(), Timex.Duration.from_days(20)))
+
+      conn
+      |> auth_conn(user)
+      |> AbsintheHelpers.graphql_query(
+        query: @create_event_mutation,
+        variables: %{
+          title: "come to my event",
+          description: "it will be fine",
+          begins_on: begins_on,
+          ends_on: ends_on,
+          organizer_actor_id: "#{actor.id}",
+          recurrence_rules: [
+            %{freq: "DAILY", interval: 1, until: end_of_reocurring_events}
+          ]
+        }
+      )
+
+      res =
+        conn
+        |> AbsintheHelpers.graphql_query(query: @fetch_events_query, variables: %{limit: 30})
+
+      assert res["data"]["events"]["total"] == 21
     end
   end
 end

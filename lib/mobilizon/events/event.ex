@@ -150,6 +150,7 @@ defmodule Mobilizon.Events.Event do
     |> cast(attrs, @attrs)
     |> common_changeset(attrs)
     |> put_creator_if_published(:create)
+    |> cast_assoc(:recurrence_rules)
     |> validate_required(@required_attrs)
   end
 
@@ -160,6 +161,7 @@ defmodule Mobilizon.Events.Event do
     |> cast(attrs, @update_attrs)
     |> common_changeset(attrs)
     |> put_creator_if_published(:update)
+    |> cast_assoc(:recurrence_rules)
     |> validate_required(@update_required_attrs)
   end
 

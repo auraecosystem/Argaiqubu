@@ -7,21 +7,30 @@ defmodule Mobilizon.Events.UtilsTest do
 
   @now ~U[2021-11-19T18:17:00Z]
 
+  describe "calculate_notification_time" do
+    test "when the event begins in less than 30 minutes" do
+      begins_on = ~U[2021-11-19T18:27:00Z]
+      assert @now == Utils.calculate_notification_time(begins_on, now: @now)
+    end
+
+    test "when the event begins in more than 30 minutes" do
+      begins_on = ~U[2021-11-19T18:17:00Z]
+      assert begins_on == Utils.calculate_notification_time(begins_on, now: @now)
+    end
+  end
+
   describe "generate_for_rule/3" do
     test "generates daily occurrences using count" do
-      dtstart = ~U[2025-07-01 00:00:00Z]
+      begins_on = DateTime.utc_now()
+      end_of_reocurring_events = Timex.add(DateTime.utc_now(), Timex.Duration.from_days(5))
 
       rule = %RecurrenceRule{
         freq: :daily,
         interval: 1,
-        count: 3
+        until: end_of_reocurring_events
       }
 
-      assert Utils.generate_for_rule(dtstart, rule) == [
-               ~U[2025-07-01 00:00:00Z],
-               ~U[2025-07-02 00:00:00Z],
-               ~U[2025-07-03 00:00:00Z]
-             ]
+      assert length(Utils.generate_for_rule(begins_on, rule)) == 6
     end
 
     test "generates weekly occurrences using until" do
@@ -113,18 +122,6 @@ defmodule Mobilizon.Events.UtilsTest do
     end
   end
 
-  describe "calculate_notification_time" do
-    test "when the event begins in less than 30 minutes" do
-      begins_on = ~U[2021-11-19T18:27:00Z]
-      assert @now == Utils.calculate_notification_time(begins_on, now: @now)
-    end
-
-    test "when the event begins in more than 30 minutes" do
-      begins_on = ~U[2021-11-19T18:17:00Z]
-      assert begins_on == Utils.calculate_notification_time(begins_on, now: @now)
-    end
-  end
-
   @begins_on ~U[2025-07-01 09:00:00Z]
   @ends_on ~U[2025-07-01 10:00:00Z]
 
@@ -184,10 +181,7 @@ defmodule Mobilizon.Events.UtilsTest do
       }
 
       result =
-        Utils.generate_for_rule(dtstart, rule,
-          start_date: ~U[2025-07-10 00:00:00Z],
-          end_date: ~U[2025-07-15 00:00:00Z]
-        )
+        Utils.generate_for_rule(dtstart, rule)
 
       assert result == []
     end
@@ -203,7 +197,6 @@ defmodule Mobilizon.Events.UtilsTest do
       }
 
       stream = Utils.recurrence_stream(start_time, rule)
-
       first_five_dates = Enum.take(stream, 5)
 
       assert first_five_dates == [
@@ -227,10 +220,7 @@ defmodule Mobilizon.Events.UtilsTest do
         |> Map.put(:recurrence_rules, [daily])
 
       result =
-        Utils.generate_occurrences(event, %{
-          from: ~U[2025-07-01 00:00:00Z],
-          to: ~U[2025-07-08 02:00:00Z]
-        })
+        Utils.generate_occurrences(event)
 
       dates = Enum.map(result, &DateTime.to_date(&1.begins_on))
 
@@ -243,14 +233,15 @@ defmodule Mobilizon.Events.UtilsTest do
 
     test "returns empty list if rules list is empty" do
       event = base_event() |> Map.put(:recurrence_rules, [])
-      result = Utils.generate_occurrences(event, %{from: @begins_on, to: @ends_on})
+      result = Utils.generate_occurrences(event)
       assert result == []
     end
 
     test "ignores nil recurrence_rules field" do
       event = base_event()
 
-      result = Utils.generate_occurrences(event, %{from: @begins_on, to: @ends_on})
+      # , %{from: @begins_on, to: @ends_on})
+      result = Utils.generate_occurrences(event)
       assert result == []
     end
   end

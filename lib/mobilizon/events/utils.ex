@@ -19,10 +19,7 @@ defmodule Mobilizon.Events.Utils do
     end
   end
 
-  def generate_occurrences(%Event{} = event, %{
-        from: %DateTime{} = _from_date,
-        to: %DateTime{} = _to_date
-      }) do
+  def generate_occurrences(%Event{} = event) do
     rules = Map.get(event, :recurrence_rules) || []
 
     rules
@@ -31,73 +28,38 @@ defmodule Mobilizon.Events.Utils do
     |> Enum.map(fn x -> create_reocurring_event(x, event) end)
   end
 
+  def deep_struct_to_map(%_{} = struct) do
+    struct
+    |> Map.from_struct()
+    |> Enum.map(fn {key, value} ->
+      {key, deep_struct_to_map(value)}
+    end)
+    |> Enum.into(%{})
+  end
+
+  def deep_struct_to_map(list) when is_list(list) do
+    Enum.map(list, &deep_struct_to_map/1)
+  end
+
+  def deep_struct_to_map(value), do: value
+
   defp create_reocurring_event(%DateTime{} = start_on, %Event{} = event) do
-    hours_diff = DateTime.diff(event.begins_on, event.ends_on, :hour)
-    ends_on = DateTime.add(start_on, hours_diff, :hour)
-    %Event{event | begins_on: start_on, ends_on: ends_on}
+    # hours_diff = DateTime.diff(event.begins_on, event.ends_on, :hour)
+    ends_on = DateTime.add(start_on, 2, :hour)
+
+    %Event{
+      event
+      | begins_on: start_on,
+        ends_on: ends_on
+    }
+    |> Map.drop([:url, :uuid])
+    |> deep_struct_to_map()
   end
 
   def recurrence_stream(begins_on, :daily, interval, until, count, _byday) do
     stream = Stream.iterate(begins_on, &Timex.shift(&1, seconds: interval))
 
     stream = Stream.take_while(stream, &(DateTime.compare(&1, until) != :gt))
-    if count, do: Stream.take(stream, count), else: stream
-  end
-
-  @doc """
-  Generates a stream of `DateTime` values based on a recurrence rule.
-
-  This function implements recurrence logic similar to iCalendar RRULEs using the following subset:
-  - `:freq` — currently supports `:daily` and `:weekly`
-  - `:interval` — number of units between each occurrence
-  - `:until` — a `DateTime` marking the upper bound of recurrence
-  - `:count` — maximum number of occurrences (optional)
-  - `:byday` — used with `:weekly` to specify which weekdays to include (e.g. ["MO", "FR"])
-
-  ## Parameters
-
-    - `start_time` (`DateTime`) — the datetime to begin recurrence generation from.
-    - `freq` (`:daily | :weekly`) — the type of recurrence.
-    - `interval` (`integer`) — how often the recurrence repeats (e.g. every 2 days/weeks).
-    - `until` (`DateTime`) — the maximum datetime limit for recurrence generation.
-    - `count` (`integer | nil`) — maximum number of occurrences (optional).
-    - `byday` (`[String.t()] | nil`) — applicable only to `:weekly`, determines days of week to include.
-
-  ## Returns
-
-    - A `Stream` of `DateTime` values representing each recurrence.
-
-  ## Notes
-
-    - `:daily` ignores `byday`.
-    - `:weekly` requires `byday` to generate weekday-specific entries.
-    - If both `until` and `count` are provided, `count` is applied **after** filtering by `until`.
-
-  ## Example
-
-
-  recurrence_stream(~U[2025-07-01 09:00:00Z], :weekly, 1, ~U[2025-07-31 00:00:00Z], nil, ["MO", "FR"])
-  #=> Stream of Mondays and Fridays between July 1 and July 31, 2025
-  """
-  def recurrence_stream(begins_on, :weekly, interval, until, count, byday) do
-    count = 4
-    weekdays = Enum.map(byday, &weekday_to_int/1)
-
-    stream =
-      begins_on
-      |> Stream.iterate(&Timex.shift(&1, weeks: interval))
-      |> Stream.flat_map(fn base ->
-        weekdays
-        |> Enum.map(fn wd ->
-          bg_w = Timex.beginning_of_week(base, :mon)
-
-          bg_w
-          |> Timex.shift(days: wd - 1)
-        end)
-      end)
-      |> Enum.sort()
-      |> Stream.filter(&(DateTime.compare(&1, until) != :gt))
-
     if count, do: Stream.take(stream, count), else: stream
   end
 
@@ -149,7 +111,13 @@ defmodule Mobilizon.Events.Utils do
         count: 10
       }, start_date: ~U[2025-07-08 00:00:00Z])
   """
-  def generate_for_rule(%DateTime{} = dtstart, %RecurrenceRule{} = rule, opts \\ []) do
+  def generate_for_rule(
+        %DateTime{} = dtstart,
+        %RecurrenceRule{until: until} = rule,
+        opts \\ []
+      )
+      when is_struct(until, DateTime) or is_nil(until) do
+    dtstart = shift_forward(dtstart, rule.freq, rule.interval)
     stream = recurrence_stream(dtstart, rule)
 
     limited =
@@ -166,6 +134,33 @@ defmodule Mobilizon.Events.Utils do
 
     default_end_date = Timex.shift(dtstart, months: 1)
 
+    limited
+    |> filter_start_end_options(opts, default_end_date)
+  end
+
+  @spec shift_forward(DateTime.t(), :hourly | :daily | :weekly | :monthly, integer()) ::
+          DateTime.t()
+  def shift_forward(datetime, :hourly, n) when is_integer(n) do
+    Timex.shift(datetime, hours: n)
+  end
+
+  def shift_forward(datetime, :daily, n) when is_integer(n) do
+    Timex.shift(datetime, days: n)
+  end
+
+  def shift_forward(datetime, :weekly, n) when is_integer(n) do
+    Timex.shift(datetime, weeks: n)
+  end
+
+  def shift_forward(datetime, :monthly, n) when is_integer(n) do
+    Timex.shift(datetime, months: n)
+  end
+
+  def shift_forward(_datetime, freq, _n) do
+    raise ArgumentError, "Unsupported frequency: #{inspect(freq)}"
+  end
+
+  def filter_start_end_options(limited, opts, default_end_date) do
     limited
     |> Enum.filter(fn dt ->
       after_start? =

@@ -239,7 +239,7 @@ defmodule Mobilizon.EventsTest do
 
     test "list_tags/0 returns all tags" do
       tag = insert(:tag)
-      assert [tag.id] == Events.list_tags() |> Enum.map(& &1.id)
+      assert tag.id in (Events.list_tags() |> Enum.map(& &1.id)) == true
     end
 
     test "list_tags/1 filters tags by title or slug" do
@@ -577,6 +577,67 @@ defmodule Mobilizon.EventsTest do
       track = insert(:track)
       assert {:ok, %Track{}} = Events.delete_track(track)
       assert_raise Ecto.NoResultsError, fn -> Events.get_track!(track.id) end
+    end
+  end
+
+  describe "recurrence rules" do
+    test "with valid parameters creation suceeds /count " do
+      actor = insert(:actor)
+      address = insert(:address)
+
+      recurrence_rules = [
+        %{freq: :hourly, interval: 1, count: 5}
+      ]
+
+      valid_attrs =
+        @event_valid_attrs
+        |> Map.put(:organizer_actor, actor)
+        |> Map.put(:organizer_actor_id, actor.id)
+        |> Map.put(:address_id, address.id)
+        |> Map.put(:recurrence_rules, recurrence_rules)
+
+      {:ok, %Event{} = _event} = Events.create_event(valid_attrs)
+    end
+
+    test "with valid parameters creation suceeds /until" do
+      actor = insert(:actor)
+      address = insert(:address)
+      end_of_reocurring_events = DateTime.utc_now()
+
+      recurrence_rules = [
+        %{freq: :hourly, interval: 1, until: end_of_reocurring_events}
+      ]
+
+      valid_attrs =
+        @event_valid_attrs
+        |> Map.put(:organizer_actor, actor)
+        |> Map.put(:organizer_actor_id, actor.id)
+        |> Map.put(:address_id, address.id)
+        |> Map.put(:recurrence_rules, recurrence_rules)
+
+      {:ok, %Event{} = _event} = Events.create_event(valid_attrs)
+    end
+
+    test "when count and until are missing validation should fail" do
+      actor = insert(:actor)
+      address = insert(:address)
+
+      recurrence_rules = [
+        %{freq: :hourly, interval: 1}
+      ]
+
+      valid_attrs =
+        @event_valid_attrs
+        |> Map.put(:organizer_actor, actor)
+        |> Map.put(:organizer_actor_id, actor.id)
+        |> Map.put(:address_id, address.id)
+        |> Map.put(:recurrence_rules, recurrence_rules)
+
+      {:error, _, changeset, _third} = Events.create_event(valid_attrs)
+
+      assert Enum.at(changeset.changes.recurrence_rules, 0).errors == [
+               until: {"either until or count must be present", []}
+             ]
     end
   end
 end

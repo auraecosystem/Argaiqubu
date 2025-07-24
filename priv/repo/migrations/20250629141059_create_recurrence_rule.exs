@@ -2,7 +2,7 @@ defmodule Mobilizon.Storage.Repo.Migrations.CreateRecurrenceRuleTable do
   use Ecto.Migration
 
   def change do
-    create table(:recurrence_rules, primary_key: false) do
+    create table(:recurrence_rules) do
       add :freq, :string, null: false
       add :interval, :integer, default: 1
       add :until, :utc_datetime
