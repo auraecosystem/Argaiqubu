@@ -39,34 +39,11 @@ defmodule Mobilizon.Events do
   alias Mobilizon.Storage.{Page, Repo}
   alias Mobilizon.Users.{Setting, User}
 
-  defenum(EventVisibility, :event_visibility, [
-    :public,
-    :unlisted,
-    :restricted,
-    :private
-  ])
-
   defenum(JoinOptions, :join_options, [
     :free,
     :restricted,
     :invite,
     :external
-  ])
-
-  defenum(EventStatus, :event_status, [
-    :tentative,
-    :confirmed,
-    :cancelled
-  ])
-
-  defenum(ParticipantRole, :participant_role, [
-    :not_approved,
-    :not_confirmed,
-    :rejected,
-    :participant,
-    :moderator,
-    :administrator,
-    :creator
   ])
 
   @public_visibility [:public, :unlisted]
