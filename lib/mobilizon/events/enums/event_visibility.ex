@@ -1,4 +1,4 @@
-defmodule Mobilizon.Events.EventVisibility do
+defmodule Mobilizon.Events.Enums.EventVisibility do
   @moduledoc """
   Putting Enum Types in own file because of problems with test
   """

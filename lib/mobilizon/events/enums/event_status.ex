@@ -1,6 +1,8 @@
-defmodule Mobilizon.Events.EventStatus do
-  @moduledoc """
-  Putting Enum Types in own file because of problems with test
-  """
-  use EctoEnum, terminate: 0, confirmed: 1, cancelled: 2
+defmodule Mobilizon.Events.Enums.EventStatus do
+  @moduledoc false
+
+  use EctoEnum,
+    tentative: 0,
+    confirmed: 1,
+    cancelled: 6
 end

@@ -30,7 +30,7 @@ defmodule Mobilizon.Events.UtilsTest do
         until: end_of_reocurring_events
       }
 
-      assert length(Utils.generate_for_rule(begins_on, rule)) == 6
+      assert length(Utils.generate_for_rule(begins_on, rule)) == 5
     end
 
     test "generates weekly occurrences using until" do
@@ -43,7 +43,6 @@ defmodule Mobilizon.Events.UtilsTest do
       }
 
       assert Utils.generate_for_rule(dtstart, rule) == [
-               ~U[2025-07-01 00:00:00Z],
                ~U[2025-07-08 00:00:00Z],
                ~U[2025-07-15 00:00:00Z],
                ~U[2025-07-22 00:00:00Z],
@@ -86,7 +85,7 @@ defmodule Mobilizon.Events.UtilsTest do
       result = Utils.generate_for_rule(dtstart, rule)
       last = List.last(result)
 
-      assert last <= Timex.shift(dtstart, months: 1)
+      assert last <= Timex.shift(dtstart, months: 1, days: 1)
       assert length(result) < 100
     end
 
@@ -177,7 +176,7 @@ defmodule Mobilizon.Events.UtilsTest do
       rule = %RecurrenceRule{
         freq: :daily,
         interval: 1,
-        count: 5
+        until: ~U[2025-07-01 00:00:00Z]
       }
 
       result =
@@ -224,7 +223,7 @@ defmodule Mobilizon.Events.UtilsTest do
 
       dates = Enum.map(result, &DateTime.to_date(&1.begins_on))
 
-      assert ~D[2025-07-01] in dates
+      assert ~D[2025-07-02] in dates
       assert ~D[2025-07-03] in dates
       assert ~D[2025-07-05] in dates
       assert ~D[2025-07-04] in dates

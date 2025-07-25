@@ -6,7 +6,6 @@ defmodule Mobilizon.Events do
   import Geo.PostGIS
 
   import Ecto.Query
-  import EctoEnum
 
   import Mobilizon.Service.Guards
   import Mobilizon.Storage.Ecto
@@ -38,13 +37,6 @@ defmodule Mobilizon.Events do
   alias Mobilizon.Share
   alias Mobilizon.Storage.{Page, Repo}
   alias Mobilizon.Users.{Setting, User}
-
-  defenum(JoinOptions, :join_options, [
-    :free,
-    :restricted,
-    :invite,
-    :external
-  ])
 
   @public_visibility [:public, :unlisted]
 
