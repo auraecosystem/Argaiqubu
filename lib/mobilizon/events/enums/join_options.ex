@@ -1,4 +1,4 @@
-defmodule Mobilizon.Events.EventParticipantStats do
+defmodule Mobilizon.Events.JoinOptions do
   @moduledoc """
   Participation stats on event
   """
