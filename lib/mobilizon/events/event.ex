@@ -20,13 +20,16 @@ defmodule Mobilizon.Events.Event do
     EventMetadata,
     EventOptions,
     EventParticipantStats,
-    EventStatus,
-    EventVisibility,
-    JoinOptions,
     Participant,
     Session,
     Tag,
     Track
+  }
+
+  alias Mobilizon.Events.Enums.{
+    EventStatus,
+    EventVisibility,
+    JoinOptions
   }
 
   alias Mobilizon.Medias.Media

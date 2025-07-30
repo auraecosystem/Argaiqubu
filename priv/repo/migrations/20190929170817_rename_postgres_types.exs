@@ -4,10 +4,12 @@ defmodule Mobilizon.Storage.Repo.Migrations.RenamePostgresTypes do
 
   alias Mobilizon.Discussions.CommentVisibility
 
-  alias Mobilizon.Events.{
-    JoinOptions,
+  alias Ecto.Adapters.SQL
+
+  alias Mobilizon.Events.Enums.{
     EventStatus,
     EventVisibility,
+    JoinOptions,
     ParticipantRole
   }
 
@@ -34,7 +36,7 @@ defmodule Mobilizon.Storage.Repo.Migrations.RenamePostgresTypes do
 
   defp rename_type(old_type_name, new_type_name) do
     with %Postgrex.Result{columns: ["exists"], rows: [[true]]} <-
-           Ecto.Adapters.SQL.query!(
+           SQL.query!(
              Mobilizon.Storage.Repo,
              "select exists (select 1 from pg_type where typname = '#{old_type_name |> remove_schema}' and typnamespace = (select oid from pg_namespace where nspname = 'public'))"
            ) do

@@ -1,6 +1,6 @@
 defmodule Mobilizon.Storage.Repo.Migrations.AddExternalUrlForEvents do
   use Ecto.Migration
-  alias Mobilizon.Events.JoinOptions
+  alias Mobilizon.Events.Enums.JoinOptions
 
   def up do
     alter table(:events) do

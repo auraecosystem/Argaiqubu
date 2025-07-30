@@ -6,7 +6,6 @@ defmodule Mobilizon.Events do
   import Geo.PostGIS
 
   import Ecto.Query
-  import EctoEnum
 
   import Mobilizon.Service.Guards
   import Mobilizon.Storage.Ecto
@@ -30,36 +29,6 @@ defmodule Mobilizon.Events do
     TagRelation,
     Track
   }
-
-  defenum(EventVisibility, :event_visibility, [
-    :public,
-    :unlisted,
-    :restricted,
-    :private
-  ])
-
-  defenum(JoinOptions, :join_options, [
-    :free,
-    :restricted,
-    :invite,
-    :external
-  ])
-
-  defenum(EventStatus, :event_status, [
-    :tentative,
-    :confirmed,
-    :cancelled
-  ])
-
-  defenum(ParticipantRole, :participant_role, [
-    :not_approved,
-    :not_confirmed,
-    :rejected,
-    :participant,
-    :moderator,
-    :administrator,
-    :creator
-  ])
 
   alias Mobilizon.Federation.ActivityPub.Relay
   alias Mobilizon.Service.Export.Cachable

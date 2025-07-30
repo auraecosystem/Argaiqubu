@@ -1,8 +1,10 @@
 defmodule Mobilizon.Storage.Repo.Migrations.AddRejectedToParticipantRole do
   use Ecto.Migration
+
+  alias Mobilizon.Events.Enums.ParticipantRole
+  alias Mobilizon.Events.Participan
   alias Mobilizon.Storage.Repo
-  alias Mobilizon.Events.Participant
-  alias Mobilizon.Events.ParticipantRole
+
   import Ecto.Query
 
   @disable_ddl_transaction true
