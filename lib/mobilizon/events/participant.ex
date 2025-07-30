@@ -9,8 +9,9 @@ defmodule Mobilizon.Events.Participant do
 
   alias Mobilizon.Actors.Actor
   alias Mobilizon.Events
-  alias Mobilizon.Events.{Event, ParticipantRole}
+  alias Mobilizon.Events.Event
   alias Mobilizon.Events.Participant.Metadata
+  alias Mobilizon.Events.ParticipantRole
 
   alias Mobilizon.Web.Endpoint
 
