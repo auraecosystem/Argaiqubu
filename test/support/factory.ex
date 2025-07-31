@@ -41,8 +41,8 @@ defmodule Mobilizon.Factory do
 
   @spec actor_factory :: Mobilizon.Actors.Actor.t()
   def actor_factory do
-    preferred_username = sequence("thomas")
-    # url = Actor.build_url(preferred_username, :page)
+    preferred_username = sequence("Not Thomas")
+    url = Actor.build_url(preferred_username, :page)
 
     %Mobilizon.Actors.Actor{
       preferred_username: preferred_username,
@@ -54,7 +54,7 @@ defmodule Mobilizon.Factory do
       type: :Person,
       avatar: build(:file, name: "Avatar"),
       banner: build(:file, name: "Banner"),
-      url: sequence(:url, &"www.-#{&1}.com"),
+      url: url,
       followers_url: sequence(:url, &"www.followers-#{&1}.com"),
       following_url: Actor.build_url(preferred_username, :following),
       inbox_url: Actor.build_url(preferred_username, :inbox),
