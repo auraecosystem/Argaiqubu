@@ -1075,7 +1075,6 @@
   "You don't have any upcoming events. Maybe try another filter?": "",
   "You excluded member {member}.": "",
   "You have attended {count} events in the past.": "",
-  "You have been invited by {invitedBy} to the following group:": "",
   "You have been removed from this group's members.": "",
   "You have cancelled your participation": "",
   "You have one event in {days} days.": "شما هیچ رویدادی در {days} روز آینده ندارید. | شما یک رویداد در {days} روز آینده دارید. | شما {count} رویداد در {days} روز آینده دارید.",
