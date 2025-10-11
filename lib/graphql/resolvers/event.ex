@@ -11,10 +11,12 @@ defmodule Mobilizon.GraphQL.Resolvers.Event do
 
   alias Mobilizon.GraphQL.API
 
+  alias Mobilizon.Events.Utils
   alias Mobilizon.Federation.ActivityPub.Activity
   alias Mobilizon.Federation.ActivityPub.Permission
   alias Mobilizon.Service.AntiSpam
   alias Mobilizon.Service.TimezoneDetector
+
   import Mobilizon.Users.Guards, only: [is_moderator: 1]
   import Mobilizon.Web.Gettext
   import Mobilizon.GraphQL.Resolvers.Event.Utils
@@ -241,6 +243,20 @@ defmodule Mobilizon.GraphQL.Resolvers.Event do
     {:ok, events}
   end
 
+  @doc """
+  List recurrent events
+  """
+  @spec list_recurrent_events(Event.t(), map(), Absinthe.Resolution.t()) :: {:ok, list(Event.t())}
+  def list_recurrent_events(
+        %Event{id: _id} = event,
+        _args,
+        _resolution
+      ) do
+    event = Events.get_event_with_preload!(event.id)
+
+    {:ok, event}
+  end
+
   @spec add_latest_events(list(Event.t())) :: list(Event.t())
   defp add_latest_events(events) do
     if @number_of_related_events - length(events) > 0 do
@@ -288,6 +304,16 @@ defmodule Mobilizon.GraphQL.Resolvers.Event do
             )},
          {:ok, %Activity{data: %{"object" => %{"type" => "Event"}}}, %Event{} = event} <-
            API.Events.create_event(args_with_organizer) do
+      {:ok, event} = Mobilizon.Events.get_event_with_preload(event.id)
+
+      _events =
+        event
+        |> Utils.generate_occurrences()
+        |> Enum.map(fn ev_args ->
+          {:ok, event, second} = API.Events.create_event(ev_args)
+          {event, second}
+        end)
+
       {:ok, event}
     else
       {:is_owned, nil} ->

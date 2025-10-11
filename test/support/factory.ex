@@ -15,7 +15,7 @@ defmodule Mobilizon.Factory do
   def user_factory do
     %Mobilizon.Users.User{
       password_hash: "Jane Smith",
-      email: sequence(:email, &"email-#{&1}@example.com"),
+      email: sequence(:email, &"email234-#{&1}@example.com"),
       role: :user,
       confirmed_at: DateTime.utc_now() |> DateTime.truncate(:second),
       confirmation_sent_at: nil,
@@ -41,7 +41,8 @@ defmodule Mobilizon.Factory do
 
   @spec actor_factory :: Mobilizon.Actors.Actor.t()
   def actor_factory do
-    preferred_username = sequence("thomas")
+    preferred_username = sequence("Not_Thomas")
+    url = Actor.build_url(preferred_username, :page)
 
     %Mobilizon.Actors.Actor{
       preferred_username: preferred_username,
@@ -53,8 +54,8 @@ defmodule Mobilizon.Factory do
       type: :Person,
       avatar: build(:file, name: "Avatar"),
       banner: build(:file, name: "Banner"),
-      url: Actor.build_url(preferred_username, :page),
-      followers_url: Actor.build_url(preferred_username, :followers),
+      url: url,
+      followers_url: sequence(:url, &"www.followers-#{&1}.com"),
       following_url: Actor.build_url(preferred_username, :following),
       inbox_url: Actor.build_url(preferred_username, :inbox),
       outbox_url: Actor.build_url(preferred_username, :outbox),
@@ -127,8 +128,8 @@ defmodule Mobilizon.Factory do
   @spec tag_factory :: Mobilizon.Events.Tag.t()
   def tag_factory do
     %Mobilizon.Events.Tag{
-      title: sequence("MyTag"),
-      slug: sequence("my-tag")
+      title: sequence(:title, &"MyTag#{&1}"),
+      slug: sequence(:slug, &"my-slag#{&1}")
     }
   end
 

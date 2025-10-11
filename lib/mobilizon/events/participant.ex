@@ -8,10 +8,11 @@ defmodule Mobilizon.Events.Participant do
   import Ecto.Changeset
 
   alias Mobilizon.Actors.Actor
-  alias Mobilizon.Events
-  alias Mobilizon.Events.{Event, ParticipantRole}
-  alias Mobilizon.Events.Participant.Metadata
 
+  alias Mobilizon.Events
+  alias Mobilizon.Events.Enums.ParticipantRole
+  alias Mobilizon.Events.Event
+  alias Mobilizon.Events.Participant.Metadata
   alias Mobilizon.Web.Endpoint
 
   @type t :: %__MODULE__{

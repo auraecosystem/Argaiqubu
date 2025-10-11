@@ -1,6 +1,6 @@
 defmodule Mobilizon.Repo.Migrations.MoveParticipantRoleToEnum do
   use Ecto.Migration
-  alias Mobilizon.Events.ParticipantRole
+  alias Mobilizon.Events.Enums.ParticipantRole
 
   def up do
     ParticipantRole.create_type()

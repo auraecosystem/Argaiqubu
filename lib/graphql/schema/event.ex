@@ -106,6 +106,11 @@ defmodule Mobilizon.GraphQL.Schema.EventType do
       description: "Events related to this one"
     )
 
+    field(:recurrent_events, list_of(:event),
+      resolve: &Event.list_recurrent_events/3,
+      description: "Events related to this one"
+    )
+
     field(:comments, list_of(:comment), description: "The comments in reply to the event") do
       resolve(dataloader(Discussions, args: %{top_level: true}))
     end
@@ -118,6 +123,10 @@ defmodule Mobilizon.GraphQL.Schema.EventType do
     field(:options, :event_options, description: "The event options")
     field(:metadata, list_of(:event_metadata), description: "A key-value list of metadata")
     field(:language, :string, description: "The event language")
+
+    field(:recurrence_rules, list_of(:recurrence_rule),
+      description: "The list of reucrrence rules according to iCalendar specifications"
+    )
 
     field(:conversations, :paginated_conversation_list,
       description: "The list of conversations started on this event"
@@ -149,6 +158,17 @@ defmodule Mobilizon.GraphQL.Schema.EventType do
     value(:restricted, description: "Manual acceptation")
     value(:invite, description: "Participants must be invited")
     value(:external, description: "External registration")
+  end
+
+  @desc "The list of possible options for the recurrence rule freq "
+  enum :freq do
+    value(:secondly, description: "The event is tentative")
+    value(:minutely, description: "The event is tentative")
+    value(:hourly, description: "The event is confirmed")
+    value(:daily, description: "The event is cancelled")
+    value(:weekly, description: "The event is tentative")
+    value(:monthly, description: "The event is tentative")
+    value(:yearly, description: "The event is tentative")
   end
 
   @desc "The list of possible options for the event's status"
@@ -363,6 +383,24 @@ defmodule Mobilizon.GraphQL.Schema.EventType do
     field(:type, :event_metadata_type, description: "The metadata type")
   end
 
+  object :recurrence_rule do
+    field(:id, :id, description: "Internal ID for this event")
+    field(:freq, :freq, description: "Frequency parameter")
+    field(:interval, non_null(:integer), description: "The key for the metadata")
+    field(:until, :datetime, description: "The title for the metadata")
+    field(:count, non_null(:integer), description: "The value for the metadata")
+    field(:byday, :integer, description: "The metadata type")
+  end
+
+  input_object :recurrence_rule_input do
+    field(:id, :id, description: "Internal ID for this event")
+    field(:freq, :freq, description: "")
+    field(:interval, non_null(:integer), description: "The key for the metadata")
+    field(:until, :datetime, description: "The title for the metadata")
+    field(:count, :integer, description: "The value for the metadata")
+    field(:byday, :integer, description: "The metadata type")
+  end
+
   @desc """
   A event contact
   """
@@ -477,6 +515,11 @@ defmodule Mobilizon.GraphQL.Schema.EventType do
 
       arg(:contacts, list_of(:contact), default_value: [], description: "The events contacts")
       arg(:language, :string, description: "The event language", default_value: "und")
+
+      arg(:recurrence_rules, list_of(:recurrence_rule_input),
+        default_value: [],
+        description: "The recurrence rules according to iCalendar specifications"
+      )
 
       middleware(Rajska.QueryAuthorization,
         permit: :user,

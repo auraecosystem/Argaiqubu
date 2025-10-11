@@ -1,7 +1,10 @@
 defmodule Mobilizon.Repo.Migrations.SplitEventVisibilityAndJoinOptions do
   use Ecto.Migration
-  alias Mobilizon.Events.EventVisibility
-  alias Mobilizon.Events.JoinOptions
+
+  alias Mobilizon.Events.Enums.{
+    EventVisibility,
+    JoinOptions
+  }
 
   @doc """
   EventVisibility has dropped some possible values, so we need to recreate it
