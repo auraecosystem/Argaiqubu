@@ -28,7 +28,9 @@ const generateWrapper = () => {
   global_data.provide.dateFnsLocale = enUS;
   global_data.plugins = [router];
   return mount(TimelineView, {
-    props: {},
+    props: {
+      preferredUsername: "my-group",
+    },
     global: {
       ...global_data,
       stubs: {
@@ -45,5 +47,12 @@ describe("TimelineView", () => {
     await flushPromises();
     expect(htmlRemoveId(wrapper.html())).toMatchSnapshot();
     expect(requestHandlers.handle_0).toHaveBeenCalledTimes(1);
+    expect(requestHandlers.handle_0).toHaveBeenCalledWith({
+      author: undefined,
+      limit: 25,
+      page: 1,
+      preferredUsername: "my-group",
+      type: undefined,
+    });
   });
 });
