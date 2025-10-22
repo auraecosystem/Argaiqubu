@@ -42,14 +42,19 @@
       </p>
     </form>
     <div v-else>
-      <o-notification variant="success" :closable="false" title="Success">
+      <o-notification
+        class="my-2"
+        variant="success"
+        :closable="false"
+        title="Success"
+      >
         {{
           t("We just sent an email to {email}", {
             email: emailValue,
           })
         }}
       </o-notification>
-      <o-notification variant="info">
+      <o-notification class="my-2" variant="info">
         {{
           t("Please check your spam folder if you didn't receive the email.")
         }}
