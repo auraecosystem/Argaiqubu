@@ -117,6 +117,6 @@ describe("Reset page", () => {
       token: "some-token",
     });
     await flushPromises();
-    expect(wrapper.router.push).toHaveBeenCalledWith({ name: RouteName.HOME });
+    expect(wrapper.router.push).toHaveBeenCalledWith({ name: RouteName.LOGIN });
   });
 });
