@@ -39,7 +39,7 @@
             </o-select>
           </o-field>
         </div>
-        <div class="" v-if="exportFormats.length > 0">
+        <div v-if="exportFormats.length > 0">
           <o-dropdown aria-role="list">
             <template #trigger="{ active }">
               <o-button
@@ -102,7 +102,7 @@
       backend-sorting
       :default-sort-direction="'desc'"
       :default-sort="['insertedAt', 'desc']"
-      @page-change="(newPage: number) => (page = newPage)"
+      @page-change="onPageChange"
       @sort="(field: string, order: string) => emit('sort', field, order)"
     >
       <o-table-column
@@ -320,7 +320,11 @@ const checkedRows = ref<IParticipant[]>([]);
 
 const queueTable = ref();
 
-const { result: participantsResult, loading: participantsLoading } = useQuery<{
+const {
+  result: participantsResult,
+  loading: participantsLoading,
+  refetch: participantsRefetch,
+} = useQuery<{
   event: IEvent;
 }>(
   PARTICIPANTS,
@@ -337,6 +341,18 @@ const { result: participantsResult, loading: participantsLoading } = useQuery<{
       role.value !== undefined,
   })
 );
+
+const onPageChange = (p: number): void => {
+  // Change is not instantaneous since page is created with useRouteQuery linked to the URL state
+  page.value = p;
+  participantsRefetch({
+    uuid: eventId.value,
+    // use p to send the new value, not page.value (contains the old value)
+    page: p,
+    limit: PARTICIPANTS_PER_PAGE,
+    roles: role.value === "EVERYTHING" ? undefined : role.value,
+  });
+};
 
 const event = computed(() => participantsResult.value?.event);
 
