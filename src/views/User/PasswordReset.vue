@@ -35,7 +35,7 @@
           @input="resetErrors()"
         />
       </o-field>
-      <o-button tag="input" type="submit" class="my-2" variant="primary">{{
+      <o-button type="submit" class="my-2" variant="primary">{{
         $t("Reset my password")
       }}</o-button>
     </form>
