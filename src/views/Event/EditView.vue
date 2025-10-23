@@ -811,7 +811,6 @@ const eventOptions = computed({
 onMounted(async () => {
   observer.value = new IntersectionObserver(
     (entries) => {
-      // eslint-disable-next-line no-restricted-syntax
       for (const entry of entries) {
         if (entry) {
           showFixedNavbar.value = !entry.isIntersecting;
@@ -1344,7 +1343,6 @@ const timezones = computed((): Record<string, string[]> => {
         prefix2: string,
         suffix2: string
       ) => {
-        // eslint-disable-next-line no-param-reassign
         (acc2[prefix2] = acc2[prefix2] || []).push(suffix2);
         return acc2;
       };
@@ -1357,7 +1355,6 @@ const timezones = computed((): Record<string, string[]> => {
   );
 });
 
-// eslint-disable-next-line class-methods-use-this
 const sanitizeTimezone = (timezone: string): string => {
   return timezone
     .split("_")

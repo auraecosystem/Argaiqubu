@@ -484,7 +484,6 @@ const createResourceButtonLabel = computed((): string => {
   return createSentenceForType(newResource.type);
 });
 
-// eslint-disable-next-line class-methods-use-this
 const postRefreshQueries = (): InternalRefetchQueriesInclude => {
   return [
     {

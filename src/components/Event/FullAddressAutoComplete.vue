@@ -313,7 +313,6 @@ const actualLabel = computed((): string => {
   return props.label ?? t("Find an address");
 });
 
-// eslint-disable-next-line class-methods-use-this
 const canShowLocateMeButton = computed((): boolean => {
   return window.isSecureContext;
 });
@@ -446,7 +445,6 @@ const reverseGeoCode = async (e: LatLng, zoom: number) => {
   }
 };
 
-// eslint-disable-next-line no-undef
 const getLocation = async (): Promise<GeolocationPosition> => {
   let errorMessage = t("Failed to get location.");
   return new Promise((resolve, reject) => {

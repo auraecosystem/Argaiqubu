@@ -908,6 +908,7 @@ const openDeleteEventModal = () => {
     onConfirm: (result: string) => {
       console.debug("calling delete event", result);
       if (result.trim() === event.value?.title) {
+        // eslint-disable-next-line @typescript-eslint/no-unused-expressions
         event.value?.id ? deleteEvent({ eventId: event.value?.id }) : null;
       }
     },
