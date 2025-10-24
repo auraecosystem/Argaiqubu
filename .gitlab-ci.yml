@@ -101,7 +101,7 @@ deps:
     - mix deps.get
   script:
     - export EXITVALUE=0
-    - mix hex.outdated
+    - mix hex.outdated || echo "----"
     - |
       if [ -z "$(mix hex.outdated | grep 'Update possible')" ]
       then
@@ -178,7 +178,12 @@ e2e:
   variables:
     MIX_ENV: "e2e"
   before_script:
-    - mkdir -p /etc/apt/keyrings && curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg && echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_22.x nodistro main" | tee /etc/apt/sources.list.d/nodesource.list && apt-get update && apt-get install nodejs -yq
+    - |
+      mkdir -p /etc/apt/keyrings
+      curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | gpg --no-tty --dearmor -o /etc/apt/keyrings/nodesource.gpg
+      echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_22.x nodistro main" | tee /etc/apt/sources.list.d/nodesource.list
+      apt-get update
+      apt-get install nodejs -yq
     - rm -rf ~/.hex/cache.ets
     - mix deps.get
     - mix ecto.create
