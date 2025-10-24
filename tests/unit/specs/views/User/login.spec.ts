@@ -194,6 +194,7 @@ describe("Render login form", () => {
 
     wrapper.find('form input[type="email"]').setValue("some@email.tld");
     wrapper.find('form input[type="password"]').setValue("somepassword");
+    wrapper.find("form button[type='submit']").trigger("click");
     wrapper.find("form").trigger("submit");
     await flushPromises();
     expect(wrapper.router.push).toHaveBeenCalledWith("/about/instance");

@@ -5,7 +5,7 @@
       :label-for="id"
       :message="fieldErrors"
       :variant="fieldErrors ? 'danger' : ''"
-      class="!-mt-2"
+      class="!-mt-2 flex"
       :labelClass="labelClass"
     >
       <template #label>
@@ -20,18 +20,16 @@
         :title="t('Use my location')"
       />
       <o-autocomplete
-        :data="addressData"
         v-model="queryTextWithDefault"
+        :options="addressData"
         :placeholder="placeholderWithDefault"
-        :formatter="(elem: IAddress) => addressFullName(elem)"
         :debounce="debounceDelay"
-        @input="asyncData"
         :icon="canShowLocateMeButton ? null : 'map-marker'"
         expanded
-        @select="setSelected"
         :id="id"
         :disabled="disabled"
-        dir="auto"
+        @input="asyncData"
+        @select="setSelected"
         class="FullAddressAutoComplete-o-autocomplete !mt-0 !h-full"
       >
         <template #default="{ option }">
@@ -151,7 +149,7 @@
         </o-field>
       </section>
       <footer class="mt-3 flex gap-2 items-center">
-        <o-button native-type="submit">
+        <o-button type="submit">
           {{ t("Save") }}
         </o-button>
         <o-button outlined type="button" @click="resetAddress">
@@ -204,6 +202,7 @@ import { useReverseGeocode } from "@/composition/apollo/address";
 import { useLazyQuery } from "@vue/apollo-composable";
 import { AddressSearchType } from "@/types/enums";
 import Loading from "vue-material-design-icons/Loading.vue";
+import type { OptionsProp } from "@oruga-ui/oruga-next";
 const MapLeaflet = defineAsyncComponent(
   () => import("@/components/LeafletMap.vue")
 );
@@ -246,7 +245,7 @@ const mapDefaultZoom = computed(() => {
   return 5;
 });
 
-const addressData = ref<IAddress[]>([]);
+const addressData = ref<OptionsProp>();
 
 const defaultAddress = new Address();
 defaultAddress.geom = undefined;
@@ -328,6 +327,15 @@ const { load: searchAddressLoad, refetch: searchAddressRefetch } =
     searchAddress: IAddress[];
   }>(ADDRESS);
 
+function convert_to_complete(addesses: IAddress[]) {
+  return addesses.map((elem: IAddress) => {
+    return {
+      label: elem.description, // addressFullName(elem),
+      value: elem,
+    };
+  });
+}
+
 const asyncData = async (query: string): Promise<void> => {
   console.debug("Finding addresses");
   if (!query.length) {
@@ -359,7 +367,7 @@ const asyncData = async (query: string): Promise<void> => {
       return;
     }
     console.debug("onAddressSearchResult", result.searchAddress);
-    addressData.value = result.searchAddress;
+    addressData.value = convert_to_complete(result.searchAddress);
     isFetching.value = false;
   } catch (e) {
     console.error(e);
@@ -377,7 +385,7 @@ const queryText = ref();
 const queryTextWithDefault = computed({
   get() {
     return (
-      queryText.value ?? selectedAddressText.value ?? props.defaultText ?? ""
+      selectedAddressText.value ?? queryText.value ?? props.defaultText ?? ""
     );
   },
   set(newValue: string) {
@@ -431,13 +439,16 @@ const reverseGeoCode = async (e: LatLng, zoom: number) => {
       locale: locale.value as unknown as string,
     });
     if (!result) return;
-    addressData.value = result.reverseGeocode;
+    addressData.value = [];
 
-    if (addressData.value.length > 0) {
-      const foundAddress = addressData.value[0];
+    if (result.reverseGeocode.length > 0) {
+      const foundAddress = result.reverseGeocode[0];
       Object.assign(selected, foundAddress);
+      queryText.value = addressFullName(foundAddress);
+      addressData.value = [
+        { label: queryTextWithDefault.value, value: foundAddress },
+      ];
       console.debug("reverse geocode succeded, setting new address");
-      queryTextWithDefault.value = addressFullName(foundAddress);
       emit("update:modelValue", selected);
     }
   } catch (err) {

@@ -105,7 +105,7 @@ describe("Register page", () => {
     });
     await flushPromises();
     expect(wrapper.find("form").exists()).toBe(true);
-    expect(wrapper.find(".o-field__message-danger").text()).toContain(
+    expect(wrapper.find(".o-field__message--danger").text()).toContain(
       "Bad email."
     );
   });
@@ -130,7 +130,7 @@ describe("Register page", () => {
     });
     await flushPromises();
     expect(wrapper.find("form").exists()).toBe(true);
-    expect(wrapper.find(".o-field__message-danger").text()).toContain(
+    expect(wrapper.find(".o-field__message--danger").text()).toContain(
       "Bad password."
     );
   });
@@ -143,7 +143,7 @@ describe("Register page", () => {
     expect(wrapper.find("form").exists()).toBe(true);
     wrapper.find('form input[type="email"]').setValue("some@email.tld");
     wrapper.find('form input[type="password"]').setValue("somepassword");
-    wrapper.find("form .o-input__textarea").setValue("text for moderation");
+    wrapper.find("form textarea").setValue("text for moderation");
     wrapper.find("form").trigger("submit");
     await wrapper.vm.$nextTick();
     expect(requestHandlers.createUserHandler).toHaveBeenCalledWith({
@@ -166,7 +166,7 @@ describe("Register page", () => {
     expect(wrapper.find("form").exists()).toBe(true);
     wrapper.find('form input[type="email"]').setValue("some@email.tld");
     wrapper.find('form input[type="password"]').setValue("somepassword");
-    wrapper.find("form .o-input__textarea").setValue("text for moderation");
+    wrapper.find("form textarea").setValue("text for moderation");
     wrapper.find("form").trigger("submit");
     await wrapper.vm.$nextTick();
     expect(requestHandlers.createUserHandler).toBeCalledTimes(1);
@@ -178,7 +178,7 @@ describe("Register page", () => {
     });
     await flushPromises();
     expect(wrapper.find("form").exists()).toBe(true);
-    expect(wrapper.find(".o-field__message-danger").text()).toContain(
+    expect(wrapper.find(".o-field__message--danger").text()).toContain(
       "Bad moderation."
     );
   });

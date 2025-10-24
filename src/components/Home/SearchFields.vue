@@ -54,14 +54,14 @@
     <div class="flex flex-col flex-wrap sm:flex-row gap-2 justify-center">
       <o-button
         :class="'search-Event min-w-40 ' + select_button_class('EVENTS')"
-        native-type="submit"
+        type="submit"
         icon-left="calendar"
       >
         {{ t("Events") + number_result("EVENTS") }}
       </o-button>
       <o-button
         :class="'search-Activity min-w-40 ' + select_button_class('LONGEVENTS')"
-        native-type="submit"
+        type="submit"
         icon-left="calendar-star"
         v-if="isLongEvents"
       >
@@ -69,7 +69,7 @@
       </o-button>
       <o-button
         :class="'search-Group min-w-40 ' + select_button_class('GROUPS')"
-        native-type="submit"
+        type="submit"
         icon-left="account-multiple"
       >
         {{ t("Groups") + number_result("GROUPS") }}

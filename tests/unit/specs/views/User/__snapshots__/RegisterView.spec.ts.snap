@@ -35,50 +35,38 @@ exports[`Register page > register with moderation 1`] = `
         <!---->
       </div>
       <form>
-        <div data-oruga="field" class="o-field"><label for="email" class="o-field__label">Email</label>
-          <div class="o-field__body">
-            <div class="o-field o-field--addons">
-              <div data-oruga="input" class="o-input__wrapper o-input__wrapper--expanded"><input aria-required="true" required="" id="email" data-oruga-input="email" type="email" class="o-input" autocomplete="off">
-                <!---->
-                <!---->
-                <!---->
-              </div>
-            </div>
+        <div data-oruga="field" class="o-field"><label id="v-0-2" for="email" class="o-field__label">Email</label>
+          <div data-oruga="input" class="o-input o-input--expanded">
+            <!----><input aria-labelledby="v-0-2" aria-required="true" required="" id="email" type="email" data-oruga-input="email" class="o-input__input o-input__input--placeholder" autocomplete="off">
+            <!---->
+            <!---->
           </div>
           <!---->
         </div>
-        <div data-oruga="field" class="o-field"><label for="password" class="o-field__label">Password</label>
-          <div class="o-field__body">
-            <div class="o-field o-field--addons">
-              <div data-oruga="input" class="o-input__wrapper o-input__wrapper--expanded o-input__wrapper--has-icon-right"><input aria-required="true" required="" minlength="6" id="password" data-oruga-input="password" type="password" class="o-input o-input--iconspace-right" autocomplete="off">
-                <!----><span class="o-icon o-icon--clickable o-input__icon-right" data-oruga="icon"><i class="mdi mdi-eye mdi-24px"></i></span>
-                <!---->
-              </div>
-            </div>
+        <div data-oruga="field" class="o-field"><label id="v-0-4" for="password" class="o-field__label">Password</label>
+          <div data-oruga="input" class="o-input o-input--expanded o-input--icon-right">
+            <!----><input aria-labelledby="v-0-4" aria-required="true" required="" minlength="6" id="password" type="password" data-oruga-input="password" class="o-input__input o-input__input--iconspace-right o-input__input--placeholder" autocomplete="off"><span data-oruga="icon" class="o-icon o-icon--clickable o-input__icon-right" tabindex="0" role="button"><i class="mdi mdi-eye mdi-24px"></i></span>
+            <!---->
           </div>
           <!---->
         </div>
-        <div data-oruga="field" class="o-field"><label for="moderation" class="o-field__label">Registration is subject to moderation, indicate your motivation.</label>
-          <div class="o-field__body">
-            <div class="o-field o-field--addons">
-              <div data-oruga="input" class="o-input__wrapper o-input__wrapper--expanded"><textarea aria-required="true" required="" id="moderation" data-oruga-input="textarea" class="o-input o-input__textarea"></textarea>
-                <!---->
-                <!---->
-                <!---->
-              </div>
-            </div>
+        <div data-oruga="field" class="o-field"><label id="v-0-6" for="moderation" class="o-field__label">Registration is subject to moderation, indicate your motivation.</label>
+          <div data-oruga="input" class="o-input o-input--expanded o-input--textarea">
+            <!----><textarea aria-labelledby="v-0-6" aria-required="true" required="" id="moderation" data-oruga-input="textarea" class="o-input__input o-input__input--placeholder"></textarea>
+            <!---->
+            <!---->
           </div>
           <!---->
         </div>
         <div class="flex items-start mb-6 mt-2">
           <div class="flex items-center h-5"><input type="checkbox" id="accept_rules_terms" class="w-4 h-4 bg-gray-50 rounded border border-gray-300 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800" required=""></div><label for="accept_rules_terms" class="ml-2 text-gray-900 dark:text-gray-300"><span>I agree to the <router-link-stub to="[object Object]" replace="false" custom="false" ariacurrentvalue="page" viewtransition="false" class="out"></router-link-stub> and <router-link-stub to="[object Object]" replace="false" custom="false" ariacurrentvalue="page" viewtransition="false" class="out"></router-link-stub></span></label>
         </div>
-        <p><button type="submit" class="o-btn o-btn--large o-btn--primary" role="button" data-oruga="button"><span class="o-btn__wrapper"><!----><span class="o-btn__label">Create an account</span>
+        <p><button data-oruga="button" type="submit" role="button" tabindex="0" class="o-button o-button--large o-button--primary"><span class="o-button__wrapper"><!----><span class="o-button__label">Create an account</span>
             <!----></span>
           </button></p>
         <p class="my-6">
-          <router-link-stub class="o-btn o-btn--text" role="button" data-oruga="button" to="[object Object]"></router-link-stub>
-          <router-link-stub class="o-btn o-btn--text" role="button" data-oruga="button" to="[object Object]"></router-link-stub>
+          <router-link-stub data-oruga="button" role="button" tabindex="0" class="o-button o-button--text" to="[object Object]"></router-link-stub>
+          <router-link-stub data-oruga="button" role="button" tabindex="0" class="o-button o-button--text" to="[object Object]"></router-link-stub>
         </p>
         <hr role="presentation">
         <!--v-if-->
@@ -123,26 +111,18 @@ exports[`Register page > register without moderation 1`] = `
         <!---->
       </div>
       <form>
-        <div data-oruga="field" class="o-field"><label for="email" class="o-field__label">Email</label>
-          <div class="o-field__body">
-            <div class="o-field o-field--addons">
-              <div data-oruga="input" class="o-input__wrapper o-input__wrapper--expanded"><input aria-required="true" required="" id="email" data-oruga-input="email" type="email" class="o-input" autocomplete="off">
-                <!---->
-                <!---->
-                <!---->
-              </div>
-            </div>
+        <div data-oruga="field" class="o-field"><label id="v-0-2" for="email" class="o-field__label">Email</label>
+          <div data-oruga="input" class="o-input o-input--expanded">
+            <!----><input aria-labelledby="v-0-2" aria-required="true" required="" id="email" type="email" data-oruga-input="email" class="o-input__input o-input__input--placeholder" autocomplete="off">
+            <!---->
+            <!---->
           </div>
           <!---->
         </div>
-        <div data-oruga="field" class="o-field"><label for="password" class="o-field__label">Password</label>
-          <div class="o-field__body">
-            <div class="o-field o-field--addons">
-              <div data-oruga="input" class="o-input__wrapper o-input__wrapper--expanded o-input__wrapper--has-icon-right"><input aria-required="true" required="" minlength="6" id="password" data-oruga-input="password" type="password" class="o-input o-input--iconspace-right" autocomplete="off">
-                <!----><span class="o-icon o-icon--clickable o-input__icon-right" data-oruga="icon"><i class="mdi mdi-eye mdi-24px"></i></span>
-                <!---->
-              </div>
-            </div>
+        <div data-oruga="field" class="o-field"><label id="v-0-4" for="password" class="o-field__label">Password</label>
+          <div data-oruga="input" class="o-input o-input--expanded o-input--icon-right">
+            <!----><input aria-labelledby="v-0-4" aria-required="true" required="" minlength="6" id="password" type="password" data-oruga-input="password" class="o-input__input o-input__input--iconspace-right o-input__input--placeholder" autocomplete="off"><span data-oruga="icon" class="o-icon o-icon--clickable o-input__icon-right" tabindex="0" role="button"><i class="mdi mdi-eye mdi-24px"></i></span>
+            <!---->
           </div>
           <!---->
         </div>
@@ -150,12 +130,12 @@ exports[`Register page > register without moderation 1`] = `
         <div class="flex items-start mb-6 mt-2">
           <div class="flex items-center h-5"><input type="checkbox" id="accept_rules_terms" class="w-4 h-4 bg-gray-50 rounded border border-gray-300 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800" required=""></div><label for="accept_rules_terms" class="ml-2 text-gray-900 dark:text-gray-300"><span>I agree to the <router-link-stub to="[object Object]" replace="false" custom="false" ariacurrentvalue="page" viewtransition="false" class="out"></router-link-stub> and <router-link-stub to="[object Object]" replace="false" custom="false" ariacurrentvalue="page" viewtransition="false" class="out"></router-link-stub></span></label>
         </div>
-        <p><button type="submit" class="o-btn o-btn--large o-btn--primary" role="button" data-oruga="button"><span class="o-btn__wrapper"><!----><span class="o-btn__label">Create an account</span>
+        <p><button data-oruga="button" type="submit" role="button" tabindex="0" class="o-button o-button--large o-button--primary"><span class="o-button__wrapper"><!----><span class="o-button__label">Create an account</span>
             <!----></span>
           </button></p>
         <p class="my-6">
-          <router-link-stub class="o-btn o-btn--text" role="button" data-oruga="button" to="[object Object]"></router-link-stub>
-          <router-link-stub class="o-btn o-btn--text" role="button" data-oruga="button" to="[object Object]"></router-link-stub>
+          <router-link-stub data-oruga="button" role="button" tabindex="0" class="o-button o-button--text" to="[object Object]"></router-link-stub>
+          <router-link-stub data-oruga="button" role="button" tabindex="0" class="o-button o-button--text" to="[object Object]"></router-link-stub>
         </p>
         <hr role="presentation">
         <!--v-if-->

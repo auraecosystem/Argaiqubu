@@ -167,7 +167,7 @@
         <div class="flex flex-wrap gap-2 my-2">
           <o-button
             :loading="loadingUpdateGroup"
-            native-type="submit"
+            type="submit"
             variant="primary"
             >{{ t("Update group") }}</o-button
           >

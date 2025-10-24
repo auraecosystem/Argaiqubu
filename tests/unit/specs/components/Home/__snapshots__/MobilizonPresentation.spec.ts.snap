@@ -16,7 +16,7 @@ exports[`MobilizonPresentation > Show simple 1`] = `
       <p class="dark:text-white">Mobilizon is not a giant platform, but a <b>multitude of interconnected Mobilizon websites</b>.</p>
     </div>
   </div>
-  <div class="mt-4 text-center"><a class="o-btn o-btn--large o-btn--primary" role="button" data-oruga="button" href="https://mobilizon.org"><span class="o-btn__wrapper"><!----><span class="o-btn__label">Learn more about Mobilizon</span>
+  <div class="mt-4 text-center"><a data-oruga="button" role="button" tabindex="0" class="o-button o-button--large o-button--primary" href="https://mobilizon.org"><span class="o-button__wrapper"><!----><span class="o-button__label">Learn more about Mobilizon</span>
       <!----></span>
     </a></div>
 </div>"

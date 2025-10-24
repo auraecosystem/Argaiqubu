@@ -6,34 +6,38 @@ exports[`TimelineView > Show simple 1`] = `
   <section data-v-4ef926d4="" class="timeline">
     <div data-v-4ef926d4="" data-oruga="field" class="o-field">
       <!---->
-      <div class="o-field__body">
-        <div class="o-field o-field--addons"><label data-v-4ef926d4="" class="o-radio o-radio--checked" data-oruga="radio" role="radio" aria-checked="true"><input class="pr-4 o-radio__input o-radio__input--checked" type="radio" data-oruga-input="radio" autocomplete="off"><span class="o-radio__label"><span data-v-4ef926d4="" aria-hidden="true" class="material-design-icon timeline-text-icon" role="img"><svg fill="currentColor" class="material-design-icon__svg" width="24" height="24" viewBox="0 0 24 24"><path d="M4 2V8H2V2H4M2 22H4V16H2V22M5 12C5 10.9 4.11 10 3 10C1.9 10 1 10.9 1 12C1 13.11 1.9 14 3 14C4.11 14 5 13.11 5 12M24 6V18C24 19.11 23.11 20 22 20H10C8.9 20 8 19.11 8 18V14L6 12L8 10V6C8 4.89 8.9 4 10 4H22C23.11 4 24 4.89 24 6M19 13H11V15H19V13M21 9H11V11H21V9Z"><!--v-if--></path></svg></span> All activities</span></label><label data-v-4ef926d4="" class="o-radio" data-oruga="radio" role="radio" aria-checked="false"><input class="pr-4 o-radio__input" type="radio" data-oruga-input="radio" autocomplete="off" value="MEMBER"><span class="o-radio__label"><span data-v-4ef926d4="" class="o-icon" data-oruga="icon"><i class="mdi mdi-account-multiple-plus mdi-24px"></i></span> Members</span></label><label data-v-4ef926d4="" class="o-radio" data-oruga="radio" role="radio" aria-checked="false"><input class="pr-4 o-radio__input" type="radio" data-oruga-input="radio" autocomplete="off" value="GROUP"><span class="o-radio__label"><span data-v-4ef926d4="" class="o-icon" data-oruga="icon"><i class="mdi mdi-cog mdi-24px"></i></span> Settings</span></label><label data-v-4ef926d4="" class="o-radio" data-oruga="radio" role="radio" aria-checked="false"><input class="pr-4 o-radio__input" type="radio" data-oruga-input="radio" autocomplete="off" value="EVENT"><span class="o-radio__label"><span data-v-4ef926d4="" class="o-icon" data-oruga="icon"><i class="mdi mdi-calendar mdi-24px"></i></span> Events</span></label><label data-v-4ef926d4="" class="o-radio" data-oruga="radio" role="radio" aria-checked="false"><input class="pr-4 o-radio__input" type="radio" data-oruga-input="radio" autocomplete="off" value="POST"><span class="o-radio__label"><span data-v-4ef926d4="" class="o-icon" data-oruga="icon"><i class="mdi mdi-bullhorn mdi-24px"></i></span> Posts</span></label><label data-v-4ef926d4="" class="o-radio" data-oruga="radio" role="radio" aria-checked="false"><input class="pr-4 o-radio__input" type="radio" data-oruga-input="radio" autocomplete="off" value="DISCUSSION"><span class="o-radio__label"><span data-v-4ef926d4="" class="o-icon" data-oruga="icon"><i class="mdi mdi-chat mdi-24px"></i></span> Discussions</span></label><label data-v-4ef926d4="" class="o-radio" data-oruga="radio" role="radio" aria-checked="false"><input type="radio" data-oruga-input="radio" class="o-radio__input" autocomplete="off" value="RESOURCE"><span class="o-radio__label"><span data-v-4ef926d4="" class="o-icon" data-oruga="icon"><i class="mdi mdi-link mdi-24px"></i></span> Resources</span></label></div>
-      </div>
+      <div data-v-4ef926d4="" data-oruga="radio" class="o-radio o-radio--checked"><input aria-labelledby="v-0-0" class="pr-4 o-radio__input" id="v-0-2" type="radio" data-oruga-input="radio" autocomplete="off" aria-checked="true"><label id="v-0-0" for="v-0-2" class="o-radio__label"><span data-v-4ef926d4="" aria-hidden="true" class="material-design-icon timeline-text-icon" role="img"><svg fill="currentColor" class="material-design-icon__svg" width="24" height="24" viewBox="0 0 24 24"><path d="M4 2V8H2V2H4M2 22H4V16H2V22M5 12C5 10.9 4.11 10 3 10C1.9 10 1 10.9 1 12C1 13.11 1.9 14 3 14C4.11 14 5 13.11 5 12M24 6V18C24 19.11 23.11 20 22 20H10C8.9 20 8 19.11 8 18V14L6 12L8 10V6C8 4.89 8.9 4 10 4H22C23.11 4 24 4.89 24 6M19 13H11V15H19V13M21 9H11V11H21V9Z"><!--v-if--></path></svg></span> All activities</label></div>
+      <div data-v-4ef926d4="" data-oruga="radio" class="o-radio"><input aria-labelledby="v-0-0" class="pr-4 o-radio__input" id="v-0-3" type="radio" data-oruga-input="radio" autocomplete="off" aria-checked="false" value="MEMBER"><label id="v-0-0" for="v-0-3" class="o-radio__label"><span data-v-4ef926d4="" data-oruga="icon" class="o-icon"><i class="mdi mdi-account-multiple-plus mdi-24px"></i></span> Members</label></div>
+      <div data-v-4ef926d4="" data-oruga="radio" class="o-radio"><input aria-labelledby="v-0-0" class="pr-4 o-radio__input" id="v-0-4" type="radio" data-oruga-input="radio" autocomplete="off" aria-checked="false" value="GROUP"><label id="v-0-0" for="v-0-4" class="o-radio__label"><span data-v-4ef926d4="" data-oruga="icon" class="o-icon"><i class="mdi mdi-cog mdi-24px"></i></span> Settings</label></div>
+      <div data-v-4ef926d4="" data-oruga="radio" class="o-radio"><input aria-labelledby="v-0-0" class="pr-4 o-radio__input" id="v-0-5" type="radio" data-oruga-input="radio" autocomplete="off" aria-checked="false" value="EVENT"><label id="v-0-0" for="v-0-5" class="o-radio__label"><span data-v-4ef926d4="" data-oruga="icon" class="o-icon"><i class="mdi mdi-calendar mdi-24px"></i></span> Events</label></div>
+      <div data-v-4ef926d4="" data-oruga="radio" class="o-radio"><input aria-labelledby="v-0-0" class="pr-4 o-radio__input" id="v-0-6" type="radio" data-oruga-input="radio" autocomplete="off" aria-checked="false" value="POST"><label id="v-0-0" for="v-0-6" class="o-radio__label"><span data-v-4ef926d4="" data-oruga="icon" class="o-icon"><i class="mdi mdi-bullhorn mdi-24px"></i></span> Posts</label></div>
+      <div data-v-4ef926d4="" data-oruga="radio" class="o-radio"><input aria-labelledby="v-0-0" class="pr-4 o-radio__input" id="v-0-7" type="radio" data-oruga-input="radio" autocomplete="off" aria-checked="false" value="DISCUSSION"><label id="v-0-0" for="v-0-7" class="o-radio__label"><span data-v-4ef926d4="" data-oruga="icon" class="o-icon"><i class="mdi mdi-chat mdi-24px"></i></span> Discussions</label></div>
+      <div data-v-4ef926d4="" data-oruga="radio" class="o-radio"><input aria-labelledby="v-0-0" id="v-0-8" type="radio" data-oruga-input="radio" class="o-radio__input" autocomplete="off" aria-checked="false" value="RESOURCE"><label id="v-0-0" for="v-0-8" class="o-radio__label"><span data-v-4ef926d4="" data-oruga="icon" class="o-icon"><i class="mdi mdi-link mdi-24px"></i></span> Resources</label></div>
       <!---->
     </div>
     <div data-v-4ef926d4="" data-oruga="field" class="o-field">
       <!---->
-      <div class="o-field__body">
-        <div class="o-field o-field--addons"><label data-v-4ef926d4="" class="o-radio o-radio--checked" data-oruga="radio" role="radio" aria-checked="true"><input class="pr-4 o-radio__input o-radio__input--checked" type="radio" data-oruga-input="radio" autocomplete="off"><span class="o-radio__label"><span data-v-4ef926d4="" aria-hidden="true" class="material-design-icon timeline-text-icon" role="img"><svg fill="currentColor" class="material-design-icon__svg" width="24" height="24" viewBox="0 0 24 24"><path d="M4 2V8H2V2H4M2 22H4V16H2V22M5 12C5 10.9 4.11 10 3 10C1.9 10 1 10.9 1 12C1 13.11 1.9 14 3 14C4.11 14 5 13.11 5 12M24 6V18C24 19.11 23.11 20 22 20H10C8.9 20 8 19.11 8 18V14L6 12L8 10V6C8 4.89 8.9 4 10 4H22C23.11 4 24 4.89 24 6M19 13H11V15H19V13M21 9H11V11H21V9Z"><!--v-if--></path></svg></span> All activities</span></label><label data-v-4ef926d4="" class="o-radio" data-oruga="radio" role="radio" aria-checked="false"><input class="pr-4 o-radio__input" type="radio" data-oruga-input="radio" autocomplete="off" value="SELF"><span class="o-radio__label"><span data-v-4ef926d4="" class="o-icon" data-oruga="icon"><i class="mdi mdi-account mdi-24px"></i></span> From yourself</span></label><label data-v-4ef926d4="" class="o-radio" data-oruga="radio" role="radio" aria-checked="false"><input class="pr-4 o-radio__input" type="radio" data-oruga-input="radio" autocomplete="off" value="BY"><span class="o-radio__label"><span data-v-4ef926d4="" class="o-icon" data-oruga="icon"><i class="mdi mdi-account-multiple mdi-24px"></i></span> By others</span></label></div>
-      </div>
+      <div data-v-4ef926d4="" data-oruga="radio" class="o-radio o-radio--checked"><input aria-labelledby="v-0-9" class="pr-4 o-radio__input" id="v-0-11" type="radio" data-oruga-input="radio" autocomplete="off" aria-checked="true"><label id="v-0-9" for="v-0-11" class="o-radio__label"><span data-v-4ef926d4="" aria-hidden="true" class="material-design-icon timeline-text-icon" role="img"><svg fill="currentColor" class="material-design-icon__svg" width="24" height="24" viewBox="0 0 24 24"><path d="M4 2V8H2V2H4M2 22H4V16H2V22M5 12C5 10.9 4.11 10 3 10C1.9 10 1 10.9 1 12C1 13.11 1.9 14 3 14C4.11 14 5 13.11 5 12M24 6V18C24 19.11 23.11 20 22 20H10C8.9 20 8 19.11 8 18V14L6 12L8 10V6C8 4.89 8.9 4 10 4H22C23.11 4 24 4.89 24 6M19 13H11V15H19V13M21 9H11V11H21V9Z"><!--v-if--></path></svg></span> All activities</label></div>
+      <div data-v-4ef926d4="" data-oruga="radio" class="o-radio"><input aria-labelledby="v-0-9" class="pr-4 o-radio__input" id="v-0-12" type="radio" data-oruga-input="radio" autocomplete="off" aria-checked="false" value="SELF"><label id="v-0-9" for="v-0-12" class="o-radio__label"><span data-v-4ef926d4="" data-oruga="icon" class="o-icon"><i class="mdi mdi-account mdi-24px"></i></span> From yourself</label></div>
+      <div data-v-4ef926d4="" data-oruga="radio" class="o-radio"><input aria-labelledby="v-0-9" class="pr-4 o-radio__input" id="v-0-13" type="radio" data-oruga-input="radio" autocomplete="off" aria-checked="false" value="BY"><label id="v-0-9" for="v-0-13" class="o-radio__label"><span data-v-4ef926d4="" data-oruga="icon" class="o-icon"><i class="mdi mdi-account-multiple mdi-24px"></i></span> By others</label></div>
       <!---->
     </div>
     <transition-group-stub data-v-4ef926d4="" name="timeline-list" tag="div" appear="false" persisted="false" css="true">
       <div data-v-4ef926d4="" class="day">
-        <div data-v-4ef926d4="" data-oruga="skeleton" class="o-sklt o-sklt--left">
-          <div class="o-sklt__item o-sklt__item--rounded o-sklt__item--animated" style="height: 48px; width: 300px;"></div>
+        <div data-v-4ef926d4="" data-oruga="skeleton" class="o-skeleton o-skeleton--left">
+          <div class="o-skeleton__item o-skeleton__item--rounded o-skeleton__item--animated" style="height: 48px; width: 300px;"></div>
         </div>
         <ul data-v-4ef926d4="" class="before:opacity-10">
           <li data-v-4ef926d4="">
-            <div data-v-56a583cf="" data-v-4ef926d4="" class="activity-item"><span data-v-56a583cf=""><div data-v-56a583cf="" data-oruga="skeleton" class="o-sklt o-sklt--left"><div class="o-sklt__item o-sklt__item--rounded o-sklt__item--animated" style="height: 32px; width: 32px; border-radius: 50%;"></div></div></span>
+            <div data-v-56a583cf="" data-v-4ef926d4="" class="activity-item"><span data-v-56a583cf=""><div data-v-56a583cf="" data-oruga="skeleton" class="o-skeleton o-skeleton--left"><div class="o-skeleton__item o-skeleton__item--rounded o-skeleton__item--animated" style="height: 32px; width: 32px; border-radius: 50%;"></div></div></span>
               <div data-v-56a583cf="" class="subject">
                 <div data-v-56a583cf="" class="prose dark:prose-invert">
                   <p data-v-56a583cf="">
-                  <div data-v-56a583cf="" data-oruga="skeleton" class="o-sklt o-sklt--left">
-                    <div class="o-sklt__item o-sklt__item--rounded o-sklt__item--animated"></div>
+                  <div data-v-56a583cf="" data-oruga="skeleton" class="o-skeleton o-skeleton--left">
+                    <div class="o-skeleton__item o-skeleton__item--rounded o-skeleton__item--animated"></div>
                   </div>
-                  <div data-v-56a583cf="" data-oruga="skeleton" class="o-sklt o-sklt--left datetime">
-                    <div class="o-sklt__item o-sklt__item--rounded o-sklt__item--animated"></div>
+                  <div data-v-56a583cf="" data-oruga="skeleton" class="o-skeleton o-skeleton--left datetime">
+                    <div class="o-skeleton__item o-skeleton__item--rounded o-skeleton__item--animated"></div>
                   </div>
                   </p>
                 </div>
@@ -41,15 +45,15 @@ exports[`TimelineView > Show simple 1`] = `
             </div>
           </li>
           <li data-v-4ef926d4="">
-            <div data-v-56a583cf="" data-v-4ef926d4="" class="activity-item"><span data-v-56a583cf=""><div data-v-56a583cf="" data-oruga="skeleton" class="o-sklt o-sklt--left"><div class="o-sklt__item o-sklt__item--rounded o-sklt__item--animated" style="height: 32px; width: 32px; border-radius: 50%;"></div></div></span>
+            <div data-v-56a583cf="" data-v-4ef926d4="" class="activity-item"><span data-v-56a583cf=""><div data-v-56a583cf="" data-oruga="skeleton" class="o-skeleton o-skeleton--left"><div class="o-skeleton__item o-skeleton__item--rounded o-skeleton__item--animated" style="height: 32px; width: 32px; border-radius: 50%;"></div></div></span>
               <div data-v-56a583cf="" class="subject">
                 <div data-v-56a583cf="" class="prose dark:prose-invert">
                   <p data-v-56a583cf="">
-                  <div data-v-56a583cf="" data-oruga="skeleton" class="o-sklt o-sklt--left">
-                    <div class="o-sklt__item o-sklt__item--rounded o-sklt__item--animated"></div>
+                  <div data-v-56a583cf="" data-oruga="skeleton" class="o-skeleton o-skeleton--left">
+                    <div class="o-skeleton__item o-skeleton__item--rounded o-skeleton__item--animated"></div>
                   </div>
-                  <div data-v-56a583cf="" data-oruga="skeleton" class="o-sklt o-sklt--left datetime">
-                    <div class="o-sklt__item o-sklt__item--rounded o-sklt__item--animated"></div>
+                  <div data-v-56a583cf="" data-oruga="skeleton" class="o-skeleton o-skeleton--left datetime">
+                    <div class="o-skeleton__item o-skeleton__item--rounded o-skeleton__item--animated"></div>
                   </div>
                   </p>
                 </div>
@@ -57,15 +61,15 @@ exports[`TimelineView > Show simple 1`] = `
             </div>
           </li>
           <li data-v-4ef926d4="">
-            <div data-v-56a583cf="" data-v-4ef926d4="" class="activity-item"><span data-v-56a583cf=""><div data-v-56a583cf="" data-oruga="skeleton" class="o-sklt o-sklt--left"><div class="o-sklt__item o-sklt__item--rounded o-sklt__item--animated" style="height: 32px; width: 32px; border-radius: 50%;"></div></div></span>
+            <div data-v-56a583cf="" data-v-4ef926d4="" class="activity-item"><span data-v-56a583cf=""><div data-v-56a583cf="" data-oruga="skeleton" class="o-skeleton o-skeleton--left"><div class="o-skeleton__item o-skeleton__item--rounded o-skeleton__item--animated" style="height: 32px; width: 32px; border-radius: 50%;"></div></div></span>
               <div data-v-56a583cf="" class="subject">
                 <div data-v-56a583cf="" class="prose dark:prose-invert">
                   <p data-v-56a583cf="">
-                  <div data-v-56a583cf="" data-oruga="skeleton" class="o-sklt o-sklt--left">
-                    <div class="o-sklt__item o-sklt__item--rounded o-sklt__item--animated"></div>
+                  <div data-v-56a583cf="" data-oruga="skeleton" class="o-skeleton o-skeleton--left">
+                    <div class="o-skeleton__item o-skeleton__item--rounded o-skeleton__item--animated"></div>
                   </div>
-                  <div data-v-56a583cf="" data-oruga="skeleton" class="o-sklt o-sklt--left datetime">
-                    <div class="o-sklt__item o-sklt__item--rounded o-sklt__item--animated"></div>
+                  <div data-v-56a583cf="" data-oruga="skeleton" class="o-skeleton o-skeleton--left datetime">
+                    <div class="o-skeleton__item o-skeleton__item--rounded o-skeleton__item--animated"></div>
                   </div>
                   </p>
                 </div>
@@ -73,15 +77,15 @@ exports[`TimelineView > Show simple 1`] = `
             </div>
           </li>
           <li data-v-4ef926d4="">
-            <div data-v-56a583cf="" data-v-4ef926d4="" class="activity-item"><span data-v-56a583cf=""><div data-v-56a583cf="" data-oruga="skeleton" class="o-sklt o-sklt--left"><div class="o-sklt__item o-sklt__item--rounded o-sklt__item--animated" style="height: 32px; width: 32px; border-radius: 50%;"></div></div></span>
+            <div data-v-56a583cf="" data-v-4ef926d4="" class="activity-item"><span data-v-56a583cf=""><div data-v-56a583cf="" data-oruga="skeleton" class="o-skeleton o-skeleton--left"><div class="o-skeleton__item o-skeleton__item--rounded o-skeleton__item--animated" style="height: 32px; width: 32px; border-radius: 50%;"></div></div></span>
               <div data-v-56a583cf="" class="subject">
                 <div data-v-56a583cf="" class="prose dark:prose-invert">
                   <p data-v-56a583cf="">
-                  <div data-v-56a583cf="" data-oruga="skeleton" class="o-sklt o-sklt--left">
-                    <div class="o-sklt__item o-sklt__item--rounded o-sklt__item--animated"></div>
+                  <div data-v-56a583cf="" data-oruga="skeleton" class="o-skeleton o-skeleton--left">
+                    <div class="o-skeleton__item o-skeleton__item--rounded o-skeleton__item--animated"></div>
                   </div>
-                  <div data-v-56a583cf="" data-oruga="skeleton" class="o-sklt o-sklt--left datetime">
-                    <div class="o-sklt__item o-sklt__item--rounded o-sklt__item--animated"></div>
+                  <div data-v-56a583cf="" data-oruga="skeleton" class="o-skeleton o-skeleton--left datetime">
+                    <div class="o-skeleton__item o-skeleton__item--rounded o-skeleton__item--animated"></div>
                   </div>
                   </p>
                 </div>
@@ -89,15 +93,15 @@ exports[`TimelineView > Show simple 1`] = `
             </div>
           </li>
           <li data-v-4ef926d4="">
-            <div data-v-56a583cf="" data-v-4ef926d4="" class="activity-item"><span data-v-56a583cf=""><div data-v-56a583cf="" data-oruga="skeleton" class="o-sklt o-sklt--left"><div class="o-sklt__item o-sklt__item--rounded o-sklt__item--animated" style="height: 32px; width: 32px; border-radius: 50%;"></div></div></span>
+            <div data-v-56a583cf="" data-v-4ef926d4="" class="activity-item"><span data-v-56a583cf=""><div data-v-56a583cf="" data-oruga="skeleton" class="o-skeleton o-skeleton--left"><div class="o-skeleton__item o-skeleton__item--rounded o-skeleton__item--animated" style="height: 32px; width: 32px; border-radius: 50%;"></div></div></span>
               <div data-v-56a583cf="" class="subject">
                 <div data-v-56a583cf="" class="prose dark:prose-invert">
                   <p data-v-56a583cf="">
-                  <div data-v-56a583cf="" data-oruga="skeleton" class="o-sklt o-sklt--left">
-                    <div class="o-sklt__item o-sklt__item--rounded o-sklt__item--animated"></div>
+                  <div data-v-56a583cf="" data-oruga="skeleton" class="o-skeleton o-skeleton--left">
+                    <div class="o-skeleton__item o-skeleton__item--rounded o-skeleton__item--animated"></div>
                   </div>
-                  <div data-v-56a583cf="" data-oruga="skeleton" class="o-sklt o-sklt--left datetime">
-                    <div class="o-sklt__item o-sklt__item--rounded o-sklt__item--animated"></div>
+                  <div data-v-56a583cf="" data-oruga="skeleton" class="o-skeleton o-skeleton--left datetime">
+                    <div class="o-skeleton__item o-skeleton__item--rounded o-skeleton__item--animated"></div>
                   </div>
                   </p>
                 </div>
@@ -107,20 +111,20 @@ exports[`TimelineView > Show simple 1`] = `
         </ul>
       </div>
       <div data-v-4ef926d4="" class="day">
-        <div data-v-4ef926d4="" data-oruga="skeleton" class="o-sklt o-sklt--left">
-          <div class="o-sklt__item o-sklt__item--rounded o-sklt__item--animated" style="height: 48px; width: 300px;"></div>
+        <div data-v-4ef926d4="" data-oruga="skeleton" class="o-skeleton o-skeleton--left">
+          <div class="o-skeleton__item o-skeleton__item--rounded o-skeleton__item--animated" style="height: 48px; width: 300px;"></div>
         </div>
         <ul data-v-4ef926d4="" class="before:opacity-10">
           <li data-v-4ef926d4="">
-            <div data-v-56a583cf="" data-v-4ef926d4="" class="activity-item"><span data-v-56a583cf=""><div data-v-56a583cf="" data-oruga="skeleton" class="o-sklt o-sklt--left"><div class="o-sklt__item o-sklt__item--rounded o-sklt__item--animated" style="height: 32px; width: 32px; border-radius: 50%;"></div></div></span>
+            <div data-v-56a583cf="" data-v-4ef926d4="" class="activity-item"><span data-v-56a583cf=""><div data-v-56a583cf="" data-oruga="skeleton" class="o-skeleton o-skeleton--left"><div class="o-skeleton__item o-skeleton__item--rounded o-skeleton__item--animated" style="height: 32px; width: 32px; border-radius: 50%;"></div></div></span>
               <div data-v-56a583cf="" class="subject">
                 <div data-v-56a583cf="" class="prose dark:prose-invert">
                   <p data-v-56a583cf="">
-                  <div data-v-56a583cf="" data-oruga="skeleton" class="o-sklt o-sklt--left">
-                    <div class="o-sklt__item o-sklt__item--rounded o-sklt__item--animated"></div>
+                  <div data-v-56a583cf="" data-oruga="skeleton" class="o-skeleton o-skeleton--left">
+                    <div class="o-skeleton__item o-skeleton__item--rounded o-skeleton__item--animated"></div>
                   </div>
-                  <div data-v-56a583cf="" data-oruga="skeleton" class="o-sklt o-sklt--left datetime">
-                    <div class="o-sklt__item o-sklt__item--rounded o-sklt__item--animated"></div>
+                  <div data-v-56a583cf="" data-oruga="skeleton" class="o-skeleton o-skeleton--left datetime">
+                    <div class="o-skeleton__item o-skeleton__item--rounded o-skeleton__item--animated"></div>
                   </div>
                   </p>
                 </div>
@@ -128,15 +132,15 @@ exports[`TimelineView > Show simple 1`] = `
             </div>
           </li>
           <li data-v-4ef926d4="">
-            <div data-v-56a583cf="" data-v-4ef926d4="" class="activity-item"><span data-v-56a583cf=""><div data-v-56a583cf="" data-oruga="skeleton" class="o-sklt o-sklt--left"><div class="o-sklt__item o-sklt__item--rounded o-sklt__item--animated" style="height: 32px; width: 32px; border-radius: 50%;"></div></div></span>
+            <div data-v-56a583cf="" data-v-4ef926d4="" class="activity-item"><span data-v-56a583cf=""><div data-v-56a583cf="" data-oruga="skeleton" class="o-skeleton o-skeleton--left"><div class="o-skeleton__item o-skeleton__item--rounded o-skeleton__item--animated" style="height: 32px; width: 32px; border-radius: 50%;"></div></div></span>
               <div data-v-56a583cf="" class="subject">
                 <div data-v-56a583cf="" class="prose dark:prose-invert">
                   <p data-v-56a583cf="">
-                  <div data-v-56a583cf="" data-oruga="skeleton" class="o-sklt o-sklt--left">
-                    <div class="o-sklt__item o-sklt__item--rounded o-sklt__item--animated"></div>
+                  <div data-v-56a583cf="" data-oruga="skeleton" class="o-skeleton o-skeleton--left">
+                    <div class="o-skeleton__item o-skeleton__item--rounded o-skeleton__item--animated"></div>
                   </div>
-                  <div data-v-56a583cf="" data-oruga="skeleton" class="o-sklt o-sklt--left datetime">
-                    <div class="o-sklt__item o-sklt__item--rounded o-sklt__item--animated"></div>
+                  <div data-v-56a583cf="" data-oruga="skeleton" class="o-skeleton o-skeleton--left datetime">
+                    <div class="o-skeleton__item o-skeleton__item--rounded o-skeleton__item--animated"></div>
                   </div>
                   </p>
                 </div>
@@ -144,15 +148,15 @@ exports[`TimelineView > Show simple 1`] = `
             </div>
           </li>
           <li data-v-4ef926d4="">
-            <div data-v-56a583cf="" data-v-4ef926d4="" class="activity-item"><span data-v-56a583cf=""><div data-v-56a583cf="" data-oruga="skeleton" class="o-sklt o-sklt--left"><div class="o-sklt__item o-sklt__item--rounded o-sklt__item--animated" style="height: 32px; width: 32px; border-radius: 50%;"></div></div></span>
+            <div data-v-56a583cf="" data-v-4ef926d4="" class="activity-item"><span data-v-56a583cf=""><div data-v-56a583cf="" data-oruga="skeleton" class="o-skeleton o-skeleton--left"><div class="o-skeleton__item o-skeleton__item--rounded o-skeleton__item--animated" style="height: 32px; width: 32px; border-radius: 50%;"></div></div></span>
               <div data-v-56a583cf="" class="subject">
                 <div data-v-56a583cf="" class="prose dark:prose-invert">
                   <p data-v-56a583cf="">
-                  <div data-v-56a583cf="" data-oruga="skeleton" class="o-sklt o-sklt--left">
-                    <div class="o-sklt__item o-sklt__item--rounded o-sklt__item--animated"></div>
+                  <div data-v-56a583cf="" data-oruga="skeleton" class="o-skeleton o-skeleton--left">
+                    <div class="o-skeleton__item o-skeleton__item--rounded o-skeleton__item--animated"></div>
                   </div>
-                  <div data-v-56a583cf="" data-oruga="skeleton" class="o-sklt o-sklt--left datetime">
-                    <div class="o-sklt__item o-sklt__item--rounded o-sklt__item--animated"></div>
+                  <div data-v-56a583cf="" data-oruga="skeleton" class="o-skeleton o-skeleton--left datetime">
+                    <div class="o-skeleton__item o-skeleton__item--rounded o-skeleton__item--animated"></div>
                   </div>
                   </p>
                 </div>
@@ -160,15 +164,15 @@ exports[`TimelineView > Show simple 1`] = `
             </div>
           </li>
           <li data-v-4ef926d4="">
-            <div data-v-56a583cf="" data-v-4ef926d4="" class="activity-item"><span data-v-56a583cf=""><div data-v-56a583cf="" data-oruga="skeleton" class="o-sklt o-sklt--left"><div class="o-sklt__item o-sklt__item--rounded o-sklt__item--animated" style="height: 32px; width: 32px; border-radius: 50%;"></div></div></span>
+            <div data-v-56a583cf="" data-v-4ef926d4="" class="activity-item"><span data-v-56a583cf=""><div data-v-56a583cf="" data-oruga="skeleton" class="o-skeleton o-skeleton--left"><div class="o-skeleton__item o-skeleton__item--rounded o-skeleton__item--animated" style="height: 32px; width: 32px; border-radius: 50%;"></div></div></span>
               <div data-v-56a583cf="" class="subject">
                 <div data-v-56a583cf="" class="prose dark:prose-invert">
                   <p data-v-56a583cf="">
-                  <div data-v-56a583cf="" data-oruga="skeleton" class="o-sklt o-sklt--left">
-                    <div class="o-sklt__item o-sklt__item--rounded o-sklt__item--animated"></div>
+                  <div data-v-56a583cf="" data-oruga="skeleton" class="o-skeleton o-skeleton--left">
+                    <div class="o-skeleton__item o-skeleton__item--rounded o-skeleton__item--animated"></div>
                   </div>
-                  <div data-v-56a583cf="" data-oruga="skeleton" class="o-sklt o-sklt--left datetime">
-                    <div class="o-sklt__item o-sklt__item--rounded o-sklt__item--animated"></div>
+                  <div data-v-56a583cf="" data-oruga="skeleton" class="o-skeleton o-skeleton--left datetime">
+                    <div class="o-skeleton__item o-skeleton__item--rounded o-skeleton__item--animated"></div>
                   </div>
                   </p>
                 </div>
@@ -176,15 +180,15 @@ exports[`TimelineView > Show simple 1`] = `
             </div>
           </li>
           <li data-v-4ef926d4="">
-            <div data-v-56a583cf="" data-v-4ef926d4="" class="activity-item"><span data-v-56a583cf=""><div data-v-56a583cf="" data-oruga="skeleton" class="o-sklt o-sklt--left"><div class="o-sklt__item o-sklt__item--rounded o-sklt__item--animated" style="height: 32px; width: 32px; border-radius: 50%;"></div></div></span>
+            <div data-v-56a583cf="" data-v-4ef926d4="" class="activity-item"><span data-v-56a583cf=""><div data-v-56a583cf="" data-oruga="skeleton" class="o-skeleton o-skeleton--left"><div class="o-skeleton__item o-skeleton__item--rounded o-skeleton__item--animated" style="height: 32px; width: 32px; border-radius: 50%;"></div></div></span>
               <div data-v-56a583cf="" class="subject">
                 <div data-v-56a583cf="" class="prose dark:prose-invert">
                   <p data-v-56a583cf="">
-                  <div data-v-56a583cf="" data-oruga="skeleton" class="o-sklt o-sklt--left">
-                    <div class="o-sklt__item o-sklt__item--rounded o-sklt__item--animated"></div>
+                  <div data-v-56a583cf="" data-oruga="skeleton" class="o-skeleton o-skeleton--left">
+                    <div class="o-skeleton__item o-skeleton__item--rounded o-skeleton__item--animated"></div>
                   </div>
-                  <div data-v-56a583cf="" data-oruga="skeleton" class="o-sklt o-sklt--left datetime">
-                    <div class="o-sklt__item o-sklt__item--rounded o-sklt__item--animated"></div>
+                  <div data-v-56a583cf="" data-oruga="skeleton" class="o-skeleton o-skeleton--left datetime">
+                    <div class="o-skeleton__item o-skeleton__item--rounded o-skeleton__item--animated"></div>
                   </div>
                   </p>
                 </div>

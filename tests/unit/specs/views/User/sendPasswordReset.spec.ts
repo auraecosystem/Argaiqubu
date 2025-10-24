@@ -49,6 +49,7 @@ describe("SendPasswordReset", () => {
     expect(requestHandlers.handle_0).toHaveBeenCalledTimes(0);
 
     wrapper.find("form").trigger("submit");
+    await wrapper.vm.$nextTick();
     await flushPromises();
     expect(htmlRemoveId(wrapper.html())).toMatchSnapshot();
 

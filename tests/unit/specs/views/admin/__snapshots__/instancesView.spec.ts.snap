@@ -7,24 +7,24 @@ exports[`InstancesView > Show simple 1`] = `
     <h1 data-v-364450c8="" class="title">Instances</h1>
     <form data-v-364450c8="" class="my-4">
       <div data-v-364450c8="" data-oruga="field" class="o-field o-field--horizontal">
-        <div class="o-field__horizontal-label"><label for="newRelayAddress" class="o-field__label">Follow a new instance</label></div>
+        <div class="o-field__horizontal-label"><label id="v-0-0" for="newRelayAddress" class="o-field__label">Follow a new instance</label></div>
         <div class="o-field__horizontal-body">
           <div data-oruga="field" class="o-field">
             <!---->
             <div class="o-field__body">
               <div class="o-field">
-                <div data-v-364450c8="" data-oruga="field" class="o-field" expanded="" size="large">
+                <div data-v-364450c8="" data-oruga="field" class="o-field" group-multiline="" expanded="" size="large">
                   <!---->
                   <div class="o-field__body">
-                    <div class="o-field o-field--grouped-multiline o-field--grouped">
+                    <div class="o-field o-field--grouped">
                       <p data-v-364450c8="" class="control">
-                      <div data-v-364450c8="" data-oruga="input" class="o-input__wrapper"><input id="newRelayAddress" data-oruga-input="text" type="text" class="o-input" autocomplete="off" placeholder="Ex: mobilizon.fr">
-                        <!---->
+                      <div data-v-364450c8="" data-oruga="input" class="o-input">
+                        <!----><input aria-labelledby="v-0-11" id="newRelayAddress" type="text" data-oruga-input="text" class="o-input__input o-input__input--placeholder" autocomplete="off" placeholder="Ex: mobilizon.fr">
                         <!---->
                         <!---->
                       </div>
                       </p>
-                      <p data-v-364450c8="" class="control"><button data-v-364450c8="" type="submit" class="o-btn o-btn--primary" role="button" data-oruga="button"><span class="o-btn__wrapper"><!----><span class="o-btn__label">Add an instance</span>
+                      <p data-v-364450c8="" class="control"><button data-v-364450c8="" data-oruga="button" type="submit" role="button" tabindex="0" class="o-button o-button--primary"><span class="o-button__wrapper"><!----><span class="o-button__label">Add an instance</span>
                           <!----></span>
                         </button>
                         <transition-stub data-v-364450c8="" name="fade" appear="false" persisted="false" css="true">
@@ -37,28 +37,24 @@ exports[`InstancesView > Show simple 1`] = `
                 </div>
               </div>
             </div>
-            <p class="o-field__message"></p>
+            <!---->
           </div>
         </div>
         <!---->
       </div>
     </form>
     <div data-v-364450c8="" class="flex flex-wrap gap-2">
-      <div data-v-364450c8="" data-oruga="field" class="o-field"><label class="o-field__label">Follow status</label>
-        <div class="o-field__body">
-          <div class="o-field o-field--addons"><label data-v-364450c8="" class="o-radio o-radio--checked" data-oruga="radio" role="radio" aria-checked="true"><input type="radio" data-oruga-input="radio" class="o-radio__input o-radio__input--checked" autocomplete="off" value="ALL"><span class="o-radio__label">All</span></label><label data-v-364450c8="" class="o-radio" data-oruga="radio" role="radio" aria-checked="false"><input type="radio" data-oruga-input="radio" class="o-radio__input" autocomplete="off" value="FOLLOWING"><span class="o-radio__label">Following</span></label><label data-v-364450c8="" class="o-radio" data-oruga="radio" role="radio" aria-checked="false"><input type="radio" data-oruga-input="radio" class="o-radio__input" autocomplete="off" value="FOLLOWED"><span class="o-radio__label">Followed</span></label></div>
-        </div>
+      <div data-v-364450c8="" data-oruga="field" class="o-field"><label id="v-0-4" class="o-field__label" for="v-0-8">Follow status</label>
+        <div data-v-364450c8="" data-oruga="radio" class="o-radio o-radio--checked"><input aria-labelledby="v-0-4" id="v-0-6" type="radio" data-oruga-input="radio" class="o-radio__input" autocomplete="off" aria-checked="true" value="ALL"><label id="v-0-4" for="v-0-6" class="o-radio__label">All</label></div>
+        <div data-v-364450c8="" data-oruga="radio" class="o-radio"><input aria-labelledby="v-0-4" id="v-0-7" type="radio" data-oruga-input="radio" class="o-radio__input" autocomplete="off" aria-checked="false" value="FOLLOWING"><label id="v-0-4" for="v-0-7" class="o-radio__label">Following</label></div>
+        <div data-v-364450c8="" data-oruga="radio" class="o-radio"><input aria-labelledby="v-0-4" id="v-0-8" type="radio" data-oruga-input="radio" class="o-radio__input" autocomplete="off" aria-checked="false" value="FOLLOWED"><label id="v-0-4" for="v-0-8" class="o-radio__label">Followed</label></div>
         <!---->
       </div>
-      <div data-v-364450c8="" data-oruga="field" class="o-field flex-auto"><label for="domain-filter" class="o-field__label">Domain or instance name</label>
-        <div class="o-field__body">
-          <div class="o-field o-field--addons">
-            <div data-v-364450c8="" data-oruga="input" class="o-input__wrapper"><input id="domain-filter" data-oruga-input="text" type="text" class="o-input" autocomplete="off" placeholder="mobilizon-instance.tld">
-              <!---->
-              <!---->
-              <!---->
-            </div>
-          </div>
+      <div data-v-364450c8="" data-oruga="field" class="o-field flex-auto"><label id="v-0-9" for="domain-filter" class="o-field__label">Domain or instance name</label>
+        <div data-v-364450c8="" data-oruga="input" class="o-input">
+          <!----><input aria-labelledby="v-0-9" id="domain-filter" type="text" data-oruga-input="text" class="o-input__input o-input__input--placeholder" autocomplete="off" placeholder="mobilizon-instance.tld">
+          <!---->
+          <!---->
         </div>
         <!---->
       </div>
@@ -69,8 +65,8 @@ exports[`InstancesView > Show simple 1`] = `
             <h3 data-v-364450c8="" class="text-lg truncate font-bold line-clamp-1 text-slate-800 dark:text-slate-100">Mobilizon</h3>
             <div data-v-364450c8="">
               <div data-v-364450c8="" class="flex flex-wrap gap-x-2 gap-y-1">
-                <p data-v-364450c8="" class="min-w-0 inline-flex gap-1 truncate text-slate-700 dark:text-slate-300"><span data-v-364450c8="" class="o-icon" data-oruga="icon"><i class="mdi mdi-web mdi-24px"></i></span><span data-v-364450c8="">mobilizon.test</span></p>
-                <p data-v-364450c8="" class="capitalize text-slate-700 dark:text-slate-300 inline-flex gap-1"><span data-v-364450c8="" class="o-icon" data-oruga="icon"><i class="mdi mdi-server mdi-24px"></i></span> Mobilizon</p>
+                <p data-v-364450c8="" class="min-w-0 inline-flex gap-1 truncate text-slate-700 dark:text-slate-300"><span data-v-364450c8="" data-oruga="icon" class="o-icon"><i class="mdi mdi-web mdi-24px"></i></span><span data-v-364450c8="">mobilizon.test</span></p>
+                <p data-v-364450c8="" class="capitalize text-slate-700 dark:text-slate-300 inline-flex gap-1"><span data-v-364450c8="" data-oruga="icon" class="o-icon"><i class="mdi mdi-server mdi-24px"></i></span> Mobilizon</p>
               </div>
               <div data-v-364450c8="">
                 <!--v-if-->
@@ -89,11 +85,11 @@ exports[`InstancesView > Show simple 1`] = `
             <h3 data-v-364450c8="" class="text-lg truncate font-bold line-clamp-1 text-slate-800 dark:text-slate-100">Agenda de Crémeaux</h3>
             <div data-v-364450c8="">
               <div data-v-364450c8="" class="flex flex-wrap gap-x-2 gap-y-1">
-                <p data-v-364450c8="" class="min-w-0 inline-flex gap-1 truncate text-slate-700 dark:text-slate-300"><span data-v-364450c8="" class="o-icon" data-oruga="icon"><i class="mdi mdi-web mdi-24px"></i></span><span data-v-364450c8="">agenda.test</span></p>
-                <p data-v-364450c8="" class="capitalize text-slate-700 dark:text-slate-300 inline-flex gap-1"><span data-v-364450c8="" class="o-icon" data-oruga="icon"><i class="mdi mdi-server mdi-24px"></i></span> gancio</p>
+                <p data-v-364450c8="" class="min-w-0 inline-flex gap-1 truncate text-slate-700 dark:text-slate-300"><span data-v-364450c8="" data-oruga="icon" class="o-icon"><i class="mdi mdi-web mdi-24px"></i></span><span data-v-364450c8="">agenda.test</span></p>
+                <p data-v-364450c8="" class="capitalize text-slate-700 dark:text-slate-300 inline-flex gap-1"><span data-v-364450c8="" data-oruga="icon" class="o-icon"><i class="mdi mdi-server mdi-24px"></i></span> gancio</p>
               </div>
               <div data-v-364450c8="">
-                <p data-v-364450c8="" class="inline-flex gap-1 text-slate-700 dark:text-slate-300"><span data-v-364450c8="" class="o-icon" data-oruga="icon"><i class="mdi mdi-inbox-arrow-down mdi-24px"></i></span> Followed</p>
+                <p data-v-364450c8="" class="inline-flex gap-1 text-slate-700 dark:text-slate-300"><span data-v-364450c8="" data-oruga="icon" class="o-icon"><i class="mdi mdi-inbox-arrow-down mdi-24px"></i></span> Followed</p>
                 <!--v-if-->
               </div>
             </div>
@@ -104,11 +100,11 @@ exports[`InstancesView > Show simple 1`] = `
           <p data-v-364450c8="" class="flex flex-col text-center"><span data-v-364450c8="" class="text-xl">0</span><span data-v-364450c8="" class="text-sm">Profiles</span></p>
         </div>
       </a>
-      <nav data-v-364450c8="" class="o-pag o-pag--right" data-oruga="pagination" style="display: none;"><button role="button" tabindex="0" class="o-pag__link o-pag__previous o-pag__link--disabled" aria-label="Previous page" aria-current="false"><span class="o-icon" data-oruga="icon" aria-hidden="true"><i class="mdi mdi-chevron-left mdi-24px"></i></span></button><button role="button" tabindex="0" class="o-pag__link o-pag__next o-pag__link--disabled" aria-label="Next page" aria-current="false"><span class="o-icon" data-oruga="icon" aria-hidden="true"><i class="mdi mdi-chevron-right mdi-24px"></i></span></button>
-        <ul class="o-pag__list">
+      <nav data-v-364450c8="" data-oruga="pagination" class="o-pagination o-pagination--right o-pagination--right" style="display: none;"><button type="button" role="button" disabled="" class="o-pagination__button-previous o-pagination__button--disabled o-pagination__button" aria-label="Previous page" aria-current="false"><span data-oruga="icon" class="o-icon" aria-hidden="true"><i class="mdi mdi-chevron-left mdi-24px"></i></span></button><button type="button" role="button" disabled="" class="o-pagination__button-next o-pagination__button--disabled o-pagination__button" aria-label="Next page" aria-current="false"><span data-oruga="icon" class="o-icon" aria-hidden="true"><i class="mdi mdi-chevron-right mdi-24px"></i></span></button>
+        <ul class="o-pagination__list">
           <!---->
           <!---->
-          <li class="o-pag__item"><button role="button" tabindex="0" class="o-pag__link o-pag__link--current" aria-label="Current page, Page 1." aria-current="true">1</button></li>
+          <li class="o-pagination__item"><button type="button" role="button" tabindex="0" class="o-pagination__button o-pagination__button--current" aria-label="Current page, Page 1." aria-current="true">1</button></li>
           <!---->
           <!---->
         </ul>

@@ -327,7 +327,7 @@
               @keyup.enter="isJoinConfirmationModalActive = false"
               >{{ t("Cancel") }}
             </o-button>
-            <o-button variant="primary" native-type="submit">
+            <o-button variant="primary" type="submit">
               {{ t("Confirm my participation") }}
             </o-button>
           </div>

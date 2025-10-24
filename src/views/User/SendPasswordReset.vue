@@ -30,7 +30,7 @@
         />
       </o-field>
       <p class="my-4 flex gap-2">
-        <o-button variant="primary" native-type="submit">
+        <o-button variant="primary" type="submit">
           {{ t("Submit") }}
         </o-button>
         <o-button

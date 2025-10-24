@@ -86,7 +86,7 @@ describe("Reset page", () => {
     wrapper
       .findAll('input[type="password"')
       .forEach((inputField) => inputField.setValue("my password"));
-    wrapper.find("form").trigger("submit");
+    await wrapper.find("form").trigger("submit");
 
     await wrapper.vm.$nextTick();
 

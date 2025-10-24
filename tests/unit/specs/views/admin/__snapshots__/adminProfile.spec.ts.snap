@@ -90,28 +90,32 @@ exports[`AdminProfile > Show simple 1`] = `
   </section>
   <section class="mt-4 mb-3">
     <h2 class="">Organized events</h2>
-    <div class="o-table__root" data-oruga="table">
-      <div style="display: none;"><span data-id="1" data-oruga="table-column">Begins on <!----></span><span data-id="2" data-oruga="table-column">Title <!----></span></div>
+    <div data-oruga="table" class="o-table__root">
+      <div style="display: none;"><span data-oruga="table-column" data-id="table-1">Begins on <!----></span><span data-oruga="table-column" data-id="table-2">Title <!----></span></div>
       <!---->
       <!---->
       <div class="o-table__wrapper">
-        <table class="o-table o-table--table__empty">
+        <table class="o-table o-table--empty" aria-rowcount="1" aria-colcount="2">
           <!---->
           <thead>
-            <tr>
+            <tr aria-rowindex="1">
               <!---->
               <!---->
-              <th class="o-table__th" draggable="false"><span>Begins on <span class="o-table__th__sort-icon" style="display: none;"><span class="o-icon o-icon--small" data-oruga="icon"><i class="mdi mdi-arrow-up"></i></span></span></span></th>
-              <th class="o-table__th" draggable="false"><span>Title <span class="o-table__th__sort-icon" style="display: none;"><span class="o-icon o-icon--small" data-oruga="icon"><i class="mdi mdi-arrow-up"></i></span></span></span></th>
+              <th class="o-table__th" draggable="false" aria-colindex="1"><span class="o-table__th__label">Begins on</span>
+                <!---->
+              </th>
+              <th class="o-table__th" draggable="false" aria-colindex="2"><span class="o-table__th__label">Title</span>
+                <!---->
+              </th>
               <!---->
             </tr>
             <!---->
             <!---->
           </thead>
           <tbody>
-            <tr>
+            <tr class="o-table__tr-empty">
               <td colspan="2">
-                <div class="flex flex-col items-center mt-20 mb-10" role="note"><span class="o-icon" data-oruga="icon"><i class="mdi mdi-account-group 48"></i></span>
+                <div class="flex flex-col items-center mt-20 mb-10" role="note"><span data-oruga="icon" class="o-icon"><i class="mdi mdi-account-group 48"></i></span>
                   <h2 class="mb-3">
                     <!-- @slot Mandatory title -->No organized events listed
                   </h2>
@@ -128,11 +132,11 @@ exports[`AdminProfile > Show simple 1`] = `
           <!---->
         </transition-stub>
       </div>
-      <div class="o-table__pagination" per-page="10" total="0" rounded="false" size="small" simple="false" aria-next-label="Next page" aria-previous-label="Previous page" aria-page-label="Page" aria-current-label="Current page">
+      <div class="o-table__pagination">
         <div></div>
         <div>
-          <nav class="o-pag o-pag--right o-pag--small" data-oruga="pagination"><button role="button" tabindex="0" class="o-pag__link o-pag__previous o-pag__link--disabled" aria-label="Previous page" aria-current="false"><span class="o-icon" data-oruga="icon" aria-hidden="true"><i class="mdi mdi-chevron-left mdi-24px"></i></span></button><button role="button" tabindex="0" class="o-pag__link o-pag__next o-pag__link--disabled" aria-label="Next page" aria-current="false"><span class="o-icon" data-oruga="icon" aria-hidden="true"><i class="mdi mdi-chevron-right mdi-24px"></i></span></button>
-            <ul class="o-pag__list">
+          <nav data-oruga="pagination" class="o-pagination o-pagination--right o-pagination--right o-pagination--small"><button type="button" role="button" disabled="" class="o-pagination__button-previous o-pagination__button--disabled o-pagination__button" aria-label="Previous page" aria-current="false"><span data-oruga="icon" class="o-icon" aria-hidden="true"><i class="mdi mdi-chevron-left mdi-24px"></i></span></button><button type="button" role="button" disabled="" class="o-pagination__button-next o-pagination__button--disabled o-pagination__button" aria-label="Next page" aria-current="false"><span data-oruga="icon" class="o-icon" aria-hidden="true"><i class="mdi mdi-chevron-right mdi-24px"></i></span></button>
+            <ul class="o-pagination__list">
               <!---->
               <!---->
               <!---->
@@ -145,28 +149,32 @@ exports[`AdminProfile > Show simple 1`] = `
   </section>
   <section class="mt-4 mb-3">
     <h2 class="">Participations</h2>
-    <div class="o-table__root" data-oruga="table">
-      <div style="display: none;"><span data-id="1" data-oruga="table-column">Begins on <!----></span><span data-id="2" data-oruga="table-column">Title <!----></span></div>
+    <div data-oruga="table" class="o-table__root">
+      <div style="display: none;"><span data-oruga="table-column" data-id="table-1">Begins on <!----></span><span data-oruga="table-column" data-id="table-2">Title <!----></span></div>
       <!---->
       <!---->
       <div class="o-table__wrapper">
-        <table class="o-table o-table--table__empty">
+        <table class="o-table o-table--empty" aria-rowcount="1" aria-colcount="2">
           <!---->
           <thead>
-            <tr>
+            <tr aria-rowindex="1">
               <!---->
               <!---->
-              <th class="o-table__th" draggable="false"><span>Begins on <span class="o-table__th__sort-icon" style="display: none;"><span class="o-icon o-icon--small" data-oruga="icon"><i class="mdi mdi-arrow-up"></i></span></span></span></th>
-              <th class="o-table__th" draggable="false"><span>Title <span class="o-table__th__sort-icon" style="display: none;"><span class="o-icon o-icon--small" data-oruga="icon"><i class="mdi mdi-arrow-up"></i></span></span></span></th>
+              <th class="o-table__th" draggable="false" aria-colindex="1"><span class="o-table__th__label">Begins on</span>
+                <!---->
+              </th>
+              <th class="o-table__th" draggable="false" aria-colindex="2"><span class="o-table__th__label">Title</span>
+                <!---->
+              </th>
               <!---->
             </tr>
             <!---->
             <!---->
           </thead>
           <tbody>
-            <tr>
+            <tr class="o-table__tr-empty">
               <td colspan="2">
-                <div class="flex flex-col items-center mt-20 mb-10" role="note"><span class="o-icon" data-oruga="icon"><i class="mdi mdi-account-group 48"></i></span>
+                <div class="flex flex-col items-center mt-20 mb-10" role="note"><span data-oruga="icon" class="o-icon"><i class="mdi mdi-account-group 48"></i></span>
                   <h2 class="mb-3">
                     <!-- @slot Mandatory title -->No participations listed
                   </h2>
@@ -183,11 +191,11 @@ exports[`AdminProfile > Show simple 1`] = `
           <!---->
         </transition-stub>
       </div>
-      <div class="o-table__pagination" per-page="10" total="0" rounded="false" size="small" simple="false" aria-next-label="Next page" aria-previous-label="Previous page" aria-page-label="Page" aria-current-label="Current page">
+      <div class="o-table__pagination">
         <div></div>
         <div>
-          <nav class="o-pag o-pag--right o-pag--small" data-oruga="pagination"><button role="button" tabindex="0" class="o-pag__link o-pag__previous o-pag__link--disabled" aria-label="Previous page" aria-current="false"><span class="o-icon" data-oruga="icon" aria-hidden="true"><i class="mdi mdi-chevron-left mdi-24px"></i></span></button><button role="button" tabindex="0" class="o-pag__link o-pag__next o-pag__link--disabled" aria-label="Next page" aria-current="false"><span class="o-icon" data-oruga="icon" aria-hidden="true"><i class="mdi mdi-chevron-right mdi-24px"></i></span></button>
-            <ul class="o-pag__list">
+          <nav data-oruga="pagination" class="o-pagination o-pagination--right o-pagination--right o-pagination--small"><button type="button" role="button" disabled="" class="o-pagination__button-previous o-pagination__button--disabled o-pagination__button" aria-label="Previous page" aria-current="false"><span data-oruga="icon" class="o-icon" aria-hidden="true"><i class="mdi mdi-chevron-left mdi-24px"></i></span></button><button type="button" role="button" disabled="" class="o-pagination__button-next o-pagination__button--disabled o-pagination__button" aria-label="Next page" aria-current="false"><span data-oruga="icon" class="o-icon" aria-hidden="true"><i class="mdi mdi-chevron-right mdi-24px"></i></span></button>
+            <ul class="o-pagination__list">
               <!---->
               <!---->
               <!---->
@@ -200,29 +208,35 @@ exports[`AdminProfile > Show simple 1`] = `
   </section>
   <section class="mt-4 mb-3">
     <h2 class="">Memberships</h2>
-    <div class="o-table__root" data-oruga="table">
-      <div style="display: none;"><span data-id="1" data-oruga="table-column">Group <!----></span><span data-id="2" data-oruga="table-column">Role <!----></span><span data-id="3" data-oruga="table-column">Date <!----></span></div>
+    <div data-oruga="table" class="o-table__root">
+      <div style="display: none;"><span data-oruga="table-column" data-id="table-1">Group <!----></span><span data-oruga="table-column" data-id="table-2">Role <!----></span><span data-oruga="table-column" data-id="table-3">Date <!----></span></div>
       <!---->
       <!---->
       <div class="o-table__wrapper">
-        <table class="o-table o-table--table__empty">
+        <table class="o-table o-table--empty" aria-rowcount="1" aria-colcount="3">
           <!---->
           <thead>
-            <tr>
+            <tr aria-rowindex="1">
               <!---->
               <!---->
-              <th class="o-table__th" draggable="false"><span>Group <span class="o-table__th__sort-icon" style="display: none;"><span class="o-icon o-icon--small" data-oruga="icon"><i class="mdi mdi-arrow-up"></i></span></span></span></th>
-              <th class="o-table__th" draggable="false"><span>Role <span class="o-table__th__sort-icon" style="display: none;"><span class="o-icon o-icon--small" data-oruga="icon"><i class="mdi mdi-arrow-up"></i></span></span></span></th>
-              <th class="o-table__th" draggable="false"><span>Date <span class="o-table__th__sort-icon" style="display: none;"><span class="o-icon o-icon--small" data-oruga="icon"><i class="mdi mdi-arrow-up"></i></span></span></span></th>
+              <th class="o-table__th" draggable="false" aria-colindex="1"><span class="o-table__th__label">Group</span>
+                <!---->
+              </th>
+              <th class="o-table__th" draggable="false" aria-colindex="2"><span class="o-table__th__label">Role</span>
+                <!---->
+              </th>
+              <th class="o-table__th" draggable="false" aria-colindex="3"><span class="o-table__th__label">Date</span>
+                <!---->
+              </th>
               <!---->
             </tr>
             <!---->
             <!---->
           </thead>
           <tbody>
-            <tr>
+            <tr class="o-table__tr-empty">
               <td colspan="3">
-                <div class="flex flex-col items-center mt-20 mb-10" role="note"><span class="o-icon" data-oruga="icon"><i class="mdi mdi-account-group 48"></i></span>
+                <div class="flex flex-col items-center mt-20 mb-10" role="note"><span data-oruga="icon" class="o-icon"><i class="mdi mdi-account-group 48"></i></span>
                   <h2 class="mb-3">
                     <!-- @slot Mandatory title -->No memberships found
                   </h2>
@@ -239,11 +253,11 @@ exports[`AdminProfile > Show simple 1`] = `
           <!---->
         </transition-stub>
       </div>
-      <div class="o-table__pagination" per-page="10" total="0" rounded="false" size="small" simple="false" aria-next-label="Next page" aria-previous-label="Previous page" aria-page-label="Page" aria-current-label="Current page">
+      <div class="o-table__pagination">
         <div></div>
         <div>
-          <nav class="o-pag o-pag--right o-pag--small" data-oruga="pagination"><button role="button" tabindex="0" class="o-pag__link o-pag__previous o-pag__link--disabled" aria-label="Previous page" aria-current="false"><span class="o-icon" data-oruga="icon" aria-hidden="true"><i class="mdi mdi-chevron-left mdi-24px"></i></span></button><button role="button" tabindex="0" class="o-pag__link o-pag__next o-pag__link--disabled" aria-label="Next page" aria-current="false"><span class="o-icon" data-oruga="icon" aria-hidden="true"><i class="mdi mdi-chevron-right mdi-24px"></i></span></button>
-            <ul class="o-pag__list">
+          <nav data-oruga="pagination" class="o-pagination o-pagination--right o-pagination--right o-pagination--small"><button type="button" role="button" disabled="" class="o-pagination__button-previous o-pagination__button--disabled o-pagination__button" aria-label="Previous page" aria-current="false"><span data-oruga="icon" class="o-icon" aria-hidden="true"><i class="mdi mdi-chevron-left mdi-24px"></i></span></button><button type="button" role="button" disabled="" class="o-pagination__button-next o-pagination__button--disabled o-pagination__button" aria-label="Next page" aria-current="false"><span data-oruga="icon" class="o-icon" aria-hidden="true"><i class="mdi mdi-chevron-right mdi-24px"></i></span></button>
+            <ul class="o-pagination__list">
               <!---->
               <!---->
               <!---->

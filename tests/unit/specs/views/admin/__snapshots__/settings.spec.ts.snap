@@ -121,7 +121,7 @@ exports[`SettingsView > Show and save settings 1`] = `
         </o-field>
         <!--v-if-->
       </section>
-      <o-button data-v-a8bb2abf="" native-type="submit" variant="primary">Save instance settings</o-button>
+      <o-button data-v-a8bb2abf="" type="submit" variant="primary">Save instance settings</o-button>
     </form>
   </div>
 </div>"

@@ -203,7 +203,7 @@
         variant="primary"
         :disabled="loading"
         :loading="loading"
-        native-type="submit"
+        type="submit"
         class="mt-3"
       >
         {{ t("Create my group") }}

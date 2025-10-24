@@ -23,7 +23,7 @@
     </div>
     <o-button
       class="search-Event min-w-40 sm:w-auto"
-      native-type="submit"
+      type="submit"
       icon-left="magnify"
     >
       {{ t("Search") }}

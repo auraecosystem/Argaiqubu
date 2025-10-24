@@ -5,34 +5,28 @@ exports[`UsersView > Show list with moderation 1`] = `
   <breadcrumbs-nav data-v-01123d3b="" links="[object Object],[object Object]"></breadcrumbs-nav>
   <div data-v-01123d3b="">
     <form data-v-01123d3b="">
-      <div data-v-01123d3b="" data-oruga="field" class="o-field mb-5">
+      <div data-v-01123d3b="" data-oruga="field" class="o-field mb-5" group-multiline="">
         <!---->
         <div class="o-field__body">
-          <div class="o-field o-field--grouped-multiline o-field--grouped">
-            <p data-v-01123d3b="" class="control mb-3 m-auto"><label data-v-01123d3b="" class="o-chk" data-oruga="checkbox" role="checkbox" aria-checked="false"><input type="checkbox" data-oruga-input="checkbox" class="o-chk__input" autocomplete="off" true-value="true" false-value="false"><span class="o-chk__label">Users pending for moderation</span></label></p>
-            <div data-v-01123d3b="" data-oruga="field" class="o-field" expanded=""><label class="o-field__label" for="">Email</label>
-              <div class="o-field__body">
-                <div class="o-field o-field--addons">
-                  <div data-v-01123d3b="" data-oruga="input" class="o-input__wrapper"><input trap-focus="" id="" data-oruga-input="text" type="text" class="o-input o-input--iconspace-left" autocomplete="off"><span class="o-icon o-input__icon-left" data-oruga="icon"><i class="mdi mdi-email mdi-24px"></i></span>
-                    <!---->
-                    <!---->
-                  </div>
-                </div>
+          <div class="o-field o-field--grouped">
+            <p data-v-01123d3b="" class="control mb-3 m-auto">
+            <div data-v-01123d3b="" data-oruga="checkbox" class="o-checkbox"><input aria-labelledby="v-0-0" id="v-0-8" type="checkbox" data-oruga-input="checkbox" class="o-checkbox__input" true-value="true" false-value="false" autocomplete="off" aria-checked="false"><label id="v-0-0" for="v-0-8" class="o-checkbox__label">Users pending for moderation</label></div>
+            </p>
+            <div data-v-01123d3b="" data-oruga="field" class="o-field" expanded=""><label id="v-0-2" class="o-field__label" for="v-0-4">Email</label>
+              <div data-v-01123d3b="" data-oruga="input" class="o-input"><span data-oruga="icon" class="o-icon o-input__icon-left"><i class="mdi mdi-email mdi-24px"></i></span><input aria-labelledby="v-0-2" trap-focus="" id="v-0-4" type="text" data-oruga-input="text" class="o-input__input o-input__input--iconspace-left o-input__input--placeholder" autocomplete="off">
+                <!---->
+                <!---->
               </div>
               <!---->
             </div>
-            <div data-v-01123d3b="" data-oruga="field" class="o-field" expanded=""><label class="o-field__label" for="">IP Address</label>
-              <div class="o-field__body">
-                <div class="o-field o-field--addons">
-                  <div data-v-01123d3b="" data-oruga="input" class="o-input__wrapper"><input id="" data-oruga-input="text" type="text" class="o-input o-input--iconspace-left" autocomplete="off"><span class="o-icon o-input__icon-left" data-oruga="icon"><i class="mdi mdi-web mdi-24px"></i></span>
-                    <!---->
-                    <!---->
-                  </div>
-                </div>
+            <div data-v-01123d3b="" data-oruga="field" class="o-field" expanded=""><label id="v-0-5" class="o-field__label" for="v-0-7">IP Address</label>
+              <div data-v-01123d3b="" data-oruga="input" class="o-input"><span data-oruga="icon" class="o-icon o-input__icon-left"><i class="mdi mdi-web mdi-24px"></i></span><input aria-labelledby="v-0-5" id="v-0-7" type="text" data-oruga-input="text" class="o-input__input o-input__input--iconspace-left o-input__input--placeholder" autocomplete="off">
+                <!---->
+                <!---->
               </div>
               <!---->
             </div>
-            <p data-v-01123d3b="" class="control self-end mb-0"><button data-v-01123d3b="" type="button" class="o-btn o-btn--primary" role="button" data-oruga="button"><span class="o-btn__wrapper"><!----><span class="o-btn__label">Filter</span>
+            <p data-v-01123d3b="" class="control self-end mb-0"><button data-v-01123d3b="" data-oruga="button" type="button" role="button" tabindex="0" class="o-button o-button--primary"><span class="o-button__wrapper"><!----><span class="o-button__label">Filter</span>
                 <!----></span>
               </button></p>
           </div>
@@ -40,28 +34,36 @@ exports[`UsersView > Show list with moderation 1`] = `
         <!---->
       </div>
     </form>
-    <div data-v-01123d3b="" class="o-table__root" data-oruga="table">
-      <div style="display: none;"><span data-v-01123d3b="" data-id="1" data-oruga="table-column"> <!----></span><span data-v-01123d3b="" data-id="2" data-oruga="table-column">Email <!----></span><span data-v-01123d3b="" data-id="3" data-oruga="table-column" centered="true">Last seen on <!----></span><span data-v-01123d3b="" data-id="4" data-oruga="table-column" centered="true">Language <!----></span></div>
+    <div data-v-01123d3b="" data-oruga="table" class="o-table__root">
+      <div style="display: none;"><span data-v-01123d3b="" data-oruga="table-column" data-id="table-1"> <!----></span><span data-v-01123d3b="" data-oruga="table-column" data-id="table-2">Email <!----></span><span data-v-01123d3b="" data-oruga="table-column" data-id="table-3" centered="true">Last seen on <!----></span><span data-v-01123d3b="" data-oruga="table-column" data-id="table-4" centered="true">Language <!----></span></div>
       <!---->
       <!---->
       <div class="o-table__wrapper">
-        <table class="o-table">
+        <table debounce-search="500" class="o-table" aria-rowcount="3" aria-colcount="4">
           <!---->
           <thead>
-            <tr>
+            <tr aria-rowindex="1">
               <!---->
               <!---->
-              <th class="o-table__th" style="width: 40px;" draggable="false"><span> <span class="o-table__th__sort-icon" style="display: none;"><span class="o-icon o-icon--small" data-oruga="icon"><i class="mdi mdi-arrow-up"></i></span></span></span></th>
-              <th class="o-table__th" draggable="false"><span>Email <span class="o-table__th__sort-icon" style="display: none;"><span class="o-icon o-icon--small" data-oruga="icon"><i class="mdi mdi-arrow-up"></i></span></span></span></th>
-              <th class="o-table__th" draggable="false"><span>Last seen on <span class="o-table__th__sort-icon" style="display: none;"><span class="o-icon o-icon--small" data-oruga="icon"><i class="mdi mdi-arrow-up"></i></span></span></span></th>
-              <th class="o-table__th" draggable="false"><span>Language <span class="o-table__th__sort-icon" style="display: none;"><span class="o-icon o-icon--small" data-oruga="icon"><i class="mdi mdi-arrow-up"></i></span></span></span></th>
+              <th class="o-table__th" style="width: 40px;" draggable="false" aria-colindex="1"><span class="o-table__th__label"></span>
+                <!---->
+              </th>
+              <th class="o-table__th" draggable="false" aria-colindex="2"><span class="o-table__th__label">Email</span>
+                <!---->
+              </th>
+              <th class="o-table__th" draggable="false" aria-colindex="3"><span class="o-table__th__label">Last seen on</span>
+                <!---->
+              </th>
+              <th class="o-table__th" draggable="false" aria-colindex="4"><span class="o-table__th__label">Language</span>
+                <!---->
+              </th>
               <!---->
             </tr>
             <!---->
             <!---->
           </thead>
           <tbody>
-            <tr class="" draggable="false">
+            <tr class="" draggable="false" aria-rowindex="2">
               <!---->
               <!---->
               <td class="o-table__td" style="width: 40px;">6</td>
@@ -70,11 +72,8 @@ exports[`UsersView > Show list with moderation 1`] = `
               <td class="o-table__td" data-label="Language">English</td>
               <!---->
             </tr>
-            <transition-stub name="slide" appear="false" persisted="false" css="true">
-              <!---->
-            </transition-stub>
             <!---->
-            <tr class="" draggable="false">
+            <tr class="" draggable="false" aria-rowindex="3">
               <!---->
               <!---->
               <td class="o-table__td" style="width: 40px;">1</td>
@@ -83,9 +82,6 @@ exports[`UsersView > Show list with moderation 1`] = `
               <td class="o-table__td" data-label="Language">English</td>
               <!---->
             </tr>
-            <transition-stub name="slide" appear="false" persisted="false" css="true">
-              <!---->
-            </transition-stub>
             <!---->
             <!---->
           </tbody>
@@ -95,14 +91,14 @@ exports[`UsersView > Show list with moderation 1`] = `
           <!---->
         </transition-stub>
       </div>
-      <div class="o-table__pagination" per-page="10" total="2" rounded="false" size="small" simple="false" aria-next-label="Next page" aria-previous-label="Previous page" aria-page-label="Page" aria-current-label="Current page">
+      <div class="o-table__pagination">
         <div></div>
         <div>
-          <nav class="o-pag o-pag--right o-pag--small" data-oruga="pagination"><button role="button" tabindex="0" class="o-pag__link o-pag__previous o-pag__link--disabled" aria-label="Previous page" aria-current="false"><span class="o-icon" data-oruga="icon" aria-hidden="true"><i class="mdi mdi-chevron-left mdi-24px"></i></span></button><button role="button" tabindex="0" class="o-pag__link o-pag__next o-pag__link--disabled" aria-label="Next page" aria-current="false"><span class="o-icon" data-oruga="icon" aria-hidden="true"><i class="mdi mdi-chevron-right mdi-24px"></i></span></button>
-            <ul class="o-pag__list">
+          <nav data-oruga="pagination" class="o-pagination o-pagination--right o-pagination--right o-pagination--small"><button type="button" role="button" disabled="" class="o-pagination__button-previous o-pagination__button--disabled o-pagination__button" aria-label="Previous page" aria-current="false"><span data-oruga="icon" class="o-icon" aria-hidden="true"><i class="mdi mdi-chevron-left mdi-24px"></i></span></button><button type="button" role="button" disabled="" class="o-pagination__button-next o-pagination__button--disabled o-pagination__button" aria-label="Next page" aria-current="false"><span data-oruga="icon" class="o-icon" aria-hidden="true"><i class="mdi mdi-chevron-right mdi-24px"></i></span></button>
+            <ul class="o-pagination__list">
               <!---->
               <!---->
-              <li class="o-pag__item"><button role="button" tabindex="0" class="o-pag__link o-pag__link--current" aria-label="Current page, Page 1." aria-current="true">1</button></li>
+              <li class="o-pagination__item"><button type="button" role="button" tabindex="0" class="o-pagination__button o-pagination__button--current" aria-label="Current page, Page 1." aria-current="true">1</button></li>
               <!---->
               <!---->
             </ul>
@@ -119,34 +115,26 @@ exports[`UsersView > Show simple list 1`] = `
   <breadcrumbs-nav data-v-01123d3b="" links="[object Object],[object Object]"></breadcrumbs-nav>
   <div data-v-01123d3b="">
     <form data-v-01123d3b="">
-      <div data-v-01123d3b="" data-oruga="field" class="o-field mb-5">
+      <div data-v-01123d3b="" data-oruga="field" class="o-field mb-5" group-multiline="">
         <!---->
         <div class="o-field__body">
-          <div class="o-field o-field--grouped-multiline o-field--grouped">
+          <div class="o-field o-field--grouped">
             <!--v-if-->
-            <div data-v-01123d3b="" data-oruga="field" class="o-field" expanded=""><label class="o-field__label" for="">Email</label>
-              <div class="o-field__body">
-                <div class="o-field o-field--addons">
-                  <div data-v-01123d3b="" data-oruga="input" class="o-input__wrapper"><input trap-focus="" id="" data-oruga-input="text" type="text" class="o-input o-input--iconspace-left" autocomplete="off"><span class="o-icon o-input__icon-left" data-oruga="icon"><i class="mdi mdi-email mdi-24px"></i></span>
-                    <!---->
-                    <!---->
-                  </div>
-                </div>
+            <div data-v-01123d3b="" data-oruga="field" class="o-field" expanded=""><label id="v-0-2" class="o-field__label" for="v-0-4">Email</label>
+              <div data-v-01123d3b="" data-oruga="input" class="o-input"><span data-oruga="icon" class="o-icon o-input__icon-left"><i class="mdi mdi-email mdi-24px"></i></span><input aria-labelledby="v-0-2" trap-focus="" id="v-0-4" type="text" data-oruga-input="text" class="o-input__input o-input__input--iconspace-left o-input__input--placeholder" autocomplete="off">
+                <!---->
+                <!---->
               </div>
               <!---->
             </div>
-            <div data-v-01123d3b="" data-oruga="field" class="o-field" expanded=""><label class="o-field__label" for="">IP Address</label>
-              <div class="o-field__body">
-                <div class="o-field o-field--addons">
-                  <div data-v-01123d3b="" data-oruga="input" class="o-input__wrapper"><input id="" data-oruga-input="text" type="text" class="o-input o-input--iconspace-left" autocomplete="off"><span class="o-icon o-input__icon-left" data-oruga="icon"><i class="mdi mdi-web mdi-24px"></i></span>
-                    <!---->
-                    <!---->
-                  </div>
-                </div>
+            <div data-v-01123d3b="" data-oruga="field" class="o-field" expanded=""><label id="v-0-5" class="o-field__label" for="v-0-7">IP Address</label>
+              <div data-v-01123d3b="" data-oruga="input" class="o-input"><span data-oruga="icon" class="o-icon o-input__icon-left"><i class="mdi mdi-web mdi-24px"></i></span><input aria-labelledby="v-0-5" id="v-0-7" type="text" data-oruga-input="text" class="o-input__input o-input__input--iconspace-left o-input__input--placeholder" autocomplete="off">
+                <!---->
+                <!---->
               </div>
               <!---->
             </div>
-            <p data-v-01123d3b="" class="control self-end mb-0"><button data-v-01123d3b="" type="button" class="o-btn o-btn--primary" role="button" data-oruga="button"><span class="o-btn__wrapper"><!----><span class="o-btn__label">Filter</span>
+            <p data-v-01123d3b="" class="control self-end mb-0"><button data-v-01123d3b="" data-oruga="button" type="button" role="button" tabindex="0" class="o-button o-button--primary"><span class="o-button__wrapper"><!----><span class="o-button__label">Filter</span>
                 <!----></span>
               </button></p>
           </div>
@@ -154,28 +142,36 @@ exports[`UsersView > Show simple list 1`] = `
         <!---->
       </div>
     </form>
-    <div data-v-01123d3b="" class="o-table__root" data-oruga="table">
-      <div style="display: none;"><span data-v-01123d3b="" data-id="1" data-oruga="table-column"> <!----></span><span data-v-01123d3b="" data-id="2" data-oruga="table-column">Email <!----></span><span data-v-01123d3b="" data-id="3" data-oruga="table-column" centered="true">Last seen on <!----></span><span data-v-01123d3b="" data-id="4" data-oruga="table-column" centered="true">Language <!----></span></div>
+    <div data-v-01123d3b="" data-oruga="table" class="o-table__root">
+      <div style="display: none;"><span data-v-01123d3b="" data-oruga="table-column" data-id="table-1"> <!----></span><span data-v-01123d3b="" data-oruga="table-column" data-id="table-2">Email <!----></span><span data-v-01123d3b="" data-oruga="table-column" data-id="table-3" centered="true">Last seen on <!----></span><span data-v-01123d3b="" data-oruga="table-column" data-id="table-4" centered="true">Language <!----></span></div>
       <!---->
       <!---->
       <div class="o-table__wrapper">
-        <table class="o-table">
+        <table debounce-search="500" class="o-table" aria-rowcount="3" aria-colcount="4">
           <!---->
           <thead>
-            <tr>
+            <tr aria-rowindex="1">
               <!---->
               <!---->
-              <th class="o-table__th" style="width: 40px;" draggable="false"><span> <span class="o-table__th__sort-icon" style="display: none;"><span class="o-icon o-icon--small" data-oruga="icon"><i class="mdi mdi-arrow-up"></i></span></span></span></th>
-              <th class="o-table__th" draggable="false"><span>Email <span class="o-table__th__sort-icon" style="display: none;"><span class="o-icon o-icon--small" data-oruga="icon"><i class="mdi mdi-arrow-up"></i></span></span></span></th>
-              <th class="o-table__th" draggable="false"><span>Last seen on <span class="o-table__th__sort-icon" style="display: none;"><span class="o-icon o-icon--small" data-oruga="icon"><i class="mdi mdi-arrow-up"></i></span></span></span></th>
-              <th class="o-table__th" draggable="false"><span>Language <span class="o-table__th__sort-icon" style="display: none;"><span class="o-icon o-icon--small" data-oruga="icon"><i class="mdi mdi-arrow-up"></i></span></span></span></th>
+              <th class="o-table__th" style="width: 40px;" draggable="false" aria-colindex="1"><span class="o-table__th__label"></span>
+                <!---->
+              </th>
+              <th class="o-table__th" draggable="false" aria-colindex="2"><span class="o-table__th__label">Email</span>
+                <!---->
+              </th>
+              <th class="o-table__th" draggable="false" aria-colindex="3"><span class="o-table__th__label">Last seen on</span>
+                <!---->
+              </th>
+              <th class="o-table__th" draggable="false" aria-colindex="4"><span class="o-table__th__label">Language</span>
+                <!---->
+              </th>
               <!---->
             </tr>
             <!---->
             <!---->
           </thead>
           <tbody>
-            <tr class="" draggable="false">
+            <tr class="" draggable="false" aria-rowindex="2">
               <!---->
               <!---->
               <td class="o-table__td" style="width: 40px;">6</td>
@@ -184,11 +180,8 @@ exports[`UsersView > Show simple list 1`] = `
               <td class="o-table__td" data-label="Language">English</td>
               <!---->
             </tr>
-            <transition-stub name="slide" appear="false" persisted="false" css="true">
-              <!---->
-            </transition-stub>
             <!---->
-            <tr class="" draggable="false">
+            <tr class="" draggable="false" aria-rowindex="3">
               <!---->
               <!---->
               <td class="o-table__td" style="width: 40px;">1</td>
@@ -197,9 +190,6 @@ exports[`UsersView > Show simple list 1`] = `
               <td class="o-table__td" data-label="Language">English</td>
               <!---->
             </tr>
-            <transition-stub name="slide" appear="false" persisted="false" css="true">
-              <!---->
-            </transition-stub>
             <!---->
             <!---->
           </tbody>
@@ -209,14 +199,14 @@ exports[`UsersView > Show simple list 1`] = `
           <!---->
         </transition-stub>
       </div>
-      <div class="o-table__pagination" per-page="10" total="2" rounded="false" size="small" simple="false" aria-next-label="Next page" aria-previous-label="Previous page" aria-page-label="Page" aria-current-label="Current page">
+      <div class="o-table__pagination">
         <div></div>
         <div>
-          <nav class="o-pag o-pag--right o-pag--small" data-oruga="pagination"><button role="button" tabindex="0" class="o-pag__link o-pag__previous o-pag__link--disabled" aria-label="Previous page" aria-current="false"><span class="o-icon" data-oruga="icon" aria-hidden="true"><i class="mdi mdi-chevron-left mdi-24px"></i></span></button><button role="button" tabindex="0" class="o-pag__link o-pag__next o-pag__link--disabled" aria-label="Next page" aria-current="false"><span class="o-icon" data-oruga="icon" aria-hidden="true"><i class="mdi mdi-chevron-right mdi-24px"></i></span></button>
-            <ul class="o-pag__list">
+          <nav data-oruga="pagination" class="o-pagination o-pagination--right o-pagination--right o-pagination--small"><button type="button" role="button" disabled="" class="o-pagination__button-previous o-pagination__button--disabled o-pagination__button" aria-label="Previous page" aria-current="false"><span data-oruga="icon" class="o-icon" aria-hidden="true"><i class="mdi mdi-chevron-left mdi-24px"></i></span></button><button type="button" role="button" disabled="" class="o-pagination__button-next o-pagination__button--disabled o-pagination__button" aria-label="Next page" aria-current="false"><span data-oruga="icon" class="o-icon" aria-hidden="true"><i class="mdi mdi-chevron-right mdi-24px"></i></span></button>
+            <ul class="o-pagination__list">
               <!---->
               <!---->
-              <li class="o-pag__item"><button role="button" tabindex="0" class="o-pag__link o-pag__link--current" aria-label="Current page, Page 1." aria-current="true">1</button></li>
+              <li class="o-pagination__item"><button type="button" role="button" tabindex="0" class="o-pagination__button o-pagination__button--current" aria-label="Current page, Page 1." aria-current="true">1</button></li>
               <!---->
               <!---->
             </ul>

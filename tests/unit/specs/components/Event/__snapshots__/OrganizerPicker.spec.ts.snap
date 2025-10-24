@@ -2,8 +2,8 @@
 
 exports[`OrganizerPicker > Show simple 1`] = `
 "<div data-v-4ef6e9b3="" class="max-w-md mx-auto">
-  <div data-v-4ef6e9b3="" data-oruga="input" class="o-input__wrapper o-input__wrapper--expanded"><input dir="auto" class="o-input" id="" data-oruga-input="text" type="text" autocomplete="off" placeholder="Filter by profile or group name">
-    <!---->
+  <div data-v-4ef6e9b3="" data-oruga="input" class="o-input o-input--expanded">
+    <!----><input dir="auto" class="o-input__input o-input__input--placeholder" id="v-0" type="text" data-oruga-input="text" autocomplete="off" placeholder="Filter by profile or group name">
     <!---->
     <!---->
   </div>
