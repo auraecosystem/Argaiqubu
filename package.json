@@ -17,6 +17,10 @@
     "postinstall": "patch-package"
   },
   "lint-staged": {
+    "*.{js,cjs,ts}": [
+      "eslint --fix --rule '@typescript-eslint/no-explicit-any: off' --rule '@typescript-eslint/no-unused-vars: off'",
+      "prettier --write"
+    ],
     "**/*.{js,mjs,cjs,ts,mts,cts,vue}": [
       "eslint --fix --rule '@typescript-eslint/no-explicit-any: off' --rule '@typescript-eslint/no-unused-vars: off'",
       "prettier --write"
