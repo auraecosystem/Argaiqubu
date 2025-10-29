@@ -97,18 +97,12 @@ build-frontend:
 deps:
   stage: check
   before_script:
+    - apt update
+    - apt install gawk
     - rm -rf ~/.hex/cache.ets
     - mix deps.get
   script:
-    - export EXITVALUE=0
-    - mix hex.outdated || echo "----"
-    - |
-      if [ -z "$(mix hex.outdated | grep 'Update possible')" ]
-      then
-        export EXITVALUE=1
-      fi
-    - npm outdated || export EXITVALUE=1
-    - exit $EXITVALUE
+    - ./check_deps.sh
   allow_failure: true
   needs:
     - install
