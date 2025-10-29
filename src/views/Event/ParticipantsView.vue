@@ -220,39 +220,37 @@
           {{ t("No participant matches the filters") }}
         </EmptyContent>
       </template>
-      <template #bottom-left>
-        <div class="flex gap-2">
-          <o-button
-            @click="acceptParticipants(checkedRows)"
-            variant="success"
-            :disabled="!canAcceptParticipants"
-            outlined
-          >
-            {{
-              t(
-                "No participant to approve|Approve participant|Approve {number} participants",
-                { number: checkedRows.length },
-                checkedRows.length
-              )
-            }}
-          </o-button>
-          <o-button
-            @click="refuseParticipants(checkedRows)"
-            variant="danger"
-            :disabled="!canRefuseParticipants"
-            outlined
-          >
-            {{
-              t(
-                "No participant to reject|Reject participant|Reject {number} participants",
-                { number: checkedRows.length },
-                checkedRows.length
-              )
-            }}
-          </o-button>
-        </div>
-      </template>
     </o-table>
+    <div class="flex flex-wrap gap-2">
+      <o-button
+        @click="acceptParticipants(checkedRows)"
+        variant="success"
+        :disabled="!canAcceptParticipants"
+        outlined
+      >
+        {{
+          t(
+            "No participant to approve|Approve participant|Approve {number} participants",
+            { number: checkedRows.length },
+            checkedRows.length
+          )
+        }}
+      </o-button>
+      <o-button
+        @click="refuseParticipants(checkedRows)"
+        variant="danger"
+        :disabled="!canRefuseParticipants"
+        outlined
+      >
+        {{
+          t(
+            "No participant to reject|Reject participant|Reject {number} participants",
+            { number: checkedRows.length },
+            checkedRows.length
+          )
+        }}
+      </o-button>
+    </div>
   </section>
 </template>
 
