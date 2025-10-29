@@ -98,7 +98,7 @@ deps:
   stage: check
   before_script:
     - apt update
-    - apt install gawk
+    - apt install -y gawk
     - rm -rf ~/.hex/cache.ets
     - mix deps.get
   script:
