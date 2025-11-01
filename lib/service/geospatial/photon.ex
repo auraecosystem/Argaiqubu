@@ -1,6 +1,6 @@
 defmodule Mobilizon.Service.Geospatial.Photon do
   @moduledoc """
-  [Photon](https://photon.komoot.de) backend.
+  [Photon](https://photon.komoot.io) backend.
   """
 
   alias Mobilizon.Addresses.Address
