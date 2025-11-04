@@ -24,7 +24,7 @@ defmodule Mobilizon.GraphQL.Schema.InvitationType do
     @desc "Update an invitation for a group"
     field :update_invitation, type: :invitation do
       arg(:group_id, non_null(:id), description: "ID of the group")
-      arg(:token, :string, description: "Token")
+      arg(:token, non_null(:string), description: "Token")
       arg(:label, :string, description: "Label")
       middleware(Rajska.QueryAuthorization, permit: :user, scope: false)
       resolve(&Invitation.update_invitation/3)
@@ -33,9 +33,18 @@ defmodule Mobilizon.GraphQL.Schema.InvitationType do
     @desc "Delete an invitation for a group"
     field :delete_invitation, type: :invitation do
       arg(:group_id, non_null(:id), description: "ID of the group")
-      arg(:token, :string, description: "Token")
+      arg(:token, non_null(:string), description: "Token")
       middleware(Rajska.QueryAuthorization, permit: :user, scope: false)
       resolve(&Invitation.delete_invitation/3)
+    end
+
+    @desc "Accept an invitation to join a group"
+    field :accept_invitation_token, type: :member do
+      arg(:actor_id, non_null(:id), description: "The ID of the actor that will join the group")
+      arg(:group_id, non_null(:id), description: "ID of the group")
+      arg(:token, :string, description: "Token")
+      middleware(Rajska.QueryAuthorization, permit: :user, scope: false)
+      resolve(&Invitation.accept_invitation_token/3)
     end
   end
 

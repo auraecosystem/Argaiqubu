@@ -39,4 +39,8 @@ defmodule Mobilizon.Invitations do
     |> where([i], i.group_id == ^group_id)
     |> Repo.all()
   end
+
+  def find_invitation(group_id, token) do
+    Repo.get_by(Invitation, group_id: group_id, token: token)
+  end
 end
