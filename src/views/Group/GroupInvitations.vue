@@ -51,7 +51,12 @@
           groupInvitationsError?.message
         }}</o-notification>
       </div>
-      <div v-else-if="groupInvitationsResult">
+      <div
+        v-else-if="
+          groupInvitationsResult &&
+          groupInvitationsResult.listInvitations.length
+        "
+      >
         <o-table :data="groupInvitationsResult.listInvitations">
           <o-table-column
             field="label"
@@ -162,9 +167,12 @@ const {
   loading: groupInvitationsLoading,
   error: groupInvitationsError,
   refetch: groupInvitationsRefetch,
-} = useQuery<{ listInvitations: IInvitation }>(GROUP_INVITATIONS_LIST, () => ({
-  groupId: group.value?.id,
-}));
+} = useQuery<{ listInvitations: IInvitation[] }>(
+  GROUP_INVITATIONS_LIST,
+  () => ({
+    groupId: group.value?.id,
+  })
+);
 
 // -------------------------------------------------------------
 // Create invitation
