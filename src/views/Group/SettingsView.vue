@@ -20,6 +20,10 @@
               :title="t('Followers')"
               :to="{ name: RouteName.GROUP_FOLLOWERS_SETTINGS }"
             />
+            <SettingMenuItem
+              :title="t('Invitations')"
+              :to="{ name: RouteName.GROUP_INVITATIONS_SETTINGS }"
+            />
           </SettingMenuSection>
         </ul>
       </aside>

@@ -8,6 +8,7 @@ export enum GroupsRouteName {
   GROUP_PUBLIC_SETTINGS = "GROUP_PUBLIC_SETTINGS",
   GROUP_MEMBERS_SETTINGS = "GROUP_MEMBERS_SETTINGS",
   GROUP_FOLLOWERS_SETTINGS = "GROUP_FOLLOWERS_SETTINGS",
+  GROUP_INVITATIONS_SETTINGS = "GROUP_INVITATIONS_SETTINGS",
   RESOURCES = "RESOURCES",
   RESOURCE_FOLDER_ROOT = "RESOURCE_FOLDER_ROOT",
   RESOURCE_FOLDER = "RESOURCE_FOLDER",
@@ -93,6 +94,14 @@ export const groupsRoutes: RouteRecordRaw[] = [
         name: GroupsRouteName.GROUP_FOLLOWERS_SETTINGS,
         component: (): Promise<any> =>
           import("../views/Group/GroupFollowers.vue"),
+        props: true,
+        meta: { announcer: { skip: true } },
+      },
+      {
+        path: "invitations",
+        name: GroupsRouteName.GROUP_INVITATIONS_SETTINGS,
+        component: (): Promise<any> =>
+          import("../views/Group/GroupInvitations.vue"),
         props: true,
         meta: { announcer: { skip: true } },
       },

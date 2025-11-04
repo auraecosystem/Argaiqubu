@@ -1718,5 +1718,15 @@
   "{username} was invited to {group}": "{username} a \u00e9t\u00e9 invit\u00e9 \u00e0 {group}",
   "{user}'s follow request was accepted": "La demande de suivi de {user} a \u00e9t\u00e9 accept\u00e9e",
   "{user}'s follow request was rejected": "La demande de suivi de {user} a \u00e9t\u00e9 rejet\u00e9e",
-  "\u00a9 The OpenStreetMap Contributors": "\u00a9 Les Contributeur\u00b7ices OpenStreetMap"
+  "\u00a9 The OpenStreetMap Contributors": "\u00a9 Les Contributeur\u00b7ices OpenStreetMap",
+  "Cancel update":"Annuler la mise à jour", 
+  "Creation date":"Date de création", 
+  "Delete invitation":"Supprimer l'invitation", 
+  "Edit invitation": "Modifier l'invitation", 
+  "Group invitations":"Invitations de groupe", 
+  "Invitation links": "Liens d'invitation", 
+  "Invitations" : "Invitations", 
+  "New invitation": "Nouvelle invitation", 
+  "Token": "Jeton", 
+  "Update invitation" : "Mettre à jour l'invitation"
 }
