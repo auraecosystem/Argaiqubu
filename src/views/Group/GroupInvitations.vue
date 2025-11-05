@@ -51,13 +51,15 @@
           groupInvitationsError?.message
         }}</o-notification>
       </div>
-      <div
-        v-else-if="
-          groupInvitationsResult &&
-          groupInvitationsResult.listInvitations.length
-        "
-      >
-        <o-table :data="groupInvitationsResult.listInvitations">
+      <div v-else-if="groupInvitationsResult">
+        <div v-if="!groupInvitationsResult.listInvitations.length">
+          <o-notification type="info" variant="info">{{
+            t(
+              'No invitation yet. Create a new invitation with the button "New invitation".'
+            )
+          }}</o-notification>
+        </div>
+        <o-table v-else :data="groupInvitationsResult.listInvitations">
           <o-table-column
             field="label"
             :label="t('Label')"

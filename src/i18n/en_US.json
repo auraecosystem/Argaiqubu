@@ -793,6 +793,7 @@
   "No instance to reject|Reject instance|Reject {number} instances": "No instance to reject|Reject instance|Reject {number} instances",
   "No instance to remove|Remove instance|Remove {number} instances": "No instances to remove|Remove instance|Remove {number} instances",
   "No instances match this filter. Try resetting filter fields?": "No instances match this filter. Try resetting filter fields?",
+  "No invitation yet. Create a new invitation with the button \"New invitation\".":"No invitation yet. Create a new invitation with the button \"New invitation\".",
   "No languages found": "No languages found",
   "No location yet": "No location yet",
   "No member matches the filters": "No member matches the filters",
