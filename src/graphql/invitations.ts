@@ -35,3 +35,16 @@ export const GROUP_INVITATIONS_DELETE = gql`
     }
   }
 `;
+
+export const GROUP_INVITATIONS_ACCEPT = gql`
+  mutation acceptInvitationToken(
+    $groupId: ID!
+    $token: String!
+    $actorId: ID!
+  ) {
+    acceptInvitationToken(groupId: $groupId, token: $token, actorId: $actorId) {
+      id
+      role
+    }
+  }
+`;

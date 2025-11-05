@@ -71,8 +71,26 @@
             />
             <span v-else>{{ props.row.label }}</span>
           </o-table-column>
-          <o-table-column field="token" :label="t('Token')" sortable />
-          <o-table-column field="url" :label="t('URL')" sortable />
+          <o-table-column
+            field="token"
+            :label="t('URL')"
+            sortable
+            v-slot="props"
+          >
+            <o-button
+              v-if="props.row.token"
+              tag="router-link"
+              variant="primary"
+              :to="{
+                name: RouteName.GROUP_INVITATION_ACCEPT,
+                params: {
+                  preferredUsername: group.preferredUsername,
+                  token: props.row.token,
+                },
+              }"
+              >{{ t("Invite link") }}</o-button
+            >
+          </o-table-column>
           <o-table-column
             field="creationDate"
             :label="t('Creation date')"

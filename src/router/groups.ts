@@ -9,6 +9,7 @@ export enum GroupsRouteName {
   GROUP_MEMBERS_SETTINGS = "GROUP_MEMBERS_SETTINGS",
   GROUP_FOLLOWERS_SETTINGS = "GROUP_FOLLOWERS_SETTINGS",
   GROUP_INVITATIONS_SETTINGS = "GROUP_INVITATIONS_SETTINGS",
+  GROUP_INVITATION_ACCEPT = "GROUP_INVITATION_ACCEPT",
   RESOURCES = "RESOURCES",
   RESOURCE_FOLDER_ROOT = "RESOURCE_FOLDER_ROOT",
   RESOURCE_FOLDER = "RESOURCE_FOLDER",
@@ -112,6 +113,14 @@ export const groupsRoutes: RouteRecordRaw[] = [
     component: (): Promise<any> => import("@/views/Posts/EditView.vue"),
     props: true,
     name: GroupsRouteName.POST_CREATE,
+    meta: { requiredAuth: true, announcer: { skip: true } },
+  },
+  {
+    path: "/@:preferredUsername/invitation/:token",
+    component: (): Promise<any> =>
+      import("@/views/Group/GroupInvitationJoin.vue"),
+    props: true,
+    name: GroupsRouteName.GROUP_INVITATION_ACCEPT,
     meta: { requiredAuth: true, announcer: { skip: true } },
   },
   {
