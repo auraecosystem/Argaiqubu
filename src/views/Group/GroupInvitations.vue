@@ -139,9 +139,10 @@ import { usernameWithDomain, displayName, IGroup } from "@/types/actor";
 import { useHead } from "@/utils/head";
 import { useI18n } from "vue-i18n";
 import { useMutation, useQuery } from "@vue/apollo-composable";
-import { computed, ref } from "vue";
+import { computed, ref, watch } from "vue";
 import { useGroup } from "@/composition/apollo/group";
 import { IInvitation } from "@/types/actor/invitation.model";
+import { useCurrentActorClient } from "@/composition/apollo/actor";
 
 const { t } = useI18n({ useScope: "global" });
 
@@ -173,6 +174,13 @@ const {
     groupId: group.value?.id,
   })
 );
+
+// We need to refetch when the actor is changed
+const { currentActor } = useCurrentActorClient();
+
+watch(currentActor, () => {
+  groupInvitationsRefetch();
+});
 
 // -------------------------------------------------------------
 // Create invitation
