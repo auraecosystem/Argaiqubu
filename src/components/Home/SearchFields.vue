@@ -32,7 +32,13 @@
         :placeholder="t('e.g. Nantes, Berlin, Cork, …')"
         v-on:update:modelValue="modelValueUpdate"
       >
-        <o-dropdown v-model="distance" position="bottom-right" v-if="distance">
+        <o-dropdown
+          v-model="distance"
+          :options="distanceList"
+          selectable
+          position="bottom-right"
+          v-if="distance"
+        >
           <template #trigger="{ active }">
             <o-button
               class="!h-full"
@@ -42,12 +48,6 @@
               {{ distanceText }}
             </o-button>
           </template>
-          <o-dropdown-item
-            v-for="distance_item in distanceList"
-            :value="distance_item.distance"
-            :label="distance_item.label"
-            :key="distance_item.distance"
-          />
         </o-dropdown>
       </full-address-auto-complete>
     </div>
@@ -172,7 +172,7 @@ const distanceList = computed(() => {
   const distances = [];
   [5, 10, 25, 50, 100, 150].forEach((value) => {
     distances.push({
-      distance: value,
+      value: value,
       label: t(
         "{number} kilometers",
         {

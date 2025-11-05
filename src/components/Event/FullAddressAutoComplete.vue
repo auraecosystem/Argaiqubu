@@ -20,6 +20,7 @@
         :title="t('Use my location')"
       />
       <o-autocomplete
+        :key="keyaddress"
         v-model="queryTextWithDefault"
         :options="addressData"
         :placeholder="placeholderWithDefault"
@@ -28,17 +29,17 @@
         expanded
         :id="id"
         :disabled="disabled"
-        @input="asyncData"
+        @update:input="asyncData"
         @select="setSelected"
         class="FullAddressAutoComplete-o-autocomplete !mt-0 !h-full"
       >
         <template #default="{ option }">
           <p class="flex gap-1">
-            <o-icon :icon="addressToPoiInfos(option).poiIcon.icon" />
-            <b>{{ addressToPoiInfos(option).name }}</b>
+            <o-icon :icon="addressToPoiInfos(option.value).poiIcon.icon" />
+            <b>{{ addressToPoiInfos(option.value).name }}</b>
           </p>
           <p class="text-small">
-            {{ addressToPoiInfos(option).alternativeName }}
+            {{ addressToPoiInfos(option.value).alternativeName }}
           </p>
         </template>
         <template #empty>
@@ -233,6 +234,7 @@ const props = withDefaults(
 );
 
 const componentId = ref(0);
+const keyaddress = ref(0);
 
 const emit = defineEmits(["update:modelValue"]);
 
@@ -327,7 +329,7 @@ const { load: searchAddressLoad, refetch: searchAddressRefetch } =
     searchAddress: IAddress[];
   }>(ADDRESS);
 
-function convert_to_complete(addesses: IAddress[]) {
+function convert_to_complete(addesses: IAddress[]): OptionsProp {
   return addesses.map((elem: IAddress) => {
     return {
       label: elem.description, // addressFullName(elem),
@@ -366,7 +368,6 @@ const asyncData = async (query: string): Promise<void> => {
       isFetching.value = false;
       return;
     }
-    console.debug("onAddressSearchResult", result.searchAddress);
     addressData.value = convert_to_complete(result.searchAddress);
     isFetching.value = false;
   } catch (e) {
@@ -385,7 +386,7 @@ const queryText = ref();
 const queryTextWithDefault = computed({
   get() {
     return (
-      selectedAddressText.value ?? queryText.value ?? props.defaultText ?? ""
+      queryText.value ?? selectedAddressText.value ?? props.defaultText ?? ""
     );
   },
   set(newValue: string) {
@@ -398,6 +399,8 @@ const resetAddress = (): void => {
   emit("update:modelValue", null);
   resetAddressAction(selected);
   queryTextWithDefault.value = "";
+  addressData.value = [];
+  keyaddress.value = keyaddress.value + 1;
 };
 
 const locateMe = async (): Promise<void> => {
@@ -439,16 +442,14 @@ const reverseGeoCode = async (e: LatLng, zoom: number) => {
       locale: locale.value as unknown as string,
     });
     if (!result) return;
-    addressData.value = [];
+    addressData.value = convert_to_complete(result.reverseGeocode);
 
     if (result.reverseGeocode.length > 0) {
       const foundAddress = result.reverseGeocode[0];
       Object.assign(selected, foundAddress);
-      queryText.value = addressFullName(foundAddress);
-      addressData.value = [
-        { label: queryTextWithDefault.value, value: foundAddress },
-      ];
       console.debug("reverse geocode succeded, setting new address");
+      queryText.value = foundAddress;
+      keyaddress.value = keyaddress.value + 1;
       emit("update:modelValue", selected);
     }
   } catch (err) {
