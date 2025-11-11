@@ -42,7 +42,7 @@ exports[`ParticipationWithoutAccount > handles being already a participant 1`] =
       </div>
       <div data-oruga="field" class="o-field">
         <!---->
-        <div data-oruga="checkbox" class="o-checkbox o-checkbox--checked"><input aria-labelledby="v-0-4" id="v-0-6" type="checkbox" data-oruga-input="checkbox" class="o-checkbox__input" true-value="true" false-value="false" autocomplete="off" aria-checked="true"><label id="v-0-4" for="v-0-6" class="o-checkbox__label"><b>Remember my participation in this browser</b>
+        <div data-oruga="checkbox" class="o-checkbox"><input aria-labelledby="v-0-4" id="v-0-6" type="checkbox" data-oruga-input="checkbox" class="o-checkbox__input" true-value="true" false-value="false" autocomplete="off" aria-checked="false"><label id="v-0-4" for="v-0-6" class="o-checkbox__label"><b>Remember my participation in this browser</b>
             <p>Will allow to display and manage your participation status on the event page when using this device. Uncheck if you're using a public device.</p>
           </label></div>
         <!---->

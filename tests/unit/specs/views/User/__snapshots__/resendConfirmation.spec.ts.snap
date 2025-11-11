@@ -15,7 +15,7 @@ exports[`ResendConfirmation > Show simple 1`] = `
     </div>
     <p class="flex flex-wrap gap-1 mt-2"><button data-oruga="button" type="submit" role="button" tabindex="0" class="o-button o-button--primary"><span class="o-button__wrapper"><!----><span class="o-button__label">Send the confirmation email again</span>
         <!----></span>
-      </button><a href="/login" class="o-button o-button--outlined-primary" data-oruga="button" role="button" tabindex="0"><span class="o-button__wrapper"><!----><span class="o-button__label">Cancel</span>
+      </button><a href="/login" class="o-button o-button--primary o-button--outlined" data-oruga="button" role="button" tabindex="0"><span class="o-button__wrapper"><!----><span class="o-button__label">Cancel</span>
         <!----></span>
       </a></p>
   </form>

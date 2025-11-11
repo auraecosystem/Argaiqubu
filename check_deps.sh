@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ELIXIR_LIB_EXCLUDE="ueberauth_cas"
-VUEJS_LIB_EXCLUDE="@apollo/client @vueuse/core tailwindcss"
+VUEJS_LIB_EXCLUDE="@apollo/client mock-apollo-client @vueuse/core tailwindcss"
 
 let EXITVALUE=0
 mix hex.outdated | grep -v "Up-to-date"

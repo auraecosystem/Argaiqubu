@@ -135,7 +135,13 @@ exports[`AdminProfile > Show simple 1`] = `
       <div class="o-table__pagination">
         <div></div>
         <div>
-          <nav data-oruga="pagination" class="o-pagination o-pagination--right o-pagination--right o-pagination--small"><button type="button" role="button" disabled="" class="o-pagination__button-previous o-pagination__button--disabled o-pagination__button" aria-label="Previous page" aria-current="false"><span data-oruga="icon" class="o-icon" aria-hidden="true"><i class="mdi mdi-chevron-left mdi-24px"></i></span></button><button type="button" role="button" disabled="" class="o-pagination__button-next o-pagination__button--disabled o-pagination__button" aria-label="Next page" aria-current="false"><span data-oruga="icon" class="o-icon" aria-hidden="true"><i class="mdi mdi-chevron-right mdi-24px"></i></span></button>
+          <nav data-oruga="pagination" class="o-pagination o-pagination--right o-pagination--small"><button data-oruga="button" role="button" tabindex="0" class="o-button o-button--small o-button--disabled o-pagination__button o-pagination__button-previous o-pagination__button--disabled" disabled="" iscurrent="false" number="0" aria-label="Previous page" aria-current="false"><span class="o-button__wrapper"><span data-oruga="icon" class="o-icon o-icon--small o-button__icon o-button__icon-left"><i class="mdi mdi-chevron-left"></i></span>
+              <!---->
+              <!----></span>
+            </button><button data-oruga="button" role="button" tabindex="0" class="o-button o-button--small o-button--disabled o-pagination__button o-pagination__button-next o-pagination__button--disabled" disabled="" iscurrent="false" number="2" aria-label="Next page" aria-current="false"><span class="o-button__wrapper"><span data-oruga="icon" class="o-icon o-icon--small o-button__icon o-button__icon-left"><i class="mdi mdi-chevron-right"></i></span>
+              <!---->
+              <!----></span>
+            </button>
             <ul class="o-pagination__list">
               <!---->
               <!---->
@@ -194,7 +200,13 @@ exports[`AdminProfile > Show simple 1`] = `
       <div class="o-table__pagination">
         <div></div>
         <div>
-          <nav data-oruga="pagination" class="o-pagination o-pagination--right o-pagination--right o-pagination--small"><button type="button" role="button" disabled="" class="o-pagination__button-previous o-pagination__button--disabled o-pagination__button" aria-label="Previous page" aria-current="false"><span data-oruga="icon" class="o-icon" aria-hidden="true"><i class="mdi mdi-chevron-left mdi-24px"></i></span></button><button type="button" role="button" disabled="" class="o-pagination__button-next o-pagination__button--disabled o-pagination__button" aria-label="Next page" aria-current="false"><span data-oruga="icon" class="o-icon" aria-hidden="true"><i class="mdi mdi-chevron-right mdi-24px"></i></span></button>
+          <nav data-oruga="pagination" class="o-pagination o-pagination--right o-pagination--small"><button data-oruga="button" role="button" tabindex="0" class="o-button o-button--small o-button--disabled o-pagination__button o-pagination__button-previous o-pagination__button--disabled" disabled="" iscurrent="false" number="0" aria-label="Previous page" aria-current="false"><span class="o-button__wrapper"><span data-oruga="icon" class="o-icon o-icon--small o-button__icon o-button__icon-left"><i class="mdi mdi-chevron-left"></i></span>
+              <!---->
+              <!----></span>
+            </button><button data-oruga="button" role="button" tabindex="0" class="o-button o-button--small o-button--disabled o-pagination__button o-pagination__button-next o-pagination__button--disabled" disabled="" iscurrent="false" number="2" aria-label="Next page" aria-current="false"><span class="o-button__wrapper"><span data-oruga="icon" class="o-icon o-icon--small o-button__icon o-button__icon-left"><i class="mdi mdi-chevron-right"></i></span>
+              <!---->
+              <!----></span>
+            </button>
             <ul class="o-pagination__list">
               <!---->
               <!---->
@@ -256,7 +268,13 @@ exports[`AdminProfile > Show simple 1`] = `
       <div class="o-table__pagination">
         <div></div>
         <div>
-          <nav data-oruga="pagination" class="o-pagination o-pagination--right o-pagination--right o-pagination--small"><button type="button" role="button" disabled="" class="o-pagination__button-previous o-pagination__button--disabled o-pagination__button" aria-label="Previous page" aria-current="false"><span data-oruga="icon" class="o-icon" aria-hidden="true"><i class="mdi mdi-chevron-left mdi-24px"></i></span></button><button type="button" role="button" disabled="" class="o-pagination__button-next o-pagination__button--disabled o-pagination__button" aria-label="Next page" aria-current="false"><span data-oruga="icon" class="o-icon" aria-hidden="true"><i class="mdi mdi-chevron-right mdi-24px"></i></span></button>
+          <nav data-oruga="pagination" class="o-pagination o-pagination--right o-pagination--small"><button data-oruga="button" role="button" tabindex="0" class="o-button o-button--small o-button--disabled o-pagination__button o-pagination__button-previous o-pagination__button--disabled" disabled="" iscurrent="false" number="0" aria-label="Previous page" aria-current="false"><span class="o-button__wrapper"><span data-oruga="icon" class="o-icon o-icon--small o-button__icon o-button__icon-left"><i class="mdi mdi-chevron-left"></i></span>
+              <!---->
+              <!----></span>
+            </button><button data-oruga="button" role="button" tabindex="0" class="o-button o-button--small o-button--disabled o-pagination__button o-pagination__button-next o-pagination__button--disabled" disabled="" iscurrent="false" number="2" aria-label="Next page" aria-current="false"><span class="o-button__wrapper"><span data-oruga="icon" class="o-icon o-icon--small o-button__icon o-button__icon-left"><i class="mdi mdi-chevron-right"></i></span>
+              <!---->
+              <!----></span>
+            </button>
             <ul class="o-pagination__list">
               <!---->
               <!---->
