@@ -45,7 +45,7 @@ exports[`UsersView > Show list with moderation 1`] = `
             <tr aria-rowindex="1">
               <!---->
               <!---->
-              <th class="o-table__th" style="width: 40px; min-width: 40px;" draggable="false" aria-colindex="1"><span class="o-table__th__label"></span>
+              <th class="o-table__th" style="width: 40px;" draggable="false" aria-colindex="1"><span class="o-table__th__label"></span>
                 <!---->
               </th>
               <th class="o-table__th" draggable="false" aria-colindex="2"><span class="o-table__th__label">Email</span>
@@ -63,20 +63,20 @@ exports[`UsersView > Show list with moderation 1`] = `
             <!---->
           </thead>
           <tbody>
-            <tr class="o-table__tr" draggable="false" aria-rowindex="2">
+            <tr class="" draggable="false" aria-rowindex="2">
               <!---->
               <!---->
-              <td class="o-table__td" style="width: 40px; min-width: 40px;">6</td>
+              <td class="o-table__td" style="width: 40px;">6</td>
               <td class="o-table__td" data-label="Email"><a data-v-01123d3b="" href="/settings/admin/users/6" class="">truc@mobilizon.test</a></td>
               <td class="o-table__td" data-label="Last seen on"><time data-v-01123d3b="">Thursday, January 1, 1970 at 1:00 AM</time></td>
               <td class="o-table__td" data-label="Language">English</td>
               <!---->
             </tr>
             <!---->
-            <tr class="o-table__tr" draggable="false" aria-rowindex="3">
+            <tr class="" draggable="false" aria-rowindex="3">
               <!---->
               <!---->
-              <td class="o-table__td" style="width: 40px; min-width: 40px;">1</td>
+              <td class="o-table__td" style="width: 40px;">1</td>
               <td class="o-table__td" data-label="Email"><a data-v-01123d3b="" href="/settings/admin/users/1" class="">admin@mobilizon.test</a></td>
               <td class="o-table__td" data-label="Last seen on"><time data-v-01123d3b="" datetime="2025-09-11T16:10:03Z">Thursday, September 11, 2025 at 6:10 PM</time></td>
               <td class="o-table__td" data-label="Language">English</td>
@@ -94,19 +94,11 @@ exports[`UsersView > Show list with moderation 1`] = `
       <div class="o-table__pagination">
         <div></div>
         <div>
-          <nav data-oruga="pagination" class="o-pagination o-pagination--right o-pagination--small"><button data-oruga="button" role="button" tabindex="0" class="o-button o-button--small o-button--disabled o-pagination__button o-pagination__button-previous o-pagination__button--disabled" disabled="" iscurrent="false" number="0" aria-label="Previous page" aria-current="false"><span class="o-button__wrapper"><span data-oruga="icon" class="o-icon o-icon--small o-button__icon o-button__icon-left"><i class="mdi mdi-chevron-left"></i></span>
-              <!---->
-              <!----></span>
-            </button><button data-oruga="button" role="button" tabindex="0" class="o-button o-button--small o-button--disabled o-pagination__button o-pagination__button-next o-pagination__button--disabled" disabled="" iscurrent="false" number="2" aria-label="Next page" aria-current="false"><span class="o-button__wrapper"><span data-oruga="icon" class="o-icon o-icon--small o-button__icon o-button__icon-left"><i class="mdi mdi-chevron-right"></i></span>
-              <!---->
-              <!----></span>
-            </button>
+          <nav data-oruga="pagination" class="o-pagination o-pagination--right o-pagination--right o-pagination--small"><button type="button" role="button" disabled="" class="o-pagination__button-previous o-pagination__button--disabled o-pagination__button" aria-label="Previous page" aria-current="false"><span data-oruga="icon" class="o-icon" aria-hidden="true"><i class="mdi mdi-chevron-left mdi-24px"></i></span></button><button type="button" role="button" disabled="" class="o-pagination__button-next o-pagination__button--disabled o-pagination__button" aria-label="Next page" aria-current="false"><span data-oruga="icon" class="o-icon" aria-hidden="true"><i class="mdi mdi-chevron-right mdi-24px"></i></span></button>
             <ul class="o-pagination__list">
               <!---->
               <!---->
-              <li class="o-pagination__item"><button data-oruga="button" role="button" tabindex="0" class="o-button o-button--small o-button--primary o-pagination__button o-pagination__button--current" iscurrent="true" number="1" aria-label="Current page, Page 1." aria-current="true"><span class="o-button__wrapper"><!----><span class="o-button__label">1</span>
-                  <!----></span>
-                </button></li>
+              <li class="o-pagination__item"><button type="button" role="button" tabindex="0" class="o-pagination__button o-pagination__button--current" aria-label="Current page, Page 1." aria-current="true">1</button></li>
               <!---->
               <!---->
             </ul>
@@ -161,7 +153,7 @@ exports[`UsersView > Show simple list 1`] = `
             <tr aria-rowindex="1">
               <!---->
               <!---->
-              <th class="o-table__th" style="width: 40px; min-width: 40px;" draggable="false" aria-colindex="1"><span class="o-table__th__label"></span>
+              <th class="o-table__th" style="width: 40px;" draggable="false" aria-colindex="1"><span class="o-table__th__label"></span>
                 <!---->
               </th>
               <th class="o-table__th" draggable="false" aria-colindex="2"><span class="o-table__th__label">Email</span>
@@ -179,20 +171,20 @@ exports[`UsersView > Show simple list 1`] = `
             <!---->
           </thead>
           <tbody>
-            <tr class="o-table__tr" draggable="false" aria-rowindex="2">
+            <tr class="" draggable="false" aria-rowindex="2">
               <!---->
               <!---->
-              <td class="o-table__td" style="width: 40px; min-width: 40px;">6</td>
+              <td class="o-table__td" style="width: 40px;">6</td>
               <td class="o-table__td" data-label="Email"><a data-v-01123d3b="" href="/settings/admin/users/6" class="">truc@mobilizon.test</a></td>
               <td class="o-table__td" data-label="Last seen on"><time data-v-01123d3b="">Thursday, January 1, 1970 at 1:00 AM</time></td>
               <td class="o-table__td" data-label="Language">English</td>
               <!---->
             </tr>
             <!---->
-            <tr class="o-table__tr" draggable="false" aria-rowindex="3">
+            <tr class="" draggable="false" aria-rowindex="3">
               <!---->
               <!---->
-              <td class="o-table__td" style="width: 40px; min-width: 40px;">1</td>
+              <td class="o-table__td" style="width: 40px;">1</td>
               <td class="o-table__td" data-label="Email"><a data-v-01123d3b="" href="/settings/admin/users/1" class="">admin@mobilizon.test</a></td>
               <td class="o-table__td" data-label="Last seen on"><time data-v-01123d3b="" datetime="2025-09-11T16:10:03Z">Thursday, September 11, 2025 at 6:10 PM</time></td>
               <td class="o-table__td" data-label="Language">English</td>
@@ -210,19 +202,11 @@ exports[`UsersView > Show simple list 1`] = `
       <div class="o-table__pagination">
         <div></div>
         <div>
-          <nav data-oruga="pagination" class="o-pagination o-pagination--right o-pagination--small"><button data-oruga="button" role="button" tabindex="0" class="o-button o-button--small o-button--disabled o-pagination__button o-pagination__button-previous o-pagination__button--disabled" disabled="" iscurrent="false" number="0" aria-label="Previous page" aria-current="false"><span class="o-button__wrapper"><span data-oruga="icon" class="o-icon o-icon--small o-button__icon o-button__icon-left"><i class="mdi mdi-chevron-left"></i></span>
-              <!---->
-              <!----></span>
-            </button><button data-oruga="button" role="button" tabindex="0" class="o-button o-button--small o-button--disabled o-pagination__button o-pagination__button-next o-pagination__button--disabled" disabled="" iscurrent="false" number="2" aria-label="Next page" aria-current="false"><span class="o-button__wrapper"><span data-oruga="icon" class="o-icon o-icon--small o-button__icon o-button__icon-left"><i class="mdi mdi-chevron-right"></i></span>
-              <!---->
-              <!----></span>
-            </button>
+          <nav data-oruga="pagination" class="o-pagination o-pagination--right o-pagination--right o-pagination--small"><button type="button" role="button" disabled="" class="o-pagination__button-previous o-pagination__button--disabled o-pagination__button" aria-label="Previous page" aria-current="false"><span data-oruga="icon" class="o-icon" aria-hidden="true"><i class="mdi mdi-chevron-left mdi-24px"></i></span></button><button type="button" role="button" disabled="" class="o-pagination__button-next o-pagination__button--disabled o-pagination__button" aria-label="Next page" aria-current="false"><span data-oruga="icon" class="o-icon" aria-hidden="true"><i class="mdi mdi-chevron-right mdi-24px"></i></span></button>
             <ul class="o-pagination__list">
               <!---->
               <!---->
-              <li class="o-pagination__item"><button data-oruga="button" role="button" tabindex="0" class="o-button o-button--small o-button--primary o-pagination__button o-pagination__button--current" iscurrent="true" number="1" aria-label="Current page, Page 1." aria-current="true"><span class="o-button__wrapper"><!----><span class="o-button__label">1</span>
-                  <!----></span>
-                </button></li>
+              <li class="o-pagination__item"><button type="button" role="button" tabindex="0" class="o-pagination__button o-pagination__button--current" aria-label="Current page, Page 1." aria-current="true">1</button></li>
               <!---->
               <!---->
             </ul>

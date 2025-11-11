@@ -44,7 +44,7 @@ exports[`GroupProfiles > Show simple 1`] = `
     <!---->
     </thead>
     <tbody>
-      <tr class="o-table__tr" draggable="false" aria-rowindex="3">
+      <tr class="" draggable="false" aria-rowindex="3">
         <!---->
         <!---->
         <td class="o-table__td" data-label="Username"><a data-v-0a4382af="" href="/settings/admin/groups/1125368" class="profile">
@@ -60,7 +60,7 @@ exports[`GroupProfiles > Show simple 1`] = `
         <!---->
       </tr>
       <!---->
-      <tr class="o-table__tr" draggable="false" aria-rowindex="4">
+      <tr class="" draggable="false" aria-rowindex="4">
         <!---->
         <!---->
         <td class="o-table__td" data-label="Username"><a data-v-0a4382af="" href="/settings/admin/groups/175368" class="profile">
@@ -76,7 +76,7 @@ exports[`GroupProfiles > Show simple 1`] = `
         <!---->
       </tr>
       <!---->
-      <tr class="o-table__tr" draggable="false" aria-rowindex="5">
+      <tr class="" draggable="false" aria-rowindex="5">
         <!---->
         <!---->
         <td class="o-table__td" data-label="Username"><a data-v-0a4382af="" href="/settings/admin/groups/1126368" class="profile">
@@ -103,19 +103,11 @@ exports[`GroupProfiles > Show simple 1`] = `
   <div class="o-table__pagination">
     <div></div>
     <div>
-      <nav data-oruga="pagination" class="o-pagination o-pagination--right o-pagination--small"><button data-oruga="button" role="button" tabindex="0" class="o-button o-button--small o-button--disabled o-pagination__button o-pagination__button-previous o-pagination__button--disabled" disabled="" iscurrent="false" number="0" aria-label="Previous page" aria-current="false"><span class="o-button__wrapper"><span data-oruga="icon" class="o-icon o-icon--small o-button__icon o-button__icon-left"><i class="mdi mdi-chevron-left"></i></span>
-          <!---->
-          <!----></span>
-        </button><button data-oruga="button" role="button" tabindex="0" class="o-button o-button--small o-button--disabled o-pagination__button o-pagination__button-next o-pagination__button--disabled" disabled="" iscurrent="false" number="2" aria-label="Next page" aria-current="false"><span class="o-button__wrapper"><span data-oruga="icon" class="o-icon o-icon--small o-button__icon o-button__icon-left"><i class="mdi mdi-chevron-right"></i></span>
-          <!---->
-          <!----></span>
-        </button>
+      <nav data-oruga="pagination" class="o-pagination o-pagination--right o-pagination--right o-pagination--small"><button type="button" role="button" disabled="" class="o-pagination__button-previous o-pagination__button--disabled o-pagination__button" aria-label="Previous page" aria-current="false"><span data-oruga="icon" class="o-icon" aria-hidden="true"><i class="mdi mdi-chevron-left mdi-24px"></i></span></button><button type="button" role="button" disabled="" class="o-pagination__button-next o-pagination__button--disabled o-pagination__button" aria-label="Next page" aria-current="false"><span data-oruga="icon" class="o-icon" aria-hidden="true"><i class="mdi mdi-chevron-right mdi-24px"></i></span></button>
         <ul class="o-pagination__list">
           <!---->
           <!---->
-          <li class="o-pagination__item"><button data-oruga="button" role="button" tabindex="0" class="o-button o-button--small o-button--primary o-pagination__button o-pagination__button--current" iscurrent="true" number="1" aria-label="Current page, Page 1." aria-current="true"><span class="o-button__wrapper"><!----><span class="o-button__label">1</span>
-              <!----></span>
-            </button></li>
+          <li class="o-pagination__item"><button type="button" role="button" tabindex="0" class="o-pagination__button o-pagination__button--current" aria-label="Current page, Page 1." aria-current="true">1</button></li>
           <!---->
           <!---->
         </ul>
