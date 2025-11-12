@@ -21,17 +21,14 @@
       @cancel-anonymous-participation="cancelAnonymousParticipation"
     />
     <div class="flex flex-col gap-1 mt-1">
-      <p
-        class="inline-flex gap-2 ml-auto"
-        v-if="
-          event.joinOptions !== EventJoinOptions.EXTERNAL &&
-          !event.options.hideNumberOfParticipants
-        "
-      >
+      <p class="inline-flex gap-2 ml-auto" v-if="showParticipant">
         <TicketConfirmationOutline />
         <router-link
-          class="participations-link"
-          v-if="canManageEvent && event?.draft === false"
+          class="participations-link underline"
+          v-if="
+            (insideGroupWithAllowSee || canManageEvent) &&
+            event?.draft === false
+          "
           :to="{
             name: RouteName.PARTICIPATIONS,
             params: { eventId: event.uuid },
@@ -110,20 +107,6 @@
             {{ t("Actions") }}
           </o-button>
         </template>
-        <o-dropdown-item
-          aria-role="listitem"
-          has-link
-          v-if="canManageEvent"
-          @click="
-            router.push({
-              name: RouteName.PARTICIPATIONS,
-              params: { eventId: event?.uuid },
-            })
-          "
-        >
-          <AccountMultiple />
-          {{ t("Participations") }}
-        </o-dropdown-item>
         <o-dropdown-item
           aria-role="listitem"
           has-link
@@ -481,6 +464,15 @@ const triggerShare = (): void => {
   // @ts-ignore-end
 };
 
+const showParticipant = computed((): boolean => {
+  return (
+    insideGroupWithAllowSee.value ||
+    canManageEvent.value ||
+    (event.value?.joinOptions !== EventJoinOptions.EXTERNAL &&
+      !event.value?.options.hideNumberOfParticipants)
+  );
+});
+
 const canManageEvent = computed((): boolean => {
   return actorIsOrganizer.value || hasGroupPrivileges.value;
 });
@@ -493,6 +485,14 @@ const canManageEvent = computed((): boolean => {
 //     participations.value[0].role === ParticipantRole.PARTICIPANT
 //   );
 // });
+
+const insideGroupWithAllowSee = computed((): boolean => {
+  return (
+    event.value?.attributedTo?.allowSeeParticipants &&
+    props.person?.memberships !== undefined &&
+    props.person?.memberships?.total > 0
+  );
+});
 
 const actorIsOrganizer = computed((): boolean => {
   return (

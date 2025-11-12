@@ -8,6 +8,7 @@ import {
 } from "./participant";
 import { TAG_FRAGMENT } from "./tags";
 import { CONVERSATIONS_QUERY_FRAGMENT } from "./conversations";
+import { GROUP_MINIMAL_FIELDS_FRAGMENTS } from "./group";
 
 const FULL_EVENT_FRAGMENT = gql`
   fragment FullEvent on Event {
@@ -49,7 +50,7 @@ const FULL_EVENT_FRAGMENT = gql`
       ...ActorFragment
     }
     attributedTo {
-      ...ActorFragment
+      ...GroupMinimalFields
     }
     participantStats {
       going
@@ -73,6 +74,7 @@ const FULL_EVENT_FRAGMENT = gql`
   ${TAG_FRAGMENT}
   ${EVENT_OPTIONS_FRAGMENT}
   ${ACTOR_FRAGMENT}
+  ${GROUP_MINIMAL_FIELDS_FRAGMENTS}
 `;
 
 export const FETCH_EVENT = gql`
@@ -146,7 +148,7 @@ export const FETCH_EVENTS = gql`
           ...ActorFragment
         }
         attributedTo {
-          ...ActorFragment
+          ...GroupMinimalFields
         }
         category
         tags {
@@ -162,6 +164,7 @@ export const FETCH_EVENTS = gql`
   ${TAG_FRAGMENT}
   ${EVENT_OPTIONS_FRAGMENT}
   ${ACTOR_FRAGMENT}
+  ${GROUP_MINIMAL_FIELDS_FRAGMENTS}
 `;
 
 export const CREATE_EVENT = gql`
@@ -358,12 +361,13 @@ export const PARTICIPANTS = gql`
         ...ActorFragment
       }
       attributedTo {
-        ...ActorFragment
+        ...GroupMinimalFields
       }
     }
   }
   ${PARTICIPANTS_QUERY_FRAGMENT}
   ${ACTOR_FRAGMENT}
+  ${GROUP_MINIMAL_FIELDS_FRAGMENTS}
 `;
 
 export const EVENT_PERSON_PARTICIPATION = gql`
@@ -445,7 +449,7 @@ export const FETCH_GROUP_EVENTS = gql`
             notApproved
           }
           attributedTo {
-            ...ActorFragment
+            ...GroupMinimalFields
           }
           organizerActor {
             ...ActorFragment
@@ -466,6 +470,7 @@ export const FETCH_GROUP_EVENTS = gql`
   ${EVENT_OPTIONS_FRAGMENT}
   ${ACTOR_FRAGMENT}
   ${ADDRESS_FRAGMENT}
+  ${GROUP_MINIMAL_FIELDS_FRAGMENTS}
 `;
 
 export const EXPORT_EVENT_PARTICIPATIONS = gql`

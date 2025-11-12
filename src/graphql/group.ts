@@ -53,6 +53,27 @@ export const LIST_GROUPS = gql`
   ${ACTOR_FRAGMENT}
 `;
 
+export const GROUP_MINIMAL_FIELDS_FRAGMENTS = gql`
+  fragment GroupMinimalFields on Group {
+    ...ActorFragment
+    suspended
+    visibility
+    openness
+    manuallyApprovesFollowers
+    allowSeeParticipants
+    members {
+      elements {
+        id
+        role
+        actor {
+          id
+        }
+      }
+    }
+  }
+  ${ACTOR_FRAGMENT}
+`;
+
 export const GROUP_VERY_BASIC_FIELDS_FRAGMENTS = gql`
   fragment GroupVeryBasicFields on Group {
     ...ActorFragment

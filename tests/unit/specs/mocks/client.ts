@@ -13,6 +13,7 @@ let mockClient: MockApolloClient | null;
 export let requestHandlers: Record<string, RequestHandler>;
 
 export function getMockClient(queries: Array<any>): any {
+  cache.reset();
   mockClient = createMockClient({
     cache,
     resolvers: buildCurrentUserResolver(cache),

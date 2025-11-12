@@ -82,7 +82,7 @@
       detailed
       detail-key="id"
       v-model:checked-rows="checkedRows"
-      checkable
+      :checkable="canChange"
       :is-row-checkable="
         (row: IParticipant) => row.role !== ParticipantRole.CREATOR
       "
@@ -221,7 +221,7 @@
         </EmptyContent>
       </template>
     </o-table>
-    <div class="flex flex-wrap gap-2">
+    <div class="flex flex-wrap gap-2" v-if="canChange">
       <o-button
         @click="acceptParticipants(checkedRows)"
         variant="success"
@@ -283,6 +283,7 @@ import EmptyContent from "@/components/Utils/EmptyContent.vue";
 import { Notifier } from "@/plugins/notifier";
 import Tag from "@/components/TagElement.vue";
 import { useHead } from "@/utils/head";
+import { IMember } from "@/types/actor/member.model";
 
 const PARTICIPANTS_PER_PAGE = 10;
 const MESSAGE_ELLIPSIS_LENGTH = 130;
@@ -318,6 +319,14 @@ const checkedRows = ref<IParticipant[]>([]);
 
 const queueTable = ref();
 
+const is_enabled = computed((): boolean => {
+  return (
+    currentActor.value?.id !== undefined &&
+    page.value !== undefined &&
+    role.value !== undefined
+  );
+});
+
 const {
   result: participantsResult,
   loading: participantsLoading,
@@ -333,10 +342,7 @@ const {
     roles: role.value === "EVERYTHING" ? undefined : role.value,
   }),
   () => ({
-    enabled:
-      currentActor.value?.id !== undefined &&
-      page.value !== undefined &&
-      role.value !== undefined,
+    enabled: is_enabled.value,
   })
 );
 
@@ -353,6 +359,29 @@ const onPageChange = (p: number): void => {
 };
 
 const event = computed(() => participantsResult.value?.event);
+
+const getGroupMember = computed<IMember | undefined>(
+  (): IMember | undefined => {
+    const group_members: IMember[] | undefined =
+      event.value?.attributedTo?.members.elements.filter(
+        (member: IMember) =>
+          member.actor.id?.toString() === currentActor.value?.id?.toString()
+      );
+    if (group_members?.length > 0) {
+      return group_members[0];
+    } else {
+      return undefined;
+    }
+  }
+);
+
+const canChange = computed(() => {
+  if (event.value?.attributedTo?.allowSeeParticipants) {
+    return getGroupMember.value?.role !== "MEMBER";
+  } else {
+    return true;
+  }
+});
 
 // const participantStats = computed((): IEventParticipantStats | null => {
 //   if (!event.value) return null;

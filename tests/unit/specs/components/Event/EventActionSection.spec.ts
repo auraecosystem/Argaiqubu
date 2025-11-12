@@ -175,27 +175,24 @@ describe("EventActionSection", () => {
     expect(wrapper.find(".participations-link").text()).toBe(
       "No one is participating"
     );
-    expect(wrapper.findAll("o-dropdown > o-dropdown-item").length).toBe(7);
+    expect(wrapper.findAll("o-dropdown > o-dropdown-item").length).toBe(6);
     expect(
       wrapper.find("o-dropdown > o-dropdown-item:nth-of-type(1)").text()
-    ).toBe("Participations");
-    expect(
-      wrapper.find("o-dropdown > o-dropdown-item:nth-of-type(2)").text()
     ).toBe("Announcements");
     expect(
-      wrapper.find("o-dropdown > o-dropdown-item:nth-of-type(3)").text()
+      wrapper.find("o-dropdown > o-dropdown-item:nth-of-type(2)").text()
     ).toBe("Edit");
     expect(
-      wrapper.find("o-dropdown > o-dropdown-item:nth-of-type(4)").text()
+      wrapper.find("o-dropdown > o-dropdown-item:nth-of-type(3)").text()
     ).toBe("Duplicate");
     expect(
-      wrapper.find("o-dropdown > o-dropdown-item:nth-of-type(5)").text()
+      wrapper.find("o-dropdown > o-dropdown-item:nth-of-type(4)").text()
     ).toBe("Delete");
     expect(
-      wrapper.find("o-dropdown > o-dropdown-item:nth-of-type(6)").text()
+      wrapper.find("o-dropdown > o-dropdown-item:nth-of-type(5)").text()
     ).toBe("Share this event");
     expect(
-      wrapper.find("o-dropdown > o-dropdown-item:nth-of-type(7)").text()
+      wrapper.find("o-dropdown > o-dropdown-item:nth-of-type(6)").text()
     ).toBe("Add to my calendar");
     expect(
       wrapper
@@ -207,6 +204,56 @@ describe("EventActionSection", () => {
     ).toBe(
       "The event organiser has chosen to validate manually participations. Do you want to add a little note to explain why you want to participate to this event?"
     );
+    expect(wrapper.html()).toMatchSnapshot();
+  });
+
+  it("event action section with event's group without permission for user/member", async () => {
+    const wrapper = generateWrapper(
+      {
+        attributedTo: {
+          id: 123,
+          uuid: "987654314231132",
+          allowSeeParticipants: false,
+        },
+        options: {
+          hideNumberOfParticipants: true,
+        },
+      },
+      undefined,
+      [],
+      {
+        memberships: {
+          total: 1,
+          elements: [{ role: "MEMBER" }],
+        },
+      }
+    );
+    await wrapper.vm.$nextTick();
+    expect(wrapper.html()).toMatchSnapshot();
+  });
+
+  it("event action section with event's group with permission for user/member", async () => {
+    const wrapper = generateWrapper(
+      {
+        attributedTo: {
+          id: 123,
+          uuid: "987654314231132",
+          allowSeeParticipants: true,
+        },
+        options: {
+          hideNumberOfParticipants: true,
+        },
+      },
+      undefined,
+      [],
+      {
+        memberships: {
+          total: 1,
+          elements: [{ role: "MEMBER" }],
+        },
+      }
+    );
+    await wrapper.vm.$nextTick();
     expect(wrapper.html()).toMatchSnapshot();
   });
 });
