@@ -110,6 +110,10 @@ exports[`CreateView > Show simple 1`] = `
     <fieldset>
       <legend class="mt-2"><span class="field-label !mb-0">Followers</span><span>Followers will receive new public events and posts.</span></legend>
       <div data-oruga="checkbox" class="o-checkbox"><input id="v-0-19" type="checkbox" data-oruga-input="checkbox" class="o-checkbox__input" true-value="true" false-value="false" autocomplete="off" aria-checked="false" aria-labelledby="v-0-20"><label id="v-0-20" for="v-0-19" class="o-checkbox__label">Manually approve new followers</label></div>
+    </fieldset>
+    <fieldset>
+      <legend class="mt-2"><span class="field-label !mb-0">Permission</span></legend>
+      <div data-oruga="checkbox" class="o-checkbox o-checkbox--checked"><input id="v-0-21" type="checkbox" data-oruga-input="checkbox" class="o-checkbox__input" true-value="true" false-value="false" autocomplete="off" aria-checked="true" aria-labelledby="v-0-22"><label id="v-0-22" for="v-0-21" class="o-checkbox__label">Members can see events' participants</label></div>
     </fieldset><button data-oruga="button" type="submit" role="button" tabindex="0" class="o-button o-button--primary mt-3"><span class="o-button__wrapper"><!----><span class="o-button__label">Create my group</span>
       <!----></span>
     </button>

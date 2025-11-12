@@ -2,7 +2,7 @@
 
 exports[`GroupSettings > Show simple 1`] = `
 "<div>
-  <!--v-if-->
+  <breadcrumbs-nav links="[object Object],[object Object],[object Object]"></breadcrumbs-nav>
   <transition-stub name="fade" appear="false" persisted="false" css="true">
     <!---->
   </transition-stub>

@@ -24,8 +24,48 @@ beforeEach(async () => {
   // await router.isReady();
 });
 
+const mock_group = {
+  data: {
+    group: {
+      __typename: "Group",
+      avatar: null,
+      banner: null,
+      domain: null,
+      id: "123",
+      manuallyApprovesFollowers: true,
+      allowSeeParticipants: false,
+      members: {
+        __typename: "PaginatedMemberList",
+        total: 1,
+      },
+      name: "ssss",
+      openness: "MODERATED",
+      organizedEvents: {
+        __typename: "PaginatedEventList",
+        elements: [],
+        total: 0,
+      },
+      physicalAddress: null,
+      posts: {
+        __typename: "PaginatedPostList",
+        elements: [],
+        total: 0,
+      },
+      preferredUsername: "example",
+      summary: null,
+      suspended: false,
+      type: "GROUP",
+      url: "https://mobilizon.test/@example",
+      visibility: "PUBLIC",
+    },
+  },
+};
+
 const generateWrapper = () => {
-  const global_data = getMockClient([FETCH_GROUP_PUBLIC, DELETE_GROUP]);
+  const global_data = getMockClient([
+    [FETCH_GROUP_PUBLIC, mock_group],
+    DELETE_GROUP,
+  ]);
   global_data.provide.dateFnsLocale = enUS;
   global_data.plugins = [router];
   return mount(GroupSettings, {
