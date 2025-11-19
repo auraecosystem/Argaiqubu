@@ -7,7 +7,7 @@
     <section class="flex">
       <div class="w-full">
         <slot></slot>
-        <o-field :label="inputLabel" label-for="url-text">
+        <o-field addons :label="inputLabel" label-for="url-text">
           <o-input id="url-text" ref="URLInput" :modelValue="url" expanded />
           <p class="control">
             <o-tooltip
@@ -159,10 +159,10 @@ const mastodonShare = computed((): string | undefined =>
   mastodonShareUrl(props.url, props.text)
 );
 
-const copyURL = (): void => {
-  URLInput.value?.$refs.inputRef.select();
-  document.execCommand("copy");
+const copyURL = async () => {
+  await navigator.clipboard.writeText(props.url);
   showCopiedTooltip.value = true;
+
   setTimeout(() => {
     showCopiedTooltip.value = false;
   }, 2000);
