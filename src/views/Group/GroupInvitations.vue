@@ -30,14 +30,13 @@
     <section class="container mx-auto section">
       <h1>{{ t("Invitation links") }}</h1>
       <o-field groupedClass="flex-wrap" grouped>
-        <o-input :placeholder="t('Label')" v-model="createInvitationLabel" />
         <o-button
           variant="primary"
           :loading="createGroupInvitationLoading"
           @click="
             createGroupInvitation({
               groupId: group.id,
-              label: createInvitationLabel,
+              label: '',
             })
           "
           >{{ t("New invitation") }}</o-button
@@ -59,95 +58,104 @@
             )
           }}</o-notification>
         </div>
-        <o-table v-else :data="groupInvitationsResult.listInvitations">
-          <o-table-column
-            field="label"
-            :label="t('Label')"
-            sortable
-            v-slot="props"
+        <div v-else>
+          <o-modal
+            :close-button-aria-label="t('Close')"
+            v-model:active="isShareModalActive"
           >
-            <o-input
-              v-if="updateInvitationToken == props.row.token"
-              :placeholder="t('Label')"
-              v-model="updateInvitationLabel"
-            />
-            <span v-else>{{ props.row.label }}</span>
-          </o-table-column>
-          <o-table-column
-            field="token"
-            :label="t('URL')"
-            sortable
-            v-slot="props"
-          >
-            <o-button
-              v-if="props.row.token"
-              tag="router-link"
-              variant="primary"
-              :to="{
-                name: RouteName.GROUP_INVITATION_ACCEPT,
-                params: {
-                  preferredUsername: group.preferredUsername,
-                  token: props.row.token,
-                },
-              }"
-              >{{ t("Invite link") }}</o-button
+            <ShareModal
+              :title="t('Share this group invitation link')"
+              :text="t('Join my group')"
+              :url="selectedURL"
+              :input-label="t('Invitation URL')"
+            ></ShareModal>
+          </o-modal>
+
+          <o-table :data="groupInvitationsResult.listInvitations">
+            <o-table-column
+              field="label"
+              :label="t('Label')"
+              sortable
+              v-slot="props"
             >
-          </o-table-column>
-          <o-table-column
-            field="creationDate"
-            :label="t('Creation date')"
-            sortable
-          />
-          <o-table-column
-            field="token"
-            :label="t('Actions')"
-            sortable
-            v-slot="props"
-          >
-            <div class="flex gap-1 flex-wrap m-1">
+              <o-input
+                v-if="updateInvitationToken == props.row.token"
+                :placeholder="t('Label')"
+                v-model="updateInvitationLabel"
+              />
+              <span v-else>{{ props.row.label }}</span>
+            </o-table-column>
+            <o-table-column
+              field="token"
+              :label="t('URL')"
+              sortable
+              v-slot="props"
+            >
               <o-button
-                class="grow"
-                variant="primary"
-                v-if="updateInvitationToken != props.row.token"
+                v-if="props.row.token"
+                icon-left="share"
                 @click="
-                  actionEditGroupInvitation(props.row.token, props.row.label)
+                  triggerShare(
+                    invitationUrl(group, props.row.token),
+                    props.row.label
+                  )
                 "
-                :loading="updateGroupInvitationLoading"
-                >{{ t("Edit invitation") }}</o-button
+                variant="primary"
+                >{{ t("Share link") }}</o-button
               >
-              <o-button
-                class="grow"
-                variant="success"
-                v-if="updateInvitationToken == props.row.token"
-                @click="actionUpdateGroupInvitation()"
-                :loading="updateGroupInvitationLoading"
-                >{{ t("Update invitation") }}</o-button
-              >
-              <o-button
-                class="grow"
-                variant="warning"
-                v-if="updateInvitationToken == props.row.token"
-                @click="actionCancelEditGroupInvitation()"
-                :loading="updateGroupInvitationLoading"
-                >{{ t("Cancel update") }}</o-button
-              >
-              <o-button
-                class="grow"
-                variant="danger"
-                v-if="updateInvitationToken != props.row.token"
-                @click="actionDeleteGroupInvitation(props.row.token)"
-                :loading="deleteGroupInvitationLoading"
-                >{{ t("Delete invitation") }}</o-button
-              >
-            </div>
-          </o-table-column>
-        </o-table>
+            </o-table-column>
+            <o-table-column
+              field="token"
+              :label="t('Actions')"
+              sortable
+              v-slot="props"
+            >
+              <div class="flex gap-1 flex-wrap m-1">
+                <o-button
+                  variant="primary"
+                  icon-left="pencil"
+                  v-if="updateInvitationToken != props.row.token"
+                  @click="
+                    actionEditGroupInvitation(props.row.token, props.row.label)
+                  "
+                  :loading="updateGroupInvitationLoading"
+                  >{{ t("Edit label") }}</o-button
+                >
+                <o-button
+                  variant="success"
+                  icon-left="check"
+                  v-if="updateInvitationToken == props.row.token"
+                  @click="actionUpdateGroupInvitation()"
+                  :loading="updateGroupInvitationLoading"
+                  >{{ t("Update label") }}</o-button
+                >
+                <o-button
+                  variant="warning"
+                  icon-left="close"
+                  v-if="updateInvitationToken == props.row.token"
+                  @click="actionCancelEditGroupInvitation()"
+                  :loading="updateGroupInvitationLoading"
+                  >{{ t("Cancel update") }}</o-button
+                >
+                <o-button
+                  variant="danger"
+                  icon-left="delete"
+                  v-if="updateInvitationToken != props.row.token"
+                  @click="actionDeleteGroupInvitation(props.row.token)"
+                  :loading="deleteGroupInvitationLoading"
+                  >{{ t("Delete invitation") }}</o-button
+                >
+              </div>
+            </o-table-column>
+          </o-table>
+        </div>
       </div>
     </section>
   </div>
 </template>
 
 <script lang="ts" setup>
+import { useRouter } from "vue-router";
 import RouteName from "@/router/name";
 import {
   GROUP_INVITATIONS_LIST,
@@ -163,6 +171,7 @@ import { computed, ref, watch } from "vue";
 import { useGroup } from "@/composition/apollo/group";
 import { IInvitation } from "@/types/actor/invitation.model";
 import { useCurrentActorClient } from "@/composition/apollo/actor";
+import ShareModal from "@/components/Share/ShareModal.vue";
 
 const { t } = useI18n({ useScope: "global" });
 
@@ -206,8 +215,6 @@ watch(currentActor, () => {
 // Create invitation
 // -------------------------------------------------------------
 
-const createInvitationLabel = ref<string>("");
-
 const {
   mutate: createGroupInvitation,
   onDone: onCreateGroupInvitationDone,
@@ -218,7 +225,6 @@ const {
 onCreateGroupInvitationDone(() => {
   // TODO : pas de refetch, mise à jour du cache
   groupInvitationsRefetch();
-  createInvitationLabel.value = "";
 });
 
 onCreateGroupInvitationError((error) => {
@@ -292,5 +298,45 @@ const actionDeleteGroupInvitation = (token: string) => {
     groupId: group.value?.id,
     token: token,
   });
+};
+
+// -------------------------------------------------------------
+// Share invitation
+// -------------------------------------------------------------
+
+const router = useRouter();
+
+function invitationUrl(group: IGroup, token: string) {
+  return (
+    window.location.origin +
+    router.resolve({
+      name: RouteName.GROUP_INVITATION_ACCEPT,
+      params: {
+        preferredUsername: group.preferredUsername,
+        token,
+      },
+    }).href
+  );
+}
+
+const isShareModalActive = ref(false);
+const selectedLabel = ref("");
+const selectedURL = ref("");
+
+const triggerShare = (url: string, label: string): void => {
+  if (!navigator.share) {
+    selectedLabel.value = label;
+    selectedURL.value = url;
+    isShareModalActive.value = true;
+    return;
+  }
+
+  navigator
+    .share({
+      title: label,
+      url: url,
+    })
+    .then(() => console.debug("Successful share"))
+    .catch((error: any) => console.debug("Error sharing", error));
 };
 </script>
