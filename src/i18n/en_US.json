@@ -1544,7 +1544,7 @@
   "You replied to a comment on the event {event}.": "You replied to a comment on the event {event}.",
   "You replied to the discussion {discussion}.": "You replied to the discussion {discussion}.",
   "You requested to join the group.": "You requested to join the group.",
-  "You successfully joined the group {groupName} with your profile {preferredUsername} as {role}.": "You successfully joined the group {groupName} with your profile {preferredUsername} as {role}.",
+  "You successfully joined the group {groupName} with your profile {preferredUsername}.": "You successfully joined the group {groupName} with your profile {preferredUsername}.",
   "You updated the event {event}.": "You updated the event {event}.",
   "You updated the group {group}.": "You updated the group {group}.",
   "You updated the member {member}.": "You updated the member {member}.",

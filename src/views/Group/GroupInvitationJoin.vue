@@ -59,7 +59,7 @@
       <div v-else>
         <o-notification type="success" variant="success"
           ><i18n-t
-            keypath="You successfully joined the group {groupName} with your profile {preferredUsername} as {role}."
+            keypath="You successfully joined the group {groupName} with your profile {preferredUsername}."
           >
             <template #groupName>
               <span
@@ -70,12 +70,6 @@
             <template #preferredUsername>
               <span
                 >"<b>{{ currentActor.preferredUsername }}</b
-                >"</span
-              >
-            </template>
-            <template #role>
-              <span
-                >"<b>{{ memberRole }}</b
                 >"</span
               >
             </template>

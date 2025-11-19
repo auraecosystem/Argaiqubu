@@ -1541,7 +1541,7 @@
   "You replied to a comment on the event {event}.": "Vous avez r\u00e9pondu \u00e0 un commentaire sur l'\u00e9v\u00e9nement {event}.",
   "You replied to the discussion {discussion}.": "Vous avez r\u00e9pondu \u00e0 la discussion {discussion}.",
   "You requested to join the group.": "Vous avez demand\u00e9 \u00e0 rejoindre le groupe.",
-  "You successfully joined the group {groupName} with your profile {preferredUsername} as {role}.": "Vous avez rejoint avec succès le groupe {groupName} avec votre profil {preferredUsername} en tant que {role}.",
+  "You successfully joined the group {groupName} with your profile {preferredUsername}.": "Vous avez rejoint avec succès le groupe {groupName} avec votre profil {preferredUsername}.",
   "You updated the event {event}.": "Vous avez mis \u00e0 jour l'\u00e9v\u00e9nement {event}.",
   "You updated the group {group}.": "Vous avez mis \u00e0 jour le groupe {group}.",
   "You updated the member {member}.": "Vous avez mis \u00e0 jour le ou la membre {member}.",
