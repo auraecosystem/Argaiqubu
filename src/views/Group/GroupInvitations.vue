@@ -28,7 +28,30 @@
       ]"
     />
     <section class="container mx-auto section">
-      <h1>{{ t("Invitation links") }}</h1>
+      <h1>{{ t("Invitations") }}</h1>
+
+      <h2>{{ t("Member invitation") }}</h2>
+      <form @submit.prevent="inviteMember">
+        <o-field
+          :label="t('Invite a new member')"
+          label-for="new-member-field"
+          horizontal
+        >
+          <o-field grouped expanded size="large">
+            <o-input
+              id="new-member-field"
+              expanded
+              v-model="newMemberUsername"
+              :placeholder="t(`Ex: someone{'@'}mobilizon.org`)"
+            />
+            <o-button variant="primary" type="submit">{{
+              t("Invite member")
+            }}</o-button>
+          </o-field>
+        </o-field>
+      </form>
+
+      <h2>{{ t("Group invitation links") }}</h2>
       <o-field groupedClass="flex-wrap" grouped>
         <o-button
           variant="primary"
@@ -172,6 +195,8 @@ import { useGroup } from "@/composition/apollo/group";
 import { IInvitation } from "@/types/actor/invitation.model";
 import { useCurrentActorClient } from "@/composition/apollo/actor";
 import ShareModal from "@/components/Share/ShareModal.vue";
+import { IMember } from "@/types/actor/member.model";
+import { GROUP_MEMBERS, INVITE_MEMBER } from "@/graphql/member";
 
 const { t } = useI18n({ useScope: "global" });
 
@@ -189,7 +214,42 @@ const {
 } = useGroup(preferredUsername);
 
 // -------------------------------------------------------------
-// List invitations
+// Member invitation
+// -------------------------------------------------------------
+
+const newMemberUsername = ref("");
+
+const {
+  mutate: inviteMemberMutation,
+  onDone: onInviteMemberDone,
+  onError: onInviteMemberError,
+} = useMutation<{ inviteMember: IMember }>(INVITE_MEMBER, () => ({}));
+
+onInviteMemberError((error) => {
+  console.error(error);
+  if (error.graphQLErrors && error.graphQLErrors.length > 0) {
+    alert(error.graphQLErrors[0].message);
+  }
+});
+
+onInviteMemberDone(() => {
+  alert(
+    t("{username} was invited to {group}", {
+      username: newMemberUsername.value,
+      group: displayName(group.value),
+    })
+  );
+});
+
+const inviteMember = async (): Promise<void> => {
+  inviteMemberMutation({
+    groupId: group.value?.id,
+    targetActorUsername: newMemberUsername.value,
+  });
+};
+
+// -------------------------------------------------------------
+// List invitation links
 // -------------------------------------------------------------
 
 const {
@@ -212,7 +272,7 @@ watch(currentActor, () => {
 });
 
 // -------------------------------------------------------------
-// Create invitation
+// Create invitation links
 // -------------------------------------------------------------
 
 const {
@@ -232,7 +292,7 @@ onCreateGroupInvitationError((error) => {
 });
 
 // -------------------------------------------------------------
-// Update invitation
+// Update invitation links
 // -------------------------------------------------------------
 
 const updateInvitationToken = ref<string>("");
@@ -274,7 +334,7 @@ const actionUpdateGroupInvitation = () => {
 };
 
 // -------------------------------------------------------------
-// Delete invitation
+// Delete invitation links
 // -------------------------------------------------------------
 
 const {
@@ -301,7 +361,7 @@ const actionDeleteGroupInvitation = (token: string) => {
 };
 
 // -------------------------------------------------------------
-// Share invitation
+// Share invitation links
 // -------------------------------------------------------------
 
 const router = useRouter();

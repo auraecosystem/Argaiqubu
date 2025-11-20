@@ -26,35 +26,6 @@
       v-if="group && isCurrentActorAGroupAdmin"
     >
       <h1>{{ t("Group Members") }} ({{ group.members.total }})</h1>
-      <form @submit.prevent="inviteMember">
-        <o-field
-          :label="t('Invite a new member')"
-          custom-class="add-relay"
-          label-for="new-member-field"
-          horizontal
-        >
-          <o-field
-            grouped
-            expanded
-            size="large"
-            :type="inviteError ? 'is-danger' : null"
-            :message="inviteError"
-          >
-            <p class="control">
-              <o-input
-                id="new-member-field"
-                v-model="newMemberUsername"
-                :placeholder="t(`Ex: someone{'@'}mobilizon.org`)"
-              />
-            </p>
-            <p class="control">
-              <o-button variant="primary" type="submit">{{
-                t("Invite member")
-              }}</o-button>
-            </p>
-          </o-field>
-        </o-field>
-      </form>
       <o-field
         class="my-2"
         :label="t('Status')"
@@ -281,8 +252,6 @@ const emit = defineEmits(["sort"]);
 
 const { currentActor } = useCurrentActorClient();
 
-const newMemberUsername = ref("");
-const inviteError = ref("");
 const page = useRouteQuery("page", 1, integerTransformer);
 const roles = useRouteQuery("roles", undefined, enumTransformer(MemberRole));
 const MEMBERS_PER_PAGE = 10;
@@ -310,49 +279,6 @@ const group = computed(() => groupMembersResult.value?.group);
 const members = computed(
   () => group.value?.members ?? { total: 0, elements: [] }
 );
-
-const {
-  mutate: inviteMemberMutation,
-  onDone: onInviteMemberDone,
-  onError: onInviteMemberError,
-} = useMutation<{ inviteMember: IMember }>(INVITE_MEMBER, () => ({
-  refetchQueries: [
-    {
-      query: GROUP_MEMBERS,
-      variables: {
-        groupName: props.preferredUsername,
-        page: page.value,
-        limit: MEMBERS_PER_PAGE,
-        roles: roles.value,
-      },
-    },
-  ],
-}));
-
-onInviteMemberError((error) => {
-  console.error(error);
-  if (error.graphQLErrors && error.graphQLErrors.length > 0) {
-    inviteError.value = error.graphQLErrors[0].message;
-  }
-});
-
-onInviteMemberDone(() => {
-  notifier?.success(
-    t("{username} was invited to {group}", {
-      username: newMemberUsername.value,
-      group: displayName(group.value),
-    })
-  );
-  newMemberUsername.value = "";
-});
-
-const inviteMember = async (): Promise<void> => {
-  inviteError.value = "";
-  inviteMemberMutation({
-    groupId: group.value?.id,
-    targetActorUsername: newMemberUsername.value,
-  });
-};
 
 const loadMoreMembers = async (): Promise<void> => {
   await fetchMoreGroupMembers({
