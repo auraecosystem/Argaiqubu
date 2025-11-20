@@ -28,7 +28,7 @@
       ]"
     />
     <section class="container mx-auto section">
-      <h1>{{ t("Invitations") }}</h1>
+      <h1>{{ t("Invitations to join the group") }}</h1>
 
       <h2>{{ t("Member invitation") }}</h2>
       <form @submit.prevent="inviteMember">
@@ -52,7 +52,7 @@
       </form>
 
       <h2>{{ t("Group invitation links") }}</h2>
-      <o-field groupedClass="flex-wrap" grouped>
+      <o-field>
         <o-button
           variant="primary"
           :loading="createGroupInvitationLoading"
@@ -74,6 +74,17 @@
         }}</o-notification>
       </div>
       <div v-else-if="groupInvitationsResult">
+        <o-modal
+          :close-button-aria-label="t('Close')"
+          v-model:active="isShareModalActive"
+        >
+          <ShareModal
+            :title="t('Share this group invitation link')"
+            :text="t('Join my group')"
+            :url="selectedURL"
+            :input-label="t('Invitation URL')"
+          ></ShareModal>
+        </o-modal>
         <div v-if="!groupInvitationsResult.listInvitations.length">
           <o-notification type="info" variant="info">{{
             t(
@@ -81,19 +92,41 @@
             )
           }}</o-notification>
         </div>
+        <div v-else-if="groupInvitationsResult.listInvitations.length == 1">
+          <o-field class="flex gap-1 flex-wrap">
+            <o-button
+              v-if="groupInvitationsResult.listInvitations[0].token"
+              icon-left="share"
+              @click="
+                triggerShare(
+                  invitationUrl(
+                    group,
+                    groupInvitationsResult.listInvitations[0].token
+                  )
+                )
+              "
+              variant="primary"
+              >{{ t("Share link") }}</o-button
+            >
+            <o-button
+              variant="danger"
+              icon-left="delete"
+              @click="
+                actionDeleteGroupInvitation(
+                  groupInvitationsResult.listInvitations[0].token
+                )
+              "
+              :loading="deleteGroupInvitationLoading"
+              >{{ t("Delete invitation") }}</o-button
+            >
+          </o-field>
+          <o-notification type="info" variant="info">{{
+            t(
+              'You can create another invitation link with the button "New invitation".'
+            )
+          }}</o-notification>
+        </div>
         <div v-else>
-          <o-modal
-            :close-button-aria-label="t('Close')"
-            v-model:active="isShareModalActive"
-          >
-            <ShareModal
-              :title="t('Share this group invitation link')"
-              :text="t('Join my group')"
-              :url="selectedURL"
-              :input-label="t('Invitation URL')"
-            ></ShareModal>
-          </o-modal>
-
           <o-table :data="groupInvitationsResult.listInvitations">
             <o-table-column
               field="label"
@@ -106,7 +139,8 @@
                 :placeholder="t('Label')"
                 v-model="updateInvitationLabel"
               />
-              <span v-else>{{ props.row.label }}</span>
+              <span v-else-if="props.row.label">{{ props.row.label }}</span>
+              <span v-else>{{ t("(No label defined)") }}</span>
             </o-table-column>
             <o-table-column
               field="token"
@@ -117,12 +151,7 @@
               <o-button
                 v-if="props.row.token"
                 icon-left="share"
-                @click="
-                  triggerShare(
-                    invitationUrl(group, props.row.token),
-                    props.row.label
-                  )
-                "
+                @click="triggerShare(invitationUrl(group, props.row.token))"
                 variant="primary"
                 >{{ t("Share link") }}</o-button
               >
@@ -226,7 +255,7 @@ const {
 } = useMutation<{ inviteMember: IMember }>(INVITE_MEMBER, () => ({}));
 
 onInviteMemberError((error) => {
-  console.error(error);
+  console.error("onInviteMemberError:", error);
   if (error.graphQLErrors && error.graphQLErrors.length > 0) {
     alert(error.graphQLErrors[0].message);
   }
@@ -261,7 +290,10 @@ const {
   GROUP_INVITATIONS_LIST,
   () => ({
     groupId: group.value?.id,
-  })
+  }),
+  {
+    enabled: computed(() => !!group.value?.id),
+  }
 );
 
 // We need to refetch when the actor is changed
@@ -380,12 +412,11 @@ function invitationUrl(group: IGroup, token: string) {
 }
 
 const isShareModalActive = ref(false);
-const selectedLabel = ref("");
 const selectedURL = ref("");
 
-const triggerShare = (url: string, label: string): void => {
+const triggerShare = (url: string): void => {
+  console.error("triggerShare", url);
   if (!navigator.share) {
-    selectedLabel.value = label;
     selectedURL.value = url;
     isShareModalActive.value = true;
     return;
@@ -393,7 +424,7 @@ const triggerShare = (url: string, label: string): void => {
 
   navigator
     .share({
-      title: label,
+      title: t("Join my group"),
       url: url,
     })
     .then(() => console.debug("Successful share"))
