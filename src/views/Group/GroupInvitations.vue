@@ -99,10 +99,7 @@
               icon-left="share"
               @click="
                 triggerShare(
-                  invitationUrl(
-                    group,
-                    groupInvitationsResult.listInvitations[0].token
-                  )
+                  invitationUrl(groupInvitationsResult.listInvitations[0].token)
                 )
               "
               variant="primary"
@@ -151,7 +148,7 @@
               <o-button
                 v-if="props.row.token"
                 icon-left="share"
-                @click="triggerShare(invitationUrl(group, props.row.token))"
+                @click="triggerShare(invitationUrl(props.row.token))"
                 variant="primary"
                 >{{ t("Share link") }}</o-button
               >
@@ -219,13 +216,14 @@ import { usernameWithDomain, displayName, IGroup } from "@/types/actor";
 import { useHead } from "@/utils/head";
 import { useI18n } from "vue-i18n";
 import { useMutation, useQuery } from "@vue/apollo-composable";
-import { computed, ref, watch } from "vue";
+import { computed, inject, ref, watch } from "vue";
 import { useGroup } from "@/composition/apollo/group";
 import { IInvitation } from "@/types/actor/invitation.model";
 import { useCurrentActorClient } from "@/composition/apollo/actor";
 import ShareModal from "@/components/Share/ShareModal.vue";
 import { IMember } from "@/types/actor/member.model";
 import { GROUP_MEMBERS, INVITE_MEMBER } from "@/graphql/member";
+import { Dialog } from "@/plugins/dialog";
 
 const { t } = useI18n({ useScope: "global" });
 
@@ -241,6 +239,19 @@ const {
   loading: groupLoading,
   error: groupError,
 } = useGroup(preferredUsername);
+
+function invitationUrl(token: string) {
+  return (
+    window.location.origin +
+    router.resolve({
+      name: RouteName.GROUP_INVITATION_ACCEPT,
+      params: {
+        preferredUsername: group.value?.preferredUsername,
+        token,
+      },
+    }).href
+  );
+}
 
 // -------------------------------------------------------------
 // Member invitation
@@ -315,7 +326,7 @@ const {
 } = useMutation(GROUP_INVITATIONS_CREATE);
 
 onCreateGroupInvitationDone(() => {
-  // TODO : pas de refetch, mise à jour du cache
+  // TODO: No refetch, but update the cache
   groupInvitationsRefetch();
 });
 
@@ -338,7 +349,7 @@ const {
 } = useMutation(GROUP_INVITATIONS_UPDATE);
 
 onUpdateGroupInvitationDone(() => {
-  // TODO : pas de refetch, mise à jour du cache
+  // TODO: No refetch, but update the cache
   groupInvitationsRefetch();
   updateInvitationToken.value = "";
   updateInvitationLabel.value = "";
@@ -377,7 +388,7 @@ const {
 } = useMutation(GROUP_INVITATIONS_DELETE);
 
 deleteGroupInvitationDone(() => {
-  // TODO : pas de refetch, mise à jour du cache
+  // TODO: No refetch, but update the cache
   groupInvitationsRefetch();
 });
 
@@ -385,10 +396,24 @@ deleteGroupInvitationError((error) => {
   alert(error.message);
 });
 
-const actionDeleteGroupInvitation = (token: string) => {
-  deleteGroupInvitation({
-    groupId: group.value?.id,
-    token: token,
+const dialog = inject<Dialog>("dialog");
+
+const actionDeleteGroupInvitation = async (token: string): Promise<void> => {
+  dialog?.confirm({
+    title: t("Delete invitation?"),
+    message:
+      t("Do you really want to delete this invitation link to this group?") +
+      "<br/>" +
+      invitationUrl(token),
+    confirmText: t("Delete invitation"),
+    cancelText: t("Cancel"),
+    variant: "danger",
+    onConfirm: async () => {
+      deleteGroupInvitation({
+        groupId: group.value?.id,
+        token: token,
+      });
+    },
   });
 };
 
@@ -397,19 +422,6 @@ const actionDeleteGroupInvitation = (token: string) => {
 // -------------------------------------------------------------
 
 const router = useRouter();
-
-function invitationUrl(group: IGroup, token: string) {
-  return (
-    window.location.origin +
-    router.resolve({
-      name: RouteName.GROUP_INVITATION_ACCEPT,
-      params: {
-        preferredUsername: group.preferredUsername,
-        token,
-      },
-    }).href
-  );
-}
 
 const isShareModalActive = ref(false);
 const selectedURL = ref("");
