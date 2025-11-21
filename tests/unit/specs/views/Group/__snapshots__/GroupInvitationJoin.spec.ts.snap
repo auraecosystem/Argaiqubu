@@ -6,7 +6,7 @@ exports[`GroupInvitationJoin > Show simple 1`] = `
     <h1>Join a group</h1>
     <div>
       <p class="my-1">Do you want to join the group <span>"<b>mygroup</b>"</span> with the profile <span>"<b>test</b>"</span> ?</p>
-      <p class="my-1">You can create a new profile or change the actual profile with the top menu.</p><button data-oruga="button" type="button" role="button" tabindex="0" class="o-button o-button--primary"><span class="o-button__wrapper"><!----><span class="o-button__label">Join group</span>
+      <p class="my-1">You can create a new profile or change the actual profile with the profile menu.</p><button data-oruga="button" type="button" role="button" tabindex="0" class="o-button o-button--primary"><span class="o-button__wrapper"><!----><span class="o-button__label">Join group</span>
         <!----></span>
       </button>
     </div>

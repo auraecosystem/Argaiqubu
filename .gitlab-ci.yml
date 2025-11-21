@@ -2,6 +2,7 @@ image: tcitworld/mobilizon-ci
 
 stages:
   - install
+  - security
   - check
   - build-js
   - test
@@ -50,6 +51,22 @@ install:
     - mix deps.get
     - mix compile
 
+security-frontend:
+  stage: security
+  script:
+    - npm audit
+  allow_failure: true
+  needs:
+    - install
+
+security-backend:
+  stage: security
+  script:
+    - mix hex.audit
+  allow_failure: true
+  needs:
+    - install
+
 lint-elixir:
   stage: check
   before_script:
@@ -78,6 +95,28 @@ lint-front:
     - npx prettier -c . || export EXITVALUE=1
     - exit $EXITVALUE
 
+deps:
+  stage: check
+  before_script:
+    - apt update
+    - apt install -y gawk
+    - rm -rf ~/.hex/cache.ets
+    - mix deps.get
+  script:
+    - ./check_deps.sh
+  allow_failure: true
+  needs:
+    - install
+
+i18n-frontend:
+  image: python:alpine
+  stage: check
+  script:
+    - python3 check_i18n.py
+  allow_failure: true
+  needs:
+    - install
+
 build-frontend:
   stage: build-js
   image: node:22
@@ -93,44 +132,6 @@ build-frontend:
       - priv/static
   needs:
     - lint-front
-
-deps:
-  stage: check
-  before_script:
-    - apt update
-    - apt install -y gawk
-    - rm -rf ~/.hex/cache.ets
-    - mix deps.get
-  script:
-    - ./check_deps.sh
-  allow_failure: true
-  needs:
-    - install
-
-security-frontend:
-  stage: check
-  script:
-    - npm audit
-  allow_failure: true
-  needs:
-    - install
-
-security-backend:
-  stage: check
-  script:
-    - mix hex.audit
-  allow_failure: true
-  needs:
-    - install
-
-i18n-frontend:
-  image: python:alpine
-  stage: check
-  script:
-    - python3 check_i18n.py
-  allow_failure: true
-  needs:
-    - install
 
 exunit:
   stage: test

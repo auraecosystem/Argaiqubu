@@ -5,7 +5,7 @@ exports[`GroupInvitations > Show simple 1`] = `
   <breadcrumbs-nav links="[object Object],[object Object],[object Object]"></breadcrumbs-nav>
   <section class="container mx-auto section">
     <h1>Invitations to join the group</h1>
-    <h2>Member invitation</h2>
+    <h2>Member invitation by username</h2>
     <form>
       <div data-oruga="field" class="o-field o-field--horizontal">
         <div class="o-field__horizontal-label"><label id="v-0-0" for="new-member-field" class="o-field__label">Invite a new member</label></div>
