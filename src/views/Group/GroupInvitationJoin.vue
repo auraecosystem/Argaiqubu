@@ -36,7 +36,7 @@
         <p class="my-1">
           {{
             t(
-              "You can create a new profile or change the actual profile with the top menu."
+              "You can create a new profile or change the actual profile with the profile menu."
             )
           }}
         </p>

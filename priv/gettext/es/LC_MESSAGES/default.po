@@ -348,12 +348,12 @@ msgctxt "terms"
 msgid "What information do we collect?"
 msgstr "¿Qué información recopilamos?"
 
-#: lib/web/email/user.ex:188
+#: lib/web/email/user.ex:194
 #, elixir-autogen, elixir-format
 msgid "Mobilizon on %{instance}: confirm your email address"
 msgstr "Mobilizon en %{instance}: confirma tu dirección de correo electrónico"
 
-#: lib/web/email/user.ex:165
+#: lib/web/email/user.ex:171
 #, elixir-autogen, elixir-format
 msgid "Mobilizon on %{instance}: email changed"
 msgstr "Mobilizon en %{instance}: correo electrónico modificado"
@@ -1596,7 +1596,7 @@ msgstr "Flujo de eventos privados de %{actor} a %{instance}"
 msgid "%{actor}'s public events feed on %{instance}"
 msgstr "Flujo público de eventos de %{actor} a %{instance}"
 
-#: lib/service/export/feed.ex:221
+#: lib/service/export/feed.ex:233
 #, elixir-autogen, elixir-format
 msgid "Feed for %{email} on %{instance}"
 msgstr "Flujo para %{email} en %{instance}"
@@ -1946,7 +1946,7 @@ msgstr[1] ""
 msgid "An administrator changed your role"
 msgstr "Un administrador cambió tu rol"
 
-#: lib/web/email/admin.ex:122
+#: lib/web/email/admin.ex:138
 #, elixir-autogen, elixir-format
 msgid "An administrator confirmed your account on %{instance}"
 msgstr "Un administrador confirmó tu cuenta en %{instance}"
@@ -1959,8 +1959,8 @@ msgstr "Un administrador confirmó tu cuenta en %{instance}"
 msgid "An administrator manually changed the email attached to your account"
 msgstr "Un administrador confirmó tu cuenta en %{instance}"
 
-#: lib/web/email/admin.ex:43
-#: lib/web/email/admin.ex:70
+#: lib/web/email/admin.ex:59
+#: lib/web/email/admin.ex:86
 #, elixir-autogen, elixir-format
 msgid "An administrator manually changed the email attached to your account on %{instance}"
 msgstr ""
@@ -1973,7 +1973,7 @@ msgstr ""
 msgid "An administrator manually confirmed your account"
 msgstr "Un administrador confirmó manualmente tu cuenta"
 
-#: lib/web/email/admin.ex:98
+#: lib/web/email/admin.ex:114
 #, elixir-autogen, elixir-format
 msgid "An administrator updated your role on %{instance}"
 msgstr "Un administrador actualizó tu rol en %{instance}"
@@ -2347,7 +2347,7 @@ msgstr "Cancelar mi participación"
 msgid "If you wish to cancel your participation, simply click on the link below."
 msgstr "Si desea cancelar su participación, haga click en el enlace abajo."
 
-#: lib/web/email/admin.ex:142
+#: lib/web/email/admin.ex:158
 #, elixir-autogen, elixir-format
 msgid "Email configuration test for %{instance}"
 msgstr "Test de configuración de correo electrónico para %{instance}"
@@ -2379,3 +2379,35 @@ msgstr ""
 "código fuente de Mobilizon. Puede encontrar más información sobre esta "
 "instancia en la página <a href=\"/about/instance\"> \"Acerca de esta "
 "instancia\" </a>."
+
+#: lib/web/templates/email/user_pending.html.heex:62
+#, elixir-autogen, elixir-format
+msgid "Login to view the list of pending users"
+msgstr ""
+
+#: lib/web/templates/email/user_pending.text.eex:3
+#, elixir-autogen, elixir-format
+msgid "Login to view the list of pending users:"
+msgstr ""
+
+#: lib/web/templates/email/user_pending.html.heex:47
+#: lib/web/templates/email/user_pending.text.eex:1
+#, elixir-autogen, elixir-format
+msgid "New pending user from %{user} on %{instance}"
+msgstr ""
+
+#: lib/web/templates/email/user_pending.html.heex:18
+#, elixir-autogen, elixir-format, fuzzy
+msgid "New pending user on <b>%{instance}</b>"
+msgstr "Nuevo informe sobre <b>%{instance} </b>"
+
+#: lib/web/email/admin.ex:38
+#, elixir-autogen, elixir-format
+msgid "New pending user on Mobilizon instance %{instance}"
+msgstr ""
+
+#: lib/web/templates/email/admin/_role.html.heex:9
+#: lib/web/templates/email/admin/_role.text.eex:1
+#, elixir-autogen, elixir-format
+msgid "Pending"
+msgstr ""

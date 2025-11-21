@@ -25,7 +25,7 @@ defmodule Mobilizon.GraphQL.Resolvers.Invitation do
       {:ok, invitation}
     else
       {:error, _} ->
-        {:error, dgettext("errors", "could not create invitation")}
+        {:error, dgettext("errors", "Impossible to create the invitation")}
 
       error ->
         error

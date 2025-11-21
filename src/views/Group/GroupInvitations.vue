@@ -30,7 +30,7 @@
     <section class="container mx-auto section">
       <h1>{{ t("Invitations to join the group") }}</h1>
 
-      <h2>{{ t("Member invitation") }}</h2>
+      <h2>{{ t("Member invitation by username") }}</h2>
       <form @submit.prevent="inviteMember">
         <o-field
           :label="t('Invite a new member')"

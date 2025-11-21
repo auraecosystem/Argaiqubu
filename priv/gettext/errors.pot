@@ -160,12 +160,12 @@ msgstr ""
 #: lib/graphql/resolvers/feed_token.ex:33
 #: lib/graphql/resolvers/participant.ex:34
 #: lib/graphql/resolvers/participant.ex:217
-#: lib/graphql/resolvers/person.ex:247
-#: lib/graphql/resolvers/person.ex:326
-#: lib/graphql/resolvers/person.ex:362
-#: lib/graphql/resolvers/person.ex:369
-#: lib/graphql/resolvers/person.ex:398
-#: lib/graphql/resolvers/person.ex:413
+#: lib/graphql/resolvers/person.ex:260
+#: lib/graphql/resolvers/person.ex:339
+#: lib/graphql/resolvers/person.ex:375
+#: lib/graphql/resolvers/person.ex:382
+#: lib/graphql/resolvers/person.ex:411
+#: lib/graphql/resolvers/person.ex:426
 #, elixir-autogen, elixir-format
 msgid "Profile is not owned by authenticated user"
 msgstr ""
@@ -348,12 +348,12 @@ msgstr ""
 msgid "Anonymous participation is not enabled"
 msgstr ""
 
-#: lib/graphql/resolvers/person.ex:221
+#: lib/graphql/resolvers/person.ex:234
 #, elixir-autogen, elixir-format
 msgid "Cannot remove the last administrator of a group"
 msgstr ""
 
-#: lib/graphql/resolvers/person.ex:218
+#: lib/graphql/resolvers/person.ex:231
 #, elixir-autogen, elixir-format
 msgid "Cannot remove the last identity of a user"
 msgstr ""
@@ -487,7 +487,7 @@ msgid "Profile is not member of group"
 msgstr ""
 
 #: lib/graphql/resolvers/actor.ex:67
-#: lib/graphql/resolvers/person.ex:244
+#: lib/graphql/resolvers/person.ex:257
 #, elixir-autogen, elixir-format
 msgid "Profile not found"
 msgstr ""
@@ -809,6 +809,7 @@ msgid "File doesn't have an allowed MIME type."
 msgstr ""
 
 #: lib/graphql/resolvers/group.ex:244
+#: lib/graphql/resolvers/invitation.ex:16
 #, elixir-autogen, elixir-format
 msgid "Profile is not administrator for the group"
 msgstr ""
@@ -838,7 +839,7 @@ msgstr ""
 msgid "You don't have the right to remove this member."
 msgstr ""
 
-#: lib/mobilizon/actors/actor.ex:385
+#: lib/mobilizon/actors/actor.ex:391
 #, elixir-autogen, elixir-format
 msgid "This username is already taken."
 msgstr ""
@@ -861,7 +862,7 @@ msgstr ""
 #: lib/graphql/resolvers/group.ex:181
 #: lib/graphql/resolvers/group.ex:223
 #: lib/graphql/resolvers/person.ex:159
-#: lib/graphql/resolvers/person.ex:193
+#: lib/graphql/resolvers/person.ex:206
 #, elixir-autogen, elixir-format
 msgid "The provided picture is too heavy"
 msgstr ""
@@ -1089,7 +1090,7 @@ msgstr ""
 msgid "Unable to find an instance to follow at this address"
 msgstr ""
 
-#: lib/mobilizon/actors/actor.ex:404
+#: lib/mobilizon/actors/actor.ex:410
 #, elixir-autogen, elixir-format
 msgid "Username must only contain alphanumeric lowercased characters and underscores."
 msgstr ""
@@ -1449,4 +1450,9 @@ msgstr ""
 #: lib/graphql/resolvers/user.ex:638
 #, elixir-autogen, elixir-format
 msgid "You need to be logged-in and moderator to unban an account"
+msgstr ""
+
+#: lib/graphql/resolvers/invitation.ex:28
+#, elixir-autogen, elixir-format
+msgid "Impossible to create the invitation"
 msgstr ""

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-10-01 15:25+0200\n"
+"PO-Revision-Date: 2025-11-21 17:14+0100\n"
 "Last-Translator: Axel <lordilexa@hotmail.com>\n"
 "Language-Team: French <https://weblate.framasoft.org/projects/mobilizon/backend-errors/fr/>\n"
 "Language: fr\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Poedit 3.7\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #: lib/mobilizon/discussions/discussion.ex:68
 msgid "can't be blank"
@@ -142,8 +142,8 @@ msgid "No user with this email was found"
 msgstr "Aucun·e utilisateur·ice avec cette adresse e-mail n'a été trouvé·e"
 
 #: lib/graphql/resolvers/feed_token.ex:33 lib/graphql/resolvers/participant.ex:34 lib/graphql/resolvers/participant.ex:217
-#: lib/graphql/resolvers/person.ex:247 lib/graphql/resolvers/person.ex:326 lib/graphql/resolvers/person.ex:362
-#: lib/graphql/resolvers/person.ex:369 lib/graphql/resolvers/person.ex:398 lib/graphql/resolvers/person.ex:413
+#: lib/graphql/resolvers/person.ex:260 lib/graphql/resolvers/person.ex:339 lib/graphql/resolvers/person.ex:375
+#: lib/graphql/resolvers/person.ex:382 lib/graphql/resolvers/person.ex:411 lib/graphql/resolvers/person.ex:426
 msgid "Profile is not owned by authenticated user"
 msgstr "Le profil n'est pas possédé par l'utilisateur connecté"
 
@@ -283,11 +283,11 @@ msgstr "Une adresse e-mail valide est requise par votre instance"
 msgid "Anonymous participation is not enabled"
 msgstr "La participation anonyme n'est pas activée"
 
-#: lib/graphql/resolvers/person.ex:221
+#: lib/graphql/resolvers/person.ex:234
 msgid "Cannot remove the last administrator of a group"
 msgstr "Impossible de supprimer le ou la dernier·ère administrateur·ice d'un groupe"
 
-#: lib/graphql/resolvers/person.ex:218
+#: lib/graphql/resolvers/person.ex:231
 msgid "Cannot remove the last identity of a user"
 msgstr "Impossible de supprimer le dernier profil d'un·e utilisateur·ice"
 
@@ -351,7 +351,7 @@ msgstr "Personne avec l'ID %{id} non trouvé"
 
 #: lib/graphql/resolvers/person.ex:57
 msgid "Person with username %{username} not found"
-msgstr "Personne avec le nom %{name} non trouvé"
+msgstr "Personne avec le nom %{username} non trouvé"
 
 #: lib/graphql/resolvers/post.ex:169 lib/graphql/resolvers/post.ex:206
 msgid "Post ID is not a valid ID"
@@ -376,7 +376,7 @@ msgstr "Ce profil est déjà membre de ce groupe"
 msgid "Profile is not member of group"
 msgstr "Le profil n'est pas un·e membre du groupe"
 
-#: lib/graphql/resolvers/actor.ex:67 lib/graphql/resolvers/person.ex:244
+#: lib/graphql/resolvers/actor.ex:67 lib/graphql/resolvers/person.ex:257
 msgid "Profile not found"
 msgstr "Profile non trouvé"
 
@@ -624,7 +624,7 @@ msgstr "Vous ne pouvez pas rejeter cette invitation avec ce profil."
 msgid "File doesn't have an allowed MIME type."
 msgstr "Le fichier n'a pas un type MIME autorisé."
 
-#: lib/graphql/resolvers/group.ex:244
+#: lib/graphql/resolvers/group.ex:244 lib/graphql/resolvers/invitation.ex:16
 msgid "Profile is not administrator for the group"
 msgstr "Le profil n'est pas administrateur·ice pour le groupe"
 
@@ -648,7 +648,7 @@ msgstr "Ce·tte membre a déjà été rejetté·e."
 msgid "You don't have the right to remove this member."
 msgstr "Vous n'avez pas les droits pour supprimer ce·tte membre."
 
-#: lib/mobilizon/actors/actor.ex:385
+#: lib/mobilizon/actors/actor.ex:391
 msgid "This username is already taken."
 msgstr "Cet identifiant est déjà pris."
 
@@ -664,7 +664,7 @@ msgstr "Le profil de l'organisateur·ice n'appartient pas à l'utilisateur·ice"
 msgid "Profile ID provided is not the anonymous profile one"
 msgstr "L'ID du profil fourni n'est pas celui du profil anonyme"
 
-#: lib/graphql/resolvers/group.ex:181 lib/graphql/resolvers/group.ex:223 lib/graphql/resolvers/person.ex:159 lib/graphql/resolvers/person.ex:193
+#: lib/graphql/resolvers/group.ex:181 lib/graphql/resolvers/group.ex:223 lib/graphql/resolvers/person.ex:159 lib/graphql/resolvers/person.ex:206
 msgid "The provided picture is too heavy"
 msgstr "L'image fournie est trop lourde"
 
@@ -782,7 +782,7 @@ msgstr "Abonnement non trouvé"
 
 #: lib/graphql/resolvers/user.ex:441
 msgid "Profile with username %{username} not found"
-msgstr "Personne avec le nom %{name} non trouvé"
+msgstr "Personne avec le nom %{username} non trouvé"
 
 #: lib/graphql/resolvers/user.ex:436
 msgid "This profile does not belong to you"
@@ -844,7 +844,7 @@ msgstr "Un profil ou un groupe avec ce nom existe déjà"
 msgid "Unable to find an instance to follow at this address"
 msgstr "Impossible de trouver une instance à suivre à cette adresse"
 
-#: lib/mobilizon/actors/actor.ex:404
+#: lib/mobilizon/actors/actor.ex:410
 msgid "Username must only contain alphanumeric lowercased characters and underscores."
 msgstr "Le nom d'utilisateur ne doit contenir que des caractères alphanumériques minuscules et des underscores."
 
@@ -1032,7 +1032,7 @@ msgstr "La participation est déjà confirmée"
 
 #: lib/graphql/resolvers/participant.ex:290
 msgid "Participation is confirmed but not approved yet by an organizer"
-msgstr "La participation est confirmée mais n'a pas encore été approuvée par un·e organisateur·ice."
+msgstr "La participation est confirmée mais n'a pas encore été approuvée par un·e organisateur·ice"
 
 #: lib/graphql/resolvers/event.ex:305 lib/graphql/resolvers/event.ex:394
 msgid "Providing external registration is not allowed"
@@ -1131,3 +1131,7 @@ msgstr "Vous n’avez pas la permission d’obtenir ce jeton"
 #: lib/graphql/resolvers/user.ex:638
 msgid "You need to be logged-in and moderator to unban an account"
 msgstr "Vous devez être connecté et modérateur pour débanir un compte"
+
+#: lib/graphql/resolvers/invitation.ex:28
+msgid "Impossible to create the invitation"
+msgstr "Impossible de créer l'invitation"

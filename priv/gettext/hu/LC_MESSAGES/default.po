@@ -349,12 +349,12 @@ msgctxt "terms"
 msgid "What information do we collect?"
 msgstr "Milyen információkat gyűjtünk?"
 
-#: lib/web/email/user.ex:188
+#: lib/web/email/user.ex:194
 #, elixir-autogen, elixir-format
 msgid "Mobilizon on %{instance}: confirm your email address"
 msgstr "Mobilizon a(z) %{instance} példányon: erősítse meg az e-mail-címét"
 
-#: lib/web/email/user.ex:165
+#: lib/web/email/user.ex:171
 #, elixir-autogen, elixir-format
 msgid "Mobilizon on %{instance}: email changed"
 msgstr "Mobilizon a(z) %{instance} példányon: e-mail-cím megváltoztatva"
@@ -1561,7 +1561,7 @@ msgstr "%{actor} privát hírfolyama a(z) %{instance} példányon"
 msgid "%{actor}'s public events feed on %{instance}"
 msgstr "%{actor} nyilvános hírfolyama a(z) %{instance} példányon"
 
-#: lib/service/export/feed.ex:221
+#: lib/service/export/feed.ex:233
 #, elixir-autogen, elixir-format
 msgid "Feed for %{email} on %{instance}"
 msgstr "A(z) %{email} hírfolyama a(z) %{instance} példányon"
@@ -1913,7 +1913,7 @@ msgstr[1] ""
 msgid "An administrator changed your role"
 msgstr "Egy rendszergazda módosította a szerepét"
 
-#: lib/web/email/admin.ex:122
+#: lib/web/email/admin.ex:138
 #, elixir-autogen, elixir-format
 msgid "An administrator confirmed your account on %{instance}"
 msgstr "Egy rendszergazda megerősítette a(z) %{instance} példányon lévő fiókját"
@@ -1926,8 +1926,8 @@ msgstr "Egy rendszergazda megerősítette a(z) %{instance} példányon lévő fi
 msgid "An administrator manually changed the email attached to your account"
 msgstr "Egy rendszergazda kézileg módosította a fiókjához tartozó e-mail-címet"
 
-#: lib/web/email/admin.ex:43
-#: lib/web/email/admin.ex:70
+#: lib/web/email/admin.ex:59
+#: lib/web/email/admin.ex:86
 #, elixir-autogen, elixir-format
 msgid "An administrator manually changed the email attached to your account on %{instance}"
 msgstr ""
@@ -1940,7 +1940,7 @@ msgstr ""
 msgid "An administrator manually confirmed your account"
 msgstr "Egy rendszergazda kézileg megerősítette a fiókját"
 
-#: lib/web/email/admin.ex:98
+#: lib/web/email/admin.ex:114
 #, elixir-autogen, elixir-format
 msgid "An administrator updated your role on %{instance}"
 msgstr "Egy rendszergazda módosította a szerepét a(z) %{instance} példányon"
@@ -2316,7 +2316,7 @@ msgstr ""
 "Ha le akarja mondani a részvételét, akkor egyszerűen kattintson az alábbi "
 "hivatkozásra."
 
-#: lib/web/email/admin.ex:142
+#: lib/web/email/admin.ex:158
 #, elixir-autogen, elixir-format
 msgid "Email configuration test for %{instance}"
 msgstr "E-mail-beállítási teszt a következőhöz: %{instance}"
@@ -2346,3 +2346,35 @@ msgstr ""
 "Mobilizon-példány a Mobilizon forráskódját használó független szolgáltatás. "
 "További információkat találhat erről a példányról az <a href="
 "\"/about/instance\">„A példány névjegye”</a> oldalon."
+
+#: lib/web/templates/email/user_pending.html.heex:62
+#, elixir-autogen, elixir-format
+msgid "Login to view the list of pending users"
+msgstr ""
+
+#: lib/web/templates/email/user_pending.text.eex:3
+#, elixir-autogen, elixir-format
+msgid "Login to view the list of pending users:"
+msgstr ""
+
+#: lib/web/templates/email/user_pending.html.heex:47
+#: lib/web/templates/email/user_pending.text.eex:1
+#, elixir-autogen, elixir-format
+msgid "New pending user from %{user} on %{instance}"
+msgstr ""
+
+#: lib/web/templates/email/user_pending.html.heex:18
+#, elixir-autogen, elixir-format, fuzzy
+msgid "New pending user on <b>%{instance}</b>"
+msgstr "Új jelentés ezen: <b>%{instance}</b>"
+
+#: lib/web/email/admin.ex:38
+#, elixir-autogen, elixir-format
+msgid "New pending user on Mobilizon instance %{instance}"
+msgstr ""
+
+#: lib/web/templates/email/admin/_role.html.heex:9
+#: lib/web/templates/email/admin/_role.text.eex:1
+#, elixir-autogen, elixir-format
+msgid "Pending"
+msgstr ""

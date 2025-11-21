@@ -344,12 +344,12 @@ msgctxt "terms"
 msgid "What information do we collect?"
 msgstr "Jaké informace shromažďujeme?"
 
-#: lib/web/email/user.ex:188
+#: lib/web/email/user.ex:194
 #, elixir-autogen, elixir-format
 msgid "Mobilizon on %{instance}: confirm your email address"
 msgstr "Mobilizon na %{instance}: potvrďte svou e-mailovou adresu"
 
-#: lib/web/email/user.ex:165
+#: lib/web/email/user.ex:171
 #, elixir-autogen, elixir-format
 msgid "Mobilizon on %{instance}: email changed"
 msgstr "Mobilizon na %{instance}: e-mail změněn"
@@ -1599,7 +1599,7 @@ msgstr "Kanál soukromých událostí %{actor} na %{instance}"
 msgid "%{actor}'s public events feed on %{instance}"
 msgstr "Kanál veřejných událostí %{actor} na %{instance}"
 
-#: lib/service/export/feed.ex:221
+#: lib/service/export/feed.ex:233
 #, elixir-autogen, elixir-format
 msgid "Feed for %{email} on %{instance}"
 msgstr "Kanál pro %{email} na %{instance}"
@@ -1950,7 +1950,7 @@ msgstr[2] ""
 msgid "An administrator changed your role"
 msgstr "Administrátor změnil vaši roli"
 
-#: lib/web/email/admin.ex:122
+#: lib/web/email/admin.ex:138
 #, elixir-autogen, elixir-format
 msgid "An administrator confirmed your account on %{instance}"
 msgstr "Administrátor potvrdil váš účet na %{instance}"
@@ -1963,8 +1963,8 @@ msgstr "Administrátor potvrdil váš účet na %{instance}"
 msgid "An administrator manually changed the email attached to your account"
 msgstr "Administrátor ručně změnil e-mail připojený k vašemu účtu"
 
-#: lib/web/email/admin.ex:43
-#: lib/web/email/admin.ex:70
+#: lib/web/email/admin.ex:59
+#: lib/web/email/admin.ex:86
 #, elixir-autogen, elixir-format
 msgid "An administrator manually changed the email attached to your account on %{instance}"
 msgstr ""
@@ -1976,7 +1976,7 @@ msgstr ""
 msgid "An administrator manually confirmed your account"
 msgstr "Administrátor ručně potvrdil váš účet"
 
-#: lib/web/email/admin.ex:98
+#: lib/web/email/admin.ex:114
 #, elixir-autogen, elixir-format
 msgid "An administrator updated your role on %{instance}"
 msgstr "Administrátor aktualizoval vaši roli v %{instance}"
@@ -2347,7 +2347,7 @@ msgid "If you wish to cancel your participation, simply click on the link below.
 msgstr ""
 "Pokud si přejete zrušit svou účast, stačí kliknout na níže uvedený odkaz."
 
-#: lib/web/email/admin.ex:142
+#: lib/web/email/admin.ex:158
 #, elixir-autogen, elixir-format
 msgid "Email configuration test for %{instance}"
 msgstr "Test konfigurace e-mailu pro %{instance}"
@@ -2376,3 +2376,35 @@ msgstr ""
 "instance Mobilizon nezávislou službou využívající zdrojový kód společnosti "
 "Mobilizon. Další informace o této instanci můžete najít na stránce <a href=\""
 "/about/instance\">\"O této instanci\"</a>."
+
+#: lib/web/templates/email/user_pending.html.heex:62
+#, elixir-autogen, elixir-format
+msgid "Login to view the list of pending users"
+msgstr ""
+
+#: lib/web/templates/email/user_pending.text.eex:3
+#, elixir-autogen, elixir-format
+msgid "Login to view the list of pending users:"
+msgstr ""
+
+#: lib/web/templates/email/user_pending.html.heex:47
+#: lib/web/templates/email/user_pending.text.eex:1
+#, elixir-autogen, elixir-format
+msgid "New pending user from %{user} on %{instance}"
+msgstr ""
+
+#: lib/web/templates/email/user_pending.html.heex:18
+#, elixir-autogen, elixir-format, fuzzy
+msgid "New pending user on <b>%{instance}</b>"
+msgstr "Nové hlášení o <b>%{instance}</b>"
+
+#: lib/web/email/admin.ex:38
+#, elixir-autogen, elixir-format
+msgid "New pending user on Mobilizon instance %{instance}"
+msgstr ""
+
+#: lib/web/templates/email/admin/_role.html.heex:9
+#: lib/web/templates/email/admin/_role.text.eex:1
+#, elixir-autogen, elixir-format
+msgid "Pending"
+msgstr ""
