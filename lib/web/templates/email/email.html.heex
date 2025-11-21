@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang={"#{@locale}"}>
   <head>
-    <title><%= @subject %></title>
+    <title>{@subject}</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -77,7 +77,7 @@
           <![endif]-->
         </td>
       </tr>
-      <%= @inner_content %>
+      {@inner_content}
       <%= if Mobilizon.Config.instance_demo_mode?() do %>
         <!-- BETA WARNING -->
         <tr>
@@ -102,14 +102,14 @@
                   style="padding: 30px 30px 30px 30px; border-radius: 4px 4px 4px 4px; color: #3A384C; font-family: 'Roboto', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;"
                 >
                   <h2 style="font-size: 25px; font-weight: 400; color: #D35204; margin: 0;">
-                    <%= gettext("Warning") %>
+                    {gettext("Warning")}
                   </h2>
                   <br />
                   <p style="margin: 0; color: #3A384C">
-                    <%= gettext("This is a demonstration site to test Mobilizon.") %>
+                    {gettext("This is a demonstration site to test Mobilizon.")}
                   </p>
                   <p style="margin: 0; color: #3A384C;">
-                    <b><%= gettext("Please do not use it for real purposes.") %></b>
+                    <b>{gettext("Please do not use it for real purposes.")}</b>
                   </p>
                 </td>
               </tr>
@@ -139,7 +139,7 @@
                 style="padding: 30px 30px 30px 30px; border-radius: 4px 4px 4px 4px; color: #3A384C; font-family: 'Roboto', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;"
               >
                 <h2 style="font-size: 20px; font-weight: 400; color: #FFFFFF; margin: 0;">
-                  <%= gettext("Need help? Is something not working as expected?") %>
+                  {gettext("Need help? Is something not working as expected?")}
                 </h2>
                 <p style="margin: 0;">
                   <a
@@ -147,7 +147,7 @@
                     target="_blank"
                     style="color: #FFFFFF;"
                   >
-                    <%= gettext("Ask the community on Framacolibri") %>
+                    {gettext("Ask the community on Framacolibri")}
                   </a>
                 </p>
               </td>
@@ -179,18 +179,18 @@
                 <%= if @offer_unsupscription do %>
                   <p>
                     <a href={"#{Mobilizon.Web.Endpoint.url()}/settings/notifications"}>
-                      <%= gettext("Manage your notification settings") %>
+                      {gettext("Manage your notification settings")}
                     </a>
                   </p>
                 <% end %>
                 <p style="margin: 0;">
-                  <%= gettext("<b>%{instance}</b> is powered by Mobilizon.",
+                  {gettext("<b>%{instance}</b> is powered by Mobilizon.",
                     instance: @instance_name
                   )
-                  |> raw %>
+                  |> raw}
                   <br />
                   <a href="https://mobilizon.org">
-                    <%= gettext("Learn more about Mobilizon here!") %>
+                    {gettext("Learn more about Mobilizon here!")}
                   </a>
                 </p>
               </td>

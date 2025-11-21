@@ -1,10 +1,10 @@
 <%= case @role do %>
   <% :administrator -> %>
-    <b><%= gettext("Administrator") %></b>
+    <b>{gettext("Administrator")}</b>
   <% :moderator -> %>
-    <b><%= gettext("Moderator") %></b>
+    <b>{gettext("Moderator")}</b>
   <% :user -> %>
-    <b><%= gettext("User") %></b>
+    <b>{gettext("User")}</b>
   <% :pending -> %>
-    <b><%= gettext("Pending") %></b>
+    <b>{gettext("Pending")}</b>
 <% end %>

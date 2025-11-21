@@ -49,14 +49,14 @@
                       style="color: rgb(87,100,108); font-family: Helvetica,Arial,sans-serif; font-weight: 300; line-height: 1.5; font-size: 16px; vertical-align: baseline; margin: 0; padding: 0; border: 0;"
                       align="left"
                     >
-                      <%= render("date/event_tz_date_range.html",
+                      {render("date/event_tz_date_range.html",
                         event: @event,
                         start_date:
                           datetime_tz_convert(@event.begins_on, @event.options.timezone),
                         end_date: datetime_tz_convert(@event.ends_on, @event.options.timezone),
                         timezone: @timezone,
                         locale: @locale
-                      ) %>
+                      )}
                     </p>
                   </td>
                 </tr>
@@ -87,7 +87,7 @@
                         style="color: rgb(87,100,108); font-family: Helvetica,Arial,sans-serif; font-weight: 300; line-height: 1.5; font-size: 16px; vertical-align: baseline; margin: 0; padding: 0; border: 0;"
                         align="left"
                       >
-                        <%= render_address(@event.physical_address) %>
+                        {render_address(@event.physical_address)}
                       </p>
                     </td>
                   </tr>
@@ -118,7 +118,7 @@
                         style="color: rgb(87,100,108); font-family: Helvetica,Arial,sans-serif; font-weight: 300; line-height: 1.5; font-size: 16px; vertical-align: baseline; margin: 0; padding: 0; border: 0;"
                         align="left"
                       >
-                        <%= gettext("Online event") %>
+                        {gettext("Online event")}
                       </p>
                     </td>
                   </tr>

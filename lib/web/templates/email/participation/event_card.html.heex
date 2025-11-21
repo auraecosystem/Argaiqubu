@@ -1,15 +1,15 @@
 <%= if @event.picture do %>
   <!-- event image -->
-  <%= render("participation/card/_picture.html", event: @event) %>
+  {render("participation/card/_picture.html", event: @event)}
   <!-- event image end -->
 <% end %>
-<%= render("participation/card/_title.html", event: @event) %>
-<%= render("participation/card/_metadata.html",
+{render("participation/card/_title.html", event: @event)}
+{render("participation/card/_metadata.html",
   event: @event,
   timezone: @timezone,
   locale: @locale,
   action: @action
-) %>
+)}
 <%= case @action do %>
   <% "participation" -> %>
     <div
@@ -44,7 +44,7 @@
                         style="color: rgb(255,255,255); font-family: Helvetica,Arial,sans-serif; text-align: left; line-height: 14px; text-decoration: none; vertical-align: baseline; font-size: 20px; display: inline-block; border: 1px solid #3C376E; border-radius: 15px; white-space: nowrap; margin: 0; padding: 15px 25px; border: none;"
                         target="_blank"
                       >
-                        <%= gettext("Manage your participation") %>
+                        {gettext("Manage your participation")}
                       </a>
                     </td>
                   </tr>
@@ -88,7 +88,7 @@
                         style="color: rgb(255,255,255); font-family: Helvetica,Arial,sans-serif; text-align: left; line-height: 14px; text-decoration: none; vertical-align: baseline; font-size: 20px; display: inline-block; border: 1px solid #3C376E; border-radius: 15px; white-space: nowrap; margin: 0; padding: 15px 25px; border: none;"
                         target="_blank"
                       >
-                        <%= gettext("Participate") %>
+                        {gettext("Participate")}
                       </a>
                     </td>
                   </tr>
@@ -110,14 +110,14 @@
       style="color: rgb(46,62,72); font-family: Helvetica,Arial,sans-serif; font-weight: 700; line-height: 1.5; font-size: 16px; vertical-align: baseline; margin: 0; padding: 0 0 7.5px; border: 0;"
       align="left"
     >
-      <%= gettext("Details") %>
+      {gettext("Details")}
     </p>
     <p
       class="event-working__detail"
       style="color: rgb(87,100,108); font-family: Helvetica,Arial,sans-serif; font-weight: 300; line-height: 1.5; font-size: 16px; vertical-align: baseline; margin: 0; padding: 0; border: 0;"
       align="left"
     >
-      <%= process_description(@event.description) %>
+      {process_description(@event.description)}
     </p>
     <%= if String.length(@event.description) > 200 do %>
       <p
@@ -129,7 +129,7 @@
           style="color: rgb(254,56,89); font-family: Helvetica,Arial,sans-serif; font-weight: 400; text-align: left; line-height: 1.5; text-decoration: none; vertical-align: baseline; font-size: 16px; margin: 0; padding: 0; border: 0;"
           target="_blank"
         >
-          <%= gettext("Read more") %>
+          {gettext("Read more")}
         </a>
       </p>
     <% end %>

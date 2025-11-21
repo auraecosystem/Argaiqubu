@@ -15,7 +15,7 @@
           style="padding: 40px 20px 20px 20px; border-radius: 4px 4px 0px 0px; color: #3A384C; font-family: 'Roboto', Helvetica, Arial, sans-serif; font-size: 48px; font-weight: 400; line-height: 48px;"
         >
           <h1 style="font-size: 48px; font-weight: 400; margin: 0;">
-            <%= gettext("A request is pending!") %>
+            {gettext("A request is pending!")}
           </h1>
         </td>
       </tr>
@@ -44,12 +44,12 @@
           style="padding: 20px 30px 0px 30px; color: #474467; font-family: 'Roboto', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;"
         >
           <p style="margin: 0;">
-            <%= ngettext(
+            {ngettext(
               "You have one pending attendance request to process for the following event:",
               "You have %{number_participation_requests} attendance requests to process for the following event:",
               @total,
               number_participation_requests: @total
-            ) %>
+            )}
           </p>
         </td>
       </tr>
@@ -59,12 +59,12 @@
           align="left"
           style="padding: 20px 30px 0px 30px; color: #474467; font-family: 'Roboto', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;"
         >
-          <%= render("participation/event_card.html",
+          {render("participation/event_card.html",
             event: @event,
             timezone: @timezone,
             locale: @locale,
             action: nil
-          ) %>
+          )}
         </td>
       </tr>
       <tr>
@@ -86,7 +86,7 @@
                         target="_blank"
                         style="font-size: 20px; font-family: Helvetica, Arial, sans-serif; color: #ffffff; text-decoration: none; color: #ffffff; text-decoration: none; padding: 15px 25px; border-radius: 2px; border: 1px solid #3C376E; display: inline-block;"
                       >
-                        <%= gettext("Manage pending requests") %>
+                        {gettext("Manage pending requests")}
                       </a>
                     </td>
                   </tr>
@@ -103,9 +103,9 @@
           style="padding: 20px 30px 40px 30px; color: #474467; font-family: 'Roboto', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 400; line-height: 20px;"
         >
           <p style="margin: 0">
-            <%= gettext(
+            {gettext(
               "You are receiving this email because you chose to get notifications for pending attendance requests to your events. You can disable or change your notification settings in your user account settings under « Notifications »."
-            ) %>
+            )}
           </p>
         </td>
       </tr>

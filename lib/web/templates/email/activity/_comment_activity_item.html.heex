@@ -1,34 +1,34 @@
 <%= case @activity.subject do %>
   <% :event_comment_mention -> %>
-    <%= dgettext("activity", "%{profile} mentionned you in a comment under event %{event}.", %{
+    {dgettext("activity", "%{profile} mentionned you in a comment under event %{event}.", %{
       profile: "<b>#{escaped_display_name_and_username(@activity.author)}</b>",
       event:
         "<a href=\"#{~p"/events/#{@activity.subject_params["event_uuid"]}" |> url() |> URI.decode()}\">
                             #{escape_html(@activity.subject_params["event_title"])}
                         </a>"
     })
-    |> raw %>
+    |> raw}
   <% :participation_event_comment -> %>
-    <%= dgettext("activity", "%{profile} has posted an announcement under event %{event}.", %{
+    {dgettext("activity", "%{profile} has posted an announcement under event %{event}.", %{
       profile: "<b>#{escaped_display_name_and_username(@activity.author)}</b>",
       event:
         "<a href=\"#{~p"/events/#{@activity.subject_params["event_uuid"]}" |> url() |> URI.decode()}\">
                             #{escape_html(@activity.subject_params["event_title"])}
                         </a>"
     })
-    |> raw %>
+    |> raw}
   <% :event_new_comment -> %>
     <%= if @activity.subject_params["comment_reply_to"] do %>
-      <%= dgettext("activity", "%{profile} has posted a new reply under your event %{event}.", %{
+      {dgettext("activity", "%{profile} has posted a new reply under your event %{event}.", %{
         profile: "<b>#{escaped_display_name_and_username(@activity.author)}</b>",
         event:
           "<a href=\"#{~p"/events/#{@activity.subject_params["event_uuid"]}" |> url() |> URI.decode()}#comment-#{@activity.subject_params["comment_reply_to_uuid"]}-#{@activity.subject_params["comment_uuid"]}\">
                                 #{escape_html(@activity.subject_params["event_title"])}
                             </a>"
       })
-      |> raw %>
+      |> raw}
     <% else %>
-      <%= dgettext(
+      {dgettext(
         "activity",
         "%{profile} has posted a new comment under your event %{event}.",
         %{
@@ -39,6 +39,6 @@
                             </a>"
         }
       )
-      |> raw %>
+      |> raw}
     <% end %>
 <% end %>

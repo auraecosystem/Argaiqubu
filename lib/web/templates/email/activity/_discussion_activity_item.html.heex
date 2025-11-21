@@ -1,40 +1,40 @@
 <%= case @activity.subject do %>
   <% :discussion_created -> %>
-    <%= dgettext("activity", "%{profile} created the discussion %{discussion}.", %{
+    {dgettext("activity", "%{profile} created the discussion %{discussion}.", %{
       profile: "<b>#{escaped_display_name_and_username(@activity.author)}</b>",
       discussion:
         "<a href=\"#{~p"/#{Mobilizon.Actors.Actor.preferred_username_and_domain(@activity.group)}/c/#{@activity.subject_params["discussion_slug"]}" |> url() |> URI.decode()}\">
                             #{escape_html(@activity.subject_params["discussion_title"])}</a>"
     })
-    |> raw %>
+    |> raw}
   <% :discussion_replied -> %>
-    <%= dgettext("activity", "%{profile} replied to the discussion %{discussion}.", %{
+    {dgettext("activity", "%{profile} replied to the discussion %{discussion}.", %{
       profile: "<b>#{escaped_display_name_and_username(@activity.author)}</b>",
       discussion:
         "<a href=\"#{~p"/#{Mobilizon.Actors.Actor.preferred_username_and_domain(@activity.group)}/c/#{@activity.subject_params["discussion_slug"]}" |> url() |> URI.decode()}\">
                             #{escape_html(@activity.subject_params["discussion_title"])}</a>"
     })
-    |> raw %>
+    |> raw}
   <% :discussion_renamed -> %>
-    <%= dgettext("activity", "%{profile} renamed the discussion %{discussion}.", %{
+    {dgettext("activity", "%{profile} renamed the discussion %{discussion}.", %{
       profile: "<b>#{escaped_display_name_and_username(@activity.author)}</b>",
       discussion:
         "<a href=\"#{~p"/#{Mobilizon.Actors.Actor.preferred_username_and_domain(@activity.group)}/c/#{@activity.subject_params["discussion_slug"]}" |> url() |> URI.decode()}\">
                             #{escape_html(@activity.subject_params["discussion_title"])}</a>"
     })
-    |> raw %>
+    |> raw}
   <% :discussion_archived -> %>
-    <%= dgettext("activity", "%{profile} archived the discussion %{discussion}.", %{
+    {dgettext("activity", "%{profile} archived the discussion %{discussion}.", %{
       profile: "<b>#{escaped_display_name_and_username(@activity.author)}</b>",
       discussion:
         "<a href=\"#{~p"/#{Mobilizon.Actors.Actor.preferred_username_and_domain(@activity.group)}/c/#{@activity.subject_params["discussion_slug"]}" |> url() |> URI.decode()}\">
                             #{escape_html(@activity.subject_params["discussion_title"])}</a>"
     })
-    |> raw %>
+    |> raw}
   <% :discussion_deleted -> %>
-    <%= dgettext("activity", "%{profile} deleted the discussion %{discussion}.", %{
+    {dgettext("activity", "%{profile} deleted the discussion %{discussion}.", %{
       profile: "<b>#{escaped_display_name_and_username(@activity.author)}</b>",
       discussion: "<b>#{escape_html(@activity.subject_params["discussion_title"])}</b>"
     })
-    |> raw %>
+    |> raw}
 <% end %>

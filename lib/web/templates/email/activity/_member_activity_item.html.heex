@@ -1,58 +1,58 @@
 <%= case @activity.subject do %>
   <% :member_request -> %>
-    <%= dgettext("activity", "%{member} requested to join the group.", %{
+    {dgettext("activity", "%{member} requested to join the group.", %{
       member: "<b>#{escape_html(@activity.subject_params["member_actor_name"])}</b>"
     })
-    |> raw %>
+    |> raw}
   <% :member_invited -> %>
-    <%= dgettext("activity", "%{member} was invited by %{profile}.", %{
+    {dgettext("activity", "%{member} was invited by %{profile}.", %{
       member: "<b>#{escape_html(@activity.subject_params["member_actor_name"])}</b>",
       profile: "<b>#{escaped_display_name_and_username(@activity.author)}</b>"
     })
-    |> raw %>
+    |> raw}
   <% :member_accepted_invitation -> %>
-    <%= dgettext("activity", "%{member} accepted the invitation to join the group.", %{
+    {dgettext("activity", "%{member} accepted the invitation to join the group.", %{
       member: "<b>#{escape_html(@activity.subject_params["member_actor_name"])}</b>"
     })
-    |> raw %>
+    |> raw}
   <% :member_rejected_invitation -> %>
-    <%= dgettext("activity", "%{member} rejected the invitation to join the group.", %{
+    {dgettext("activity", "%{member} rejected the invitation to join the group.", %{
       member: "<b>#{escape_html(@activity.subject_params["member_actor_name"])}</b>"
     })
-    |> raw %>
+    |> raw}
   <% :member_joined -> %>
-    <%= dgettext("activity", "%{member} joined the group.", %{
+    {dgettext("activity", "%{member} joined the group.", %{
       member:
         "<b title=\"#{@activity.subject_params["member_actor_federated_username"]}\">#{escape_html(@activity.subject_params["member_actor_name"])}</b>"
     })
-    |> raw %>
+    |> raw}
   <% :member_added -> %>
-    <%= dgettext("activity", "%{profile} added the member %{member}.", %{
+    {dgettext("activity", "%{profile} added the member %{member}.", %{
       member: "<b>#{escape_html(@activity.subject_params["member_actor_name"])}</b>",
       profile: "<b>#{escaped_display_name_and_username(@activity.author)}</b>"
     })
-    |> raw %>
+    |> raw}
   <% :member_approved -> %>
-    <%= dgettext("activity", "%{profile} approved the member %{member}.", %{
+    {dgettext("activity", "%{profile} approved the member %{member}.", %{
       member: "<b>#{escape_html(@activity.subject_params["member_actor_name"])}</b>",
       profile: "<b>#{escaped_display_name_and_username(@activity.author)}</b>"
     })
-    |> raw %>
+    |> raw}
   <% :member_updated -> %>
-    <%= dgettext("activity", "%{profile} updated the member %{member}.", %{
+    {dgettext("activity", "%{profile} updated the member %{member}.", %{
       member: "<b>#{escape_html(@activity.subject_params["member_actor_name"])}</b>",
       profile: "<b>#{escaped_display_name_and_username(@activity.author)}</b>"
     })
-    |> raw %>
+    |> raw}
   <% :member_removed -> %>
-    <%= dgettext("activity", "%{profile} excluded member %{member}.", %{
+    {dgettext("activity", "%{profile} excluded member %{member}.", %{
       member: "<b>#{@activity.subject_params["member_actor_name"]}</b>",
       profile: "<b>#{escaped_display_name_and_username(@activity.author)}</b>"
     })
-    |> raw %>
+    |> raw}
   <% :member_quit -> %>
-    <%= dgettext("activity", "%{profile} quit the group.", %{
+    {dgettext("activity", "%{profile} quit the group.", %{
       profile: "<b>#{escaped_display_name_and_username(@activity.author)}</b>"
     })
-    |> raw %>
+    |> raw}
 <% end %>

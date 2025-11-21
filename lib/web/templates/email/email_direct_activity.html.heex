@@ -15,7 +15,7 @@
           style="padding: 40px 20px 20px 20px; border-radius: 4px 4px 0px 0px; color: #3A384C; font-family: 'Roboto', Helvetica, Arial, sans-serif; font-size: 48px; font-weight: 400; line-height: 48px;"
         >
           <h1 style="font-size: 48px; font-weight: 400; margin: 0;">
-            <%= @subject %>
+            {@subject}
           </h1>
         </td>
       </tr>
@@ -50,19 +50,19 @@
               <% :one_week -> %>
                 <% dgettext("activity", "Here's your weekly activity recap") %>
               <% :one_hour -> %>
-                <%= dngettext(
+                {dngettext(
                   "activity",
                   "There has been an activity!",
                   "There has been some activity!",
                   @total_number_activities
-                ) %>
+                )}
               <% false -> %>
-                <%= dngettext(
+                {dngettext(
                   "activity",
                   "There has been an activity!",
                   "There has been some activity!",
                   @total_number_activities
-                ) %>
+                )}
             <% end %>
           </p>
         </td>
@@ -132,8 +132,8 @@
                                             target="_blank"
                                             style="text-decoration: none;color: #474467;font-family: 'Roboto', Helvetica, Arial, sans-serif;font-size: 18px;font-weight: bold;line-height: 25px;"
                                           >
-                                            <%= hd(group_activities).group.name ||
-                                              "@#{Mobilizon.Actors.Actor.preferred_username_and_domain(hd(group_activities).group)}" %>
+                                            {hd(group_activities).group.name ||
+                                              "@#{Mobilizon.Actors.Actor.preferred_username_and_domain(hd(group_activities).group)}"}
                                           </a>
                                         </td>
                                       </tr>
@@ -149,9 +149,9 @@
                                               target="_blank"
                                               style="text-decoration: none;display: block;color: #7a7a7a;font-family: 'Roboto', Helvetica, Arial, sans-serif;font-size: 16px;font-weight: 400;line-height: 25px;"
                                             >
-                                              @<%= Mobilizon.Actors.Actor.preferred_username_and_domain(
+                                              @{Mobilizon.Actors.Actor.preferred_username_and_domain(
                                                 hd(group_activities).group
-                                              ) %>
+                                              )}
                                             </a>
                                           </td>
                                         </tr>
@@ -170,42 +170,42 @@
                             <p style="margin: 0;">
                               <%= case activity.type do %>
                                 <% :discussion -> %>
-                                  <%= render("activity/_discussion_activity_item.html",
+                                  {render("activity/_discussion_activity_item.html",
                                     activity: activity
-                                  ) %>
+                                  )}
                                 <% :conversation -> %>
-                                  <%= render("activity/_conversation_activity_item.html",
+                                  {render("activity/_conversation_activity_item.html",
                                     activity: activity
-                                  ) %>
+                                  )}
                                 <% :event -> %>
-                                  <%= render("activity/_event_activity_item.html",
+                                  {render("activity/_event_activity_item.html",
                                     activity: activity
-                                  ) %>
+                                  )}
                                 <% :group -> %>
-                                  <%= render("activity/_group_activity_item.html",
+                                  {render("activity/_group_activity_item.html",
                                     activity: activity
-                                  ) %>
+                                  )}
                                 <% :member -> %>
-                                  <%= render("activity/_member_activity_item.html",
+                                  {render("activity/_member_activity_item.html",
                                     activity: activity
-                                  ) %>
+                                  )}
                                 <% :post -> %>
-                                  <%= render("activity/_post_activity_item.html",
+                                  {render("activity/_post_activity_item.html",
                                     activity: activity
-                                  ) %>
+                                  )}
                                 <% :resource -> %>
-                                  <%= render("activity/_resource_activity_item.html",
+                                  {render("activity/_resource_activity_item.html",
                                     activity: activity
-                                  ) %>
+                                  )}
                                 <% :comment -> %>
-                                  <%= render("activity/_comment_activity_item.html",
+                                  {render("activity/_comment_activity_item.html",
                                     activity: activity
-                                  ) %>
+                                  )}
                               <% end %>
                             </p>
                             <%= unless @single_activity do %>
                               <em>
-                                <%= datetime_to_string(activity.inserted_at, @locale, :short) %>
+                                {datetime_to_string(activity.inserted_at, @locale, :short)}
                               </em>
                             <% end %>
                           </li>
@@ -227,13 +227,13 @@
                                       target="_blank"
                                       style="font-size: 20px; font-family: Helvetica, Arial, sans-serif; color: #ffffff; text-decoration: none; padding: 15px 25px; border-radius: 2px; border: 1px solid #3C376E; display: inline-block;"
                                     >
-                                      <%= dngettext(
+                                      {dngettext(
                                         "activity",
                                         "View one more activity",
                                         "View %{count} more activities",
                                         length(group_activities) - 5,
                                         %{count: length(group_activities) - 5}
-                                      ) %>
+                                      )}
                                     </a>
                                   </td>
                                 </tr>
@@ -257,7 +257,7 @@
           style="padding: 20px 30px 40px 30px; color: #474467; font-family: 'Roboto', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 400; line-height: 20px;"
         >
           <p style="margin: 0">
-            <%= dgettext(
+            {dgettext(
               "activity",
               "Don't want to receive activity notifications? You may change frequency or disable them in %{tag_start}your settings%{tag_end}.",
               %{
@@ -265,7 +265,7 @@
                 tag_end: "</a>"
               }
             )
-            |> raw %>
+            |> raw}
           </p>
         </td>
       </tr>

@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title><%= gettext("This page is not correct") %></title>
+    <title>{gettext("This page is not correct")}</title>
     <style>
       body.error {
         font-family: BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, Cantarell, Segoe UI, Fira Sans, Droid Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -47,18 +47,18 @@
         <!-- <img src="/img/error.png" alt="" width="500" /> -->
       </div>
       <div class="error__message">
-        <h1><%= gettext("We're sorry, but something went wrong on our end.") %></h1>
+        <h1>{gettext("We're sorry, but something went wrong on our end.")}</h1>
         <p>
-          <%= gettext("The Mobilizon server %{instance} seems to be temporarily down.",
+          {gettext("The Mobilizon server %{instance} seems to be temporarily down.",
             instance: "<b>#{@instance}</b>"
           )
-          |> raw %>
+          |> raw}
           <br />
 
           <%= if is_nil(@contact) do %>
-            <%= gettext("If the issue persists, you may try to contact the server administrator.") %>
+            {gettext("If the issue persists, you may try to contact the server administrator.")}
           <% else %>
-            <%= gettext(
+            {gettext(
               "If the issue persists, you may contact the server administrator at %{contact}.",
               contact:
                 cond do
@@ -72,14 +72,14 @@
                     @contact
                 end
             )
-            |> raw %>
+            |> raw}
           <% end %>
         </p>
       </div>
     </main>
     <%= if length(@details) > 0 do %>
       <details>
-        <summary style="font-size: 1.25rem;"><%= gettext("Technical details") %></summary>
+        <summary style="font-size: 1.25rem;">{gettext("Technical details")}</summary>
         <pre>
         <%= for detail <- @details do %>
           <%= detail %><br />

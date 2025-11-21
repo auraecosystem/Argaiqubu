@@ -11,7 +11,7 @@
           style="color: rgb(66,81,90); font-family: Helvetica,Arial,sans-serif; font-weight: 700; text-align: left; line-height: 1.4; text-decoration: none; vertical-align: baseline; font-size: 22px; letter-spacing: 0.2px; margin: 0 0 30px; padding: 0; border: 0;"
           target="_blank"
         >
-          <%= @event.title %>
+          {@event.title}
         </a>
         <div style="vertical-align: baseline; width: 100%; margin: 0 0 0 10px; padding: 0; border: 0;display: flex;">
           <%= cond do %>
@@ -44,11 +44,11 @@
                   style="color: rgb(254,56,89); font-family: Helvetica,Arial,sans-serif; font-weight: normal; text-align: left; line-height: 1.3; text-decoration: none; vertical-align: baseline; margin: 0; padding: 0; border: 0;"
                   target="_blank"
                 >
-                  <%= @event.attributed_to.name || @event.attributed_to.preferred_username %>
+                  {@event.attributed_to.name || @event.attributed_to.preferred_username}
                 </a>
               <% else %>
                 <span style="font-family: Helvetica,Arial,sans-serif; font-weight: normal; text-align: left; line-height: 1.3; text-decoration: none; vertical-align: baseline; margin: 0; padding: 0; border: 0;">
-                  <%= @event.organizer_actor.name || @event.organizer_actor.preferred_username %>
+                  {@event.organizer_actor.name || @event.organizer_actor.preferred_username}
                 </span>
               <% end %>
             </p>

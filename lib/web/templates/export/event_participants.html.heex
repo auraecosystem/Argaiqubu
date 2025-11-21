@@ -117,29 +117,29 @@
     </style>
   </head>
   <body>
-    <h1><%= gettext("Participants for %{event}", event: @event.title) %></h1>
+    <h1>{gettext("Participants for %{event}", event: @event.title)}</h1>
     <dl>
-      <dt><%= gettext("Begins on") %></dt>
-      <dd><%= datetime_to_string(@event.begins_on, @locale, :long) %></dd>
+      <dt>{gettext("Begins on")}</dt>
+      <dd>{datetime_to_string(@event.begins_on, @locale, :long)}</dd>
       <%= if @event.ends_on do %>
-        <dt><%= gettext("Ends on") %></dt>
-        <dd><%= datetime_to_string(@event.ends_on, @locale, :long) %></dd>
+        <dt>{gettext("Ends on")}</dt>
+        <dd>{datetime_to_string(@event.ends_on, @locale, :long)}</dd>
       <% end %>
       <%= if not is_nil(@event.physical_address) and not is_nil(render_address(@event.physical_address)) do %>
-        <dt><%= gettext("Location") %></dt>
-        <dd><%= render_address(@event.physical_address) %></dd>
+        <dt>{gettext("Location")}</dt>
+        <dd>{render_address(@event.physical_address)}</dd>
       <% end %>
-      <dt><%= gettext("Number of participants") %></dt>
+      <dt>{gettext("Number of participants")}</dt>
       <dd>
-        <%= @event.participant_stats.participant + @event.participant_stats.moderator +
-          @event.participant_stats.administrator + @event.participant_stats.creator %>
+        {@event.participant_stats.participant + @event.participant_stats.moderator +
+          @event.participant_stats.administrator + @event.participant_stats.creator}
       </dd>
     </dl>
     <table>
       <thead>
         <tr>
           <%= for column <- @columns do %>
-            <th><%= column %></th>
+            <th>{column}</th>
           <% end %>
         </tr>
       </thead>
@@ -147,7 +147,7 @@
         <%= for line <- @data do %>
           <tr>
             <%= for cell <- line do %>
-              <td><%= cell %></td>
+              <td>{cell}</td>
             <% end %>
           </tr>
         <% end %>

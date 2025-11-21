@@ -1,26 +1,26 @@
 <%= case @activity.subject do %>
   <% :post_created -> %>
-    <%= dgettext("activity", "The post %{post} was created by %{profile}.", %{
+    {dgettext("activity", "The post %{post} was created by %{profile}.", %{
       profile: "<b>#{escaped_display_name_and_username(@activity.author)}</b>",
       post:
         "<a href=\"#{~p"/p/#{@activity.subject_params["post_slug"]}" |> url() |> URI.decode()}\">
                             #{escape_html(@activity.subject_params["post_title"])}
                         </a>"
     })
-    |> raw %>
+    |> raw}
   <% :post_updated -> %>
-    <%= dgettext("activity", "The post %{post} was updated by %{profile}.", %{
+    {dgettext("activity", "The post %{post} was updated by %{profile}.", %{
       profile: "<b>#{escaped_display_name_and_username(@activity.author)}</b>",
       post:
         "<a href=\"#{~p"/p/#{@activity.subject_params["post_slug"]}" |> url() |> URI.decode()}\">
                             #{escape_html(@activity.subject_params["post_title"])}
                         </a>"
     })
-    |> raw %>
+    |> raw}
   <% :post_deleted -> %>
-    <%= dgettext("activity", "The post %{post} was deleted by %{profile}.", %{
+    {dgettext("activity", "The post %{post} was deleted by %{profile}.", %{
       profile: "<b>#{escaped_display_name_and_username(@activity.author)}</b>",
       post: "<b>#{escape_html(@activity.subject_params["post_title"])}</b>"
     })
-    |> raw %>
+    |> raw}
 <% end %>

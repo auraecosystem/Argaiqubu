@@ -15,7 +15,7 @@
           style="padding: 40px 20px 20px 20px; border-radius: 4px 4px 0px 0px; color: #3A384C; font-family: 'Roboto', Helvetica, Arial, sans-serif; font-size: 48px; font-weight: 400; line-height: 48px;"
         >
           <h1 style="font-size: 48px; font-weight: 400; margin: 0;">
-            <%= gettext("An administrator changed your role") %>
+            {gettext("An administrator changed your role")}
           </h1>
         </td>
       </tr>
@@ -44,11 +44,11 @@
           style="padding: 20px 30px 0px 30px; color: #474467; font-family: 'Roboto', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;"
         >
           <p style="margin: 0;">
-            <%= gettext(
+            {gettext(
               "Hi there! We just wanted to inform you that an administrator from <b>%{instance}</b> just changed your account role.",
               %{instance: @instance_name}
             )
-            |> raw %>
+            |> raw}
           </p>
         </td>
       </tr>
@@ -61,18 +61,18 @@
           <table width="100%">
             <tr>
               <td bgcolor="#ffffff" align="left">
-                <%= gettext("Old role") %>
+                {gettext("Old role")}
               </td>
               <td bgcolor="#ffffff" align="left">
-                <%= render("admin/_role.html", role: @old_role) %>
+                {render("admin/_role.html", role: @old_role)}
               </td>
             </tr>
             <tr>
               <td bgcolor="#ffffff" align="left">
-                <%= gettext("New role") %>
+                {gettext("New role")}
               </td>
               <td bgcolor="#ffffff" align="left">
-                <%= render("admin/_role.html", role: @new_role) %>
+                {render("admin/_role.html", role: @new_role)}
               </td>
             </tr>
           </table>
@@ -85,14 +85,14 @@
           style="padding: 20px 30px 40px 30px; color: #474467; font-family: 'Roboto', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 400; line-height: 20px;"
         >
           <p style="margin: 0">
-            <%= gettext(
+            {gettext(
               "If something doesn't feel right to you, please contact the instance administrator through the contact methods %{start_link}on the instance's about page%{end_link}.",
               %{
                 start_link: "<a href=\"#{Mobilizon.Web.Endpoint.url()}/about/instance\">",
                 end_link: "</a>"
               }
             )
-            |> raw %>
+            |> raw}
           </p>
         </td>
       </tr>

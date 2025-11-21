@@ -15,10 +15,10 @@
           style="padding: 40px 20px 20px 20px; border-radius: 4px 4px 0px 0px; color: #3A384C; font-family: 'Roboto', Helvetica, Arial, sans-serif; font-size: 48px; font-weight: 400; line-height: 48px;"
         >
           <h1 style="font-size: 48px; font-weight: 400; margin: 0;">
-            <%= gettext("The group %{group} has been suspended on %{instance}!",
+            {gettext("The group %{group} has been suspended on %{instance}!",
               group: display_name(@group),
               instance: @instance_name
-            ) %>
+            )}
           </h1>
         </td>
       </tr>
@@ -47,12 +47,12 @@
           style="padding: 20px 30px 0px 30px; color: #474467; font-family: 'Roboto', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;"
         >
           <p style="margin: 0;">
-            <%= gettext(
+            {gettext(
               "Your instance's moderation team has decided to suspend <b>%{group_name}</b> (%{group_address}). You are no longer a member of this group.",
               group_name: escape_html(display_name(@group)),
               group_address: preferred_username_and_domain(@group)
             )
-            |> raw %>
+            |> raw}
           </p>
         </td>
       </tr>
@@ -64,9 +64,9 @@
             style="padding: 20px 30px 40px 30px; color: #474467; font-family: 'Roboto', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;"
           >
             <p style="margin: 0">
-              <%= gettext(
+              {gettext(
                 "As this group was located on this instance, all of its data has been irretrievably deleted."
-              ) %>
+              )}
             </p>
           </td>
         </tr>
@@ -78,9 +78,9 @@
             style="padding: 20px 30px 40px 30px; color: #474467; font-family: 'Roboto', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;"
           >
             <p style="margin: 0">
-              <%= gettext(
+              {gettext(
                 "As this group was located on another instance, it will continue to work for other instances than this one."
-              ) %>
+              )}
             </p>
           </td>
         </tr>
