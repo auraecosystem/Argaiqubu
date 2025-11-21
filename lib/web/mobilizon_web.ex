@@ -38,8 +38,9 @@ defmodule Mobilizon.Web do
         namespace: Mobilizon.Web
 
       # Use all HTML functionality (forms, tags, etc)
-      use Phoenix.HTML
-
+      use PhoenixHTMLHelpers
+      import Phoenix.HTML
+      import Phoenix.HTML.Form
       import Phoenix.View
       import Mobilizon.Web.ErrorHelpers
       import Mobilizon.Web.Gettext

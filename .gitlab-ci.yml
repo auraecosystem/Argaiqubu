@@ -107,6 +107,22 @@ deps:
   needs:
     - install
 
+security-frontend:
+  stage: check
+  script:
+    - npm audit
+  allow_failure: true
+  needs:
+    - install
+
+security-backend:
+  stage: check
+  script:
+    - mix hex.audit
+  allow_failure: true
+  needs:
+    - install
+
 i18n-frontend:
   image: python:alpine
   stage: check

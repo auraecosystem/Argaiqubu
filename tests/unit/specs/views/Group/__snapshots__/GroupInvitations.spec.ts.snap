@@ -1,0 +1,50 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`GroupInvitations > Show simple 1`] = `
+"<div>
+  <breadcrumbs-nav links="[object Object],[object Object],[object Object]"></breadcrumbs-nav>
+  <section class="container mx-auto section">
+    <h1>Invitations to join the group</h1>
+    <h2>Member invitation</h2>
+    <form>
+      <div data-oruga="field" class="o-field o-field--horizontal">
+        <div class="o-field__horizontal-label"><label id="v-0-0" for="new-member-field" class="o-field__label">Invite a new member</label></div>
+        <div class="o-field__horizontal-body">
+          <div data-oruga="field" class="o-field">
+            <!---->
+            <div class="o-field__body">
+              <div class="o-field">
+                <div data-oruga="field" class="o-field" expanded="" size="large">
+                  <!---->
+                  <div class="o-field__body">
+                    <div class="o-field o-field--grouped">
+                      <div data-oruga="input" class="o-input o-input--expanded">
+                        <!----><input aria-labelledby="v-0-6" id="new-member-field" type="text" data-oruga-input="text" class="o-input__input o-input__input--placeholder" autocomplete="off" placeholder="Ex: someone@mobilizon.org">
+                        <!---->
+                        <!---->
+                      </div><button data-oruga="button" type="submit" role="button" tabindex="0" class="o-button o-button--primary"><span class="o-button__wrapper"><!----><span class="o-button__label">Invite member</span>
+                        <!----></span>
+                      </button>
+                    </div>
+                  </div>
+                  <!---->
+                </div>
+              </div>
+            </div>
+            <!---->
+          </div>
+        </div>
+        <!---->
+      </div>
+    </form>
+    <h2>Group invitation links</h2>
+    <div data-oruga="field" class="o-field">
+      <!----><button data-oruga="button" type="button" role="button" tabindex="0" class="o-button o-button--primary"><span class="o-button__wrapper"><!----><span class="o-button__label">New invitation</span>
+        <!----></span>
+      </button>
+      <!---->
+    </div>
+    <!--v-if-->
+  </section>
+</div>"
+`;

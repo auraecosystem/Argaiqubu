@@ -8,47 +8,13 @@ exports[`GroupMembers > Show simple 1`] = `
   </transition-stub>
   <section class="container mx-auto section">
     <h1>Group Members (2)</h1>
-    <form>
-      <div data-oruga="field" class="o-field o-field--horizontal" custom-class="add-relay">
-        <div class="o-field__horizontal-label"><label id="v-0-0" for="new-member-field" class="o-field__label">Invite a new member</label></div>
-        <div class="o-field__horizontal-body">
-          <div data-oruga="field" class="o-field">
-            <!---->
-            <div class="o-field__body">
-              <div class="o-field">
-                <div data-oruga="field" class="o-field" expanded="" size="large">
-                  <!---->
-                  <div class="o-field__body">
-                    <div class="o-field o-field--grouped">
-                      <p class="control">
-                      <div data-oruga="input" class="o-input">
-                        <!----><input aria-labelledby="v-0-6" id="new-member-field" type="text" data-oruga-input="text" class="o-input__input o-input__input--placeholder" autocomplete="off" placeholder="Ex: someone@mobilizon.org">
-                        <!---->
-                        <!---->
-                      </div>
-                      </p>
-                      <p class="control"><button data-oruga="button" type="submit" role="button" tabindex="0" class="o-button o-button--primary"><span class="o-button__wrapper"><!----><span class="o-button__label">Invite member</span>
-                          <!----></span>
-                        </button></p>
-                    </div>
-                  </div>
-                  <!---->
-                </div>
-              </div>
-            </div>
-            <!---->
-          </div>
-        </div>
-        <!---->
-      </div>
-    </form>
     <div data-oruga="field" class="o-field o-field--horizontal my-2">
-      <div class="o-field__horizontal-label"><label id="v-0-4" for="group-members-status-filter" class="o-field__label">Status</label></div>
+      <div class="o-field__horizontal-label"><label id="v-0-0" for="group-members-status-filter" class="o-field__label">Status</label></div>
       <div class="o-field__horizontal-body">
         <div data-oruga="field" class="o-field">
           <!---->
           <div data-oruga="select" class="o-select">
-            <!----><select aria-labelledby="v-0-4" id="group-members-status-filter" data-oruga-input="select" class="o-select__input o-select__input--placeholder o-select__input--arrowed" autocomplete="off">
+            <!----><select aria-labelledby="v-0-0" id="group-members-status-filter" data-oruga-input="select" class="o-select__input o-select__input--placeholder o-select__input--arrowed" autocomplete="off">
               <!---->
               <option>Everything</option>
               <option value="ADMINISTRATOR">Administrator</option>
