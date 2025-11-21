@@ -2,10 +2,164 @@
 
 exports[`GroupMembers > Show simple 1`] = `
 "<div>
-  <!--v-if-->
+  <breadcrumbs-nav links="[object Object],[object Object],[object Object]"></breadcrumbs-nav>
   <transition-stub name="fade" appear="false" persisted="false" css="true">
     <!---->
   </transition-stub>
-  <!--v-if-->
+  <section class="container mx-auto section">
+    <h1>Group Members (2)</h1>
+    <form>
+      <div data-oruga="field" class="o-field o-field--horizontal" custom-class="add-relay">
+        <div class="o-field__horizontal-label"><label id="v-0-0" for="new-member-field" class="o-field__label">Invite a new member</label></div>
+        <div class="o-field__horizontal-body">
+          <div data-oruga="field" class="o-field">
+            <!---->
+            <div class="o-field__body">
+              <div class="o-field">
+                <div data-oruga="field" class="o-field" expanded="" size="large">
+                  <!---->
+                  <div class="o-field__body">
+                    <div class="o-field o-field--grouped">
+                      <p class="control">
+                      <div data-oruga="input" class="o-input">
+                        <!----><input aria-labelledby="v-0-6" id="new-member-field" type="text" data-oruga-input="text" class="o-input__input o-input__input--placeholder" autocomplete="off" placeholder="Ex: someone@mobilizon.org">
+                        <!---->
+                        <!---->
+                      </div>
+                      </p>
+                      <p class="control"><button data-oruga="button" type="submit" role="button" tabindex="0" class="o-button o-button--primary"><span class="o-button__wrapper"><!----><span class="o-button__label">Invite member</span>
+                          <!----></span>
+                        </button></p>
+                    </div>
+                  </div>
+                  <!---->
+                </div>
+              </div>
+            </div>
+            <!---->
+          </div>
+        </div>
+        <!---->
+      </div>
+    </form>
+    <div data-oruga="field" class="o-field o-field--horizontal my-2">
+      <div class="o-field__horizontal-label"><label id="v-0-4" for="group-members-status-filter" class="o-field__label">Status</label></div>
+      <div class="o-field__horizontal-body">
+        <div data-oruga="field" class="o-field">
+          <!---->
+          <div data-oruga="select" class="o-select">
+            <!----><select aria-labelledby="v-0-4" id="group-members-status-filter" data-oruga-input="select" class="o-select__input o-select__input--placeholder o-select__input--arrowed" autocomplete="off">
+              <!---->
+              <option>Everything</option>
+              <option value="ADMINISTRATOR">Administrator</option>
+              <option value="MODERATOR">Moderator</option>
+              <option value="MEMBER">Member</option>
+              <option value="INVITED">Invited</option>
+              <option value="NOT_APPROVED">Not approved</option>
+              <option value="REJECTED">Rejected</option>
+            </select>
+            <!---->
+          </div>
+          <!---->
+        </div>
+      </div>
+      <!---->
+    </div>
+    <div data-oruga="table" class="o-table__root">
+      <div style="display: none;"><span data-oruga="table-column" data-id="table-1">Member <!----></span><span data-oruga="table-column" data-id="table-2">Role <!----></span><span data-oruga="table-column" data-id="table-3">Date <!----></span><span data-oruga="table-column" data-id="table-4">Actions <!----></span></div>
+      <!---->
+      <!---->
+      <div class="o-table__wrapper">
+        <table class="o-table" aria-rowcount="3" aria-colcount="4">
+          <!---->
+          <thead>
+            <tr aria-rowindex="1">
+              <!---->
+              <!---->
+              <th class="o-table__th" draggable="false" aria-colindex="1"><span class="o-table__th__label">Member</span>
+                <!---->
+              </th>
+              <th class="o-table__th" draggable="false" aria-colindex="2"><span class="o-table__th__label">Role</span>
+                <!---->
+              </th>
+              <th class="o-table__th" draggable="false" aria-colindex="3"><span class="o-table__th__label">Date</span>
+                <!---->
+              </th>
+              <th class="o-table__th" draggable="false" aria-colindex="4"><span class="o-table__th__label">Actions</span>
+                <!---->
+              </th>
+              <!---->
+            </tr>
+            <!---->
+            <!---->
+          </thead>
+          <tbody>
+            <tr class="" draggable="false" aria-rowindex="2">
+              <!---->
+              <!---->
+              <td class="o-table__td" data-label="Member">
+                <article class="flex"><span aria-hidden="true" class="material-design-icon account-circle-icon" role="img"><svg fill="currentColor" class="material-design-icon__svg" width="48" height="48" viewBox="0 0 24 24"><path d="M12,19.2C9.5,19.2 7.29,17.92 6,16C6.03,14 10,12.9 12,12.9C14,12.9 17.97,14 18,16C16.71,17.92 14.5,19.2 12,19.2M12,5A3,3 0 0,1 15,8A3,3 0 0,1 12,11A3,3 0 0,1 9,8A3,3 0 0,1 12,5M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12C22,6.47 17.5,2 12,2Z"><!--v-if--></path></svg></span>
+                  <div class="">
+                    <div class="text-start"><span>autre</span><br><span class="">@autre</span></div>
+                  </div>
+                </article>
+              </td>
+              <td class="o-table__td" data-label="Role"><span data-v-6955ca87="" class="rounded-md truncate text-sm text-black px-2 py-1 bg-purple-3 dark:text-violet-3">Member</span></td>
+              <td class="o-table__td" data-label="Date"><span class="has-text-centered">Wednesday, November 12, 2025<br>2:57 PM</span></td>
+              <td class="o-table__td" data-label="Actions">
+                <div class="flex flex-wrap gap-2">
+                  <!--v-if-->
+                  <!--v-if--><button data-oruga="button" type="button" role="button" tabindex="0" class="o-button"><span class="o-button__wrapper"><span data-oruga="icon" class="o-icon o-button__icon o-button__icon-left"><i class="mdi mdi-chevron-double-up mdi-24px"></i></span><span class="o-button__label">Promote</span>
+                    <!----></span>
+                  </button>
+                  <!--v-if--><button data-oruga="button" type="button" role="button" tabindex="0" class="o-button o-button--danger"><span class="o-button__wrapper"><span data-oruga="icon" class="o-icon o-button__icon o-button__icon-left"><i class="mdi mdi-exit-to-app mdi-24px"></i></span><span class="o-button__label">Remove</span>
+                    <!----></span>
+                  </button>
+                </div>
+              </td>
+              <!---->
+            </tr>
+            <!---->
+            <tr class="" draggable="false" aria-rowindex="3">
+              <!---->
+              <!---->
+              <td class="o-table__td" data-label="Member">
+                <article class="flex"><span aria-hidden="true" class="material-design-icon account-circle-icon" role="img"><svg fill="currentColor" class="material-design-icon__svg" width="48" height="48" viewBox="0 0 24 24"><path d="M12,19.2C9.5,19.2 7.29,17.92 6,16C6.03,14 10,12.9 12,12.9C14,12.9 17.97,14 18,16C16.71,17.92 14.5,19.2 12,19.2M12,5A3,3 0 0,1 15,8A3,3 0 0,1 12,11A3,3 0 0,1 9,8A3,3 0 0,1 12,5M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12C22,6.47 17.5,2 12,2Z"><!--v-if--></path></svg></span>
+                  <div class="">
+                    <div class="text-start"><span>Test</span><br><span class="">@test</span></div>
+                  </div>
+                </article>
+              </td>
+              <td class="o-table__td" data-label="Role"><span data-v-6955ca87="" class="rounded-md truncate text-sm text-black px-2 py-1 bg-mbz-info dark:text-black">Administrator</span></td>
+              <td class="o-table__td" data-label="Date"><span class="has-text-centered">Wednesday, November 12, 2025<br>12:04 PM</span></td>
+              <td class="o-table__td" data-label="Actions">
+                <div class="flex flex-wrap gap-2">
+                  <!--v-if-->
+                  <!--v-if-->
+                  <!--v-if--><button data-oruga="button" type="button" role="button" tabindex="0" class="o-button"><span class="o-button__wrapper"><span data-oruga="icon" class="o-icon o-button__icon o-button__icon-left"><i class="mdi mdi-chevron-double-down mdi-24px"></i></span><span class="o-button__label">Demote</span>
+                    <!----></span>
+                  </button>
+                  <!--v-if-->
+                </div>
+              </td>
+              <!---->
+            </tr>
+            <!---->
+            <!---->
+          </tbody>
+          <!---->
+        </table>
+        <transition-stub name="fade" appear="false" persisted="false" css="true">
+          <!---->
+        </transition-stub>
+      </div>
+      <div class="o-table__pagination">
+        <div></div>
+        <div>
+          <nav data-oruga="pagination" class="o-pagination o-pagination--right o-pagination--right o-pagination--small o-pagination--simple"><button type="button" role="button" disabled="" class="o-pagination__button-previous o-pagination__button--disabled o-pagination__button" aria-label="Previous page" aria-current="false"><span data-oruga="icon" class="o-icon" aria-hidden="true"><i class="mdi mdi-chevron-left mdi-24px"></i></span></button><button type="button" role="button" disabled="" class="o-pagination__button-next o-pagination__button--disabled o-pagination__button" aria-label="Next page" aria-current="false"><span data-oruga="icon" class="o-icon" aria-hidden="true"><i class="mdi mdi-chevron-right mdi-24px"></i></span></button><small class="o-pagination__info">1-2 / 2</small></nav>
+        </div>
+      </div>
+    </div>
+  </section>
 </div>"
 `;

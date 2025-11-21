@@ -2,10 +2,106 @@
 
 exports[`GroupFollowers > Show simple 1`] = `
 "<div>
-  <!--v-if-->
+  <breadcrumbs-nav links="[object Object],[object Object],[object Object]"></breadcrumbs-nav>
   <transition-stub name="fade" appear="false" persisted="false" css="true">
     <!---->
   </transition-stub>
-  <!--v-if-->
+  <section class="container mx-auto section">
+    <h1>Group Followers (2)</h1>
+    <div data-oruga="field" class="o-field o-field--horizontal">
+      <div class="o-field__horizontal-label"><label id="v-0-0" class="o-field__label">Status</label></div>
+      <div class="o-field__horizontal-body">
+        <div data-oruga="field" class="o-field">
+          <!---->
+          <div data-oruga="switch" class="o-switch o-switch--position o-switch--rounded"><input aria-labelledby="v-0-0" id="v-0-2" type="checkbox" role="switch" data-oruga-input="switch" class="o-switch__input" true-value="true" false-value="false" autocomplete="off" aria-checked="false"><label id="v-0-0" for="v-0-2" class="o-switch__label">Pending</label></div>
+          <!---->
+        </div>
+      </div>
+      <!---->
+    </div>
+    <div data-oruga="table" class="o-table__root">
+      <div style="display: none;"><span data-oruga="table-column" data-id="table-1">Follower <!----></span><span data-oruga="table-column" data-id="table-2">Date <!----></span><span data-oruga="table-column" data-id="table-3">Actions <!----></span></div>
+      <!---->
+      <!---->
+      <div class="o-table__wrapper">
+        <table class="o-table" aria-rowcount="3" aria-colcount="3">
+          <!---->
+          <thead>
+            <tr aria-rowindex="1">
+              <!---->
+              <!---->
+              <th class="o-table__th" draggable="false" aria-colindex="1"><span class="o-table__th__label">Follower</span>
+                <!---->
+              </th>
+              <th class="o-table__th" draggable="false" aria-colindex="2"><span class="o-table__th__label">Date</span>
+                <!---->
+              </th>
+              <th class="o-table__th" draggable="false" aria-colindex="3"><span class="o-table__th__label">Actions</span>
+                <!---->
+              </th>
+              <!---->
+            </tr>
+            <!---->
+            <!---->
+          </thead>
+          <tbody>
+            <tr class="" draggable="false" aria-rowindex="2">
+              <!---->
+              <!---->
+              <td class="o-table__td" data-label="Follower">
+                <article class="flex gap-1"><span aria-hidden="true" class="material-design-icon account-circle-icon" role="img"><svg fill="currentColor" class="material-design-icon__svg" width="48" height="48" viewBox="0 0 24 24"><path d="M12,19.2C9.5,19.2 7.29,17.92 6,16C6.03,14 10,12.9 12,12.9C14,12.9 17.97,14 18,16C16.71,17.92 14.5,19.2 12,19.2M12,5A3,3 0 0,1 15,8A3,3 0 0,1 12,11A3,3 0 0,1 9,8A3,3 0 0,1 12,5M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12C22,6.47 17.5,2 12,2Z"><!--v-if--></path></svg></span>
+                  <div class="">
+                    <div class=""><span>autre</span><br><span class="">@autre</span></div>
+                  </div>
+                </article>
+              </td>
+              <td class="o-table__td" data-label="Date"><span class="has-text-centered">Wednesday, November 12, 2025<br>2:57 PM</span></td>
+              <td class="o-table__td" data-label="Actions">
+                <div class="flex gap-2">
+                  <!--v-if--><button data-oruga="button" type="button" role="button" tabindex="0" class="o-button o-button--danger"><span class="o-button__wrapper"><span data-oruga="icon" class="o-icon o-button__icon o-button__icon-left"><i class="mdi mdi-close mdi-24px"></i></span><span class="o-button__label">Reject</span>
+                    <!----></span>
+                  </button>
+                </div>
+              </td>
+              <!---->
+            </tr>
+            <!---->
+            <tr class="" draggable="false" aria-rowindex="3">
+              <!---->
+              <!---->
+              <td class="o-table__td" data-label="Follower">
+                <article class="flex gap-1"><span aria-hidden="true" class="material-design-icon account-circle-icon" role="img"><svg fill="currentColor" class="material-design-icon__svg" width="48" height="48" viewBox="0 0 24 24"><path d="M12,19.2C9.5,19.2 7.29,17.92 6,16C6.03,14 10,12.9 12,12.9C14,12.9 17.97,14 18,16C16.71,17.92 14.5,19.2 12,19.2M12,5A3,3 0 0,1 15,8A3,3 0 0,1 12,11A3,3 0 0,1 9,8A3,3 0 0,1 12,5M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12C22,6.47 17.5,2 12,2Z"><!--v-if--></path></svg></span>
+                  <div class="">
+                    <div class=""><span>Test</span><br><span class="">@test</span></div>
+                  </div>
+                </article>
+              </td>
+              <td class="o-table__td" data-label="Date"><span class="has-text-centered">Wednesday, November 12, 2025<br>12:04 PM</span></td>
+              <td class="o-table__td" data-label="Actions">
+                <div class="flex gap-2">
+                  <!--v-if--><button data-oruga="button" type="button" role="button" tabindex="0" class="o-button o-button--danger"><span class="o-button__wrapper"><span data-oruga="icon" class="o-icon o-button__icon o-button__icon-left"><i class="mdi mdi-close mdi-24px"></i></span><span class="o-button__label">Reject</span>
+                    <!----></span>
+                  </button>
+                </div>
+              </td>
+              <!---->
+            </tr>
+            <!---->
+            <!---->
+          </tbody>
+          <!---->
+        </table>
+        <transition-stub name="fade" appear="false" persisted="false" css="true">
+          <!---->
+        </transition-stub>
+      </div>
+      <div class="o-table__pagination">
+        <div></div>
+        <div>
+          <nav data-oruga="pagination" class="o-pagination o-pagination--right o-pagination--right o-pagination--small o-pagination--simple"><button type="button" role="button" disabled="" class="o-pagination__button-previous o-pagination__button--disabled o-pagination__button" aria-label="Previous page" aria-current="false"><span data-oruga="icon" class="o-icon" aria-hidden="true"><i class="mdi mdi-chevron-left mdi-24px"></i></span></button><button type="button" role="button" disabled="" class="o-pagination__button-next o-pagination__button--disabled o-pagination__button" aria-label="Next page" aria-current="false"><span data-oruga="icon" class="o-icon" aria-hidden="true"><i class="mdi mdi-chevron-right mdi-24px"></i></span></button><small class="o-pagination__info">1-2 / 2</small></nav>
+        </div>
+      </div>
+    </div>
+  </section>
 </div>"
 `;

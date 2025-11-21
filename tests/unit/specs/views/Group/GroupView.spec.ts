@@ -5,7 +5,11 @@ import { createRouter, createWebHistory, Router } from "vue-router";
 import { config, mount } from "@vue/test-utils";
 import { Oruga } from "@oruga-ui/oruga-next";
 import flushPromises from "flush-promises";
-import { getMockClient, requestHandlers } from "../../mocks/client";
+import {
+  createMockIntersectionObserver,
+  getMockClient,
+  requestHandlers,
+} from "../../mocks/client";
 import { htmlRemoveId } from "../../common";
 import GroupView from "@/views/Group/GroupView.vue";
 import { FETCH_GROUP_PUBLIC } from "@/graphql/group";
@@ -33,9 +37,46 @@ beforeEach(async () => {
   // await router.isReady();
 });
 
+const mock_group = {
+  data: {
+    group: {
+      __typename: "Group",
+      avatar: null,
+      banner: null,
+      domain: null,
+      id: "123",
+      manuallyApprovesFollowers: true,
+      allowSeeParticipants: false,
+      members: {
+        __typename: "PaginatedMemberList",
+        total: 1,
+      },
+      name: "ssss",
+      openness: "MODERATED",
+      organizedEvents: {
+        __typename: "PaginatedEventList",
+        elements: [],
+        total: 0,
+      },
+      physicalAddress: null,
+      posts: {
+        __typename: "PaginatedPostList",
+        elements: [],
+        total: 0,
+      },
+      preferredUsername: "example",
+      summary: null,
+      suspended: false,
+      type: "GROUP",
+      url: "https://mobilizon.test/@example",
+      visibility: "PUBLIC",
+    },
+  },
+};
+
 const generateWrapper = () => {
   const global_data = getMockClient([
-    FETCH_GROUP_PUBLIC,
+    [FETCH_GROUP_PUBLIC, mock_group],
     JOIN_GROUP,
     GROUP_MEMBERSHIP_SUBSCRIPTION_CHANGED,
     PERSON_STATUS_GROUP,

@@ -3,23 +3,265 @@
 exports[`GroupView > Show simple 1`] = `
 "<div data-v-63850a71="" class="container mx-auto is-widescreen">
   <!--v-if-->
-  <transition-stub data-v-63850a71="" name="fade" appear="false" persisted="false" css="true">
-    <article data-oruga="notification" class="o-notification o-notification--danger o-notification--top">
-      <!---->
-      <div class="o-notification__wrapper">
-        <!---->
-        <div class="o-notification__content">No group found</div>
+  <!--v-if-->
+  <div data-v-63850a71="" class="header flex flex-col">
+    <breadcrumbs-nav data-v-63850a71="" links="[object Object],[object Object]"></breadcrumbs-nav>
+    <header data-v-63850a71="" class="block-container presentation">
+      <div data-v-63850a71="" class="banner-container">
+        <div data-v-63850a71="" class="flex-1">
+          <div class="h-full w-full max-w-100 min-h-[10rem]">
+            <!-- Show the placeholder as background --><canvas width="32" height="32" class="transition-opacity duration-500 opacity-100"></canvas><!-- Show the real image on the top and fade in after loading --><img class="transition-opacity duration-500 rounded-lg object-cover mx-auto h-full opacity-0" alt="" src="/img/mobilizon_default_card.png" loading="lazy">
+          </div>
+        </div>
       </div>
-    </article>
-  </transition-stub>
-  <!--v-if-->
-  <!--v-if-->
-  <!--v-if-->
+      <div data-v-63850a71="" class="header flex flex-col">
+        <div data-v-63850a71="" class="flex self-center h-0 mt-4 items-end"><span data-v-63850a71="" aria-hidden="true" class="material-design-icon account-group-icon" role="img"><svg fill="currentColor" class="material-design-icon__svg" width="128" height="128" viewBox="0 0 24 24"><path d="M12,5.5A3.5,3.5 0 0,1 15.5,9A3.5,3.5 0 0,1 12,12.5A3.5,3.5 0 0,1 8.5,9A3.5,3.5 0 0,1 12,5.5M5,8C5.56,8 6.08,8.15 6.53,8.42C6.38,9.85 6.8,11.27 7.66,12.38C7.16,13.34 6.16,14 5,14A3,3 0 0,1 2,11A3,3 0 0,1 5,8M19,8A3,3 0 0,1 22,11A3,3 0 0,1 19,14C17.84,14 16.84,13.34 16.34,12.38C17.2,11.27 17.62,9.85 17.47,8.42C17.92,8.15 18.44,8 19,8M5.5,18.25C5.5,16.18 8.41,14.5 12,14.5C15.59,14.5 18.5,16.18 18.5,18.25V20H5.5V18.25M0,20V18.5C0,17.11 1.89,15.94 4.45,15.6C3.86,16.28 3.5,17.22 3.5,18.25V20H0M24,20H20.5V18.25C20.5,17.22 20.14,16.28 19.55,15.6C22.11,15.94 24,17.11 24,18.5V20Z"><!--v-if--></path></svg></span></div>
+        <div data-v-63850a71="" class="title-container flex flex-1 flex-col text-center">
+          <h1 data-v-63850a71="" class="m-1">ssss</h1><span data-v-63850a71="" dir="ltr" class="m-1">@example</span>
+        </div>
+        <div data-v-63850a71="" class="flex flex-wrap justify-center flex-col md:flex-row">
+          <div data-v-63850a71="" class="flex flex-wrap gap-3 justify-center">
+            <!--v-if-->
+            <!--v-if-->
+            <div data-v-63850a71="" data-oruga="dropdown" class="o-dropdown o-dropdown--position-bottom-left" aria-role="list">
+              <div class="o-dropdown__trigger" aria-haspopup="menu" aria-disabled="false" aria-controls="v-0-0"><button data-v-63850a71="" data-oruga="button" type="button" role="button" tabindex="0" class="o-button o-button--primary"><span class="o-button__wrapper"><span data-oruga="icon" class="o-icon o-button__icon o-button__icon-left"><i class="mdi mdi-rss mdi-24px"></i></span><span class="o-button__label">Follow</span><span data-oruga="icon" class="o-icon o-button__icon o-button__icon-right"><i class="mdi mdi-menu-down mdi-24px"></i></span></span></button></div>
+              <!--teleport start-->
+              <!---->
+              <transition-stub name="fade" appear="false" persisted="false" css="true">
+                <div id="v-0-0" tabindex="-1" class="o-dropdown__menu o-dropdown__menu--bottom-left" role="menu" aria-hidden="true" style="display: none;">
+                  <div data-v-63850a71="" id="v-0-0-1" data-oruga="dropdown-item" data-id="dropdown-1" class="o-dropdown__item o-dropdown__item--clickable p-0" role="menuitem" tabindex="-1" aria-disabled="false" aria-role="listitem" custom="" focusable="false"><button data-v-63850a71="" class="flex gap-1 text-start py-4 px-2 w-full"><span data-v-63850a71="" aria-hidden="true" class="material-design-icon rss-icon" role="img"><svg fill="currentColor" class="material-design-icon__svg" width="24" height="24" viewBox="0 0 24 24"><path d="M6.18,15.64A2.18,2.18 0 0,1 8.36,17.82C8.36,19 7.38,20 6.18,20C5,20 4,19 4,17.82A2.18,2.18 0 0,1 6.18,15.64M4,4.44A15.56,15.56 0 0,1 19.56,20H16.73A12.73,12.73 0 0,0 4,7.27V4.44M4,10.1A9.9,9.9 0 0,1 13.9,20H11.07A7.07,7.07 0 0,0 4,12.93V10.1Z"><!--v-if--></path></svg></span>
+                      <div data-v-63850a71="" class="pl-2">
+                        <h3 data-v-63850a71="" class="font-medium text-lg">Follow</h3>
+                        <p data-v-63850a71="" class="whitespace-normal md:whitespace-nowrap text-sm">Get informed of the upcoming public events</p>
+                        <p data-v-63850a71="" class="whitespace-normal md:whitespace-nowrap text-sm italic">Follow requests will be approved by a group moderator</p>
+                        <!--v-if-->
+                      </div>
+                    </button></div>
+                  <div data-v-63850a71="" id="v-0-0-2" data-oruga="dropdown-item" data-id="dropdown-2" class="o-dropdown__item o-dropdown__item--clickable p-0 border-t border-solid" role="menuitem" tabindex="-1" aria-disabled="false" aria-role="listitem" custom="" focusable="false"><button data-v-63850a71="" class="flex gap-1 text-start py-4 px-2 w-full"><span data-v-63850a71="" aria-hidden="true" class="material-design-icon account-multiple-plus-icon" role="img"><svg fill="currentColor" class="material-design-icon__svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 17V19H7V17S7 13 13 13 19 17 19 17M16 8A3 3 0 1 0 13 11A3 3 0 0 0 16 8M19.2 13.06A5.6 5.6 0 0 1 21 17V19H24V17S24 13.55 19.2 13.06M18 5A2.91 2.91 0 0 0 17.11 5.14A5 5 0 0 1 17.11 10.86A2.91 2.91 0 0 0 18 11A3 3 0 0 0 18 5M8 10H5V7H3V10H0V12H3V15H5V12H8Z"><!--v-if--></path></svg></span>
+                      <div data-v-63850a71="" class="pl-2">
+                        <h3 data-v-63850a71="" class="font-medium text-lg">Join</h3>
+                        <div data-v-63850a71="">
+                          <p data-v-63850a71="" class="whitespace-normal md:whitespace-nowrap text-sm">Become part of the community and start organizing events</p>
+                          <!--v-if-->
+                          <p data-v-63850a71="" class="whitespace-normal md:whitespace-nowrap text-sm italic">Membership requests will be approved by a group moderator</p>
+                          <!--v-if-->
+                        </div>
+                      </div>
+                    </button></div>
+                </div>
+              </transition-stub>
+              <!--teleport end-->
+            </div>
+            <!--v-if-->
+            <!--v-if-->
+            <!--v-if-->
+            <!--v-if--><a data-v-63850a71="" href="/conversations?newMessage=true&amp;groupMentions=example" class="o-button o-button--outlined" data-oruga="button" role="button" tabindex="0"><span class="o-button__wrapper"><span data-oruga="icon" class="o-icon o-button__icon o-button__icon-left"><i class="mdi mdi-email mdi-24px"></i></span><span class="o-button__label">Contact</span>
+              <!----></span>
+            </a><button data-v-63850a71="" data-oruga="button" type="button" role="button" tabindex="0" class="o-button o-button--outlined"><span class="o-button__wrapper"><span data-oruga="icon" class="o-icon o-button__icon o-button__icon-left"><i class="mdi mdi-share mdi-24px"></i></span><span class="o-button__label">Share</span>
+              <!----></span>
+            </button>
+            <div data-v-63850a71="" data-oruga="tooltip" class="o-tooltip">
+              <div class="o-tooltip__trigger" aria-haspopup="true" aria-describedby="v-0-3"></div>
+              <!--teleport start-->
+              <transition-stub name="fade" appear="false" persisted="false" css="true">
+                <div id="v-0-3" class="o-tooltip__content o-tooltip__content--right o-tooltip__content--success" role="tooltip" style="display: none;"><span class="o-tooltip__arrow o-tooltip__arrow--right o-tooltip__arrow--success"></span>URL copied to clipboard</div>
+              </transition-stub>
+              <!--teleport end-->
+            </div>
+            <div data-v-63850a71="" data-oruga="dropdown" class="o-dropdown o-dropdown--position-bottom-left" aria-role="list">
+              <div class="o-dropdown__trigger" aria-haspopup="menu" aria-disabled="false" aria-controls="v-0-4"><button data-v-63850a71="" data-oruga="button" type="button" role="button" tabindex="0" class="o-button o-button--outlined" aria-label="Other actions"><span class="o-button__wrapper"><span data-oruga="icon" class="o-icon o-button__icon o-button__icon-left"><i class="mdi mdi-dots-horizontal mdi-24px"></i></span>
+                  <!---->
+                  <!----></span>
+                </button></div>
+              <!--teleport start-->
+              <!---->
+              <transition-stub name="fade" appear="false" persisted="false" css="true">
+                <div id="v-0-4" tabindex="-1" class="o-dropdown__menu o-dropdown__menu--bottom-left" role="menu" aria-hidden="true" style="display: none;">
+                  <!--v-if-->
+                  <!--v-if-->
+                  <!--v-if-->
+                  <div data-v-63850a71="" id="v-0-4-1" data-oruga="dropdown-item" data-id="dropdown-1" class="o-dropdown__item o-dropdown__item--clickable" role="menuitem" tabindex="-1" aria-disabled="false" has-link="" aria-role="menuitem"><a data-v-63850a71="" href="http://localhost:3000/@my-group/feed/atom" title="Atom feed for events and posts" class="inline-flex gap-1"><span data-v-63850a71="" aria-hidden="true" class="material-design-icon rss-icon" role="img"><svg fill="currentColor" class="material-design-icon__svg" width="24" height="24" viewBox="0 0 24 24"><path d="M6.18,15.64A2.18,2.18 0 0,1 8.36,17.82C8.36,19 7.38,20 6.18,20C5,20 4,19 4,17.82A2.18,2.18 0 0,1 6.18,15.64M4,4.44A15.56,15.56 0 0,1 19.56,20H16.73A12.73,12.73 0 0,0 4,7.27V4.44M4,10.1A9.9,9.9 0 0,1 13.9,20H11.07A7.07,7.07 0 0,0 4,12.93V10.1Z"><!--v-if--></path></svg></span> RSS/Atom Feed</a></div>
+                  <div data-v-63850a71="" id="v-0-4-2" data-oruga="dropdown-item" data-id="dropdown-2" class="o-dropdown__item o-dropdown__item--clickable" role="menuitem" tabindex="-1" aria-disabled="false" has-link="" aria-role="menuitem"><a data-v-63850a71="" href="http://localhost:3000/@my-group/feed/ics" title="ICS feed for events" class="inline-flex gap-1"><span data-v-63850a71="" aria-hidden="true" class="material-design-icon calendar-sync-icon" role="img"><svg fill="currentColor" class="material-design-icon__svg" width="24" height="24" viewBox="0 0 24 24"><path d="M18,11V12.5C21.19,12.5 23.09,16.05 21.33,18.71L20.24,17.62C21.06,15.96 19.85,14 18,14V15.5L15.75,13.25L18,11M18,22V20.5C14.81,20.5 12.91,16.95 14.67,14.29L15.76,15.38C14.94,17.04 16.15,19 18,19V17.5L20.25,19.75L18,22M19,3H18V1H16V3H8V1H6V3H5A2,2 0 0,0 3,5V19A2,2 0 0,0 5,21H14C13.36,20.45 12.86,19.77 12.5,19H5V8H19V10.59C19.71,10.7 20.39,10.94 21,11.31V5A2,2 0 0,0 19,3Z"><!--v-if--></path></svg></span> ICS/WebCal Feed</a></div>
+                  <hr data-v-63850a71="" role="presentation" class="dropdown-divider">
+                  <!--v-if-->
+                  <!--v-if-->
+                </div>
+              </transition-stub>
+              <!--teleport end-->
+            </div>
+          </div>
+        </div>
+        <!--v-if-->
+        <!--v-if-->
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+    </header>
+  </div>
+  <div data-v-63850a71="" class="grid grid-cols-1 md:grid-cols-3 gap-2 mb-2">
+    <!-- Public thing: Members -->
+    <section data-v-63850a71="" class="flex flex-col border-2 border-yellow-1 rounded-lg">
+      <div class="flex items-stretch py-3 px-1 bg-yellow-1 text-violet-title">
+        <div class="flex flex-1 gap-1"><span data-oruga="icon" class="o-icon"><i class="mdi mdi-account-group 36"></i></span>
+          <h2 class="text-2xl font-medium mt-0">Members</h2>
+        </div>
+        <!--v-if-->
+      </div>
+      <div class="flex-1 min-h-40">
+        <div data-v-63850a71="" class="flex flex-col justify-center h-full">
+          <!--v-if-->
+          <div data-v-63850a71="" class="">
+            <h2 data-v-63850a71="" class="text-center">1 members</h2>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-wrap justify-end p-2"></div>
+    </section><!-- Public thing: About -->
+    <section data-v-63850a71="" class="flex flex-col border-2 border-yellow-1 rounded-lg">
+      <div class="flex items-stretch py-3 px-1 bg-yellow-1 text-violet-title">
+        <div class="flex flex-1 gap-1"><span data-oruga="icon" class="o-icon"><i class="mdi mdi-information 36"></i></span>
+          <h2 class="text-2xl font-medium mt-0">About</h2>
+        </div>
+        <!--v-if-->
+      </div>
+      <div class="flex-1 min-h-40">
+        <div data-v-63850a71="" class="flex flex-col items-center mt-20 mb-10 text-center" role="note"><span data-oruga="icon" class="o-icon"><i class="mdi mdi-information 48"></i></span>
+          <h2 class="mb-3">
+            <!-- @slot Mandatory title -->No about content yet
+          </h2>
+          <p class="" style="display: none;">
+            <!-- @slot Optional description -->
+          </p>
+        </div>
+      </div>
+      <div class="flex flex-wrap justify-end p-2"></div>
+    </section><!-- Public thing: Location -->
+    <section data-v-63850a71="" class="flex flex-col border-2 border-yellow-1 rounded-lg">
+      <div class="flex items-stretch py-3 px-1 bg-yellow-1 text-violet-title">
+        <div class="flex flex-1 gap-1"><span data-oruga="icon" class="o-icon"><i class="mdi mdi-earth 36"></i></span>
+          <h2 class="text-2xl font-medium mt-0">Location</h2>
+        </div>
+        <!--v-if-->
+      </div>
+      <div class="flex-1 min-h-40">
+        <div data-v-63850a71="" class="flex flex-col items-center mt-20 mb-10 text-center" role="note"><span data-oruga="icon" class="o-icon"><i class="mdi mdi-earth 48"></i></span>
+          <h2 class="mb-3">
+            <!-- @slot Mandatory title -->No location yet
+          </h2>
+          <p class="" style="display: none;">
+            <!-- @slot Optional description -->
+          </p>
+        </div>
+      </div>
+      <div class="flex flex-wrap justify-end p-2"></div>
+    </section>
+  </div>
+  <div data-v-63850a71="">
+    <div data-v-63850a71="" class="grid grid-cols-1 gap-2 mb-2 md:grid-cols-2">
+      <!-- Public thing: Long Events -->
+      <!--v-if-->
+      <!-- Public thing: Events -->
+      <section data-v-63850a71="" class="flex flex-col border-2 border-yellow-1 rounded-lg">
+        <div class="flex items-stretch py-3 px-1 bg-yellow-1 text-violet-title">
+          <div class="flex flex-1 gap-1"><span data-oruga="icon" class="o-icon"><i class="mdi mdi-calendar 36"></i></span>
+            <h2 class="text-2xl font-medium mt-0">Events</h2>
+          </div><a href="/@example/events" class="self-center">View all</a>
+        </div>
+        <div class="flex-1 min-h-40">
+          <div class="flex flex-col items-center mt-20 mb-10" role="note"><span data-oruga="icon" class="o-icon"><i class="mdi mdi-calendar 48"></i></span>
+            <h2 class="mb-3">
+              <!-- @slot Mandatory title -->No public upcoming events
+            </h2>
+            <p class="" style="display: none;">
+              <!-- @slot Optional description -->
+            </p>
+          </div><!-- <o-skeleton animated v-else></o-skeleton> -->
+        </div>
+        <div class="flex flex-wrap justify-end p-2"><a href="/@example/events?showPassedEvents=true" class="o-button o-button--text button" data-oruga="button" role="button" tabindex="0"><span class="o-button__wrapper"><!----><span class="o-button__label">Past events</span>
+            <!----></span>
+          </a>
+          <!--v-if-->
+        </div>
+      </section><!-- Public thing: Posts -->
+      <section data-v-63850a71="" class="flex flex-col border-2 border-yellow-1 rounded-lg">
+        <div class="flex items-stretch py-3 px-1 bg-yellow-1 text-violet-title">
+          <div class="flex flex-1 gap-1"><span data-oruga="icon" class="o-icon"><i class="mdi mdi-bullhorn 36"></i></span>
+            <h2 class="text-2xl font-medium mt-0">Announcements</h2>
+          </div><a href="/@example/p" class="self-center">View all</a>
+        </div>
+        <div class="flex-1 min-h-40">
+          <div class="p-2">
+            <div class="flex flex-col items-center mt-20 mb-10" role="note"><span data-oruga="icon" class="o-icon"><i class="mdi mdi-bullhorn 48"></i></span>
+              <h2 class="mb-3">
+                <!-- @slot Mandatory title -->No posts yet
+              </h2>
+              <p class="" style="display: none;">
+                <!-- @slot Optional description -->
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-wrap justify-end p-2"></div>
+      </section>
+    </div>
+    <div data-v-63850a71="" class="grid grid-cols-1 gap-2 mb-2 md:grid-cols-2">
+      <!-- Private thing: Group discussions -->
+      <!--v-if-->
+      <!-- Private thing: Resources -->
+      <!--v-if-->
+    </div>
+  </div>
   <div data-v-63850a71="" class="my-2">
     <!--v-if-->
   </div>
-  <!--v-if-->
-  <!--v-if-->
-  <!--v-if-->
+  <div data-v-63850a71="" class="public-container flex flex-col">
+    <!--v-if-->
+  </div>
+  <!--teleport start-->
+  <transition-stub name="zoom-out" appear="false" persisted="false" css="true">
+    <div data-oruga="modal" class="o-modal" tabindex="-1" role="dialog" aria-modal="false" style="display: none;">
+      <div class="o-modal__overlay" tabindex="-1"></div>
+      <div class="o-modal__content" style="max-width: 960px;">
+        <div data-v-e0cceef3="" data-v-63850a71="" class="p-2">
+          <header data-v-e0cceef3="" class="mb-3">
+            <h2 data-v-e0cceef3="" class="text-2xl">Report this group</h2>
+          </header>
+          <section data-v-e0cceef3="">
+            <div data-v-e0cceef3="" class="flex gap-1 flex-row mb-3 bg-mbz-yellow dark:text-black p-3 rounded items-center"><span data-v-e0cceef3="" data-oruga="icon" class="o-icon o-icon--warning hidden md:block flex-1"><i class="mdi mdi-alert 48"></i></span>
+              <p data-v-e0cceef3="">The report will be sent to the moderators of your instance. You can explain why you report this content below.</p>
+            </div>
+            <div data-v-e0cceef3="">
+              <!--v-if-->
+              <div data-v-e0cceef3="" data-oruga="field" class="o-field"><label id="v-0-7" for="additional-comments" class="o-field__label">Additional comments</label>
+                <div data-v-e0cceef3="" data-oruga="input" class="o-input o-input--expanded o-input--textarea">
+                  <!----><textarea aria-labelledby="v-0-7" autofocus="" id="additional-comments" data-oruga-input="textarea" class="o-input__input o-input__input--placeholder"></textarea>
+                  <!---->
+                  <!---->
+                </div>
+                <!---->
+              </div>
+              <!--v-if-->
+            </div>
+          </section>
+          <footer data-v-e0cceef3="" class="flex gap-2 py-3"><button data-v-e0cceef3="" data-oruga="button" type="button" role="button" tabindex="0" class="o-button o-button--outlined"><span class="o-button__wrapper"><!----><span class="o-button__label">Cancel</span>
+              <!----></span>
+            </button><button data-v-e0cceef3="" data-oruga="button" type="button" role="button" tabindex="0" class="o-button o-button--primary"><span class="o-button__wrapper"><!----><span class="o-button__label">Send the report</span>
+              <!----></span>
+            </button></footer>
+        </div><button type="button" class="o-modal__close" aria-label="Close" data-oruga="close" style="display: none;"><span data-oruga="icon" class="o-icon o-icon--medium"><i class="mdi mdi-close mdi-36px"></i></span></button>
+      </div>
+    </div>
+  </transition-stub>
+  <!--teleport end-->
+  <!--teleport start-->
+  <transition-stub name="zoom-out" appear="false" persisted="false" css="true">
+    <div data-oruga="modal" class="o-modal" tabindex="-1" role="dialog" aria-modal="false" style="display: none;">
+      <div class="o-modal__overlay" tabindex="-1"></div>
+      <div class="o-modal__content" style="max-width: 960px;">
+        <!----><button type="button" class="o-modal__close" aria-label="Close" data-oruga="close" style="display: none;"><span data-oruga="icon" class="o-icon o-icon--medium"><i class="mdi mdi-close mdi-36px"></i></span></button>
+      </div>
+    </div>
+  </transition-stub>
+  <!--teleport end-->
 </div>"
 `;

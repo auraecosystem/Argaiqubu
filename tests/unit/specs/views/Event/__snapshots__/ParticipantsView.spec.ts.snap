@@ -1,0 +1,331 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ParticipantsView > Show event's group / user admin 1`] = `
+"<section data-v-6bee7c76="" class="container mx-auto">
+  <breadcrumbs-nav data-v-6bee7c76="" links="[object Object],[object Object],[object Object]"></breadcrumbs-nav>
+  <h1 data-v-6bee7c76="">Participants</h1>
+  <div data-v-6bee7c76="" class="">
+    <div data-v-6bee7c76="" class="">
+      <div data-v-6bee7c76="" class="">
+        <div data-v-6bee7c76="" data-oruga="field" class="o-field o-field--horizontal">
+          <div class="o-field__horizontal-label"><label id="v-0-0" for="role-select" class="o-field__label">Status</label></div>
+          <div class="o-field__horizontal-body">
+            <div data-oruga="field" class="o-field o-field--filled">
+              <!---->
+              <div data-v-6bee7c76="" data-oruga="select" class="o-select">
+                <!----><select aria-labelledby="v-0-0" id="role-select" data-oruga-input="select" class="o-select__input o-select__input--arrowed" autocomplete="off">
+                  <!---->
+                  <option data-v-6bee7c76="" value="EVERYTHING">Everything</option>
+                  <option data-v-6bee7c76="" value="CREATOR">Organizer</option>
+                  <option data-v-6bee7c76="" value="PARTICIPANT">Participant</option>
+                  <option data-v-6bee7c76="" value="NOT_APPROVED">Not approved</option>
+                  <option data-v-6bee7c76="" value="REJECTED">Rejected</option>
+                </select>
+                <!---->
+              </div>
+              <!---->
+            </div>
+          </div>
+          <!---->
+        </div>
+      </div>
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-v-6bee7c76="" data-oruga="table" class="o-table__root">
+    <div style="display: none;"><span data-v-6bee7c76="" data-oruga="table-column" data-id="table-1">Participant <!----></span><span data-v-6bee7c76="" data-oruga="table-column" data-id="table-2">Role <!----></span><span data-v-6bee7c76="" data-oruga="table-column" data-id="table-3" class="column-message">Message <!----></span><span data-v-6bee7c76="" data-oruga="table-column" data-id="table-4">Date <!----></span></div>
+    <!---->
+    <!---->
+    <div class="o-table__wrapper">
+      <table detail-key="id" class="o-table" aria-rowcount="1" aria-colcount="5">
+        <!---->
+        <thead>
+          <tr aria-rowindex="1">
+            <!---->
+            <th class="o-table__th o-table__th-checkbox" aria-colindex="1">
+              <div data-oruga="checkbox" class="o-checkbox o-checkbox--disabled"><input aria-label="Check all" id="v-0-2" type="checkbox" data-oruga-input="checkbox" class="o-checkbox__input" name="row_check_all" true-value="true" false-value="false" disabled="" autocomplete="off" aria-checked="false">
+                <!---->
+              </div>
+            </th>
+            <th class="o-table__th" draggable="false" aria-colindex="2"><span class="o-table__th__label">Participant</span>
+              <!---->
+            </th>
+            <th class="o-table__th" draggable="false" aria-colindex="3"><span class="o-table__th__label">Role</span>
+              <!---->
+            </th>
+            <th class="o-table__th" draggable="false" aria-colindex="4"><span class="o-table__th__label">Message</span>
+              <!---->
+            </th>
+            <th class="o-table__th" draggable="false" aria-colindex="5"><span class="o-table__th__label">Date</span>
+              <!---->
+            </th>
+            <!---->
+          </tr>
+          <!---->
+          <!---->
+        </thead>
+        <tbody>
+          <tr class="" draggable="false" aria-rowindex="2">
+            <!---->
+            <td class="o-table__td o-table__td-checkbox">
+              <div data-oruga="checkbox" class="o-checkbox o-checkbox--disabled"><input aria-label="Check row 0" id="v-0-3" type="checkbox" data-oruga-input="checkbox" class="o-checkbox__input" name="row_0_check" true-value="true" false-value="false" disabled="" autocomplete="off" aria-checked="false">
+                <!---->
+              </div>
+            </td>
+            <td class="o-table__td" data-label="Participant">
+              <article data-v-6bee7c76="" class="flex gap-2"><span data-v-6bee7c76="" aria-hidden="true" class="material-design-icon account-circle-icon" role="img"><svg fill="currentColor" class="material-design-icon__svg" width="48" height="48" viewBox="0 0 24 24"><path d="M12,19.2C9.5,19.2 7.29,17.92 6,16C6.03,14 10,12.9 12,12.9C14,12.9 17.97,14 18,16C16.71,17.92 14.5,19.2 12,19.2M12,5A3,3 0 0,1 15,8A3,3 0 0,1 12,11A3,3 0 0,1 9,8A3,3 0 0,1 12,5M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12C22,6.47 17.5,2 12,2Z"><!--v-if--></path></svg></span>
+                <div data-v-6bee7c76="">
+                  <div data-v-6bee7c76="" class="prose dark:prose-invert">
+                    <p data-v-6bee7c76=""><span data-v-6bee7c76="">test</span><br data-v-6bee7c76=""><span data-v-6bee7c76="" class="text-sm">@test</span></p>
+                  </div>
+                </div>
+              </article>
+            </td>
+            <td class="o-table__td" data-label="Role"><span data-v-6955ca87="" data-v-6bee7c76="" class="rounded-md truncate text-sm text-black px-2 py-1 bg-purple-3 dark:text-violet-3">Organizer</span></td>
+            <td class="o-table__td" data-label="Message">
+              <p data-v-6bee7c76="" class="has-text-grey-dark">No message</p>
+            </td>
+            <td class="o-table__td" data-label="Date"><span data-v-6bee7c76="" class="text-center">Wednesday, November 12, 2025<br data-v-6bee7c76="">3:51 PM</span></td>
+            <!---->
+          </tr>
+          <transition-group-stub name="slide" appear="false" persisted="false" css="true">
+            <!---->
+          </transition-group-stub>
+          <!---->
+        </tbody>
+        <!---->
+      </table>
+      <transition-stub name="fade" appear="false" persisted="false" css="true">
+        <!---->
+      </transition-stub>
+    </div>
+    <div class="o-table__pagination">
+      <div></div>
+      <div>
+        <nav data-oruga="pagination" class="o-pagination o-pagination--right o-pagination--right o-pagination--small o-pagination--simple"><button type="button" role="button" disabled="" class="o-pagination__button-previous o-pagination__button--disabled o-pagination__button" aria-label="Previous page" aria-current="false"><span data-oruga="icon" class="o-icon" aria-hidden="true"><i class="mdi mdi-chevron-left mdi-24px"></i></span></button><button type="button" role="button" disabled="" class="o-pagination__button-next o-pagination__button--disabled o-pagination__button" aria-label="Next page" aria-current="false"><span data-oruga="icon" class="o-icon" aria-hidden="true"><i class="mdi mdi-chevron-right mdi-24px"></i></span></button><small class="o-pagination__info">1-0 / 0</small></nav>
+      </div>
+    </div>
+  </div>
+  <div data-v-6bee7c76="" class="flex flex-wrap gap-2"><button data-v-6bee7c76="" data-oruga="button" type="button" role="button" tabindex="0" class="o-button o-button--outlined-success"><span class="o-button__wrapper"><!----><span class="o-button__label">No participant to approve</span>
+      <!----></span>
+    </button><button data-v-6bee7c76="" data-oruga="button" type="button" role="button" tabindex="0" class="o-button o-button--outlined-danger"><span class="o-button__wrapper"><!----><span class="o-button__label">No participant to reject</span>
+      <!----></span>
+    </button></div>
+</section>"
+`;
+
+exports[`ParticipantsView > Show event's group / user member 1`] = `
+"<section data-v-6bee7c76="" class="container mx-auto">
+  <breadcrumbs-nav data-v-6bee7c76="" links="[object Object],[object Object],[object Object]"></breadcrumbs-nav>
+  <h1 data-v-6bee7c76="">Participants</h1>
+  <div data-v-6bee7c76="" class="">
+    <div data-v-6bee7c76="" class="">
+      <div data-v-6bee7c76="" class="">
+        <div data-v-6bee7c76="" data-oruga="field" class="o-field o-field--horizontal">
+          <div class="o-field__horizontal-label"><label id="v-0-0" for="role-select" class="o-field__label">Status</label></div>
+          <div class="o-field__horizontal-body">
+            <div data-oruga="field" class="o-field o-field--filled">
+              <!---->
+              <div data-v-6bee7c76="" data-oruga="select" class="o-select">
+                <!----><select aria-labelledby="v-0-0" id="role-select" data-oruga-input="select" class="o-select__input o-select__input--arrowed" autocomplete="off">
+                  <!---->
+                  <option data-v-6bee7c76="" value="EVERYTHING">Everything</option>
+                  <option data-v-6bee7c76="" value="CREATOR">Organizer</option>
+                  <option data-v-6bee7c76="" value="PARTICIPANT">Participant</option>
+                  <option data-v-6bee7c76="" value="NOT_APPROVED">Not approved</option>
+                  <option data-v-6bee7c76="" value="REJECTED">Rejected</option>
+                </select>
+                <!---->
+              </div>
+              <!---->
+            </div>
+          </div>
+          <!---->
+        </div>
+      </div>
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-v-6bee7c76="" data-oruga="table" class="o-table__root">
+    <div style="display: none;"><span data-v-6bee7c76="" data-oruga="table-column" data-id="table-1">Participant <!----></span><span data-v-6bee7c76="" data-oruga="table-column" data-id="table-2">Role <!----></span><span data-v-6bee7c76="" data-oruga="table-column" data-id="table-3" class="column-message">Message <!----></span><span data-v-6bee7c76="" data-oruga="table-column" data-id="table-4">Date <!----></span></div>
+    <!---->
+    <!---->
+    <div class="o-table__wrapper">
+      <table detail-key="id" class="o-table" aria-rowcount="1" aria-colcount="4">
+        <!---->
+        <thead>
+          <tr aria-rowindex="1">
+            <!---->
+            <!---->
+            <th class="o-table__th" draggable="false" aria-colindex="1"><span class="o-table__th__label">Participant</span>
+              <!---->
+            </th>
+            <th class="o-table__th" draggable="false" aria-colindex="2"><span class="o-table__th__label">Role</span>
+              <!---->
+            </th>
+            <th class="o-table__th" draggable="false" aria-colindex="3"><span class="o-table__th__label">Message</span>
+              <!---->
+            </th>
+            <th class="o-table__th" draggable="false" aria-colindex="4"><span class="o-table__th__label">Date</span>
+              <!---->
+            </th>
+            <!---->
+          </tr>
+          <!---->
+          <!---->
+        </thead>
+        <tbody>
+          <tr class="" draggable="false" aria-rowindex="2">
+            <!---->
+            <!---->
+            <td class="o-table__td" data-label="Participant">
+              <article data-v-6bee7c76="" class="flex gap-2"><span data-v-6bee7c76="" aria-hidden="true" class="material-design-icon account-circle-icon" role="img"><svg fill="currentColor" class="material-design-icon__svg" width="48" height="48" viewBox="0 0 24 24"><path d="M12,19.2C9.5,19.2 7.29,17.92 6,16C6.03,14 10,12.9 12,12.9C14,12.9 17.97,14 18,16C16.71,17.92 14.5,19.2 12,19.2M12,5A3,3 0 0,1 15,8A3,3 0 0,1 12,11A3,3 0 0,1 9,8A3,3 0 0,1 12,5M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12C22,6.47 17.5,2 12,2Z"><!--v-if--></path></svg></span>
+                <div data-v-6bee7c76="">
+                  <div data-v-6bee7c76="" class="prose dark:prose-invert">
+                    <p data-v-6bee7c76=""><span data-v-6bee7c76="">test</span><br data-v-6bee7c76=""><span data-v-6bee7c76="" class="text-sm">@test</span></p>
+                  </div>
+                </div>
+              </article>
+            </td>
+            <td class="o-table__td" data-label="Role"><span data-v-6955ca87="" data-v-6bee7c76="" class="rounded-md truncate text-sm text-black px-2 py-1 bg-purple-3 dark:text-violet-3">Organizer</span></td>
+            <td class="o-table__td" data-label="Message">
+              <p data-v-6bee7c76="" class="has-text-grey-dark">No message</p>
+            </td>
+            <td class="o-table__td" data-label="Date"><span data-v-6bee7c76="" class="text-center">Wednesday, November 12, 2025<br data-v-6bee7c76="">3:51 PM</span></td>
+            <!---->
+          </tr>
+          <transition-group-stub name="slide" appear="false" persisted="false" css="true">
+            <!---->
+          </transition-group-stub>
+          <!---->
+        </tbody>
+        <!---->
+      </table>
+      <transition-stub name="fade" appear="false" persisted="false" css="true">
+        <!---->
+      </transition-stub>
+    </div>
+    <div class="o-table__pagination">
+      <div></div>
+      <div>
+        <nav data-oruga="pagination" class="o-pagination o-pagination--right o-pagination--right o-pagination--small o-pagination--simple"><button type="button" role="button" disabled="" class="o-pagination__button-previous o-pagination__button--disabled o-pagination__button" aria-label="Previous page" aria-current="false"><span data-oruga="icon" class="o-icon" aria-hidden="true"><i class="mdi mdi-chevron-left mdi-24px"></i></span></button><button type="button" role="button" disabled="" class="o-pagination__button-next o-pagination__button--disabled o-pagination__button" aria-label="Next page" aria-current="false"><span data-oruga="icon" class="o-icon" aria-hidden="true"><i class="mdi mdi-chevron-right mdi-24px"></i></span></button><small class="o-pagination__info">1-0 / 0</small></nav>
+      </div>
+    </div>
+  </div>
+  <!--v-if-->
+</section>"
+`;
+
+exports[`ParticipantsView > Show simple 1`] = `
+"<section data-v-6bee7c76="" class="container mx-auto">
+  <breadcrumbs-nav data-v-6bee7c76="" links="[object Object],[object Object],[object Object]"></breadcrumbs-nav>
+  <h1 data-v-6bee7c76="">Participants</h1>
+  <div data-v-6bee7c76="" class="">
+    <div data-v-6bee7c76="" class="">
+      <div data-v-6bee7c76="" class="">
+        <div data-v-6bee7c76="" data-oruga="field" class="o-field o-field--horizontal">
+          <div class="o-field__horizontal-label"><label id="v-0-0" for="role-select" class="o-field__label">Status</label></div>
+          <div class="o-field__horizontal-body">
+            <div data-oruga="field" class="o-field o-field--filled">
+              <!---->
+              <div data-v-6bee7c76="" data-oruga="select" class="o-select">
+                <!----><select aria-labelledby="v-0-0" id="role-select" data-oruga-input="select" class="o-select__input o-select__input--arrowed" autocomplete="off">
+                  <!---->
+                  <option data-v-6bee7c76="" value="EVERYTHING">Everything</option>
+                  <option data-v-6bee7c76="" value="CREATOR">Organizer</option>
+                  <option data-v-6bee7c76="" value="PARTICIPANT">Participant</option>
+                  <option data-v-6bee7c76="" value="NOT_APPROVED">Not approved</option>
+                  <option data-v-6bee7c76="" value="REJECTED">Rejected</option>
+                </select>
+                <!---->
+              </div>
+              <!---->
+            </div>
+          </div>
+          <!---->
+        </div>
+      </div>
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-v-6bee7c76="" data-oruga="table" class="o-table__root">
+    <div style="display: none;"><span data-v-6bee7c76="" data-oruga="table-column" data-id="table-1">Participant <!----></span><span data-v-6bee7c76="" data-oruga="table-column" data-id="table-2">Role <!----></span><span data-v-6bee7c76="" data-oruga="table-column" data-id="table-3" class="column-message">Message <!----></span><span data-v-6bee7c76="" data-oruga="table-column" data-id="table-4">Date <!----></span></div>
+    <!---->
+    <!---->
+    <div class="o-table__wrapper">
+      <table detail-key="id" class="o-table" aria-rowcount="1" aria-colcount="5">
+        <!---->
+        <thead>
+          <tr aria-rowindex="1">
+            <!---->
+            <th class="o-table__th o-table__th-checkbox" aria-colindex="1">
+              <div data-oruga="checkbox" class="o-checkbox o-checkbox--disabled"><input aria-label="Check all" id="v-0-2" type="checkbox" data-oruga-input="checkbox" class="o-checkbox__input" name="row_check_all" true-value="true" false-value="false" disabled="" autocomplete="off" aria-checked="false">
+                <!---->
+              </div>
+            </th>
+            <th class="o-table__th" draggable="false" aria-colindex="2"><span class="o-table__th__label">Participant</span>
+              <!---->
+            </th>
+            <th class="o-table__th" draggable="false" aria-colindex="3"><span class="o-table__th__label">Role</span>
+              <!---->
+            </th>
+            <th class="o-table__th" draggable="false" aria-colindex="4"><span class="o-table__th__label">Message</span>
+              <!---->
+            </th>
+            <th class="o-table__th" draggable="false" aria-colindex="5"><span class="o-table__th__label">Date</span>
+              <!---->
+            </th>
+            <!---->
+          </tr>
+          <!---->
+          <!---->
+        </thead>
+        <tbody>
+          <tr class="" draggable="false" aria-rowindex="2">
+            <!---->
+            <td class="o-table__td o-table__td-checkbox">
+              <div data-oruga="checkbox" class="o-checkbox o-checkbox--disabled"><input aria-label="Check row 0" id="v-0-3" type="checkbox" data-oruga-input="checkbox" class="o-checkbox__input" name="row_0_check" true-value="true" false-value="false" disabled="" autocomplete="off" aria-checked="false">
+                <!---->
+              </div>
+            </td>
+            <td class="o-table__td" data-label="Participant">
+              <article data-v-6bee7c76="" class="flex gap-2"><span data-v-6bee7c76="" aria-hidden="true" class="material-design-icon account-circle-icon" role="img"><svg fill="currentColor" class="material-design-icon__svg" width="48" height="48" viewBox="0 0 24 24"><path d="M12,19.2C9.5,19.2 7.29,17.92 6,16C6.03,14 10,12.9 12,12.9C14,12.9 17.97,14 18,16C16.71,17.92 14.5,19.2 12,19.2M12,5A3,3 0 0,1 15,8A3,3 0 0,1 12,11A3,3 0 0,1 9,8A3,3 0 0,1 12,5M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12C22,6.47 17.5,2 12,2Z"><!--v-if--></path></svg></span>
+                <div data-v-6bee7c76="">
+                  <div data-v-6bee7c76="" class="prose dark:prose-invert">
+                    <p data-v-6bee7c76=""><span data-v-6bee7c76="">test</span><br data-v-6bee7c76=""><span data-v-6bee7c76="" class="text-sm">@test</span></p>
+                  </div>
+                </div>
+              </article>
+            </td>
+            <td class="o-table__td" data-label="Role"><span data-v-6955ca87="" data-v-6bee7c76="" class="rounded-md truncate text-sm text-black px-2 py-1 bg-purple-3 dark:text-violet-3">Organizer</span></td>
+            <td class="o-table__td" data-label="Message">
+              <p data-v-6bee7c76="" class="has-text-grey-dark">No message</p>
+            </td>
+            <td class="o-table__td" data-label="Date"><span data-v-6bee7c76="" class="text-center">Wednesday, November 12, 2025<br data-v-6bee7c76="">3:51 PM</span></td>
+            <!---->
+          </tr>
+          <transition-group-stub name="slide" appear="false" persisted="false" css="true">
+            <!---->
+          </transition-group-stub>
+          <!---->
+        </tbody>
+        <!---->
+      </table>
+      <transition-stub name="fade" appear="false" persisted="false" css="true">
+        <!---->
+      </transition-stub>
+    </div>
+    <div class="o-table__pagination">
+      <div></div>
+      <div>
+        <nav data-oruga="pagination" class="o-pagination o-pagination--right o-pagination--right o-pagination--small o-pagination--simple"><button type="button" role="button" disabled="" class="o-pagination__button-previous o-pagination__button--disabled o-pagination__button" aria-label="Previous page" aria-current="false"><span data-oruga="icon" class="o-icon" aria-hidden="true"><i class="mdi mdi-chevron-left mdi-24px"></i></span></button><button type="button" role="button" disabled="" class="o-pagination__button-next o-pagination__button--disabled o-pagination__button" aria-label="Next page" aria-current="false"><span data-oruga="icon" class="o-icon" aria-hidden="true"><i class="mdi mdi-chevron-right mdi-24px"></i></span></button><small class="o-pagination__info">1-0 / 0</small></nav>
+      </div>
+    </div>
+  </div>
+  <div data-v-6bee7c76="" class="flex flex-wrap gap-2"><button data-v-6bee7c76="" data-oruga="button" type="button" role="button" tabindex="0" class="o-button o-button--outlined-success"><span class="o-button__wrapper"><!----><span class="o-button__label">No participant to approve</span>
+      <!----></span>
+    </button><button data-v-6bee7c76="" data-oruga="button" type="button" role="button" tabindex="0" class="o-button o-button--outlined-danger"><span class="o-button__wrapper"><!----><span class="o-button__label">No participant to reject</span>
+      <!----></span>
+    </button></div>
+</section>"
+`;

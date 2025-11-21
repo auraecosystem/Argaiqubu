@@ -6,14 +6,162 @@ exports[`GroupSettings > Show simple 1`] = `
   <transition-stub name="fade" appear="false" persisted="false" css="true">
     <!---->
   </transition-stub>
-  <transition-stub name="fade" appear="false" persisted="false" css="true">
-    <article data-oruga="notification" class="o-notification o-notification--top">
-      <!---->
-      <div class="o-notification__wrapper">
+  <section class="container mx-auto mb-6">
+    <form>
+      <div data-oruga="field" class="o-field o-field--filled"><label id="v-0-0" for="group-settings-name" class="o-field__label">Group name</label>
+        <div data-oruga="input" class="o-input o-input--expanded">
+          <!----><input aria-labelledby="v-0-0" id="group-settings-name" type="text" data-oruga-input="text" class="o-input__input" autocomplete="off">
+          <!---->
+          <!---->
+        </div>
         <!---->
-        <div class="o-notification__content">You are not an administrator for this group.</div>
       </div>
-    </article>
+      <div data-oruga="field" class="o-field"><label id="v-0-2" class="o-field__label">Group short description</label>
+        <!---->
+        <!---->
+      </div>
+      <div data-oruga="field" class="o-field"><label id="v-0-4" class="o-field__label">Avatar</label>
+        <div><label data-oruga="upload" class="o-upload !flex">
+            <div class="o-upload__draggable" role="button" tabindex="0">
+              <div class="w-100 text-center p-4 rounded-xl border-dashed border-2 border-gray-600"><span class="mx-auto flex w-fit"><span aria-hidden="true" class="material-design-icon upload-icon" role="img"><svg fill="currentColor" class="material-design-icon__svg" width="24" height="24" viewBox="0 0 24 24"><path d="M9,16V10H5L12,3L19,10H15V16H9M5,20V18H19V20H5Z"><!--v-if--></path></svg></span><span class="capitalize">Click to upload Avatar</span></span>
+                <!--v-if-->
+                <!--v-if-->
+              </div>
+            </div><input aria-labelledby="v-0-4" type="file" data-oruga-input="file" accept="image/gif,image/png,image/jpeg,image/webp">
+          </label></div>
+        <!--v-if-->
+        <!---->
+      </div>
+      <div data-oruga="field" class="o-field"><label id="v-0-6" class="o-field__label">Banner</label>
+        <div><label data-oruga="upload" class="o-upload !flex">
+            <div class="o-upload__draggable" role="button" tabindex="0">
+              <div class="w-100 text-center p-4 rounded-xl border-dashed border-2 border-gray-600"><span class="mx-auto flex w-fit"><span aria-hidden="true" class="material-design-icon upload-icon" role="img"><svg fill="currentColor" class="material-design-icon__svg" width="24" height="24" viewBox="0 0 24 24"><path d="M9,16V10H5L12,3L19,10H15V16H9M5,20V18H19V20H5Z"><!--v-if--></path></svg></span><span class="capitalize">Click to upload Banner</span></span>
+                <!--v-if-->
+                <!--v-if-->
+              </div>
+            </div><input aria-labelledby="v-0-6" type="file" data-oruga-input="file" accept="image/gif,image/png,image/jpeg,image/webp">
+          </label></div>
+        <!--v-if-->
+        <!---->
+      </div>
+      <p class="label">Group visibility</p>
+      <div class="field">
+        <div data-oruga="radio" class="o-radio o-radio--checked"><input id="v-0-8" type="radio" data-oruga-input="radio" class="o-radio__input" name="groupVisibility" autocomplete="off" aria-checked="true" aria-labelledby="v-0-9" value="PUBLIC"><label id="v-0-9" for="v-0-8" class="o-radio__label">Visible everywhere on the web<br><small>The group will be publicly listed in search results and may be suggested in the explore section. Only public informations will be shown on it's page.</small></label></div>
+      </div>
+      <div class="field">
+        <div data-oruga="radio" class="o-radio"><input id="v-0-10" type="radio" data-oruga-input="radio" class="o-radio__input" name="groupVisibility" autocomplete="off" aria-checked="false" aria-labelledby="v-0-11" value="UNLISTED"><label id="v-0-11" for="v-0-10" class="o-radio__label">Only accessible through link<br><small>You'll need to transmit the group URL so people may access the group's profile. The group won't be findable in Mobilizon's search or regular search engines.</small></label></div>
+        <p class="pl-6 flex items-center gap-2"><code>https://mobilizon.test/@example</code>
+          <!--v-if--><button data-oruga="button" type="button" role="button" tabindex="0" class="o-button o-button--primary" native-type="button"><span class="o-button__wrapper"><!----><!----><span data-oruga="icon" class="o-icon o-button__icon o-button__icon-right"><i class="mdi mdi-content-paste mdi-24px"></i></span></span></button>
+        </p>
+      </div>
+      <p class="label">New members</p>
+      <div class="field">
+        <div data-oruga="radio" class="o-radio"><input id="v-0-12" type="radio" data-oruga-input="radio" class="o-radio__input" name="groupOpenness" autocomplete="off" aria-checked="false" aria-labelledby="v-0-13" value="OPEN"><label id="v-0-13" for="v-0-12" class="o-radio__label">Anyone can join freely<br><small>Anyone wanting to be a member from your group will be able to from your group page.</small></label></div>
+      </div>
+      <div class="field">
+        <div data-oruga="radio" class="o-radio o-radio--checked"><input id="v-0-14" type="radio" data-oruga-input="radio" class="o-radio__input" name="groupOpenness" autocomplete="off" aria-checked="true" aria-labelledby="v-0-15" value="MODERATED"><label id="v-0-15" for="v-0-14" class="o-radio__label">Moderate new members<br><small>Anyone can request being a member, but an administrator needs to approve the membership.</small></label></div>
+      </div>
+      <div class="field">
+        <div data-oruga="radio" class="o-radio"><input id="v-0-16" type="radio" data-oruga-input="radio" class="o-radio__input" name="groupOpenness" autocomplete="off" aria-checked="false" aria-labelledby="v-0-17" value="INVITE_ONLY"><label id="v-0-17" for="v-0-16" class="o-radio__label">Manually invite new members<br><small>The only way for your group to get new members is if an admininistrator invites them.</small></label></div>
+      </div>
+      <div data-oruga="field" class="o-field"><label id="v-0-18" class="o-field__label" for="v-0-20">Followers</label>
+        <div data-oruga="checkbox" class="o-checkbox o-checkbox--checked"><input aria-labelledby="v-0-18" aria-describedby="v-0-19" id="v-0-20" type="checkbox" data-oruga-input="checkbox" class="o-checkbox__input" true-value="true" false-value="false" autocomplete="off" aria-checked="true"><label id="v-0-18" for="v-0-20" class="o-checkbox__label">Manually approve new followers</label></div>
+        <p id="v-0-19" class="o-field__message">Followers will receive new public events and posts.</p>
+      </div>
+      <div data-oruga="field" class="o-field"><label id="v-0-21" class="o-field__label" for="v-0-23">Permission</label>
+        <div data-oruga="checkbox" class="o-checkbox"><input aria-labelledby="v-0-21" id="v-0-23" type="checkbox" data-oruga-input="checkbox" class="o-checkbox__input" true-value="true" false-value="false" autocomplete="off" aria-checked="false"><label id="v-0-21" for="v-0-23" class="o-checkbox__label">Members can see events' participants</label></div>
+        <!---->
+      </div>
+      <!---->
+      <div class="flex flex-wrap gap-2 my-2"><button data-oruga="button" type="submit" role="button" tabindex="0" class="o-button o-button--primary"><span class="o-button__wrapper"><!----><span class="o-button__label">Update group</span>
+          <!----></span>
+        </button><button data-oruga="button" type="button" role="button" tabindex="0" class="o-button o-button--danger"><span class="o-button__wrapper"><!----><span class="o-button__label">Delete group</span>
+          <!----></span>
+        </button></div>
+    </form>
+  </section>
+</div>"
+`;
+
+exports[`GroupSettings > Show simple 2`] = `
+"<div>
+  <breadcrumbs-nav links="[object Object],[object Object],[object Object]"></breadcrumbs-nav>
+  <transition-stub name="fade" appear="false" persisted="false" css="true">
+    <!---->
   </transition-stub>
+  <section class="container mx-auto mb-6">
+    <form>
+      <div data-oruga="field" class="o-field o-field--filled"><label id="v-0-0" for="group-settings-name" class="o-field__label">Group name</label>
+        <div data-oruga="input" class="o-input o-input--expanded">
+          <!----><input aria-labelledby="v-0-0" id="group-settings-name" type="text" data-oruga-input="text" class="o-input__input" autocomplete="off">
+          <!---->
+          <!---->
+        </div>
+        <!---->
+      </div>
+      <div data-oruga="field" class="o-field"><label id="v-0-2" class="o-field__label">Group short description</label>
+        <!---->
+        <!---->
+      </div>
+      <div data-oruga="field" class="o-field"><label id="v-0-4" class="o-field__label">Avatar</label>
+        <div><label data-oruga="upload" class="o-upload !flex">
+            <div class="o-upload__draggable" role="button" tabindex="0">
+              <div class="w-100 text-center p-4 rounded-xl border-dashed border-2 border-gray-600"><span class="mx-auto flex w-fit"><span aria-hidden="true" class="material-design-icon upload-icon" role="img"><svg fill="currentColor" class="material-design-icon__svg" width="24" height="24" viewBox="0 0 24 24"><path d="M9,16V10H5L12,3L19,10H15V16H9M5,20V18H19V20H5Z"><!--v-if--></path></svg></span><span class="capitalize">Click to upload Avatar</span></span>
+                <!--v-if-->
+                <!--v-if-->
+              </div>
+            </div><input aria-labelledby="v-0-4" type="file" data-oruga-input="file" accept="image/gif,image/png,image/jpeg,image/webp">
+          </label></div>
+        <!--v-if-->
+        <!---->
+      </div>
+      <div data-oruga="field" class="o-field"><label id="v-0-6" class="o-field__label">Banner</label>
+        <div><label data-oruga="upload" class="o-upload !flex">
+            <div class="o-upload__draggable" role="button" tabindex="0">
+              <div class="w-100 text-center p-4 rounded-xl border-dashed border-2 border-gray-600"><span class="mx-auto flex w-fit"><span aria-hidden="true" class="material-design-icon upload-icon" role="img"><svg fill="currentColor" class="material-design-icon__svg" width="24" height="24" viewBox="0 0 24 24"><path d="M9,16V10H5L12,3L19,10H15V16H9M5,20V18H19V20H5Z"><!--v-if--></path></svg></span><span class="capitalize">Click to upload Banner</span></span>
+                <!--v-if-->
+                <!--v-if-->
+              </div>
+            </div><input aria-labelledby="v-0-6" type="file" data-oruga-input="file" accept="image/gif,image/png,image/jpeg,image/webp">
+          </label></div>
+        <!--v-if-->
+        <!---->
+      </div>
+      <p class="label">Group visibility</p>
+      <div class="field">
+        <div data-oruga="radio" class="o-radio"><input id="v-0-8" type="radio" data-oruga-input="radio" class="o-radio__input" name="groupVisibility" autocomplete="off" aria-checked="false" aria-labelledby="v-0-9" value="PUBLIC"><label id="v-0-9" for="v-0-8" class="o-radio__label">Visible everywhere on the web<br><small>The group will be publicly listed in search results and may be suggested in the explore section. Only public informations will be shown on it's page.</small></label></div>
+      </div>
+      <div class="field">
+        <div data-oruga="radio" class="o-radio o-radio--checked"><input id="v-0-10" type="radio" data-oruga-input="radio" class="o-radio__input" name="groupVisibility" autocomplete="off" aria-checked="true" aria-labelledby="v-0-11" value="UNLISTED"><label id="v-0-11" for="v-0-10" class="o-radio__label">Only accessible through link<br><small>You'll need to transmit the group URL so people may access the group's profile. The group won't be findable in Mobilizon's search or regular search engines.</small></label></div>
+        <p class="pl-6 flex items-center gap-2"><code>https://mobilizon.test/@example</code>
+          <!--v-if--><button data-oruga="button" type="button" role="button" tabindex="0" class="o-button o-button--primary" native-type="button"><span class="o-button__wrapper"><!----><!----><span data-oruga="icon" class="o-icon o-button__icon o-button__icon-right"><i class="mdi mdi-content-paste mdi-24px"></i></span></span></button>
+        </p>
+      </div>
+      <p class="label">New members</p>
+      <div class="field">
+        <div data-oruga="radio" class="o-radio o-radio--checked"><input id="v-0-12" type="radio" data-oruga-input="radio" class="o-radio__input" name="groupOpenness" autocomplete="off" aria-checked="true" aria-labelledby="v-0-13" value="OPEN"><label id="v-0-13" for="v-0-12" class="o-radio__label">Anyone can join freely<br><small>Anyone wanting to be a member from your group will be able to from your group page.</small></label></div>
+      </div>
+      <div class="field">
+        <div data-oruga="radio" class="o-radio"><input id="v-0-14" type="radio" data-oruga-input="radio" class="o-radio__input" name="groupOpenness" autocomplete="off" aria-checked="false" aria-labelledby="v-0-15" value="MODERATED"><label id="v-0-15" for="v-0-14" class="o-radio__label">Moderate new members<br><small>Anyone can request being a member, but an administrator needs to approve the membership.</small></label></div>
+      </div>
+      <div class="field">
+        <div data-oruga="radio" class="o-radio"><input id="v-0-16" type="radio" data-oruga-input="radio" class="o-radio__input" name="groupOpenness" autocomplete="off" aria-checked="false" aria-labelledby="v-0-17" value="INVITE_ONLY"><label id="v-0-17" for="v-0-16" class="o-radio__label">Manually invite new members<br><small>The only way for your group to get new members is if an admininistrator invites them.</small></label></div>
+      </div>
+      <div data-oruga="field" class="o-field"><label id="v-0-18" class="o-field__label" for="v-0-20">Followers</label>
+        <div data-oruga="checkbox" class="o-checkbox o-checkbox--checked"><input aria-labelledby="v-0-18" aria-describedby="v-0-19" id="v-0-20" type="checkbox" data-oruga-input="checkbox" class="o-checkbox__input" true-value="true" false-value="false" autocomplete="off" aria-checked="true"><label id="v-0-18" for="v-0-20" class="o-checkbox__label">Manually approve new followers</label></div>
+        <p id="v-0-19" class="o-field__message">Followers will receive new public events and posts.</p>
+      </div>
+      <div data-oruga="field" class="o-field"><label id="v-0-21" class="o-field__label" for="v-0-23">Permission</label>
+        <div data-oruga="checkbox" class="o-checkbox"><input aria-labelledby="v-0-21" id="v-0-23" type="checkbox" data-oruga-input="checkbox" class="o-checkbox__input" true-value="true" false-value="false" autocomplete="off" aria-checked="false"><label id="v-0-21" for="v-0-23" class="o-checkbox__label">Members can see events' participants</label></div>
+        <!---->
+      </div>
+      <!---->
+      <div class="flex flex-wrap gap-2 my-2"><button data-oruga="button" type="submit" role="button" tabindex="0" class="o-button o-button--primary"><span class="o-button__wrapper"><!----><span class="o-button__label">Update group</span>
+          <!----></span>
+        </button><button data-oruga="button" type="button" role="button" tabindex="0" class="o-button o-button--danger"><span class="o-button__wrapper"><!----><span class="o-button__label">Delete group</span>
+          <!----></span>
+        </button></div>
+    </form>
+  </section>
 </div>"
 `;

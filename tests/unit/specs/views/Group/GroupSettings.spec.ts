@@ -1,4 +1,4 @@
-import { beforeEach, describe, it, expect } from "vitest";
+import { beforeEach, describe, it, expect, vi } from "vitest";
 import { enUS } from "date-fns/locale";
 import { routes } from "@/router";
 import { createRouter, createWebHistory, Router } from "vue-router";
@@ -8,8 +8,45 @@ import flushPromises from "flush-promises";
 import { getMockClient, requestHandlers } from "../../mocks/client";
 import { htmlRemoveId } from "../../common";
 import GroupSettings from "@/views/Group/GroupSettings.vue";
-import { FETCH_GROUP_PUBLIC } from "@/graphql/group";
+import { FETCH_GROUP_PUBLIC, UPDATE_GROUP } from "@/graphql/group";
 import { DELETE_GROUP } from "@/graphql/group";
+import { computed } from "vue";
+import { MemberRole } from "@/types/enums";
+
+vi.mock("@/composition/apollo/actor", () => {
+  return {
+    useCurrentActorClient: () => {
+      const error = null;
+      const loading = null;
+      const currentActor = computed(() => {
+        return {
+          id: 123,
+          name: "test",
+          domain: null,
+          preferredUsername: "test",
+        };
+      });
+      return { currentActor, error, loading };
+    },
+    usePersonStatusGroup: () => {
+      const error = null;
+      const loading = null;
+      const person = computed(() => {
+        return {
+          memberships: {
+            total: 1,
+            elements: [
+              {
+                role: MemberRole.ADMINISTRATOR,
+              },
+            ],
+          },
+        };
+      });
+      return { person, error, loading };
+    },
+  };
+});
 
 config.global.plugins.push(Oruga);
 
@@ -64,6 +101,7 @@ const mock_group = {
 const generateWrapper = () => {
   const global_data = getMockClient([
     [FETCH_GROUP_PUBLIC, mock_group],
+    UPDATE_GROUP,
     DELETE_GROUP,
   ]);
   global_data.provide.dateFnsLocale = enUS;
@@ -87,10 +125,29 @@ describe("GroupSettings", () => {
     await wrapper.vm.$nextTick();
     await flushPromises();
     expect(htmlRemoveId(wrapper.html())).toMatchSnapshot();
+
+    wrapper.findAll('input[name="groupVisibility"]')[1].setChecked();
+    wrapper.findAll('input[name="groupOpenness"]')[0].setChecked();
+    wrapper.find("form").trigger("submit");
+    await wrapper.vm.$nextTick();
+    await flushPromises();
+    expect(htmlRemoveId(wrapper.html())).toMatchSnapshot();
+
     expect(requestHandlers.handle_0).toHaveBeenCalledTimes(1);
-    expect(requestHandlers.handle_1).toHaveBeenCalledTimes(0);
+    expect(requestHandlers.handle_1).toHaveBeenCalledTimes(1);
+    expect(requestHandlers.handle_2).toHaveBeenCalledTimes(0);
     expect(requestHandlers.handle_0).toHaveBeenCalledWith({
       name: "my-group",
+    });
+    expect(requestHandlers.handle_1).toHaveBeenCalledWith({
+      allowSeeParticipants: false,
+      id: "123",
+      manuallyApprovesFollowers: true,
+      name: "ssss",
+      openness: "OPEN",
+      physicalAddress: null,
+      summary: null,
+      visibility: "UNLISTED",
     });
   });
 });

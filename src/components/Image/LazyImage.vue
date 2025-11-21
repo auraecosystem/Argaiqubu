@@ -26,7 +26,7 @@
 <script lang="ts" setup>
 import BlurhashImg from "./BlurhashImg.vue";
 
-import { computed, ref, onMounted, onUnmounted, watchEffect } from "vue";
+import { computed, ref, watchEffect } from "vue";
 
 const props = withDefaults(
   defineProps<{
@@ -40,14 +40,11 @@ const props = withDefaults(
 );
 
 const isLoaded = ref(false);
-const observer = ref<IntersectionObserver | null>(null);
 
 const wrapper = ref<HTMLElement | null>(null);
 const image = ref<HTMLImageElement | null>(null);
 
 const src = computed(() => props.src);
-
-const isIntersecting = ref(false);
 
 const blurhashOpacity = computed(() =>
   isLoaded.value ? "opacity-0 hidden" : "opacity-100"
@@ -56,22 +53,6 @@ const blurhashOpacity = computed(() =>
 const imageOpacity = computed(() =>
   isLoaded.value ? "opacity-100" : "opacity-0"
 );
-
-onMounted(() => {
-  observer.value = new IntersectionObserver((entries) => {
-    isIntersecting.value = entries[0].isIntersecting;
-  });
-
-  if (wrapper.value) {
-    observer.value.observe(wrapper.value);
-  }
-});
-
-onUnmounted(() => {
-  if (observer.value) {
-    observer.value.disconnect();
-  }
-});
 
 watchEffect(() => {
   // Image is visible (means: has entered the viewport),

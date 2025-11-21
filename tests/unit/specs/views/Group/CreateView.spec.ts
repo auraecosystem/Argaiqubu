@@ -44,6 +44,26 @@ describe("CreateView", () => {
     await wrapper.vm.$nextTick();
     await flushPromises();
     expect(htmlRemoveId(wrapper.html())).toMatchSnapshot();
-    expect(requestHandlers.handle_0).toHaveBeenCalledTimes(0);
+
+    expect(wrapper.find("form").exists()).toBe(true);
+    wrapper.find('input[id="group-display-name"]').setValue("New Group");
+    wrapper.find('input[id="group-preferred-username"]').setValue("new_group");
+    wrapper.find('input[id="full-address-autocomplete-1"]').setValue("");
+    wrapper.find('input[name="groupVisibility"]:nth-of-type(1)').setChecked();
+    wrapper.findAll('input[name="groupOpenness"]')[1].setChecked();
+    wrapper.find("form").trigger("submit");
+    await wrapper.vm.$nextTick();
+    await flushPromises();
+    expect(htmlRemoveId(wrapper.html())).toMatchSnapshot();
+    expect(requestHandlers.handle_0).toHaveBeenCalledTimes(1);
+    expect(requestHandlers.handle_0).toHaveBeenCalledWith({
+      allowSeeParticipants: true,
+      manuallyApprovesFollowers: false,
+      name: "New Group",
+      openness: "MODERATED",
+      preferredUsername: "new_group",
+      summary: "",
+      visibility: "PUBLIC",
+    });
   });
 });
