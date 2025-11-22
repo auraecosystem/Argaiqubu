@@ -3,7 +3,6 @@ defmodule Mobilizon.Federation.ActivityStream.Converter.UtilsTest do
   Module to test converting from EventMetadata to AS
   """
   use Mobilizon.DataCase
-  import Mobilizon.Factory
   alias Mobilizon.Federation.ActivityStream.Converter.Utils
 
   describe "get_medias/1" do

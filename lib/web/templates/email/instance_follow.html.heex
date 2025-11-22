@@ -47,8 +47,7 @@
             {gettext("<b>%{name}</b> just requested to follow your instance.",
               name: escape_html(display_name_and_username(@follower))
             )
-            |> raw}
-            <br />
+            |> raw} <br />
             <%= if @follower.type == :Application do %>
               {gettext("If you accept, this instance will receive all of your public events.")}
             <% else %>

@@ -1,6 +1,6 @@
 defimpl Mobilizon.Service.Metadata, for: Mobilizon.Events.Event do
   alias Phoenix.HTML
-  alias Phoenix.HTML.Tag
+  alias PhoenixHTMLHelpers.Tag
   alias Mobilizon.Actors.Actor
   alias Mobilizon.Addresses.Address
   alias Mobilizon.Events.{Event, EventOptions}

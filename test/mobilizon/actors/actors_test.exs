@@ -10,7 +10,7 @@ defmodule Mobilizon.ActorsTest do
   alias Mobilizon.Discussions.Comment
   alias Mobilizon.Events.Event
   alias Mobilizon.Federation.ActivityPub.Actor, as: ActivityPubActor
-  alias Mobilizon.Medias.File, as: FileModel
+  # alias Mobilizon.Medias.File, as: FileModel
   alias Mobilizon.Service.HTTP.ActivityPub.Mock
   alias Mobilizon.Service.Workers
   alias Mobilizon.Storage.Page

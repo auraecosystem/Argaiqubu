@@ -41,7 +41,7 @@ defmodule Mobilizon.Service.Metadata.UtilsTest do
 
   describe "stringify_tags/1" do
     test "converts tags to string" do
-      alias Phoenix.HTML.Tag
+      alias PhoenixHTMLHelpers.Tag
 
       tag_1 = Tag.tag(:meta, property: "og:url", content: "one")
       tag_2 = "<meta content=\"two\" property=\"og:url\">"

@@ -48,7 +48,8 @@
         >
           <p style="margin: 0;">
             {gettext(
-              "Your instance's moderation team has decided to suspend <b>%{group_name}</b> (%{group_address}). You are no longer a member of this group.",
+              "Your instance's moderation team has decided to suspend <b>%{group_name}</b>
+            (%{group_address}). You are no longer a member of this group.",
               group_name: escape_html(display_name(@group)),
               group_address: preferred_username_and_domain(@group)
             )

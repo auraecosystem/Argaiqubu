@@ -1,6 +1,6 @@
 defimpl Mobilizon.Service.Metadata, for: Mobilizon.Actors.Actor do
   alias Phoenix.HTML
-  alias Phoenix.HTML.Tag
+  alias PhoenixHTMLHelpers.Tag
   alias Mobilizon.Actors.Actor
   alias Mobilizon.Web.JsonLD.ObjectView
   use Mobilizon.Web, :verified_routes

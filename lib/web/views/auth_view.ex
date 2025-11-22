@@ -6,7 +6,7 @@ defmodule Mobilizon.Web.AuthView do
   use Mobilizon.Web, :view
   alias Mobilizon.Service.Metadata.Instance
   alias Mobilizon.Web.PageView
-  alias Phoenix.HTML.Tag
+  alias PhoenixHTMLHelpers.Tag
 
   @spec render(String.t(), map()) :: String.t() | Plug.Conn.t()
   def render(

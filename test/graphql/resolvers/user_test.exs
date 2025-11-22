@@ -418,6 +418,7 @@ defmodule Mobilizon.GraphQL.Resolvers.UserTest do
       password: "long password",
       moderation: ""
     }
+    @moderation_empty ""
 
     test "test create_user/3 creates an user",
          %{conn: conn} do
@@ -1337,7 +1338,6 @@ defmodule Mobilizon.GraphQL.Resolvers.UserTest do
 
   describe "Resolver: Change password for an user" do
     @email "toto@tata.tld"
-    @moderation_fill "moderation text"
     @moderation_empty ""
     @old_password "p4ssw0rd"
     @new_password "upd4t3d"

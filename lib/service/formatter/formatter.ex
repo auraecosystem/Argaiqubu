@@ -11,7 +11,7 @@ defmodule Mobilizon.Service.Formatter do
   alias Mobilizon.Actors.Actor
   alias Mobilizon.Federation.ActivityPub.Actor, as: ActivityPubActor
   alias Mobilizon.Service.Formatter.HTML
-  alias Phoenix.HTML.Tag
+  alias PhoenixHTMLHelpers.Tag
 
   alias Mobilizon.Web.Endpoint
 

@@ -1418,7 +1418,7 @@ defmodule Mobilizon.GraphQL.Resolvers.ParticipantTest do
     }
     """
 
-    test "No participate if not logging", %{conn: conn, actor: actor, event: event} do
+    test "No participate if not logging", %{conn: conn, event: event} do
       res =
         conn
         |> AbsintheHelpers.graphql_query(
@@ -1577,7 +1577,6 @@ defmodule Mobilizon.GraphQL.Resolvers.ParticipantTest do
     test "participates for group event where user is member (not allowed)", %{
       conn: conn,
       actor: actor,
-      user: user,
       event: event
     } do
       user_group = insert(:user)
@@ -1613,7 +1612,6 @@ defmodule Mobilizon.GraphQL.Resolvers.ParticipantTest do
     test "participates for group event where user is member (but allowed)", %{
       conn: conn,
       actor: actor,
-      user: user,
       event: event
     } do
       user_group = insert(:user)

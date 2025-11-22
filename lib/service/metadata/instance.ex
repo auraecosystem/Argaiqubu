@@ -4,7 +4,7 @@ defmodule Mobilizon.Service.Metadata.Instance do
   """
 
   alias Phoenix.HTML
-  alias Phoenix.HTML.Tag
+  alias PhoenixHTMLHelpers.Tag
 
   alias Mobilizon.Config
   alias Mobilizon.Service.Metadata.Utils

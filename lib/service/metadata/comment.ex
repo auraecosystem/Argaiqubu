@@ -1,5 +1,5 @@
 defimpl Mobilizon.Service.Metadata, for: Mobilizon.Discussions.Comment do
-  alias Phoenix.HTML.Tag
+  alias PhoenixHTMLHelpers.Tag
   alias Mobilizon.Actors.Actor
   alias Mobilizon.Discussions.Comment
   import Mobilizon.Service.Metadata.Utils, only: [escape_text: 1]
