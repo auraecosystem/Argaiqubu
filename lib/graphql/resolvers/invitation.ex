@@ -65,10 +65,10 @@ defmodule Mobilizon.GraphQL.Resolvers.Invitation do
       ) do
     with true <-
            String.to_integer(actor_id_chosen) == actor_id_connected ||
-             {:error, "You can only accept invitations for your own account"},
+             {:error, dgettext("errors", "You can only accept invitations for your own account")},
          %Invitation{} = _invitation <-
            Invitations.find_invitation(group_id, token) ||
-             {:error, "Invalid invitation token for this group"},
+             {:error, dgettext("errors", "Invalid invitation token for this group")},
          false <-
            Mobilizon.Actors.member?(actor_id_connected, group_id),
          {:ok, member} <-
@@ -80,8 +80,8 @@ defmodule Mobilizon.GraphQL.Resolvers.Invitation do
       {:ok, member}
     else
       {:error, _} = error -> error
-      true -> {:error, "You are already a member of this group"}
-      _ -> {:error, "Unexpected error"}
+      true -> {:error, dgettext("errors", "You are already a member of this group")}
+      _ -> {:error, dgettext("errors", "Unexpected error")}
     end
   end
 end
