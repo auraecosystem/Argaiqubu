@@ -61,15 +61,6 @@ export const GROUP_MINIMAL_FIELDS_FRAGMENTS = gql`
     openness
     manuallyApprovesFollowers
     allowSeeParticipants
-    members {
-      elements {
-        id
-        role
-        actor {
-          id
-        }
-      }
-    }
   }
   ${ACTOR_FRAGMENT}
 `;
