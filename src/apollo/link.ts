@@ -1,25 +1,31 @@
-import { from } from "@apollo/client/core";
-import { createHttpLink } from "@apollo/client";
+import { from, split } from "@apollo/client/core";
 import { RetryLink } from "@apollo/client/link/retry";
+import { getMainDefinition } from "@apollo/client/utilities";
+import absintheSocketLink from "./absinthe-socket-link";
+import { authMiddleware } from "./auth";
+import errorLink from "./error-link";
+import { uploadLink } from "./absinthe-upload-socket-link";
 import { removeTypenameFromVariables } from "@apollo/client/link/remove-typename";
-import { authMiddleware } from "@/apollo/auth";
-import errorLink from "@/apollo/error-link";
-import { GRAPHQL_API_ENDPOINT, GRAPHQL_API_FULL_PATH } from "@/api/_entrypoint";
-
-// Endpoints
-const httpServer = GRAPHQL_API_ENDPOINT || "http://localhost:4000";
-const httpEndpoint = GRAPHQL_API_FULL_PATH || `${httpServer}/api`;
-
-const uploadLink = createHttpLink({
-  uri: httpEndpoint,
-});
 
 const retryLink = new RetryLink();
+
+const link = split(
+  // split based on operation type
+  ({ query }) => {
+    const definition = getMainDefinition(query);
+    return (
+      definition.kind === "OperationDefinition" &&
+      definition.operation === "subscription"
+    );
+  },
+  absintheSocketLink,
+  uploadLink
+);
 
 export const fullLink = from([
   removeTypenameFromVariables(),
   retryLink,
   errorLink,
   authMiddleware,
-  uploadLink,
+  link ?? uploadLink,
 ]);
