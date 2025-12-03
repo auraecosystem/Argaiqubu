@@ -246,18 +246,17 @@ body {
 }
 
 /* Radio */
-.radio {
-  @apply mr-2;
+.o-radio__input:checked {
+  /* override a CSS prop (background-image url on `[type="radio"]:checked`) set by default by tailwind 
+  that alter the oruga o-radio design */
+  background-image:none;
 }
-.form-radio {
-  @apply bg-none text-primary border-primary accent-primary;
-}
-.radio-label {
-  @apply pl-2;
-}
-
-.o-field--addons .o-radio:not(:only-child) input {
-  @apply rounded-full;
+/* Checkbox */
+.o-checkbox__input:checked {
+  /* We want the current color for the checked mark
+  instead of oruga default white */
+  border-color: transparent;
+  background-color: currentColor;
 }
 
 /* Editor */

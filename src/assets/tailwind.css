@@ -28,6 +28,23 @@
   }
 }
 
+:root {
+
+    /* TODO Try to change the primary color but without success */
+    --oruga-primary: #1e7d97;
+    --oruga-variant-primary: #1e7d97;
+
+    /* So force change the primary color for each component */
+    --oruga-radio-active-background-color: #1e7d97;
+    --oruga-switch-checked-background: #1e7d97;
+
+    /* We want transparent background for buttons 
+    instead of oruga default primay color */
+    --oruga-checkbox-background-color: white;
+    --oruga-checkbox-active-background-color: white;
+
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --oruga-variant-primary: #1e7d97;

@@ -95,12 +95,6 @@ export const orugaConfig = {
   select: {
     selectClass: "select",
   },
-  radio: {
-    rootClass: "radio",
-    inputCheckedClass: "radio-checked",
-    inputClass: "form-radio",
-    labelClass: "radio-label",
-  },
   notification: {
     rootClass: "notification",
     variantClass: (variant: string) => {
