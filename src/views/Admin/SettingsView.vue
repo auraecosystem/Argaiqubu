@@ -9,7 +9,9 @@
 
     <div v-if="settingsToWrite">
       <form @submit.prevent="updateSettings">
-        <section class="mt-4 mb-4 p-4 border rounded shadow-sm bg-white">
+        <section
+          class="mt-4 mb-4 p-4 bg-white dark:bg-violet-2 rounded shadow-md dark:bg-mbz-purple-700"
+        >
           <h2>{{ t("Informations") }}</h2>
           <o-field :label="t('Instance Name')" label-for="instance-name">
             <o-input
@@ -78,7 +80,9 @@
           </div>
         </section>
 
-        <section class="mt-4 mb-4 p-4 border rounded shadow-sm bg-white">
+        <section
+          class="mt-4 mb-4 p-4 bg-white dark:bg-violet-2 rounded shadow-md dark:bg-mbz-purple-700"
+        >
           <h2>{{ t("Pictures") }}</h2>
 
           <label class="field flex flex-col">
@@ -129,7 +133,9 @@
           </label>
         </section>
 
-        <section class="mt-4 mb-4 p-4 border rounded shadow-sm bg-white">
+        <section
+          class="mt-4 mb-4 p-4 bg-white dark:bg-violet-2 rounded shadow-md dark:bg-mbz-purple-700"
+        >
           <h2>{{ t("Options") }}</h2>
           <o-field :label="t('Allow registrations')">
             <fieldset>
@@ -186,7 +192,9 @@
           </div>
         </section>
 
-        <section class="mt-4 mb-4 p-4 border rounded shadow-sm bg-white">
+        <section
+          class="mt-4 mb-4 p-4 bg-white dark:bg-violet-2 rounded shadow-md dark:bg-mbz-purple-700"
+        >
           <h2>{{ t("Policies") }}</h2>
           <div class="field flex flex-col">
             <label for="instance-rules">{{ t("Instance Rules") }}</label>
@@ -311,6 +319,7 @@
           >
             <o-input
               type="URL"
+              expanded
               v-model="settingsToWrite.instanceTermsUrl"
               id="instanceTermsUrl"
             />
@@ -325,6 +334,8 @@
             <o-input
               type="textarea"
               v-model="settingsToWrite.instanceTerms"
+              expanded
+              rows="10"
               id="instanceTerms"
             />
           </o-field>
@@ -438,6 +449,7 @@
           >
             <o-input
               type="URL"
+              expanded
               v-model="settingsToWrite.instancePrivacyPolicyUrl"
               id="instancePrivacyPolicyUrl"
             />
@@ -452,13 +464,17 @@
           >
             <o-input
               type="textarea"
+              expanded
+              rows="10"
               v-model="settingsToWrite.instancePrivacyPolicy"
               id="instancePrivacyPolicy"
             />
           </o-field>
         </section>
 
-        <section class="mt-4 mb-4 p-4 border rounded shadow-sm bg-white">
+        <section
+          class="mt-4 mb-4 p-4 bg-white dark:bg-violet-2 rounded shadow-md dark:bg-mbz-purple-700"
+        >
           <h2>{{ t("External links") }}</h2>
           <small>
             {{
@@ -475,7 +491,7 @@
             v-if="settingsToWrite.externalLinks?.length > 0"
           >
             <div
-              class="bg-mbz-yellow-alt-100 p-5"
+              class="bg-mbz-yellow-alt-100 dark:bg-mbz-purple-500 p-5"
               v-for="(link, index) in settingsToWrite.externalLinks"
               :key="index"
             >
