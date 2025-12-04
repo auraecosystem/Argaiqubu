@@ -249,7 +249,7 @@ body {
 .o-radio__input:checked {
   /* override a CSS prop (background-image url on `[type="radio"]:checked`) set by default by tailwind 
   that alter the oruga o-radio design */
-  background-image:none;
+  background-image: none;
 }
 /* Checkbox */
 .o-checkbox__input:checked {
