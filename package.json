@@ -29,8 +29,6 @@
   "type": "module",
   "dependencies": {
     "@apollo/client": "^3.13.8",
-    "@framasoft/socket": "^1.0.0",
-    "@framasoft/socket-apollo-link": "^1.0.0",
     "@fullcalendar/core": "^6.1.10",
     "@fullcalendar/daygrid": "^6.1.10",
     "@fullcalendar/interaction": "^6.1.10",
