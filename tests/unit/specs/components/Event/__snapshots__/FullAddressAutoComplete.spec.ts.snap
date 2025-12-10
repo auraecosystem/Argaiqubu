@@ -38,7 +38,7 @@ exports[`FullAddressAutoComplete > Show list 1`] = `
         </div>
       </transition-stub>
       <!--teleport end-->
-    </div><button data-oruga="button" type="button" role="button" tabindex="0" class="o-button o-button--disabled reset-area !h-auto" disabled="" title="Clear address field"><span class="o-button__wrapper"><span data-oruga="icon" class="o-icon o-button__icon o-button__icon-left"><i class="mdi mdi-close mdi-24px"></i></span>
+    </div><button data-oruga="button" type="button" role="button" tabindex="0" class="o-button reset-area !h-auto" title="Clear address field"><span class="o-button__wrapper"><span data-oruga="icon" class="o-icon o-button__icon o-button__icon-left"><i class="mdi mdi-close mdi-24px"></i></span>
       <!---->
       <!----></span>
     </button>
@@ -89,7 +89,7 @@ exports[`FullAddressAutoComplete > Show list 2`] = `
         </div>
       </transition-stub>
       <!--teleport end-->
-    </div><button data-oruga="button" type="button" role="button" tabindex="0" class="o-button o-button--disabled reset-area !h-auto" disabled="" title="Clear address field"><span class="o-button__wrapper"><span data-oruga="icon" class="o-icon o-button__icon o-button__icon-left"><i class="mdi mdi-close mdi-24px"></i></span>
+    </div><button data-oruga="button" type="button" role="button" tabindex="0" class="o-button reset-area !h-auto" title="Clear address field"><span class="o-button__wrapper"><span data-oruga="icon" class="o-icon o-button__icon o-button__icon-left"><i class="mdi mdi-close mdi-24px"></i></span>
       <!---->
       <!----></span>
     </button>

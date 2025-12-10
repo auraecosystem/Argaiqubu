@@ -1,4 +1,4 @@
-import { beforeEach, describe, it, expect } from "vitest";
+import { beforeEach, describe, it, expect, vi } from "vitest";
 import { enUS } from "date-fns/locale";
 import { routes } from "@/router";
 import { createRouter, createWebHistory, Router } from "vue-router";
@@ -132,6 +132,9 @@ describe("FullAddressAutoComplete", () => {
 
     await wrapper.vm.$nextTick();
     await flushPromises();
+    await vi.waitFor(() => {
+      expect(requestHandlers.handle_0).toHaveBeenCalledTimes(1);
+    });
     expect(htmlRemoveId(wrapper.html())).toMatchSnapshot();
 
     await input.trigger("keydown", { key: "Down" });
