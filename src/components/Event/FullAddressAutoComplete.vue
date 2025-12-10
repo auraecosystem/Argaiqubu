@@ -24,12 +24,13 @@
         v-model="queryTextWithDefault"
         :options="addressData"
         :placeholder="placeholderWithDefault"
-        :debounce="debounceDelay"
+        debounce="500"
         :icon="canShowLocateMeButton ? null : 'map-marker'"
         expanded
         :id="id"
         :disabled="disabled"
-        @update:input="asyncData"
+        :filter="nofilter"
+        @input="asyncData"
         @select="setSelected"
         class="FullAddressAutoComplete-o-autocomplete !mt-0 !h-full"
       >
@@ -320,10 +321,6 @@ const canShowLocateMeButton = computed((): boolean => {
 
 const { geocodingAutocomplete } = useGeocodingAutocomplete();
 
-const debounceDelay = computed(() =>
-  geocodingAutocomplete.value === true ? 200 : 2000
-);
-
 const { load: searchAddressLoad, refetch: searchAddressRefetch } =
   useLazyQuery<{
     searchAddress: IAddress[];
@@ -332,11 +329,15 @@ const { load: searchAddressLoad, refetch: searchAddressRefetch } =
 function convert_to_complete(addesses: IAddress[]): OptionsProp {
   return addesses.map((elem: IAddress) => {
     return {
-      label: elem.description, // addressFullName(elem),
+      label: addressFullName(elem),
       value: elem,
     };
   });
 }
+
+const nofilter = (item) => {
+  return false;
+};
 
 const asyncData = async (query: string): Promise<void> => {
   console.debug("Finding addresses");
@@ -351,6 +352,9 @@ const asyncData = async (query: string): Promise<void> => {
     return;
   }
 
+  if (queryTextWithDefault.value != query) {
+    queryTextWithDefault.value = query;
+  }
   isFetching.value = true;
 
   try {
