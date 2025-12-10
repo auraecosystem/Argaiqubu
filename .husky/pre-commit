@@ -1,4 +1,7 @@
 npm run pre-commit
 python3 ./check_i18n.py
-npm update
-mix deps.update --all
+./check_deps.sh || (
+  npm update
+  mix deps.update --all
+  exit 1
+)
