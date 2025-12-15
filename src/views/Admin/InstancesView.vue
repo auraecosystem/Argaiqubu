@@ -1,4 +1,6 @@
 <template>
+  filteredInstances.length: {{ filteredInstances.length }}
+
   <div>
     <breadcrumbs-nav
       :links="[
@@ -44,13 +46,28 @@
           >
           <o-radio
             v-model="followStatus"
-            :native-value="InstanceFilterFollowStatus.FOLLOWING"
-            >{{ t("Following") }}</o-radio
+            :native-value="InstanceFilterFollowStatus.WE_FOLLOW_THEM"
+            >{{ t("We follow them") }}</o-radio
           >
           <o-radio
             v-model="followStatus"
-            :native-value="InstanceFilterFollowStatus.FOLLOWED"
-            >{{ t("Followed") }}</o-radio
+            :native-value="InstanceFilterFollowStatus.WE_FOLLOW_THEM_PENDING"
+            >{{ t("We asked to follow them") }}</o-radio
+          >
+          <o-radio
+            v-model="followStatus"
+            :native-value="InstanceFilterFollowStatus.THEY_FOLLOW_US"
+            >{{ t("They follow us") }}</o-radio
+          >
+          <o-radio
+            v-model="followStatus"
+            :native-value="InstanceFilterFollowStatus.THEY_FOLLOW_US_PENDING"
+            >{{ t("They asked to follow us") }}</o-radio
+          >
+          <o-radio
+            v-model="followStatus"
+            :native-value="InstanceFilterFollowStatus.OTHERS"
+            >{{ t("Others") }}</o-radio
           >
         </o-field>
         <o-field
@@ -65,14 +82,22 @@
           />
         </o-field>
       </div>
-      <div v-if="instances && instances.elements.length > 0" class="my-3">
+      <div
+        v-if="filteredInstances && filteredInstances.length > 0"
+        class="my-3"
+      >
+        <p>
+          {{
+            t("{count} instances found", { count: filteredInstances.length })
+          }}
+        </p>
         <router-link
           :to="{
             name: RouteName.INSTANCE,
             params: { domain: instance.domain },
           }"
           class="min-w-0 flex items-center mb-2 rounded bg-mbz-yellow-alt-300 hover:bg-mbz-yellow-alt-200 dark:bg-mbz-purple-600 dark:hover:bg-mbz-purple-700 p-4 flex-wrap md:flex-nowrap justify-center gap-x-2 gap-y-3"
-          v-for="instance in instances.elements"
+          v-for="instance in paginatedInstances"
           :key="instance.domain"
         >
           <div class="flex-1 overflow-hidden flex items-center gap-1">
@@ -139,7 +164,7 @@
                     "
                   >
                     <o-icon icon="inbox-arrow-down" />
-                    {{ t("Followed") }}
+                    {{ t("We follow them") }}
                   </p>
                   <p
                     class="inline-flex gap-1 text-slate-700 dark:text-slate-300"
@@ -148,7 +173,7 @@
                     "
                   >
                     <o-icon icon="inbox-arrow-down" />
-                    {{ t("Followed, pending response") }}
+                    {{ t("We asked to follow them") }}
                   </p>
                   <p
                     class="inline-flex gap-1 text-slate-700 dark:text-slate-300"
@@ -157,7 +182,7 @@
                     "
                   >
                     <o-icon icon="inbox-arrow-up" />
-                    {{ t("Follows us") }}
+                    {{ t("They follow us") }}
                   </p>
                   <p
                     class="inline-flex gap-1 text-slate-700 dark:text-slate-300"
@@ -166,7 +191,7 @@
                     "
                   >
                     <o-icon icon="inbox-arrow-up" />
-                    {{ t("Follows us, pending approval") }}
+                    {{ t("They asked to follow us") }}
                   </p>
                 </div>
               </div>
@@ -184,8 +209,8 @@
           </div>
         </router-link>
         <o-pagination
-          v-show="instances.total > INSTANCES_PAGE_LIMIT"
-          :total="instances.total"
+          v-show="filteredInstances.length > INSTANCES_PAGE_LIMIT"
+          :total="filteredInstances.length"
           v-model:current="instancePage"
           :per-page="INSTANCES_PAGE_LIMIT"
           :aria-next-label="t('Next page')"
@@ -195,7 +220,7 @@
         >
         </o-pagination>
       </div>
-      <div v-else-if="instances && instances.elements.length == 0">
+      <div v-else-if="filteredInstances && filteredInstances.length == 0">
         <empty-content icon="lan-disconnect" :inline="true">
           {{ t("No instance found.") }}
           <template #desc>
@@ -233,7 +258,7 @@ import {
   useRouteQuery,
 } from "vue-use-route-query";
 import { useMutation, useQuery } from "@vue/apollo-composable";
-import { computed, inject, ref, watch } from "vue";
+import { computed, inject, ref, watch, watchEffect } from "vue";
 import { useRouter } from "vue-router";
 import { useHead } from "@/utils/head";
 import CloudQuestion from "../../../node_modules/vue-material-design-icons/CloudQuestion.vue";
@@ -246,22 +271,33 @@ const instancePage = useRouteQuery("page", 1, integerTransformer);
 const filterDomain = useRouteQuery("filterDomain", "");
 const followStatus = useRouteQuery(
   "followStatus",
-  InstanceFilterFollowStatus.ALL,
+  InstanceFilterFollowStatus.WE_FOLLOW_THEM,
   enumTransformer(InstanceFilterFollowStatus)
 );
+
+// Number of instances asked by default
+const instancesTotalOnline = ref(100);
 
 const { result: instancesResult } = useQuery<{
   instances: Paginate<IInstance>;
 }>(
   INSTANCES,
   () => ({
-    page: instancePage.value,
-    limit: INSTANCES_PAGE_LIMIT,
-    filterDomain: filterDomain.value,
-    filterFollowStatus: followStatus.value,
+    page: 1,
+    limit: instancesTotalOnline.value,
   }),
-  { debounce: 500 }
+  {
+    fetchPolicy: "cache-and-network",
+  }
 );
+
+// All instances are retreived when we have total available
+watchEffect(() => {
+  const total = instancesResult.value?.instances.total;
+  if (total && total > instancesTotalOnline.value) {
+    instancesTotalOnline.value = total;
+  }
+});
 
 watch([filterDomain, followStatus], () => {
   instancePage.value = 1;
@@ -269,18 +305,52 @@ watch([filterDomain, followStatus], () => {
 
 const instances = computed(() => instancesResult.value?.instances);
 
-const instancesTotal = computed(() => instancesResult.value?.instances.total);
-const currentPageInstancesNumber = computed(
-  () => instancesResult.value?.instances.elements.length
-);
+// We do filtering locally
+// Because it is nstantaneous + permit to filter on more thing than with online filter
+const filteredInstances = computed(() => {
+  // Filter by domain or instance name
+  const filtered = instances.value?.elements.filter((i) =>
+    i.domain.toLowerCase().includes(filterDomain.value.toLowerCase())
+  );
 
-// If we didn't found any instances on this page
-watch(instancesTotal, (newInstancesTotal) => {
-  if (newInstancesTotal === 0) {
-    instancePage.value = 1;
-  } else if (currentPageInstancesNumber.value === 0) {
-    instancePage.value = instancePage.value - 1;
+  if (!filtered) return [];
+
+  // Filter by followStatus
+  switch (followStatus.value) {
+    case InstanceFilterFollowStatus.OTHERS:
+      return filtered.filter(
+        (i) =>
+          i.followedStatus !== InstanceFollowStatus.APPROVED &&
+          i.followedStatus !== InstanceFollowStatus.PENDING &&
+          i.followerStatus !== InstanceFollowStatus.APPROVED &&
+          i.followerStatus !== InstanceFollowStatus.PENDING
+      );
+    case InstanceFilterFollowStatus.WE_FOLLOW_THEM:
+      return filtered.filter(
+        (i) => i.followedStatus === InstanceFollowStatus.APPROVED
+      );
+    case InstanceFilterFollowStatus.WE_FOLLOW_THEM_PENDING:
+      return filtered.filter(
+        (i) => i.followedStatus === InstanceFollowStatus.PENDING
+      );
+    case InstanceFilterFollowStatus.THEY_FOLLOW_US:
+      return filtered.filter(
+        (i) => i.followerStatus === InstanceFollowStatus.APPROVED
+      );
+    case InstanceFilterFollowStatus.THEY_FOLLOW_US_PENDING:
+      return filtered.filter(
+        (i) => i.followerStatus === InstanceFollowStatus.PENDING
+      );
+    default:
+      return filtered;
   }
+});
+
+// Pagination
+const start = computed(() => (instancePage.value - 1) * INSTANCES_PAGE_LIMIT);
+const end = computed(() => start.value + INSTANCES_PAGE_LIMIT);
+const paginatedInstances = computed(() => {
+  return filteredInstances.value.slice(start.value, end.value);
 });
 
 const { t } = useI18n({ useScope: "global" });
@@ -291,10 +361,6 @@ useHead({
 const followInstanceLoading = ref(false);
 
 const newRelayAddress = ref("");
-
-// relayFollowings: Paginate<IFollower> = { elements: [], total: 0 };
-
-// relayFollowers: Paginate<IFollower> = { elements: [], total: 0 };
 
 const hasFilter = computed((): boolean => {
   return (

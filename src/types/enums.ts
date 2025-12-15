@@ -288,8 +288,11 @@ export enum EventMetadataCategories {
 
 export enum InstanceFilterFollowStatus {
   ALL = "ALL",
-  FOLLOWING = "FOLLOWING",
-  FOLLOWED = "FOLLOWED",
+  OTHERS = "OTHERS",
+  WE_FOLLOW_THEM = "WE_FOLLOW_THEM",
+  WE_FOLLOW_THEM_PENDING = "WE_FOLLOW_THEM_PENDING",
+  THEY_FOLLOW_US = "THEY_FOLLOW_US",
+  THEY_FOLLOW_US_PENDING = "THEY_FOLLOW_US_PENDING",
 }
 
 export enum InstanceFollowStatus {
