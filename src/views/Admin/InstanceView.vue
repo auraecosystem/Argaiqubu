@@ -255,7 +255,7 @@ const { mutate: rejectInstance, onError: onRejectInstanceError } = useMutation(
   () => ({
     update(cache: ApolloCache<any>) {
       cache.writeFragment({
-        id: cache.identify(instance as unknown as Reference),
+        id: cache.identify(instance.value as unknown as Reference),
         fragment: gql`
           fragment InstanceFollowerStatus on Instance {
             followerStatus
