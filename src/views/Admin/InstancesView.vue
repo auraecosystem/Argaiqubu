@@ -1,6 +1,4 @@
 <template>
-  filteredInstances.length: {{ filteredInstances.length }}
-
   <div>
     <breadcrumbs-nav
       :links="[
