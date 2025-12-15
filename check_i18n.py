@@ -22,13 +22,13 @@ def write_expected_i18n_en_US(origin_i18n, expected_i18n):
 			new_i18n_us[i18n_key] = origin_i18n[i18n_key]
 		else:
 			new_i18n_us[i18n_key] = i18n_key
-	with open(join("src", "i18n", "en_US-expected_without_not_used.json"), "w") as script_hdl:
-		script_hdl.write(json.dumps(new_i18n_us, indent=2))
+#	with open(join("src", "i18n", "en_US-expected_without_not_used.json"), "w") as script_hdl:
+#		script_hdl.write(json.dumps(new_i18n_us, indent=2))
 	new_i18n_us=origin_i18n.copy()
 	new_i18n_us.update({i18n_key:i18n_key for i18n_key in expected_i18n if i18n_key not in origin_i18n})
 	new_i18n_us = {i18n_key: i18n_value for i18n_key, i18n_value in sorted(new_i18n_us.items(), key=lambda item: item[0])}
-	with open(join("src", "i18n", "en_US-with_not_translated.json"), "w") as script_hdl:
-		script_hdl.write(json.dumps(new_i18n_us, indent=2))
+#	with open(join("src", "i18n", "en_US-with_not_translated.json"), "w") as script_hdl:
+#		script_hdl.write(json.dumps(new_i18n_us, indent=2))
 
 list_translate_sentence_regex = (
 	re.compile(r'[^a-zA-Z]t\(\s*"([^"]*)"\s*\)'),
