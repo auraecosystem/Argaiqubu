@@ -119,35 +119,41 @@
             )
           "
         >
-          <button
+          <o-button
             @click="
               removeInstanceFollow({
                 address: instance?.relayAddress,
               })
             "
+            :loading="removeInstanceFollowLoading"
             v-if="instance.followedStatus == InstanceFollowStatus.APPROVED"
+            variant="primary"
             class="bg-primary hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-gray-50 text-white hover:text-white font-semibold h-12 px-6 rounded-lg w-full flex items-center justify-center sm:w-auto"
           >
             {{ t("Stop following instance") }}
-          </button>
-          <button
+          </o-button>
+          <o-button
             @click="
               removeInstanceFollow({
                 address: instance?.relayAddress,
               })
             "
+            :loading="removeInstanceFollowLoading"
             v-else-if="instance.followedStatus == InstanceFollowStatus.PENDING"
+            variant="primary"
             class="bg-primary hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-gray-50 text-white hover:text-white font-semibold h-12 px-6 rounded-lg w-full flex items-center justify-center sm:w-auto"
           >
             {{ t("Cancel follow request") }}
-          </button>
-          <button
+          </o-button>
+          <o-button
             @click="followInstance"
+            :loading="followInstanceLoading"
             v-else
+            variant="primary"
             class="bg-primary hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-gray-50 text-white hover:text-white font-semibold h-12 px-6 rounded-lg w-full flex items-center justify-center sm:w-auto"
           >
             {{ t("Follow instance") }}
-          </button>
+          </o-button>
         </div>
         <div
           v-else
@@ -158,31 +164,35 @@
         <div
           class="border bg-white dark:bg-mbz-purple-500 dark:border-mbz-purple-700 p-6 shadow-md rounded-md flex flex-col gap-2 justify-center"
         >
-          <button
+          <o-button
             @click="
               acceptInstance({
                 address: instance?.relayAddress,
               })
             "
+            :loading="acceptInstanceLoading"
             v-if="instance.followerStatus == InstanceFollowStatus.PENDING"
+            variant="primary"
             class="bg-green-700 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-gray-50 text-white hover:text-white font-semibold h-12 px-6 rounded-lg w-full flex items-center justify-center sm:w-auto"
           >
             {{ t("Accept follow") }}
-          </button>
-          <button
+          </o-button>
+          <o-button
             @click="
               rejectInstance({
                 address: instance?.relayAddress,
               })
             "
+            :loading="rejectInstanceLoading"
             v-if="
               instance.followerStatus == InstanceFollowStatus.PENDING ||
               instance.followerStatus == InstanceFollowStatus.APPROVED
             "
+            variant="primary"
             class="bg-red-700 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-gray-50 text-white hover:text-white font-semibold h-12 px-6 rounded-lg w-full flex items-center justify-center sm:w-auto"
           >
             {{ t("Reject follow") }}
-          </button>
+          </o-button>
           <p v-if="instance.followerStatus == InstanceFollowStatus.NONE">
             {{ t("This instance doesn't follow yours.") }}
           </p>
@@ -222,24 +232,25 @@ const notifier = inject<Notifier>("notifier");
 
 const { t } = useI18n({ useScope: "global" });
 
-const { mutate: acceptInstance, onError: onAcceptInstanceError } = useMutation(
-  ACCEPT_RELAY,
-  () => ({
-    update(cache: ApolloCache<any>) {
-      cache.writeFragment({
-        id: cache.identify(instance.value as unknown as Reference),
-        fragment: gql`
-          fragment InstanceFollowerStatus on Instance {
-            followerStatus
-          }
-        `,
-        data: {
-          followerStatus: InstanceFollowStatus.APPROVED,
-        },
-      });
-    },
-  })
-);
+const {
+  mutate: acceptInstance,
+  loading: acceptInstanceLoading,
+  onError: onAcceptInstanceError,
+} = useMutation(ACCEPT_RELAY, () => ({
+  update(cache: ApolloCache<any>) {
+    cache.writeFragment({
+      id: cache.identify(instance.value as unknown as Reference),
+      fragment: gql`
+        fragment InstanceFollowerStatus on Instance {
+          followerStatus
+        }
+      `,
+      data: {
+        followerStatus: InstanceFollowStatus.APPROVED,
+      },
+    });
+  },
+}));
 
 onAcceptInstanceError((error) => {
   if (error.graphQLErrors && error.graphQLErrors.length > 0) {
@@ -250,24 +261,25 @@ onAcceptInstanceError((error) => {
 /**
  * Reject instance follow
  */
-const { mutate: rejectInstance, onError: onRejectInstanceError } = useMutation(
-  REJECT_RELAY,
-  () => ({
-    update(cache: ApolloCache<any>) {
-      cache.writeFragment({
-        id: cache.identify(instance.value as unknown as Reference),
-        fragment: gql`
-          fragment InstanceFollowerStatus on Instance {
-            followerStatus
-          }
-        `,
-        data: {
-          followerStatus: InstanceFollowStatus.NONE,
-        },
-      });
-    },
-  })
-);
+const {
+  mutate: rejectInstance,
+  loading: rejectInstanceLoading,
+  onError: onRejectInstanceError,
+} = useMutation(REJECT_RELAY, () => ({
+  update(cache: ApolloCache<any>) {
+    cache.writeFragment({
+      id: cache.identify(instance.value as unknown as Reference),
+      fragment: gql`
+        fragment InstanceFollowerStatus on Instance {
+          followerStatus
+        }
+      `,
+      data: {
+        followerStatus: InstanceFollowStatus.NONE,
+      },
+    });
+  },
+}));
 
 onRejectInstanceError((error) => {
   if (error.graphQLErrors && error.graphQLErrors.length > 0) {
@@ -275,8 +287,11 @@ onRejectInstanceError((error) => {
   }
 });
 
-const { mutate: followInstanceMutation, onError: onFollowInstanceError } =
-  useMutation<{ addInstance: IInstance }>(ADD_INSTANCE);
+const {
+  mutate: followInstanceMutation,
+  loading: followInstanceLoading,
+  onError: onFollowInstanceError,
+} = useMutation<{ addInstance: IInstance }>(ADD_INSTANCE);
 
 onFollowInstanceError((error) => {
   if (error.graphQLErrors && error.graphQLErrors.length > 0) {
@@ -292,22 +307,25 @@ const followInstance = async (e: Event): Promise<void> => {
 /**
  * Stop following instance
  */
-const { mutate: removeInstanceFollow, onError: onRemoveInstanceFollowError } =
-  useMutation(REMOVE_RELAY, () => ({
-    update(cache: ApolloCache<any>) {
-      cache.writeFragment({
-        id: cache.identify(instance.value as unknown as Reference),
-        fragment: gql`
-          fragment InstanceFollowedStatus on Instance {
-            followedStatus
-          }
-        `,
-        data: {
-          followedStatus: InstanceFollowStatus.NONE,
-        },
-      });
-    },
-  }));
+const {
+  mutate: removeInstanceFollow,
+  loading: removeInstanceFollowLoading,
+  onError: onRemoveInstanceFollowError,
+} = useMutation(REMOVE_RELAY, () => ({
+  update(cache: ApolloCache<any>) {
+    cache.writeFragment({
+      id: cache.identify(instance.value as unknown as Reference),
+      fragment: gql`
+        fragment InstanceFollowedStatus on Instance {
+          followedStatus
+        }
+      `,
+      data: {
+        followedStatus: InstanceFollowStatus.NONE,
+      },
+    });
+  },
+}));
 
 onRemoveInstanceFollowError((error) => {
   if (error.graphQLErrors && error.graphQLErrors.length > 0) {

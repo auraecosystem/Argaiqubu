@@ -50,7 +50,7 @@
           "
           :to="{
             name: RouteName.INSTANCES,
-            query: { followStatus: InstanceFilterFollowStatus.FOLLOWING },
+            query: { followStatus: InstanceFilterFollowStatus.THEY_FOLLOW_US },
           }"
         />
         <LinkedNumberDashboardTile
@@ -60,7 +60,7 @@
           "
           :to="{
             name: RouteName.INSTANCES,
-            query: { followStatus: InstanceFilterFollowStatus.FOLLOWED },
+            query: { followStatus: InstanceFilterFollowStatus.WE_FOLLOW_THEM },
           }"
         />
       </div>
@@ -98,7 +98,11 @@ import GroupCard from "@/components/Group/GroupCard.vue";
 import EventCard from "@/components/Event/EventCard.vue";
 
 const { result: dashboardResult } = useQuery<{ dashboard: IDashboard }>(
-  DASHBOARD
+  DASHBOARD,
+  {},
+  {
+    fetchPolicy: "cache-and-network",
+  }
 );
 
 const dashboard = computed(() => dashboardResult.value?.dashboard);

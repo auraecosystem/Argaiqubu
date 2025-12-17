@@ -20,6 +20,10 @@ defmodule Mobilizon.Service.Statistics do
     end
   end
 
+  def clear_cached_value(key) do
+    Cachex.del(:statistics, key)
+  end
+
   defp create_cache(:local_users) do
     Users.count_users()
   end

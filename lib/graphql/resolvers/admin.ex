@@ -608,6 +608,8 @@ defmodule Mobilizon.GraphQL.Resolvers.Admin do
   def remove_relay(_parent, %{address: address}, %{context: %{current_user: %User{role: role}}})
       when is_admin(role) do
     with {:ok, _activity, follow} <- Relay.unfollow(address) do
+      Statistics.clear_cached_value(:instance_followers)
+      Statistics.clear_cached_value(:instance_followings)
       {:ok, follow}
     end
   end
@@ -621,6 +623,8 @@ defmodule Mobilizon.GraphQL.Resolvers.Admin do
       )
       when is_admin(role) do
     with {:ok, _activity, follow} <- Relay.accept(address) do
+      Statistics.clear_cached_value(:instance_followers)
+      Statistics.clear_cached_value(:instance_followings)
       {:ok, follow}
     end
   end
@@ -634,6 +638,8 @@ defmodule Mobilizon.GraphQL.Resolvers.Admin do
       )
       when is_admin(role) do
     with {:ok, _activity, follow} <- Relay.reject(address) do
+      Statistics.clear_cached_value(:instance_followers)
+      Statistics.clear_cached_value(:instance_followings)
       {:ok, follow}
     end
   end
