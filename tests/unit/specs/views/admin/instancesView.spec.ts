@@ -97,9 +97,7 @@ describe("InstancesView", () => {
     expect(requestHandlers.handle_0).toHaveBeenCalledTimes(0);
     expect(requestHandlers.handle_1).toHaveBeenCalledTimes(1);
     expect(requestHandlers.handle_1).toHaveBeenCalledWith({
-      filterDomain: "",
-      filterFollowStatus: "ALL",
-      limit: 10,
+      limit: 100,
       page: 1,
     });
   });
