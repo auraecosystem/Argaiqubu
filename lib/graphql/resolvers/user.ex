@@ -10,6 +10,7 @@ defmodule Mobilizon.GraphQL.Resolvers.User do
   alias Mobilizon.Federation.ActivityPub.Actions
   alias Mobilizon.Service.AntiSpam
   alias Mobilizon.Service.Auth.Authenticator
+  alias Mobilizon.Service.Statistics
   alias Mobilizon.Storage.{Page, Repo}
   alias Mobilizon.Users.{Setting, User}
 
@@ -182,6 +183,8 @@ defmodule Mobilizon.GraphQL.Resolvers.User do
              role: role
            })
            |> Users.register() do
+      # Invalidate the admin Dashboard user cache
+      Statistics.clear_cached_value(:local_users)
       Email.User.send_confirmation_email(user, Map.get(args, :locale, "en"))
       {:ok, user}
     else
@@ -626,6 +629,8 @@ defmodule Mobilizon.GraphQL.Resolvers.User do
     with %User{disabled: true} = user <- Users.get_user(user_id),
          {:ok, %User{} = updated_user} <-
            Users.unban_user(user) do
+      # Invalidate the admin Dashboard user cache
+      Statistics.clear_cached_value(:local_users)
       Admin.log_action(moderator_actor, "unsuspend", user)
       {:ok, updated_user}
     else
@@ -694,7 +699,14 @@ defmodule Mobilizon.GraphQL.Resolvers.User do
              Actions.Delete.delete(actor, actor_performing, true)
            end) do
       # Delete user
-      Users.delete_user(user, reserve_email: Keyword.get(options, :reserve_email, activated))
+      with {:ok, user} <-
+             Users.delete_user(user,
+               reserve_email: Keyword.get(options, :reserve_email, activated)
+             ) do
+        # Invalidate the admin Dashboard user cache
+        Statistics.clear_cached_value(:local_users)
+        {:ok, user}
+      end
     end
   end
 
