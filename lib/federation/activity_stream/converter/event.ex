@@ -16,6 +16,7 @@ defmodule Mobilizon.Federation.ActivityStream.Converter.Event do
   alias Mobilizon.Medias.Media
 
   alias Mobilizon.Federation.ActivityStream.{Converter, Convertible}
+  alias Mobilizon.Federation.ActivityStream.Converter.Actor, as: ActorConverter
   alias Mobilizon.Federation.ActivityStream.Converter.Address, as: AddressConverter
   alias Mobilizon.Federation.ActivityStream.Converter.EventMetadata, as: EventMetadataConverter
   alias Mobilizon.Federation.ActivityStream.Converter.Media, as: MediaConverter
@@ -128,6 +129,8 @@ defmodule Mobilizon.Federation.ActivityStream.Converter.Event do
 
     participant_count = Mobilizon.Events.count_participant_participants(event.id)
 
+    organizers = Enum.map([attributed_to_or_default(event)], &ActorConverter.metadata_to_as/1)
+
     %{
       "type" => "Event",
       "to" => to,
@@ -165,6 +168,11 @@ defmodule Mobilizon.Federation.ActivityStream.Converter.Event do
       "timezone" => event.options.timezone,
       "contacts" => Enum.map(event.contacts, & &1.url),
       "isOnline" => event.options.is_online,
+      "organizers" => %{
+        "type" => "OrganizersCollection",
+        "totalItems" => Enum.count(organizers),
+        "items" => organizers
+      },
       "summary" => event_summary(event)
     }
     |> maybe_add_physical_address(event)

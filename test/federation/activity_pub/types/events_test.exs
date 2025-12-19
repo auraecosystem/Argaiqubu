@@ -14,10 +14,19 @@ defmodule Mobilizon.Federation.ActivityPub.Types.EventsTest do
   describe "test event creation" do
     @event_begins_on "2021-07-28T15:04:22Z"
     @event_title "hey"
-    @event_data %{title: @event_title, begins_on: @event_begins_on}
+    @event_data %{
+      title: @event_title,
+      begins_on: @event_begins_on,
+      options: %{timezone: "Europe/Paris", anonymous_participation: false}
+    }
 
     test "from a simple profile" do
-      %Actor{id: organizer_actor_id, url: actor_url, followers_url: followers_url} =
+      %Actor{
+        id: organizer_actor_id,
+        name: actor_name,
+        url: actor_url,
+        followers_url: followers_url
+      } =
         insert(:actor)
 
       assert {:ok, %Event{}, data} =
@@ -48,8 +57,16 @@ defmodule Mobilizon.Federation.ActivityPub.Types.EventsTest do
                    "mediaType" => "text/html",
                    "name" => @event_title,
                    "repliesModerationOption" => nil,
-                   "startTime" => @event_begins_on,
+                   "startTime" => "2021-07-28T17:04:22+02:00",
                    "status" => "CONFIRMED",
+                   "organizers" => %{
+                     "type" => "OrganizersCollection",
+                     "totalItems" => 1,
+                     "items" => [
+                       %{"type" => "Person", "name" => ^actor_name, "id" => ^actor_url}
+                     ]
+                   },
+                   "timezone" => "Europe/Paris",
                    "tag" => [],
                    "to" => [@ap_public],
                    "type" => "Event"
@@ -62,7 +79,12 @@ defmodule Mobilizon.Federation.ActivityPub.Types.EventsTest do
     end
 
     test "an unlisted event" do
-      %Actor{id: organizer_actor_id, url: actor_url, followers_url: followers_url} =
+      %Actor{
+        id: organizer_actor_id,
+        name: actor_name,
+        url: actor_url,
+        followers_url: followers_url
+      } =
         insert(:actor)
 
       assert {:ok, %Event{}, data} =
@@ -96,8 +118,16 @@ defmodule Mobilizon.Federation.ActivityPub.Types.EventsTest do
                    "mediaType" => "text/html",
                    "name" => @event_title,
                    "repliesModerationOption" => nil,
-                   "startTime" => @event_begins_on,
+                   "startTime" => "2021-07-28T17:04:22+02:00",
                    "status" => "CONFIRMED",
+                   "organizers" => %{
+                     "type" => "OrganizersCollection",
+                     "totalItems" => 1,
+                     "items" => [
+                       %{"type" => "Person", "name" => ^actor_name, "id" => ^actor_url}
+                     ]
+                   },
+                   "timezone" => "Europe/Paris",
                    "tag" => [],
                    "to" => [^followers_url],
                    "type" => "Event"
@@ -115,6 +145,7 @@ defmodule Mobilizon.Federation.ActivityPub.Types.EventsTest do
 
       %Actor{
         id: attributed_to_id,
+        name: group_name,
         url: group_url,
         followers_url: followers_url,
         members_url: members_url
@@ -153,8 +184,16 @@ defmodule Mobilizon.Federation.ActivityPub.Types.EventsTest do
                    "mediaType" => "text/html",
                    "name" => @event_title,
                    "repliesModerationOption" => nil,
-                   "startTime" => @event_begins_on,
+                   "startTime" => "2021-07-28T17:04:22+02:00",
                    "status" => "CONFIRMED",
+                   "organizers" => %{
+                     "type" => "OrganizersCollection",
+                     "totalItems" => 1,
+                     "items" => [
+                       %{"type" => "Group", "name" => ^group_name, "id" => ^group_url}
+                     ]
+                   },
+                   "timezone" => "Europe/Paris",
                    "tag" => [],
                    "to" => [@ap_public],
                    "type" => "Event"
@@ -172,7 +211,8 @@ defmodule Mobilizon.Federation.ActivityPub.Types.EventsTest do
 
   describe "test event update" do
     test "from a simple profile" do
-      %Actor{url: actor_url, followers_url: followers_url} = actor = insert(:actor)
+      %Actor{url: actor_url, name: actor_name, followers_url: followers_url} =
+        actor = insert(:actor)
 
       {:ok, begins_on, _} = DateTime.from_iso8601(@event_begins_on)
       %Event{} = event = insert(:event, organizer_actor: actor, begins_on: begins_on)
@@ -202,8 +242,16 @@ defmodule Mobilizon.Federation.ActivityPub.Types.EventsTest do
                    "mediaType" => "text/html",
                    "name" => @event_updated_title,
                    "repliesModerationOption" => nil,
-                   "startTime" => @event_begins_on,
+                   "startTime" => "2021-07-28T15:04:22+00:00",
                    "status" => "CONFIRMED",
+                   "organizers" => %{
+                     "type" => "OrganizersCollection",
+                     "totalItems" => 1,
+                     "items" => [
+                       %{"type" => "Person", "name" => ^actor_name, "id" => ^actor_url}
+                     ]
+                   },
+                   "timezone" => "UTC",
                    "tag" => [],
                    "to" => [@ap_public],
                    "type" => "Event"
@@ -223,6 +271,7 @@ defmodule Mobilizon.Federation.ActivityPub.Types.EventsTest do
 
       %Actor{
         url: group_url,
+        name: group_name,
         followers_url: followers_url,
         members_url: members_url
       } = group = insert(:group, domain: "somewhere.else", url: "https://somewhere.else/@someone")
@@ -263,8 +312,16 @@ defmodule Mobilizon.Federation.ActivityPub.Types.EventsTest do
                    "mediaType" => "text/html",
                    "name" => @event_updated_title,
                    "repliesModerationOption" => nil,
-                   "startTime" => @event_begins_on,
+                   "startTime" => "2021-07-28T15:04:22+00:00",
                    "status" => "CONFIRMED",
+                   "organizers" => %{
+                     "type" => "OrganizersCollection",
+                     "totalItems" => 1,
+                     "items" => [
+                       %{"type" => "Group", "name" => ^group_name, "id" => ^group_url}
+                     ]
+                   },
+                   "timezone" => "UTC",
                    "tag" => [],
                    "to" => [@ap_public],
                    "type" => "Event"
@@ -284,6 +341,7 @@ defmodule Mobilizon.Federation.ActivityPub.Types.EventsTest do
 
       %Actor{
         url: group_url,
+        name: actor_name,
         followers_url: followers_url,
         members_url: members_url
       } = group = insert(:group, domain: "somewhere.else", url: "https://somewhere.else/@someone")
@@ -324,8 +382,16 @@ defmodule Mobilizon.Federation.ActivityPub.Types.EventsTest do
                    "mediaType" => "text/html",
                    "name" => @event_updated_title,
                    "repliesModerationOption" => nil,
-                   "startTime" => @event_begins_on,
+                   "startTime" => "2021-07-28T15:04:22+00:00",
                    "status" => "CONFIRMED",
+                   "organizers" => %{
+                     "type" => "OrganizersCollection",
+                     "totalItems" => 1,
+                     "items" => [
+                       %{"type" => "Group", "name" => ^actor_name, "id" => ^group_url}
+                     ]
+                   },
+                   "timezone" => "UTC",
                    "tag" => [],
                    "to" => [@ap_public],
                    "type" => "Event"

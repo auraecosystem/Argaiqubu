@@ -123,6 +123,19 @@ defmodule Mobilizon.Federation.ActivityStream.Converter.Actor do
     |> maybe_add_physical_address(actor)
   end
 
+  @doc """
+  Convert an actor struct to an ActivityStream organization.
+  """
+  @impl Converter
+  @spec metadata_to_as(ActorModel.t()) :: map()
+  def metadata_to_as(%ActorModel{} = actor) do
+    %{
+      "id" => actor.url,
+      "type" => to_string(actor.type),
+      "name" => actor.name
+    }
+  end
+
   @spec add_keys(map(), ActorModel.t()) :: map()
   defp add_keys(actor_data, %ActorModel{} = actor) do
     keys =

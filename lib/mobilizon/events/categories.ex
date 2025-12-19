@@ -4,7 +4,7 @@ defmodule Mobilizon.Events.Categories do
   """
   import Mobilizon.Web.Gettext
 
-  @default "MEETING"
+  @default "UNKNOWN"
 
   @spec default :: String.t()
   def default do
@@ -32,6 +32,10 @@ defmodule Mobilizon.Events.Categories do
         label: gettext("Arts")
       },
       %{
+        id: :auto_boat_air,
+        label: gettext("Auto, boat and air")
+      },
+      %{
         id: :book_clubs,
         label: gettext("Book clubs")
       },
@@ -44,6 +48,14 @@ defmodule Mobilizon.Events.Categories do
         label: gettext("Causes")
       },
       %{
+        id: :climat_environment,
+        label: gettext("Climat & Environment")
+      },
+      %{
+        id: :community,
+        label: gettext("Community")
+      },
+      %{
         id: :comedy,
         label: gettext("Comedy")
       },
@@ -52,24 +64,12 @@ defmodule Mobilizon.Events.Categories do
         label: gettext("Crafts")
       },
       %{
-        id: :food_drink,
-        label: gettext("Food & Drink")
+        id: :creative_jam,
+        label: gettext("Creative jam")
       },
       %{
-        id: :health,
-        label: gettext("Health")
-      },
-      %{
-        id: :music,
-        label: gettext("Music")
-      },
-      %{
-        id: :auto_boat_air,
-        label: gettext("Auto, boat and air")
-      },
-      %{
-        id: :community,
-        label: gettext("Community")
+        id: :diy_maker_spaces,
+        label: gettext("Diy maker spaces")
       },
       %{
         id: :family_education,
@@ -80,12 +80,28 @@ defmodule Mobilizon.Events.Categories do
         label: gettext("Fashion & Beauty")
       },
       %{
+        id: :festivals,
+        label: gettext("Festivals")
+      },
+      %{
         id: :film_media,
         label: gettext("Film & Media")
       },
       %{
+        id: :food_drink,
+        label: gettext("Food & Drink")
+      },
+      %{
         id: :games,
         label: gettext("Games")
+      },
+      %{
+        id: :health,
+        label: gettext("Health")
+      },
+      %{
+        id: :inclusive_spaces,
+        label: gettext("Inclusive spaces")
       },
       %{
         id: :language_culture,
@@ -100,12 +116,28 @@ defmodule Mobilizon.Events.Categories do
         label: gettext("LGBTQ")
       },
       %{
+        id: :meeting,
+        label: gettext("Meeting")
+      },
+      %{
+        id: :meditation_wellbeing,
+        label: gettext("Meditation & Wellbeing")
+      },
+      %{
         id: :movements_politics,
         label: gettext("Movements and politics")
       },
       %{
+        id: :music,
+        label: gettext("Music")
+      },
+      %{
         id: :networking,
         label: gettext("Networking")
+      },
+      %{
+        id: :outdoors_adventure,
+        label: gettext("Outdoors & Adventure")
       },
       %{
         id: :party,
@@ -124,16 +156,12 @@ defmodule Mobilizon.Events.Categories do
         label: gettext("Photography")
       },
       %{
-        id: :outdoors_adventure,
-        label: gettext("Outdoors & Adventure")
+        id: :science_tech,
+        label: gettext("Science & Tech")
       },
       %{
         id: :spirituality_religion_beliefs,
         label: gettext("Spirituality, Religion & Beliefs")
-      },
-      %{
-        id: :science_tech,
-        label: gettext("Science & Tech")
       },
       %{
         id: :sports,
@@ -143,10 +171,14 @@ defmodule Mobilizon.Events.Categories do
         id: :theatre,
         label: gettext("Theatre")
       },
+      %{
+        id: :workshops_skill_sharing,
+        label: gettext("Workshops skill sharing")
+      },
       # Legacy default value
       %{
-        id: :meeting,
-        label: gettext("Meeting")
+        id: :unknown,
+        label: gettext("Unknown")
       }
     ]
   end
