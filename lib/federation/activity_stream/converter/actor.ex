@@ -131,7 +131,7 @@ defmodule Mobilizon.Federation.ActivityStream.Converter.Actor do
   def metadata_to_as(%ActorModel{} = actor) do
     %{
       "id" => actor.url,
-      "type" => to_string(actor.type),
+      "type" => if(actor.type == :Group, do: "Organization", else: "Person"),
       "name" => actor.name
     }
   end

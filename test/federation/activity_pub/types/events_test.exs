@@ -190,7 +190,7 @@ defmodule Mobilizon.Federation.ActivityPub.Types.EventsTest do
                      "type" => "OrganizersCollection",
                      "totalItems" => 1,
                      "items" => [
-                       %{"type" => "Group", "name" => ^group_name, "id" => ^group_url}
+                       %{"type" => "Organization", "name" => ^group_name, "id" => ^group_url}
                      ]
                    },
                    "timezone" => "Europe/Paris",
@@ -318,7 +318,7 @@ defmodule Mobilizon.Federation.ActivityPub.Types.EventsTest do
                      "type" => "OrganizersCollection",
                      "totalItems" => 1,
                      "items" => [
-                       %{"type" => "Group", "name" => ^group_name, "id" => ^group_url}
+                       %{"type" => "Organization", "name" => ^group_name, "id" => ^group_url}
                      ]
                    },
                    "timezone" => "UTC",
@@ -388,7 +388,7 @@ defmodule Mobilizon.Federation.ActivityPub.Types.EventsTest do
                      "type" => "OrganizersCollection",
                      "totalItems" => 1,
                      "items" => [
-                       %{"type" => "Group", "name" => ^actor_name, "id" => ^group_url}
+                       %{"type" => "Organization", "name" => ^actor_name, "id" => ^group_url}
                      ]
                    },
                    "timezone" => "UTC",

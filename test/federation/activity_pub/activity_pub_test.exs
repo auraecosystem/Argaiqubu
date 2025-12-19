@@ -227,7 +227,9 @@ defmodule Mobilizon.Federation.ActivityPubTest do
       assert update.data["to"] == [@activity_pub_public_audience]
       assert update.data["object"]["id"] == event.url
       assert update.data["object"]["type"] == "Event"
-      assert update.data["object"]["startTime"] == DateTime.to_iso8601(@updated_start_time)
+
+      assert update.data["object"]["startTime"] ==
+               String.replace(DateTime.to_iso8601(@updated_start_time), ~r/Z$/, "+00:00")
     end
   end
 
