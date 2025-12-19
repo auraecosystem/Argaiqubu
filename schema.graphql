@@ -3353,7 +3353,7 @@ type Activity {
   group: Group
 }
 
-enum EventCategory { 
+enum EventCategory {
   ARTS
   AUTO_BOAT_AIR
   BOOK_CLUBS
