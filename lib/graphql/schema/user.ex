@@ -433,14 +433,6 @@ defmodule Mobilizon.GraphQL.Schema.UserType do
       resolve(&User.change_default_actor/3)
     end
 
-    @desc "Change an user password"
-    field :change_password, :user do
-      arg(:old_password, non_null(:string), description: "The user's current password")
-      arg(:new_password, non_null(:string), description: "The user's new password")
-      middleware(Rajska.QueryAuthorization, permit: :user, scope: false)
-      resolve(&User.change_password/3)
-    end
-
     @desc "Change an user email"
     field :change_email, :user do
       arg(:email, non_null(:string), description: "The user's new email")

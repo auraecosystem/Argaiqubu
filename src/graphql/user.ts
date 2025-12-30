@@ -52,14 +52,6 @@ export const LOGGED_USER = gql`
   ${ACTOR_FRAGMENT}
 `;
 
-export const CHANGE_PASSWORD = gql`
-  mutation ChangePassword($oldPassword: String!, $newPassword: String!) {
-    changePassword(oldPassword: $oldPassword, newPassword: $newPassword) {
-      id
-    }
-  }
-`;
-
 export const CHANGE_EMAIL = gql`
   mutation ChangeEmail($email: String!, $password: String!) {
     changeEmail(email: $email, password: $password) {
