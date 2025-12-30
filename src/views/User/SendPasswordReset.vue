@@ -1,7 +1,7 @@
 <template>
   <section class="container mx-auto">
     <h1>
-      {{ t("Forgot your password?") }}
+      {{ t("Reset your password") }}
     </h1>
     <p>
       {{

@@ -7,7 +7,7 @@ test("Login has everything we need", async ({ page }) => {
   await expect(page).toHaveTitle(/Login/);
 
   const forgotPasswordLink = page.locator("a", {
-    hasText: "Forgot your password?",
+    hasText: "Reset your password",
   });
 
   const reAskInstructionsLink = page.locator("a", {

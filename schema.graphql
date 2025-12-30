@@ -1330,15 +1330,6 @@ type RootMutationType {
     preferredUsername: String!
   ): User
 
-  "Change an user password"
-  changePassword(
-    "The user's current password"
-    oldPassword: String!
-
-    "The user's new password"
-    newPassword: String!
-  ): User
-
   "Change an user email"
   changeEmail(
     "The user's new email"

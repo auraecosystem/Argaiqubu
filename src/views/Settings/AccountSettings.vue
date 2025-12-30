@@ -80,64 +80,6 @@
           {{ t("Change my email") }}
         </o-button>
       </form>
-      <h2 class="mt-2">{{ t("Password") }}</h2>
-      <o-notification
-        v-if="!canChangePassword && loggedUser.provider"
-        variant="warning"
-        :closable="false"
-      >
-        {{
-          t(
-            "You can't change your password because you are registered through {provider}.",
-            {
-              provider: providerName(loggedUser.provider),
-            }
-          )
-        }}
-      </o-notification>
-      <o-notification
-        variant="danger"
-        has-icon
-        aria-close-label="Close notification"
-        role="alert"
-        :key="error"
-        v-for="error in changePasswordErrors"
-        >{{ error }}</o-notification
-      >
-      <form
-        @submit.prevent="resetPasswordAction"
-        ref="passwordForm"
-        class="form"
-        v-if="canChangePassword"
-      >
-        <o-field :label="t('Old password')" label-for="account-old-password">
-          <o-input
-            aria-required="true"
-            required
-            type="password"
-            password-reveal
-            minlength="6"
-            id="account-old-password"
-            v-model="oldPassword"
-            expanded
-          />
-        </o-field>
-        <o-field :label="t('New password')" label-for="account-new-password">
-          <o-input
-            aria-required="true"
-            required
-            type="password"
-            password-reveal
-            minlength="6"
-            id="account-new-password"
-            v-model="newPassword"
-            expanded
-          />
-        </o-field>
-        <o-button class="mt-2" variant="primary" nativeType="submit">
-          {{ t("Change my password") }}
-        </o-button>
-      </form>
       <h2 class="mt-2">{{ t("Delete account") }}</h2>
       <p class="prose dark:prose-invert">
         {{ t("Deleting my account will delete all of my identities.") }}
@@ -240,11 +182,7 @@ import { GraphQLError } from "graphql/error/GraphQLError";
 import { computed, inject, ref } from "vue";
 import { useI18n } from "vue-i18n";
 import { useRouter } from "vue-router";
-import {
-  CHANGE_EMAIL,
-  CHANGE_PASSWORD,
-  DELETE_ACCOUNT_AS_USER,
-} from "../../graphql/user";
+import { CHANGE_EMAIL, DELETE_ACCOUNT_AS_USER } from "../../graphql/user";
 import RouteName from "../../router/name";
 import { logout, SELECTED_PROVIDERS } from "../../utils/auth";
 import { useOruga } from "@oruga-ui/oruga-next";
@@ -257,15 +195,11 @@ useHead({
   title: computed(() => t("General settings")),
 });
 
-const passwordForm = ref<HTMLFormElement>();
 const emailForm = ref<HTMLFormElement>();
 
 const passwordForEmailChange = ref("");
 const newEmail = ref("");
 const changeEmailErrors = ref<string[]>([]);
-const oldPassword = ref("");
-const newPassword = ref("");
-const changePasswordErrors = ref<string[]>([]);
 const deletePasswordErrors = ref<string[]>([]);
 const isDeleteAccountModalActive = ref(false);
 const passwordForAccountDeletion = ref("");
@@ -289,7 +223,13 @@ changeEmailMutationDone(() => {
 });
 
 changeEmailMutationError((err) => {
-  handleErrors("email", err);
+  console.error(err);
+
+  if (err.graphQLErrors !== undefined) {
+    err.graphQLErrors.forEach(({ message }: { message: string }) => {
+      changeEmailErrors.value.push(message);
+    });
+  }
 });
 
 const resetEmailAction = async (): Promise<void> => {
@@ -299,33 +239,6 @@ const resetEmailAction = async (): Promise<void> => {
     changeEmailMutation({
       email: newEmail.value,
       password: passwordForEmailChange.value,
-    });
-  }
-};
-
-const {
-  mutate: changePasswordMutation,
-  onDone: onChangePasswordMutationDone,
-  onError: onChangePasswordMutationError,
-} = useMutation(CHANGE_PASSWORD);
-
-onChangePasswordMutationDone(() => {
-  oldPassword.value = "";
-  newPassword.value = "";
-  notifier?.success(t("The password was successfully changed"));
-});
-
-onChangePasswordMutationError((err) => {
-  handleErrors("password", err);
-});
-
-const resetPasswordAction = async (): Promise<void> => {
-  if (passwordForm.value?.reportValidity()) {
-    changePasswordErrors.value = [];
-
-    changePasswordMutation({
-      oldPassword: oldPassword.value,
-      newPassword: newPassword.value,
     });
   }
 };
@@ -376,10 +289,6 @@ const deleteAccount = () => {
   });
 };
 
-const canChangePassword = computed((): boolean => {
-  return !loggedUser.value?.provider;
-});
-
 const canChangeEmail = computed((): boolean => {
   return !loggedUser.value?.provider;
 });
@@ -401,22 +310,4 @@ const hasUserGotAPassword = computed((): boolean => {
 const deleteAccountPasswordFieldType = computed((): string | null => {
   return deletePasswordErrors.value.length > 0 ? "is-danger" : null;
 });
-
-const handleErrors = (type: string, err: any) => {
-  console.error(err);
-
-  if (err.graphQLErrors !== undefined) {
-    err.graphQLErrors.forEach(({ message }: { message: string }) => {
-      switch (type) {
-        case "password":
-          changePasswordErrors.value.push(message);
-          break;
-        case "email":
-        default:
-          changeEmailErrors.value.push(message);
-          break;
-      }
-    });
-  }
-};
 </script>

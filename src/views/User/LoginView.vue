@@ -91,7 +91,7 @@
             name: RouteName.SEND_PASSWORD_RESET,
             params: { email: credentials.email },
           }"
-          >{{ t("Forgot your password?") }}</o-button
+          >{{ t("Reset your password") }}</o-button
         >
         <o-button
           tag="router-link"

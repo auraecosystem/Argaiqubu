@@ -503,44 +503,6 @@ defmodule Mobilizon.GraphQL.Resolvers.User do
     end
   end
 
-  def change_password(
-        _parent,
-        %{old_password: old_password, new_password: new_password},
-        %{context: %{current_user: %User{} = user}}
-      ) do
-    with {:can_change_password, true} <-
-           {:can_change_password, Authenticator.can_change_password?(user)},
-         {:current_password, {:ok, %User{}}} <-
-           {:current_password, Authenticator.login(user.email, old_password)},
-         {:same_password, false} <- {:same_password, old_password == new_password},
-         {:ok, %User{} = user} <-
-           user
-           |> User.password_change_changeset(%{"password" => new_password})
-           |> Repo.update() do
-      {:ok, user}
-    else
-      {:can_change_password, false} ->
-        {:error, dgettext("errors", "You cannot change your password.")}
-
-      {:current_password, _} ->
-        {:error, dgettext("errors", "The current password is invalid")}
-
-      {:same_password, true} ->
-        {:error, dgettext("errors", "The new password must be different")}
-
-      {:error, %Ecto.Changeset{errors: [password: {"registration.error.password_too_short", _}]}} ->
-        {:error,
-         dgettext(
-           "errors",
-           "The password you have chosen is too short. Please make sure your password contains at least 6 characters."
-         )}
-    end
-  end
-
-  def change_password(_parent, _args, _resolution) do
-    {:error, dgettext("errors", "You need to be logged-in to change your password")}
-  end
-
   def change_email(_parent, %{email: new_email, password: password}, %{
         context: %{current_user: %User{email: old_email} = user}
       }) do
