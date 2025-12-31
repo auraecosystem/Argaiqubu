@@ -34,8 +34,8 @@ exports[`CreateView > Show simple 1`] = `
       <div data-oruga="field" class="o-field !-mt-2 flex" id="FullAddressAutoComplete-o-field"><label id="v-0-0-0" for="full-address-autocomplete-1" class="o-field__label">Group address</label>
         <!--v-if-->
         <div data-oruga="autocomplete" class="o-dropdown o-dropdown--expanded o-dropdown--position-auto o-autocomplete">
-          <div class="o-dropdown__trigger" role="combobox" aria-haspopup="listbox" aria-expanded="false" aria-disabled="false" aria-controls="v-0-0-2" aria-labelledby="v-0-0-0">
-            <div data-oruga="input" class="o-input o-input--expanded"><span data-oruga="icon" class="o-icon o-input__icon-left"><i class="mdi mdi-map-marker mdi-24px"></i></span><input aria-labelledby="v-0-0-0" class="FullAddressAutoComplete-o-autocomplete !mt-0 !h-full o-input__input o-input__input--iconspace-left o-input__input--placeholder" aria-autocomplete="list" aria-controls="v-0-0-2" enterkeyhint="enter" id="full-address-autocomplete-1" type="text" data-oruga-input="text" autocomplete="off" placeholder="e.g. 10 Rue Jangot">
+          <div class="o-dropdown__trigger" role="combobox" aria-haspopup="listbox" aria-expanded="false" aria-disabled="false" aria-controls="v-0-0-4" aria-labelledby="v-0-0-0">
+            <div data-oruga="input" class="o-input o-input--expanded"><span data-oruga="icon" class="o-icon o-input__icon-left"><i class="mdi mdi-map-marker mdi-24px"></i></span><input aria-labelledby="v-0-0-0" class="FullAddressAutoComplete-o-autocomplete !mt-0 !h-full o-input__input o-input__input--iconspace-left o-input__input--placeholder" aria-autocomplete="list" aria-controls="v-0-0-4" enterkeyhint="enter" id="full-address-autocomplete-1" type="text" data-oruga-input="text" autocomplete="off" placeholder="e.g. 10 Rue Jangot">
               <!---->
               <!---->
             </div>
@@ -43,10 +43,14 @@ exports[`CreateView > Show simple 1`] = `
           <!--teleport start-->
           <!---->
           <transition-stub name="fade" appear="false" persisted="false" css="true">
-            <div id="v-0-0-2" tabindex="-1" class="o-dropdown__menu o-dropdown__menu--auto" style="max-height: 200px; overflow: auto; display: none;" role="listbox" aria-labelledby="v-0-0-0" aria-multiselectable="false">
+            <div id="v-0-0-4" tabindex="-1" class="o-dropdown__menu o-dropdown__menu--auto" style="max-height: 200px; overflow: auto; display: none;" role="listbox" aria-labelledby="v-0-0-0" aria-multiselectable="false">
               <!---->
               <!---->
-              <div id="v-0-0-2-1" data-oruga="dropdown-item" data-id="dropdown-1" class="o-dropdown__item o-dropdown__item--clickable o-autocomplete__item o-autocomplete__item--empty" role="option" tabindex="-1" aria-selected="false" aria-disabled="false"></div>
+              <div id="v-0-0-4-1" data-oruga="dropdown-item" data-id="dropdown-1" class="o-dropdown__item o-dropdown__item--clickable o-autocomplete__item" role="option" tabindex="-1" aria-selected="false" aria-disabled="false">
+                <p class="flex gap-1"><span data-oruga="icon" class="o-icon"><i class="mdi mdi-home mdi-24px"></i></span><b></b></p>
+                <p class="text-small"></p>
+              </div>
+              <!---->
               <!---->
             </div>
           </transition-stub>
@@ -155,8 +159,8 @@ exports[`CreateView > Show simple 2`] = `
       <div data-oruga="field" class="o-field !-mt-2 flex" id="FullAddressAutoComplete-o-field"><label id="v-0-0-0" for="full-address-autocomplete-1" class="o-field__label">Group address</label>
         <!--v-if-->
         <div data-oruga="autocomplete" class="o-dropdown o-dropdown--expanded o-dropdown--position-auto o-autocomplete">
-          <div class="o-dropdown__trigger" role="combobox" aria-haspopup="listbox" aria-expanded="false" aria-disabled="false" aria-controls="v-0-0-2" aria-labelledby="v-0-0-0">
-            <div data-oruga="input" class="o-input o-input--expanded"><span data-oruga="icon" class="o-icon o-input__icon-left"><i class="mdi mdi-map-marker mdi-24px"></i></span><input aria-labelledby="v-0-0-0" class="FullAddressAutoComplete-o-autocomplete !mt-0 !h-full o-input__input o-input__input--iconspace-left o-input__input--placeholder" aria-autocomplete="list" aria-controls="v-0-0-2" enterkeyhint="enter" id="full-address-autocomplete-1" type="text" data-oruga-input="text" autocomplete="off" placeholder="e.g. 10 Rue Jangot">
+          <div class="o-dropdown__trigger" role="combobox" aria-haspopup="listbox" aria-expanded="false" aria-disabled="false" aria-controls="v-0-0-4" aria-labelledby="v-0-0-0">
+            <div data-oruga="input" class="o-input o-input--expanded"><span data-oruga="icon" class="o-icon o-input__icon-left"><i class="mdi mdi-map-marker mdi-24px"></i></span><input aria-labelledby="v-0-0-0" class="FullAddressAutoComplete-o-autocomplete !mt-0 !h-full o-input__input o-input__input--iconspace-left o-input__input--placeholder" aria-autocomplete="list" aria-controls="v-0-0-4" enterkeyhint="enter" id="full-address-autocomplete-1" type="text" data-oruga-input="text" autocomplete="off" placeholder="e.g. 10 Rue Jangot">
               <!---->
               <!---->
             </div>
@@ -164,10 +168,14 @@ exports[`CreateView > Show simple 2`] = `
           <!--teleport start-->
           <!---->
           <transition-stub name="fade" appear="false" persisted="false" css="true">
-            <div id="v-0-0-2" tabindex="-1" class="o-dropdown__menu o-dropdown__menu--auto" style="max-height: 200px; overflow: auto; display: none;" role="listbox" aria-labelledby="v-0-0-0" aria-multiselectable="false">
+            <div id="v-0-0-4" tabindex="-1" class="o-dropdown__menu o-dropdown__menu--auto" style="max-height: 200px; overflow: auto; display: none;" role="listbox" aria-labelledby="v-0-0-0" aria-multiselectable="false">
               <!---->
               <!---->
-              <div id="v-0-0-2-1" data-oruga="dropdown-item" data-id="dropdown-1" class="o-dropdown__item o-dropdown__item--clickable o-autocomplete__item o-autocomplete__item--empty" role="option" tabindex="-1" aria-selected="false" aria-disabled="false"></div>
+              <div id="v-0-0-4-1" data-oruga="dropdown-item" data-id="dropdown-1" class="o-dropdown__item o-dropdown__item--clickable o-autocomplete__item" role="option" tabindex="-1" aria-selected="false" aria-disabled="false">
+                <p class="flex gap-1"><span data-oruga="icon" class="o-icon"><i class="mdi mdi-home mdi-24px"></i></span><b></b></p>
+                <p class="text-small"></p>
+              </div>
+              <!---->
               <!---->
             </div>
           </transition-stub>

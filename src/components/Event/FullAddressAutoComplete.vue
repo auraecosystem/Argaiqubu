@@ -288,6 +288,15 @@ const setSelected = (newValue: IAddress | null) => {
   if (!newValue) return;
   console.debug("setting selected to model value");
   Object.assign(selected, newValue);
+  if (addressData.value === undefined || addressData.value?.length == 0) {
+    addressData.value = [
+      {
+        label: addressFullName(selected),
+        value: queryTextWithDefault.value,
+      },
+    ];
+    keyaddress.value = keyaddress.value + 1;
+  }
   emit("update:modelValue", selected);
 };
 
