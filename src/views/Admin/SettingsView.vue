@@ -178,11 +178,12 @@
             </small>
             <o-taginput
               v-model="instanceLanguages"
-              :data="filteredLanguages"
+              :options="filteredLanguages"
               allow-autocomplete
               :open-on-focus="true"
               field="name"
               icon="label"
+              :disabled="languageLoading"
               :placeholder="t('Select languages')"
               @input="getFilteredLanguages"
               id="instance-languages"
@@ -521,9 +522,12 @@
             </div>
           </div>
         </section>
-        <o-button type="submit" variant="primary">{{
-          t("Save instance settings")
-        }}</o-button>
+        <o-button
+          type="submit"
+          variant="primary"
+          :loading="onAdminSettingsLoading"
+          >{{ t("Save instance settings") }}</o-button
+        >
       </form>
     </div>
   </div>
@@ -556,6 +560,7 @@ import {
 } from "@/utils/image";
 import { useDefaultMaxSize } from "@/composition/config";
 import { CONFIG } from "@/graphql/config";
+import { OptionsProp } from "@oruga-ui/oruga-next";
 
 const defaultAdminSettings: IAdminSettings = {
   instanceName: "",
@@ -581,9 +586,18 @@ const defaultAdminSettings: IAdminSettings = {
   externalLinks: [],
 };
 
-const { onResult: onAdminSettingsResult } = useQuery<{
+const {
+  onResult: onAdminSettingsResult,
+  onError: onAdminSettingsError,
+  loading: onAdminSettingsLoading,
+} = useQuery<{
   adminSettings: IAdminSettings;
 }>(ADMIN_SETTINGS);
+
+onAdminSettingsError((error) => {
+  console.error(error);
+  alert(`Error when loading ADMIN_SETTINGS: ${error.message}`);
+});
 
 const { refetch: refetchConfig } = useQuery(CONFIG);
 
@@ -607,9 +621,17 @@ const { file: instanceFaviconFile } = instanceFavicon;
 const defaultPicture = initWrappedMedia();
 const { file: defaultPictureFile } = defaultPicture;
 
-const { result: languageResult } = useQuery<{ languages: ILanguage[] }>(
-  LANGUAGES
-);
+const {
+  result: languageResult,
+  onError: onLanguageError,
+  loading: languageLoading,
+} = useQuery<{ languages: ILanguage[] }>(LANGUAGES);
+
+onLanguageError((error) => {
+  console.error(error);
+  alert(`Error when loading LANGUAGES: ${error.message}`);
+});
+
 const languages = computed(() => languageResult.value?.languages);
 
 const { t } = useI18n({ useScope: "global" });
@@ -618,6 +640,7 @@ useHead({
 });
 
 const settingsToWrite = ref<IAdminSettings>(defaultAdminSettings);
+const instanceLanguages = ref<string[]>([]);
 
 watch(adminSettings, () => {
   // We need to use structuredClone to clone deep properties of adminSettings (like externalLinks)
@@ -625,6 +648,27 @@ watch(adminSettings, () => {
   if (adminSettings.value) {
     settingsToWrite.value = structuredClone(toRaw(adminSettings.value));
   }
+});
+
+watch([adminSettings, languages], ([newAdminSettings, newLanguages]) => {
+  // We need both ADMIN_SETTINGS and LANGUAGES queries to be finished
+  if (!newAdminSettings || !newLanguages) return;
+
+  // Initialize instanceLanguages with adminSettings received values
+  const languageCodes = [...(adminSettings.value?.instanceLanguages ?? [])];
+  instanceLanguages.value = languageCodes
+    .map((code) => languageForCode(code))
+    .filter((language) => language) as string[];
+});
+
+watch(instanceLanguages, async (newInstanceLanguages) => {
+  const newFilteredInstanceLanguages = newInstanceLanguages
+    .map((language) => {
+      return codeForLanguage(language);
+    })
+    .filter((code) => code !== undefined) as string[];
+
+  settingsToWrite.value.instanceLanguages = newFilteredInstanceLanguages;
 });
 
 const addLink = () => {
@@ -639,7 +683,7 @@ const deleteLink = (index: number) => {
   settingsToWrite.value.externalLinks.splice(index, 1);
 };
 
-const filteredLanguages = ref<string[]>([]);
+const filteredLanguages = ref<OptionsProp<string>>([]);
 
 const registrationsMode = computed({
   get() {
@@ -664,26 +708,6 @@ const registrationsMode = computed({
       settingsToWrite.value.registrationsOpen = false;
       settingsToWrite.value.registrationsModeration = false;
     }
-  },
-});
-
-const instanceLanguages = computed({
-  get() {
-    const languageCodes = [...(adminSettings.value?.instanceLanguages ?? [])];
-    return languageCodes
-      .map((code) => languageForCode(code))
-      .filter((language) => language) as string[];
-  },
-  set(newInstanceLanguages: string[]) {
-    const newFilteredInstanceLanguages = newInstanceLanguages
-      .map((language) => {
-        return codeForLanguage(language);
-      })
-      .filter((code) => code !== undefined) as string[];
-    settingsToWrite.value = {
-      ...settingsToWrite.value,
-      instanceLanguages: newFilteredInstanceLanguages,
-    };
   },
 });
 
