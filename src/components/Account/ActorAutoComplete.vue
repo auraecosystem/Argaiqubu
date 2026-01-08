@@ -2,7 +2,7 @@
   <o-taginput
     :modelValue="modelValueWithDisplayName"
     @update:modelValue="updateTags"
-    :data="availableActors"
+    :options="availableActors"
     :allow-autocomplete="true"
     :allow-new="false"
     :open-on-focus="false"
