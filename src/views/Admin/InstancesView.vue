@@ -269,7 +269,7 @@ const instancePage = useRouteQuery("page", 1, integerTransformer);
 const filterDomain = useRouteQuery("filterDomain", "");
 const followStatus = useRouteQuery(
   "followStatus",
-  InstanceFilterFollowStatus.WE_FOLLOW_THEM,
+  InstanceFilterFollowStatus.ALL,
   enumTransformer(InstanceFilterFollowStatus)
 );
 
