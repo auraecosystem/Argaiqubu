@@ -181,7 +181,6 @@
               :options="filteredLanguages"
               allow-autocomplete
               :open-on-focus="true"
-              field="name"
               icon="label"
               :disabled="languageLoading"
               :placeholder="t('Select languages')"

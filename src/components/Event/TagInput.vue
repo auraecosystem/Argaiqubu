@@ -16,10 +16,9 @@
     <o-taginput
       :modelValue="tagsStrings"
       @update:modelValue="updateTags"
-      :data="filteredTags"
+      :options="filteredTags"
       :allow-autocomplete="true"
       :allow-new="true"
-      :field="'title'"
       icon="label"
       :maxlength="20"
       :maxitems="10"
@@ -40,6 +39,7 @@ import HelpCircleOutline from "vue-material-design-icons/HelpCircleOutline.vue";
 import { useFetchTags } from "@/composition/apollo/tags";
 import { FILTER_TAGS } from "@/graphql/tags";
 import { useI18n } from "vue-i18n";
+import { OptionsPropItem } from "@oruga-ui/oruga-next";
 
 const props = defineProps<{
   modelValue: ITag[];
@@ -83,14 +83,17 @@ const getFilteredTags = async (newText: string): Promise<void> => {
   }
 };
 
-const filteredTags = computed((): ITag[] => {
-  return differenceBy(tags.value, propsValue.value, "id").filter(
-    (option) =>
-      option.title.toString().toLowerCase().indexOf(text.value.toLowerCase()) >=
-        0 ||
-      option.slug.toString().toLowerCase().indexOf(text.value.toLowerCase()) >=
-        0
-  );
+const filteredTags = computed<OptionsPropItem<string>[]>(() => {
+  return differenceBy(tags.value, propsValue.value, "id")
+    .filter(
+      (tag) =>
+        tag.title.toLowerCase().includes(text.value.toLowerCase()) ||
+        tag.slug.toLowerCase().includes(text.value.toLowerCase())
+    )
+    .map((tag) => ({
+      label: tag.title,
+      value: tag.slug,
+    }));
 });
 
 const updateTags = (newTagsStrings: string[]) => {
