@@ -185,6 +185,7 @@
               icon="label"
               :disabled="languageLoading"
               :placeholder="t('Select languages')"
+              expanded
               @input="getFilteredLanguages"
               id="instance-languages"
             >
@@ -659,6 +660,9 @@ watch([adminSettings, languages], ([newAdminSettings, newLanguages]) => {
   instanceLanguages.value = languageCodes
     .map((code) => languageForCode(code))
     .filter((language) => language) as string[];
+
+  // Initialize the list of languages
+  getFilteredLanguages("");
 });
 
 watch(instanceLanguages, async (newInstanceLanguages) => {
@@ -787,6 +791,7 @@ const getFilteredLanguages = (text: string): void => {
           );
         })
         .map(({ name }) => name)
+        .sort()
     : [];
 };
 
