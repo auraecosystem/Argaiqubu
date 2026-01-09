@@ -51,7 +51,7 @@ exports[`SettingsView > Show and save settings 1`] = `
           </fieldset>
         </o-field>
         <div data-v-a8bb2abf="" class="field flex flex-col"><label data-v-a8bb2abf="" for="instance-languages">Instance languages</label><small data-v-a8bb2abf="">Main languages you/your moderators speak</small>
-          <o-taginput data-v-a8bb2abf="" modelvalue="" options="English,Français,Spanish" allow-autocomplete="" open-on-focus="true" icon="label" disabled="false" placeholder="Select languages" expanded="" id="instance-languages"></o-taginput>
+          <o-taginput data-v-a8bb2abf="" modelvalue="Français" options="English,Français,Spanish" allow-autocomplete="" open-on-focus="true" icon="label" disabled="false" placeholder="Select languages" expanded="" id="instance-languages"></o-taginput>
         </div>
       </section>
       <section data-v-a8bb2abf="" class="mt-4 mb-4 p-4 bg-white dark:bg-violet-2 rounded shadow-md dark:bg-mbz-purple-700">

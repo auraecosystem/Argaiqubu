@@ -131,7 +131,7 @@
     "eslint-plugin-prettier": "^5.0.0",
     "eslint-plugin-vue": "^10.5.1",
     "flush-promises": "^1.0.2",
-    "globals": "^16.4.0",
+    "globals": "^17.0.0",
     "husky": "^9.0.10",
     "jsdom": "^27.0.1",
     "lint-staged": "^16.2.6",
