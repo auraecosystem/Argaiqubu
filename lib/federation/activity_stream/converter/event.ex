@@ -222,9 +222,9 @@ defmodule Mobilizon.Federation.ActivityStream.Converter.Event do
     )
   end
 
-  defp calculate_timezone(_object, nil), do: nil
+  defp calculate_timezone(_object, nil), do: "Etc/UTC"
 
-  defp calculate_timezone(_object, %Address{geom: nil}), do: nil
+  defp calculate_timezone(_object, %Address{geom: nil}), do: "Etc/UTC"
 
   defp calculate_timezone(_object, %Address{geom: geom}) do
     TimezoneDetector.detect(

@@ -481,7 +481,7 @@ defmodule Mobilizon.Federation.ActivityPub.Types.EventsTest do
                    "mediaType" => "text/html",
                    "name" => @event_updated_title,
                    "repliesModerationOption" => nil,
-                   "startTime" => "2021-07-28T15:04:22+00:00",
+                   "startTime" => "2021-07-28T15:04:22Z",
                    "status" => "CONFIRMED",
                    "organizers" => %{
                      "type" => "OrganizersCollection",
@@ -490,7 +490,7 @@ defmodule Mobilizon.Federation.ActivityPub.Types.EventsTest do
                        %{"type" => "Person", "name" => ^actor_name, "id" => ^actor_url}
                      ]
                    },
-                   "timezone" => "UTC",
+                   "timezone" => "Etc/UTC",
                    "tag" => [],
                    "to" => [@ap_public],
                    "type" => "Event"
@@ -551,7 +551,7 @@ defmodule Mobilizon.Federation.ActivityPub.Types.EventsTest do
                    "mediaType" => "text/html",
                    "name" => @event_updated_title,
                    "repliesModerationOption" => nil,
-                   "startTime" => "2021-07-28T15:04:22+00:00",
+                   "startTime" => "2021-07-28T15:04:22Z",
                    "status" => "CONFIRMED",
                    "organizers" => %{
                      "type" => "OrganizersCollection",
@@ -560,7 +560,7 @@ defmodule Mobilizon.Federation.ActivityPub.Types.EventsTest do
                        %{"type" => "Organization", "name" => ^group_name, "id" => ^group_url}
                      ]
                    },
-                   "timezone" => "UTC",
+                   "timezone" => "Etc/UTC",
                    "tag" => [],
                    "to" => [@ap_public],
                    "type" => "Event"
@@ -621,7 +621,7 @@ defmodule Mobilizon.Federation.ActivityPub.Types.EventsTest do
                    "mediaType" => "text/html",
                    "name" => @event_updated_title,
                    "repliesModerationOption" => nil,
-                   "startTime" => "2021-07-28T15:04:22+00:00",
+                   "startTime" => "2021-07-28T15:04:22Z",
                    "status" => "CONFIRMED",
                    "organizers" => %{
                      "type" => "OrganizersCollection",
@@ -630,7 +630,7 @@ defmodule Mobilizon.Federation.ActivityPub.Types.EventsTest do
                        %{"type" => "Organization", "name" => ^actor_name, "id" => ^group_url}
                      ]
                    },
-                   "timezone" => "UTC",
+                   "timezone" => "Etc/UTC",
                    "tag" => [],
                    "to" => [@ap_public],
                    "type" => "Event"
