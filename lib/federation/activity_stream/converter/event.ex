@@ -131,6 +131,13 @@ defmodule Mobilizon.Federation.ActivityStream.Converter.Event do
 
     organizers = Enum.map([attributed_to_or_default(event)], &ActorConverter.metadata_to_as/1)
 
+    start_time = shift_tz(event.begins_on, event.options.timezone)
+
+    end_time =
+      if event.ends_on == nil,
+        do: DateTime.new!(DateTime.to_date(start_time), ~T[23:59:59], event.options.timezone),
+        else: shift_tz(event.ends_on, event.options.timezone)
+
     %{
       "type" => "Event",
       "to" => to,
@@ -145,10 +152,10 @@ defmodule Mobilizon.Federation.ActivityStream.Converter.Event do
       "published" => (event.publish_at || event.inserted_at) |> date_to_string(),
       "updated" => event.updated_at |> date_to_string(),
       "mediaType" => "text/html",
-      "startTime" => event.begins_on |> shift_tz(event.options.timezone) |> date_to_string(),
+      "startTime" => start_time |> date_to_string(),
       "joinMode" => to_string(event.join_options),
       "externalParticipationUrl" => event.external_participation_url,
-      "endTime" => event.ends_on |> shift_tz(event.options.timezone) |> date_to_string(),
+      "endTime" => end_time |> date_to_string(),
       "tag" => event.tags |> build_tags(),
       "maximumAttendeeCapacity" => event.options.maximum_attendee_capacity,
       "remainingAttendeeCapacity" =>
