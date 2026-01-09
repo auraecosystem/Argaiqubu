@@ -147,7 +147,7 @@ body {
 
 /* TagInput */
 .taginput {
-  @apply items-center
+  @apply items-center;
 }
 .taginput-container {
   @apply bg-white dark:bg-zinc-700 p-1;
@@ -164,7 +164,7 @@ body {
 .taginput .autocomplete .dropdown-menu {
   @apply w-full;
 }
-.taginput-container .o-icon{
+.taginput-container .o-icon {
   @apply align-sub;
 }
 .o-taginput__counter {
