@@ -44,7 +44,7 @@ const instances_mock = {
           relayAddress: "relay@mobilizon.test",
           reportsCount: 1,
           software: "Mobilizon",
-          softwareVersion: "5.2.1-beta1",
+          softwareVersion: "5.2.2",
         },
         {
           __typename: "Instance",
