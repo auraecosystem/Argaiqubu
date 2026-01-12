@@ -61,6 +61,7 @@ defmodule Mobilizon.Federation.ActivityPub.Types.EventsTest do
                    "repliesModerationOption" => nil,
                    "startTime" => "2021-07-28T17:04:22+02:00",
                    "status" => "CONFIRMED",
+                   "eventStatus" => "EventScheduled",
                    "organizers" => %{
                      "type" => "OrganizersCollection",
                      "totalItems" => 1,
@@ -122,6 +123,7 @@ defmodule Mobilizon.Federation.ActivityPub.Types.EventsTest do
                    "repliesModerationOption" => nil,
                    "startTime" => "2021-07-28T17:04:22+02:00",
                    "status" => "CONFIRMED",
+                   "eventStatus" => "EventScheduled",
                    "organizers" => %{
                      "type" => "OrganizersCollection",
                      "totalItems" => 1,
@@ -142,7 +144,12 @@ defmodule Mobilizon.Federation.ActivityPub.Types.EventsTest do
     end
 
     test "from a group member" do
-      %Actor{id: organizer_actor_id, url: actor_url, followers_url: actor_followers_url} =
+      %Actor{
+        id: organizer_actor_id,
+        name: actor_name,
+        url: actor_url,
+        followers_url: actor_followers_url
+      } =
         actor = insert(:actor)
 
       %Actor{
@@ -188,11 +195,13 @@ defmodule Mobilizon.Federation.ActivityPub.Types.EventsTest do
                    "repliesModerationOption" => nil,
                    "startTime" => "2021-07-28T17:04:22+02:00",
                    "status" => "CONFIRMED",
+                   "eventStatus" => "EventScheduled",
                    "organizers" => %{
                      "type" => "OrganizersCollection",
-                     "totalItems" => 1,
+                     "totalItems" => 2,
                      "items" => [
-                       %{"type" => "Organization", "name" => ^group_name, "id" => ^group_url}
+                       %{"type" => "Organization", "name" => ^group_name, "id" => ^group_url},
+                       %{"type" => "Person", "name" => ^actor_name, "id" => ^actor_url}
                      ]
                    },
                    "timezone" => "Europe/Paris",
@@ -207,7 +216,7 @@ defmodule Mobilizon.Federation.ActivityPub.Types.EventsTest do
              )
     end
 
-    test "with address" do
+    test "event physical" do
       %Actor{
         id: organizer_actor_id,
         name: actor_name,
@@ -265,6 +274,7 @@ defmodule Mobilizon.Federation.ActivityPub.Types.EventsTest do
                    "repliesModerationOption" => nil,
                    "startTime" => "2021-07-28T17:04:22+02:00",
                    "status" => "CONFIRMED",
+                   "eventStatus" => "EventScheduled",
                    "organizers" => %{
                      "type" => "OrganizersCollection",
                      "totalItems" => 1,
@@ -348,6 +358,12 @@ defmodule Mobilizon.Federation.ActivityPub.Types.EventsTest do
                    "repliesModerationOption" => nil,
                    "startTime" => "2021-07-28T17:04:22+02:00",
                    "status" => "CONFIRMED",
+                   "eventStatus" => "EventScheduled",
+                   "location" => %{
+                     "type" => "VirtualLocation",
+                     "name" => "Website",
+                     "url" => "https://visio.test/mobilizon"
+                   },
                    "organizers" => %{
                      "type" => "OrganizersCollection",
                      "totalItems" => 1,
@@ -355,6 +371,114 @@ defmodule Mobilizon.Federation.ActivityPub.Types.EventsTest do
                        %{"type" => "Person", "name" => ^actor_name, "id" => ^actor_url}
                      ]
                    },
+                   "timezone" => "Europe/Paris",
+                   "tag" => [],
+                   "to" => [@ap_public],
+                   "type" => "Event"
+                 },
+                 "to" => [@ap_public],
+                 "type" => "Create"
+               },
+               data
+             )
+    end
+
+    test "event online & physical" do
+      %Actor{
+        id: organizer_actor_id,
+        name: actor_name,
+        url: actor_url,
+        followers_url: followers_url
+      } =
+        insert(:actor)
+
+      geom = %Geo.Point{coordinates: {37.71, 55.67}, srid: 4326}
+
+      %Address{
+        id: address_url
+      } =
+        address =
+        insert(:address,
+          geom: geom,
+          country: "France",
+          locality: "Lyon",
+          region: "Auvergne-Rhone-Alpes",
+          description: "Centre de Lyon",
+          postal_code: "69002",
+          street: "place Bellecours"
+        )
+
+      assert {:ok, %Event{}, data} =
+               Events.create(
+                 Map.merge(@event_data, %{
+                   organizer_actor_id: organizer_actor_id,
+                   physical_address: address,
+                   online_address: "https://visio.test/mobilizon"
+                 }),
+                 %{}
+               )
+
+      assert match?(
+               %{
+                 "actor" => ^actor_url,
+                 "attributedTo" => ^actor_url,
+                 "cc" => [^followers_url],
+                 "object" => %{
+                   "actor" => ^actor_url,
+                   "anonymousParticipationEnabled" => false,
+                   "attachment" => [
+                     %{
+                       "type" => "Link",
+                       "href" => "https://visio.test/mobilizon",
+                       "mediaType" => "text/html",
+                       "name" => "Website"
+                     }
+                   ],
+                   "attributedTo" => ^actor_url,
+                   "category" => nil,
+                   "cc" => [^followers_url],
+                   "commentsEnabled" => false,
+                   "content" => nil,
+                   "draft" => false,
+                   "endTime" => "2021-07-28T23:59:59+02:00",
+                   "ical:status" => "CONFIRMED",
+                   "joinMode" => "free",
+                   "maximumAttendeeCapacity" => nil,
+                   "mediaType" => "text/html",
+                   "name" => @event_title,
+                   "repliesModerationOption" => nil,
+                   "startTime" => "2021-07-28T17:04:22+02:00",
+                   "status" => "CONFIRMED",
+                   "eventStatus" => "EventScheduled",
+                   "organizers" => %{
+                     "type" => "OrganizersCollection",
+                     "totalItems" => 1,
+                     "items" => [
+                       %{"type" => "Person", "name" => ^actor_name, "id" => ^actor_url}
+                     ]
+                   },
+                   "location" => [
+                     %{
+                       "longitude" => 37.71,
+                       "latitude" => 55.67,
+                       "address" => %{
+                         "addressCountry" => "France",
+                         "addressLocality" => "Lyon",
+                         "addressRegion" => "Auvergne-Rhone-Alpes",
+                         "postalCode" => "69002",
+                         "streetAddress" => "place Bellecours",
+                         "type" => "PostalAddress"
+                       },
+                       "id" => address_url,
+                       "name" => "Centre de Lyon",
+                       "type" => "Place"
+                     },
+                     %{
+                       "type" => "VirtualLocation",
+                       "name" => "Website",
+                       "url" => "https://visio.test/mobilizon"
+                     }
+                   ],
                    "timezone" => "Europe/Paris",
                    "tag" => [],
                    "to" => [@ap_public],
@@ -425,6 +549,7 @@ defmodule Mobilizon.Federation.ActivityPub.Types.EventsTest do
                    "repliesModerationOption" => nil,
                    "startTime" => "2021-07-28T17:04:22+02:00",
                    "status" => "CONFIRMED",
+                   "eventStatus" => "EventScheduled",
                    "organizers" => %{
                      "type" => "OrganizersCollection",
                      "totalItems" => 1,
@@ -486,6 +611,7 @@ defmodule Mobilizon.Federation.ActivityPub.Types.EventsTest do
                    "startTime" => "2021-07-28T15:04:22Z",
                    "endTime" => "2021-07-28T23:59:59Z",
                    "status" => "CONFIRMED",
+                   "eventStatus" => "EventScheduled",
                    "organizers" => %{
                      "type" => "OrganizersCollection",
                      "totalItems" => 1,
@@ -506,9 +632,14 @@ defmodule Mobilizon.Federation.ActivityPub.Types.EventsTest do
     end
 
     test "from a group member" do
-      %Actor{} = actor_1 = insert(:actor)
+      %Actor{url: actor_url} = actor_1 = insert(:actor)
 
-      %Actor{id: organizer_actor_2_id, url: actor_2_url, followers_url: actor_followers_url} =
+      %Actor{
+        id: organizer_actor_2_id,
+        name: actor_name,
+        url: actor_2_url,
+        followers_url: actor_followers_url
+      } =
         actor_2 = insert(:actor)
 
       %Actor{
@@ -562,11 +693,13 @@ defmodule Mobilizon.Federation.ActivityPub.Types.EventsTest do
                    "startTime" => "2021-07-28T15:04:22Z",
                    "endTime" => "2021-07-28T23:59:59Z",
                    "status" => "CONFIRMED",
+                   "eventStatus" => "EventScheduled",
                    "organizers" => %{
                      "type" => "OrganizersCollection",
-                     "totalItems" => 1,
+                     "totalItems" => 2,
                      "items" => [
-                       %{"type" => "Organization", "name" => ^group_name, "id" => ^group_url}
+                       %{"type" => "Organization", "name" => ^group_name, "id" => ^group_url},
+                       %{"type" => "Person", "name" => ^actor_name, "id" => ^actor_2_url}
                      ]
                    },
                    "timezone" => "Etc/UTC",
@@ -582,7 +715,12 @@ defmodule Mobilizon.Federation.ActivityPub.Types.EventsTest do
     end
 
     test "from a remote group member" do
-      %Actor{id: organizer_actor_1_id, url: actor_1_url, followers_url: actor_followers_url} =
+      %Actor{
+        id: organizer_actor_1_id,
+        name: actor_1_name,
+        url: actor_1_url,
+        followers_url: actor_followers_url
+      } =
         actor_1 = insert(:actor)
 
       %Actor{} = actor_2 = insert(:actor)
@@ -638,11 +776,13 @@ defmodule Mobilizon.Federation.ActivityPub.Types.EventsTest do
                    "startTime" => "2021-07-28T15:04:22Z",
                    "endTime" => "2021-07-28T23:59:59Z",
                    "status" => "CONFIRMED",
+                   "eventStatus" => "EventScheduled",
                    "organizers" => %{
                      "type" => "OrganizersCollection",
-                     "totalItems" => 1,
+                     "totalItems" => 2,
                      "items" => [
-                       %{"type" => "Organization", "name" => ^actor_name, "id" => ^group_url}
+                       %{"type" => "Organization", "name" => ^actor_name, "id" => ^group_url},
+                       %{"type" => "Person", "name" => ^actor_1_name, "id" => ^actor_1_url}
                      ]
                    },
                    "timezone" => "Etc/UTC",
