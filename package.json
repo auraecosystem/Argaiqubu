@@ -1,6 +1,6 @@
 {
   "name": "mobilizon",
-  "version": "5.2.1-beta1",
+  "version": "5.2.2",
   "private": true,
   "scripts": {
     "dev": "vite",
@@ -81,7 +81,7 @@
     "intersection-observer": "^0.12.0",
     "jwt-decode": "^4.0.0",
     "leaflet": "^1.4.0",
-    "leaflet.locatecontrol": "^0.85.1",
+    "leaflet.locatecontrol": "^0.86.0",
     "leaflet.markercluster": "^1.5.3",
     "lodash": "^4.17.11",
     "ngeohash": "^0.6.3",
@@ -131,7 +131,7 @@
     "eslint-plugin-prettier": "^5.0.0",
     "eslint-plugin-vue": "^10.5.1",
     "flush-promises": "^1.0.2",
-    "globals": "^16.4.0",
+    "globals": "^17.0.0",
     "husky": "^9.0.10",
     "jsdom": "^27.0.1",
     "lint-staged": "^16.2.6",

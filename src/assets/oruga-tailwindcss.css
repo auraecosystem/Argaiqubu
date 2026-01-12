@@ -147,10 +147,13 @@ body {
 
 /* TagInput */
 .taginput {
-  @apply rounded bg-white dark:bg-zinc-700;
+  @apply items-center;
+}
+.taginput-container {
+  @apply bg-white dark:bg-zinc-700 p-1;
 }
 .taginput-item {
-  @apply bg-primary mr-2;
+  @apply bg-primary text-white text-base/8;
 }
 .taginput-autocomplete {
   @apply flex-1 !drop-shadow-none;
@@ -161,17 +164,12 @@ body {
 .taginput .autocomplete .dropdown-menu {
   @apply w-full;
 }
-.taginput-container {
-  @apply border-none;
+.taginput-container .o-icon {
+  @apply align-sub;
 }
-
-.taginput-item:first-child {
-  @apply ml-2;
+.o-taginput__counter {
+  @apply whitespace-nowrap;
 }
-.taginput-input-wrapper {
-  @apply block;
-}
-
 /* Autocomplete */
 .autocomplete {
   @apply max-h-[200px] drop-shadow-md text-black z-10;

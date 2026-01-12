@@ -31,7 +31,7 @@ const languageMock = {
       },
       {
         __typename: "Language",
-        code: "fr-FR",
+        code: "fr",
         name: "Français",
       },
       {
