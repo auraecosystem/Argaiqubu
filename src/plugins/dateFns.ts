@@ -10,8 +10,9 @@ export const dateFnsPlugin = {
       return matches[lang] ?? lang.replace("_", "-");
     }
 
-    const datafns_module_file = `../../node_modules/date-fns/locale/${dateFnsfileForLanguage(options.locale)}.js`;
-    import(datafns_module_file).then((localeEntity: { default: Locale }) => {
+    import(
+      `../../node_modules/date-fns/locale/${dateFnsfileForLanguage(options.locale)}.js`
+    ).then((localeEntity: { default: Locale }) => {
       app.provide("dateFnsLocale", localeEntity.default);
       app.config.globalProperties.$dateFnsLocale = localeEntity.default;
     });
