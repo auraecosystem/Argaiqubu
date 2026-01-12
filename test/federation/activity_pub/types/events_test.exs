@@ -454,7 +454,9 @@ defmodule Mobilizon.Federation.ActivityPub.Types.EventsTest do
         actor = insert(:actor)
 
       {:ok, begins_on, _} = DateTime.from_iso8601(@event_begins_on)
-      %Event{} = event = insert(:event, organizer_actor: actor, begins_on: begins_on)
+
+      %Event{} =
+        event = insert(:event, organizer_actor: actor, begins_on: begins_on, ends_on: nil)
 
       assert {:ok, %Event{}, data} =
                Events.update(
@@ -482,6 +484,7 @@ defmodule Mobilizon.Federation.ActivityPub.Types.EventsTest do
                    "name" => @event_updated_title,
                    "repliesModerationOption" => nil,
                    "startTime" => "2021-07-28T15:04:22Z",
+                   "endTime" => "2021-07-28T23:59:59Z",
                    "status" => "CONFIRMED",
                    "organizers" => %{
                      "type" => "OrganizersCollection",
@@ -522,7 +525,12 @@ defmodule Mobilizon.Federation.ActivityPub.Types.EventsTest do
 
       %Event{} =
         event =
-        insert(:event, organizer_actor: actor_1, begins_on: begins_on, attributed_to: group)
+        insert(:event,
+          organizer_actor: actor_1,
+          begins_on: begins_on,
+          ends_on: nil,
+          attributed_to: group
+        )
 
       assert {:ok, %Event{}, data} =
                Events.update(
@@ -552,6 +560,7 @@ defmodule Mobilizon.Federation.ActivityPub.Types.EventsTest do
                    "name" => @event_updated_title,
                    "repliesModerationOption" => nil,
                    "startTime" => "2021-07-28T15:04:22Z",
+                   "endTime" => "2021-07-28T23:59:59Z",
                    "status" => "CONFIRMED",
                    "organizers" => %{
                      "type" => "OrganizersCollection",
@@ -592,7 +601,12 @@ defmodule Mobilizon.Federation.ActivityPub.Types.EventsTest do
 
       %Event{} =
         event =
-        insert(:event, organizer_actor: actor_2, begins_on: begins_on, attributed_to: group)
+        insert(:event,
+          organizer_actor: actor_2,
+          begins_on: begins_on,
+          ends_on: nil,
+          attributed_to: group
+        )
 
       assert {:ok, %Event{}, data} =
                Events.update(
@@ -622,6 +636,7 @@ defmodule Mobilizon.Federation.ActivityPub.Types.EventsTest do
                    "name" => @event_updated_title,
                    "repliesModerationOption" => nil,
                    "startTime" => "2021-07-28T15:04:22Z",
+                   "endTime" => "2021-07-28T23:59:59Z",
                    "status" => "CONFIRMED",
                    "organizers" => %{
                      "type" => "OrganizersCollection",
