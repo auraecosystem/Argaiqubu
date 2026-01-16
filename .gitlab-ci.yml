@@ -46,6 +46,7 @@ install:
   stage: install
   script:
     - rm -rf ~/.hex/cache.ets
+    - ulimit -n 16384
     - npm ci
     - mix deps.clean --all
     - mix deps.get
