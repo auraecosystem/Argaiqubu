@@ -13,7 +13,10 @@
     <form ref="form">
       <h2>{{ t("General information") }}</h2>
 
-      <o-field :label="t('Headline picture')">
+      <div v-if="onFetchEventLoading" class="h-24 relative">
+        <o-loading :active="true" :full-page="false" />
+      </div>
+      <o-field v-else :label="t('Headline picture')">
         <picture-upload
           v-model:modelValue="pictureFile"
           :textFallback="t('Headline picture')"
@@ -828,7 +831,6 @@ onMounted(async () => {
     observer.value.observe(bottomObserver.value);
   }
 
-  pictureFile.value = await buildFileFromIMedia(event.value.picture);
   if (!(props.isUpdate || props.isDuplicate)) {
     initializeNewEvent();
   } else {
@@ -1492,11 +1494,12 @@ watch(
   { immediate: true }
 );
 
-onFetchEventResult((result) => {
+onFetchEventResult(async (result) => {
   if (result.loading || !result.data?.event) return;
 
   event.value = { ...result.data?.event };
   limitedPlaces.value = eventOptions.value.maximumAttendeeCapacity > 0;
+  pictureFile.value = await buildFileFromIMedia(event.value.picture);
 });
 
 const groupFederatedUsername = computed(() =>
