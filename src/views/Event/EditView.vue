@@ -337,7 +337,7 @@
           :label="t('Number of places')"
           v-show="registerOption === RegisterOption.MOBILIZON"
         >
-          <o-switch v-model="limitedPlaces">{{
+          <o-switch v-model="limitedPlaces" :disabled="onFetchEventLoading">{{
             t("Limited number of places")
           }}</o-switch>
         </o-field>
@@ -557,6 +557,7 @@
             expanded
             variant="text"
             @click="confirmGoBack"
+            :loading="saving || onFetchEventLoading"
             class="dark:!text-black ml-auto"
             >{{ t("Cancel") }}</o-button
           >
@@ -569,14 +570,14 @@
             outlined
             @click="createOrUpdateDraft"
             :disabled="saving"
-            :loading="saving"
+            :loading="saving || onFetchEventLoading"
             >{{ t("Save draft") }}</o-button
           >
           <o-button
             expanded
             variant="primary"
             :disabled="saving"
-            :loading="saving"
+            :loading="saving || onFetchEventLoading"
             @click="createOrUpdatePublish"
             @keyup.enter="createOrUpdatePublish"
           >
@@ -828,7 +829,6 @@ onMounted(async () => {
   }
 
   pictureFile.value = await buildFileFromIMedia(event.value.picture);
-  limitedPlaces.value = eventOptions.value.maximumAttendeeCapacity > 0;
   if (!(props.isUpdate || props.isDuplicate)) {
     initializeNewEvent();
   } else {
@@ -1463,9 +1463,11 @@ const maximumAttendeeCapacity = computed({
   },
 });
 
-const { event: fetchedEvent, onResult: onFetchEventResult } = useFetchEvent(
-  eventId.value
-);
+const {
+  event: fetchedEvent,
+  onResult: onFetchEventResult,
+  loading: onFetchEventLoading,
+} = useFetchEvent(eventId.value);
 
 // update the date components if the event changed (after fetching it, for example)
 watch(event, () => {
@@ -1491,9 +1493,10 @@ watch(
 );
 
 onFetchEventResult((result) => {
-  if (!result.loading && result.data?.event) {
-    event.value = { ...result.data?.event };
-  }
+  if (result.loading || !result.data?.event) return;
+
+  event.value = { ...result.data?.event };
+  limitedPlaces.value = eventOptions.value.maximumAttendeeCapacity > 0;
 });
 
 const groupFederatedUsername = computed(() =>
