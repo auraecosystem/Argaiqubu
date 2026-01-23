@@ -8,9 +8,9 @@ defmodule Mobilizon.Federation.ActivityPub.Transmogrifier.UpdateTest do
   alias Mobilizon.{Actors, Events, Posts}
   alias Mobilizon.Actors.{Actor, Member}
   alias Mobilizon.Events.Event
-  alias Mobilizon.Posts.Post
   alias Mobilizon.Federation.ActivityPub.{Activity, Relay, Transmogrifier}
   alias Mobilizon.Federation.ActivityStream.Convertible
+  alias Mobilizon.Posts.Post
   alias Mobilizon.Service.HTTP.ActivityPub.Mock
 
   describe "handle incoming update activities" do
@@ -109,6 +109,7 @@ defmodule Mobilizon.Federation.ActivityPub.Transmogrifier.UpdateTest do
         |> Map.put("name", "My updated event")
         |> Map.put("id", data["object"]["id"])
         |> Map.put("type", "Event")
+        |> Map.put("location", data["object"]["location"] |> Enum.at(0))
 
       update_data =
         update_data
