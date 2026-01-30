@@ -189,6 +189,7 @@ defmodule Mobilizon.Mixfile do
       {:ip_reserved, "~> 0.1.0"},
       {:fast_sanitize, "~> 0.1"},
       {:ueberauth, "0.10.8", override: true},
+      {:ueberauth_oidcc, "~> 0.4.2"},
       {:ueberauth_twitter, "~> 0.4"},
       {:ueberauth_discord, "~> 0.7"},
       {:ueberauth_github, "~> 0.8.1"},
