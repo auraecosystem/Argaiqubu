@@ -1,4 +1,12 @@
 <template>
+  <div v-if="participantsError">
+    <o-notification variant="danger">
+      {{ participantsError }}
+    </o-notification>
+  </div>
+  <div v-if="!event && participantsLoading">
+    <o-loading v-model:active="participantsLoading" />
+  </div>
   <section class="container mx-auto" v-if="event">
     <breadcrumbs-nav
       :links="[
@@ -330,6 +338,7 @@ const is_enabled = computed((): boolean => {
 const {
   result: participantsResult,
   loading: participantsLoading,
+  error: participantsError,
   refetch: participantsRefetch,
 } = useQuery<{
   event: IEvent;
