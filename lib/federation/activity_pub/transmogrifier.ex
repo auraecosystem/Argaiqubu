@@ -1053,17 +1053,12 @@ defmodule Mobilizon.Federation.ActivityPub.Transmogrifier do
        )
        when type in ["Create", "Update"] and object_type in ["Event", "Note"] do
     Logger.info("Maybe adding the contained object of a create/update activity to the share.")
-
-    with object_id <- contained_object |> Utils.get_url(),
-         %Actor{id: object_owner_actor_id} <- Ownable.actor(entity) do
-      {:ok, %Mobilizon.Share{} = _share} =
-        Mobilizon.Share.create(object_id, actor_id, object_owner_actor_id)
-    end
-
-    :ok
+    eventually_create_share(contained_object, entity, actor_id)
   end
 
   defp eventually_create_share(object, entity, actor_id) do
+    Logger.info("Maybe adding the contained object to the share.")
+
     with object_id <- object |> Utils.get_url(),
          %Actor{id: object_owner_actor_id} <- Ownable.actor(entity) do
       {:ok, %Mobilizon.Share{} = _share} =

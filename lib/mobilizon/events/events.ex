@@ -1435,21 +1435,21 @@ defmodule Mobilizon.Events do
 
   @spec events_for_categories(Ecto.Queryable.t(), map()) :: Ecto.Query.t()
   defp events_for_categories(query, %{category_one_of: category_one_of})
-       when length(category_one_of) > 0 do
+       when category_one_of != [] do
     where(query, [q], q.category in ^category_one_of)
   end
 
   defp events_for_categories(query, _args), do: query
 
   defp events_for_languages(query, %{language_one_of: language_one_of})
-       when length(language_one_of) > 0 do
+       when language_one_of != [] do
     where(query, [q], q.language in ^language_one_of)
   end
 
   defp events_for_languages(query, _args), do: query
 
   defp events_for_statuses(query, %{status_one_of: status_one_of})
-       when length(status_one_of) > 0 do
+       when status_one_of != [] do
     where(query, [q], q.status in ^status_one_of)
   end
 
@@ -1945,10 +1945,12 @@ defmodule Mobilizon.Events do
 
     query
     |> join(:left, [q], s in Share, on: s.uri == q.url)
-    |> join(:left, [_q, ..., s], f in Follower, on: f.target_actor_id == s.actor_id)
+    |> join(:left, [q, ..., s], fo in Follower, on: fo.target_actor_id == q.organizer_actor_id)
+    |> join(:left, [_q, ..., s, fo], f in Follower, on: f.target_actor_id == s.actor_id)
     |> where(
-      [q, ..., s, f],
-      q.local == true or (f.actor_id == ^follower_actor_id and not is_nil(s.uri))
+      [q, ..., s, fo, f],
+      q.local == true or (f.actor_id == ^follower_actor_id and not is_nil(s.uri)) or
+        (fo.actor_id == ^follower_actor_id and is_nil(s.uri))
     )
   end
 
