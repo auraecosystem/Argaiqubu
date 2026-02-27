@@ -134,9 +134,7 @@
                 }}
               </span>
               <span
-                v-else-if="
-                  participation.event.options.maximumAttendeeCapacity !== 0
-                "
+                v-else-if="participation.event.options.maximumAttendeeCapacity"
               >
                 {{
                   t(
