@@ -167,7 +167,10 @@
                   class="text-base text-zinc-700 dark:text-zinc-100 flex flex-col flex-auto overflow-hidden items-start w-full"
                 >
                   <p class="truncate w-full">{{ displayName(identity) }}</p>
-                  <p class="truncate text-sm w-full" v-if="identity.name">
+                  <p
+                    class="truncate text-sm w-full"
+                    v-if="identity.preferredUsername"
+                  >
                     @{{ identity.preferredUsername }}
                   </p>
                 </div>
