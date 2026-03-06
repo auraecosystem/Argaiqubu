@@ -155,7 +155,7 @@ defmodule Mobilizon.Federation.ActivityStream.Converter.Event do
       "commentsEnabled" => event.options.comment_moderation == :allow_all,
       "anonymousParticipationEnabled" => event.options.anonymous_participation,
       "attachment" => Enum.map(event.metadata, &EventMetadataConverter.metadata_to_as/1),
-      "draft" => event.draft or event.visibility != :public,
+      "draft" => event.draft,
       # TODO: Remove me in MBZ 5.x
       "ical:status" => event.status |> to_string |> String.upcase(),
       "status" => event.status |> to_string |> String.upcase(),
