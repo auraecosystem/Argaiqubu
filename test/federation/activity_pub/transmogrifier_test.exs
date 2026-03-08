@@ -19,9 +19,9 @@ defmodule Mobilizon.Federation.ActivityPub.TransmogrifierTest do
   alias Mobilizon.Todos.{Todo, TodoList}
 
   alias Mobilizon.Federation.ActivityPub
+  alias Mobilizon.Federation.ActivityPub.{Activity, Relay, Transmogrifier}
   alias Mobilizon.Federation.ActivityPub.Actor, as: ActivityPubActor
   alias Mobilizon.Federation.ActivityPub.Utils
-  alias Mobilizon.Federation.ActivityPub.{Activity, Relay, Transmogrifier}
   alias Mobilizon.Federation.ActivityStream.Convertible
 
   alias Mobilizon.GraphQL.API
@@ -78,7 +78,7 @@ defmodule Mobilizon.Federation.ActivityPub.TransmogrifierTest do
       #             ]
 
       assert object["actor"] == "https://mobilizon.fr/@metacartes"
-      assert object["location"]["name"] == "Locaux de Framasoft"
+      assert (object["location"] |> Enum.at(0))["name"] == "Locaux de Framasoft"
       # assert object["attributedTo"] == "https://mobilizon.fr/@metacartes"
 
       assert event.physical_address.street == "10 Rue Jangot"

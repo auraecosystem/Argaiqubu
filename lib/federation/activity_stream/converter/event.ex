@@ -16,6 +16,7 @@ defmodule Mobilizon.Federation.ActivityStream.Converter.Event do
   alias Mobilizon.Medias.Media
 
   alias Mobilizon.Federation.ActivityStream.{Converter, Convertible}
+  alias Mobilizon.Federation.ActivityStream.Converter.Actor, as: ActorConverter
   alias Mobilizon.Federation.ActivityStream.Converter.Address, as: AddressConverter
   alias Mobilizon.Federation.ActivityStream.Converter.EventMetadata, as: EventMetadataConverter
   alias Mobilizon.Federation.ActivityStream.Converter.Media, as: MediaConverter
@@ -55,6 +56,12 @@ defmodule Mobilizon.Federation.ActivityStream.Converter.Event do
   @online_address_name "Website"
   @banner_picture_name "Banner"
   @ap_public "https://www.w3.org/ns/activitystreams#Public"
+
+  @event_status_convert %{
+    :tentative => "EventTentative",
+    :confirmed => "EventScheduled",
+    :cancelled => "EventCancelled"
+  }
 
   @doc """
   Converts an AP object data to our internal data structure.
@@ -128,25 +135,50 @@ defmodule Mobilizon.Federation.ActivityStream.Converter.Event do
 
     participant_count = Mobilizon.Events.count_participant_participants(event.id)
 
+    organizers =
+      if is_nil(event.attributed_to) or not Ecto.assoc_loaded?(event.attributed_to),
+        do: [event.organizer_actor],
+        else: [event.attributed_to, event.organizer_actor]
+
+    organizers = Enum.map(organizers, &ActorConverter.metadata_to_as/1)
+
+    start_time = shift_tz(event.begins_on, event.options.timezone)
+
+    end_time =
+      if event.ends_on == nil,
+        do: DateTime.new!(DateTime.to_date(start_time), ~T[23:59:59], event.options.timezone),
+        else: shift_tz(event.ends_on, event.options.timezone)
+
     %{
+      "id" => event.url,
+      "url" => event.url,
+      "uuid" => event.uuid,
       "type" => "Event",
-      "to" => to,
-      "cc" => cc,
-      "attributedTo" => attributed_to_or_default(event).url,
       "name" => event.title,
+      "summary" => event_summary(event),
+      "cc" => cc,
+      "to" => to,
+      "attributedTo" => attributed_to_or_default(event).url,
       "actor" =>
         if(Ecto.assoc_loaded?(event.organizer_actor), do: event.organizer_actor.url, else: nil),
-      "uuid" => event.uuid,
-      "category" => event.category,
-      "content" => event.description,
+      "timezone" => event.options.timezone,
+      "startTime" => start_time |> date_to_string(),
+      "endTime" => end_time |> date_to_string(),
       "published" => (event.publish_at || event.inserted_at) |> date_to_string(),
       "updated" => event.updated_at |> date_to_string(),
-      "mediaType" => "text/html",
-      "startTime" => event.begins_on |> shift_tz(event.options.timezone) |> date_to_string(),
+      "organizers" => %{
+        "type" => "OrganizersCollection",
+        "totalItems" => Enum.count(organizers),
+        "items" => organizers
+      },
+      "category" => event.category,
+      "tag" => event.tags |> build_tags(),
+      "eventStatus" => @event_status_convert[event.status],
       "joinMode" => to_string(event.join_options),
       "externalParticipationUrl" => event.external_participation_url,
-      "endTime" => event.ends_on |> shift_tz(event.options.timezone) |> date_to_string(),
-      "tag" => event.tags |> build_tags(),
+      "inLanguage" => event.language,
+      "content" => event.description,
+      "mediaType" => "text/html",
       "maximumAttendeeCapacity" => event.options.maximum_attendee_capacity,
       "remainingAttendeeCapacity" =>
         remaining_attendee_capacity(event.options, participant_count),
@@ -156,16 +188,10 @@ defmodule Mobilizon.Federation.ActivityStream.Converter.Event do
       "anonymousParticipationEnabled" => event.options.anonymous_participation,
       "attachment" => Enum.map(event.metadata, &EventMetadataConverter.metadata_to_as/1),
       "draft" => event.draft,
-      # TODO: Remove me in MBZ 5.x
       "ical:status" => event.status |> to_string |> String.upcase(),
       "status" => event.status |> to_string |> String.upcase(),
-      "id" => event.url,
-      "url" => event.url,
-      "inLanguage" => event.language,
-      "timezone" => event.options.timezone,
       "contacts" => Enum.map(event.contacts, & &1.url),
-      "isOnline" => event.options.is_online,
-      "summary" => event_summary(event)
+      "isOnline" => event.options.is_online
     }
     |> maybe_add_physical_address(event)
     |> maybe_add_event_picture(event)
@@ -207,9 +233,9 @@ defmodule Mobilizon.Federation.ActivityStream.Converter.Event do
     )
   end
 
-  defp calculate_timezone(_object, nil), do: nil
+  defp calculate_timezone(_object, nil), do: "Etc/UTC"
 
-  defp calculate_timezone(_object, %Address{geom: nil}), do: nil
+  defp calculate_timezone(_object, %Address{geom: nil}), do: "Etc/UTC"
 
   defp calculate_timezone(_object, %Address{geom: geom}) do
     TimezoneDetector.detect(
@@ -287,8 +313,19 @@ defmodule Mobilizon.Federation.ActivityStream.Converter.Event do
   @spec maybe_add_online_address(map(), EventModel.t()) :: map()
   defp maybe_add_online_address(res, %EventModel{online_address: online_address})
        when is_binary(online_address) do
-    Map.update(
-      res,
+    new_virtual = %{
+      "type" => "VirtualLocation",
+      "name" => @online_address_name,
+      "url" => online_address
+    }
+
+    new_location =
+      if Map.has_key?(res, "location"),
+        do: [Map.get(res, "location"), new_virtual],
+        else: new_virtual
+
+    res
+    |> Map.update(
       "attachment",
       [],
       &(&1 ++
@@ -301,6 +338,7 @@ defmodule Mobilizon.Federation.ActivityStream.Converter.Event do
             }
           ])
     )
+    |> Map.put("location", new_location)
   end
 
   defp maybe_add_online_address(res, %EventModel{online_address: _}), do: res
