@@ -182,12 +182,12 @@ defmodule Mobilizon.Service.Export.ICalendar do
   defp shift_tz(%DateTime{} = date, _), do: date
   defp shift_tz(nil, _), do: nil
 
-  defp organizer(%Event{attributed_to: %Actor{} = group}) do
-    Actor.display_name(group)
+  defp organizer(%Event{attributed_to: %Actor{url: group_url}}) do
+    group_url
   end
 
-  defp organizer(%Event{organizer_actor: %Actor{} = profile}) do
-    Actor.display_name(profile)
+  defp organizer(%Event{organizer_actor: %Actor{url: profile_url}}) do
+    profile_url
   end
 
   @impl Cachable
