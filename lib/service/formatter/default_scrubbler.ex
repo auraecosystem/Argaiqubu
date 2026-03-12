@@ -14,7 +14,7 @@ defmodule Mobilizon.Service.Formatter.DefaultScrubbler do
   # credo:disable-for-previous-line
   # No idea how to fix this one…
 
-  @valid_schemes ~w(https http)
+  @valid_schemes ~w(https http mailto tel)
 
   Meta.strip_comments()
 
