@@ -126,6 +126,20 @@ defmodule Mobilizon.Service.FormatterTest do
         "<p>An article tagged with a <a class=\"hashtag\" data-tag=\"tag\" href=\"http://mobilizon.test/tag/tag\" rel=\"tag ugc\">#tag</a>.</p>"
 
       assert {^expected, [], [{"#tag", "tag"}]} = Formatter.linkify(text)
+
+      text = "tel:+1804222111"
+
+      expected =
+        "<a href=\"#{text}\" target=\"_blank\" rel=\"noopener noreferrer ugc\">#{text}</a>"
+
+      assert {^expected, [], []} = Formatter.linkify(text)
+
+      text = "mailto:owner@ven.ue"
+
+      expected =
+        "<a href=\"#{text}\" target=\"_blank\" rel=\"noopener noreferrer ugc\">#{text}</a>"
+
+      assert {^expected, [], []} = Formatter.linkify(text)
     end
   end
 
