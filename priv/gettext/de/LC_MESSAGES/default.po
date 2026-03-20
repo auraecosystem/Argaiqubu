@@ -4,7 +4,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-24 14:39+0000\n"
 "PO-Revision-Date: 2026-03-11 21:38+0000\n"
-"Last-Translator: Vri <vrifox@vrifox.cc>\n"
+"Last-Translator: Valentin Bachem <vbachem@gmx.de>\n"
 "Language-Team: German <https://weblate.framasoft.org/projects/mobilizon/"
 "backend/de/>\n"
 "Language: de\n"
@@ -2032,8 +2032,8 @@ msgstr "Ein Administrator hat Ihre Rolle auf %{instance} aktualisiert"
 #, elixir-autogen, elixir-format
 msgid "Hi there! It seems like you wanted to change the email address linked to your account on %{instance}. If you still wish to do so, please click the button below to confirm the change. You will then be able to log in to %{instance} with this new email address."
 msgstr ""
-"Hallo zusammen! Es scheint, dass Sie die mit Ihrem Benutzerkonto verknüpfte E"
-"-Mail-Adresse auf <b>%{instance}</b> ändern wollten. Wenn Sie dies immer "
+"Hallo zusammen! Es scheint, dass Sie die mit Ihrem Benutzerkonto verknüpfte "
+"E-Mail-Adresse auf <b>%{instance}</b> ändern wollten. Wenn Sie dies immer "
 "noch tun möchten, klicken Sie bitte auf die Schaltfläche unten, um die "
 "Änderung zu bestätigen. Sie können sich dann mit dieser neuen E-Mail-Adresse "
 "bei %{instance} anmelden."
@@ -2051,33 +2051,31 @@ msgstr ""
 #, elixir-autogen, elixir-format
 msgid "Hi there! We just wanted to inform you that an administrator from %{instance} just manually confirmed your account."
 msgstr ""
-"Hallo! Wir möchten Sie informieren, dass ein Administrator von <b> "
-"%{instance}</b> eben manuell Ihr Benutzerkonto bestätigte."
+"Hallo! Wir möchten Sie informieren, dass ein Administrator von <b> %"
+"{instance}</b> eben manuell Ihr Benutzerkonto bestätigte."
 
 #: lib/web/templates/email/admin_user_email_changed_old.html.heex:47
 #, elixir-autogen, elixir-format
 msgid "Hi there! We just wanted to inform you that an administrator from <b>%{instance}</b> just manually changed your account email from <b>%{old_email}</b> (this one) to <b>%{new_email}</b>."
 msgstr ""
-"Hallo! Wir möchten Sie informieren, dass ein Administrator von "
-"<b>%{instance}</b> soeben manuell die mit Ihrem Benutzerkonto verknüpfte E-"
-"Mail von <b>%{old_email}</b> (diese hier) zu <b>%{new_email}</b> geändert "
-"hat."
+"Hallo! Wir möchten Sie informieren, dass ein Administrator von <b>%{instance}"
+"</b> soeben manuell die mit Ihrem Benutzerkonto verknüpfte E-Mail von <b>%"
+"{old_email}</b> (diese hier) zu <b>%{new_email}</b> geändert hat."
 
 #: lib/web/templates/email/admin_user_email_changed_new.html.heex:47
 #, elixir-autogen, elixir-format
 msgid "Hi there! We just wanted to inform you that an administrator from <b>%{instance}</b> just manually changed your account email from <b>%{old_email}</b> to <b>%{new_email}</b> (this one)."
 msgstr ""
-"Hallo! Wir möchten Sie informieren, dass ein Administrator von "
-"<b>%{instance}</b> soeben manuell die mit Ihrem Benutzerkonto verknüpfte E-"
-"Mail von <b>%{old_email}</b> zu <b>%{new_email}</b> (diese hier) geändert "
-"hat."
+"Hallo! Wir möchten Sie informieren, dass ein Administrator von <b>%{instance}"
+"</b> soeben manuell die mit Ihrem Benutzerkonto verknüpfte E-Mail von <b>%"
+"{old_email}</b> zu <b>%{new_email}</b> (diese hier) geändert hat."
 
 #: lib/web/templates/email/admin_user_confirmation.html.heex:47
 #, elixir-autogen, elixir-format
 msgid "Hi there! We just wanted to inform you that an administrator from <b>%{instance}</b> just manually confirmed your account."
 msgstr ""
-"Hallo! Wir möchten Sie informieren, dass ein Administrator von "
-"<b>%{instance}</b> Ihr Benutzerkonto gerade manuell bestätigt hat."
+"Hallo! Wir möchten Sie informieren, dass ein Administrator von <b>%{instance}"
+"</b> Ihr Benutzerkonto gerade manuell bestätigt hat."
 
 #: lib/web/templates/email/admin_user_confirmation.html.heex:96
 #: lib/web/templates/email/admin_user_email_changed_new.html.heex:62
@@ -2153,8 +2151,8 @@ msgstr ""
 #, elixir-autogen, elixir-format
 msgid "Hi there! We just wanted to inform you that an administrator from <b>%{instance}</b> just changed your account role."
 msgstr ""
-"Hallo! Wir möchten Sie informieren, dass ein Administrator von <b> "
-"%{instance}</b> die Rolle Ihres Benutzerkontos änderte."
+"Hallo! Wir möchten Sie informieren, dass ein Administrator von <b> %"
+"{instance}</b> die Rolle Ihres Benutzerkontos änderte."
 
 #: lib/web/templates/email/instance_follow.text.eex:5
 #, elixir-autogen, elixir-format
