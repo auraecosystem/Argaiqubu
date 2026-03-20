@@ -256,6 +256,7 @@ export const LOGGED_USER_DRAFTS = gql`
           participantStats {
             going
             notApproved
+            participant
           }
           options {
             maximumAttendeeCapacity
