@@ -10,15 +10,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-11-21 17:14+0100\n"
-"Last-Translator: Axel <lordilexa@hotmail.com>\n"
-"Language-Team: French <https://weblate.framasoft.org/projects/mobilizon/backend-errors/fr/>\n"
+"PO-Revision-Date: 2026-03-11 21:38+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: French <https://weblate.framasoft.org/projects/mobilizon/"
+"backend-errors/fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Weblate 5.16.2\n"
 
 #: lib/mobilizon/discussions/discussion.ex:68
 msgid "can't be blank"
@@ -106,7 +107,8 @@ msgstr "Le profil actuel n'est pas un membre de ce groupe"
 
 #: lib/graphql/resolvers/group.ex:280
 msgid "Current profile is not an administrator of the selected group"
-msgstr "Le profil actuel n'est pas un·e administrateur·ice du groupe sélectionné"
+msgstr ""
+"Le profil actuel n'est pas un·e administrateur·ice du groupe sélectionné"
 
 #: lib/graphql/resolvers/user.ex:744
 msgid "Error while saving user settings"
@@ -123,7 +125,9 @@ msgstr "Groupe avec l'ID %{id} non trouvé"
 
 #: lib/graphql/resolvers/user.ex:97
 msgid "Impossible to authenticate, either your email or password are invalid."
-msgstr "Impossible de s'authentifier, votre adresse e-mail ou bien votre mot de passe sont invalides."
+msgstr ""
+"Impossible de s'authentifier, votre adresse e-mail ou bien votre mot de "
+"passe sont invalides."
 
 #: lib/graphql/resolvers/group.ex:339 lib/graphql/resolvers/group.ex:346
 msgid "Member not found"
@@ -173,7 +177,9 @@ msgstr "Le mot de passe fourni est invalide"
 
 #: lib/graphql/resolvers/user.ex:410 lib/graphql/resolvers/user.ex:530
 msgid "The password you have chosen is too short. Please make sure your password contains at least 6 characters."
-msgstr "Le mot de passe que vous avez choisi est trop court. Merci de vous assurer que votre mot de passe contienne au moins 6 caractères."
+msgstr ""
+"Le mot de passe que vous avez choisi est trop court. Merci de vous assurer "
+"que votre mot de passe contienne au moins 6 caractères."
 
 #: lib/graphql/resolvers/user.ex:376
 msgid "This user can't reset their password"
@@ -201,7 +207,9 @@ msgstr "Vous êtes déjà membre de ce groupe"
 
 #: lib/graphql/resolvers/group.ex:350
 msgid "You can't leave this group because you are the only administrator"
-msgstr "Vous ne pouvez pas quitter ce groupe car vous en êtes le ou la seul·e administrateur·ice"
+msgstr ""
+"Vous ne pouvez pas quitter ce groupe car vous en êtes le ou la seul·e "
+"administrateur·ice"
 
 #: lib/graphql/resolvers/group.ex:308
 msgid "You cannot join this group"
@@ -241,7 +249,8 @@ msgstr "Vous devez être connecté·e pour mettre à jour un groupe"
 
 #: lib/graphql/resolvers/user.ex:124
 msgid "You need to have an existing token to get a refresh token"
-msgstr "Vous devez avoir un jeton existant pour obtenir un jeton de rafraîchissement"
+msgstr ""
+"Vous devez avoir un jeton existant pour obtenir un jeton de rafraîchissement"
 
 #: lib/graphql/resolvers/user.ex:198
 msgid "Your email is not on the allowlist"
@@ -261,11 +270,15 @@ msgstr "Aucun profil distant trouvé avec cet ID"
 
 #: lib/graphql/resolvers/actor.ex:72
 msgid "Only moderators and administrators can suspend a profile"
-msgstr "Seul·es les modérateur·ice et les administrateur·ices peuvent suspendre un profil"
+msgstr ""
+"Seul·es les modérateur·ice et les administrateur·ices peuvent suspendre un "
+"profil"
 
 #: lib/graphql/resolvers/actor.ex:105
 msgid "Only moderators and administrators can unsuspend a profile"
-msgstr "Seul·es les modérateur·ice et les administrateur·ices peuvent annuler la suspension d'un profil"
+msgstr ""
+"Seul·es les modérateur·ice et les administrateur·ices peuvent annuler la "
+"suspension d'un profil"
 
 #: lib/graphql/resolvers/actor.ex:29
 msgid "Only remote profiles may be refreshed"
@@ -285,7 +298,8 @@ msgstr "La participation anonyme n'est pas activée"
 
 #: lib/graphql/resolvers/person.ex:234
 msgid "Cannot remove the last administrator of a group"
-msgstr "Impossible de supprimer le ou la dernier·ère administrateur·ice d'un groupe"
+msgstr ""
+"Impossible de supprimer le ou la dernier·ère administrateur·ice d'un groupe"
 
 #: lib/graphql/resolvers/person.ex:231
 msgid "Cannot remove the last identity of a user"
@@ -351,7 +365,7 @@ msgstr "Personne avec l'ID %{id} non trouvé"
 
 #: lib/graphql/resolvers/person.ex:57
 msgid "Person with username %{username} not found"
-msgstr "Personne avec le nom %{username} non trouvé"
+msgstr "Personne avec le nom %{name} non trouvé"
 
 #: lib/graphql/resolvers/post.ex:169 lib/graphql/resolvers/post.ex:206
 msgid "Post ID is not a valid ID"
@@ -442,19 +456,25 @@ msgstr "Vous n'êtes pas autorisé·e à supprimer un commentaire si non connect
 
 #: lib/graphql/resolvers/feed_token.ex:136
 msgid "You are not allowed to delete a feed token if not connected"
-msgstr "Vous n'êtes pas autorisé·e à supprimer un jeton de flux si non connecté·e"
+msgstr ""
+"Vous n'êtes pas autorisé·e à supprimer un jeton de flux si non connecté·e"
 
 #: lib/graphql/resolvers/comment.ex:120
 msgid "You are not allowed to update a comment if not connected"
-msgstr "Vous n'êtes pas autorisé·e à mettre à jour un commentaire si non connecté·e"
+msgstr ""
+"Vous n'êtes pas autorisé·e à mettre à jour un commentaire si non connecté·e"
 
 #: lib/graphql/resolvers/participant.ex:185 lib/graphql/resolvers/participant.ex:221
 msgid "You can't leave event because you're the only event creator participant"
-msgstr "Vous ne pouvez pas quitter cet événement car vous en êtes le ou la seule créateur·ice participant"
+msgstr ""
+"Vous ne pouvez pas quitter cet événement car vous en êtes le ou la seule "
+"créateur·ice participant"
 
 #: lib/graphql/resolvers/member.ex:200
 msgid "You can't set yourself to a lower member role for this group because you are the only administrator"
-msgstr "Vous ne pouvez pas vous définir avec un rôle de membre inférieur pour ce groupe car vous en êtes le ou la seul·e administrateur·ice"
+msgstr ""
+"Vous ne pouvez pas vous définir avec un rôle de membre inférieur pour ce "
+"groupe car vous en êtes le ou la seul·e administrateur·ice"
 
 #: lib/graphql/resolvers/comment.ex:149
 msgid "You cannot delete this comment"
@@ -474,31 +494,43 @@ msgstr "Vous n'avez pas la permission de supprimer ce jeton"
 
 #: lib/graphql/resolvers/admin.ex:59
 msgid "You need to be logged-in and a moderator to list action logs"
-msgstr "Vous devez être connecté·e et une modérateur·ice pour lister les journaux de modération"
+msgstr ""
+"Vous devez être connecté·e et une modérateur·ice pour lister les journaux de "
+"modération"
 
 #: lib/graphql/resolvers/report.ex:36
 msgid "You need to be logged-in and a moderator to list reports"
-msgstr "Vous devez être connecté·e et une modérateur·ice pour lister les signalements"
+msgstr ""
+"Vous devez être connecté·e et une modérateur·ice pour lister les signalements"
 
 #: lib/graphql/resolvers/report.ex:121
 msgid "You need to be logged-in and a moderator to update a report"
-msgstr "Vous devez être connecté·e et une modérateur·ice pour modifier un signalement"
+msgstr ""
+"Vous devez être connecté·e et une modérateur·ice pour modifier un signalement"
 
 #: lib/graphql/resolvers/report.ex:53
 msgid "You need to be logged-in and a moderator to view a report"
-msgstr "Vous devez être connecté·e pour et une modérateur·ice pour visionner un signalement"
+msgstr ""
+"Vous devez être connecté·e pour et une modérateur·ice pour visionner un "
+"signalement"
 
 #: lib/graphql/resolvers/admin.ex:261 lib/graphql/resolvers/admin.ex:305
 msgid "You need to be logged-in and an administrator to access admin settings"
-msgstr "Vous devez être connecté·e et un·e administrateur·ice pour accéder aux paramètres administrateur"
+msgstr ""
+"Vous devez être connecté·e et un·e administrateur·ice pour accéder aux "
+"paramètres administrateur"
 
 #: lib/graphql/resolvers/admin.ex:245
 msgid "You need to be logged-in and an administrator to access dashboard statistics"
-msgstr "Vous devez être connecté·e et un·e administrateur·ice pour accéder aux panneau de statistiques"
+msgstr ""
+"Vous devez être connecté·e et un·e administrateur·ice pour accéder aux "
+"panneau de statistiques"
 
 #: lib/graphql/resolvers/admin.ex:291
 msgid "You need to be logged-in and an administrator to save admin settings"
-msgstr "Vous devez être connecté·e et un·e administrateur·ice pour sauvegarder les paramètres administrateur"
+msgstr ""
+"Vous devez être connecté·e et un·e administrateur·ice pour sauvegarder les "
+"paramètres administrateur"
 
 #: lib/graphql/resolvers/discussion.ex:84
 msgid "You need to be logged-in to access discussions"
@@ -570,7 +602,9 @@ msgstr "Le mot de passe choisi est trop court."
 
 #: lib/mobilizon/users/user.ex:144
 msgid "The registration token is already in use, this looks like an issue on our side."
-msgstr "Le jeton d'inscription est déjà utilisé, cela ressemble à un problème de notre côté."
+msgstr ""
+"Le jeton d'inscription est déjà utilisé, cela ressemble à un problème de "
+"notre côté."
 
 #: lib/mobilizon/users/user.ex:110
 msgid "This email is already used."
@@ -686,15 +720,21 @@ msgstr "Le profil modérateur fourni n'a pas de permissions sur cet événement"
 
 #: lib/graphql/resolvers/event.ex:312
 msgid "Organizer profile doesn't have permission to create an event on behalf of this group"
-msgstr "Le profil de l'organisateur⋅ice n'a pas la permission de créer un événement au nom de ce groupe"
+msgstr ""
+"Le profil de l'organisateur⋅ice n'a pas la permission de créer un événement "
+"au nom de ce groupe"
 
 #: lib/graphql/resolvers/event.ex:387
 msgid "This profile doesn't have permission to update an event on behalf of this group"
-msgstr "Ce profil n'a pas la permission de mettre à jour un événement au nom du groupe"
+msgstr ""
+"Ce profil n'a pas la permission de mettre à jour un événement au nom du "
+"groupe"
 
 #: lib/graphql/resolvers/user.ex:202
 msgid "Your e-mail has been denied registration or uses a disallowed e-mail provider"
-msgstr "Votre adresse e-mail a été refusée à l'inscription ou bien utilise un fournisseur d'e-mail interdit"
+msgstr ""
+"Votre adresse e-mail a été refusée à l'inscription ou bien utilise un "
+"fournisseur d'e-mail interdit"
 
 #: lib/graphql/resolvers/comment.ex:156
 msgid "Comment not found"
@@ -746,7 +786,8 @@ msgstr "Format non supporté"
 
 #: lib/graphql/resolvers/participant.ex:319
 msgid "A dependency needed to export to %{format} is not installed"
-msgstr "Une dépendance nécessaire pour exporter en %{format} n'est pas installée"
+msgstr ""
+"Une dépendance nécessaire pour exporter en %{format} n'est pas installée"
 
 #: lib/graphql/resolvers/participant.ex:327
 msgid "An error occured while saving export"
@@ -782,7 +823,7 @@ msgstr "Abonnement non trouvé"
 
 #: lib/graphql/resolvers/user.ex:441
 msgid "Profile with username %{username} not found"
-msgstr "Personne avec le nom %{username} non trouvé"
+msgstr "Personne avec le nom %{name} non trouvé"
 
 #: lib/graphql/resolvers/user.ex:436
 msgid "This profile does not belong to you"
@@ -834,7 +875,9 @@ msgstr "Le nouveau rôle doit être différent"
 
 #: lib/graphql/resolvers/admin.ex:354
 msgid "You need to be logged-in and an administrator to edit an user's details"
-msgstr "Vous devez être connecté·e et un·e administrateur·ice pour éditer les détails d'un⋅e utilisateur⋅ice"
+msgstr ""
+"Vous devez être connecté·e et un·e administrateur·ice pour éditer les "
+"détails d'un⋅e utilisateur⋅ice"
 
 #: lib/graphql/api/groups.ex:33
 msgid "A profile or group with that name already exists"
@@ -870,15 +913,20 @@ msgstr "Vous pouvez uniquement supprimer vos propres notes"
 
 #: lib/graphql/api/reports.ex:94 lib/graphql/api/reports.ex:121
 msgid "You need to be a moderator or an administrator to create a note on a report"
-msgstr "Vous devez être un·e modérateur·ice ou un·e administrateur·ice pour créer une note sur un signalement"
+msgstr ""
+"Vous devez être un·e modérateur·ice ou un·e administrateur·ice pour créer "
+"une note sur un signalement"
 
 #: lib/graphql/resolvers/user.ex:209
 msgid "Your registration has been detected as spam and cannot be processed."
-msgstr "Votre inscription a été détectée comme du spam et ne peut être poursuivie."
+msgstr ""
+"Votre inscription a été détectée comme du spam et ne peut être poursuivie."
 
 #: lib/web/controllers/application_controller.ex:88
 msgid "All of name, scope and redirect_uri parameters are required to create an application"
-msgstr "Les paramètres name, scope et redirect_uri sont requis pour créer une application"
+msgstr ""
+"Les paramètres name, scope et redirect_uri sont requis pour créer une "
+"application"
 
 #: lib/graphql/error.ex:119
 msgid "Application not found"
@@ -899,8 +947,8 @@ msgstr "Impossible de créer l'application."
 #: lib/web/controllers/application_controller.ex:353
 msgid "Incorrect parameters sent. You need to provide at least the grant_type and client_id parameters, depending on the grant type being used."
 msgstr ""
-"Paramètres envoyés incorrects. Vous devez au moins fournir les paramètres grant_type et client_id, en fonction du type d’autorisation "
-"utilisée."
+"Paramètres envoyés incorrects. Vous devez au moins fournir les paramètres "
+"grant_type et client_id, en fonction du type d’autorisation utilisée."
 
 #: lib/web/controllers/application_controller.ex:326
 msgid "Invalid client credentials provided"
@@ -944,7 +992,9 @@ msgstr "Le client_id fourni ou device_code associé n'est pas valide"
 
 #: lib/graphql/resolvers/application.ex:139
 msgid "The device user code was not provided before approving the application"
-msgstr "Le code utilisateur de l'appareil n'a pas été fourni avant l'approbation de la demande"
+msgstr ""
+"Le code utilisateur de l'appareil n'a pas été fourni avant l'approbation de "
+"la demande"
 
 #: lib/web/controllers/application_controller.ex:301
 msgid "The given device_code has expired"
@@ -952,11 +1002,15 @@ msgstr "Le device_code donné a expiré"
 
 #: lib/graphql/resolvers/application.ex:45
 msgid "The given redirect_uri is not in the list of allowed redirect URIs"
-msgstr "Le redirect_uri donné ne figure pas dans la liste des URI de redirection autorisées"
+msgstr ""
+"Le redirect_uri donné ne figure pas dans la liste des URI de redirection "
+"autorisées"
 
 #: lib/web/controllers/application_controller.ex:155
 msgid "The given scope is not in the list of the app declared scopes"
-msgstr "Le champ d'application donné n'est pas dans la liste des champs d'application déclarés par l'application"
+msgstr ""
+"Le champ d'application donné n'est pas dans la liste des champs "
+"d'application déclarés par l'application"
 
 #: lib/graphql/resolvers/application.ex:112 lib/graphql/resolvers/application.ex:154
 msgid "The given user code has expired"
@@ -980,11 +1034,15 @@ msgstr "Le code fourni n'est pas valide ou a expiré"
 
 #: lib/web/controllers/application_controller.ex:415
 msgid "The provided scope is invalid or not included in the app declared scopes"
-msgstr "Le champ d'application fourni n'est pas valide ou n'est pas inclus dans les champs d'application déclarés de l'application"
+msgstr ""
+"Le champ d'application fourni n'est pas valide ou n'est pas inclus dans les "
+"champs d'application déclarés de l'application"
 
 #: lib/web/controllers/application_controller.ex:47
 msgid "The scope parameter is not a space separated list of valid scopes"
-msgstr "Le paramètre scope n'est pas une liste de champs d'application valides séparés par des espaces"
+msgstr ""
+"Le paramètre scope n'est pas une liste de champs d'application valides "
+"séparés par des espaces"
 
 #: lib/web/controllers/application_controller.ex:289
 msgid "The user rejected the requested authorization"
@@ -1012,15 +1070,20 @@ msgstr "Impossible de révoquer le jeton"
 
 #: lib/web/controllers/application_controller.ex:195
 msgid "You need to pass both client_id and scope as parameters to obtain a device code"
-msgstr "Pour obtenir un code d'appareil, vous devez passer en paramètre le client_id et le scope"
+msgstr ""
+"Pour obtenir un code d'appareil, vous devez passer en paramètre le client_id "
+"et le scope"
 
 #: lib/web/controllers/application_controller.ex:133
 msgid "You need to provide a valid redirect_uri to autorize an application"
-msgstr "Vous devez fournir un redirect_uri valide pour autoriser une application"
+msgstr ""
+"Vous devez fournir un redirect_uri valide pour autoriser une application"
 
 #: lib/web/controllers/application_controller.ex:123
 msgid "You need to specify client_id, redirect_uri, scope and state to autorize an application"
-msgstr "Vous devez spécifier client_id, redirect_uri, scope et state pour autoriser une application"
+msgstr ""
+"Vous devez spécifier client_id, redirect_uri, scope et state pour autoriser "
+"une application"
 
 #: lib/graphql/resolvers/user.ex:352
 msgid "Couldn't send an email. Internal error."
@@ -1032,7 +1095,9 @@ msgstr "La participation est déjà confirmée"
 
 #: lib/graphql/resolvers/participant.ex:290
 msgid "Participation is confirmed but not approved yet by an organizer"
-msgstr "La participation est confirmée mais n'a pas encore été approuvée par un·e organisateur·ice"
+msgstr ""
+"La participation est confirmée mais n'a pas encore été approuvée par un·e "
+"organisateur·ice."
 
 #: lib/graphql/resolvers/event.ex:305 lib/graphql/resolvers/event.ex:394
 msgid "Providing external registration is not allowed"
@@ -1056,25 +1121,33 @@ msgstr "Vous suivez déjà cette instance"
 
 #: lib/graphql/resolvers/user.ex:356
 msgid "You requested again a confirmation email too soon. Please try again in a few minutes"
-msgstr "Vous avez redemandé un courriel de confirmation trop tôt. Veuillez réessayer dans quelques minutes"
+msgstr ""
+"Vous avez redemandé un courriel de confirmation trop tôt. Veuillez réessayer "
+"dans quelques minutes"
 
 #: lib/graphql/resolvers/user.ex:390
 msgid "You requested again a password reset email too soon. Please try again in a few minutes"
-msgstr "Vous avez demandé un nouveau courriel de réinitialisation de mot de passe trop tôt. Veuillez réessayer dans quelques minutes"
+msgstr ""
+"Vous avez demandé un nouveau courriel de réinitialisation de mot de passe "
+"trop tôt. Veuillez réessayer dans quelques minutes"
 
 #: lib/graphql/resolvers/user.ex:417
 msgid "The token you provided is invalid. Make sure that the URL is exactly the one provided inside the email you got."
 msgstr ""
-"Le jeton que vous avez fourni n'est pas valide. Assurez-vous que l'URL est exactement la même que celle fournie dans le courriel que vous "
-"avez reçu."
+"Le jeton que vous avez fourni n'est pas valide. Assurez-vous que l'URL est "
+"exactement la même que celle fournie dans le courriel que vous avez reçu."
 
 #: lib/graphql/resolvers/conversation.ex:170
 msgid "Conversation needs to mention at least one participant that's not yourself"
-msgstr "La conversation doit mentionner au moins un·e participant·e qui n'est pas vous-même"
+msgstr ""
+"La conversation doit mentionner au moins un·e participant·e qui n'est pas "
+"vous-même"
 
 #: lib/graphql/resolvers/participant.ex:401
 msgid "There are no participants matching the audience you've selected."
-msgstr "Il n'y a pas de participant·es correspondant à l'audience que vous avez sélectionnée."
+msgstr ""
+"Il n'y a pas de participant·es correspondant à l'audience que vous avez "
+"sélectionnée."
 
 #: lib/graphql/resolvers/post.ex:178
 msgid "An error occured while updating your post"

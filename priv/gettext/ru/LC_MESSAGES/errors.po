@@ -9,7 +9,7 @@
 msgid ""
 msgstr ""
 "PO-Revision-Date: 2026-03-11 21:37+0000\n"
-"Last-Translator: deadmorose <cornerot@gmail.com>\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Russian <https://weblate.framasoft.org/projects/mobilizon/"
 "backend-errors/ru/>\n"
 "Language: ru\n"
@@ -1505,6 +1505,6 @@ msgstr ""
 "Для обновления отчёта вы должны войти в систему и иметь права модератора"
 
 #: lib/graphql/resolvers/invitation.ex:28
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "Impossible to create the invitation"
 msgstr ""
