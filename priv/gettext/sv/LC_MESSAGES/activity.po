@@ -9,7 +9,7 @@
 msgid ""
 msgstr ""
 "PO-Revision-Date: 2026-03-11 21:37+0000\n"
-"Last-Translator: drkfrd <drkfrd@users.noreply.weblate.framasoft.org>\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Swedish <https://weblate.framasoft.org/projects/mobilizon/"
 "activity/sv/>\n"
 "Language: sv\n"
