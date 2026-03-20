@@ -4,7 +4,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-18 04:49+0000\n"
 "PO-Revision-Date: 2026-03-11 21:36+0000\n"
-"Last-Translator: \"josé m.\" <correoxm@disroot.org>\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Galician <https://weblate.framasoft.org/projects/mobilizon/"
 "backend/gl/>\n"
 "Language: gl\n"
@@ -639,8 +639,8 @@ msgstr ""
 msgctxt "terms"
 msgid "For full details about the Mobilizon software <a href=\"https://mobilizon.org\">see here</a>."
 msgstr ""
-"Para coñecer máis sobre o software Mobilizon <a href=\"https://joinmobilizon."
-"org\">visita esta web</a>."
+"Para coñecer máis sobre o software Mobilizon <a href=\"https://"
+"joinmobilizon.org\">visita esta web</a>."
 
 #: lib/web/templates/api/terms.html.heex:47
 #, elixir-autogen, elixir-format
@@ -1610,8 +1610,8 @@ msgstr "A túa participación en %{event} foi cancelada!"
 #, elixir-autogen, elixir-format
 msgid "Your instance's moderation team has decided to suspend %{actor_name} (%{actor_address}). All of their events have been removed and your participation to event %{event} cancelled."
 msgstr ""
-"Os moderadores da túa instancia decidiron suspender %{group_name} "
-"(%{group_address}). Xa non pertences a este grupo."
+"Os moderadores da túa instancia decidiron suspender %{group_name} (%"
+"{group_address}). Xa non pertences a este grupo."
 
 #: lib/web/templates/email/group_suspension.html.heex:50
 #, elixir-autogen, elixir-format
