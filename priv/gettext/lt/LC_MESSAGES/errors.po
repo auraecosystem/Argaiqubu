@@ -8,8 +8,17 @@
 ### to merge POT files into PO files.
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2026-03-11 21:35+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Lithuanian <https://weblate.framasoft.org/projects/mobilizon/"
+"backend-errors/lt/>\n"
 "Language: lt\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100 != 11 ? 0 : n%10>=2 && (n%100<10||n%100>=20) ? 1 : 2);\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Plural-Forms: nplurals=3; plural=(n % 10 == 1 && (n % 100 < 11 || n % 100 > "
+"19)) ? 0 : ((n % 10 >= 2 && n % 10 <= 9 && (n % 100 < 11 || n % 100 > 19)) ? "
+"1 : 2);\n"
+"X-Generator: Weblate 5.16.2\n"
+"Content-Transfer-Encoding: 8bit\n"
 
 #: lib/mobilizon/discussions/discussion.ex:68
 #, elixir-autogen
@@ -1453,6 +1462,6 @@ msgid "You need to be logged-in and moderator to unban an account"
 msgstr ""
 
 #: lib/graphql/resolvers/invitation.ex:28
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "Impossible to create the invitation"
 msgstr ""

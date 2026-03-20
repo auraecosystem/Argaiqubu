@@ -9,7 +9,7 @@
 msgid ""
 msgstr ""
 "PO-Revision-Date: 2026-03-11 21:34+0000\n"
-"Last-Translator: Balázs Úr <balazs@urbalazs.hu>\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Hungarian <https://weblate.framasoft.org/projects/mobilizon/"
 "backend/hu/>\n"
 "Language: hu\n"
@@ -595,8 +595,6 @@ msgstr ""
 msgctxt "terms"
 msgid "For full details about the Mobilizon software <a href=\"https://mobilizon.org\">see here</a>."
 msgstr ""
-"A Mobilizon szoftverre vonatkozó további részleteket <a href="
-"\"https://joinmobilizon.org\">lásd itt</a>."
 
 #: lib/web/templates/api/terms.html.heex:47
 #, elixir-autogen, elixir-format
