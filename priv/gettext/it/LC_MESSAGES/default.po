@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-24 14:40+0000\n"
-"PO-Revision-Date: 2024-07-09 10:47+0000\n"
-"Last-Translator: omar lazzari <olazzari@gmail.com>\n"
+"PO-Revision-Date: 2026-03-11 21:40+0000\n"
+"Last-Translator: Deleted User <noreply+331@weblate.org>\n"
 "Language-Team: Italian <https://weblate.framasoft.org/projects/mobilizon/"
 "backend/it/>\n"
 "Language: it\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.6.2\n"
+"X-Generator: Weblate 5.16.2\n"
 
 #: lib/web/templates/email/password_reset.html.heex:66
 #, elixir-autogen, elixir-format
@@ -284,9 +284,9 @@ msgid "If this server is in the USA: Our site, products and services are all dir
 msgstr ""
 "Se questo server è negli USA: Il nostro sito, prodotti e servizi sono "
 "diretti a persone che hanno almeno 13 anni. Se hai meno di 13 anni, secondo "
-"i requisiti del COPPA (<a href=\"https://en.wikipedia.org/wiki/Children"
-"%27s_Online_Privacy_Protection_Act\">Children's Online Privacy Protection "
-"Act</a>) non usare questo sito."
+"i requisiti del COPPA (<a href=\"https://en.wikipedia.org/wiki/"
+"Children%27s_Online_Privacy_Protection_Act\">Children's Online Privacy "
+"Protection Act</a>) non usare questo sito."
 
 #: lib/web/templates/api/privacy.html.heex:160
 #, elixir-autogen, elixir-format
@@ -427,8 +427,8 @@ msgid "One participation request for event %{title} to process"
 msgid_plural "%{number_participation_requests} participation requests for event %{title} to process"
 msgstr[0] "Una richiesta di partecipazione per l'evento %{title} da elaborare"
 msgstr[1] ""
-"%{number_participation_requests} richieste di partecipazione per l'evento "
-"%{title} da elaborare"
+"%{number_participation_requests} richieste di partecipazione per l'evento %"
+"{title} da elaborare"
 
 #: lib/web/templates/email/notification_each_week.html.heex:47
 #: lib/web/templates/email/notification_each_week.text.eex:3
@@ -689,8 +689,8 @@ msgctxt "terms"
 msgid "Private information of any third party (e.g., addresses, phone numbers, email addresses, Social Security numbers and credit card numbers); and"
 msgstr ""
 "Informazioni private di terze parti (ad es. Indirizzi, numeri di telefono, "
-"indirizzi e-mail, numeri di previdenza sociale e numeri di carte di "
-"credito); e"
+"indirizzi e-mail, numeri di previdenza sociale e numeri di carte di credito)"
+"; e"
 
 #: lib/web/templates/api/terms.html.heex:152
 #, elixir-autogen, elixir-format
@@ -1282,8 +1282,8 @@ msgstr "Il gruppo %{group} è stato sospeso su %{instance}!"
 #, elixir-autogen, elixir-format
 msgid "Your instance's moderation team has decided to suspend %{group_name} (%{group_address}). You are no longer a member of this group."
 msgstr ""
-"Il team di moderazione della tua istanza ha deciso di sospendere "
-"%{group_name} (%{group_address}). Non sei più un membro di questo gruppo."
+"Il team di moderazione della tua istanza ha deciso di sospendere %"
+"{group_name} (%{group_address}). Non sei più un membro di questo gruppo."
 
 #: lib/web/email/group.ex:106
 #, elixir-autogen, elixir-format
@@ -1365,8 +1365,8 @@ msgctxt "terms"
 msgid "Some terms, technical or otherwise, used in the text below may cover concepts that are difficult to grasp. We have provided <a href=\"/glossary\">a glossary</a> to help you understand them better."
 msgstr ""
 "Alcuni termini, tecnici o di altro tipo, utilizzati nel testo seguente "
-"possono coprire concetti difficili da comprendere. Abbiamo fornito <a href="
-"\"/glossary\">un glossario</a> per aiutarti a capirli meglio."
+"possono coprire concetti difficili da comprendere. Abbiamo fornito <a "
+"href=\"/glossary\">un glossario</a> per aiutarti a capirli meglio."
 
 #: lib/web/templates/api/terms.html.heex:120
 #, elixir-autogen, elixir-format
@@ -1423,8 +1423,8 @@ msgid "When you create an account you agree to maintain the security and confide
 msgstr ""
 "Quando crei un account, accetti di mantenere la sicurezza e la riservatezza "
 "della tua password e accetti tutti i rischi di accesso non autorizzato ai "
-"dati del tuo account e a qualsiasi altra informazione che fornisci a <b>"
-"%{instance_name}</b>."
+"dati del tuo account e a qualsiasi altra informazione che fornisci a <b>%"
+"{instance_name}</b>."
 
 #: lib/web/templates/api/terms.html.heex:134
 #, elixir-autogen, elixir-format
