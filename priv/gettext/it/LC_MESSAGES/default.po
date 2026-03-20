@@ -4,7 +4,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-24 14:40+0000\n"
 "PO-Revision-Date: 2026-03-11 21:40+0000\n"
-"Last-Translator: frama late <loss@e.email>\n"
+"Last-Translator: coronabond <coronabond@airmail.cc>\n"
 "Language-Team: Italian <https://weblate.framasoft.org/projects/mobilizon/"
 "backend/it/>\n"
 "Language: it\n"
@@ -659,8 +659,8 @@ msgctxt "terms"
 msgid "Here are the important things you need to know about accessing and using the <b>%{instance_name}</b> (<a href=\"https://%{instance_url}\">%{instance_url}</a>) website and service (collectively, \"Service\"). These are our terms of service (\"Terms\"). Please read them carefully."
 msgstr ""
 "Ecco le cose importanti che devi sapere sull'accesso e sull'utilizzo del "
-"sito web e servizio <b>%{instance_name}</b> (<a href=\"https://"
-"%{instance_url}\">%{instance_url}</a>) (collettivamente, \"Servizio\"). "
+"sito web e servizio <b>%{instance_name}</b> (<a href=\"https://%"
+"{instance_url}\">%{instance_url}</a>) (collettivamente, \"Servizio\"). "
 "Questi sono i nostri termini di servizio (\"Termini\"). Si prega di leggerli "
 "attentamente."
 
@@ -710,10 +710,10 @@ msgstr ""
 msgctxt "terms"
 msgid "These Terms constitute the entire agreement between you and <b>%{instance_name}</b> regarding the use of the Service, superseding any prior agreements between you and <b>%{instance_name}</b> relating to your use of the Service."
 msgstr ""
-"I presenti Termini costituiscono l'intero accordo tra te e <b>"
-"%{instance_name}</b> per quanto riguarda l'utilizzo del Servizio, "
-"sostituendo qualsiasi accordo precedente tra te e <b>%{instance_name}</b> "
-"relativo al tuo utilizzo del Servizio."
+"I presenti Termini costituiscono l'intero accordo tra te e <b>%"
+"{instance_name}</b> per quanto riguarda l'utilizzo del Servizio, sostituendo "
+"qualsiasi accordo precedente tra te e <b>%{instance_name}</b> relativo al "
+"tuo utilizzo del Servizio."
 
 #: lib/web/templates/api/terms.html.heex:247
 #, elixir-autogen, elixir-format
@@ -796,8 +796,8 @@ msgid "If you discover or suspect any Service security breaches, please let us k
 msgstr ""
 "Se scopri o sospetti violazioni della sicurezza del Servizio, faccelo sapere "
 "il prima possibile. Per falle di sicurezza nel software Mobilizon stesso, "
-"contatta direttamente <a href=\"https://framagit.org/framasoft/mobilizon/\""
-">i suoi contributori</a>."
+"contatta direttamente <a href=\"https://framagit.org/framasoft/mobilizon/\">"
+"i suoi contributori</a>."
 
 #: lib/web/templates/api/terms.html.heex:240
 #, elixir-autogen, elixir-format
@@ -813,8 +813,8 @@ msgstr ""
 msgctxt "terms"
 msgid "Originally adapted from the <a href=\"https://joindiaspora.com/terms\">Diaspora*</a> and <a href=\"https://github.com/appdotnet/terms-of-service\">App.net</a> privacy policies, also licensed under <a href=\"https://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA</a>."
 msgstr ""
-"Adattato originariamente dalle politiche sulla privacy di <a href=\"https"
-"://joindiaspora.com/terms\">Diaspora*</a> e <a href=\"https://github.com/"
+"Adattato originariamente dalle politiche sulla privacy di <a href=\"https://"
+"joindiaspora.com/terms\">Diaspora*</a> e <a href=\"https://github.com/"
 "appdotnet/terms-of-service\">App.net</a>, anch'esse concesse in licenza <a "
 "href=\"https://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA</a>."
 
@@ -823,10 +823,10 @@ msgstr ""
 msgctxt "terms"
 msgid "Originally adapted from the <a href=\"https://mastodon.social/terms\">Mastodon</a> and <a href=\"https://github.com/discourse/discourse\">Discourse</a> privacy policies, also licensed under <a href=\"https://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA</a>."
 msgstr ""
-"Originariamente adattato dalle politiche sulla privacy di <a href=\"https"
-"://mastodon.social/terms\">Mastodon</a> e <a href=\"https://github.com/"
-"discourse/discourse\">Discourse</a>, anch'esse concesse in licenza <a href="
-"\"https://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA</a>."
+"Originariamente adattato dalle politiche sulla privacy di <a href=\"https://"
+"mastodon.social/terms\">Mastodon</a> e <a href=\"https://github.com/"
+"discourse/discourse\">Discourse</a>, anch'esse concesse in licenza <a "
+"href=\"https://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA</a>."
 
 #: lib/web/templates/api/terms.html.heex:3
 #, elixir-autogen, elixir-format
@@ -949,8 +949,8 @@ msgstr[0] ""
 "attraverso il link sopra e fai clic sul pulsante «Partecipanti»."
 msgstr[1] ""
 "Se desideri annullare la tua partecipazione a uno o più eventi, visita le "
-"pagine degli eventi attraverso i link sopra e fai clic sul pulsante "
-"«Partecipanti»."
+"pagine degli eventi attraverso i link sopra e fai clic sul pulsante «"
+"Partecipanti»."
 
 #: lib/web/templates/email/email.text.eex:11
 #, elixir-autogen, elixir-format
@@ -1011,8 +1011,8 @@ msgid "Hi there! It seems like you wanted to change the email address linked to 
 msgstr ""
 "Ciao! Sembra che tu volessi modificare l'indirizzo email collegato al tuo "
 "account su <b>%{instance}</b>. Se desideri ancora farlo, fai clic sul "
-"pulsante in basso per confermare la modifica. Potrai quindi accedere a "
-"%{instance} con questo nuovo indirizzo email."
+"pulsante in basso per confermare la modifica. Potrai quindi accedere a %"
+"{instance} con questo nuovo indirizzo email."
 
 #: lib/web/templates/email/email_changed_old.text.eex:3
 #, elixir-autogen, elixir-format
@@ -1640,8 +1640,7 @@ msgstr "Dettagli tecnici"
 #: lib/web/templates/error/500_page.html.heex:52
 #, elixir-autogen, elixir-format
 msgid "The Mobilizon server %{instance} seems to be temporarily down."
-msgstr ""
-"Il server Mobilizon %{instance} sembra essere temporaneamente inattivo."
+msgstr "Il server Mobilizon %{instance} sembra essere temporaneamente inattivo."
 
 #: lib/service/export/feed.ex:72
 #, elixir-autogen, elixir-format
@@ -1658,9 +1657,9 @@ msgstr "La tua partecipazione all'evento %{event} è stata annullata!"
 #, elixir-autogen, elixir-format
 msgid "Your instance's moderation team has decided to suspend %{actor_name} (%{actor_address}). All of their events have been removed and your participation to event %{event} cancelled."
 msgstr ""
-"Il team di moderazione della tua istanza ha deciso di sospendere "
-"%{actor_name} (%{actor_address}). Tutti i suoi eventi sono stati rimossi e "
-"la tua partecipazione all'evento %{event} è stata annullata."
+"Il team di moderazione della tua istanza ha deciso di sospendere %"
+"{actor_name} (%{actor_address}). Tutti i suoi eventi sono stati rimossi e la "
+"tua partecipazione all'evento %{event} è stata annullata."
 
 #: lib/web/templates/email/group_suspension.html.heex:50
 #, elixir-autogen, elixir-format
@@ -2052,8 +2051,8 @@ msgstr ""
 msgid "If something doesn't feel right to you, please contact the instance administrator through the contact methods %{start_link}on the instance's about page%{end_link}."
 msgstr ""
 "Se qualcosa non vi sembra corretto, contattate l'amministratore dell'istanza "
-"attraverso i metodi di contatto %{start_link}sulla pagina dell'istanza"
-"%{end_link}."
+"attraverso i metodi di contatto %{start_link}sulla pagina dell'istanza%"
+"{end_link}."
 
 #: lib/web/templates/email/admin_user_confirmation.text.eex:7
 #: lib/web/templates/email/admin_user_email_changed_new.text.eex:4
