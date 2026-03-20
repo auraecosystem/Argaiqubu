@@ -4,7 +4,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-12-17 11:48+0000\n"
 "PO-Revision-Date: 2026-03-11 21:34+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Last-Translator: fadelkon <fadelkon@posteo.net>\n"
 "Language-Team: Catalan <https://weblate.framasoft.org/projects/mobilizon/"
 "backend/ca/>\n"
 "Language: ca\n"
@@ -107,8 +107,8 @@ msgstr ""
 #, elixir-autogen, elixir-format
 msgid "You created an account on %{host} with this email address. You are one click away from activating it. If this wasn't you, please ignore this email."
 msgstr ""
-"Has creat un compte a %{host} amb aquesta adreça de mail. Estàs a un clic d"
-"'activar-lo. Si no l'has creat tu, ignora aquest mail."
+"Has creat un compte a %{host} amb aquesta adreça de mail. Estàs a un clic "
+"d'activar-lo. Si no l'has creat tu, ignora aquest mail."
 
 #: lib/web/email/participation.ex:115
 #, elixir-autogen, elixir-format
@@ -270,12 +270,13 @@ msgstr "Canvis a la nostra política de privacitat"
 msgctxt "terms"
 msgid "If this server is in the EU or the EEA: Our site, products and services are all directed to people who are at least 16 years old. If you are under the age of 16, per the requirements of the GDPR (<a href=\"https://en.wikipedia.org/wiki/General_Data_Protection_Regulation\">General Data Protection Regulation</a>) do not use this site."
 msgstr ""
-"Si aquest servidor està a la Unió Europea o a l'Arèa Econòmica Europea ("
-"inclou Noruega, Islàndia, Liechtenstein): Els nostres lloc, productes i "
+"Si aquest servidor està a la Unió Europea o a l'Arèa Econòmica Europea "
+"(inclou Noruega, Islàndia, Liechtenstein): Els nostres lloc, productes i "
 "serveis, estan tots dirigits a persones majors de 16 anys. Si tens menys de "
-"16 anys d'edat, seguint les obligacions de la GDPR (<a href=\"https://ca."
-"wikipedia.org/wiki/Reglament_General_de_Protecci%C3%B3_de_Dades\">Reglament "
-"General de Protecció de Dades</a>), si us plau, no facis servir aquest lloc."
+"16 anys d'edat, seguint les obligacions de la GDPR (<a href=\"https://"
+"ca.wikipedia.org/wiki/Reglament_General_de_Protecci%C3%B3_de_Dades\">"
+"Reglament General de Protecció de Dades</a>), si us plau, no facis servir "
+"aquest lloc."
 
 #: lib/web/templates/api/privacy.html.heex:146
 #, elixir-autogen, elixir-format
@@ -284,10 +285,10 @@ msgid "If this server is in the USA: Our site, products and services are all dir
 msgstr ""
 "Si aquest servidor està als USA: Els nostres llocs, productes i serveis "
 "estan dirigits a persones d'almenys 13 anys d'edat. Si tens menys de 13 "
-"anys, seguint les obligacions de la COPPA (<a href=\"https://en.wikipedia."
-"org/wiki/Children%27s_Online_Privacy_Protection_Act\">Llei de protecció de "
-"la privacitat online dels infants</a>), si us plau, no facis servir aquest "
-"lloc."
+"anys, seguint les obligacions de la COPPA (<a href=\"https://"
+"en.wikipedia.org/wiki/Children%27s_Online_Privacy_Protection_Act\">Llei de "
+"protecció de la privacitat online dels infants</a>), si us plau, no facis "
+"servir aquest lloc."
 
 #: lib/web/templates/api/privacy.html.heex:160
 #, elixir-autogen, elixir-format
@@ -651,8 +652,8 @@ msgctxt "terms"
 msgid "Here are the important things you need to know about accessing and using the <b>%{instance_name}</b> (<a href=\"https://%{instance_url}\">%{instance_url}</a>) website and service (collectively, \"Service\"). These are our terms of service (\"Terms\"). Please read them carefully."
 msgstr ""
 "Aquestes són les coses importants que heu de saber sobre l'accés i l'ús del "
-"web i servei <b>%{instance_name}</b> (<a href=\"https://%{instance_url}\""
-">%{instance_url}</a>) (coŀlectivament, \"Servei\"). Aquests són les nostres "
+"web i servei <b>%{instance_name}</b> (<a href=\"https://%{instance_url}\">%"
+"{instance_url}</a>) (coŀlectivament, \"Servei\"). Aquests són les nostres "
 "condicions del servei, (\"Condicions del Servei\" o \"Condicions\"). Llegiu-"
 "les amb atenció."
 
@@ -810,10 +811,10 @@ msgstr ""
 msgctxt "terms"
 msgid "Originally adapted from the <a href=\"https://mastodon.social/terms\">Mastodon</a> and <a href=\"https://github.com/discourse/discourse\">Discourse</a> privacy policies, also licensed under <a href=\"https://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA</a>."
 msgstr ""
-"Adaptades originalment de les <a href=\"https://mastodon.social/terms\""
-">polítiques de privacitat de Mastodon</a> i <a href=\"https://github.com/"
-"discourse/discourse\">les de Discourse</a>, llicenciades també amb <a href="
-"\"https://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA</a>."
+"Adaptades originalment de les <a href=\"https://mastodon.social/terms\">"
+"polítiques de privacitat de Mastodon</a> i <a href=\"https://github.com/"
+"discourse/discourse\">les de Discourse</a>, llicenciades també amb <a "
+"href=\"https://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA</a>."
 
 #: lib/web/templates/api/terms.html.heex:3
 #, elixir-autogen, elixir-format
@@ -852,8 +853,8 @@ msgstr ""
 msgctxt "terms"
 msgid "You must respect other people and <b>%{instance_name}</b>'s rules when using the service"
 msgstr ""
-"Quan useu el servei heu de respectar les altres persones i les normes de "
-"<b>%{instance_name}</b>"
+"Quan useu el servei heu de respectar les altres persones i les normes de <b>%"
+"{instance_name}</b>"
 
 #: lib/web/templates/api/terms.html.heex:15
 #, elixir-autogen, elixir-format
@@ -1011,8 +1012,8 @@ msgid "If you did not trigger this change yourself, it is likely that someone ha
 msgstr ""
 "Si no has fet aquest canvi tu mateix/a, és possible que algú hagi aconseguit "
 "accés al teu compte de %{host}. Si us plau, entra-hi i canvia la teva "
-"contrasenya de seguida. Si no pots entrar, contacta amb les admins de "
-"%{host}."
+"contrasenya de seguida. Si no pots entrar, contacta amb les admins de %{host}"
+"."
 
 #: lib/web/templates/email/password_reset.text.eex:12
 #, elixir-autogen, elixir-format
@@ -1230,8 +1231,8 @@ msgstr ""
 #, elixir-autogen, elixir-format
 msgid "<b>%{inviter}</b> just invited you to join their group %{link_start}<b>%{group}</b>%{link_end}"
 msgstr ""
-"<b>%{inviter}</b> t'acaba de convidar de ficar-te al seu grup "
-"%{link_start}<b>%{group}</b>%{link_end}"
+"<b>%{inviter}</b> t'acaba de convidar de ficar-te al seu grup %{link_start}"
+"<b>%{group}</b>%{link_end}"
 
 #: lib/web/templates/email/group_member_removal.html.heex:47
 #, elixir-autogen, elixir-format
@@ -1258,8 +1259,8 @@ msgstr "El grup %{group} ha estat suspès a %{instance}!"
 #, elixir-autogen, elixir-format
 msgid "Your instance's moderation team has decided to suspend %{group_name} (%{group_address}). You are no longer a member of this group."
 msgstr ""
-"L'equip de moderació de la teva instància ha decidit suspendre el grup "
-"%{group_name} (%{group_address}). Ja no formes part del grup."
+"L'equip de moderació de la teva instància ha decidit suspendre el grup %"
+"{group_name} (%{group_address}). Ja no formes part del grup."
 
 #: lib/web/email/group.ex:106
 #, elixir-autogen, elixir-format
@@ -1272,8 +1273,8 @@ msgctxt "terms"
 msgid "By accessing or using the Service, this means you agree to be bound by all the terms below. If these terms are in any way unclear, please let us know by contacting %{contact}."
 msgstr ""
 "Accedint o usant el Servei, confirmes implícitament que et compromets a les "
-"condicions següents. Si les condicions no et resulten clares, contacta a "
-"%{contact}."
+"condicions següents. Si les condicions no et resulten clares, contacta a %"
+"{contact}."
 
 #: lib/web/templates/api/terms.html.heex:96
 #, elixir-autogen, elixir-format
