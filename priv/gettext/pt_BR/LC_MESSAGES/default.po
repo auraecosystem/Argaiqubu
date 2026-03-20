@@ -4,7 +4,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-02-15 01:23+0000\n"
 "PO-Revision-Date: 2026-03-11 21:34+0000\n"
-"Last-Translator: framasil <framabr@proton.me>\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Portuguese (Brazil) <https://weblate.framasoft.org/projects/"
 "mobilizon/backend/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -937,18 +937,18 @@ msgstr ""
 msgctxt "terms"
 msgid "Originally adapted from the <a href=\"https://joindiaspora.com/terms\">Diaspora*</a> and <a href=\"https://github.com/appdotnet/terms-of-service\">App.net</a> privacy policies, also licensed under <a href=\"https://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA</a>."
 msgstr ""
-"Originalmente adaptado das politicas privadas de <a href=\"https://mastodon."
-"social/terms\">Mastodon</a> e <a href=\"https://github.com/discourse/"
-"discourse\">Discourse</a>."
+"Originalmente adaptado das politicas privadas de <a href=\"https://"
+"mastodon.social/terms\">Mastodon</a> e <a href=\"https://github.com/"
+"discourse/discourse\">Discourse</a>."
 
 #: lib/web/templates/api/privacy.html.heex:173
 #, elixir-autogen, elixir-format
 msgctxt "terms"
 msgid "Originally adapted from the <a href=\"https://mastodon.social/terms\">Mastodon</a> and <a href=\"https://github.com/discourse/discourse\">Discourse</a> privacy policies, also licensed under <a href=\"https://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA</a>."
 msgstr ""
-"Originalmente adaptado das politicas privadas de <a href=\"https://mastodon."
-"social/terms\">Mastodon</a> e <a href=\"https://github.com/discourse/"
-"discourse\">Discourse</a>."
+"Originalmente adaptado das politicas privadas de <a href=\"https://"
+"mastodon.social/terms\">Mastodon</a> e <a href=\"https://github.com/"
+"discourse/discourse\">Discourse</a>."
 
 #: lib/web/templates/api/terms.html.heex:3
 #, elixir-autogen, elixir-format
