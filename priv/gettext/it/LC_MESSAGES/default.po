@@ -4,7 +4,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-24 14:40+0000\n"
 "PO-Revision-Date: 2026-03-11 21:40+0000\n"
-"Last-Translator: Marco Ciampa <ciampix@posteo.net>\n"
+"Last-Translator: Tommaso Gardumi <toba@nugol.net>\n"
 "Language-Team: Italian <https://weblate.framasoft.org/projects/mobilizon/"
 "backend/it/>\n"
 "Language: it\n"
@@ -1666,8 +1666,8 @@ msgstr ""
 #, elixir-autogen, elixir-format
 msgid "Your instance's moderation team has decided to suspend <b>%{group_name}</b> (%{group_address}). You are no longer a member of this group."
 msgstr ""
-"Il team di moderazione della tua istanza ha deciso di sospendere <b>"
-"%{group_name}</b> (%{group_address}). Non sei più un membro di questo gruppo."
+"Il team di moderazione della tua istanza ha deciso di sospendere <b>%"
+"{group_name}</b> (%{group_address}). Non sei più un membro di questo gruppo."
 
 #: lib/web/templates/email/actor_suspension_participants.html.heex:18
 #: lib/web/templates/email/actor_suspension_participants.text.eex:1
