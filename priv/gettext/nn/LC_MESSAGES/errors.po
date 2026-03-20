@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-11-14 11:02+0000\n"
-"PO-Revision-Date: 2022-11-08 13:26+0000\n"
+"PO-Revision-Date: 2026-03-11 21:39+0000\n"
 "Last-Translator: Eivind Ødegård <eivind.odegard@sogn.no>\n"
 "Language-Team: Norwegian Nynorsk <https://weblate.framasoft.org/projects/"
 "mobilizon/backend-errors/nn/>\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.14.1\n"
+"X-Generator: Weblate 5.16.2\n"
 
 ## This file is a PO Template file.
 ##
