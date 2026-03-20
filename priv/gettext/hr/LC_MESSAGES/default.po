@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-11-25 07:56+0000\n"
-"PO-Revision-Date: 2026-03-11 21:39+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"PO-Revision-Date: 2026-03-18 21:35+0000\n"
+"Last-Translator: Milo Ivir <mail@milotype.de>\n"
 "Language-Team: Croatian <https://weblate.framasoft.org/projects/mobilizon/"
 "backend/hr/>\n"
 "Language: hr\n"
@@ -2392,7 +2392,7 @@ msgstr "Novi korisnik na čekanju od %{user} na instanci %{instance}"
 #: lib/web/templates/email/user_pending.html.heex:18
 #, elixir-autogen, elixir-format
 msgid "New pending user on <b>%{instance}</b>"
-msgstr "Novi korisnik na čekanju na instanci <b>%{instance</b>"
+msgstr "Novi korisnik na čekanju na instanci <b>%{instance}</b>"
 
 #: lib/web/email/admin.ex:38
 #, elixir-autogen, elixir-format
