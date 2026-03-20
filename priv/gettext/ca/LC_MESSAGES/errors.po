@@ -8,15 +8,15 @@
 ## to merge POT files into PO files.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-11-02 08:06+0000\n"
-"Last-Translator: fadelkon <fadelkon@posteo.net>\n"
+"PO-Revision-Date: 2026-03-11 21:37+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Catalan <https://weblate.framasoft.org/projects/mobilizon/"
 "backend-errors/ca/>\n"
 "Language: ca\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.1\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.16.2\n"
 
 #: lib/mobilizon/discussions/discussion.ex:68
 #, elixir-autogen
@@ -1072,12 +1072,12 @@ msgid "Deconfirming users is not supported"
 msgstr ""
 
 #: lib/graphql/resolvers/admin.ex:415
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "The new role must be different"
 msgstr ""
 
 #: lib/graphql/resolvers/admin.ex:354
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "You need to be logged-in and an administrator to edit an user's details"
 msgstr ""
 
@@ -1098,7 +1098,7 @@ msgstr ""
 
 #: lib/graphql/resolvers/user.ex:349
 #: lib/graphql/resolvers/user.ex:379
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "This email doesn't seem to be valid"
 msgstr ""
 
@@ -1149,7 +1149,7 @@ msgid "Application token not found"
 msgstr ""
 
 #: lib/graphql/resolvers/application.ex:90
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "Error while revoking token"
 msgstr ""
 
@@ -1283,7 +1283,7 @@ msgid "This redirect URI is not allowed"
 msgstr ""
 
 #: lib/web/controllers/application_controller.ex:378
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "Token not found"
 msgstr ""
 
@@ -1354,12 +1354,12 @@ msgid "Timezone ID %{timezone} is invalid"
 msgstr ""
 
 #: lib/graphql/resolvers/admin.ex:596
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "You are already following this instance"
 msgstr ""
 
 #: lib/graphql/resolvers/user.ex:356
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "You requested again a confirmation email too soon. Please try again in a few minutes"
 msgstr ""
 
@@ -1384,7 +1384,7 @@ msgid "There are no participants matching the audience you've selected."
 msgstr ""
 
 #: lib/graphql/resolvers/post.ex:178
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "An error occured while updating your post"
 msgstr ""
 
@@ -1414,7 +1414,7 @@ msgid "Moderation text must not be empty"
 msgstr ""
 
 #: lib/graphql/resolvers/user.ex:633
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "User already enabled"
 msgstr ""
 
@@ -1429,31 +1429,31 @@ msgid "User pending"
 msgstr ""
 
 #: lib/graphql/resolvers/feed_token.ex:82
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "You are not allowed to get a feed token if not connected"
 msgstr ""
 
 #: lib/graphql/resolvers/member.ex:122
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "You can't accept this invitation."
 msgstr ""
 
 #: lib/graphql/resolvers/member.ex:150
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "You can't reject this invitation."
 msgstr ""
 
 #: lib/graphql/resolvers/feed_token.ex:76
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "You don't have permission to get this token"
 msgstr ""
 
 #: lib/graphql/resolvers/user.ex:638
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "You need to be logged-in and moderator to unban an account"
 msgstr ""
 
 #: lib/graphql/resolvers/invitation.ex:28
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "Impossible to create the invitation"
 msgstr ""
