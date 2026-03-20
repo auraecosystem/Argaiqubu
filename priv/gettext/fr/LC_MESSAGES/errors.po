@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: \n"
 "PO-Revision-Date: 2026-03-11 21:38+0000\n"
-"Last-Translator: Thomas Citharel <thomas.citharel@framasoft.org>\n"
+"Last-Translator: Axel <lordilexa@hotmail.com>\n"
 "Language-Team: French <https://weblate.framasoft.org/projects/mobilizon/"
 "backend-errors/fr/>\n"
 "Language: fr\n"
@@ -889,7 +889,9 @@ msgstr "Impossible de trouver une instance à suivre à cette adresse"
 
 #: lib/mobilizon/actors/actor.ex:410
 msgid "Username must only contain alphanumeric lowercased characters and underscores."
-msgstr "Le nom d'utilisateur ne doit contenir que des caractères alphanumériques minuscules et des underscores."
+msgstr ""
+"Le nom d'utilisateur ne doit contenir que des caractères alphanumériques "
+"minuscules et des underscores."
 
 #: lib/graphql/resolvers/user.ex:349 lib/graphql/resolvers/user.ex:379
 msgid "This email doesn't seem to be valid"
