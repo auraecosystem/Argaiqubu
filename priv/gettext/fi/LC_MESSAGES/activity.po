@@ -8,15 +8,15 @@
 ## to merge POT files into PO files.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-09-12 12:44+0000\n"
-"Last-Translator: Ville Ranki <ville.ranki@iki.fi>\n"
+"PO-Revision-Date: 2026-03-11 21:41+0000\n"
+"Last-Translator: Taru Luojola <taru.luojola@posteo.net>\n"
 "Language-Team: Finnish <https://weblate.framasoft.org/projects/mobilizon/"
 "activity/fi/>\n"
 "Language: fi\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.14\n"
+"X-Generator: Weblate 5.16.2\n"
 
 #: lib/web/templates/email/activity/_member_activity_item.html.heex:14
 #: lib/web/templates/email/activity/_member_activity_item.text.eex:12
