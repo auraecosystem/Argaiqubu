@@ -4,7 +4,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-24 14:40+0000\n"
 "PO-Revision-Date: 2026-03-11 21:40+0000\n"
-"Last-Translator: Deleted User <noreply+331@weblate.org>\n"
+"Last-Translator: Marco Ciampa <ciampix@posteo.net>\n"
 "Language-Team: Italian <https://weblate.framasoft.org/projects/mobilizon/"
 "backend/it/>\n"
 "Language: it\n"
@@ -1932,8 +1932,8 @@ msgstr "La tua richiesta di iscrizione al gruppo %{group} è stata respinta."
 #, elixir-autogen, elixir-format
 msgid "Your membership request for group %{link_start}<b>%{group}</b>%{link_end} has been rejected."
 msgstr ""
-"La tua richiesta di iscrizione al gruppo %{link_start}<b>%{group}</b>"
-"%{link_end} è stata respinta."
+"La tua richiesta di iscrizione al gruppo %{link_start}<b>%{group}</b>%"
+"{link_end} è stata respinta."
 
 #: lib/web/templates/email/group_membership_approval.text.eex:3
 #, elixir-autogen, elixir-format
@@ -1944,8 +1944,8 @@ msgstr "La tua richiesta di iscrizione al gruppo %{group} è stata approvata."
 #, elixir-autogen, elixir-format
 msgid "Your membership request for group %{link_start}<b>%{group}</b>%{link_end} has been approved."
 msgstr ""
-"La tua richiesta di iscrizione al gruppo %{link_start}<b>%{group}</b>"
-"%{link_end} è stata approvata."
+"La tua richiesta di iscrizione al gruppo %{link_start}<b>%{group}</b>%"
+"{link_end} è stata approvata."
 
 #: lib/web/templates/email/pending_participation_notification.html.heex:47
 #: lib/web/templates/email/pending_participation_notification.text.eex:4
