@@ -9,7 +9,7 @@
 msgid ""
 msgstr ""
 "PO-Revision-Date: 2026-03-11 21:38+0000\n"
-"Last-Translator: Ricardo Coelho <ricardo@nexy.com.br>\n"
+"Last-Translator: veroandi <veroandi@posteo.net>\n"
 "Language-Team: Portuguese (Brazil) <https://weblate.framasoft.org/projects/"
 "mobilizon/activity/pt_BR/>\n"
 "Language: pt_BR\n"
