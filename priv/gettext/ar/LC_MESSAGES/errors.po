@@ -9,7 +9,7 @@
 msgid ""
 msgstr ""
 "PO-Revision-Date: 2026-03-11 21:42+0000\n"
-"Last-Translator: ButterflyOfFire <butterflyoffire@protonmail.com>\n"
+"Last-Translator: Esmail_Hazem <hazem_almaleeh1@hotmail.com>\n"
 "Language-Team: Arabic <https://weblate.framasoft.org/projects/mobilizon/"
 "backend-errors/ar/>\n"
 "Language: ar\n"
