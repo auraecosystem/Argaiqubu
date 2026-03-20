@@ -8,15 +8,15 @@
 ### to merge POT files into PO files.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-12-06 09:49+0000\n"
-"Last-Translator: FoW <fow@netspheres.org>\n"
+"PO-Revision-Date: 2026-03-11 21:40+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Korean <https://weblate.framasoft.org/projects/mobilizon/"
 "backend/ko/>\n"
 "Language: ko\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.2.1\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.16.2\n"
 
 #: lib/web/templates/email/password_reset.html.heex:66
 #, elixir-autogen, elixir-format
@@ -2012,7 +2012,7 @@ msgid "Well done!"
 msgstr ""
 
 #: lib/web/templates/api/terms.html.heex:55
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgctxt "terms"
 msgid "When we say “we”, “our”, or “us” in this document, we are referring to the owners, operators and administrators of this Mobilizon instance. The Mobilizon software is provided by the team of Mobilizon contributors. Unless explicitly stated, this Mobilizon instance is an independent service using Mobilizon's source code. You may find more information about this instance on the <a href=\"/about/instance\">\"About this instance\"</a> page."
 msgstr ""
@@ -2034,7 +2034,7 @@ msgid "New pending user from %{user} on %{instance}"
 msgstr ""
 
 #: lib/web/templates/email/user_pending.html.heex:18
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "New pending user on <b>%{instance}</b>"
 msgstr ""
 
