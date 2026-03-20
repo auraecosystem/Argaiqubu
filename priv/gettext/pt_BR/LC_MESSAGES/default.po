@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-02-15 01:23+0000\n"
-"PO-Revision-Date: 2025-04-10 14:30+0000\n"
+"PO-Revision-Date: 2026-03-11 21:34+0000\n"
 "Last-Translator: Túlio Simões Martins Padilha <appsdotulio@gmx.com>\n"
 "Language-Team: Portuguese (Brazil) <https://weblate.framasoft.org/projects/"
 "mobilizon/backend/pt_BR/>\n"
@@ -11,8 +11,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Weblate 5.10.4\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 5.16.2\n"
 
 #: lib/web/templates/email/password_reset.html.heex:66
 #, elixir-autogen, elixir-format
@@ -1168,8 +1168,8 @@ msgid "Hi there! It seems like you wanted to change the email address linked to 
 msgstr ""
 "Olá! Parece que você deseja alterar o endereço de e-mail vinculado à sua "
 "conta em &lt;b&gt;%{instance}&lt;/b&gt;. Se ainda desejar, clique no botão "
-"abaixo para confirmar a alteração. Você poderá então fazer login em "
-"%{instance} com este novo endereço de e-mail."
+"abaixo para confirmar a alteração. Você poderá então fazer login em %"
+"{instance} com este novo endereço de e-mail."
 
 #: lib/web/templates/email/email_changed_old.text.eex:3
 #, elixir-autogen, elixir-format
@@ -1412,9 +1412,8 @@ msgstr ""
 #, elixir-autogen, elixir-format
 msgid "You have been removed from group %{link_start}<b>%{group}</b>%{link_end}. You will not be able to access this group's private content anymore."
 msgstr ""
-"Você foi removido do grupo "
-"%{link_start}&lt;b&gt;%{group}&lt;/b&gt;%{link_end}. Você não poderá mais "
-"acessar o conteúdo privado deste grupo."
+"Você foi removido do grupo %{link_start}&lt;b&gt;%{group}&lt;/b&gt;%"
+"{link_end}. Você não poderá mais acessar o conteúdo privado deste grupo."
 
 #: lib/web/templates/email/group_suspension.html.heex:81
 #: lib/web/templates/email/group_suspension.text.eex:7
@@ -1434,8 +1433,8 @@ msgstr "O grupo %{group} foi suspenso em %{instance}!"
 #, elixir-autogen, elixir-format
 msgid "Your instance's moderation team has decided to suspend %{group_name} (%{group_address}). You are no longer a member of this group."
 msgstr ""
-"A equipe de moderação da sua instância decidiu suspender %{group_name} "
-"(%{group_address}). Você não é mais membro deste grupo."
+"A equipe de moderação da sua instância decidiu suspender %{group_name} (%"
+"{group_address}). Você não é mais membro deste grupo."
 
 #: lib/web/email/group.ex:106
 #, elixir-autogen, elixir-format
@@ -1753,8 +1752,8 @@ msgstr "Quer se conectar?"
 #, elixir-autogen, elixir-format
 msgid "Hi there! You just registered to join this event: « <b>%{title}</b> ». Please confirm the e-mail address you provided:"
 msgstr ""
-"Olá! Você acabou de se registrar para participar deste evento: « "
-"&lt;b&gt;%{title}&lt;/b&gt; ». Confirme o endereço de e-mail fornecido:"
+"Olá! Você acabou de se registrar para participar deste evento: « &lt;b&gt;%"
+"{title}&lt;/b&gt; ». Confirme o endereço de e-mail fornecido:"
 
 #: lib/web/templates/email/event_participation_rejected.html.heex:47
 #, elixir-autogen, elixir-format
@@ -1852,17 +1851,17 @@ msgstr "A sua participação no evento %{title} foi aprovada"
 #, elixir-autogen, elixir-format
 msgid "Your instance's moderation team has decided to suspend %{actor_name} (%{actor_address}). All of their events have been removed and your participation to event %{event} cancelled."
 msgstr ""
-"A equipe de moderação da sua instância decidiu suspender %{actor_name} "
-"(%{actor_address}). Todos os eventos deles foram removidos e sua "
-"participação no evento %{event} foi cancelada."
+"A equipe de moderação da sua instância decidiu suspender %{actor_name} (%"
+"{actor_address}). Todos os eventos deles foram removidos e sua participação "
+"no evento %{event} foi cancelada."
 
 #: lib/web/templates/email/group_suspension.html.heex:50
 #, elixir-autogen, elixir-format
 msgid "Your instance's moderation team has decided to suspend <b>%{group_name}</b> (%{group_address}). You are no longer a member of this group."
 msgstr ""
-"A equipe de moderação da sua instância decidiu suspender "
-"&lt;b&gt;%{group_name}&lt;/b&gt; (%{group_address}). Você não é mais membro "
-"deste grupo."
+"A equipe de moderação da sua instância decidiu suspender &lt;b&gt;%"
+"{group_name}&lt;/b&gt; (%{group_address}). Você não é mais membro deste "
+"grupo."
 
 #: lib/web/templates/email/actor_suspension_participants.html.heex:18
 #: lib/web/templates/email/actor_suspension_participants.text.eex:1
@@ -2127,8 +2126,8 @@ msgstr "Sua solicitação de associação ao grupo %{group} foi rejeitada."
 #, elixir-autogen, elixir-format
 msgid "Your membership request for group %{link_start}<b>%{group}</b>%{link_end} has been rejected."
 msgstr ""
-"Sua solicitação de associação para o grupo "
-"%{link_start}&lt;b&gt;%{group}&lt;/b&gt;%{link_end} foi rejeitada."
+"Sua solicitação de associação para o grupo %{link_start}&lt;b&gt;%{group}"
+"&lt;/b&gt;%{link_end} foi rejeitada."
 
 #: lib/web/templates/email/group_membership_approval.text.eex:3
 #, elixir-autogen, elixir-format
@@ -2139,8 +2138,8 @@ msgstr "Sua solicitação de associação para o grupo %{group} foi aprovada."
 #, elixir-autogen, elixir-format
 msgid "Your membership request for group %{link_start}<b>%{group}</b>%{link_end} has been approved."
 msgstr ""
-"Sua solicitação de associação para o grupo "
-"%{link_start}&lt;b&gt;%{group}&lt;/b&gt;%{link_end} foi aprovada."
+"Sua solicitação de associação para o grupo %{link_start}&lt;b&gt;%{group}"
+"&lt;/b&gt;%{link_end} foi aprovada."
 
 #: lib/web/templates/email/pending_participation_notification.html.heex:47
 #: lib/web/templates/email/pending_participation_notification.text.eex:4
@@ -2174,8 +2173,8 @@ msgstr "Um administrador alterou manualmente o e-mail anexado à sua conta"
 #, elixir-autogen, elixir-format
 msgid "An administrator manually changed the email attached to your account on %{instance}"
 msgstr ""
-"Um administrador alterou manualmente o e-mail anexado à sua conta em "
-"%{instance}"
+"Um administrador alterou manualmente o e-mail anexado à sua conta em %"
+"{instance}"
 
 #: lib/web/templates/email/admin_user_confirmation.html.heex:18
 #: lib/web/templates/email/admin_user_confirmation.text.eex:1
@@ -2216,24 +2215,24 @@ msgstr ""
 #, elixir-autogen, elixir-format
 msgid "Hi there! We just wanted to inform you that an administrator from <b>%{instance}</b> just manually changed your account email from <b>%{old_email}</b> (this one) to <b>%{new_email}</b>."
 msgstr ""
-"Olá! Gostaríamos de informar que um administrador de "
-"&lt;b&gt;%{instance}&lt;/b&gt; alterou manualmente o e-mail da sua conta de "
-"&lt;b&gt;%{old_email}&lt;/b&gt; (este) para &lt;b&gt;%{new_email}&lt;/b&gt;."
+"Olá! Gostaríamos de informar que um administrador de &lt;b&gt;%{instance}"
+"&lt;/b&gt; alterou manualmente o e-mail da sua conta de &lt;b&gt;%{old_email}"
+"&lt;/b&gt; (este) para &lt;b&gt;%{new_email}&lt;/b&gt;."
 
 #: lib/web/templates/email/admin_user_email_changed_new.html.heex:47
 #, elixir-autogen, elixir-format
 msgid "Hi there! We just wanted to inform you that an administrator from <b>%{instance}</b> just manually changed your account email from <b>%{old_email}</b> to <b>%{new_email}</b> (this one)."
 msgstr ""
-"Olá! Gostaríamos de informar que um administrador de "
-"&lt;b&gt;%{instance}&lt;/b&gt; alterou manualmente o e-mail da sua conta de "
-"&lt;b&gt;%{old_email}&lt;/b&gt; para &lt;b&gt;%{new_email}&lt;/b&gt; (este)."
+"Olá! Gostaríamos de informar que um administrador de &lt;b&gt;%{instance}"
+"&lt;/b&gt; alterou manualmente o e-mail da sua conta de &lt;b&gt;%{old_email}"
+"&lt;/b&gt; para &lt;b&gt;%{new_email}&lt;/b&gt; (este)."
 
 #: lib/web/templates/email/admin_user_confirmation.html.heex:47
 #, elixir-autogen, elixir-format
 msgid "Hi there! We just wanted to inform you that an administrator from <b>%{instance}</b> just manually confirmed your account."
 msgstr ""
-"Olá! Gostaríamos de informar que um administrador de "
-"&lt;b&gt;%{instance}&lt;/b&gt; acabou de confirmar manualmente sua conta."
+"Olá! Gostaríamos de informar que um administrador de &lt;b&gt;%{instance}"
+"&lt;/b&gt; acabou de confirmar manualmente sua conta."
 
 #: lib/web/templates/email/admin_user_confirmation.html.heex:96
 #: lib/web/templates/email/admin_user_email_changed_new.html.heex:62
@@ -2254,8 +2253,8 @@ msgstr ""
 msgid "If something doesn't feel right to you, please contact the instance administrator through the contact methods on the instance's about page: %{about_page}."
 msgstr ""
 "Se algo não parecer certo para você, entre em contato com o administrador da "
-"instância por meio dos métodos de contato na página Sobre a instância: "
-"%{about_page}."
+"instância por meio dos métodos de contato na página Sobre a instância: %"
+"{about_page}."
 
 #: lib/web/templates/email/admin_user_confirmation.html.heex:79
 #, elixir-autogen, elixir-format
@@ -2309,8 +2308,8 @@ msgstr ""
 #, elixir-autogen, elixir-format
 msgid "Hi there! We just wanted to inform you that an administrator from <b>%{instance}</b> just changed your account role."
 msgstr ""
-"Olá! Gostaríamos de informar que um administrador de "
-"&lt;b&gt;%{instance}&lt;/b&gt; acabou de alterar a função da sua conta."
+"Olá! Gostaríamos de informar que um administrador de &lt;b&gt;%{instance}"
+"&lt;/b&gt; acabou de alterar a função da sua conta."
 
 #: lib/web/templates/email/instance_follow.text.eex:5
 #, elixir-autogen, elixir-format
