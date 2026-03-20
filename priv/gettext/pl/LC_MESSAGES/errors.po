@@ -9,7 +9,7 @@
 msgid ""
 msgstr ""
 "PO-Revision-Date: 2026-03-11 21:35+0000\n"
-"Last-Translator: Jakub Urbanowicz <tex@przeklad.pl>\n"
+"Last-Translator: Marcin Mikołajczak <me@mkljczk.pl>\n"
 "Language-Team: Polish <https://weblate.framasoft.org/projects/mobilizon/"
 "backend-errors/pl/>\n"
 "Language: pl\n"

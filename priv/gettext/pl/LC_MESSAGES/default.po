@@ -4,7 +4,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-24 14:40+0000\n"
 "PO-Revision-Date: 2026-03-11 21:39+0000\n"
-"Last-Translator: Jakub Urbanowicz <tex@przeklad.pl>\n"
+"Last-Translator: Marcin Mikołajczak <me@mkljczk.pl>\n"
 "Language-Team: Polish <https://weblate.framasoft.org/projects/mobilizon/"
 "backend/pl/>\n"
 "Language: pl\n"
@@ -110,8 +110,8 @@ msgstr ""
 msgid "You created an account on %{host} with this email address. You are one click away from activating it. If this wasn't you, please ignore this email."
 msgstr ""
 "Utworzyłeś(-aś) konto na %{host} używając tego adresu e-mail. Zostało Ci "
-"jedno kliknięcie do aktywacji go. Jeżeli to nie Ty, po prostu zignoruj ten "
-"e-mail."
+"jedno kliknięcie do aktywacji go. Jeżeli to nie Ty, po prostu zignoruj ten e-"
+"mail."
 
 #: lib/web/email/participation.ex:115
 #, elixir-autogen, elixir-format
@@ -433,11 +433,11 @@ msgid "One participation request for event %{title} to process"
 msgid_plural "%{number_participation_requests} participation requests for event %{title} to process"
 msgstr[0] "Jedno zgłoszenie uczestnictwa dla wydarzenia %{title} do zatwierdzenia"
 msgstr[1] ""
-"%{number_participation_requests} zgłoszenia uczestnictwa dla wydarzenia "
-"%{title} do zatwierdzenia"
+"%{number_participation_requests} zgłoszenia uczestnictwa dla wydarzenia %"
+"{title} do zatwierdzenia"
 msgstr[2] ""
-"%{number_participation_requests} zgłoszeń uczestnictwa dla wydarzenia "
-"%{title} do zatwierdzenia"
+"%{number_participation_requests} zgłoszeń uczestnictwa dla wydarzenia %"
+"{title} do zatwierdzenia"
 
 #: lib/web/templates/email/notification_each_week.html.heex:47
 #: lib/web/templates/email/notification_each_week.text.eex:3
@@ -758,8 +758,8 @@ msgstr ""
 msgctxt "terms"
 msgid "Questions or comments about the Service may be directed to us at %{contact}"
 msgstr ""
-"Pytania i opinie dot. naszej platformy mogą być kierowane do nas na "
-"%{contact}"
+"Pytania i opinie dot. naszej platformy mogą być kierowane do nas na %"
+"{contact}"
 
 #: lib/web/templates/api/terms.html.heex:245
 #, elixir-autogen, elixir-format
@@ -804,8 +804,8 @@ msgid "If you discover or suspect any Service security breaches, please let us k
 msgstr ""
 "Jeżeli znajdziesz lub zaczniesz podejrzewać jakieś naruszenia bezpieczeństwa "
 "na naszej platformie, powiadom nas tak szybko, jak to możliwe. Dla luk "
-"bezpieczeństwa w platformie Mobilizon, skontaktuj się bezpośrednio z <a href="
-"\"https://framagit.org/framasoft/mobilizon/\">jej twórcami</a>."
+"bezpieczeństwa w platformie Mobilizon, skontaktuj się bezpośrednio z <a "
+"href=\"https://framagit.org/framasoft/mobilizon/\">jej twórcami</a>."
 
 #: lib/web/templates/api/terms.html.heex:240
 #, elixir-autogen, elixir-format
@@ -821,8 +821,8 @@ msgstr ""
 msgctxt "terms"
 msgid "Originally adapted from the <a href=\"https://joindiaspora.com/terms\">Diaspora*</a> and <a href=\"https://github.com/appdotnet/terms-of-service\">App.net</a> privacy policies, also licensed under <a href=\"https://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA</a>."
 msgstr ""
-"Oryginalnie oparto o teksty polityki prywatności <a href=\"https"
-"://joindiaspora.com/terms\">Diaspory*</a> i <a href=\"https://github.com/"
+"Oryginalnie oparto o teksty polityki prywatności <a href=\"https://"
+"joindiaspora.com/terms\">Diaspory*</a> i <a href=\"https://github.com/"
 "appdotnet/terms-of-service\">App.net</a>, również opublikowane na licencji "
 "<a href=\"https://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA</a>."
 
@@ -831,10 +831,10 @@ msgstr ""
 msgctxt "terms"
 msgid "Originally adapted from the <a href=\"https://mastodon.social/terms\">Mastodon</a> and <a href=\"https://github.com/discourse/discourse\">Discourse</a> privacy policies, also licensed under <a href=\"https://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA</a>."
 msgstr ""
-"Oryginalnie oparto o teksty polityki prywatności <a href=\"https://mastodon."
-"social/terms\">Mastodona</a> i <a href=\"https://joindiaspora.com/terms\""
-">Diaspory*</a>, również opublikowane na licencji <a href=\"https"
-"://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA</a>."
+"Oryginalnie oparto o teksty polityki prywatności <a href=\"https://"
+"mastodon.social/terms\">Mastodona</a> i <a href=\"https://joindiaspora.com/"
+"terms\">Diaspory*</a>, również opublikowane na licencji <a href=\"https://"
+"creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA</a>."
 
 #: lib/web/templates/api/terms.html.heex:3
 #, elixir-autogen, elixir-format
@@ -855,8 +855,8 @@ msgstr ""
 msgctxt "terms"
 msgid "This document is licensed under <a href=\"https://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA</a>. It was last updated June 18, 2020."
 msgstr ""
-"Ten dokument został opublikowany na licencji <a href=\"https"
-"://creativecommons.org/licenses/by-sa/4.0/\">CC-BY-SA</a>. Ostatnio był "
+"Ten dokument został opublikowany na licencji <a href=\"https://"
+"creativecommons.org/licenses/by-sa/4.0/\">CC-BY-SA</a>. Ostatnio był "
 "aktualizowany 18 czerwca 2020."
 
 #: lib/web/templates/api/terms.html.heex:314
@@ -864,8 +864,8 @@ msgstr ""
 msgctxt "terms"
 msgid "This document is licensed under <a href=\"https://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA</a>. It was last updated June 22, 2020."
 msgstr ""
-"Ten dokument został opublikowany na licencji <a href=\"https"
-"://creativecommons.org/licenses/by-sa/4.0/\">CC-BY-SA</a>. Ostatnio był "
+"Ten dokument został opublikowany na licencji <a href=\"https://"
+"creativecommons.org/licenses/by-sa/4.0/\">CC-BY-SA</a>. Ostatnio był "
 "aktualizowany 22 czerwca 2020."
 
 #: lib/web/templates/api/terms.html.heex:21
@@ -903,8 +903,8 @@ msgstr "Potwierdź e-mail"
 #, elixir-autogen, elixir-format
 msgid "Hi there! You just registered to join this event: « %{title} ». Please confirm the e-mail address you provided:"
 msgstr ""
-"Cześć! Właśnie zarejestrowałeś(-aś) się do uczestnictwa w wydarzeniu "
-"„%{title}”. Potwierdź wprowadzony adres e-mail:"
+"Cześć! Właśnie zarejestrowałeś(-aś) się do uczestnictwa w wydarzeniu „%"
+"{title}”. Potwierdź wprowadzony adres e-mail:"
 
 #: lib/web/templates/email/email.html.heex:142
 #: lib/web/templates/email/email.text.eex:8
@@ -1038,8 +1038,8 @@ msgid "If you did not trigger this change yourself, it is likely that someone ha
 msgstr ""
 "Jeżeli to nie Ty dokonałeś(-aś) tej zmiany, prawdopodobnie ktoś uzyskał "
 "dostęp do Twojego konta na %{host}. Zaloguj się i natychmiastowo zmień "
-"hasło. Jeżeli nie możesz się zalogować, skontaktuj się z administratorem "
-"%{host}."
+"hasło. Jeżeli nie możesz się zalogować, skontaktuj się z administratorem %"
+"{host}."
 
 #: lib/web/templates/email/password_reset.text.eex:12
 #, elixir-autogen, elixir-format
@@ -1258,8 +1258,8 @@ msgstr ""
 #, elixir-autogen, elixir-format
 msgid "<b>%{inviter}</b> just invited you to join their group %{link_start}<b>%{group}</b>%{link_end}"
 msgstr ""
-"<b>%{inviter}</b> właśnie zaprosił(a) Cię do dołączenia do swojej grupy "
-"%{link_start}<b>%{group}</b>%{link_end}"
+"<b>%{inviter}</b> właśnie zaprosił(a) Cię do dołączenia do swojej grupy %"
+"{link_start}<b>%{group}</b>%{link_end}"
 
 #: lib/web/templates/email/group_member_removal.html.heex:47
 #, elixir-autogen, elixir-format
