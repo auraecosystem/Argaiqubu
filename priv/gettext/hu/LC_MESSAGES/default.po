@@ -9,7 +9,7 @@
 msgid ""
 msgstr ""
 "PO-Revision-Date: 2026-03-11 21:34+0000\n"
-"Last-Translator: Balázs Meskó <mesko.balazs@fsf.hu>\n"
+"Last-Translator: Balázs Úr <balazs@urbalazs.hu>\n"
 "Language-Team: Hungarian <https://weblate.framasoft.org/projects/mobilizon/"
 "backend/hu/>\n"
 "Language: hu\n"
@@ -289,9 +289,9 @@ msgid "If this server is in the USA: Our site, products and services are all dir
 msgstr ""
 "Ha ez a kiszolgáló az USA területén található: az oldalunk, a termékeink és "
 "a szolgáltatásaink legalább 13 éves személyeket céloznak. Ha 13 évnél "
-"fiatalabb, akkor a COPPA (<a href=\"https://en.wikipedia.org/wiki/Children%"
-"27s_Online_Privacy_Protection_Act\">Children's Online Privacy Protection "
-"Act</a>) követelményeinek megfelelően ne használja ezt az oldalt."
+"fiatalabb, akkor a COPPA (<a href=\"https://en.wikipedia.org/wiki/"
+"Children%27s_Online_Privacy_Protection_Act\">Children's Online Privacy "
+"Protection Act</a>) követelményeinek megfelelően ne használja ezt az oldalt."
 
 #: lib/web/templates/api/privacy.html.heex:160
 #, elixir-autogen, elixir-format
@@ -430,8 +430,8 @@ msgid "One participation request for event %{title} to process"
 msgid_plural "%{number_participation_requests} participation requests for event %{title} to process"
 msgstr[0] "Egy feldolgozandó részvételi kérés a(z) %{title} eseménynél"
 msgstr[1] ""
-"%{number_participation_requests} feldolgozandó részvételi kérés a(z) %{title}"
-" eseménynél"
+"%{number_participation_requests} feldolgozandó részvételi kérés a(z) %"
+"{title} eseménynél"
 
 #: lib/web/templates/email/notification_each_week.html.heex:47
 #: lib/web/templates/email/notification_each_week.text.eex:3
@@ -603,11 +603,11 @@ msgstr ""
 msgctxt "terms"
 msgid "Here are the important things you need to know about accessing and using the <b>%{instance_name}</b> (<a href=\"https://%{instance_url}\">%{instance_url}</a>) website and service (collectively, \"Service\"). These are our terms of service (\"Terms\"). Please read them carefully."
 msgstr ""
-"Itt azok a fontos információk érhetők el, amelyeket tudnia kell a(z) "
-"<b>%{instance_name}</b> (<a href=\"https://%{instance_url}\""
-">%{instance_url}</a>) weboldala és szolgáltatása (együttesen „szolgáltatás”) "
-"hozzáférésével és használatával kapcsolatban. Ezek a mi használati "
-"feltételeink („feltételek”). Olvassa el figyelmesen."
+"Itt azok a fontos információk érhetők el, amelyeket tudnia kell a(z) <b>%"
+"{instance_name}</b> (<a href=\"https://%{instance_url}\">%{instance_url}</"
+"a>) weboldala és szolgáltatása (együttesen „szolgáltatás”) hozzáférésével és "
+"használatával kapcsolatban. Ezek a mi használati feltételeink („feltételek”)"
+". Olvassa el figyelmesen."
 
 #: lib/web/templates/api/terms.html.heex:82
 #, elixir-autogen, elixir-format

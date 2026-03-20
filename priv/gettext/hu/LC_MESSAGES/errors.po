@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-11-06 00:33+0000\n"
-"PO-Revision-Date: 2025-01-13 21:00+0000\n"
-"Last-Translator: Balázs Meskó <mesko.balazs@fsf.hu>\n"
+"PO-Revision-Date: 2026-03-11 21:36+0000\n"
+"Last-Translator: Balázs Úr <balazs@urbalazs.hu>\n"
 "Language-Team: Hungarian <https://weblate.framasoft.org/projects/mobilizon/"
 "backend-errors/hu/>\n"
 "Language: hu\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.9.2\n"
+"X-Generator: Weblate 5.16.2\n"
 
 ## This file is a PO Template file.
 ##
@@ -949,8 +949,8 @@ msgstr ""
 #, elixir-autogen, elixir-format
 msgid "Your e-mail has been denied registration or uses a disallowed e-mail provider"
 msgstr ""
-"Az e-mail-címe meg lett tagadva a regisztrációhoz vagy nem engedélyezett e"
-"-mail-szolgáltatót használ"
+"Az e-mail-címe meg lett tagadva a regisztrációhoz vagy nem engedélyezett e-"
+"mail-szolgáltatót használ"
 
 #: lib/graphql/resolvers/comment.ex:156
 #, elixir-autogen, elixir-format
