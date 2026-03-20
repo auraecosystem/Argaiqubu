@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-01-21 17:15+0000\n"
-"PO-Revision-Date: 2025-03-14 03:48+0000\n"
+"PO-Revision-Date: 2026-03-11 21:37+0000\n"
 "Last-Translator: Vaclovas Intas <Gateway_31@protonmail.com>\n"
 "Language-Team: Lithuanian <https://weblate.framasoft.org/projects/mobilizon/"
 "activity/lt/>\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n % 10 == 1 && (n % 100 < 11 || n % 100 > "
 "19)) ? 0 : ((n % 10 >= 2 && n % 10 <= 9 && (n % 100 < 11 || n % 100 > 19)) ? "
 "1 : 2);\n"
-"X-Generator: Weblate 5.10.2\n"
+"X-Generator: Weblate 5.16.2\n"
 
 ## This file is a PO Template file.
 ##
@@ -422,15 +422,15 @@ msgstr "%{profile} atmetė narystės prašymą iš %{member} dėl grupės %{grou
 #, elixir-autogen, elixir-format
 msgid "%{profile} renamed the folder from %{old_resource_title} to %{resource} in group %{group}."
 msgstr ""
-"%{profile} pervadino aplanką iš %{old_resource_title} į %{resource} grupėje "
-"%{group}."
+"%{profile} pervadino aplanką iš %{old_resource_title} į %{resource} grupėje %"
+"{group}."
 
 #: lib/service/activity/renderer/resource.ex:50
 #, elixir-autogen, elixir-format
 msgid "%{profile} renamed the resource from %{old_resource_title} to %{resource} in group %{group}."
 msgstr ""
-"%{profile} pervadino išteklį iš %{old_resource_title} į %{resource} grupėje "
-"%{group}."
+"%{profile} pervadino išteklį iš %{old_resource_title} į %{resource} grupėje %"
+"{group}."
 
 #: lib/service/activity/renderer/member.ex:70
 #, elixir-autogen, elixir-format
