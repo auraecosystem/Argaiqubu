@@ -8,15 +8,15 @@
 ## to merge POT files into PO files.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-04-16 17:29+0000\n"
-"Last-Translator: GSalinas <gsalinastellez@gmail.com>\n"
+"PO-Revision-Date: 2026-03-11 21:41+0000\n"
+"Last-Translator: Deleted User <noreply+108@weblate.org>\n"
 "Language-Team: Spanish <https://weblate.framasoft.org/projects/mobilizon/"
 "activity/es/>\n"
 "Language: es\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Weblate 5.4.3\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.16.2\n"
 
 #: lib/web/templates/email/activity/_member_activity_item.html.heex:14
 #: lib/web/templates/email/activity/_member_activity_item.text.eex:12
@@ -130,15 +130,13 @@ msgstr "%{profile} renombró la discusión %{discussion}."
 #: lib/web/templates/email/activity/_resource_activity_item.text.eex:14
 #, elixir-autogen, elixir-format
 msgid "%{profile} renamed the folder from %{old_resource_title} to %{resource}."
-msgstr ""
-"%{profile} renombró la carpeta de %{old_resource_title} a %{resource}."
+msgstr "%{profile} renombró la carpeta de %{old_resource_title} a %{resource}."
 
 #: lib/web/templates/email/activity/_resource_activity_item.html.heex:39
 #: lib/web/templates/email/activity/_resource_activity_item.text.eex:21
 #, elixir-autogen, elixir-format
 msgid "%{profile} renamed the resource from %{old_resource_title} to %{resource}."
-msgstr ""
-"%{profile} renombró el recurso de %{old_resource_title} a %{resource}."
+msgstr "%{profile} renombró el recurso de %{old_resource_title} a %{resource}."
 
 #: lib/web/templates/email/activity/_discussion_activity_item.html.heex:11
 #: lib/web/templates/email/activity/_discussion_activity_item.text.eex:7
@@ -221,8 +219,8 @@ msgstr "%{profile} respondió a un comentario sobre el evento %{event}."
 #, elixir-autogen, elixir-format
 msgid "Don't want to receive activity notifications? You may change frequency or disable them in your settings."
 msgstr ""
-"¿No quieres recibir notificaciones de actividad? Puedes cambiar la frecuencia "
-"o deshabilitarlos en tu configuración."
+"¿No quieres recibir notificaciones de actividad? Puedes cambiar la "
+"frecuencia o deshabilitarlos en tu configuración."
 
 #: lib/web/templates/email/email_direct_activity.html.heex:230
 #: lib/web/templates/email/email_direct_activity.text.eex:23
@@ -323,17 +321,20 @@ msgstr "El grupo %{group} fue actualizado por %{profile}."
 #: lib/service/activity/renderer/post.ex:46
 #, elixir-autogen, elixir-format
 msgid "The post %{post} from group %{group} was deleted by %{profile}."
-msgstr "La publicación %{post} del grupo %{group} fue actualizada por %{profile}."
+msgstr ""
+"La publicación %{post} del grupo %{group} fue actualizada por %{profile}."
 
 #: lib/service/activity/renderer/post.ex:30
 #, elixir-autogen, elixir-format
 msgid "The post %{post} from group %{group} was published by %{profile}."
-msgstr "La publicación %{post} del grupo %{group} fue actualizada por %{profile}."
+msgstr ""
+"La publicación %{post} del grupo %{group} fue actualizada por %{profile}."
 
 #: lib/service/activity/renderer/post.ex:38
 #, elixir-autogen, elixir-format
 msgid "The post %{post} from group %{group} was updated by %{profile}."
-msgstr "La publicación %{post} del grupo %{group} fue actualizada por %{profile}."
+msgstr ""
+"La publicación %{post} del grupo %{group} fue actualizada por %{profile}."
 
 #: lib/service/activity/renderer/member.ex:38
 #, elixir-autogen, elixir-format
@@ -450,7 +451,8 @@ msgstr "%{profile} eliminó la discusión %{discussion} del grupo %{group}."
 #: lib/service/activity/renderer/discussion.ex:55
 #, elixir-autogen, elixir-format
 msgid "%{profile} mentionned you in the discussion %{discussion} in group %{group}."
-msgstr "%{profile} te mencionó en la discusión %{discussion} en el grupo %{group}."
+msgstr ""
+"%{profile} te mencionó en la discusión %{discussion} en el grupo %{group}."
 
 #: lib/service/activity/renderer/discussion.ex:70
 #, elixir-autogen, elixir-format
