@@ -4,7 +4,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-24 14:40+0000\n"
 "PO-Revision-Date: 2026-03-11 21:38+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Last-Translator: Quentin PAGÈS <quentinantonin@free.fr>\n"
 "Language-Team: Occitan <https://weblate.framasoft.org/projects/mobilizon/"
 "backend/oc/>\n"
 "Language: oc\n"
@@ -18,7 +18,9 @@ msgstr ""
 #, elixir-autogen, elixir-format
 msgid "If you didn't request this, please ignore this email. Your password won't change until you access the link below and create a new one."
 msgstr ""
-"S’avètz pas demandat aquò, podètz ignorar aqueste corrièl. Vòstre senhal cambiarà pas mentre que cliquetz pas lo ligam çai-jos e ne definiscatz un novèl."
+"S’avètz pas demandat aquò, podètz ignorar aqueste corrièl. Vòstre senhal "
+"cambiarà pas mentre que cliquetz pas lo ligam çai-jos e ne definiscatz un "
+"novèl."
 
 #: lib/web/templates/email/report.html.heex:121
 #, elixir-autogen, elixir-format
@@ -59,7 +61,9 @@ msgstr "Reïnicializar mon senhal"
 #: lib/web/templates/email/password_reset.html.heex:53
 #, elixir-autogen, elixir-format
 msgid "Resetting your password is easy. Just press the button below and follow the instructions. We'll have you up and running in no time."
-msgstr "Reïnicializar vòstre senhal es facil. Clicatz simplament lo boton e seguètz las consignas. Seretz prèst d’aquí un momenton."
+msgstr ""
+"Reïnicializar vòstre senhal es facil. Clicatz simplament lo boton e seguètz "
+"las consignas. Seretz prèst d’aquí un momenton."
 
 #: lib/web/email/user.ex:26
 #, elixir-autogen, elixir-format
@@ -270,9 +274,9 @@ msgid "If this server is in the EU or the EEA: Our site, products and services a
 msgstr ""
 "S’aqueste servidor es en EU o la EEA : nòstre site, nòstres produches e "
 "servicis son totas a destinacion de monde de mai de 16 ans. S’avètz mens de "
-"16 ans, per cumplir lo RGPD (<a href=\"https://ca.wikipedia.org/wiki/_%C3%"
-"B3_\">Reglament General de Proteccion de Donadas</a>) utilizetz pas aqueste "
-"site."
+"16 ans, per cumplir lo RGPD (<a href=\"https://ca.wikipedia.org/wiki/"
+"_%C3%B3_\">Reglament General de Proteccion de Donadas</a>) utilizetz pas "
+"aqueste site."
 
 #: lib/web/templates/api/privacy.html.heex:146
 #, elixir-autogen, elixir-format
@@ -280,10 +284,10 @@ msgctxt "terms"
 msgid "If this server is in the USA: Our site, products and services are all directed to people who are at least 13 years old. If you are under the age of 13, per the requirements of COPPA (<a href=\"https://en.wikipedia.org/wiki/Children%27s_Online_Privacy_Protection_Act\">Children's Online Privacy Protection Act</a>) do not use this site."
 msgstr ""
 "S’aqueste servidor se tròba en los Estats Units : nòstre site, nòstres "
-"produches e servicis son totas a destinacion de monde de mai de 13 ans. S’"
-"avètz mens de 13 ans, per acontentar las exigéncias del COPPA (<a href="
-"\"https://en.wikipedia.org/wiki/Children%27__Act\">Children's Online Privacy "
-"Protection Act</a>) utilizetz pas aqueste site."
+"produches e servicis son totas a destinacion de monde de mai de 13 ans. "
+"S’avètz mens de 13 ans, per acontentar las exigéncias del COPPA (<a "
+"href=\"https://en.wikipedia.org/wiki/Children%27__Act\">Children's Online "
+"Privacy Protection Act</a>) utilizetz pas aqueste site."
 
 #: lib/web/templates/api/privacy.html.heex:160
 #, elixir-autogen, elixir-format
@@ -422,8 +426,8 @@ msgid "One participation request for event %{title} to process"
 msgid_plural "%{number_participation_requests} participation requests for event %{title} to process"
 msgstr[0] "Una demanda de participacion a l’eveniment %{title} a tractar"
 msgstr[1] ""
-"%{number_participation_requests} demandas de participacion a l’eveniment "
-"%{title} a tractar"
+"%{number_participation_requests} demandas de participacion a l’eveniment %"
+"{title} a tractar"
 
 #: lib/web/templates/email/notification_each_week.html.heex:47
 #: lib/web/templates/email/notification_each_week.text.eex:3
@@ -481,11 +485,11 @@ msgstr "Modificacion d'aquestas condictions d'utilizacion"
 msgctxt "terms"
 msgid "A lot of the content on the Service is from you and others, and we don't review, verify or authenticate it, and it may include inaccuracies or false information. We make no representations, warranties, or guarantees relating to the quality, suitability, truth, accuracy or completeness of any content contained in the Service. You acknowledge sole responsibility for and assume all risk arising from your use of or reliance on any content."
 msgstr ""
-"Fòrça part del contengut del Servici ven de vosautres e dels autres, e l’"
-"examinam pas, lo verificam pas, nimai l’autentificam pas, e pòt conténer "
+"Fòrça part del contengut del Servici ven de vosautres e dels autres, e "
+"l’examinam pas, lo verificam pas, nimai l’autentificam pas, e pòt conténer "
 "inexactitud o informacions falsas. Fasèm pas cap de declaracion, garantida o "
-"assegurança respècte a la qualitat, la pertinéncia, la veracitat, l’"
-"exactitud o del caractèr exaustiu del contengut del Servici. Reconeissètz "
+"assegurança respècte a la qualitat, la pertinéncia, la veracitat, "
+"l’exactitud o del caractèr exaustiu del contengut del Servici. Reconeissètz "
 "èsser lo sol responsable e assumissètz quin risc que siá que resulta de "
 "vòstra utilizacion o de vòstra fisança dins lo contengut."
 
@@ -718,20 +722,20 @@ msgstr ""
 msgctxt "terms"
 msgid "Originally adapted from the <a href=\"https://joindiaspora.com/terms\">Diaspora*</a> and <a href=\"https://github.com/appdotnet/terms-of-service\">App.net</a> privacy policies, also licensed under <a href=\"https://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA</a>."
 msgstr ""
-"Adaptada a l'origina de las politicas de confidencialitat de <a href=\"https"
-"://joindiaspora.com/terms\">Diaspora*</a> e <a href=\"https://github.com/"
-"appdotnet/terms-of-service\">App.net</a>, e jos licéncia <a href=\"https"
-"://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA</a>."
+"Adaptada a l'origina de las politicas de confidencialitat de <a "
+"href=\"https://joindiaspora.com/terms\">Diaspora*</a> e <a href=\"https://"
+"github.com/appdotnet/terms-of-service\">App.net</a>, e jos licéncia <a "
+"href=\"https://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA</a>."
 
 #: lib/web/templates/api/privacy.html.heex:173
 #, elixir-autogen, elixir-format
 msgctxt "terms"
 msgid "Originally adapted from the <a href=\"https://mastodon.social/terms\">Mastodon</a> and <a href=\"https://github.com/discourse/discourse\">Discourse</a> privacy policies, also licensed under <a href=\"https://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA</a>."
 msgstr ""
-"Adaptada a l'origina de las politica de confidencialitat de <a href=\"https"
-"://mastodon.social/terms\">Mastodon</a> et <a href=\"https://github.com/"
-"discourse/discourse\">Discourse</a>, tanben jos licéncia <a href=\"https"
-"://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA</a>."
+"Adaptada a l'origina de las politica de confidencialitat de <a "
+"href=\"https://mastodon.social/terms\">Mastodon</a> et <a href=\"https://"
+"github.com/discourse/discourse\">Discourse</a>, tanben jos licéncia <a "
+"href=\"https://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA</a>."
 
 #: lib/web/templates/api/terms.html.heex:3
 #, elixir-autogen, elixir-format
