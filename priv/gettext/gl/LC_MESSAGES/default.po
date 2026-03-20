@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-18 04:49+0000\n"
-"PO-Revision-Date: 2026-03-18 21:35+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"PO-Revision-Date: 2026-03-19 15:12+0000\n"
+"Last-Translator: \"josé m.\" <correoxm@disroot.org>\n"
 "Language-Team: Galician <https://weblate.framasoft.org/projects/mobilizon/"
 "backend/gl/>\n"
 "Language: gl\n"
@@ -2102,7 +2102,7 @@ msgstr "Ver os detalles"
 #: lib/mobilizon/events/categories.ex:32
 #, elixir-autogen, elixir-format
 msgid "Arts"
-msgstr "Arte"
+msgstr "Artes"
 
 #: lib/mobilizon/events/categories.ex:68
 #, elixir-autogen, elixir-format
@@ -2117,7 +2117,7 @@ msgstr "Clubes de libros"
 #: lib/mobilizon/events/categories.ex:40
 #, elixir-autogen, elixir-format
 msgid "Business"
-msgstr "Empresas"
+msgstr "Negocios"
 
 #: lib/mobilizon/events/categories.ex:44
 #, elixir-autogen, elixir-format
@@ -2142,22 +2142,22 @@ msgstr "Artesanía"
 #: lib/mobilizon/events/categories.ex:76
 #, elixir-autogen, elixir-format
 msgid "Family & Education"
-msgstr "Familia e Educación"
+msgstr "Familia e educación"
 
 #: lib/mobilizon/events/categories.ex:80
 #, elixir-autogen, elixir-format
 msgid "Fashion & Beauty"
-msgstr "Moda e Beleza"
+msgstr "Moda e beleza"
 
 #: lib/mobilizon/events/categories.ex:84
 #, elixir-autogen, elixir-format
 msgid "Film & Media"
-msgstr "Películas e Multimedia"
+msgstr "Filmes e multimedia"
 
 #: lib/mobilizon/events/categories.ex:56
 #, elixir-autogen, elixir-format
 msgid "Food & Drink"
-msgstr "Comida e Bebida"
+msgstr "Comida e bebida"
 
 #: lib/mobilizon/events/categories.ex:88
 #, elixir-autogen, elixir-format
@@ -2177,7 +2177,7 @@ msgstr "LGBTQ"
 #: lib/mobilizon/events/categories.ex:92
 #, elixir-autogen, elixir-format
 msgid "Language & Culture"
-msgstr "Idiomas e Cultura"
+msgstr "Idiomas e cultura"
 
 #: lib/mobilizon/events/categories.ex:96
 #, elixir-autogen, elixir-format
@@ -2192,7 +2192,7 @@ msgstr "Citas"
 #: lib/mobilizon/events/categories.ex:104
 #, elixir-autogen, elixir-format
 msgid "Movements and politics"
-msgstr "Política e Activismo"
+msgstr "Política e activismo"
 
 #: lib/mobilizon/events/categories.ex:64
 #, elixir-autogen, elixir-format
@@ -2207,7 +2207,7 @@ msgstr "Redes"
 #: lib/mobilizon/events/categories.ex:128
 #, elixir-autogen, elixir-format
 msgid "Outdoors & Adventure"
-msgstr "Aventura e Natureza"
+msgstr "Aventura e natureza"
 
 #: lib/mobilizon/events/categories.ex:112
 #, elixir-autogen, elixir-format
@@ -2217,7 +2217,7 @@ msgstr "Foliada"
 #: lib/mobilizon/events/categories.ex:116
 #, elixir-autogen, elixir-format
 msgid "Performing & Visual Arts"
-msgstr "Actuacións e Artes Visuais"
+msgstr "Artes escénicas e visuais"
 
 #: lib/mobilizon/events/categories.ex:120
 #, elixir-autogen, elixir-format
@@ -2232,12 +2232,12 @@ msgstr "Fotografía"
 #: lib/mobilizon/events/categories.ex:136
 #, elixir-autogen, elixir-format
 msgid "Science & Tech"
-msgstr "Ciencia e Tecnoloxía"
+msgstr "Ciencia e tecnoloxía"
 
 #: lib/mobilizon/events/categories.ex:132
 #, elixir-autogen, elixir-format
 msgid "Spirituality, Religion & Beliefs"
-msgstr "Espirtualidade, Relixión e Crenzas"
+msgstr "Espiritualidade, relixión e crenzas"
 
 #: lib/mobilizon/events/categories.ex:140
 #, elixir-autogen, elixir-format
