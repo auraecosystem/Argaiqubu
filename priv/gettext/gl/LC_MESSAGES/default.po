@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-18 04:49+0000\n"
-"PO-Revision-Date: 2024-04-12 04:38+0000\n"
+"PO-Revision-Date: 2026-03-11 21:36+0000\n"
 "Last-Translator: \"josé m.\" <correoxm@disroot.org>\n"
 "Language-Team: Galician <https://weblate.framasoft.org/projects/mobilizon/"
 "backend/gl/>\n"
@@ -11,8 +11,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Weblate 5.4.3\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.16.2\n"
 
 #: lib/web/templates/email/password_reset.html.heex:66
 #, elixir-autogen, elixir-format
@@ -273,8 +273,8 @@ msgstr ""
 "Se este servidor está na UE ou nos EEUU: a nosa web, produtos e servizos "
 "están dirixidos a persoas cos 16 anos cumpridos. Se tes menos de 16 anos, "
 "por requerimento da GDPR (<a href=\"https://en.wikipedia.org/wiki/"
-"General_Data_Protection_Regulation\">Regulación Xeral de Protección de "
-"Datos)</a>) non uses esta web."
+"General_Data_Protection_Regulation\">Regulación Xeral de Protección de Datos)"
+"</a>) non uses esta web."
 
 #: lib/web/templates/api/privacy.html.heex:146
 #, elixir-autogen, elixir-format
@@ -424,11 +424,10 @@ msgstr[1] "%{nb_events} eventos previstos nesta semana"
 #, elixir-format, elixir-autogen
 msgid "One participation request for event %{title} to process"
 msgid_plural "%{number_participation_requests} participation requests for event %{title} to process"
-msgstr[0] ""
-"Hai unha solicitude de participación para o evento %{title} que atender"
+msgstr[0] "Hai unha solicitude de participación para o evento %{title} que atender"
 msgstr[1] ""
-"Hai %{number_participation_requests} solicitudes de participación no evento "
-"%{title} que atender"
+"Hai %{number_participation_requests} solicitudes de participación no evento %"
+"{title} que atender"
 
 #: lib/web/templates/email/notification_each_week.html.heex:47
 #: lib/web/templates/email/notification_each_week.text.eex:3
@@ -649,10 +648,9 @@ msgctxt "terms"
 msgid "Here are the important things you need to know about accessing and using the <b>%{instance_name}</b> (<a href=\"https://%{instance_url}\">%{instance_url}</a>) website and service (collectively, \"Service\"). These are our terms of service (\"Terms\"). Please read them carefully."
 msgstr ""
 "Aquí está a información importante que precisas coñecer sobre o acceso e uso "
-"da web <b>%{instance_name}</b> (<a href=\"https://"
-"%{instance_url}\">%{instance_url}</a>) e o servizo (colectivamente, o "
-"\"Servizo\"). Estos son os nosos termos do servizo (\"Termos\"). Le con "
-"atención."
+"da web <b>%{instance_name}</b> (<a href=\"https://%{instance_url}\">%"
+"{instance_url}</a>) e o servizo (colectivamente, o \"Servizo\"). Estos son "
+"os nosos termos do servizo (\"Termos\"). Le con atención."
 
 #: lib/web/templates/api/terms.html.heex:82
 #, elixir-autogen, elixir-format
@@ -715,8 +713,7 @@ msgstr ""
 #, elixir-autogen, elixir-format
 msgctxt "terms"
 msgid "Viruses, corrupted data or other harmful, disruptive or destructive files or code."
-msgstr ""
-"Viruses, datos corruptos e ficheiros ou código malicioso ou destrutivo."
+msgstr "Viruses, datos corruptos e ficheiros ou código malicioso ou destrutivo."
 
 #: lib/web/templates/api/terms.html.heex:146
 #, elixir-autogen, elixir-format
@@ -734,8 +731,8 @@ msgstr ""
 msgctxt "terms"
 msgid "Questions or comments about the Service may be directed to us at %{contact}"
 msgstr ""
-"Preguntas e comentarios sobre o Servizo poderían sernos enviados hacia "
-"%{contact}"
+"Preguntas e comentarios sobre o Servizo poderían sernos enviados hacia %"
+"{contact}"
 
 #: lib/web/templates/api/terms.html.heex:245
 #, elixir-autogen, elixir-format
@@ -806,9 +803,9 @@ msgctxt "terms"
 msgid "Originally adapted from the <a href=\"https://mastodon.social/terms\">Mastodon</a> and <a href=\"https://github.com/discourse/discourse\">Discourse</a> privacy policies, also licensed under <a href=\"https://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA</a>."
 msgstr ""
 "Adaptadas das políticas de privacidade de <a href=\"https://mastodon.social/"
-"terms\">Mastodon</a> e <a href=\"https://github.com/discourse/"
-"discourse\">Discourse</a>, tamén con licenza <a href=\"https://"
-"creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA</a>."
+"terms\">Mastodon</a> e <a href=\"https://github.com/discourse/discourse\">"
+"Discourse</a>, tamén con licenza <a href=\"https://creativecommons.org/"
+"licenses/by-sa/4.0/\">CC BY-SA</a>."
 
 #: lib/web/templates/api/terms.html.heex:3
 #, elixir-autogen, elixir-format
@@ -1252,8 +1249,8 @@ msgstr "O grupo %{group} foi suspendido en %{instance}!"
 #, elixir-autogen, elixir-format
 msgid "Your instance's moderation team has decided to suspend %{group_name} (%{group_address}). You are no longer a member of this group."
 msgstr ""
-"Os moderadores da túa instancia decidiron suspender %{group_name} "
-"(%{group_address}). Xa non pertences a este grupo."
+"Os moderadores da túa instancia decidiron suspender %{group_name} (%"
+"{group_address}). Xa non pertences a este grupo."
 
 #: lib/web/email/group.ex:106
 #, elixir-autogen, elixir-format
@@ -1360,15 +1357,15 @@ msgid "We collect information from you when you register on this instance and ga
 msgstr ""
 "Recollemos información sobre ti cando creas unha conta nesta instancia e "
 "tamén cando participas na plataforma ao ler, escribir ou interactuar cos "
-"contidos aquí compartidos. Se creas unha conta na instancia, pedirémosche "
-"<b>un enderezo de correo, un contrasinal</b> (ofuscado) e polo menos un "
-"<b>nome de usuaria</b>. O correo será verficado cun correo que contén unha "
-"ligazón única. Unha vez activado saberemos que controlas ese enderezo de "
-"correo. Podes engadir información adicional ao perfil como <b>un nome "
-"público e biografía, e subir unha foto de perfil e unha imaxe de cabeceira</"
-"b>. O nome de usuaria, nome público, biografía, imaxe de perfil e cabeceira "
-"<b>sempre se mostran de xeito público</b>. Porén, <b>sempre podes visitar a "
-"instancia sen precisar crear unha conta</b>."
+"contidos aquí compartidos. Se creas unha conta na instancia, pedirémosche <b>"
+"un enderezo de correo, un contrasinal</b> (ofuscado) e polo menos un <b>nome "
+"de usuaria</b>. O correo será verficado cun correo que contén unha ligazón "
+"única. Unha vez activado saberemos que controlas ese enderezo de correo. "
+"Podes engadir información adicional ao perfil como <b>un nome público e "
+"biografía, e subir unha foto de perfil e unha imaxe de cabeceira</b>. O nome "
+"de usuaria, nome público, biografía, imaxe de perfil e cabeceira <b>sempre "
+"se mostran de xeito público</b>. Porén, <b>sempre podes visitar a instancia "
+"sen precisar crear unha conta</b>."
 
 #: lib/web/templates/api/terms.html.heex:76
 #, elixir-autogen, elixir-format
@@ -1579,8 +1576,8 @@ msgstr "Fonte para %{email} en %{instance}"
 #, elixir-autogen, elixir-format
 msgid "If the issue persists, you may contact the server administrator at %{contact}."
 msgstr ""
-"Se o problema persiste, contacta coa administración do servidor en "
-"%{contact}."
+"Se o problema persiste, contacta coa administración do servidor en %{contact}"
+"."
 
 #: lib/web/templates/error/500_page.html.heex:59
 #, elixir-autogen, elixir-format
@@ -1620,8 +1617,8 @@ msgstr ""
 #, elixir-autogen, elixir-format
 msgid "Your instance's moderation team has decided to suspend <b>%{group_name}</b> (%{group_address}). You are no longer a member of this group."
 msgstr ""
-"A moderación da túa instancia decidiu suspender <b>%{group_name}</b> "
-"(%{group_address}). Xa non formas parte deste grupo."
+"A moderación da túa instancia decidiu suspender <b>%{group_name}</b> (%"
+"{group_address}). Xa non formas parte deste grupo."
 
 #: lib/web/templates/email/actor_suspension_participants.html.heex:18
 #: lib/web/templates/email/actor_suspension_participants.text.eex:1
@@ -1886,8 +1883,8 @@ msgstr "A túa solicitude para formar parte do grupo %{group} foi rexeitada."
 #, elixir-autogen, elixir-format
 msgid "Your membership request for group %{link_start}<b>%{group}</b>%{link_end} has been rejected."
 msgstr ""
-"A túa solicitude para formar parte do grupo %{link_start}<b>%{group}</"
-"b>%{link_end} foi rexeitada."
+"A túa solicitude para formar parte do grupo %{link_start}<b>%{group}</b>%"
+"{link_end} foi rexeitada."
 
 #: lib/web/templates/email/group_membership_approval.text.eex:3
 #, elixir-autogen, elixir-format
@@ -1898,8 +1895,8 @@ msgstr "Aprobouse a túa solicitude para formar parte do grupo %{group}."
 #, elixir-autogen, elixir-format
 msgid "Your membership request for group %{link_start}<b>%{group}</b>%{link_end} has been approved."
 msgstr ""
-"A túa solicitude para formar parte do grupo %{link_start}<b>%{group}</"
-"b>%{link_end} foi aprobada."
+"A túa solicitude para formar parte do grupo %{link_start}<b>%{group}</b>%"
+"{link_end} foi aprobada."
 
 #: lib/web/templates/email/pending_participation_notification.html.heex:47
 #: lib/web/templates/email/pending_participation_notification.text.eex:4
@@ -2016,8 +2013,8 @@ msgstr ""
 msgid "If something doesn't feel right to you, please contact the instance administrator through the contact methods on the instance's about page: %{about_page}."
 msgstr ""
 "Se algo non che parece correcto, contacta coa administración da instancia "
-"usando os métodos de contacto da páxina acerca de da instancia: "
-"%{about_page}."
+"usando os métodos de contacto da páxina acerca de da instancia: %{about_page}"
+"."
 
 #: lib/web/templates/email/admin_user_confirmation.html.heex:79
 #, elixir-autogen, elixir-format

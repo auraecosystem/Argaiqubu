@@ -8,7 +8,7 @@
 ## to merge POT files into PO files.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-12-07 09:54+0000\n"
+"PO-Revision-Date: 2026-03-11 21:38+0000\n"
 "Last-Translator: \"josé m.\" <correoxm@disroot.org>\n"
 "Language-Team: Galician <https://weblate.framasoft.org/projects/mobilizon/"
 "activity/gl/>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.2.1\n"
+"X-Generator: Weblate 5.16.2\n"
 
 #: lib/web/templates/email/activity/_member_activity_item.html.heex:14
 #: lib/web/templates/email/activity/_member_activity_item.text.eex:12
@@ -131,16 +131,16 @@ msgstr "%{profile} cambiou o nome da conversa %{discussion}."
 #, elixir-autogen, elixir-format
 msgid "%{profile} renamed the folder from %{old_resource_title} to %{resource}."
 msgstr ""
-"%{profile} cambioulle o nome ao cartafol de %{old_resource_title} a "
-"%{resource}."
+"%{profile} cambioulle o nome ao cartafol de %{old_resource_title} a %"
+"{resource}."
 
 #: lib/web/templates/email/activity/_resource_activity_item.html.heex:39
 #: lib/web/templates/email/activity/_resource_activity_item.text.eex:21
 #, elixir-autogen, elixir-format
 msgid "%{profile} renamed the resource from %{old_resource_title} to %{resource}."
 msgstr ""
-"%{profile} cambioulle o nome ao recurso de %{old_resource_title} a "
-"%{resource}."
+"%{profile} cambioulle o nome ao recurso de %{old_resource_title} a %"
+"{resource}."
 
 #: lib/web/templates/email/activity/_discussion_activity_item.html.heex:11
 #: lib/web/templates/email/activity/_discussion_activity_item.text.eex:7
@@ -418,8 +418,8 @@ msgstr ""
 #, elixir-autogen, elixir-format
 msgid "%{profile} renamed the folder from %{old_resource_title} to %{resource} in group %{group}."
 msgstr ""
-"%{profile} cambioulle o nome ao cartafol de %{old_resource_title} a "
-"%{resource} no grupo %{group}."
+"%{profile} cambioulle o nome ao cartafol de %{old_resource_title} a %"
+"{resource} no grupo %{group}."
 
 #: lib/service/activity/renderer/resource.ex:50
 #, elixir-autogen, elixir-format
