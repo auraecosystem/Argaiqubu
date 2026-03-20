@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-02-15 01:23+0000\n"
-"PO-Revision-Date: 2026-03-11 21:34+0000\n"
-"Last-Translator: Renne Rocha <renne@rocha.dev.br>\n"
+"PO-Revision-Date: 2026-03-20 19:30+0000\n"
+"Last-Translator: Marcos Xavier Gil Júnior <marcosxaviergiljr@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://weblate.framasoft.org/projects/"
 "mobilizon/backend/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -429,8 +429,10 @@ msgstr[1] "%{nb_events} eventos planejados esta semana"
 #, elixir-format, elixir-autogen
 msgid "One participation request for event %{title} to process"
 msgid_plural "%{number_participation_requests} participation requests for event %{title} to process"
-msgstr[0] ""
+msgstr[0] "Uma solicitação de participação no evento %{title} para processar"
 msgstr[1] ""
+"%{number_participation_requests} solicitações de participação no evento %"
+"{title} para processar"
 
 #: lib/web/templates/email/notification_each_week.html.heex:47
 #: lib/web/templates/email/notification_each_week.text.eex:3
@@ -690,7 +692,7 @@ msgstr ""
 #, elixir-autogen, elixir-format
 msgctxt "terms"
 msgid "Your Content & Conduct"
-msgstr ""
+msgstr "Seu conteúdo e conduta"
 
 #: lib/web/templates/api/terms.html.heex:263
 #, elixir-autogen, elixir-format
@@ -2147,7 +2149,11 @@ msgstr ""
 msgid "You have one pending attendance request to process for the following event:"
 msgid_plural "You have %{number_participation_requests} attendance requests to process for the following event:"
 msgstr[0] ""
+"Você tem uma solicitação de participação pendente para processar no seguinte "
+"evento:"
 msgstr[1] ""
+"Você tem %{number_participation_requests} solicitações de participação para "
+"processar no seguinte evento:"
 
 #: lib/web/templates/email/admin_user_role_changed.html.heex:18
 #: lib/web/templates/email/admin_user_role_changed.text.eex:1
@@ -2371,9 +2377,9 @@ msgid "Comedy"
 msgstr "Comédia"
 
 #: lib/mobilizon/events/categories.ex:72
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "Community"
-msgstr "Comentários"
+msgstr "Comunidade"
 
 #: lib/mobilizon/events/categories.ex:52
 #, elixir-autogen, elixir-format
@@ -2383,27 +2389,27 @@ msgstr "Artesanato"
 #: lib/mobilizon/events/categories.ex:76
 #, elixir-autogen, elixir-format
 msgid "Family & Education"
-msgstr ""
+msgstr "Família e Educação"
 
 #: lib/mobilizon/events/categories.ex:80
 #, elixir-autogen, elixir-format
 msgid "Fashion & Beauty"
-msgstr ""
+msgstr "Moda e Beleza"
 
 #: lib/mobilizon/events/categories.ex:84
 #, elixir-autogen, elixir-format
 msgid "Film & Media"
-msgstr ""
+msgstr "Filme e Mídia"
 
 #: lib/mobilizon/events/categories.ex:56
 #, elixir-autogen, elixir-format
 msgid "Food & Drink"
-msgstr ""
+msgstr "Comida e Bebida"
 
 #: lib/mobilizon/events/categories.ex:88
 #, elixir-autogen, elixir-format
 msgid "Games"
-msgstr "Jogos"
+msgstr "Games"
 
 #: lib/mobilizon/events/categories.ex:60
 #, elixir-autogen, elixir-format
@@ -2413,17 +2419,17 @@ msgstr "Saúde"
 #: lib/mobilizon/events/categories.ex:100
 #, elixir-autogen, elixir-format
 msgid "LGBTQ"
-msgstr "LGBTQ"
+msgstr "LGBTQIAPN+"
 
 #: lib/mobilizon/events/categories.ex:92
 #, elixir-autogen, elixir-format
 msgid "Language & Culture"
-msgstr ""
+msgstr "Idioma e Cultura"
 
 #: lib/mobilizon/events/categories.ex:96
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "Learning"
-msgstr "Atenção"
+msgstr "Ensino e Aprendizado"
 
 #: lib/mobilizon/events/categories.ex:149
 #, elixir-autogen, elixir-format
@@ -2433,7 +2439,7 @@ msgstr "Reunião"
 #: lib/mobilizon/events/categories.ex:104
 #, elixir-autogen, elixir-format
 msgid "Movements and politics"
-msgstr "Movimentos e política"
+msgstr "Movimentos e políticas"
 
 #: lib/mobilizon/events/categories.ex:64
 #, elixir-autogen, elixir-format
@@ -2443,12 +2449,12 @@ msgstr "Música"
 #: lib/mobilizon/events/categories.ex:108
 #, elixir-autogen, elixir-format
 msgid "Networking"
-msgstr "Rede"
+msgstr "Rede de contatos"
 
 #: lib/mobilizon/events/categories.ex:128
 #, elixir-autogen, elixir-format
 msgid "Outdoors & Adventure"
-msgstr ""
+msgstr "Outdoor e Aventura"
 
 #: lib/mobilizon/events/categories.ex:112
 #, elixir-autogen, elixir-format
@@ -2458,12 +2464,12 @@ msgstr "Festa"
 #: lib/mobilizon/events/categories.ex:116
 #, elixir-autogen, elixir-format
 msgid "Performing & Visual Arts"
-msgstr ""
+msgstr "Artes Cênicas e Visuais"
 
 #: lib/mobilizon/events/categories.ex:120
 #, elixir-autogen, elixir-format
 msgid "Pets"
-msgstr "Animais de estimação"
+msgstr "Pets"
 
 #: lib/mobilizon/events/categories.ex:124
 #, elixir-autogen, elixir-format
@@ -2473,12 +2479,12 @@ msgstr "Fotografia"
 #: lib/mobilizon/events/categories.ex:136
 #, elixir-autogen, elixir-format
 msgid "Science & Tech"
-msgstr ""
+msgstr "Ciência e Tecnologia"
 
 #: lib/mobilizon/events/categories.ex:132
 #, elixir-autogen, elixir-format
 msgid "Spirituality, Religion & Beliefs"
-msgstr ""
+msgstr "Espiritualidade, Religião e Crenças"
 
 #: lib/mobilizon/events/categories.ex:140
 #, elixir-autogen, elixir-format
@@ -2528,9 +2534,9 @@ msgstr ""
 "excluídos irrevogavelmente."
 
 #: lib/web/templates/email/report.text.eex:11
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "Events"
-msgstr "Evento"
+msgstr "Eventos"
 
 #: lib/web/templates/email/report.html.heex:115
 #, elixir-autogen, elixir-format
@@ -2588,18 +2594,18 @@ msgstr ""
 #: lib/web/templates/email/user_pending.html.heex:62
 #, elixir-autogen, elixir-format
 msgid "Login to view the list of pending users"
-msgstr ""
+msgstr "Entre para ver a lista de usuários pendentes"
 
 #: lib/web/templates/email/user_pending.text.eex:3
 #, elixir-autogen, elixir-format
 msgid "Login to view the list of pending users:"
-msgstr ""
+msgstr "Entre para ver a lista de usuários pendentes:"
 
 #: lib/web/templates/email/user_pending.html.heex:47
 #: lib/web/templates/email/user_pending.text.eex:1
 #, elixir-autogen, elixir-format
 msgid "New pending user from %{user} on %{instance}"
-msgstr ""
+msgstr "Novo usuário pendente de %{user} em %{instance}"
 
 #: lib/web/templates/email/user_pending.html.heex:18
 #, elixir-autogen, elixir-format, fuzzy
@@ -2609,10 +2615,10 @@ msgstr "Novo relato em %{instance}"
 #: lib/web/email/admin.ex:38
 #, elixir-autogen, elixir-format
 msgid "New pending user on Mobilizon instance %{instance}"
-msgstr ""
+msgstr "Novo usuário pendente na instância Mobilizon %{instance}"
 
 #: lib/web/templates/email/admin/_role.html.heex:9
 #: lib/web/templates/email/admin/_role.text.eex:1
 #, elixir-autogen, elixir-format
 msgid "Pending"
-msgstr ""
+msgstr "Pendente"
