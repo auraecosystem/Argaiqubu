@@ -9,7 +9,7 @@
 msgid ""
 msgstr ""
 "PO-Revision-Date: 2026-03-11 21:39+0000\n"
-"Last-Translator: Taru Luojola <taru.luojola@posteo.net>\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Finnish <https://weblate.framasoft.org/projects/mobilizon/"
 "backend-errors/fi/>\n"
 "Language: fi\n"
@@ -1361,7 +1361,7 @@ msgid "Timezone ID %{timezone} is invalid"
 msgstr ""
 
 #: lib/graphql/resolvers/admin.ex:596
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "You are already following this instance"
 msgstr ""
 
@@ -1391,7 +1391,7 @@ msgid "There are no participants matching the audience you've selected."
 msgstr ""
 
 #: lib/graphql/resolvers/post.ex:178
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "An error occured while updating your post"
 msgstr ""
 
@@ -1462,6 +1462,6 @@ msgid "You need to be logged-in and moderator to unban an account"
 msgstr "Raportin päivittäminen vain moderaattorille sisäänkirjautuneena"
 
 #: lib/graphql/resolvers/invitation.ex:28
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "Impossible to create the invitation"
 msgstr ""
