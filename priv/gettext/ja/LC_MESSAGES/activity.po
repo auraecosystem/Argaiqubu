@@ -8,15 +8,15 @@
 ## to merge POT files into PO files.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-03-13 20:29+0000\n"
+"PO-Revision-Date: 2026-03-11 21:36+0000\n"
 "Last-Translator: Dannek Rose <dannekrose@dannekrose.com>\n"
 "Language-Team: Japanese <https://weblate.framasoft.org/projects/mobilizon/"
 "activity/ja/>\n"
 "Language: ja\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.16.2\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.16.2\n"
 
 #: lib/web/templates/email/activity/_member_activity_item.html.heex:14
 #: lib/web/templates/email/activity/_member_activity_item.text.eex:12
@@ -130,14 +130,16 @@ msgstr "%{profile}さんが談論の題を「%{discussion}」に書き換えま�
 #: lib/web/templates/email/activity/_resource_activity_item.text.eex:14
 #, elixir-autogen, elixir-format
 msgid "%{profile} renamed the folder from %{old_resource_title} to %{resource}."
-msgstr "%{profile}さんが「%{old_resource_title}」というフォルダーを「%{resource}」に"
+msgstr ""
+"%{profile}さんが「%{old_resource_title}」というフォルダーを「%{resource}」に"
 "変えました。"
 
 #: lib/web/templates/email/activity/_resource_activity_item.html.heex:39
 #: lib/web/templates/email/activity/_resource_activity_item.text.eex:21
 #, elixir-autogen, elixir-format
 msgid "%{profile} renamed the resource from %{old_resource_title} to %{resource}."
-msgstr "%{profile}さんが「%{old_resource_title}」というリンクを「%{resource}」に変え"
+msgstr ""
+"%{profile}さんが「%{old_resource_title}」というリンクを「%{resource}」に変え"
 "ました。"
 
 #: lib/web/templates/email/activity/_discussion_activity_item.html.heex:11
@@ -260,7 +262,8 @@ msgstr "%{profile}さんがあなた宛てのコメントを%{event}に投稿し
 #: lib/web/templates/email/email_direct_activity.html.heex:260
 #, elixir-autogen, elixir-format
 msgid "Don't want to receive activity notifications? You may change frequency or disable them in %{tag_start}your settings%{tag_end}."
-msgstr "通知の頻度と有効・無効の設定は%{tag_start}アカウントの設定%{tag_end}で変えら"
+msgstr ""
+"通知の頻度と有効・無効の設定は%{tag_start}アカウントの設定%{tag_end}で変えら"
 "れます。"
 
 #: lib/web/templates/email/email_direct_activity.html.heex:51
@@ -363,25 +366,29 @@ msgstr "%{profile}さんが%{member}さんを「%{group}」のグループに加
 #: lib/service/activity/renderer/member.ex:54
 #, elixir-autogen, elixir-format
 msgid "%{profile} approved the membership request from %{member} for group %{group}."
-msgstr "%{profile}さんが%{member}さんからの「%{group}」のグループに加入の申し込みを応"
+msgstr ""
+"%{profile}さんが%{member}さんからの「%{group}」のグループに加入の申し込みを応"
 "じました。"
 
 #: lib/service/activity/renderer/resource.ex:32
 #, elixir-autogen, elixir-format
 msgid "%{profile} created the folder %{resource} in group %{group}."
-msgstr "%{profile}さんが「%{group}」のグループで「%{resource}」のフォルダーを作りまし"
+msgstr ""
+"%{profile}さんが「%{group}」のグループで「%{resource}」のフォルダーを作りまし"
 "た。"
 
 #: lib/service/activity/renderer/resource.ex:68
 #, elixir-autogen, elixir-format
 msgid "%{profile} deleted the folder %{resource} in group %{group}."
-msgstr "%{profile}さんが「%{group}」のグループの「%{resource}」のフォルダーを削除しま"
+msgstr ""
+"%{profile}さんが「%{group}」のグループの「%{resource}」のフォルダーを削除しま"
 "した。"
 
 #: lib/service/activity/renderer/resource.ex:70
 #, elixir-autogen, elixir-format
 msgid "%{profile} deleted the resource %{resource} in group %{group}."
-msgstr "%{profile}さんが「%{group}」のグループの「%{resource}」のリンクを削除しました"
+msgstr ""
+"%{profile}さんが「%{group}」のグループの「%{resource}」のリンクを削除しました"
 "。"
 
 #: lib/service/activity/renderer/member.ex:74
@@ -392,13 +399,15 @@ msgstr "%{profile}さんが%{member}を「%{group}」のグループから脱退
 #: lib/service/activity/renderer/resource.ex:60
 #, elixir-autogen, elixir-format
 msgid "%{profile} moved the folder %{resource} in group %{group}."
-msgstr "%{profile}さんが「%{group}」のグループの「%{resource}」のフォルダーを移動しま"
+msgstr ""
+"%{profile}さんが「%{group}」のグループの「%{resource}」のフォルダーを移動しま"
 "した。"
 
 #: lib/service/activity/renderer/resource.ex:62
 #, elixir-autogen, elixir-format
 msgid "%{profile} moved the resource %{resource} in group %{group}."
-msgstr "%{profile}さんが「%{group}」のグループの「%{resource}」のリンクを移動しました"
+msgstr ""
+"%{profile}さんが「%{group}」のグループの「%{resource}」のリンクを移動しました"
 "。"
 
 #: lib/service/activity/renderer/member.ex:78
@@ -409,7 +418,8 @@ msgstr "%{profile}さんが「%{group}」のグループから脱退しました
 #: lib/service/activity/renderer/member.ex:62
 #, elixir-autogen, elixir-format
 msgid "%{profile} rejected the membership request from %{member} for group %{group}."
-msgstr "%{profile}さんが%{member}さんからの「%{group}」のグループに加入の申し込みを断"
+msgstr ""
+"%{profile}さんが%{member}さんからの「%{group}」のグループに加入の申し込みを断"
 "りました。"
 
 #: lib/service/activity/renderer/resource.ex:44
@@ -423,8 +433,8 @@ msgstr ""
 #, elixir-autogen, elixir-format
 msgid "%{profile} renamed the resource from %{old_resource_title} to %{resource} in group %{group}."
 msgstr ""
-"%{profile}さんが「%{group}」のグループの「%{old_resource_title}」のリンクを「"
-"%{resource}」に変えました。"
+"%{profile}さんが「%{group}」のグループの「%{old_resource_title}」のリンクを"
+"「%{resource}」に変えました。"
 
 #: lib/service/activity/renderer/member.ex:70
 #, elixir-autogen, elixir-format
@@ -439,7 +449,8 @@ msgstr "%{profile}さんが「%{group}」のグループで「%{resource}」の�
 #: lib/service/activity/renderer/discussion.ex:85
 #, elixir-autogen, elixir-format
 msgid "%{profile} archived the discussion %{discussion} in group %{group}."
-msgstr "%{profile}さんが「%{group}」の題の「%{discussion}」の談論をアーカイブしました"
+msgstr ""
+"%{profile}さんが「%{group}」の題の「%{discussion}」の談論をアーカイブしました"
 "。"
 
 #: lib/service/activity/renderer/discussion.ex:25
@@ -455,7 +466,8 @@ msgstr "%{profile}さんが「%{group}」の題の「%{discussion}」の談論�
 #: lib/service/activity/renderer/discussion.ex:55
 #, elixir-autogen, elixir-format
 msgid "%{profile} mentionned you in the discussion %{discussion} in group %{group}."
-msgstr "%{profile}さんが「%{group}」のグループの題の「%{discussion}」の談論であなた宛"
+msgstr ""
+"%{profile}さんが「%{group}」のグループの題の「%{discussion}」の談論であなた宛"
 "てのコメントをしました。"
 
 #: lib/service/activity/renderer/discussion.ex:70
