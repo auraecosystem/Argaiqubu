@@ -4,7 +4,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-24 14:40+0000\n"
 "PO-Revision-Date: 2026-03-11 21:40+0000\n"
-"Last-Translator: Pieter David <pieter.david@gmail.com>\n"
+"Last-Translator: joenepraat <joenepraat@posteo.org>\n"
 "Language-Team: Dutch <https://weblate.framasoft.org/projects/mobilizon/"
 "backend/nl/>\n"
 "Language: nl\n"
@@ -752,8 +752,8 @@ msgstr ""
 #, elixir-autogen, elixir-format
 msgid "You requested a new password for your account on <b>%{instance}</b>."
 msgstr ""
-"U hebt een nieuw wachtwoord aangevraagd voor uw account op "
-"<b>%{instance}</b>."
+"U hebt een nieuw wachtwoord aangevraagd voor uw account op <b>%{instance}</b>"
+"."
 
 #: lib/web/templates/email/email.html.heex:112
 #: lib/web/templates/email/email.text.eex:5
@@ -1193,8 +1193,8 @@ msgstr ""
 #, elixir-autogen, elixir-format
 msgid "You recently requested to attend <b>%{title}</b>."
 msgstr ""
-"U heeft recentelijk gevraagd om deel te nemen aan het evenement "
-"<b>%{title}</b>."
+"U heeft recentelijk gevraagd om deel te nemen aan het evenement <b>%{title}</"
+"b>."
 
 #: lib/web/email/participation.ex:91
 #, elixir-autogen, elixir-format
