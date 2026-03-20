@@ -8,15 +8,15 @@
 ## to merge POT files into PO files.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-08-23 23:19+0000\n"
-"Last-Translator: Jiri Podhorecky <j.podhorecky@gmail.com>\n"
+"PO-Revision-Date: 2026-03-11 21:39+0000\n"
+"Last-Translator: Jiří Podhorecký <j.podhorecky@gmail.com>\n"
 "Language-Team: Czech <https://weblate.framasoft.org/projects/mobilizon/"
 "backend-errors/cs/>\n"
 "Language: cs\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=((n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2);\n"
-"X-Generator: Weblate 5.7\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Weblate 5.16.2\n"
 
 #: lib/mobilizon/discussions/discussion.ex:68
 #, elixir-autogen
@@ -158,8 +158,8 @@ msgstr "Pro uživatele moderátora nebyl nalezen žádný profil"
 #, elixir-autogen, elixir-format
 msgid "No user to validate with this email was found"
 msgstr ""
-"Nebyl nalezen žádný uživatel, kterého by bylo možné ověřit pomocí tohoto "
-"e-mailu"
+"Nebyl nalezen žádný uživatel, kterého by bylo možné ověřit pomocí tohoto e-"
+"mailu"
 
 #: lib/graphql/resolvers/user.ex:383
 #, elixir-autogen, elixir-format
