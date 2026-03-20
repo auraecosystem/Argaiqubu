@@ -8,7 +8,7 @@
 ## to merge POT files into PO files.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-10-22 04:28+0000\n"
+"PO-Revision-Date: 2026-03-11 21:39+0000\n"
 "Last-Translator: Jakub Urbanowicz <tex@przeklad.pl>\n"
 "Language-Team: Polish <https://weblate.framasoft.org/projects/mobilizon/"
 "activity/pl/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 5.0.1\n"
+"X-Generator: Weblate 5.16.2\n"
 
 #: lib/web/templates/email/activity/_member_activity_item.html.heex:14
 #: lib/web/templates/email/activity/_member_activity_item.text.eex:12
@@ -140,8 +140,8 @@ msgstr ""
 #, elixir-autogen, elixir-format
 msgid "%{profile} renamed the resource from %{old_resource_title} to %{resource}."
 msgstr ""
-"Nazwę zasobu została zmieniona z %{old_resource_title} na %{resource} przez "
-"%{profile}."
+"Nazwę zasobu została zmieniona z %{old_resource_title} na %{resource} przez %"
+"{profile}."
 
 #: lib/web/templates/email/activity/_discussion_activity_item.html.heex:11
 #: lib/web/templates/email/activity/_discussion_activity_item.text.eex:7
@@ -358,8 +358,8 @@ msgstr "%{member} dołączył(a)(o) do grupy %{group}."
 #, elixir-autogen, elixir-format
 msgid "%{member} rejected the invitation to join the group %{group}."
 msgstr ""
-"Twoje zaproszenie do dołączenia do grupy %{group} zostało odrzucone przez "
-"%{member}."
+"Twoje zaproszenie do dołączenia do grupy %{group} zostało odrzucone przez %"
+"{member}."
 
 #: lib/service/activity/renderer/member.ex:30
 #, elixir-autogen, elixir-format
@@ -380,8 +380,8 @@ msgstr "Profil %{profile} dodał %{member} do grupy %{group}."
 #, elixir-autogen, elixir-format
 msgid "%{profile} approved the membership request from %{member} for group %{group}."
 msgstr ""
-"Profil %{profile} zatwierdził prośbę o dołączenie %{member} do grupy "
-"%{group}."
+"Profil %{profile} zatwierdził prośbę o dołączenie %{member} do grupy %{group}"
+"."
 
 #: lib/service/activity/renderer/resource.ex:32
 #, elixir-autogen, elixir-format
@@ -428,15 +428,15 @@ msgstr ""
 #, elixir-autogen, elixir-format
 msgid "%{profile} renamed the folder from %{old_resource_title} to %{resource} in group %{group}."
 msgstr ""
-"Profil %{profile} zmienił nazwę folderu z %{old_resource_title} na "
-"%{resource} w grupie %{group}."
+"Profil %{profile} zmienił nazwę folderu z %{old_resource_title} na %"
+"{resource} w grupie %{group}."
 
 #: lib/service/activity/renderer/resource.ex:50
 #, elixir-autogen, elixir-format
 msgid "%{profile} renamed the resource from %{old_resource_title} to %{resource} in group %{group}."
 msgstr ""
-"Profil %{profile} zmienił nazwę zasobu z %{old_resource_title} na %{resource}"
-" w grupie %{group}."
+"Profil %{profile} zmienił nazwę zasobu z %{old_resource_title} na %"
+"{resource} w grupie %{group}."
 
 #: lib/service/activity/renderer/member.ex:70
 #, elixir-autogen, elixir-format
@@ -468,8 +468,8 @@ msgstr "Profil %{profile} usunął dyskusję %{discussion} w grupie %{group}."
 #, elixir-autogen, elixir-format
 msgid "%{profile} mentionned you in the discussion %{discussion} in group %{group}."
 msgstr ""
-"Profil %{profile} wspomniał o Tobie w dyskusji %{discussion} w grupie "
-"%{group}."
+"Profil %{profile} wspomniał o Tobie w dyskusji %{discussion} w grupie %"
+"{group}."
 
 #: lib/service/activity/renderer/discussion.ex:70
 #, elixir-autogen, elixir-format
