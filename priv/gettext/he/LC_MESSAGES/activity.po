@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-14 08:13+0000\n"
-"PO-Revision-Date: 2021-12-14 12:35+0000\n"
-"Last-Translator: fr33domlover <fr33domlover@riseup.net>\n"
+"PO-Revision-Date: 2026-03-11 21:39+0000\n"
+"Last-Translator: אנטולי מהגבעות האדומות <fr33domlover@riseup.net>\n"
 "Language-Team: Hebrew <https://weblate.framasoft.org/projects/mobilizon/"
 "activity/he/>\n"
 "Language: he\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Weblate 4.9.1\n"
+"X-Generator: Weblate 5.16.2\n"
 
 ## This file is a PO Template file.
 ##
@@ -273,8 +273,8 @@ msgstr "%{profile} הזכיר.ה אותך בהערה תחת האירוע %{event
 #, elixir-autogen, elixir-format
 msgid "Don't want to receive activity notifications? You may change frequency or disable them in %{tag_start}your settings%{tag_end}."
 msgstr ""
-"לא רוצה לקבל התראות על פעילות? ניתן לשנות את התדירות או לכבות אותן "
-"ב%{tag_start}הגדרות שלך%{tag_end}."
+"לא רוצה לקבל התראות על פעילות? ניתן לשנות את התדירות או לכבות אותן ב%"
+"{tag_start}הגדרות שלך%{tag_end}."
 
 #: lib/web/templates/email/email_direct_activity.html.heex:51
 #: lib/web/templates/email/email_direct_activity.text.eex:5
@@ -429,8 +429,8 @@ msgstr ""
 #, elixir-autogen, elixir-format
 msgid "%{profile} renamed the resource from %{old_resource_title} to %{resource} in group %{group}."
 msgstr ""
-"%{profile} שינ.תה את שם המשאב מ־%{old_resource_title} ל־%{resource} בקבוצה "
-"%{group}."
+"%{profile} שינ.תה את שם המשאב מ־%{old_resource_title} ל־%{resource} בקבוצה %"
+"{group}."
 
 #: lib/service/activity/renderer/member.ex:70
 #, elixir-autogen, elixir-format
