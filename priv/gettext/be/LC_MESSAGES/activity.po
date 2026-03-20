@@ -8,8 +8,16 @@
 ## to merge POT files into PO files.
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2026-03-11 21:40+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Belarusian <https://weblate.framasoft.org/projects/mobilizon/"
+"activity/be/>\n"
 "Language: be\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100 != 11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10||n%100>=20) ? 1 : 2);\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 5.16.2\n"
+"Content-Transfer-Encoding: 8bit\n"
 
 #: lib/web/templates/email/activity/_member_activity_item.html.heex:14
 #: lib/web/templates/email/activity/_member_activity_item.text.eex:12
@@ -451,7 +459,7 @@ msgstr ""
 
 #: lib/web/templates/email/activity/_member_activity_item.html.heex:36
 #: lib/web/templates/email/activity/_member_activity_item.text.eex:33
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "%{profile} approved the member %{member}."
 msgstr ""
 
@@ -469,23 +477,23 @@ msgstr ""
 
 #: lib/web/templates/email/email_anonymous_activity.html.heex:107
 #: lib/web/templates/email/email_anonymous_activity.text.eex:14
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "%{profile} has posted a private announcement about event %{event}."
 msgstr ""
 
 #: lib/web/templates/email/email_anonymous_activity.html.heex:50
 #: lib/web/templates/email/email_anonymous_activity.text.eex:6
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "%{profile} has posted a public announcement under event %{event}."
 msgstr ""
 
 #: lib/web/templates/email/activity/_conversation_activity_item.html.heex:3
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "%{profile} mentionned you in a %{conversation}."
 msgstr ""
 
 #: lib/web/templates/email/activity/_conversation_activity_item.text.eex:1
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "%{profile} mentionned you in a conversation."
 msgstr ""
 
@@ -495,7 +503,7 @@ msgid "%{profile} replied to your message"
 msgstr ""
 
 #: lib/web/templates/email/activity/_conversation_activity_item.html.heex:10
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "%{profile} replied you in a %{conversation}."
 msgstr ""
 

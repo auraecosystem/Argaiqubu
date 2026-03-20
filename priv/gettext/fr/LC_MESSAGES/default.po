@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: \n"
 "PO-Revision-Date: 2026-03-11 21:41+0000\n"
-"Last-Translator: Thomas Citharel <thomas.citharel@framasoft.org>\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: French <https://weblate.framasoft.org/projects/mobilizon/"
 "backend/fr/>\n"
 "Language: fr\n"
@@ -667,7 +667,9 @@ msgstr ""
 #, elixir-autogen, elixir-format
 msgctxt "terms"
 msgid "For full details about the Mobilizon software <a href=\"https://mobilizon.org\">see here</a>."
-msgstr "Pour plus de détails sur le logiciel Mobilizon <a href=\"https://mobilizon.org\">voir ici</a>."
+msgstr ""
+"Pour plus de détails sur le logiciel Mobilizon <a href=\"https://"
+"mobilizon.org\">voir ici</a>."
 
 #: lib/web/templates/api/terms.html.heex:47
 #, elixir-autogen, elixir-format
@@ -2381,7 +2383,9 @@ msgstr "À la prochaine fois !"
 #: lib/web/templates/email/group_suspension.text.eex:5
 #, elixir-autogen, elixir-format
 msgid "As this group was located on this instance, all of its data has been irretrievably deleted."
-msgstr "Comme ce groupe était originaire de cette instance, toutes ses données ont été irrémédiablement détruites."
+msgstr ""
+"Comme ce groupe était originaire de cette instance, toutes ses données ont "
+"été irrémédiablement détruites."
 
 #: lib/web/templates/email/report.text.eex:11
 #, elixir-autogen, elixir-format
@@ -2408,7 +2412,9 @@ msgstr "Annuler ma participation"
 #: lib/web/templates/email/event_participation_confirmed.html.heex:99
 #, elixir-autogen, elixir-format
 msgid "If you wish to cancel your participation, simply click on the link below."
-msgstr "Si vous souhaitez annuler votre participation, il vous suffit de cliquer sur le lien ci-dessous."
+msgstr ""
+"Si vous souhaitez annuler votre participation, il vous suffit de cliquer sur "
+"le lien ci-dessous."
 
 #: lib/web/email/admin.ex:158
 #, elixir-autogen, elixir-format
@@ -2419,7 +2425,8 @@ msgstr "Test de configuration des e-mails pour %{instance}"
 #: lib/web/templates/email/email_configuration_test.text.eex:3
 #, elixir-autogen, elixir-format
 msgid "If you received this email, the email configuration seems to be correct."
-msgstr "Si vous avez reçu cet e-mail, la configuration des e-mails semble correcte."
+msgstr ""
+"Si vous avez reçu cet e-mail, la configuration des e-mails semble correcte."
 
 #: lib/web/templates/email/email_configuration_test.html.heex:18
 #: lib/web/templates/email/email_configuration_test.text.eex:1
@@ -2431,7 +2438,14 @@ msgstr "Bien joué !"
 #, elixir-autogen, elixir-format
 msgctxt "terms"
 msgid "When we say “we”, “our”, or “us” in this document, we are referring to the owners, operators and administrators of this Mobilizon instance. The Mobilizon software is provided by the team of Mobilizon contributors. Unless explicitly stated, this Mobilizon instance is an independent service using Mobilizon's source code. You may find more information about this instance on the <a href=\"/about/instance\">\"About this instance\"</a> page."
-msgstr "Lorsque nous disons « nous », « notre » ou « nos » dans ce document, nous faisons référence aux propriétaires, opérateur·ices et administrateur·ices de cette instance de Mobilizon. Le logiciel Mobilizon est fourni par l'équipe des contributeur·ices de Mobilizon. Sauf mention explicite, cette instance de Mobilizon est un service indépendant utilisant le code source de Mobilizon. Vous pouvez trouver plus d'informations sur cette instance sur la page <a href=\"/about/instance\">« A propos de cette instance »</a>."
+msgstr ""
+"Lorsque nous disons « nous », « notre » ou « nos » dans ce document, nous "
+"faisons référence aux propriétaires, opérateur·ices et administrateur·ices "
+"de cette instance de Mobilizon. Le logiciel Mobilizon est fourni par "
+"l'équipe des contributeur·ices de Mobilizon. Sauf mention explicite, cette "
+"instance de Mobilizon est un service indépendant utilisant le code source de "
+"Mobilizon. Vous pouvez trouver plus d'informations sur cette instance sur la "
+"page <a href=\"/about/instance\">« A propos de cette instance »</a>."
 
 #: lib/web/templates/email/user_pending.html.heex:62
 #, elixir-autogen, elixir-format
