@@ -1163,7 +1163,10 @@ const hideParticipants = computed({
     return event.value?.options.hideNumberOfParticipants;
   },
   set(value: boolean) {
-    event.value.options.hideNumberOfParticipants = value;
+    event.value.options = {
+      ...event.value.options,
+      hideNumberOfParticipants: value,
+    };
   },
 });
 
