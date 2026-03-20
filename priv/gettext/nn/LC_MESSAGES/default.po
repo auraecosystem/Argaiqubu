@@ -4,7 +4,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-11-02 22:03+0000\n"
 "PO-Revision-Date: 2026-03-11 21:34+0000\n"
-"Last-Translator: Eivind Ødegård <eivind.odegard@sogn.no>\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Norwegian Nynorsk <https://weblate.framasoft.org/projects/"
 "mobilizon/backend/nn/>\n"
 "Language: nn\n"
@@ -632,8 +632,7 @@ msgstr ""
 msgctxt "terms"
 msgid "For full details about the Mobilizon software <a href=\"https://mobilizon.org\">see here</a>."
 msgstr ""
-"Les meir om Mobilizon-programvara <a href=\"https://mobilizon.org\""
-">her</a>."
+"Les meir om Mobilizon-programvara <a href=\"https://mobilizon.org\">her</a>."
 
 #: lib/web/templates/api/terms.html.heex:47
 #, elixir-autogen, elixir-format
@@ -1612,8 +1611,8 @@ msgstr "Du har meldt deg av deltakinga på %{title}!"
 #, elixir-autogen, elixir-format
 msgid "Your instance's moderation team has decided to suspend %{actor_name} (%{actor_address}). All of their events have been removed and your participation to event %{event} cancelled."
 msgstr ""
-"Styrarane på nettstaden din har avgjort å sperra gruppa %{group_name} "
-"(%{group_address}). Du er ikkje lenger medlem av gruppa."
+"Styrarane på nettstaden din har avgjort å sperra gruppa %{group_name} (%"
+"{group_address}). Du er ikkje lenger medlem av gruppa."
 
 #: lib/web/templates/email/group_suspension.html.heex:50
 #, elixir-autogen, elixir-format
@@ -2342,12 +2341,12 @@ msgid "When we say “we”, “our”, or “us” in this document, we are ref
 msgstr ""
 "Når me seier «me», «vår» eller «oss» i dette dokumentet, meiner me dei som "
 "eig, driv og styrer denne Mobilizon-nettstaden. Programvara Mobilizon blir "
-"gjeven ut av eit lag med bidragsytarar, støtta av <a href=\"https://framasoft"
-".org\">Framasoft</a>, som er ein fransk ideell organisasjon som arbeider for "
-"fri og gratis programvare. Dersom det ikkje står anna, er denne Mobilizon-"
-"nettstaden ei uavhengig teneste som bruker kjeldekode frå Mobilizon. Du kan "
-"lesa meir om denne nettstaden på <a href=\"/about/instance\">«Om "
-"oss»</a>-sida."
+"gjeven ut av eit lag med bidragsytarar, støtta av <a href=\"https://"
+"framasoft.org\">Framasoft</a>, som er ein fransk ideell organisasjon som "
+"arbeider for fri og gratis programvare. Dersom det ikkje står anna, er denne "
+"Mobilizon-nettstaden ei uavhengig teneste som bruker kjeldekode frå "
+"Mobilizon. Du kan lesa meir om denne nettstaden på <a href=\"/about/"
+"instance\">«Om oss»</a>-sida."
 
 #: lib/web/templates/email/user_pending.html.heex:62
 #, elixir-autogen, elixir-format
