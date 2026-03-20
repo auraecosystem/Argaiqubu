@@ -4,7 +4,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-24 14:39+0000\n"
 "PO-Revision-Date: 2026-03-11 21:38+0000\n"
-"Last-Translator: Norwin <frama@nroo.de>\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: German <https://weblate.framasoft.org/projects/mobilizon/"
 "backend/de/>\n"
 "Language: de\n"
@@ -664,8 +664,8 @@ msgstr ""
 msgctxt "terms"
 msgid "For full details about the Mobilizon software <a href=\"https://mobilizon.org\">see here</a>."
 msgstr ""
-"Vollumfängliche Informationen zur Mobilizon-Software <a href=\"https"
-"://mobilizon.org\">können Sie hier erhalten</a>."
+"Vollumfängliche Informationen zur Mobilizon-Software <a href=\"https://"
+"mobilizon.org\">können Sie hier erhalten</a>."
 
 #: lib/web/templates/api/terms.html.heex:47
 #, elixir-autogen, elixir-format
@@ -1691,9 +1691,9 @@ msgstr "Ihre Teilnahme an %{event} wurde storniert!"
 #, elixir-autogen, elixir-format
 msgid "Your instance's moderation team has decided to suspend %{actor_name} (%{actor_address}). All of their events have been removed and your participation to event %{event} cancelled."
 msgstr ""
-"Das Moderationsteam Ihrer Instanz hat beschlossen, %{group_name} "
-"(%{group_address}) zu suspendieren. Sie sind nicht länger ein Mitglied "
-"dieser Gruppe."
+"Das Moderationsteam Ihrer Instanz hat beschlossen, %{group_name} (%"
+"{group_address}) zu suspendieren. Sie sind nicht länger ein Mitglied dieser "
+"Gruppe."
 
 #: lib/web/templates/email/group_suspension.html.heex:50
 #, elixir-autogen, elixir-format
@@ -1987,8 +1987,7 @@ msgstr ""
 msgid "You have one pending attendance request to process for the following event:"
 msgid_plural "You have %{number_participation_requests} attendance requests to process for the following event:"
 msgstr[0] "Sie haben eine ausstehende Anwesenheitsanforderung zu bearbeiten:"
-msgstr[1] ""
-"Sie haben %{Anzahl_Teilnahmeanträge} Teilnahmeanträge zu bearbeiten:"
+msgstr[1] "Sie haben %{Anzahl_Teilnahmeanträge} Teilnahmeanträge zu bearbeiten:"
 
 #: lib/web/templates/email/admin_user_role_changed.html.heex:18
 #: lib/web/templates/email/admin_user_role_changed.text.eex:1
