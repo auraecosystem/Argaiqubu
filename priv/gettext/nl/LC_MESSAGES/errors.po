@@ -8,8 +8,8 @@
 ## to merge POT files into PO files.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-03-11 21:41+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2026-03-12 15:34+0000\n"
+"Last-Translator: Coen Holten <coenholten@proton.me>\n"
 "Language-Team: Dutch <https://weblate.framasoft.org/projects/mobilizon/"
 "backend-errors/nl/>\n"
 "Language: nl\n"
@@ -57,18 +57,18 @@ msgstr[1] "moet %{count} karakter(s) zijn"
 
 msgid "should have %{count} item(s)"
 msgid_plural "should have %{count} item(s)"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "zou %{count} item moeten hebben"
+msgstr[1] "zou %{count} items moeten hebben"
 
 msgid "should be at least %{count} character(s)"
 msgid_plural "should be at least %{count} character(s)"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "moet minimaal %{count} teken bevatten"
+msgstr[1] "moet minimaal %{count} tekens bevatten"
 
 msgid "should have at least %{count} item(s)"
 msgid_plural "should have at least %{count} item(s)"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "moet ten minste %{count} item bevatten"
+msgstr[1] "moet ten minste %{count} items bevatten"
 
 msgid "should be at most %{count} character(s)"
 msgid_plural "should be at most %{count} character(s)"
@@ -1004,7 +1004,7 @@ msgstr ""
 #: lib/graphql/resolvers/group.ex:399
 #, elixir-autogen, elixir-format
 msgid "Follow does not match your account"
-msgstr ""
+msgstr "Volgen komt niet overeen met uw account"
 
 #: lib/graphql/resolvers/group.ex:403
 #, elixir-autogen, elixir-format
@@ -1024,7 +1024,7 @@ msgstr ""
 #: lib/graphql/resolvers/group.ex:373
 #, elixir-autogen, elixir-format
 msgid "You are already following this group"
-msgstr ""
+msgstr "Je volgt deze groep al"
 
 #: lib/graphql/resolvers/group.ex:382
 #, elixir-autogen, elixir-format
@@ -1034,12 +1034,12 @@ msgstr ""
 #: lib/graphql/resolvers/group.ex:431
 #, elixir-autogen, elixir-format
 msgid "You need to be logged-in to unfollow a group"
-msgstr ""
+msgstr "Je moet ingelogd zijn om een groep te ontvolgen"
 
 #: lib/graphql/resolvers/group.ex:408
 #, elixir-autogen, elixir-format
 msgid "You need to be logged-in to update a group follow"
-msgstr ""
+msgstr "Je moet ingelogd zijn om een groep te volgen"
 
 #: lib/graphql/resolvers/member.ex:218
 #, elixir-autogen, elixir-format
@@ -1089,7 +1089,7 @@ msgstr ""
 #: lib/graphql/resolvers/admin.ex:599
 #, elixir-autogen, elixir-format
 msgid "Unable to find an instance to follow at this address"
-msgstr ""
+msgstr "Kan geen instance vinden om te volgen op dit adres"
 
 #: lib/mobilizon/actors/actor.ex:410
 #, elixir-autogen, elixir-format
@@ -1346,7 +1346,7 @@ msgstr ""
 #: lib/graphql/resolvers/admin.ex:593
 #, elixir-autogen, elixir-format
 msgid "This instance is pending follow approval"
-msgstr ""
+msgstr "Deze instance is in afwachting van goedkeuring"
 
 #: lib/graphql/schema/custom/timezone.ex:25
 #, elixir-autogen, elixir-format
@@ -1356,7 +1356,7 @@ msgstr ""
 #: lib/graphql/resolvers/admin.ex:596
 #, elixir-autogen, elixir-format
 msgid "You are already following this instance"
-msgstr ""
+msgstr "Je volgt deze instance al"
 
 #: lib/graphql/resolvers/user.ex:356
 #, elixir-autogen, elixir-format
