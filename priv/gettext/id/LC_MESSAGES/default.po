@@ -4,7 +4,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-23 23:41+0000\n"
 "PO-Revision-Date: 2026-03-11 21:42+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Last-Translator: TA <alt3753.7@gmail.com>\n"
 "Language-Team: Indonesian <https://weblate.framasoft.org/projects/mobilizon/"
 "backend/id/>\n"
 "Language: id\n"
@@ -263,9 +263,9 @@ msgid "If this server is in the EU or the EEA: Our site, products and services a
 msgstr ""
 "Jika server ini terletak di EU atau EEA: Situs, produk, dan layanan kami "
 "semuanya ditujukan kepada orang-orang yang berusia setidaknya 16 tahun. Jika "
-"Anda berusia di bawah 16 tahun, sesuai dengan persyaratan GDPR (<a href="
-"\"https://en.wikipedia.org/wiki/General_Data_Protection_Regulation\">General "
-"Data Protection Regulation</a>) jangan gunakan situs ini."
+"Anda berusia di bawah 16 tahun, sesuai dengan persyaratan GDPR (<a "
+"href=\"https://en.wikipedia.org/wiki/General_Data_Protection_Regulation\">"
+"General Data Protection Regulation</a>) jangan gunakan situs ini."
 
 #: lib/web/templates/api/privacy.html.heex:146
 #, elixir-autogen, elixir-format
@@ -274,9 +274,10 @@ msgid "If this server is in the USA: Our site, products and services are all dir
 msgstr ""
 "Jika server terletak di USA: Situs, produk dan layanan kami semuanya "
 "ditujukan kepada orang-orang yang setidaknya berusia 13 tahun. Jika Anda "
-"berusia di bawah 13 tahun, sesuai dengan persyaratan COPPA (<a href=\"https"
-"://en.wikipedia.org/wiki/Children%27s_Online_Privacy_Protection_Act\""
-">Children's Online Privacy Protection Act</a>) jangan gunakan situs ini."
+"berusia di bawah 13 tahun, sesuai dengan persyaratan COPPA (<a "
+"href=\"https://en.wikipedia.org/wiki/"
+"Children%27s_Online_Privacy_Protection_Act\">Children's Online Privacy "
+"Protection Act</a>) jangan gunakan situs ini."
 
 #: lib/web/templates/api/privacy.html.heex:160
 #, elixir-autogen, elixir-format
@@ -637,8 +638,8 @@ msgctxt "terms"
 msgid "We love feedback. Please let us know what you think of the Service, these Terms and, in general, <b>%{instance_name}</b>."
 msgstr ""
 "Kami mencintai umpan balik. Harap beritahu kami apa yang Anda pikirkan "
-"tentang Layanan, dan Persyaratan ini dan, secara umum, "
-"<b>%{instance_name}</b>."
+"tentang Layanan, dan Persyaratan ini dan, secara umum, <b>%{instance_name}</"
+"b>."
 
 #: lib/web/templates/api/terms.html.heex:234
 #, elixir-autogen, elixir-format
