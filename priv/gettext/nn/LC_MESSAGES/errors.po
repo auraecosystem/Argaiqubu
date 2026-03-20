@@ -4,7 +4,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-11-14 11:02+0000\n"
 "PO-Revision-Date: 2026-03-11 21:39+0000\n"
-"Last-Translator: Eivind Ødegård <eivind.odegard@sogn.no>\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Norwegian Nynorsk <https://weblate.framasoft.org/projects/"
 "mobilizon/backend-errors/nn/>\n"
 "Language: nn\n"
@@ -1491,6 +1491,6 @@ msgid "You need to be logged-in and moderator to unban an account"
 msgstr "Du må vera innlogga og ha ei moderatorrolle for å oppdatera ein rapport"
 
 #: lib/graphql/resolvers/invitation.ex:28
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "Impossible to create the invitation"
 msgstr ""
