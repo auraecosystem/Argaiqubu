@@ -8,16 +8,16 @@
 ## to merge POT files into PO files.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-07-04 23:35+0000\n"
-"Last-Translator: ewm <gnu.ewm@protonmail.com>\n"
+"PO-Revision-Date: 2026-03-11 21:35+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Polish <https://weblate.framasoft.org/projects/mobilizon/"
 "backend-errors/pl/>\n"
 "Language: pl\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
-"|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 5.6.2\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 5.16.2\n"
 
 #: lib/mobilizon/discussions/discussion.ex:68
 #, elixir-autogen
@@ -160,8 +160,8 @@ msgstr "Nie znaleziono profilu dla konta moderatora(-ki)"
 #, elixir-autogen, elixir-format
 msgid "No user to validate with this email was found"
 msgstr ""
-"Nie znaleziono użytkownika(-czki) do zatwierdzenia z użyciem tego adresu "
-"e-mail"
+"Nie znaleziono użytkownika(-czki) do zatwierdzenia z użyciem tego adresu e-"
+"mail"
 
 #: lib/graphql/resolvers/user.ex:383
 #, elixir-autogen, elixir-format
@@ -258,8 +258,8 @@ msgstr "Już jesteś członkiem tej grupy"
 #, elixir-autogen, elixir-format
 msgid "You can't leave this group because you are the only administrator"
 msgstr ""
-"Nie możesz opuścić tej grupy, ponieważ jesteś jej jedynym(-ą) "
-"administratorem(-ką)"
+"Nie możesz opuścić tej grupy, ponieważ jesteś jej jedynym(-ą) administratorem"
+"(-ką)"
 
 #: lib/graphql/resolvers/group.ex:308
 #, elixir-autogen, elixir-format
@@ -605,8 +605,8 @@ msgstr "Nie możesz zaktualizować komentarza, jeśli nie jesteś połączony(-a
 #, elixir-autogen, elixir-format
 msgid "You can't leave event because you're the only event creator participant"
 msgstr ""
-"Nie możesz opuścić tego wydarzenia, ponieważ jesteś jego jedynym(-ą) "
-"autorem(-ką) i uczestnikiem(-czką)"
+"Nie możesz opuścić tego wydarzenia, ponieważ jesteś jego jedynym(-ą) autorem"
+"(-ką) i uczestnikiem(-czką)"
 
 #: lib/graphql/resolvers/member.ex:200
 #, elixir-autogen, elixir-format

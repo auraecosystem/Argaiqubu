@@ -3,16 +3,16 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-02-15 01:23+0000\n"
-"PO-Revision-Date: 2025-04-10 14:30+0000\n"
-"Last-Translator: Túlio Simões Martins Padilha <appsdotulio@gmx.com>\n"
+"PO-Revision-Date: 2026-03-20 19:30+0000\n"
+"Last-Translator: Marcos Xavier Gil Júnior <marcosxaviergiljr@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://weblate.framasoft.org/projects/"
 "mobilizon/backend/pt_BR/>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Weblate 5.10.4\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 5.16.2\n"
 
 #: lib/web/templates/email/password_reset.html.heex:66
 #, elixir-autogen, elixir-format
@@ -286,8 +286,8 @@ msgid "If this server is in the USA: Our site, products and services are all dir
 msgstr ""
 "Se este servidor estiver nos EUA: os produtos e serviços do nosso site são "
 "todos direcionados a pessoas que tenham pelo ao menos 13 anos de idade. Se "
-"você estiver abaixo desta idade, de acordo com o COPPA (<a href=\""
-"https://en.wikipedia.org/wiki/Children%27s_Online_Privacy_Protection_Act\">"
+"você estiver abaixo desta idade, de acordo com o COPPA (<a href=\"https://"
+"en.wikipedia.org/wiki/Children%27s_Online_Privacy_Protection_Act\">"
 "Children's Online Privacy Protection Act / Ato de Proteção da Privacidade "
 "Online das Crianças </a>) não use este site."
 
@@ -429,8 +429,10 @@ msgstr[1] "%{nb_events} eventos planejados esta semana"
 #, elixir-format, elixir-autogen
 msgid "One participation request for event %{title} to process"
 msgid_plural "%{number_participation_requests} participation requests for event %{title} to process"
-msgstr[0] ""
+msgstr[0] "Uma solicitação de participação no evento %{title} para processar"
 msgstr[1] ""
+"%{number_participation_requests} solicitações de participação no evento %"
+"{title} para processar"
 
 #: lib/web/templates/email/notification_each_week.html.heex:47
 #: lib/web/templates/email/notification_each_week.text.eex:3
@@ -690,7 +692,7 @@ msgstr ""
 #, elixir-autogen, elixir-format
 msgctxt "terms"
 msgid "Your Content & Conduct"
-msgstr ""
+msgstr "Seu conteúdo e conduta"
 
 #: lib/web/templates/api/terms.html.heex:263
 #, elixir-autogen, elixir-format
@@ -937,18 +939,18 @@ msgstr ""
 msgctxt "terms"
 msgid "Originally adapted from the <a href=\"https://joindiaspora.com/terms\">Diaspora*</a> and <a href=\"https://github.com/appdotnet/terms-of-service\">App.net</a> privacy policies, also licensed under <a href=\"https://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA</a>."
 msgstr ""
-"Originalmente adaptado das politicas privadas de <a href=\"https://mastodon."
-"social/terms\">Mastodon</a> e <a href=\"https://github.com/discourse/"
-"discourse\">Discourse</a>."
+"Originalmente adaptado das politicas privadas de <a href=\"https://"
+"mastodon.social/terms\">Mastodon</a> e <a href=\"https://github.com/"
+"discourse/discourse\">Discourse</a>."
 
 #: lib/web/templates/api/privacy.html.heex:173
 #, elixir-autogen, elixir-format
 msgctxt "terms"
 msgid "Originally adapted from the <a href=\"https://mastodon.social/terms\">Mastodon</a> and <a href=\"https://github.com/discourse/discourse\">Discourse</a> privacy policies, also licensed under <a href=\"https://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA</a>."
 msgstr ""
-"Originalmente adaptado das politicas privadas de <a href=\"https://mastodon."
-"social/terms\">Mastodon</a> e <a href=\"https://github.com/discourse/"
-"discourse\">Discourse</a>."
+"Originalmente adaptado das politicas privadas de <a href=\"https://"
+"mastodon.social/terms\">Mastodon</a> e <a href=\"https://github.com/"
+"discourse/discourse\">Discourse</a>."
 
 #: lib/web/templates/api/terms.html.heex:3
 #, elixir-autogen, elixir-format
@@ -1168,8 +1170,8 @@ msgid "Hi there! It seems like you wanted to change the email address linked to 
 msgstr ""
 "Olá! Parece que você deseja alterar o endereço de e-mail vinculado à sua "
 "conta em &lt;b&gt;%{instance}&lt;/b&gt;. Se ainda desejar, clique no botão "
-"abaixo para confirmar a alteração. Você poderá então fazer login em "
-"%{instance} com este novo endereço de e-mail."
+"abaixo para confirmar a alteração. Você poderá então fazer login em %"
+"{instance} com este novo endereço de e-mail."
 
 #: lib/web/templates/email/email_changed_old.text.eex:3
 #, elixir-autogen, elixir-format
@@ -1412,9 +1414,8 @@ msgstr ""
 #, elixir-autogen, elixir-format
 msgid "You have been removed from group %{link_start}<b>%{group}</b>%{link_end}. You will not be able to access this group's private content anymore."
 msgstr ""
-"Você foi removido do grupo "
-"%{link_start}&lt;b&gt;%{group}&lt;/b&gt;%{link_end}. Você não poderá mais "
-"acessar o conteúdo privado deste grupo."
+"Você foi removido do grupo %{link_start}&lt;b&gt;%{group}&lt;/b&gt;%"
+"{link_end}. Você não poderá mais acessar o conteúdo privado deste grupo."
 
 #: lib/web/templates/email/group_suspension.html.heex:81
 #: lib/web/templates/email/group_suspension.text.eex:7
@@ -1434,8 +1435,8 @@ msgstr "O grupo %{group} foi suspenso em %{instance}!"
 #, elixir-autogen, elixir-format
 msgid "Your instance's moderation team has decided to suspend %{group_name} (%{group_address}). You are no longer a member of this group."
 msgstr ""
-"A equipe de moderação da sua instância decidiu suspender %{group_name} "
-"(%{group_address}). Você não é mais membro deste grupo."
+"A equipe de moderação da sua instância decidiu suspender %{group_name} (%"
+"{group_address}). Você não é mais membro deste grupo."
 
 #: lib/web/email/group.ex:106
 #, elixir-autogen, elixir-format
@@ -1753,8 +1754,8 @@ msgstr "Quer se conectar?"
 #, elixir-autogen, elixir-format
 msgid "Hi there! You just registered to join this event: « <b>%{title}</b> ». Please confirm the e-mail address you provided:"
 msgstr ""
-"Olá! Você acabou de se registrar para participar deste evento: « "
-"&lt;b&gt;%{title}&lt;/b&gt; ». Confirme o endereço de e-mail fornecido:"
+"Olá! Você acabou de se registrar para participar deste evento: « &lt;b&gt;%"
+"{title}&lt;/b&gt; ». Confirme o endereço de e-mail fornecido:"
 
 #: lib/web/templates/email/event_participation_rejected.html.heex:47
 #, elixir-autogen, elixir-format
@@ -1852,17 +1853,17 @@ msgstr "A sua participação no evento %{title} foi aprovada"
 #, elixir-autogen, elixir-format
 msgid "Your instance's moderation team has decided to suspend %{actor_name} (%{actor_address}). All of their events have been removed and your participation to event %{event} cancelled."
 msgstr ""
-"A equipe de moderação da sua instância decidiu suspender %{actor_name} "
-"(%{actor_address}). Todos os eventos deles foram removidos e sua "
-"participação no evento %{event} foi cancelada."
+"A equipe de moderação da sua instância decidiu suspender %{actor_name} (%"
+"{actor_address}). Todos os eventos deles foram removidos e sua participação "
+"no evento %{event} foi cancelada."
 
 #: lib/web/templates/email/group_suspension.html.heex:50
 #, elixir-autogen, elixir-format
 msgid "Your instance's moderation team has decided to suspend <b>%{group_name}</b> (%{group_address}). You are no longer a member of this group."
 msgstr ""
-"A equipe de moderação da sua instância decidiu suspender "
-"&lt;b&gt;%{group_name}&lt;/b&gt; (%{group_address}). Você não é mais membro "
-"deste grupo."
+"A equipe de moderação da sua instância decidiu suspender &lt;b&gt;%"
+"{group_name}&lt;/b&gt; (%{group_address}). Você não é mais membro deste "
+"grupo."
 
 #: lib/web/templates/email/actor_suspension_participants.html.heex:18
 #: lib/web/templates/email/actor_suspension_participants.text.eex:1
@@ -2127,8 +2128,8 @@ msgstr "Sua solicitação de associação ao grupo %{group} foi rejeitada."
 #, elixir-autogen, elixir-format
 msgid "Your membership request for group %{link_start}<b>%{group}</b>%{link_end} has been rejected."
 msgstr ""
-"Sua solicitação de associação para o grupo "
-"%{link_start}&lt;b&gt;%{group}&lt;/b&gt;%{link_end} foi rejeitada."
+"Sua solicitação de associação para o grupo %{link_start}&lt;b&gt;%{group}"
+"&lt;/b&gt;%{link_end} foi rejeitada."
 
 #: lib/web/templates/email/group_membership_approval.text.eex:3
 #, elixir-autogen, elixir-format
@@ -2139,8 +2140,8 @@ msgstr "Sua solicitação de associação para o grupo %{group} foi aprovada."
 #, elixir-autogen, elixir-format
 msgid "Your membership request for group %{link_start}<b>%{group}</b>%{link_end} has been approved."
 msgstr ""
-"Sua solicitação de associação para o grupo "
-"%{link_start}&lt;b&gt;%{group}&lt;/b&gt;%{link_end} foi aprovada."
+"Sua solicitação de associação para o grupo %{link_start}&lt;b&gt;%{group}"
+"&lt;/b&gt;%{link_end} foi aprovada."
 
 #: lib/web/templates/email/pending_participation_notification.html.heex:47
 #: lib/web/templates/email/pending_participation_notification.text.eex:4
@@ -2148,7 +2149,11 @@ msgstr ""
 msgid "You have one pending attendance request to process for the following event:"
 msgid_plural "You have %{number_participation_requests} attendance requests to process for the following event:"
 msgstr[0] ""
+"Você tem uma solicitação de participação pendente para processar no seguinte "
+"evento:"
 msgstr[1] ""
+"Você tem %{number_participation_requests} solicitações de participação para "
+"processar no seguinte evento:"
 
 #: lib/web/templates/email/admin_user_role_changed.html.heex:18
 #: lib/web/templates/email/admin_user_role_changed.text.eex:1
@@ -2174,8 +2179,8 @@ msgstr "Um administrador alterou manualmente o e-mail anexado à sua conta"
 #, elixir-autogen, elixir-format
 msgid "An administrator manually changed the email attached to your account on %{instance}"
 msgstr ""
-"Um administrador alterou manualmente o e-mail anexado à sua conta em "
-"%{instance}"
+"Um administrador alterou manualmente o e-mail anexado à sua conta em %"
+"{instance}"
 
 #: lib/web/templates/email/admin_user_confirmation.html.heex:18
 #: lib/web/templates/email/admin_user_confirmation.text.eex:1
@@ -2216,24 +2221,24 @@ msgstr ""
 #, elixir-autogen, elixir-format
 msgid "Hi there! We just wanted to inform you that an administrator from <b>%{instance}</b> just manually changed your account email from <b>%{old_email}</b> (this one) to <b>%{new_email}</b>."
 msgstr ""
-"Olá! Gostaríamos de informar que um administrador de "
-"&lt;b&gt;%{instance}&lt;/b&gt; alterou manualmente o e-mail da sua conta de "
-"&lt;b&gt;%{old_email}&lt;/b&gt; (este) para &lt;b&gt;%{new_email}&lt;/b&gt;."
+"Olá! Gostaríamos de informar que um administrador de &lt;b&gt;%{instance}"
+"&lt;/b&gt; alterou manualmente o e-mail da sua conta de &lt;b&gt;%{old_email}"
+"&lt;/b&gt; (este) para &lt;b&gt;%{new_email}&lt;/b&gt;."
 
 #: lib/web/templates/email/admin_user_email_changed_new.html.heex:47
 #, elixir-autogen, elixir-format
 msgid "Hi there! We just wanted to inform you that an administrator from <b>%{instance}</b> just manually changed your account email from <b>%{old_email}</b> to <b>%{new_email}</b> (this one)."
 msgstr ""
-"Olá! Gostaríamos de informar que um administrador de "
-"&lt;b&gt;%{instance}&lt;/b&gt; alterou manualmente o e-mail da sua conta de "
-"&lt;b&gt;%{old_email}&lt;/b&gt; para &lt;b&gt;%{new_email}&lt;/b&gt; (este)."
+"Olá! Gostaríamos de informar que um administrador de &lt;b&gt;%{instance}"
+"&lt;/b&gt; alterou manualmente o e-mail da sua conta de &lt;b&gt;%{old_email}"
+"&lt;/b&gt; para &lt;b&gt;%{new_email}&lt;/b&gt; (este)."
 
 #: lib/web/templates/email/admin_user_confirmation.html.heex:47
 #, elixir-autogen, elixir-format
 msgid "Hi there! We just wanted to inform you that an administrator from <b>%{instance}</b> just manually confirmed your account."
 msgstr ""
-"Olá! Gostaríamos de informar que um administrador de "
-"&lt;b&gt;%{instance}&lt;/b&gt; acabou de confirmar manualmente sua conta."
+"Olá! Gostaríamos de informar que um administrador de &lt;b&gt;%{instance}"
+"&lt;/b&gt; acabou de confirmar manualmente sua conta."
 
 #: lib/web/templates/email/admin_user_confirmation.html.heex:96
 #: lib/web/templates/email/admin_user_email_changed_new.html.heex:62
@@ -2254,8 +2259,8 @@ msgstr ""
 msgid "If something doesn't feel right to you, please contact the instance administrator through the contact methods on the instance's about page: %{about_page}."
 msgstr ""
 "Se algo não parecer certo para você, entre em contato com o administrador da "
-"instância por meio dos métodos de contato na página Sobre a instância: "
-"%{about_page}."
+"instância por meio dos métodos de contato na página Sobre a instância: %"
+"{about_page}."
 
 #: lib/web/templates/email/admin_user_confirmation.html.heex:79
 #, elixir-autogen, elixir-format
@@ -2309,8 +2314,8 @@ msgstr ""
 #, elixir-autogen, elixir-format
 msgid "Hi there! We just wanted to inform you that an administrator from <b>%{instance}</b> just changed your account role."
 msgstr ""
-"Olá! Gostaríamos de informar que um administrador de "
-"&lt;b&gt;%{instance}&lt;/b&gt; acabou de alterar a função da sua conta."
+"Olá! Gostaríamos de informar que um administrador de &lt;b&gt;%{instance}"
+"&lt;/b&gt; acabou de alterar a função da sua conta."
 
 #: lib/web/templates/email/instance_follow.text.eex:5
 #, elixir-autogen, elixir-format
@@ -2372,9 +2377,9 @@ msgid "Comedy"
 msgstr "Comédia"
 
 #: lib/mobilizon/events/categories.ex:72
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "Community"
-msgstr "Comentários"
+msgstr "Comunidade"
 
 #: lib/mobilizon/events/categories.ex:52
 #, elixir-autogen, elixir-format
@@ -2384,27 +2389,27 @@ msgstr "Artesanato"
 #: lib/mobilizon/events/categories.ex:76
 #, elixir-autogen, elixir-format
 msgid "Family & Education"
-msgstr ""
+msgstr "Família e Educação"
 
 #: lib/mobilizon/events/categories.ex:80
 #, elixir-autogen, elixir-format
 msgid "Fashion & Beauty"
-msgstr ""
+msgstr "Moda e Beleza"
 
 #: lib/mobilizon/events/categories.ex:84
 #, elixir-autogen, elixir-format
 msgid "Film & Media"
-msgstr ""
+msgstr "Filme e Mídia"
 
 #: lib/mobilizon/events/categories.ex:56
 #, elixir-autogen, elixir-format
 msgid "Food & Drink"
-msgstr ""
+msgstr "Comida e Bebida"
 
 #: lib/mobilizon/events/categories.ex:88
 #, elixir-autogen, elixir-format
 msgid "Games"
-msgstr "Jogos"
+msgstr "Games"
 
 #: lib/mobilizon/events/categories.ex:60
 #, elixir-autogen, elixir-format
@@ -2414,17 +2419,17 @@ msgstr "Saúde"
 #: lib/mobilizon/events/categories.ex:100
 #, elixir-autogen, elixir-format
 msgid "LGBTQ"
-msgstr "LGBTQ"
+msgstr "LGBTQIAPN+"
 
 #: lib/mobilizon/events/categories.ex:92
 #, elixir-autogen, elixir-format
 msgid "Language & Culture"
-msgstr ""
+msgstr "Idioma e Cultura"
 
 #: lib/mobilizon/events/categories.ex:96
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "Learning"
-msgstr "Atenção"
+msgstr "Ensino e Aprendizado"
 
 #: lib/mobilizon/events/categories.ex:149
 #, elixir-autogen, elixir-format
@@ -2434,7 +2439,7 @@ msgstr "Reunião"
 #: lib/mobilizon/events/categories.ex:104
 #, elixir-autogen, elixir-format
 msgid "Movements and politics"
-msgstr "Movimentos e política"
+msgstr "Movimentos e políticas"
 
 #: lib/mobilizon/events/categories.ex:64
 #, elixir-autogen, elixir-format
@@ -2444,12 +2449,12 @@ msgstr "Música"
 #: lib/mobilizon/events/categories.ex:108
 #, elixir-autogen, elixir-format
 msgid "Networking"
-msgstr "Rede"
+msgstr "Rede de contatos"
 
 #: lib/mobilizon/events/categories.ex:128
 #, elixir-autogen, elixir-format
 msgid "Outdoors & Adventure"
-msgstr ""
+msgstr "Outdoor e Aventura"
 
 #: lib/mobilizon/events/categories.ex:112
 #, elixir-autogen, elixir-format
@@ -2459,12 +2464,12 @@ msgstr "Festa"
 #: lib/mobilizon/events/categories.ex:116
 #, elixir-autogen, elixir-format
 msgid "Performing & Visual Arts"
-msgstr ""
+msgstr "Artes Cênicas e Visuais"
 
 #: lib/mobilizon/events/categories.ex:120
 #, elixir-autogen, elixir-format
 msgid "Pets"
-msgstr "Animais de estimação"
+msgstr "Pets"
 
 #: lib/mobilizon/events/categories.ex:124
 #, elixir-autogen, elixir-format
@@ -2474,12 +2479,12 @@ msgstr "Fotografia"
 #: lib/mobilizon/events/categories.ex:136
 #, elixir-autogen, elixir-format
 msgid "Science & Tech"
-msgstr ""
+msgstr "Ciência e Tecnologia"
 
 #: lib/mobilizon/events/categories.ex:132
 #, elixir-autogen, elixir-format
 msgid "Spirituality, Religion & Beliefs"
-msgstr ""
+msgstr "Espiritualidade, Religião e Crenças"
 
 #: lib/mobilizon/events/categories.ex:140
 #, elixir-autogen, elixir-format
@@ -2529,9 +2534,9 @@ msgstr ""
 "excluídos irrevogavelmente."
 
 #: lib/web/templates/email/report.text.eex:11
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "Events"
-msgstr "Evento"
+msgstr "Eventos"
 
 #: lib/web/templates/email/report.html.heex:115
 #, elixir-autogen, elixir-format
@@ -2589,18 +2594,18 @@ msgstr ""
 #: lib/web/templates/email/user_pending.html.heex:62
 #, elixir-autogen, elixir-format
 msgid "Login to view the list of pending users"
-msgstr ""
+msgstr "Entre para ver a lista de usuários pendentes"
 
 #: lib/web/templates/email/user_pending.text.eex:3
 #, elixir-autogen, elixir-format
 msgid "Login to view the list of pending users:"
-msgstr ""
+msgstr "Entre para ver a lista de usuários pendentes:"
 
 #: lib/web/templates/email/user_pending.html.heex:47
 #: lib/web/templates/email/user_pending.text.eex:1
 #, elixir-autogen, elixir-format
 msgid "New pending user from %{user} on %{instance}"
-msgstr ""
+msgstr "Novo usuário pendente de %{user} em %{instance}"
 
 #: lib/web/templates/email/user_pending.html.heex:18
 #, elixir-autogen, elixir-format, fuzzy
@@ -2610,10 +2615,10 @@ msgstr "Novo relato em %{instance}"
 #: lib/web/email/admin.ex:38
 #, elixir-autogen, elixir-format
 msgid "New pending user on Mobilizon instance %{instance}"
-msgstr ""
+msgstr "Novo usuário pendente na instância Mobilizon %{instance}"
 
 #: lib/web/templates/email/admin/_role.html.heex:9
 #: lib/web/templates/email/admin/_role.text.eex:1
 #, elixir-autogen, elixir-format
 msgid "Pending"
-msgstr ""
+msgstr "Pendente"

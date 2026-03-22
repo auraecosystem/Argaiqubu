@@ -8,15 +8,15 @@
 # # to merge POT files into PO files.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-08-12 09:30+0000\n"
-"Last-Translator: josé m. <correo@xmgz.eu>\n"
+"PO-Revision-Date: 2026-03-18 21:35+0000\n"
+"Last-Translator: \"josé m.\" <correoxm@disroot.org>\n"
 "Language-Team: Galician <https://weblate.framasoft.org/projects/mobilizon/"
 "backend-errors/gl/>\n"
 "Language: gl\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.6.2\n"
+"X-Generator: Weblate 5.16.2\n"
 
 #: lib/mobilizon/discussions/discussion.ex:68
 #, elixir-autogen
@@ -1434,76 +1434,77 @@ msgid "There are no participants matching the audience you've selected."
 msgstr "Non hai participantes que concorden coa audiencia que seleccionaches."
 
 #: lib/graphql/resolvers/post.ex:178
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "An error occured while updating your post"
-msgstr "Algo fallou ao gardar a exportación"
+msgstr "Algo fallou ao actualizar a túa publicación"
 
 #: lib/mobilizon/admin/admin.ex:297
 #, elixir-autogen, elixir-format
 msgid "External link URL must be a valid http/https URL"
-msgstr ""
+msgstr "O URL externo ten que ser un URL válido http/https"
 
 #: lib/mobilizon/admin/admin.ex:288
 #, elixir-autogen, elixir-format
 msgid "External link label cannot be blank"
-msgstr ""
+msgstr "A etiqueta da ligazón externa non pode quedar baleira"
 
 #: lib/mobilizon/admin/admin.ex:291
 #, elixir-autogen, elixir-format
 msgid "External link label must be at least 2 characters"
-msgstr ""
+msgstr "A etiqueta da ligazón externa ten que ter 2 caracteres polo menos"
 
 #: lib/mobilizon/admin/admin.ex:294
 #, elixir-autogen, elixir-format
 msgid "External link label must be at most 256 characters"
-msgstr ""
+msgstr "A etiqueta da ligazón externa non pode superar os 256 caracteres"
 
 #: lib/graphql/resolvers/user.ex:195
 #, elixir-autogen, elixir-format
 msgid "Moderation text must not be empty"
-msgstr ""
+msgstr "O texto da moderación non pode quedar baleiro"
 
 #: lib/graphql/resolvers/user.ex:633
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "User already enabled"
-msgstr "A usuaria xa está desactivada"
+msgstr "A usuaria xa está activada"
 
 #: lib/graphql/resolvers/user.ex:386
 #, elixir-autogen, elixir-format
 msgid "User is pending"
-msgstr ""
+msgstr "A usuaria está pendente"
 
 #: lib/graphql/error.ex:113
 #, elixir-autogen, elixir-format
 msgid "User pending"
-msgstr ""
+msgstr "Usuaria pendente"
 
 #: lib/graphql/resolvers/feed_token.ex:82
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "You are not allowed to get a feed token if not connected"
-msgstr "Non tes permiso para eliminar o token da fonte se non estás conectada"
+msgstr "Non tes permiso para obter o token da canle se non accedeches"
 
 #: lib/graphql/resolvers/member.ex:122
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "You can't accept this invitation."
-msgstr "Non podes aceptar este convite con este perfil."
+msgstr "Non podes aceptar este convite."
 
 #: lib/graphql/resolvers/member.ex:150
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "You can't reject this invitation."
-msgstr "Non podes rexeitar este convite con este perfil."
+msgstr "Non podes rexeitar este convite."
 
 #: lib/graphql/resolvers/feed_token.ex:76
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "You don't have permission to get this token"
-msgstr "Non tes permiso para eliminar este token"
+msgstr "Non tes permiso para obter este token"
 
 #: lib/graphql/resolvers/user.ex:638
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "You need to be logged-in and moderator to unban an account"
-msgstr "Tes que estas conectada e ser moderadora para actualizar unha denuncia"
+msgstr ""
+"Tes que iniciar sesión e ser moderadora para retirar o veto a unha conta"
 
 #: lib/graphql/resolvers/invitation.ex:28
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "Impossible to create the invitation"
-msgstr "Non foi posible crear a aplicación."
+msgstr "Non foi posible crear o convite"

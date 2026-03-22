@@ -10,15 +10,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-10-01 15:17+0200\n"
-"Last-Translator: PierreMary <pierre-mary@le-florida.org>\n"
-"Language-Team: French <https://weblate.framasoft.org/projects/mobilizon/activity/fr/>\n"
+"PO-Revision-Date: 2026-03-11 21:39+0000\n"
+"Last-Translator: Thomas Citharel <thomas.citharel@framasoft.org>\n"
+"Language-Team: French <https://weblate.framasoft.org/projects/mobilizon/"
+"activity/fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Poedit 3.7\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 5.16.2\n"
 
 #: lib/web/templates/email/activity/_member_activity_item.html.heex:14
 #: lib/web/templates/email/activity/_member_activity_item.text.eex:12
@@ -220,7 +221,9 @@ msgstr "%{profile} a répondu à un commentaire sur l'événement %{event}."
 #: lib/web/templates/email/email_direct_activity.text.eex:27
 #, elixir-autogen, elixir-format
 msgid "Don't want to receive activity notifications? You may change frequency or disable them in your settings."
-msgstr "Vous ne voulez pas recevoir de notifications d'activité ? Vous pouvez changer leur fréquence ou les désactiver dans vos préférences."
+msgstr ""
+"Vous ne voulez pas recevoir de notifications d'activité ? Vous pouvez "
+"changer leur fréquence ou les désactiver dans vos préférences."
 
 #: lib/web/templates/email/email_direct_activity.html.heex:230
 #: lib/web/templates/email/email_direct_activity.text.eex:23
@@ -257,13 +260,15 @@ msgstr "%{profile} a posté une annonce sous l'événement %{event}."
 #: lib/web/templates/email/activity/_comment_activity_item.text.eex:1
 #, elixir-autogen, elixir-format
 msgid "%{profile} mentionned you in a comment under event %{event}."
-msgstr "%{profile} vous a mentionné dans un commentaire sous l'événement %{event}."
+msgstr ""
+"%{profile} vous a mentionné dans un commentaire sous l'événement %{event}."
 
 #: lib/web/templates/email/email_direct_activity.html.heex:260
 #, elixir-autogen, elixir-format
 msgid "Don't want to receive activity notifications? You may change frequency or disable them in %{tag_start}your settings%{tag_end}."
 msgstr ""
-"Vous ne voulez pas recevoir de notifications d'activité ? Vous pouvez changer leur fréquence ou les désactiver dans %{tag_start}vos préférences%"
+"Vous ne voulez pas recevoir de notifications d'activité ? Vous pouvez "
+"changer leur fréquence ou les désactiver dans %{tag_start}vos préférences%"
 "{tag_end}."
 
 #: lib/web/templates/email/email_direct_activity.html.heex:51
@@ -299,7 +304,8 @@ msgstr "Récapitulatif hebdomadaire d'activité sur %{instance}"
 #: lib/web/templates/email/activity/_comment_activity_item.text.eex:19
 #, elixir-autogen, elixir-format
 msgid "%{profile} has posted a new comment under your event %{event}."
-msgstr "%{profile} a posté un nouveau commentaire sous votre événement %{event}."
+msgstr ""
+"%{profile} a posté un nouveau commentaire sous votre événement %{event}."
 
 #: lib/service/activity/renderer/comment.ex:52
 #: lib/web/templates/email/activity/_comment_activity_item.html.heex:22
@@ -366,7 +372,8 @@ msgstr "%{profile} a ajouté le ou la membre %{member} au groupe %{group}."
 #: lib/service/activity/renderer/member.ex:54
 #, elixir-autogen, elixir-format
 msgid "%{profile} approved the membership request from %{member} for group %{group}."
-msgstr "%{profile} a approuvé la demande d'adhésion de %{member} au groupe %{group}."
+msgstr ""
+"%{profile} a approuvé la demande d'adhésion de %{member} au groupe %{group}."
 
 #: lib/service/activity/renderer/resource.ex:32
 #, elixir-autogen, elixir-format
@@ -406,17 +413,23 @@ msgstr "%{profile} a quitté le groupe %{group}."
 #: lib/service/activity/renderer/member.ex:62
 #, elixir-autogen, elixir-format
 msgid "%{profile} rejected the membership request from %{member} for group %{group}."
-msgstr "%{profile} a rejeté la demande d'adhésion de %{member} pour le groupe %{group}."
+msgstr ""
+"%{profile} a rejeté la demande d'adhésion de %{member} pour le groupe %"
+"{group}."
 
 #: lib/service/activity/renderer/resource.ex:44
 #, elixir-autogen, elixir-format
 msgid "%{profile} renamed the folder from %{old_resource_title} to %{resource} in group %{group}."
-msgstr "%{profile} a renommé le dossier %{old_resource_title} en %{resource} dans le groupe %{group}."
+msgstr ""
+"%{profile} a renommé le dossier %{old_resource_title} en %{resource} dans le "
+"groupe %{group}."
 
 #: lib/service/activity/renderer/resource.ex:50
 #, elixir-autogen, elixir-format
 msgid "%{profile} renamed the resource from %{old_resource_title} to %{resource} in group %{group}."
-msgstr "%{profile} a renommé la ressource %{old_resource_title} en %{resource} dans le groupe %{group}."
+msgstr ""
+"%{profile} a renommé la ressource %{old_resource_title} en %{resource} dans "
+"le groupe %{group}."
 
 #: lib/service/activity/renderer/member.ex:70
 #, elixir-autogen, elixir-format
@@ -446,7 +459,9 @@ msgstr "%{profile} a créé la discussion %{discussion} dans le groupe %{group}.
 #: lib/service/activity/renderer/discussion.ex:55
 #, elixir-autogen, elixir-format
 msgid "%{profile} mentionned you in the discussion %{discussion} in group %{group}."
-msgstr "%{profile} vous a mentionné dans la discussion %{discussion} du groupe %{group}."
+msgstr ""
+"%{profile} vous a mentionné dans la discussion %{discussion} du groupe %"
+"{group}."
 
 #: lib/service/activity/renderer/discussion.ex:70
 #, elixir-autogen, elixir-format
@@ -532,12 +547,15 @@ msgstr "Informations sur votre événement %{event}"
 #: lib/web/templates/email/email_anonymous_activity.text.eex:20
 #, elixir-autogen, elixir-format
 msgid "It might give details on how to join the event, so make sure to read it appropriately."
-msgstr "Elle peut donner des détails sur la manière de participer à l'événement, veillez donc à la lire attentivement."
+msgstr ""
+"Elle peut donner des détails sur la manière de participer à l'événement, "
+"veillez donc à la lire attentivement."
 
 #: lib/web/templates/email/email_anonymous_activity.html.heex:156
 #: lib/web/templates/email/email_anonymous_activity.text.eex:28
 #, elixir-autogen, elixir-format
 msgid "This information is sent privately to you as a person who registered for this event. Share the informations above with other people with caution."
 msgstr ""
-"Ces informations vous sont envoyées en privé en tant que personne inscrite à cet événement. Partagez les informations ci-dessus avec d'autres "
-"personnes avec prudence."
+"Ces informations vous sont envoyées en privé en tant que personne inscrite à "
+"cet événement. Partagez les informations ci-dessus avec d'autres personnes "
+"avec prudence."

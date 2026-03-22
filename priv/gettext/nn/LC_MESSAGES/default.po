@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-11-02 22:03+0000\n"
-"PO-Revision-Date: 2022-11-08 13:26+0000\n"
-"Last-Translator: Eivind Ødegård <eivind.odegard@sogn.no>\n"
+"PO-Revision-Date: 2026-03-11 21:34+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Norwegian Nynorsk <https://weblate.framasoft.org/projects/"
 "mobilizon/backend/nn/>\n"
 "Language: nn\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.14.1\n"
+"X-Generator: Weblate 5.16.2\n"
 
 #: lib/web/templates/email/password_reset.html.heex:66
 #, elixir-autogen, elixir-format
@@ -280,9 +280,9 @@ msgid "If this server is in the USA: Our site, products and services are all dir
 msgstr ""
 "Viss denne tenaren er i USA: Nettstaden vår og tenestene på han er meint for "
 "dei somer minst 13 år gamle. Viss du er under 13 år, bed me deg under "
-"føresegnene i COPPA (<a href=\"https://en.wikipedia.org/wiki/Children%"
-"27s_Online_Privacy_Protection_Act\">Children's Online Privacy Protection "
-"Act</a>) at du ikkje bruker nettstaden."
+"føresegnene i COPPA (<a href=\"https://en.wikipedia.org/wiki/"
+"Children%27s_Online_Privacy_Protection_Act\">Children's Online Privacy "
+"Protection Act</a>) at du ikkje bruker nettstaden."
 
 #: lib/web/templates/api/privacy.html.heex:160
 #, elixir-autogen, elixir-format
@@ -632,8 +632,7 @@ msgstr ""
 msgctxt "terms"
 msgid "For full details about the Mobilizon software <a href=\"https://mobilizon.org\">see here</a>."
 msgstr ""
-"Les meir om Mobilizon-programvara <a href=\"https://mobilizon.org\""
-">her</a>."
+"Les meir om Mobilizon-programvara <a href=\"https://mobilizon.org\">her</a>."
 
 #: lib/web/templates/api/terms.html.heex:47
 #, elixir-autogen, elixir-format
@@ -689,8 +688,8 @@ msgctxt "terms"
 msgid "These Terms constitute the entire agreement between you and <b>%{instance_name}</b> regarding the use of the Service, superseding any prior agreements between you and <b>%{instance_name}</b> relating to your use of the Service."
 msgstr ""
 "Desse vilkåra utgjer heile avtala mellom deg og <b>%{instance_name}</b> for "
-"å bruka tenesta, og avløyser alle tidlegare avtaler mellom deg og "
-"<b>%{instance_name}</b> om det same."
+"å bruka tenesta, og avløyser alle tidlegare avtaler mellom deg og <b>%"
+"{instance_name}</b> om det same."
 
 #: lib/web/templates/api/terms.html.heex:247
 #, elixir-autogen, elixir-format
@@ -698,9 +697,9 @@ msgctxt "terms"
 msgid "This Service runs on a Mobilizon instance. This source code is licensed under an <a href=\"https://tldrlegal.com/license/gnu-affero-general-public-license-v3-(agpl-3.0)\">AGPLv3 license</a> which means you are allowed to and even encouraged to take the source code, modify it and use it."
 msgstr ""
 "Denne tenesta bruker ein Mobilizon-nettstad. Kjeldekoden er gjeven ut under "
-"<a href=\"https://tldrlegal.com/license/gnu-affero-general-public-"
-"license-v3-(agpl-3.0)\">AGPLv3-lisensen</a>, som både gjev deg høve til, og "
-"faktisk oppmodar deg til, å sjå på, bruka og endra kjeldekoden."
+"<a href=\"https://tldrlegal.com/license/gnu-affero-general-public-license-v3-"
+"(agpl-3.0)\">AGPLv3-lisensen</a>, som både gjev deg høve til, og faktisk "
+"oppmodar deg til, å sjå på, bruka og endra kjeldekoden."
 
 #: lib/web/templates/api/terms.html.heex:185
 #, elixir-autogen, elixir-format
@@ -785,20 +784,20 @@ msgstr ""
 msgctxt "terms"
 msgid "Originally adapted from the <a href=\"https://joindiaspora.com/terms\">Diaspora*</a> and <a href=\"https://github.com/appdotnet/terms-of-service\">App.net</a> privacy policies, also licensed under <a href=\"https://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA</a>."
 msgstr ""
-"Opphaveleg henta frå personvernretningslinene til <a href=\"https"
-"://joindiaspora.com/terms\">Diaspora*</a> og <a href=\"https://github.com/"
-"appdotnet/terms-of-service\">App.net</a>, som òg er under <a href=\"https"
-"://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA</a>-lisensen."
+"Opphaveleg henta frå personvernretningslinene til <a href=\"https://"
+"joindiaspora.com/terms\">Diaspora*</a> og <a href=\"https://github.com/"
+"appdotnet/terms-of-service\">App.net</a>, som òg er under <a href=\"https://"
+"creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA</a>-lisensen."
 
 #: lib/web/templates/api/privacy.html.heex:173
 #, elixir-autogen, elixir-format
 msgctxt "terms"
 msgid "Originally adapted from the <a href=\"https://mastodon.social/terms\">Mastodon</a> and <a href=\"https://github.com/discourse/discourse\">Discourse</a> privacy policies, also licensed under <a href=\"https://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA</a>."
 msgstr ""
-"Opphaveleg henta frå personvernretningslinene til <a href=\"https://mastodon."
-"social/terms\">Mastodon</a> og <a href=\"https://github.com/discourse/"
-"discourse\">Discourse</a>, som òg er under <a href=\"https://creativecommons."
-"org/licenses/by-sa/4.0/\">CC BY-SA</a>-lisensen."
+"Opphaveleg henta frå personvernretningslinene til <a href=\"https://"
+"mastodon.social/terms\">Mastodon</a> og <a href=\"https://github.com/"
+"discourse/discourse\">Discourse</a>, som òg er under <a href=\"https://"
+"creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA</a>-lisensen."
 
 #: lib/web/templates/api/terms.html.heex:3
 #, elixir-autogen, elixir-format
@@ -996,8 +995,8 @@ msgid "If you did not trigger this change yourself, it is likely that someone ha
 msgstr ""
 "Viss du ikkje gjorde denne endringa sjølv, er det sannsynleg at nokon har "
 "tilgang til kontoen din på %{host}. Då bør du logga inn og endra passordet "
-"ditt med ein gong. Viss du ikkje kan logga inn, bør du kontakta styraren på "
-"%{host}."
+"ditt med ein gong. Viss du ikkje kan logga inn, bør du kontakta styraren på %"
+"{host}."
 
 #: lib/web/templates/email/password_reset.text.eex:12
 #, elixir-autogen, elixir-format
@@ -1217,8 +1216,8 @@ msgstr ""
 #, elixir-autogen, elixir-format
 msgid "<b>%{inviter}</b> just invited you to join their group %{link_start}<b>%{group}</b>%{link_end}"
 msgstr ""
-"<b>%{inviter}</b> har nett invitert deg til gruppa "
-"%{link_start}<b>%{group}</b>%{link_end}"
+"<b>%{inviter}</b> har nett invitert deg til gruppa %{link_start}<b>%{group}</"
+"b>%{link_end}"
 
 #: lib/web/templates/email/group_member_removal.html.heex:47
 #, elixir-autogen, elixir-format
@@ -1245,8 +1244,8 @@ msgstr "Gruppa %{group} på %{instance} er sperra!"
 #, elixir-autogen, elixir-format
 msgid "Your instance's moderation team has decided to suspend %{group_name} (%{group_address}). You are no longer a member of this group."
 msgstr ""
-"Styrarane på nettstaden din har avgjort å sperra gruppa %{group_name} "
-"(%{group_address}). Du er ikkje lenger medlem av gruppa."
+"Styrarane på nettstaden din har avgjort å sperra gruppa %{group_name} (%"
+"{group_address}). Du er ikkje lenger medlem av gruppa."
 
 #: lib/web/email/group.ex:106
 #, elixir-autogen, elixir-format
@@ -1379,8 +1378,8 @@ msgid "When you create an account you agree to maintain the security and confide
 msgstr ""
 "Når du lagar ein brukarkonto, godtek du at du vil halda han sikker, at du "
 "held passordet ditt løynt, og at du godtek all risiko når det gjeld uløyves "
-"tilgang til kontoopplysingane dine eller andre opplysingar du gjev til "
-"<b>%{instance_name}</b>."
+"tilgang til kontoopplysingane dine eller andre opplysingar du gjev til <b>%"
+"{instance_name}</b>."
 
 #: lib/web/templates/api/terms.html.heex:134
 #, elixir-autogen, elixir-format
@@ -1578,8 +1577,8 @@ msgstr "Straum for %{email} på %{instance}"
 #, elixir-autogen, elixir-format
 msgid "If the issue persists, you may contact the server administrator at %{contact}."
 msgstr ""
-"Viss feilen held fram, kan du kontakta styraren for denne tenaren på "
-"%{contact}."
+"Viss feilen held fram, kan du kontakta styraren for denne tenaren på %"
+"{contact}."
 
 #: lib/web/templates/error/500_page.html.heex:59
 #, elixir-autogen, elixir-format
@@ -1612,8 +1611,8 @@ msgstr "Du har meldt deg av deltakinga på %{title}!"
 #, elixir-autogen, elixir-format
 msgid "Your instance's moderation team has decided to suspend %{actor_name} (%{actor_address}). All of their events have been removed and your participation to event %{event} cancelled."
 msgstr ""
-"Styrarane på nettstaden din har avgjort å sperra gruppa %{group_name} "
-"(%{group_address}). Du er ikkje lenger medlem av gruppa."
+"Styrarane på nettstaden din har avgjort å sperra gruppa %{group_name} (%"
+"{group_address}). Du er ikkje lenger medlem av gruppa."
 
 #: lib/web/templates/email/group_suspension.html.heex:50
 #, elixir-autogen, elixir-format
@@ -1885,8 +1884,8 @@ msgstr "Førespurnaden din om å bli med i %{group} fekk avslag."
 #, elixir-autogen, elixir-format
 msgid "Your membership request for group %{link_start}<b>%{group}</b>%{link_end} has been rejected."
 msgstr ""
-"Førespurnaden din om å bli med i gruppa "
-"%{link_start}<b>%{group}</b>%{link_end} fekk avslag."
+"Førespurnaden din om å bli med i gruppa %{link_start}<b>%{group}</b>%"
+"{link_end} fekk avslag."
 
 #: lib/web/templates/email/group_membership_approval.text.eex:3
 #, elixir-autogen, elixir-format
@@ -1897,8 +1896,8 @@ msgstr "Førespurnaden din om å bli med i gruppa %{group} er godkjend."
 #, elixir-autogen, elixir-format
 msgid "Your membership request for group %{link_start}<b>%{group}</b>%{link_end} has been approved."
 msgstr ""
-"Førespurnaden din om å bli med i gruppa "
-"%{link_start}<b>%{group}</b>%{link_end} er godkjend."
+"Førespurnaden din om å bli med i gruppa %{link_start}<b>%{group}</b>%"
+"{link_end} er godkjend."
 
 #: lib/web/templates/email/pending_participation_notification.html.heex:47
 #: lib/web/templates/email/pending_participation_notification.text.eex:4
@@ -1935,8 +1934,8 @@ msgstr ""
 #, elixir-autogen, elixir-format
 msgid "An administrator manually changed the email attached to your account on %{instance}"
 msgstr ""
-"Ein styrar endra epostadressa som er knytt til brukarkontoen din på "
-"%{instance} manuelt"
+"Ein styrar endra epostadressa som er knytt til brukarkontoen din på %"
+"{instance} manuelt"
 
 #: lib/web/templates/email/admin_user_confirmation.html.heex:18
 #: lib/web/templates/email/admin_user_confirmation.text.eex:1
@@ -1964,8 +1963,8 @@ msgstr ""
 msgid "Hi there! We just wanted to inform you that an administrator from %{instance} just manually changed your account email from %{old_email} (this one) to %{new_email}."
 msgstr ""
 "Hei! Me vil berre melda at ein styrar på %{instance} nettopp endra "
-"epostadressa til brukarkontoen din frå %{old_email} (denne adressa) til "
-"%{new_email}."
+"epostadressa til brukarkontoen din frå %{old_email} (denne adressa) til %"
+"{new_email}."
 
 #: lib/web/templates/email/admin_user_confirmation.text.eex:3
 #, elixir-autogen, elixir-format
@@ -1987,8 +1986,8 @@ msgstr ""
 msgid "Hi there! We just wanted to inform you that an administrator from <b>%{instance}</b> just manually changed your account email from <b>%{old_email}</b> to <b>%{new_email}</b> (this one)."
 msgstr ""
 "Hei! Me vil berre melda at ein styrar på <b>%{instance}</b> nettopp endra "
-"epostadressa til brukarkontoen din manuelt frå <b>%{old_email}</b> til "
-"<b>%{new_email}</b> (denne adressa)."
+"epostadressa til brukarkontoen din manuelt frå <b>%{old_email}</b> til <b>%"
+"{new_email}</b> (denne adressa)."
 
 #: lib/web/templates/email/admin_user_confirmation.html.heex:47
 #, elixir-autogen, elixir-format
@@ -2342,12 +2341,12 @@ msgid "When we say “we”, “our”, or “us” in this document, we are ref
 msgstr ""
 "Når me seier «me», «vår» eller «oss» i dette dokumentet, meiner me dei som "
 "eig, driv og styrer denne Mobilizon-nettstaden. Programvara Mobilizon blir "
-"gjeven ut av eit lag med bidragsytarar, støtta av <a href=\"https://framasoft"
-".org\">Framasoft</a>, som er ein fransk ideell organisasjon som arbeider for "
-"fri og gratis programvare. Dersom det ikkje står anna, er denne Mobilizon-"
-"nettstaden ei uavhengig teneste som bruker kjeldekode frå Mobilizon. Du kan "
-"lesa meir om denne nettstaden på <a href=\"/about/instance\">«Om "
-"oss»</a>-sida."
+"gjeven ut av eit lag med bidragsytarar, støtta av <a href=\"https://"
+"framasoft.org\">Framasoft</a>, som er ein fransk ideell organisasjon som "
+"arbeider for fri og gratis programvare. Dersom det ikkje står anna, er denne "
+"Mobilizon-nettstaden ei uavhengig teneste som bruker kjeldekode frå "
+"Mobilizon. Du kan lesa meir om denne nettstaden på <a href=\"/about/"
+"instance\">«Om oss»</a>-sida."
 
 #: lib/web/templates/email/user_pending.html.heex:62
 #, elixir-autogen, elixir-format

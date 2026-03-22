@@ -8,15 +8,15 @@
 ## to merge POT files into PO files.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-09-17 07:45+0000\n"
-"Last-Translator: Marco Ciampa <ciampix@posteo.net>\n"
+"PO-Revision-Date: 2026-03-11 21:37+0000\n"
+"Last-Translator: lost_geographer <david@chionne.eu>\n"
 "Language-Team: Italian <https://weblate.framasoft.org/projects/mobilizon/"
 "activity/it/>\n"
 "Language: it\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.13.3\n"
+"X-Generator: Weblate 5.16.2\n"
 
 #: lib/web/templates/email/activity/_member_activity_item.html.heex:14
 #: lib/web/templates/email/activity/_member_activity_item.text.eex:12
@@ -464,8 +464,8 @@ msgstr ""
 #, elixir-autogen, elixir-format
 msgid "%{profile} mentionned you in the discussion %{discussion} in group %{group}."
 msgstr ""
-"%{profile} ti ha menzionato nella discussione %{discussion} nel gruppo "
-"%{group}."
+"%{profile} ti ha menzionato nella discussione %{discussion} nel gruppo %"
+"{group}."
 
 #: lib/service/activity/renderer/discussion.ex:70
 #, elixir-autogen, elixir-format
@@ -532,7 +532,7 @@ msgstr "%{profile} ha risposto in una %{conversation}."
 #: lib/web/templates/email/activity/_conversation_activity_item.text.eex:6
 #, elixir-autogen, elixir-format
 msgid "%{profile} replied you in a conversation."
-msgstr "%{profile} ti ha risposto in una conversazione."
+msgstr "%{profile} ti ha risposto in una conversazione"
 
 #: lib/service/activity/renderer/conversation.ex:49
 #, elixir-autogen, elixir-format

@@ -8,15 +8,15 @@
 ## to merge POT files into PO files.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-04-12 14:40+0000\n"
+"PO-Revision-Date: 2026-03-11 21:37+0000\n"
 "Last-Translator: Samuel Brinkmann <sbrinkmann@54gradsoftware.de>\n"
 "Language-Team: German <https://weblate.framasoft.org/projects/mobilizon/"
 "activity/de/>\n"
 "Language: de\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Weblate 5.4.3\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.16.2\n"
 
 #: lib/web/templates/email/activity/_member_activity_item.html.heex:14
 #: lib/web/templates/email/activity/_member_activity_item.text.eex:12
@@ -425,8 +425,8 @@ msgstr "%{profile} hat die Gruppe verlassen."
 #, elixir-autogen, elixir-format
 msgid "%{profile} rejected the membership request from %{member} for group %{group}."
 msgstr ""
-"%{profile} hat die Mitgliedschaftsanfrage von %{member} für die Gruppe "
-"%{group} abgelehnt."
+"%{profile} hat die Mitgliedschaftsanfrage von %{member} für die Gruppe %"
+"{group} abgelehnt."
 
 #: lib/service/activity/renderer/resource.ex:44
 #, elixir-autogen, elixir-format

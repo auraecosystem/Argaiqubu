@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-11-25 07:56+0000\n"
-"PO-Revision-Date: 2024-04-25 13:45+0000\n"
+"PO-Revision-Date: 2026-03-11 21:37+0000\n"
 "Last-Translator: Milo Ivir <mail@milotype.de>\n"
 "Language-Team: Croatian <https://weblate.framasoft.org/projects/mobilizon/"
 "backend-errors/hr/>\n"
@@ -11,9 +11,9 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 5.5\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 5.16.2\n"
 
 ## This file is a PO Template file.
 ##
@@ -159,7 +159,7 @@ msgstr "Grupa s ID oznakom %{id} nije pronađena"
 #, elixir-autogen, elixir-format
 msgid "Impossible to authenticate, either your email or password are invalid."
 msgstr ""
-"Autentifikacija nije moguća, vaša e-mail adresa ili lozinka su neispravni."
+"Autentifikacija nije moguća, tvoja e-mail adresa ili lozinka su neispravni."
 
 #: lib/graphql/resolvers/group.ex:339
 #: lib/graphql/resolvers/group.ex:346
@@ -447,7 +447,7 @@ msgstr "Nijedan profil nije pronađen za korisnika"
 #: lib/graphql/resolvers/feed_token.ex:118
 #, elixir-autogen, elixir-format
 msgid "No such feed token"
-msgstr ""
+msgstr "Nema takvog tokena za feedove"
 
 #: lib/graphql/resolvers/participant.ex:266
 #, elixir-autogen, elixir-format
@@ -637,7 +637,7 @@ msgstr "Ne možeš izbrisati ovaj događaj"
 #: lib/graphql/resolvers/member.ex:90
 #, elixir-autogen, elixir-format
 msgid "You cannot invite to this group"
-msgstr "Ne možeš pozivati u ovu grupu"
+msgstr "Ne možeš pozvati u ovu grupu"
 
 #: lib/graphql/resolvers/feed_token.ex:130
 #, elixir-autogen, elixir-format
@@ -884,17 +884,17 @@ msgstr "Ovo je korisničko ime već zauzeto."
 #: lib/graphql/resolvers/discussion.ex:81
 #, elixir-autogen, elixir-format
 msgid "You must provide either an ID or a slug to access a discussion"
-msgstr ""
+msgstr "Za pristup raspravi moraš navesti ID ili identifikator (slug)"
 
 #: lib/graphql/resolvers/event.ex:294
 #, elixir-autogen, elixir-format
 msgid "Organizer profile is not owned by the user"
-msgstr ""
+msgstr "Profil organizatora nije u vlasništvu korisnika"
 
 #: lib/graphql/resolvers/participant.ex:95
 #, elixir-autogen, elixir-format
 msgid "Profile ID provided is not the anonymous profile one"
-msgstr ""
+msgstr "Navedeni ID profila nije ID anonimnog profila"
 
 #: lib/graphql/resolvers/group.ex:181
 #: lib/graphql/resolvers/group.ex:223
@@ -902,49 +902,51 @@ msgstr ""
 #: lib/graphql/resolvers/person.ex:206
 #, elixir-autogen, elixir-format
 msgid "The provided picture is too heavy"
-msgstr ""
+msgstr "Slika je prevelika"
 
 #: lib/graphql/resolvers/resource.ex:131
 #, elixir-autogen, elixir-format
 msgid "Error while creating resource"
-msgstr ""
+msgstr "Greška tijekom stvaranja resursa"
 
 #: lib/graphql/resolvers/user.ex:615
 #, elixir-autogen, elixir-format
 msgid "Invalid activation token"
-msgstr ""
+msgstr "Nevažeći aktivacijski token"
 
 #: lib/graphql/resolvers/resource.ex:228
 #, elixir-autogen, elixir-format
 msgid "Unable to fetch resource details from this URL."
-msgstr ""
+msgstr "Nije moguće dohvatiti detalje resursa s ovog URL-a."
 
 #: lib/graphql/resolvers/event.ex:183
 #: lib/graphql/resolvers/participant.ex:260
 #: lib/graphql/resolvers/participant.ex:342
 #, elixir-autogen, elixir-format
 msgid "Provided profile doesn't have moderator permissions on this event"
-msgstr ""
+msgstr "Navedeni profil nema moderatorske dozvole za ovaj događaj"
 
 #: lib/graphql/resolvers/event.ex:312
 #, elixir-autogen, elixir-format
 msgid "Organizer profile doesn't have permission to create an event on behalf of this group"
-msgstr ""
+msgstr "Profil organizatora nema dozvole za stvaranje događaja u ime ove grupe"
 
 #: lib/graphql/resolvers/event.ex:387
 #, elixir-autogen, elixir-format
 msgid "This profile doesn't have permission to update an event on behalf of this group"
-msgstr ""
+msgstr "Ovaj profil nema dozvole za aktualiziranje događaja u ime ove grupe"
 
 #: lib/graphql/resolvers/user.ex:202
 #, elixir-autogen, elixir-format
 msgid "Your e-mail has been denied registration or uses a disallowed e-mail provider"
 msgstr ""
+"Registracija tvoje e-mail adrese je odbijena ili koristi nedopuštenog "
+"pružatelja usluge e-pošte"
 
 #: lib/graphql/resolvers/comment.ex:156
 #, elixir-autogen, elixir-format
 msgid "Comment not found"
-msgstr ""
+msgstr "Komentar nije pronađen"
 
 #: lib/graphql/resolvers/discussion.ex:123
 #, elixir-autogen, elixir-format
@@ -954,28 +956,28 @@ msgstr "Greška tijekom stvaranje rasprave"
 #: lib/graphql/resolvers/user.ex:758
 #, elixir-autogen, elixir-format
 msgid "Error while updating locale"
-msgstr ""
+msgstr "Greška prilikom aktualiziranja jezika"
 
 #: lib/graphql/resolvers/participant.ex:194
 #, elixir-autogen, elixir-format
 msgid "Failed to leave the event"
-msgstr ""
+msgstr "Napuštanje događaja nije uspjelo"
 
 #: lib/graphql/resolvers/group.ex:236
 #, elixir-autogen, elixir-format
 msgid "Failed to update the group"
-msgstr ""
+msgstr "Aktualiziranje grupe nije uspjelo"
 
 #: lib/graphql/resolvers/admin.ex:397
 #: lib/graphql/resolvers/user.ex:596
 #, elixir-autogen, elixir-format
 msgid "Failed to update user email"
-msgstr ""
+msgstr "Aktualiziranje korisničke e-mail adrese nije uspjelo"
 
 #: lib/graphql/resolvers/user.ex:611
 #, elixir-autogen, elixir-format
 msgid "Failed to validate user email"
-msgstr ""
+msgstr "Provjera korisničke e-mail adrese nije uspjela"
 
 #: lib/graphql/resolvers/participant.ex:148
 #, elixir-autogen, elixir-format
@@ -985,82 +987,82 @@ msgstr "ID anonimnog aktera je neispravan"
 #: lib/graphql/resolvers/resource.ex:167
 #, elixir-autogen, elixir-format
 msgid "Unknown error while updating resource"
-msgstr ""
+msgstr "Nepoznata greška prilikom aktualiziranja resursa"
 
 #: lib/graphql/resolvers/comment.ex:111
 #, elixir-autogen, elixir-format
 msgid "You are not the comment creator"
-msgstr ""
+msgstr "Nisi autor komentara"
 
 #: lib/graphql/resolvers/user.ex:520
 #, elixir-autogen, elixir-format
 msgid "You cannot change your password."
-msgstr ""
+msgstr "Ne možeš promijeniti lozinku."
 
 #: lib/graphql/resolvers/participant.ex:335
 #, elixir-autogen, elixir-format
 msgid "Format not supported"
-msgstr ""
+msgstr "Format nije podržan"
 
 #: lib/graphql/resolvers/participant.ex:319
 #, elixir-autogen, elixir-format
 msgid "A dependency needed to export to %{format} is not installed"
-msgstr ""
+msgstr "Potrebna zavisnost za izvoz u %{format} nije instalirana"
 
 #: lib/graphql/resolvers/participant.ex:327
 #, elixir-autogen, elixir-format
 msgid "An error occured while saving export"
-msgstr ""
+msgstr "Greška prilikom spremanja izvoza"
 
 #: lib/web/controllers/export_controller.ex:32
 #, elixir-autogen, elixir-format
 msgid "Export to format %{format} is not enabled on this instance"
-msgstr ""
+msgstr "Izvoz u format %{format} nije aktiviran na ovoj instanci"
 
 #: lib/graphql/resolvers/group.ex:187
 #, elixir-autogen, elixir-format
 msgid "Only admins can create groups"
-msgstr ""
+msgstr "Grupe mogu stvarati samo administratori"
 
 #: lib/graphql/resolvers/event.ex:298
 #, elixir-autogen, elixir-format
 msgid "Only groups can create events"
-msgstr ""
+msgstr "Događaje mogu stvarati samo grupe"
 
 #: lib/graphql/resolvers/event.ex:331
 #, elixir-autogen, elixir-format
 msgid "Unknown error while creating event"
-msgstr ""
+msgstr "Nepoznata greška tijekom stvaranja događaja"
 
 #: lib/graphql/resolvers/user.ex:547
 #, elixir-autogen, elixir-format
 msgid "User cannot change email"
-msgstr ""
+msgstr "Korisnik ne može promijeniti e-mail adresu"
 
 #: lib/graphql/resolvers/group.ex:399
 #, elixir-autogen, elixir-format
 msgid "Follow does not match your account"
-msgstr ""
+msgstr "Praćenje se ne podudara s tvojim računom"
 
 #: lib/graphql/resolvers/group.ex:403
 #, elixir-autogen, elixir-format
 msgid "Follow not found"
-msgstr ""
+msgstr "Praćenje nije pronađeno"
 
 #: lib/graphql/resolvers/user.ex:441
 #, elixir-autogen, elixir-format
 msgid "Profile with username %{username} not found"
-msgstr ""
+msgstr "Profil s korisničkim imenom %{username} nije pronađen"
 
 #: lib/graphql/resolvers/user.ex:436
 #, elixir-autogen, elixir-format
 msgid "This profile does not belong to you"
-msgstr ""
+msgstr "Ovaj profil ne pripada tebi"
 
 #: lib/graphql/resolvers/group.ex:373
 #, elixir-autogen, elixir-format
 msgid "You are already following this group"
-msgstr ""
+msgstr "Već pratiš ovu grupu"
 
 #: lib/graphql/resolvers/group.ex:382
 #, elixir-autogen, elixir-format
@@ -1080,12 +1082,12 @@ msgstr "Za aktualiziranje praćenja grupe moraš biti prijavljen/a"
 #: lib/graphql/resolvers/member.ex:218
 #, elixir-autogen, elixir-format
 msgid "This member does not exist"
-msgstr ""
+msgstr "Ovaj član ne postoji"
 
 #: lib/graphql/resolvers/member.ex:242
 #, elixir-autogen, elixir-format
 msgid "You don't have the role needed to remove this member."
-msgstr ""
+msgstr "Nemaš potrebnu ulogu za uklanjanje ovog člana."
 
 #: lib/graphql/resolvers/member.ex:260
 #, elixir-autogen, elixir-format
@@ -1095,17 +1097,17 @@ msgstr "Za uklanjanje člana moraš biti prijavljen/a"
 #: lib/graphql/resolvers/user.ex:189
 #, elixir-autogen, elixir-format
 msgid "Your email seems to be using an invalid format"
-msgstr ""
+msgstr "Čini se da tvoja e-mail adresa koristi nevažeći format"
 
 #: lib/graphql/resolvers/admin.ex:439
 #, elixir-autogen, elixir-format
 msgid "Can't confirm an already confirmed user"
-msgstr ""
+msgstr "Nije moguće potvrditi već potvrđenog korisnika"
 
 #: lib/graphql/resolvers/admin.ex:443
 #, elixir-autogen, elixir-format
 msgid "Deconfirming users is not supported"
-msgstr ""
+msgstr "Poništavanje potvrde korisnika nije podržano"
 
 #: lib/graphql/resolvers/admin.ex:415
 #, elixir-autogen, elixir-format
@@ -1121,59 +1123,62 @@ msgstr ""
 #: lib/graphql/api/groups.ex:33
 #, elixir-autogen, elixir-format
 msgid "A profile or group with that name already exists"
-msgstr ""
+msgstr "Profil ili grupa s tim imenom već postoji"
 
 #: lib/graphql/resolvers/admin.ex:599
 #, elixir-autogen, elixir-format
 msgid "Unable to find an instance to follow at this address"
-msgstr ""
+msgstr "Nije moguće pronaći instancu za praćenje na ovoj adresi"
 
 #: lib/mobilizon/actors/actor.ex:410
 #, elixir-autogen, elixir-format
 msgid "Username must only contain alphanumeric lowercased characters and underscores."
-msgstr ""
+msgstr "Korisničko ime smije sadržati samo mala slova, znamenke i podvlake."
 
 #: lib/graphql/resolvers/user.ex:349
 #: lib/graphql/resolvers/user.ex:379
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "This email doesn't seem to be valid"
-msgstr ""
+msgstr "Čini se da ova e-mail adresa nije važeća"
 
 #: lib/graphql/resolvers/comment.ex:59
 #, elixir-autogen, elixir-format
 msgid "This comment was detected as spam."
-msgstr ""
+msgstr "Ovaj je komentar prepoznat kao neželjena pošta."
 
 #: lib/graphql/resolvers/event.ex:319
 #, elixir-autogen, elixir-format
 msgid "This event was detected as spam."
-msgstr ""
+msgstr "Ovaj je događaj prepoznat kao neželjena pošta."
 
 #: lib/graphql/api/reports.ex:66
 #, elixir-autogen, elixir-format
 msgid "Unsupported status for a report"
-msgstr ""
+msgstr "Nepodržani status za izvještaj"
 
 #: lib/graphql/api/reports.ex:127
 #, elixir-autogen, elixir-format
 msgid "You can only remove your own notes"
-msgstr ""
+msgstr "Ukloniti možeš samo vlastite bilješke"
 
 #: lib/graphql/api/reports.ex:94
 #: lib/graphql/api/reports.ex:121
 #, elixir-autogen, elixir-format
 msgid "You need to be a moderator or an administrator to create a note on a report"
 msgstr ""
+"Za stvaranje bilješke u izvještaju moraš biti moderator ili administrator"
 
 #: lib/graphql/resolvers/user.ex:209
 #, elixir-autogen, elixir-format
 msgid "Your registration has been detected as spam and cannot be processed."
 msgstr ""
+"Tvoja je registracija prepoznata kao neželjena pošta i ne može se obraditi."
 
 #: lib/web/controllers/application_controller.ex:88
 #, elixir-autogen, elixir-format
 msgid "All of name, scope and redirect_uri parameters are required to create an application"
 msgstr ""
+"Za izradu aplikacije su potrebni svi parametri za name, scope i redirect_uri"
 
 #: lib/graphql/error.ex:119
 #, elixir-autogen, elixir-format
@@ -1199,298 +1204,314 @@ msgstr "Aplikacija se ne može stvoriti."
 #, elixir-autogen, elixir-format
 msgid "Incorrect parameters sent. You need to provide at least the grant_type and client_id parameters, depending on the grant type being used."
 msgstr ""
+"Poslani su netočni parametri. Moraš navesti barem parametre grant_type i "
+"client_id, ovisno o korištenoj vrsti davanja prava (grant)."
 
 #: lib/web/controllers/application_controller.ex:326
 #, elixir-autogen, elixir-format
 msgid "Invalid client credentials provided"
-msgstr ""
+msgstr "Navedeni su nevažeći klijentski podaci za prijavu"
 
 #: lib/web/controllers/application_controller.ex:334
 #, elixir-autogen, elixir-format
 msgid "Invalid refresh token provided"
-msgstr ""
+msgstr "Naveden je nevažeći token za osvježavanje"
 
 #: lib/web/controllers/application_controller.ex:167
 #: lib/web/controllers/application_controller.ex:398
 #, elixir-autogen, elixir-format
 msgid "No application was found with this client_id"
-msgstr ""
+msgstr "Nije pronađena nijedna aplikacija s ovim client_id-om"
 
 #: lib/graphql/resolvers/application.ex:38
 #, elixir-autogen, elixir-format
 msgid "No application with this client_id was found"
-msgstr ""
+msgstr "Nije pronađena nijedna aplikacija s ovim client_id-om"
 
 #: lib/graphql/authorization.ex:83
 #, elixir-autogen, elixir-format
 msgid "Not authorized to access field %{field}"
-msgstr ""
+msgstr "Nema ovlasti za pristup polju %{field}"
 
 #: lib/graphql/authorization.ex:73
 #: lib/graphql/authorization.ex:78
 #, elixir-autogen, elixir-format
 msgid "Not authorized to access object %{object}"
-msgstr ""
+msgstr "Nema ovlasti za pristup objektu %{object}"
 
 #: lib/graphql/authorization.ex:66
 #, elixir-autogen, elixir-format
 msgid "Not authorized to access this %{object_type}"
-msgstr ""
+msgstr "Nema ovlasti za pristup ovoj vrsti objetka %{object_type}"
 
 #: lib/web/controllers/application_controller.ex:276
 #, elixir-autogen, elixir-format
 msgid "Please slow down the rate of your requests"
-msgstr ""
+msgstr "Uspori učestalost tvojih zahtjeva"
 
 #: lib/web/controllers/application_controller.ex:264
 #, elixir-autogen, elixir-format
 msgid "The authorization request is still pending"
-msgstr ""
+msgstr "Zahtjev za autorizaciju se još obrađuje"
 
 #: lib/web/controllers/application_controller.ex:246
 #, elixir-autogen, elixir-format
 msgid "The client_id provided or the device_code associated is invalid"
-msgstr ""
+msgstr "Navedeni client_id ili pridruženi device_code nisu važeći"
 
 #: lib/graphql/resolvers/application.ex:139
 #, elixir-autogen, elixir-format
 msgid "The device user code was not provided before approving the application"
-msgstr ""
+msgstr "Korisnički kod uređaja nije naveden prije odobravanja aplikacije"
 
 #: lib/web/controllers/application_controller.ex:301
 #, elixir-autogen, elixir-format
 msgid "The given device_code has expired"
-msgstr ""
+msgstr "Navedeni device_code je istekao"
 
 #: lib/graphql/resolvers/application.ex:45
 #, elixir-autogen, elixir-format
 msgid "The given redirect_uri is not in the list of allowed redirect URIs"
-msgstr ""
+msgstr "Zadani redirect_uri nije na popisu dopuštenih URI-ja za preusmjeravanje"
 
 #: lib/web/controllers/application_controller.ex:155
 #, elixir-autogen, elixir-format
 msgid "The given scope is not in the list of the app declared scopes"
-msgstr ""
+msgstr "Navedeni opseg (skope) nije na popisu deklariranih opsega aplikacije"
 
 #: lib/graphql/resolvers/application.ex:112
 #: lib/graphql/resolvers/application.ex:154
 #, elixir-autogen, elixir-format
 msgid "The given user code has expired"
-msgstr ""
+msgstr "Navedeni korisnički kod je istekao"
 
 #: lib/graphql/resolvers/application.ex:118
 #: lib/graphql/resolvers/application.ex:146
 #, elixir-autogen, elixir-format
 msgid "The given user code is invalid"
-msgstr ""
+msgstr "Navedeni korisnički kod nije valjan"
 
 #: lib/web/controllers/application_controller.ex:408
 #, elixir-autogen, elixir-format
 msgid "The provided client_id does not match the provided code"
-msgstr ""
+msgstr "Navedeni client_id ne odgovara navedenom kodu"
 
 #: lib/web/controllers/application_controller.ex:411
 #, elixir-autogen, elixir-format
 msgid "The provided client_secret is invalid"
-msgstr ""
+msgstr "Navedeni client_secret nije valjan"
 
 #: lib/web/controllers/application_controller.ex:404
 #, elixir-autogen, elixir-format
 msgid "The provided code is invalid or expired"
-msgstr ""
+msgstr "Navedeni kod nije valjan ili je istekao"
 
 #: lib/web/controllers/application_controller.ex:415
 #, elixir-autogen, elixir-format
 msgid "The provided scope is invalid or not included in the app declared scopes"
 msgstr ""
+"Navedeni opseg (scope) nije valjan ili nije uključen u deklariranim opsezima "
+"aplikacije"
 
 #: lib/web/controllers/application_controller.ex:47
 #, elixir-autogen, elixir-format
 msgid "The scope parameter is not a space separated list of valid scopes"
-msgstr ""
+msgstr "Parametar opsega (scope) nije razmacima odvojen popis valjanih opsega"
 
 #: lib/web/controllers/application_controller.ex:289
 #, elixir-autogen, elixir-format
 msgid "The user rejected the requested authorization"
-msgstr ""
+msgstr "Korisnik je odbio zatraženu autorizaciju"
 
 #: lib/web/controllers/application_controller.ex:401
 #, elixir-autogen, elixir-format
 msgid "This redirect URI is not allowed"
-msgstr ""
+msgstr "Ovaj URI preusmjeravanja nije dopušten"
 
 #: lib/web/controllers/application_controller.ex:378
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "Token not found"
-msgstr ""
+msgstr "Token nije pronađen"
 
 #: lib/web/controllers/application_controller.ex:74
 #, elixir-autogen, elixir-format
 msgid "Too many requests"
-msgstr ""
+msgstr "Previše zahtjeva"
 
 #: lib/web/controllers/application_controller.ex:181
 #, elixir-autogen, elixir-format
 msgid "Unable to produce device code"
-msgstr ""
+msgstr "Nije moguće generirati kod uređaja"
 
 #: lib/web/controllers/application_controller.ex:370
 #, elixir-autogen, elixir-format
 msgid "Unable to revoke token"
-msgstr ""
+msgstr "Nije moguće opozvati token"
 
 #: lib/web/controllers/application_controller.ex:195
 #, elixir-autogen, elixir-format
 msgid "You need to pass both client_id and scope as parameters to obtain a device code"
 msgstr ""
+"Moraš proslijediti client_id i scope kao parametre za dobivanje koda uređaja"
 
 #: lib/web/controllers/application_controller.ex:133
 #, elixir-autogen, elixir-format
 msgid "You need to provide a valid redirect_uri to autorize an application"
-msgstr ""
+msgstr "Moraš navesti valjani redirect_uri za autorizaciju aplikacije"
 
 #: lib/web/controllers/application_controller.ex:123
 #, elixir-autogen, elixir-format
 msgid "You need to specify client_id, redirect_uri, scope and state to autorize an application"
 msgstr ""
+"Za autorizaciju aplikacije moraš navesti client_id, redirect_uri, scope i "
+"state"
 
 #: lib/graphql/resolvers/user.ex:352
 #, elixir-autogen, elixir-format
 msgid "Couldn't send an email. Internal error."
-msgstr ""
+msgstr "Nije bilo moguće poslati e-mail. Interna greška."
 
 #: lib/graphql/resolvers/participant.ex:293
 #, elixir-autogen, elixir-format
 msgid "Participation is already confirmed"
-msgstr ""
+msgstr "Sudjelovanje je već potvrđeno"
 
 #: lib/graphql/resolvers/participant.ex:290
 #, elixir-autogen, elixir-format
 msgid "Participation is confirmed but not approved yet by an organizer"
 msgstr ""
+"Sudjelovanje je potvrđeno, ali još nije odobreno od jednog od organizatora"
 
 #: lib/graphql/resolvers/event.ex:305
 #: lib/graphql/resolvers/event.ex:394
 #, elixir-autogen, elixir-format
 msgid "Providing external registration is not allowed"
-msgstr ""
+msgstr "Pružanje eksterne registracije nije dopušteno"
 
 #: lib/graphql/resolvers/push_subscription.ex:48
 #, elixir-autogen, elixir-format
 msgid "The same push subscription has already been registered"
-msgstr ""
+msgstr "Ta ista pretplata na primanje obavijesti je već registrirana"
 
 #: lib/graphql/resolvers/admin.ex:593
 #, elixir-autogen, elixir-format
 msgid "This instance is pending follow approval"
-msgstr ""
+msgstr "Ova instanca čeka na odobrenje za praćenje"
 
 #: lib/graphql/schema/custom/timezone.ex:25
 #, elixir-autogen, elixir-format
 msgid "Timezone ID %{timezone} is invalid"
-msgstr ""
+msgstr "ID vremenske zone %{timezone} nije valjan"
 
 #: lib/graphql/resolvers/admin.ex:596
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "You are already following this instance"
-msgstr ""
+msgstr "Već slijediš ovu instancu"
 
 #: lib/graphql/resolvers/user.ex:356
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "You requested again a confirmation email too soon. Please try again in a few minutes"
-msgstr "Ponovo si zatražio/la potvrdni e-mail prerano"
+msgstr ""
+"Ponovo si zatražio/la e-mail za potvrđivanje prerano. Pokušaj ponovo za par "
+"minuta"
 
 #: lib/graphql/resolvers/user.ex:390
 #, elixir-autogen, elixir-format
 msgid "You requested again a password reset email too soon. Please try again in a few minutes"
 msgstr ""
+"Ponovo si zatražio/la e-mail za resetiranje lozinke prerano. Pokušaj ponovo "
+"za par minuta"
 
 #: lib/graphql/resolvers/user.ex:417
 #, elixir-autogen, elixir-format
 msgid "The token you provided is invalid. Make sure that the URL is exactly the one provided inside the email you got."
 msgstr ""
+"Navedeni token nije važeći. Provjeri je li URL isti onome koji je naveden u "
+"e-mailu koji si primio/la."
 
 #: lib/graphql/resolvers/conversation.ex:170
 #, elixir-autogen, elixir-format
 msgid "Conversation needs to mention at least one participant that's not yourself"
-msgstr "Konverzacija treba spomenuti barem jednog sudionika koji nisi ti"
+msgstr "Konverzacija treba spomenuti barem jednog sudionika koji nije ti"
 
 #: lib/graphql/resolvers/participant.ex:401
 #, elixir-autogen, elixir-format
 msgid "There are no participants matching the audience you've selected."
-msgstr ""
+msgstr "Nema sudionika koji odgovaraju odabranoj publici."
 
 #: lib/graphql/resolvers/post.ex:178
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "An error occured while updating your post"
-msgstr ""
+msgstr "Greška prilikom aktualiziranja tvoje objave"
 
 #: lib/mobilizon/admin/admin.ex:297
 #, elixir-autogen, elixir-format
 msgid "External link URL must be a valid http/https URL"
-msgstr ""
+msgstr "URL eksterne poveznice mora biti valjani http/https URL"
 
 #: lib/mobilizon/admin/admin.ex:288
 #, elixir-autogen, elixir-format
 msgid "External link label cannot be blank"
-msgstr ""
+msgstr "Etiketa eksterne poveznice ne može biti prazna"
 
 #: lib/mobilizon/admin/admin.ex:291
 #, elixir-autogen, elixir-format
 msgid "External link label must be at least 2 characters"
-msgstr ""
+msgstr "Etiketa eksterne poveznice mora sadržati barem dva znaka"
 
 #: lib/mobilizon/admin/admin.ex:294
 #, elixir-autogen, elixir-format
 msgid "External link label must be at most 256 characters"
-msgstr ""
+msgstr "Etiketa eksterne poveznice smije sadržati do 256 znakova"
 
 #: lib/graphql/resolvers/user.ex:195
 #, elixir-autogen, elixir-format
 msgid "Moderation text must not be empty"
-msgstr ""
+msgstr "Tekst moderiranja ne smije biti prazan"
 
 #: lib/graphql/resolvers/user.ex:633
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "User already enabled"
-msgstr "Korisnik je već deaktiviran"
+msgstr "Korisnik je već aktiviran"
 
 #: lib/graphql/resolvers/user.ex:386
 #, elixir-autogen, elixir-format
 msgid "User is pending"
-msgstr ""
+msgstr "Korisnik čeka"
 
 #: lib/graphql/error.ex:113
 #, elixir-autogen, elixir-format
 msgid "User pending"
-msgstr ""
+msgstr "Korisnik čeka"
 
 #: lib/graphql/resolvers/feed_token.ex:82
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "You are not allowed to get a feed token if not connected"
-msgstr "Ako nisi povezan/a ne smiješ izbrisati token za feed"
+msgstr "Ako nisi povezan/a ne smiješ nabaviti token za feed"
 
 #: lib/graphql/resolvers/member.ex:122
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "You can't accept this invitation."
-msgstr "Ovu pozivnicu ne možeš prihvatiti s ovim profilom."
+msgstr "Ovu pozivnicu ne možeš prihvatiti."
 
 #: lib/graphql/resolvers/member.ex:150
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "You can't reject this invitation."
-msgstr "Ovu pozivnicu ne možeš odbiti s ovim profilom."
+msgstr "Ovu pozivnicu ne možeš odbiti."
 
 #: lib/graphql/resolvers/feed_token.ex:76
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "You don't have permission to get this token"
-msgstr "Nemaš dozvole za brisanje ovog tokena"
+msgstr "Nemaš dozvole za dobivanje ovog tokena"
 
 #: lib/graphql/resolvers/user.ex:638
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "You need to be logged-in and moderator to unban an account"
-msgstr "Za aktualiziranje izvještaja moraš biti prijavljen/a i biti moderator"
+msgstr ""
+"Za uklanjanje zabrane pristupa računu moraš biti prijavljen/a i biti "
+"moderator"
 
 #: lib/graphql/resolvers/invitation.ex:28
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "Impossible to create the invitation"
-msgstr "Aplikacija se ne može stvoriti."
+msgstr "Nije moguće stvoriti pozivnicu"

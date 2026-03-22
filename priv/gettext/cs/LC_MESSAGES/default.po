@@ -3,16 +3,16 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-24 14:39+0000\n"
-"PO-Revision-Date: 2024-08-10 20:38+0000\n"
-"Last-Translator: Jiri Podhorecky <j.podhorecky@gmail.com>\n"
+"PO-Revision-Date: 2026-03-11 21:39+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Czech <https://weblate.framasoft.org/projects/mobilizon/"
 "backend/cs/>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=((n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2);\n"
-"X-Generator: Weblate 5.6.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Weblate 5.16.2\n"
 
 #: lib/web/templates/email/password_reset.html.heex:66
 #, elixir-autogen, elixir-format
@@ -283,9 +283,9 @@ msgid "If this server is in the USA: Our site, products and services are all dir
 msgstr ""
 "Pokud se tento server nachází v USA: Naše stránky, produkty a služby jsou "
 "určeny osobám starším 13 let. Pokud je vám méně než 13 let, podle požadavků "
-"COPPA (<a href=\"https://en.wikipedia.org/wiki/Children%"
-"27s_Online_Privacy_Protection_Act\">Children's Online Privacy Protection "
-"Act</a>) tuto stránku nepoužívejte."
+"COPPA (<a href=\"https://en.wikipedia.org/wiki/"
+"Children%27s_Online_Privacy_Protection_Act\">Children's Online Privacy "
+"Protection Act</a>) tuto stránku nepoužívejte."
 
 #: lib/web/templates/api/privacy.html.heex:160
 #, elixir-autogen, elixir-format
@@ -650,19 +650,18 @@ msgstr ""
 msgctxt "terms"
 msgid "For full details about the Mobilizon software <a href=\"https://mobilizon.org\">see here</a>."
 msgstr ""
-"Podrobné informace o softwaru Mobilizon <a href=\"https://mobilizon.org\""
-">viz zde</a>."
+"Podrobné informace o softwaru Mobilizon <a href=\"https://mobilizon.org\">"
+"viz zde</a>."
 
 #: lib/web/templates/api/terms.html.heex:47
 #, elixir-autogen, elixir-format
 msgctxt "terms"
 msgid "Here are the important things you need to know about accessing and using the <b>%{instance_name}</b> (<a href=\"https://%{instance_url}\">%{instance_url}</a>) website and service (collectively, \"Service\"). These are our terms of service (\"Terms\"). Please read them carefully."
 msgstr ""
-"Zde jsou uvedeny důležité informace o přístupu a používání "
-"<b>%{název_instance}</b> (<a href=\"https://%{instance_url}\""
-">%{instance_url}</a>) webové stránky a služby (dále společně jen \"služba\")"
-". Toto jsou naše podmínky poskytování služby (\"Podmínky\"). Přečtěte si je "
-"prosím pozorně."
+"Zde jsou uvedeny důležité informace o přístupu a používání <b>%"
+"{název_instance}</b> (<a href=\"https://%{instance_url}\">%{instance_url}</"
+"a>) webové stránky a služby (dále společně jen \"služba\"). Toto jsou naše "
+"podmínky poskytování služby (\"Podmínky\"). Přečtěte si je prosím pozorně."
 
 #: lib/web/templates/api/terms.html.heex:82
 #, elixir-autogen, elixir-format
@@ -809,8 +808,8 @@ msgid "Originally adapted from the <a href=\"https://joindiaspora.com/terms\">Di
 msgstr ""
 "Původně převzato z <a href=\"https://joindiaspora.com/terms\">Diaspora*</a> "
 "a <a href=\"https://github.com/appdotnet/terms-of-service\">App.net</a> "
-"zásad ochrany osobních údajů, rovněž licencováno pod <a href=\"https"
-"://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA</a>."
+"zásad ochrany osobních údajů, rovněž licencováno pod <a href=\"https://"
+"creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA</a>."
 
 #: lib/web/templates/api/privacy.html.heex:173
 #, elixir-autogen, elixir-format
@@ -819,8 +818,8 @@ msgid "Originally adapted from the <a href=\"https://mastodon.social/terms\">Mas
 msgstr ""
 "Původně převzato z <a href=\"https://mastodon.social/terms\">Mastodon</a> a "
 "<a href=\"https://github.com/discourse/discourse\">Discourse</a> zásad "
-"ochrany osobních údajů, rovněž licencováno pod <a href=\"https"
-"://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA</a>."
+"ochrany osobních údajů, rovněž licencováno pod <a href=\"https://"
+"creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA</a>."
 
 #: lib/web/templates/api/terms.html.heex:3
 #, elixir-autogen, elixir-format
@@ -858,8 +857,8 @@ msgstr ""
 msgctxt "terms"
 msgid "You must respect other people and <b>%{instance_name}</b>'s rules when using the service"
 msgstr ""
-"Při používání služby musíte respektovat ostatní osoby a pravidla "
-"<b>%{instance_name}</b>"
+"Při používání služby musíte respektovat ostatní osoby a pravidla <b>%"
+"{instance_name}</b>"
 
 #: lib/web/templates/api/terms.html.heex:15
 #, elixir-autogen, elixir-format
@@ -1045,8 +1044,8 @@ msgstr "Pokud jste tento e-mail nespustili, můžete jej bez obav ignorovat."
 msgid "If you wish to cancel your attendance, visit the event page through the link above and click the « Attending » button."
 msgstr ""
 "Pokud si přejete zrušit svou účast, navštivte stránku události "
-"prostřednictvím výše uvedeného odkazu a klikněte na tlačítko \"Zúčastnit se\""
-"."
+"prostřednictvím výše uvedeného odkazu a klikněte na tlačítko \"Zúčastnit "
+"se\"."
 
 #: lib/web/templates/email/email.html.heex:193
 #: lib/web/templates/email/email.text.eex:11
@@ -1247,8 +1246,8 @@ msgstr ""
 #, elixir-autogen, elixir-format
 msgid "<b>%{inviter}</b> just invited you to join their group %{link_start}<b>%{group}</b>%{link_end}"
 msgstr ""
-"<b>%{inviter}</b> vás právě pozval do jejich skupiny "
-"%{link_start}<b>%{group}</b>%{link_end}"
+"<b>%{inviter}</b> vás právě pozval do jejich skupiny %{link_start}<b>%{group}"
+"</b>%{link_end}"
 
 #: lib/web/templates/email/group_member_removal.html.heex:47
 #, elixir-autogen, elixir-format
@@ -1275,8 +1274,8 @@ msgstr "Skupina %{group} byla pozastavena na %{instance}!"
 #, elixir-autogen, elixir-format
 msgid "Your instance's moderation team has decided to suspend %{group_name} (%{group_address}). You are no longer a member of this group."
 msgstr ""
-"Moderátorský tým vaší instance se rozhodl pozastavit %{group_name} "
-"(%{group_address}). Již nejste členem této skupiny."
+"Moderátorský tým vaší instance se rozhodl pozastavit %{group_name} (%"
+"{group_address}). Již nejste členem této skupiny."
 
 #: lib/web/email/group.ex:106
 #, elixir-autogen, elixir-format
@@ -1410,8 +1409,8 @@ msgid "When you create an account you agree to maintain the security and confide
 msgstr ""
 "Když si vytvoříte účet, souhlasíte s tím, že budete zachovávat bezpečnost a "
 "důvěrnost svého hesla, a přijímáte veškerá rizika neoprávněného přístupu k "
-"údajům svého účtu a dalším informacím, které poskytnete "
-"<b>%{instance_name}</b>."
+"údajům svého účtu a dalším informacím, které poskytnete <b>%{instance_name}</"
+"b>."
 
 #: lib/web/templates/api/terms.html.heex:134
 #, elixir-autogen, elixir-format
@@ -1640,16 +1639,16 @@ msgstr "Vaše účast na %{event} byla zrušena!"
 #, elixir-autogen, elixir-format
 msgid "Your instance's moderation team has decided to suspend %{actor_name} (%{actor_address}). All of their events have been removed and your participation to event %{event} cancelled."
 msgstr ""
-"Moderátorský tým vaší instance se rozhodl pozastavit %{actor_name} "
-"(%{actor_address}). Všechny jejich události byly odstraněny a vaše účast na "
+"Moderátorský tým vaší instance se rozhodl pozastavit %{actor_name} (%"
+"{actor_address}). Všechny jejich události byly odstraněny a vaše účast na "
 "události %{event} zrušena."
 
 #: lib/web/templates/email/group_suspension.html.heex:50
 #, elixir-autogen, elixir-format
 msgid "Your instance's moderation team has decided to suspend <b>%{group_name}</b> (%{group_address}). You are no longer a member of this group."
 msgstr ""
-"Moderátorský tým vaší instance se rozhodl pozastavit <b>%{group_name}</b> "
-"(%{group_address}). Již nejste členem této skupiny."
+"Moderátorský tým vaší instance se rozhodl pozastavit <b>%{group_name}</b> (%"
+"{group_address}). Již nejste členem této skupiny."
 
 #: lib/web/templates/email/actor_suspension_participants.html.heex:18
 #: lib/web/templates/email/actor_suspension_participants.text.eex:1
@@ -2010,8 +2009,8 @@ msgstr ""
 msgid "Hi there! We just wanted to inform you that an administrator from <b>%{instance}</b> just manually changed your account email from <b>%{old_email}</b> (this one) to <b>%{new_email}</b>."
 msgstr ""
 "Ahoj! Jen jsme vás chtěli informovat, že administrátor z <b>%{instance}</b> "
-"právě ručně změnil váš e-mail účtu z <b>%{old_email}</b> (tento) na <b>%{"
-"new_email }</b>."
+"právě ručně změnil váš e-mail účtu z <b>%{old_email}</b> (tento) na <b>%"
+"{new_email }</b>."
 
 #: lib/web/templates/email/admin_user_email_changed_new.html.heex:47
 #, elixir-autogen, elixir-format
@@ -2374,8 +2373,8 @@ msgstr ""
 "vlastníky, operátory a správce této instance Mobilizon. Software Mobilizon "
 "poskytuje tým přispěvatelů Mobilizonu. Pokud není výslovně uvedeno, je tato "
 "instance Mobilizon nezávislou službou využívající zdrojový kód společnosti "
-"Mobilizon. Další informace o této instanci můžete najít na stránce <a href=\""
-"/about/instance\">\"O této instanci\"</a>."
+"Mobilizon. Další informace o této instanci můžete najít na stránce <a "
+"href=\"/about/instance\">\"O této instanci\"</a>."
 
 #: lib/web/templates/email/user_pending.html.heex:62
 #, elixir-autogen, elixir-format

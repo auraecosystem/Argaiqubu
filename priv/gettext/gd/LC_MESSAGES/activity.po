@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-11-10 15:37+0000\n"
-"PO-Revision-Date: 2021-11-19 09:22+0000\n"
-"Last-Translator: GunChleoc <fios@foramnagaidhlig.net>\n"
+"PO-Revision-Date: 2026-03-11 21:36+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Gaelic <https://weblate.framasoft.org/projects/mobilizon/"
 "activity/gd/>\n"
 "Language: gd\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 || n==11) ? 0 : (n==2 || n==12) ? 1 : "
 "(n > 2 && n < 20) ? 2 : 3;\n"
-"X-Generator: Weblate 4.8.1\n"
+"X-Generator: Weblate 5.16.2\n"
 
 ## This file is a PO Template file.
 ##
@@ -275,8 +275,8 @@ msgstr "Thug %{profile} iomradh ort ann am beachd san tachartas %{event}."
 msgid "Don't want to receive activity notifications? You may change frequency or disable them in %{tag_start}your settings%{tag_end}."
 msgstr ""
 "A bheil thu airson brathan fhaighinn mu ghnìomhachd? ’S urrainn dhut "
-"atharrachadh dè cho tric ’s a gheibh thu iad no an cur à comas sna "
-"%{tag_start}roghainnean%{tag_end} agad."
+"atharrachadh dè cho tric ’s a gheibh thu iad no an cur à comas sna %"
+"{tag_start}roghainnean%{tag_end} agad."
 
 #: lib/web/templates/email/email_direct_activity.html.heex:51
 #: lib/web/templates/email/email_direct_activity.text.eex:5
@@ -430,8 +430,8 @@ msgstr "Dh’fhàg %{profile} am buidheann."
 #, elixir-autogen, elixir-format
 msgid "%{profile} rejected the membership request from %{member} for group %{group}."
 msgstr ""
-"Diùlt %{profile} an t-iarrtas air ballrachd sa buidheann %{group} o "
-"%{member}."
+"Diùlt %{profile} an t-iarrtas air ballrachd sa buidheann %{group} o %{member}"
+"."
 
 #: lib/service/activity/renderer/resource.ex:44
 #, elixir-autogen, elixir-format

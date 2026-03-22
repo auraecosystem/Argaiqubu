@@ -8,9 +8,16 @@
 ## to merge POT files into PO files.
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2026-03-11 21:34+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Hebrew <https://weblate.framasoft.org/projects/mobilizon/"
+"backend/he/>\n"
 "Language: he\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
+"X-Generator: Weblate 5.16.2\n"
+"Content-Transfer-Encoding: 8bit\n"
 
 #: lib/web/templates/email/password_reset.html.heex:66
 #, elixir-autogen, elixir-format
@@ -376,7 +383,7 @@ msgid "You have been invited by %{inviter} to join group %{group}"
 msgstr ""
 
 #: lib/web/email/notification.ex:81
-#, elixir-format, elixir-autogen, fuzzy
+#, elixir-autogen, elixir-format
 msgid "One event planned this week"
 msgid_plural "%{nb_events} events planned this week"
 msgstr[0] ""
@@ -763,7 +770,7 @@ msgstr ""
 #: lib/web/templates/email/notification_each_week.text.eex:11
 #: lib/web/templates/email/on_day_notification.html.heex:89
 #: lib/web/templates/email/on_day_notification.text.eex:11
-#, elixir-format, elixir-autogen, fuzzy
+#, elixir-autogen, elixir-format
 msgid "Would you wish to cancel your attendance, visit the event page through the link above and click the « Attending » button."
 msgid_plural "Would you wish to cancel your attendance to one or several events, visit the event pages through the links above and click the « Attending » button."
 msgstr[0] ""
@@ -1674,7 +1681,7 @@ msgid "An administrator updated your role on %{instance}"
 msgstr ""
 
 #: lib/web/templates/email/email_changed_new.text.eex:3
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "Hi there! It seems like you wanted to change the email address linked to your account on %{instance}. If you still wish to do so, please click the button below to confirm the change. You will then be able to log in to %{instance} with this new email address."
 msgstr ""
 
@@ -1762,34 +1769,34 @@ msgid "You may now login using your credentials on the service:"
 msgstr ""
 
 #: lib/web/templates/email/admin_user_role_changed.text.eex:3
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "Hi there! We just wanted to inform you that an administrator from %{instance} just changed your account role."
 msgstr ""
 
 #: lib/web/templates/email/admin_user_role_changed.html.heex:47
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "Hi there! We just wanted to inform you that an administrator from <b>%{instance}</b> just changed your account role."
 msgstr ""
 
 #: lib/web/templates/email/instance_follow.text.eex:5
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "%{name} just requested to follow your instance."
 msgstr ""
 
 #: lib/web/templates/email/instance_follow.html.heex:47
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "<b>%{name}</b> just requested to follow your instance."
 msgstr ""
 
 #: lib/web/templates/email/instance_follow.html.heex:55
 #: lib/web/templates/email/instance_follow.text.eex:6
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "If you accept, this profile will receive all of your public events."
 msgstr ""
 
 #: lib/web/templates/email/instance_follow.html.heex:88
 #: lib/web/templates/email/instance_follow.text.eex:9
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "To accept this invitation, head over to the profile's admin page."
 msgstr ""
 
@@ -1830,7 +1837,7 @@ msgid "Comedy"
 msgstr ""
 
 #: lib/mobilizon/events/categories.ex:72
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "Community"
 msgstr ""
 
@@ -1880,7 +1887,7 @@ msgid "Language & Culture"
 msgstr ""
 
 #: lib/mobilizon/events/categories.ex:96
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "Learning"
 msgstr ""
 
@@ -1950,23 +1957,23 @@ msgid "Theatre"
 msgstr ""
 
 #: lib/web/templates/email/participation/event_card.text.eex:9
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "Read more: %{url}"
 msgstr ""
 
 #: lib/web/templates/email/registration_confirmation.text.eex:9
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "Activate my account:"
 msgstr ""
 
 #: lib/web/email/follow.ex:49
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "Instance %{domain} requests to follow your instance"
 msgstr ""
 
 #: lib/web/templates/email/instance_follow.html.heex:68
 #: lib/web/templates/email/instance_follow.text.eex:7
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "Note: %{name} following you doesn't necessarily imply that you follow this instance, but you can ask to follow them too."
 msgstr ""
 
@@ -1978,22 +1985,22 @@ msgstr ""
 
 #: lib/web/templates/email/group_suspension.html.heex:67
 #: lib/web/templates/email/group_suspension.text.eex:5
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "As this group was located on this instance, all of its data has been irretrievably deleted."
 msgstr ""
 
 #: lib/web/templates/email/report.text.eex:11
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "Events"
 msgstr ""
 
 #: lib/web/templates/email/report.html.heex:115
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "Flagged events"
 msgstr ""
 
 #: lib/service/export/participants/common.ex:65
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "Participant registration date"
 msgstr ""
 
@@ -2027,7 +2034,7 @@ msgid "Well done!"
 msgstr ""
 
 #: lib/web/templates/api/terms.html.heex:55
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgctxt "terms"
 msgid "When we say “we”, “our”, or “us” in this document, we are referring to the owners, operators and administrators of this Mobilizon instance. The Mobilizon software is provided by the team of Mobilizon contributors. Unless explicitly stated, this Mobilizon instance is an independent service using Mobilizon's source code. You may find more information about this instance on the <a href=\"/about/instance\">\"About this instance\"</a> page."
 msgstr ""
@@ -2049,7 +2056,7 @@ msgid "New pending user from %{user} on %{instance}"
 msgstr ""
 
 #: lib/web/templates/email/user_pending.html.heex:18
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "New pending user on <b>%{instance}</b>"
 msgstr ""
 

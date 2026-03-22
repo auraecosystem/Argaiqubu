@@ -8,15 +8,15 @@
 ## to merge POT files into PO files.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-10-02 09:18+0000\n"
+"PO-Revision-Date: 2026-03-11 21:38+0000\n"
 "Last-Translator: veroandi <veroandi@posteo.net>\n"
 "Language-Team: Portuguese (Brazil) <https://weblate.framasoft.org/projects/"
 "mobilizon/activity/pt_BR/>\n"
 "Language: pt_BR\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Weblate 5.7.2\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 5.16.2\n"
 
 #: lib/web/templates/email/activity/_member_activity_item.html.heex:14
 #: lib/web/templates/email/activity/_member_activity_item.text.eex:12
@@ -416,8 +416,8 @@ msgstr ""
 #, elixir-autogen, elixir-format
 msgid "%{profile} renamed the folder from %{old_resource_title} to %{resource} in group %{group}."
 msgstr ""
-"%{profile} renomeou a pasta %{old_resource_title} para %{resource} no grupo "
-"%{group}."
+"%{profile} renomeou a pasta %{old_resource_title} para %{resource} no grupo %"
+"{group}."
 
 #: lib/service/activity/renderer/resource.ex:50
 #, elixir-autogen, elixir-format

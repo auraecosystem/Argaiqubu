@@ -3,16 +3,17 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-24 14:39+0000\n"
-"PO-Revision-Date: 2024-04-18 09:03+0000\n"
-"Last-Translator: GSalinas <gsalinastellez@gmail.com>\n"
+"PO-Revision-Date: 2026-03-11 21:34+0000\n"
+"Last-Translator: Jaime Marquínez Ferrándiz "
+"<jaime.marquinez.ferrandiz@fastmail.net>\n"
 "Language-Team: Spanish <https://weblate.framasoft.org/projects/mobilizon/"
 "backend/es/>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Weblate 5.4.3\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.16.2\n"
 
 #: lib/web/templates/email/password_reset.html.heex:66
 #, elixir-autogen, elixir-format
@@ -274,8 +275,8 @@ msgid "If this server is in the EU or the EEA: Our site, products and services a
 msgstr ""
 "Si este servidor se encuentra en la UE o en el EEE: nuestro sitio, nuestros "
 "productos y servicios están dirigidos a personas que tienen al menos 16 años "
-"de edad. Si es menor de 16 años, según los requisitos del RGPD (<a href="
-"\"https://en.wikipedia.org/wiki/General_Data_Protection_Regulation\">"
+"de edad. Si es menor de 16 años, según los requisitos del RGPD (<a "
+"href=\"https://en.wikipedia.org/wiki/General_Data_Protection_Regulation\">"
 "Reglamento general de protección de datos</a>) no utilice este sitio ."
 
 #: lib/web/templates/api/privacy.html.heex:146
@@ -285,8 +286,8 @@ msgid "If this server is in the USA: Our site, products and services are all dir
 msgstr ""
 "Si este servidor está en los EE. UU .: nuestro sitio, nuestros productos y "
 "servicios están dirigidos a personas que tienen al menos 13 años de edad. Si "
-"es menor de 13 años, según los requisitos de COPPA (<a href=\"https://en."
-"wikipedia.org/wiki/Children%27s_Online_Privacy_Protection_Act\">Ley de "
+"es menor de 13 años, según los requisitos de COPPA (<a href=\"https://"
+"en.wikipedia.org/wiki/Children%27s_Online_Privacy_Protection_Act\">Ley de "
 "protección de la privacidad en línea para niños</a>) no utilice este sitio."
 
 #: lib/web/templates/api/privacy.html.heex:160
@@ -429,8 +430,8 @@ msgid "One participation request for event %{title} to process"
 msgid_plural "%{number_participation_requests} participation requests for event %{title} to process"
 msgstr[0] "Una solicitud para participar en el evento %{title} a procesar"
 msgstr[1] ""
-"%{number_participation_requests} solicitudes para participar en el evento "
-"%{title} a procesar"
+"%{number_participation_requests} solicitudes para participar en el evento %"
+"{title} a procesar"
 
 #: lib/web/templates/email/notification_each_week.html.heex:47
 #: lib/web/templates/email/notification_each_week.text.eex:3
@@ -647,8 +648,8 @@ msgstr ""
 msgctxt "terms"
 msgid "For full details about the Mobilizon software <a href=\"https://mobilizon.org\">see here</a>."
 msgstr ""
-"Para obtener detalles completos sobre el software Mobilizon <a href="
-"\"https://mobilizon.org\"> ver aquí </a>."
+"Para obtener detalles completos sobre el software Mobilizon <a "
+"href=\"https://mobilizon.org\"> ver aquí </a>."
 
 #: lib/web/templates/api/terms.html.heex:47
 #, elixir-autogen, elixir-format
@@ -656,8 +657,8 @@ msgctxt "terms"
 msgid "Here are the important things you need to know about accessing and using the <b>%{instance_name}</b> (<a href=\"https://%{instance_url}\">%{instance_url}</a>) website and service (collectively, \"Service\"). These are our terms of service (\"Terms\"). Please read them carefully."
 msgstr ""
 "Estas son las cosas importantes que necesita saber sobre el acceso y uso de "
-"<b> %{instance_name} </b> (<a href=\"https://%{instance_url}\"> "
-"%{instance_url} </a>) sitio web y servicio (colectivamente, \"Servicio\"). "
+"<b> %{instance_name} </b> (<a href=\"https://%{instance_url}\"> %"
+"{instance_url} </a>) sitio web y servicio (colectivamente, \"Servicio\"). "
 "Estos son nuestros términos de servicio (\"Términos\"). Por favor, léalos "
 "atentamente."
 
@@ -707,8 +708,8 @@ msgstr ""
 msgctxt "terms"
 msgid "These Terms constitute the entire agreement between you and <b>%{instance_name}</b> regarding the use of the Service, superseding any prior agreements between you and <b>%{instance_name}</b> relating to your use of the Service."
 msgstr ""
-"Estos Términos constituyen el acuerdo completo entre usted y <b> "
-"%{instance_name} </b> con respecto al uso del Servicio, reemplazando "
+"Estos Términos constituyen el acuerdo completo entre usted y <b> %"
+"{instance_name} </b> con respecto al uso del Servicio, reemplazando "
 "cualquier acuerdo previo entre usted y <b> %{instance_name} </b> relacionado "
 "con su uso de el servicio."
 
@@ -809,9 +810,9 @@ msgstr ""
 msgctxt "terms"
 msgid "Originally adapted from the <a href=\"https://joindiaspora.com/terms\">Diaspora*</a> and <a href=\"https://github.com/appdotnet/terms-of-service\">App.net</a> privacy policies, also licensed under <a href=\"https://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA</a>."
 msgstr ""
-"Originalmente adaptado de <a href=\"https://joindiaspora.com/terms"
-"\">Diáspora*</a> and <a href=\"https://github.com/appdotnet/terms-of-service"
-"\">App.net</a> privacy policies, also licensed under <a href=\"https://"
+"Originalmente adaptado de <a href=\"https://joindiaspora.com/terms\">"
+"Diáspora*</a> and <a href=\"https://github.com/appdotnet/terms-of-service\">"
+"App.net</a> privacy policies, also licensed under <a href=\"https://"
 "creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA</a>."
 
 #: lib/web/templates/api/privacy.html.heex:173
@@ -1005,8 +1006,8 @@ msgid "Hi there! It seems like you wanted to change the email address linked to 
 msgstr ""
 "¡Hola! Parece que desea cambiar la dirección de correo electrónico vinculada "
 "a su cuenta en <b>%{instance} </b>. Si aún desea hacerlo, haga clic en el "
-"botón de abajo para confirmar el cambio. Luego podrá iniciar sesión en "
-"%{instance} con esta nueva dirección de correo electrónico."
+"botón de abajo para confirmar el cambio. Luego podrá iniciar sesión en %"
+"{instance} con esta nueva dirección de correo electrónico."
 
 #: lib/web/templates/email/email_changed_old.text.eex:3
 #, elixir-autogen, elixir-format
@@ -1243,15 +1244,15 @@ msgstr ""
 #, elixir-autogen, elixir-format
 msgid "<b>%{inviter}</b> just invited you to join their group %{link_start}<b>%{group}</b>%{link_end}"
 msgstr ""
-"<b>%{inviter}</b> le acaba de invitar a unirse a su grupo %{link_start}<b>"
-"%{group}</b>%{link_end}"
+"<b>%{inviter}</b> le acaba de invitar a unirse a su grupo %{link_start}<b>%"
+"{group}</b>%{link_end}"
 
 #: lib/web/templates/email/group_member_removal.html.heex:47
 #, elixir-autogen, elixir-format
 msgid "You have been removed from group %{link_start}<b>%{group}</b>%{link_end}. You will not be able to access this group's private content anymore."
 msgstr ""
-"Ha sido eliminado del grupo %{link_start}<b>%{group}</b>%{link_end}. Ya "
-"no podrá acceder al contenido privado de este grupo."
+"Ha sido eliminado del grupo %{link_start}<b>%{group}</b>%{link_end}. Ya no "
+"podrá acceder al contenido privado de este grupo."
 
 #: lib/web/templates/email/group_suspension.html.heex:81
 #: lib/web/templates/email/group_suspension.text.eex:7
@@ -1271,8 +1272,8 @@ msgstr "¡El grupo %{group} ha sido suspendido en %{instance}!"
 #, elixir-autogen, elixir-format
 msgid "Your instance's moderation team has decided to suspend %{group_name} (%{group_address}). You are no longer a member of this group."
 msgstr ""
-"El equipo de moderación de su instancia ha decidido suspender a "
-"%{group_name} (%{group_address}). Ya no eres miembro de este grupo."
+"El equipo de moderación de su instancia ha decidido suspender a %"
+"{group_name} (%{group_address}). Ya no eres miembro de este grupo."
 
 #: lib/web/email/group.ex:106
 #, elixir-autogen, elixir-format
@@ -1641,16 +1642,16 @@ msgstr "Su participación en el evento %{event} ¡ha sido cancelada!"
 #, elixir-autogen, elixir-format
 msgid "Your instance's moderation team has decided to suspend %{actor_name} (%{actor_address}). All of their events have been removed and your participation to event %{event} cancelled."
 msgstr ""
-"El equipo de moderación de tu instancia ha decidido suspender a %{actor_name} "
-"(%{actor_address}). Se eliminaron todos sus eventos y se canceló su "
-"participación en el evento %{event}."
+"El equipo de moderación de tu instancia ha decidido suspender a %"
+"{actor_name} (%{actor_address}). Se eliminaron todos sus eventos y se "
+"canceló su participación en el evento %{event}."
 
 #: lib/web/templates/email/group_suspension.html.heex:50
 #, elixir-autogen, elixir-format
 msgid "Your instance's moderation team has decided to suspend <b>%{group_name}</b> (%{group_address}). You are no longer a member of this group."
 msgstr ""
-"El equipo de moderación de su instancia ha decidido suspender a <b>"
-"%{group_name}</b>(%{group_address}). Ya no eres miembro de este grupo."
+"El equipo de moderación de su instancia ha decidido suspender a <b>%"
+"{group_name}</b>(%{group_address}). Ya no eres miembro de este grupo."
 
 #: lib/web/templates/email/actor_suspension_participants.html.heex:18
 #: lib/web/templates/email/actor_suspension_participants.text.eex:1
@@ -1915,8 +1916,8 @@ msgstr "Tu solicitud de adhesión para el grupo %{group} ha sido rechazada."
 #, elixir-autogen, elixir-format
 msgid "Your membership request for group %{link_start}<b>%{group}</b>%{link_end} has been rejected."
 msgstr ""
-"Tu solicitud de adhesión para el grupo %{link_start}<b>%{group}</"
-"b>%{link_end} ha sido rechazada."
+"Tu solicitud de adhesión para el grupo %{link_start}<b>%{group}</b>%"
+"{link_end} ha sido rechazada."
 
 #: lib/web/templates/email/group_membership_approval.text.eex:3
 #, elixir-autogen, elixir-format
@@ -1927,8 +1928,8 @@ msgstr "Tu solicitud de adhesión para el grupo %{group} ha sido aprobada."
 #, elixir-autogen, elixir-format
 msgid "Your membership request for group %{link_start}<b>%{group}</b>%{link_end} has been approved."
 msgstr ""
-"Tu solicitud de adhesión para el grupo %{link_start}<b>%{group}</"
-"b>%{link_end} ha sido aprobada."
+"Tu solicitud de adhesión para el grupo %{link_start}<b>%{group}</b>%"
+"{link_end} ha sido aprobada."
 
 #: lib/web/templates/email/pending_participation_notification.html.heex:47
 #: lib/web/templates/email/pending_participation_notification.text.eex:4
@@ -1982,10 +1983,10 @@ msgstr "Un administrador actualizó tu rol en %{instance}"
 #, elixir-autogen, elixir-format
 msgid "Hi there! It seems like you wanted to change the email address linked to your account on %{instance}. If you still wish to do so, please click the button below to confirm the change. You will then be able to log in to %{instance} with this new email address."
 msgstr ""
-"¡Hola! Parece que deseas cambiar la dirección de correo electrónico vinculada "
-"a tu cuenta en %{instance}. Si aún deseas hacerlo, haz clic en el botón de "
-"abajo para confirmar el cambio. Luego podrás iniciar sesión en %{instance} con "
-"esta nueva dirección de correo electrónico."
+"¡Hola! Parece que deseas cambiar la dirección de correo electrónico "
+"vinculada a tu cuenta en %{instance}. Si aún deseas hacerlo, haz clic en el "
+"botón de abajo para confirmar el cambio. Luego podrás iniciar sesión en %"
+"{instance} con esta nueva dirección de correo electrónico."
 
 #: lib/web/templates/email/admin_user_email_changed_new.text.eex:3
 #: lib/web/templates/email/admin_user_email_changed_old.text.eex:3
@@ -2016,8 +2017,8 @@ msgstr ""
 msgid "Hi there! We just wanted to inform you that an administrator from <b>%{instance}</b> just manually changed your account email from <b>%{old_email}</b> to <b>%{new_email}</b> (this one)."
 msgstr ""
 "¡Hola! Solo queríamos informarte que un administrador de <b>%{instance}</b> "
-"acaba de cambiar manualmente el correo electrónico de tu cuenta de <b>"
-"%{old_email}</b> a <b>%{new_email}</b> (éste)."
+"acaba de cambiar manualmente el correo electrónico de tu cuenta de <b>%"
+"{old_email}</b> a <b>%{new_email}</b> (éste)."
 
 #: lib/web/templates/email/admin_user_confirmation.html.heex:47
 #, elixir-autogen, elixir-format

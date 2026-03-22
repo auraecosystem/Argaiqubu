@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-24 14:39+0000\n"
-"PO-Revision-Date: 2023-02-16 15:32+0000\n"
-"Last-Translator: Vri <vrifox@vrifox.cc>\n"
+"PO-Revision-Date: 2026-03-11 21:38+0000\n"
+"Last-Translator: Kerstin <kerstin@erictapen.name>\n"
 "Language-Team: German <https://weblate.framasoft.org/projects/mobilizon/"
 "backend/de/>\n"
 "Language: de\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.15.2\n"
+"X-Generator: Weblate 5.16.2\n"
 
 #: lib/web/templates/email/password_reset.html.heex:66
 #, elixir-autogen, elixir-format
@@ -291,9 +291,9 @@ msgstr ""
 "Wenn sich dieser Server in den USA befindet: Unsere Website, Produkte und "
 "Dienstleistungen sind an Personen gerichtet, die mindestens 13 Jahre alt "
 "sind. Wenn Sie unter 13 Jahre alt sind, dürfen Sie diese Website gemäß den "
-"Anforderungen des COPPA (<a href=\"https://en.wikipedia.org/wiki/Children%"
-"27s_Online_Privacy_Protection_Act\">Children’s Online Privacy Protection "
-"Act</a>) nicht nutzen."
+"Anforderungen des COPPA (<a href=\"https://en.wikipedia.org/wiki/"
+"Children%27s_Online_Privacy_Protection_Act\">Children’s Online Privacy "
+"Protection Act</a>) nicht nutzen."
 
 #: lib/web/templates/api/privacy.html.heex:160
 #, elixir-autogen, elixir-format
@@ -435,8 +435,8 @@ msgid "One participation request for event %{title} to process"
 msgid_plural "%{number_participation_requests} participation requests for event %{title} to process"
 msgstr[0] "Eine Teilnahmeanfrage für die Veranstaltung %{title} zu bearbeiten"
 msgstr[1] ""
-"%{number_participation_requests} Teilnahmeanfragen für Veranstaltung "
-"%{title} zu bearbeiten"
+"%{number_participation_requests} Teilnahmeanfragen für Veranstaltung %"
+"{title} zu bearbeiten"
 
 #: lib/web/templates/email/notification_each_week.html.heex:47
 #: lib/web/templates/email/notification_each_week.text.eex:3
@@ -664,8 +664,8 @@ msgstr ""
 msgctxt "terms"
 msgid "For full details about the Mobilizon software <a href=\"https://mobilizon.org\">see here</a>."
 msgstr ""
-"Vollumfängliche Informationen zur Mobilizon-Software <a href=\"https"
-"://mobilizon.org\">können Sie hier erhalten</a>."
+"Vollumfängliche Informationen zur Mobilizon-Software <a href=\"https://"
+"mobilizon.org\">können Sie hier erhalten</a>."
 
 #: lib/web/templates/api/terms.html.heex:47
 #, elixir-autogen, elixir-format
@@ -673,10 +673,10 @@ msgctxt "terms"
 msgid "Here are the important things you need to know about accessing and using the <b>%{instance_name}</b> (<a href=\"https://%{instance_url}\">%{instance_url}</a>) website and service (collectively, \"Service\"). These are our terms of service (\"Terms\"). Please read them carefully."
 msgstr ""
 "Hier sind die wichtigen Dinge, die Sie über den Zugriff auf und die Nutzung "
-"der <b>%{instance_name}</b> (<a href=\"https://%{instance_url}\""
-">%{instance_url}</a>) Website und des Dienstes (zusammen der „Dienst“) "
-"wissen müssen. Dies sind unsere Nutzungsbedingungen („Bedingungen“). Bitte "
-"lesen Sie sie sorgfältig durch."
+"der <b>%{instance_name}</b> (<a href=\"https://%{instance_url}\">%"
+"{instance_url}</a>) Website und des Dienstes (zusammen der „Dienst“) wissen "
+"müssen. Dies sind unsere Nutzungsbedingungen („Bedingungen“). Bitte lesen "
+"Sie sie sorgfältig durch."
 
 #: lib/web/templates/api/terms.html.heex:82
 #, elixir-autogen, elixir-format
@@ -725,10 +725,10 @@ msgstr ""
 msgctxt "terms"
 msgid "These Terms constitute the entire agreement between you and <b>%{instance_name}</b> regarding the use of the Service, superseding any prior agreements between you and <b>%{instance_name}</b> relating to your use of the Service."
 msgstr ""
-"Diese Bedingungen stellen die gesamte Vereinbarung zwischen Ihnen und <b>"
-"%{instance_name}</b> bezüglich der Nutzung des Dienstes dar und ersetzen "
-"alle früheren Vereinbarungen zwischen Ihnen und <b>%{instance_name}</b> in "
-"Bezug auf Ihre Nutzung des Dienstes."
+"Diese Bedingungen stellen die gesamte Vereinbarung zwischen Ihnen und <b>%"
+"{instance_name}</b> bezüglich der Nutzung des Dienstes dar und ersetzen alle "
+"früheren Vereinbarungen zwischen Ihnen und <b>%{instance_name}</b> in Bezug "
+"auf Ihre Nutzung des Dienstes."
 
 #: lib/web/templates/api/terms.html.heex:247
 #, elixir-autogen, elixir-format
@@ -765,8 +765,8 @@ msgstr ""
 msgctxt "terms"
 msgid "Questions or comments about the Service may be directed to us at %{contact}"
 msgstr ""
-"Fragen oder Kommentare zum Dienst können an uns gerichtet werden unter "
-"%{contact}"
+"Fragen oder Kommentare zum Dienst können an uns gerichtet werden unter %"
+"{contact}"
 
 #: lib/web/templates/api/terms.html.heex:245
 #, elixir-autogen, elixir-format
@@ -812,8 +812,8 @@ msgid "If you discover or suspect any Service security breaches, please let us k
 msgstr ""
 "Wenn Sie Sicherheitslücken im Dienst entdecken oder vermuten, informieren "
 "Sie uns bitte so schnell wie möglich. Bei Sicherheitslücken in der Mobilizon-"
-"Software selbst wenden Sie sich bitte direkt an <a href=\"https://framagit."
-"org/framasoft/mobilizon/\">die Mitwirkenden</a>."
+"Software selbst wenden Sie sich bitte direkt an <a href=\"https://"
+"framagit.org/framasoft/mobilizon/\">die Mitwirkenden</a>."
 
 #: lib/web/templates/api/terms.html.heex:240
 #, elixir-autogen, elixir-format
@@ -829,8 +829,8 @@ msgstr ""
 msgctxt "terms"
 msgid "Originally adapted from the <a href=\"https://joindiaspora.com/terms\">Diaspora*</a> and <a href=\"https://github.com/appdotnet/terms-of-service\">App.net</a> privacy policies, also licensed under <a href=\"https://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA</a>."
 msgstr ""
-"Ursprünglich aus den Datenschutzrichtlinien von <a href=\"https"
-"://joindiaspora.com/terms\">Diaspora*</a> und <a href=\"https://github.com/"
+"Ursprünglich aus den Datenschutzrichtlinien von <a href=\"https://"
+"joindiaspora.com/terms\">Diaspora*</a> und <a href=\"https://github.com/"
 "appdotnet/terms-of-service\">App.net</a> adaptiert, die ebenfalls unter <a "
 "href=\"https://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA</a> "
 "lizenziert sind."
@@ -840,10 +840,10 @@ msgstr ""
 msgctxt "terms"
 msgid "Originally adapted from the <a href=\"https://mastodon.social/terms\">Mastodon</a> and <a href=\"https://github.com/discourse/discourse\">Discourse</a> privacy policies, also licensed under <a href=\"https://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA</a>."
 msgstr ""
-"Ursprünglich angepasst von den <a href=\"https://mastodon.social/terms"
-"\">Mastodon</a> und <a href=\"https://github.com/discourse/discourse"
-"\">Discourse</a> Datenschutzrichtlinien, ebenfalls lizenziert unter <a href="
-"\"https://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA</a>."
+"Ursprünglich angepasst von den <a href=\"https://mastodon.social/terms\">"
+"Mastodon</a> und <a href=\"https://github.com/discourse/discourse\">"
+"Discourse</a> Datenschutzrichtlinien, ebenfalls lizenziert unter <a "
+"href=\"https://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA</a>."
 
 #: lib/web/templates/api/terms.html.heex:3
 #, elixir-autogen, elixir-format
@@ -1030,8 +1030,8 @@ msgstr ""
 "Hallo zusammen! Es scheint, dass Sie die mit Ihrem Konto verknüpfte E-Mail-"
 "Adresse auf <b>%{instance}</b> ändern wollten. Wenn Sie dies immer noch tun "
 "möchten, klicken Sie bitte auf die Schaltfläche unten, um die Änderung zu "
-"bestätigen. Sie können sich dann mit dieser neuen E-Mail-Adresse bei "
-"%{instance} anmelden."
+"bestätigen. Sie können sich dann mit dieser neuen E-Mail-Adresse bei %"
+"{instance} anmelden."
 
 #: lib/web/templates/email/email_changed_old.text.eex:3
 #, elixir-autogen, elixir-format
@@ -1277,8 +1277,8 @@ msgstr ""
 #, elixir-autogen, elixir-format
 msgid "<b>%{inviter}</b> just invited you to join their group %{link_start}<b>%{group}</b>%{link_end}"
 msgstr ""
-"<b>%{inviter}</b> hat Sie gerade eingeladen, seiner Gruppe beizutreten "
-"%{link_start}<b>%{group}</b>%{link_end}"
+"<b>%{inviter}</b> hat Sie gerade eingeladen, seiner Gruppe beizutreten %"
+"{link_start}<b>%{group}</b>%{link_end}"
 
 #: lib/web/templates/email/group_member_removal.html.heex:47
 #, elixir-autogen, elixir-format
@@ -1305,9 +1305,9 @@ msgstr "Die Gruppe %{group} wurde auf %{instance} suspendiert!"
 #, elixir-autogen, elixir-format
 msgid "Your instance's moderation team has decided to suspend %{group_name} (%{group_address}). You are no longer a member of this group."
 msgstr ""
-"Das Moderationsteam Ihrer Instanz hat beschlossen, %{group_name} "
-"(%{group_address}) zu suspendieren. Sie sind nicht länger ein Mitglied "
-"dieser Gruppe."
+"Das Moderationsteam Ihrer Instanz hat beschlossen, %{group_name} (%"
+"{group_address}) zu suspendieren. Sie sind nicht länger ein Mitglied dieser "
+"Gruppe."
 
 #: lib/web/email/group.ex:106
 #, elixir-autogen, elixir-format
@@ -1330,8 +1330,8 @@ msgctxt "terms"
 msgid "For information about how we collect and use information about users of the Service, please check our <a href=\"/privacy\">privacy policy</a>."
 msgstr ""
 "Informationen darüber, wie wir Informationen über Nutzer des Dienstes "
-"sammeln und verwenden, finden Sie in unserer <a href=\"/privacy"
-"\">Datenschutzrichtlinie</a>."
+"sammeln und verwenden, finden Sie in unserer <a href=\"/privacy\">"
+"Datenschutzrichtlinie</a>."
 
 #: lib/web/templates/api/terms.html.heex:88
 #, elixir-autogen, elixir-format
@@ -1388,8 +1388,8 @@ msgctxt "terms"
 msgid "Some terms, technical or otherwise, used in the text below may cover concepts that are difficult to grasp. We have provided <a href=\"/glossary\">a glossary</a> to help you understand them better."
 msgstr ""
 "Einige technische oder andere Begriffe, die im folgenden Text verwendet "
-"werden, können schwer verständliche Konzepte umfassen. Wir haben ein <a href="
-"\"/glossary\">Glossar</a> bereitgestellt, um Ihnen das Verständnis zu "
+"werden, können schwer verständliche Konzepte umfassen. Wir haben ein <a "
+"href=\"/glossary\">Glossar</a> bereitgestellt, um Ihnen das Verständnis zu "
 "erleichtern."
 
 #: lib/web/templates/api/terms.html.heex:120
@@ -1419,8 +1419,8 @@ msgstr ""
 "Wir erheben Informationen von Ihnen, wenn Sie sich auf dieser Instanz "
 "registrieren und sammeln Daten, wenn Sie an der Plattform teilnehmen, indem "
 "Sie hier geteilte Inhalte lesen, schreiben und mit ihnen interagieren. Wenn "
-"Sie sich auf dieser Instanz registrieren, werden Sie aufgefordert, <b>eine E"
-"-Mail-Adresse, ein Passwort</b> (gehasht) und mindestens <b>einen "
+"Sie sich auf dieser Instanz registrieren, werden Sie aufgefordert, <b>eine E-"
+"Mail-Adresse, ein Passwort</b> (gehasht) und mindestens <b>einen "
 "Benutzernamen</b> einzugeben. Ihre E-Mail-Adresse wird durch eine E-Mail "
 "verifiziert, die einen eindeutigen Link enthält. Sobald der Link aktiviert "
 "ist, wissen wir, dass Sie diese E-Mail-Adresse kontrollieren. Sie können "
@@ -1691,17 +1691,17 @@ msgstr "Ihre Teilnahme an %{event} wurde storniert!"
 #, elixir-autogen, elixir-format
 msgid "Your instance's moderation team has decided to suspend %{actor_name} (%{actor_address}). All of their events have been removed and your participation to event %{event} cancelled."
 msgstr ""
-"Das Moderationsteam Ihrer Instanz hat beschlossen, %{group_name} "
-"(%{group_address}) zu suspendieren. Sie sind nicht länger ein Mitglied "
-"dieser Gruppe."
+"Das Moderationsteam Ihrer Instanz hat beschlossen, %{group_name} (%"
+"{group_address}) zu suspendieren. Sie sind nicht länger ein Mitglied dieser "
+"Gruppe."
 
 #: lib/web/templates/email/group_suspension.html.heex:50
 #, elixir-autogen, elixir-format
 msgid "Your instance's moderation team has decided to suspend <b>%{group_name}</b> (%{group_address}). You are no longer a member of this group."
 msgstr ""
-"Das Moderationsteam Ihrer Instanz hat beschlossen, <b>%{group_name}</b> "
-"(%{group_address}) zu suspendieren. Sie sind nicht länger ein Mitglied "
-"dieser Gruppe."
+"Das Moderationsteam Ihrer Instanz hat beschlossen, <b>%{group_name}</b> (%"
+"{group_address}) zu suspendieren. Sie sind nicht länger ein Mitglied dieser "
+"Gruppe."
 
 #: lib/web/templates/email/actor_suspension_participants.html.heex:18
 #: lib/web/templates/email/actor_suspension_participants.text.eex:1
@@ -1966,8 +1966,8 @@ msgstr "Ihr Antrag auf Mitgliedschaft in der Gruppe %{group} wurde abgelehnt."
 #, elixir-autogen, elixir-format
 msgid "Your membership request for group %{link_start}<b>%{group}</b>%{link_end} has been rejected."
 msgstr ""
-"Ihr Antrag auf Mitgliedschaft in der Gruppe %{link_start}<b>%{group}</b>"
-"%{link_end} wurde abgelehnt."
+"Ihr Antrag auf Mitgliedschaft in der Gruppe %{link_start}<b>%{group}</b>%"
+"{link_end} wurde abgelehnt."
 
 #: lib/web/templates/email/group_membership_approval.text.eex:3
 #, elixir-autogen, elixir-format
@@ -1978,8 +1978,8 @@ msgstr "Ihr Antrag auf Mitgliedschaft in der Gruppe %{group} wurde genehmigt."
 #, elixir-autogen, elixir-format
 msgid "Your membership request for group %{link_start}<b>%{group}</b>%{link_end} has been approved."
 msgstr ""
-"Ihr Antrag auf Mitgliedschaft in der Gruppe %{link_start}<b>%{group}</b>"
-"%{link_end} wurde genehmigt."
+"Ihr Antrag auf Mitgliedschaft in der Gruppe %{link_start}<b>%{group}</b>%"
+"{link_end} wurde genehmigt."
 
 #: lib/web/templates/email/pending_participation_notification.html.heex:47
 #: lib/web/templates/email/pending_participation_notification.text.eex:4
@@ -1987,8 +1987,7 @@ msgstr ""
 msgid "You have one pending attendance request to process for the following event:"
 msgid_plural "You have %{number_participation_requests} attendance requests to process for the following event:"
 msgstr[0] "Sie haben eine ausstehende Anwesenheitsanforderung zu bearbeiten:"
-msgstr[1] ""
-"Sie haben %{Anzahl_Teilnahmeanträge} Teilnahmeanträge zu bearbeiten:"
+msgstr[1] "Sie haben %{Anzahl_Teilnahmeanträge} Teilnahmeanträge zu bearbeiten:"
 
 #: lib/web/templates/email/admin_user_role_changed.html.heex:18
 #: lib/web/templates/email/admin_user_role_changed.text.eex:1
@@ -2033,8 +2032,8 @@ msgstr "Ein Administrator hat Ihre Rolle auf %{instance} aktualisiert"
 #, elixir-autogen, elixir-format
 msgid "Hi there! It seems like you wanted to change the email address linked to your account on %{instance}. If you still wish to do so, please click the button below to confirm the change. You will then be able to log in to %{instance} with this new email address."
 msgstr ""
-"Hallo zusammen! Es scheint, dass Sie die mit Ihrem Benutzerkonto verknüpfte E"
-"-Mail-Adresse auf <b>%{instance}</b> ändern wollten. Wenn Sie dies immer "
+"Hallo zusammen! Es scheint, dass Sie die mit Ihrem Benutzerkonto verknüpfte "
+"E-Mail-Adresse auf <b>%{instance}</b> ändern wollten. Wenn Sie dies immer "
 "noch tun möchten, klicken Sie bitte auf die Schaltfläche unten, um die "
 "Änderung zu bestätigen. Sie können sich dann mit dieser neuen E-Mail-Adresse "
 "bei %{instance} anmelden."
@@ -2052,33 +2051,31 @@ msgstr ""
 #, elixir-autogen, elixir-format
 msgid "Hi there! We just wanted to inform you that an administrator from %{instance} just manually confirmed your account."
 msgstr ""
-"Hallo! Wir möchten Sie informieren, dass ein Administrator von <b> "
-"%{instance}</b> eben manuell Ihr Benutzerkonto bestätigte."
+"Hallo! Wir möchten Sie informieren, dass ein Administrator von <b> %"
+"{instance}</b> eben manuell Ihr Benutzerkonto bestätigte."
 
 #: lib/web/templates/email/admin_user_email_changed_old.html.heex:47
 #, elixir-autogen, elixir-format
 msgid "Hi there! We just wanted to inform you that an administrator from <b>%{instance}</b> just manually changed your account email from <b>%{old_email}</b> (this one) to <b>%{new_email}</b>."
 msgstr ""
-"Hallo! Wir möchten Sie informieren, dass ein Administrator von "
-"<b>%{instance}</b> soeben manuell die mit Ihrem Benutzerkonto verknüpfte E-"
-"Mail von <b>%{old_email}</b> (diese hier) zu <b>%{new_email}</b> geändert "
-"hat."
+"Hallo! Wir möchten Sie informieren, dass ein Administrator von <b>%{instance}"
+"</b> soeben manuell die mit Ihrem Benutzerkonto verknüpfte E-Mail von <b>%"
+"{old_email}</b> (diese hier) zu <b>%{new_email}</b> geändert hat."
 
 #: lib/web/templates/email/admin_user_email_changed_new.html.heex:47
 #, elixir-autogen, elixir-format
 msgid "Hi there! We just wanted to inform you that an administrator from <b>%{instance}</b> just manually changed your account email from <b>%{old_email}</b> to <b>%{new_email}</b> (this one)."
 msgstr ""
-"Hallo! Wir möchten Sie informieren, dass ein Administrator von "
-"<b>%{instance}</b> soeben manuell die mit Ihrem Benutzerkonto verknüpfte E-"
-"Mail von <b>%{old_email}</b> zu <b>%{new_email}</b> (diese hier) geändert "
-"hat."
+"Hallo! Wir möchten Sie informieren, dass ein Administrator von <b>%{instance}"
+"</b> soeben manuell die mit Ihrem Benutzerkonto verknüpfte E-Mail von <b>%"
+"{old_email}</b> zu <b>%{new_email}</b> (diese hier) geändert hat."
 
 #: lib/web/templates/email/admin_user_confirmation.html.heex:47
 #, elixir-autogen, elixir-format
 msgid "Hi there! We just wanted to inform you that an administrator from <b>%{instance}</b> just manually confirmed your account."
 msgstr ""
-"Hallo! Wir möchten Sie informieren, dass ein Administrator von "
-"<b>%{instance}</b> Ihr Benutzerkonto gerade manuell bestätigt hat."
+"Hallo! Wir möchten Sie informieren, dass ein Administrator von <b>%{instance}"
+"</b> Ihr Benutzerkonto gerade manuell bestätigt hat."
 
 #: lib/web/templates/email/admin_user_confirmation.html.heex:96
 #: lib/web/templates/email/admin_user_email_changed_new.html.heex:62
@@ -2099,8 +2096,8 @@ msgstr ""
 msgid "If something doesn't feel right to you, please contact the instance administrator through the contact methods on the instance's about page: %{about_page}."
 msgstr ""
 "Wenn Ihnen etwas nicht richtig vorkommt, kontaktieren Sie bitte die "
-"Instanzadministrator über die Kontaktmethoden auf der Über-Seite der Instanz:"
-" %{about_page}."
+"Instanzadministrator über die Kontaktmethoden auf der Über-Seite der "
+"Instanz: %{about_page}."
 
 #: lib/web/templates/email/admin_user_confirmation.html.heex:79
 #, elixir-autogen, elixir-format
@@ -2154,8 +2151,8 @@ msgstr ""
 #, elixir-autogen, elixir-format
 msgid "Hi there! We just wanted to inform you that an administrator from <b>%{instance}</b> just changed your account role."
 msgstr ""
-"Hallo! Wir möchten Sie informieren, dass ein Administrator von <b> "
-"%{instance}</b> die Rolle Ihres Benutzerkontos änderte."
+"Hallo! Wir möchten Sie informieren, dass ein Administrator von <b> %"
+"{instance}</b> die Rolle Ihres Benutzerkontos änderte."
 
 #: lib/web/templates/email/instance_follow.text.eex:5
 #, elixir-autogen, elixir-format

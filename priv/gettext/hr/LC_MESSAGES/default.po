@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-11-25 07:56+0000\n"
-"PO-Revision-Date: 2024-04-25 13:45+0000\n"
+"PO-Revision-Date: 2026-03-18 21:35+0000\n"
 "Last-Translator: Milo Ivir <mail@milotype.de>\n"
 "Language-Team: Croatian <https://weblate.framasoft.org/projects/mobilizon/"
 "backend/hr/>\n"
@@ -11,9 +11,9 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 5.5\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 5.16.2\n"
 
 #: lib/web/templates/email/password_reset.html.heex:66
 #, elixir-autogen, elixir-format
@@ -272,10 +272,11 @@ msgctxt "terms"
 msgid "If this server is in the EU or the EEA: Our site, products and services are all directed to people who are at least 16 years old. If you are under the age of 16, per the requirements of the GDPR (<a href=\"https://en.wikipedia.org/wiki/General_Data_Protection_Regulation\">General Data Protection Regulation</a>) do not use this site."
 msgstr ""
 "Ako se ovaj server nalazi u EU ili u Europskom gospodarskom prostoru (EEA): "
-"Naša stranica, proizvodi i usluge su namijenjene za osobe koje su starije od "
-"16 godina. Ako si mlađi od 16 godina, na osnovi uredbe GDPR (<a href=\"https"
-"://hr.wikipedia.org/wiki/Op%C4%87a_uredba_o_za%C5%A1titi_podataka\">Opća "
-"uredba o zaštiti podataka</a>) nemoj koristiti ovu stranicu."
+"Naša web-stranica, proizvodi i usluge su namijenjene za osobe koje su "
+"starije od 16 godina. Ako si mlađi od 16 godina, na osnovi GDPR-a (<a "
+"href=\"https://hr.wikipedia.org/wiki/"
+"Op%C4%87a_uredba_o_za%C5%A1titi_podataka\">Opća uredba o zaštiti podataka</"
+"a>) nemoj koristiti ovu stranicu."
 
 #: lib/web/templates/api/privacy.html.heex:146
 #, elixir-autogen, elixir-format
@@ -327,9 +328,9 @@ msgstr ""
 msgctxt "terms"
 msgid "To aid moderation of the community, for example comparing your IP address with other known ones to determine ban\n    evasion or other violations."
 msgstr ""
-"Pomoći pri moderiranju zajednice, na primjer usporedbom tvoje IP adrese s "
-"drugim poznatim adresama za utvrđivanja zabrane\n"
-"     ili drugih povreda."
+"Za podržavanje moderiranja zajednice, primjerice usporedbom tvoje IP adrese "
+"s drugim poznatim adresama radi utvrđivanja\n"
+"    izbjegavanja zabrane pristupa ili drugih kršenja pravila."
 
 #: lib/web/templates/api/privacy.html.heex:54
 #, elixir-autogen, elixir-format
@@ -456,66 +457,97 @@ msgstr "Organizator događaja nije dodao opis."
 msgctxt "terms"
 msgid "We implement a variety of security measures to maintain the safety of your personal information when you enter, submit, or access your personal information. Among other things, your browser session, as well as the traffic between your applications and the API, are secured with SSL/TLS, and your password is hashed using a strong one-way algorithm."
 msgstr ""
+"Provodimo razne sigurnosne mjere kako bismo očuvali sigurnost tvojih osobnih "
+"podataka prilikom unosa, slanja ili pristupa tvojim osobnim podacima. Između "
+"ostalog, tvoja sesija preglednika, kao i promet između aplikacija i API-ja, "
+"zaštićeni su SSL/TLS-om, a tvoja se lozinka šifrira pomoću snažnog "
+"jednosmjernog algoritma."
 
 #: lib/web/templates/api/privacy.html.heex:126
 #, elixir-autogen, elixir-format
 msgctxt "terms"
 msgid "No. We do not sell, trade, or otherwise transfer to outside parties your personally identifiable information. This does not include trusted third parties who assist us in operating our site, conducting our business, or servicing you, so long as those parties agree to keep this information confidential. We may also release your information when we believe release is appropriate to comply with the law, enforce our site policies, or protect ours or others rights, property, or safety."
 msgstr ""
+"Ne. Ne prodajemo, ne trgujemo niti prenosimo osobne podatke vanjskim "
+"stranama. To ne uključuje pouzdane treće strane koje nam pomažu u radu naše "
+"stranice, obavljanju poslovanja ili pružanju usluga tebi, pod uvjetom da se "
+"te strane slažu da će ove informacije čuvati u tajnosti. Također možemo "
+"objaviti tvoje podatke kada smatramo da je to prikladno radi poštivanja "
+"zakona, provođenja naših pravila stranice ili zaštite naših ili tuđih prava, "
+"imovine ili sigurnosti."
 
 #: lib/web/templates/api/terms.html.heex:62
 #, elixir-autogen, elixir-format
 msgctxt "terms"
 msgid "Accepting these Terms"
-msgstr "Prihvaćanje ovih uvjeta"
+msgstr "Prihvaćanje ovih Uvjeta"
 
 #: lib/web/templates/api/terms.html.heex:73
 #, elixir-autogen, elixir-format
 msgctxt "terms"
 msgid "Changes to these Terms"
-msgstr "Promjene u ovim uvjetima"
+msgstr "Promjene Uvjeta"
 
 #: lib/web/templates/api/terms.html.heex:271
 #, elixir-autogen, elixir-format
 msgctxt "terms"
 msgid "A lot of the content on the Service is from you and others, and we don't review, verify or authenticate it, and it may include inaccuracies or false information. We make no representations, warranties, or guarantees relating to the quality, suitability, truth, accuracy or completeness of any content contained in the Service. You acknowledge sole responsibility for and assume all risk arising from your use of or reliance on any content."
 msgstr ""
+"Velik dio sadržaja na Usluzi dolazi od tebe i drugih korisnika, a mi ga ne "
+"pregledavamo, ne provjeravamo niti potvrđujemo, stoga može sadržavati "
+"netočnosti ili pogrešne informacije. Ne dajemo nikakve izjave, jamstva niti "
+"garancije u vezi s kvalitetom, prikladnošću, istinitošću, točnošću ili "
+"cjelovitošću bilo kakvog sadržaja na Usluzi. Prihvaćaš isključivu "
+"odgovornost i preuzimaš sav rizik koji proizlazi iz tvog korištenja ili "
+"vjerovanju bilo kojem sadržaju."
 
 #: lib/web/templates/api/terms.html.heex:192
 #, elixir-autogen, elixir-format
 msgctxt "terms"
 msgid "Also, you agree that you will not do any of the following in connection with the Service or other users:"
 msgstr ""
+"Također, prihvaćaš da nećeš raditi ništa od sljedećeg u vezi s Uslugom ili "
+"drugim korisnicima:"
 
 #: lib/web/templates/api/terms.html.heex:217
 #, elixir-autogen, elixir-format
 msgctxt "terms"
 msgid "Circumvent or attempt to circumvent any filtering, security measures, rate limits or other features designed to protect the Service, users of the Service, or third parties."
 msgstr ""
+"Zaobilaženje ili pokušaj zaobilaženja bilo kakvih filtriranja, sigurnosnih "
+"mjera, ograničenja cijena ili drugih funkcija izrađenih za zaštitu Usluge, "
+"korisnika Usluge ili trećih strana."
 
 #: lib/web/templates/api/terms.html.heex:211
 #, elixir-autogen, elixir-format
 msgctxt "terms"
 msgid "Collect any personal information about other users, or intimidate, threaten, stalk or otherwise harass other users of the Service;"
 msgstr ""
+"Prikupljanje bilo kakvih osobnih podataka o drugim korisnicima ili "
+"zastrašivanje, prijetnje, uhođenje ili na drugi način uznemiravanje drugih "
+"korisnika Usluge;"
 
 #: lib/web/templates/api/terms.html.heex:167
 #, elixir-autogen, elixir-format
 msgctxt "terms"
 msgid "Content that is illegal or unlawful, that would otherwise create liability;"
 msgstr ""
+"Sadržaj koji je ilegalan ili nezakonit, a koji bi inače stvorio odgovornost;"
 
 #: lib/web/templates/api/terms.html.heex:173
 #, elixir-autogen, elixir-format
 msgctxt "terms"
 msgid "Content that may infringe or violate any patent, trademark, trade secret, copyright, right of privacy, right of publicity or other intellectual or other right of any party;"
 msgstr ""
+"Sadržaj koji može kršiti bilo koji patent, žig, poslovnu tajnu, autorska "
+"prava, pravo na privatnost, pravo na javnost ili drugo intelektualno ili "
+"drugo pravo bilo koje strane;"
 
 #: lib/web/templates/api/terms.html.heex:103
 #, elixir-autogen, elixir-format
 msgctxt "terms"
 msgid "Creating Accounts"
-msgstr "Otvaranje računa"
+msgstr "Stvaranje računa"
 
 #: lib/web/templates/api/terms.html.heex:284
 #, elixir-autogen, elixir-format
@@ -540,18 +572,26 @@ msgstr "Hiperpoveznice i sadržaj trećih strana"
 msgctxt "terms"
 msgid "If you breach any of these Terms, we have the right to suspend or disable your access to or use of the Service."
 msgstr ""
+"Ako prekršiš bilo koje od ovih Uvjeta, imamo pravo obustaviti ili "
+"deaktivirati tvoj pristup Usluzi ili njegovo korištenje."
 
 #: lib/web/templates/api/terms.html.heex:205
 #, elixir-autogen, elixir-format
 msgctxt "terms"
 msgid "Impersonate or post on behalf of any person or entity or otherwise misrepresent your affiliation with a person or entity;"
 msgstr ""
+"Lažno se predstavljati ili objavljivati u ime bilo koje osobe ili entiteta "
+"ili na drugi način krivo predstavljati svoju povezanost s osobom ili "
+"entitetom;"
 
 #: lib/web/templates/api/terms.html.heex:128
 #, elixir-autogen, elixir-format
 msgctxt "terms"
 msgid "Our Service allows you and other users to post, link and otherwise make available content. You are responsible for the content that you make available to the Service, including its legality, reliability, and appropriateness."
 msgstr ""
+"Naša Usluga omogućuje tebi i drugim korisnicima da objavljujete, povezujete "
+"ili na druge načine omogućujete Usluzi pristup sadržaju, uključujući njegovu "
+"zakonitost, pouzdanost i prikladnost."
 
 #: lib/web/templates/api/terms.html.heex:94
 #, elixir-autogen, elixir-format
@@ -576,6 +616,10 @@ msgstr "Prekid"
 msgctxt "terms"
 msgid "Use the Service in any manner that could interfere with, disrupt, negatively affect or inhibit other users from fully enjoying the Service or that could damage, disable, overburden or impair the functioning of the Service;"
 msgstr ""
+"Koristi Uslugu na način koji bi mogao ometati, prekidati, negativno utjecati "
+"ili spriječiti druge korisnike da u potpunosti uživaju u Usluzi, ili koji bi "
+"mogao oštetiti, onemogućiti, preopteretiti ili narušiti funkcioniranje "
+"Usluge;"
 
 #: lib/web/templates/api/terms.html.heex:126
 #, elixir-autogen, elixir-format
@@ -588,72 +632,108 @@ msgstr "Tvoj sadržaj i ponašanje"
 msgctxt "terms"
 msgid "<b>%{instance_name}</b> makes no claim or representation regarding, and accepts no responsibility for third party websites accessible by hyperlink from the Service or websites linking to the Service. When you leave the Service, you should be aware that these Terms and our policies no longer govern. The inclusion of any link does not imply endorsement by <b>%{instance_name}</b> of the site. Use of any such linked website is at the user's own risk."
 msgstr ""
+"Instanca <b>%{instance_name}</b> ne tvrdi niti jamči, te ne preuzima "
+"odgovornost za web-stranice trećih strana koje su dostupne putem poveznica u "
+"tekstu Usluge ili u web-stranicama koje vode na stranicu Usluge. Ovi Uvjeti "
+"i naša pravila se više ne primjenjuju nakon što napustiš Uslugu. "
+"Uključivanje bilo koje poveznice ne podrazumijeva da instanca <b>%"
+"{instance_name}</b> odobrava tu stranicu. Bilo koje tako povezane web-"
+"stranice korisnici mogu koristiti, ali isključivo na vlastitu odgovornost."
 
 #: lib/web/templates/api/terms.html.heex:224
 #, elixir-autogen, elixir-format
 msgctxt "terms"
 msgid "Finally, your use of the Service is also subject to acceptance of <a href=\"/rules\">the instance's own specific rules</a> regarding the code of conduct and moderation rules. Breaking those rules may also result in your account being disabled or suspended."
 msgstr ""
+"Na kraju, korištenje Usluge je također podložno prihvaćanju <a href=\"/"
+"rules\">specifičnih pravila instance</a> vezanih uz kodeks ponašanja i "
+"pravila moderacije. Kršenje tih pravila također može rezultirati "
+"deaktiviranjem ili suspenzijom tvog računa."
 
 #: lib/web/templates/api/terms.html.heex:254
 #, elixir-autogen, elixir-format
 msgctxt "terms"
 msgid "For full details about the Mobilizon software <a href=\"https://mobilizon.org\">see here</a>."
 msgstr ""
-"Pogledaj sve detalje o Mobilizon softveru <a href=\"https://joinmobilizon."
-"org\">ovdje</a>."
+"Pogledaj sve detalje o Mobilizon softveru <a href=\"https://mobilizon.org\">"
+"ovdje</a>."
 
 #: lib/web/templates/api/terms.html.heex:47
 #, elixir-autogen, elixir-format
 msgctxt "terms"
 msgid "Here are the important things you need to know about accessing and using the <b>%{instance_name}</b> (<a href=\"https://%{instance_url}\">%{instance_url}</a>) website and service (collectively, \"Service\"). These are our terms of service (\"Terms\"). Please read them carefully."
 msgstr ""
-"Par važnih stvari koje trebaš znati o pristupanju i korištenju web stranice "
-"i usluga (pod zajedničkim imenom „Usluga”) instance <b>%{instance_name}</b> ("
-"<a href=\"https://%{instance_url}\">%{instance_url}</a>). Ovo su naši uvjeti "
-"pružanja usluge („Uvjeti”). Pažljivo ih pročitajte."
+"Par važnih stvari koje trebaš znati o pristupanju i korištenju web-stranice "
+"i usluga (pod zajedničkim imenom „Usluga”) instance <b>%{instance_name}</b> "
+"(<a href=\"https://%{instance_url}\">%{instance_url}</a>). Ovo su naši "
+"uvjeti pružanja usluge („Uvjeti”). Pažljivo ih pročitaj."
 
 #: lib/web/templates/api/terms.html.heex:82
 #, elixir-autogen, elixir-format
 msgctxt "terms"
 msgid "If we make major changes, we will notify our users in a clear and prominent manner. Minor changes may only be highlighted in the footer of our website. It is your responsibility to check the website regularly for changes to these Terms."
 msgstr ""
+"Ako napravimo veće promjene, obavijestit ćemo naše korisnike na jasan i "
+"vidljiv način. Manje promjene će se istaknuti samo u podnožju naše web-"
+"stranice. Tvoja je odgovornost da redovito provjeravaš web-stranicu za "
+"upoznavanje promjena ovih Uvjeta."
 
 #: lib/web/templates/api/terms.html.heex:158
 #, elixir-autogen, elixir-format
 msgctxt "terms"
 msgid "In order to make <b>%{instance_name}</b> a great place for all of us, please do not post, link and otherwise make available on or through the Service any of the following:"
 msgstr ""
+"Kako bismo stvorili instancu <b>%{instance_name}</b> kao izvrsno mjesto za "
+"sve nas, ne objavljuj, ne povezuj ili na druge načine omogućiš pristup "
+"sljedećim stvarima na ili putem Usluge:"
 
 #: lib/web/templates/api/terms.html.heex:179
 #, elixir-autogen, elixir-format
 msgctxt "terms"
 msgid "Private information of any third party (e.g., addresses, phone numbers, email addresses, Social Security numbers and credit card numbers); and"
 msgstr ""
+"Privatni podaci bilo koje treće strane (npr. adrese, telefonski brojevi, e-"
+"mail adrese, brojevi socijalnog osiguranja i brojevi kreditnih kartica); i"
 
 #: lib/web/templates/api/terms.html.heex:152
 #, elixir-autogen, elixir-format
 msgctxt "terms"
 msgid "Since Mobilizon is a distributed network, it is possible, depending on the visibility rules set to your content, that your content has been distributed to other Mobilizon instances. When you delete your content, we will request those other instances to also delete the content. Our responsibility on the content being deleted from those other instances ends here. If for some reason, some other instance does not delete the content, we cannot be held responsible."
 msgstr ""
+"Budući da je Mobilizon distribuirana mreža, moguće je, ovisno o pravilima "
+"vidljivosti postavljenim za tvoj sadržaj, da je tvoj sadržaj distribuiran na "
+"druge Mobilizon instance. Kada izbrišeš svoj sadržaj, zatražit ćemo od "
+"drugih instanci da također izbrišu sadržaj. Naša odgovornost za sadržaj koji "
+"se briše iz tih drugih instanci ovdje završava. Ako iz nekog razloga neka "
+"druga instanca ne izbriše sadržaj, nmi za to ne snosimo odgovornost."
 
 #: lib/web/templates/api/terms.html.heex:286
 #, elixir-autogen, elixir-format
 msgctxt "terms"
 msgid "These Terms constitute the entire agreement between you and <b>%{instance_name}</b> regarding the use of the Service, superseding any prior agreements between you and <b>%{instance_name}</b> relating to your use of the Service."
 msgstr ""
+"Ovi Uvjeti predstavljaju cjelokupan ugovor između tebe i instance <b>%"
+"{instance_name}</b> u vezi s korištenjem Usluge, te zamijenjuju sve "
+"prethodne ugovore između tebe i instance <b>%{instance_name}</b> koji se "
+"odnose se na tvoje korištenje Usluge."
 
 #: lib/web/templates/api/terms.html.heex:247
 #, elixir-autogen, elixir-format
 msgctxt "terms"
 msgid "This Service runs on a Mobilizon instance. This source code is licensed under an <a href=\"https://tldrlegal.com/license/gnu-affero-general-public-license-v3-(agpl-3.0)\">AGPLv3 license</a> which means you are allowed to and even encouraged to take the source code, modify it and use it."
 msgstr ""
+"Ova se Usluga pokreće na Mobilizon instanci. Izvorni kod je licenciran pod "
+"<a href=\"https://tldrlegal.com/license/gnu-affero-general-public-license-v3-"
+"(agpl-3.0)\">AGPLv3 licencom</a>, što znači da smiješ preuzeti izvorni kod, "
+"mijenjati ga i koristiti."
 
 #: lib/web/templates/api/terms.html.heex:185
 #, elixir-autogen, elixir-format
 msgctxt "terms"
 msgid "Viruses, corrupted data or other harmful, disruptive or destructive files or code."
 msgstr ""
+"Virusi, oštećeni podaci ili druge štetne, disruptivne ili destruktivne "
+"datoteke ili kod."
 
 #: lib/web/templates/api/terms.html.heex:146
 #, elixir-autogen, elixir-format
@@ -661,7 +741,7 @@ msgctxt "terms"
 msgid "You can remove the content that you posted by deleting it. Once you delete your content, it will not appear on the Service, but copies of your deleted content may remain in our system or backups for some period of time. Web server access logs might also be stored for some time in the system."
 msgstr ""
 "Sadržaj koji si objavio možeš ukloniti brisanjem. Nakon što izbrišeš svoj "
-"sadržaj, on se neće pojaviti na usluzi, ali kopije tvog izbrisanog sadržaja "
+"sadržaj, on se neće pojaviti na Usluzi, ali kopije tvog izbrisanog sadržaja "
 "mogu ostati u našem sustavu ili sigurnosnim kopijama neko vrijeme. Zapisnici "
 "pristupa web serveru se također mogu neko vrijeme zadržati u sustavu."
 
@@ -669,7 +749,7 @@ msgstr ""
 #, elixir-autogen, elixir-format
 msgctxt "terms"
 msgid "Questions or comments about the Service may be directed to us at %{contact}"
-msgstr "Pitanja ili komentare o usluzi možeš uputiti na %{contact}"
+msgstr "Pitanja ili komentare o Usluzi možeš uputiti na %{contact}"
 
 #: lib/web/templates/api/terms.html.heex:245
 #, elixir-autogen, elixir-format
@@ -682,44 +762,67 @@ msgstr "Izvorni kod"
 msgctxt "terms"
 msgid "We love feedback. Please let us know what you think of the Service, these Terms and, in general, <b>%{instance_name}</b>."
 msgstr ""
+"Volimo povratne informacije. Javi nam što misliš o Usluzi, o ovim Uvjetima "
+"ili o nešto općenitom u instanci <b>%{instance_name}</b>."
 
 #: lib/web/templates/api/terms.html.heex:234
 #, elixir-autogen, elixir-format
 msgctxt "terms"
 msgid "Instance administrators (and community moderators, given the relevant access) are responsible for monitoring and acting on flagged content and other user reports, and have the right and responsibility to remove or edit content that is not aligned to this Instance set of rules, or to suspend, block or ban (temporarily or permanently) any account, community, or instance for breaking these terms, or for other behaviours that they deem inappropriate, threatening, offensive, or harmful."
 msgstr ""
+"Administratori instance (i moderatori zajednice, ako imaju odgovarajući "
+"pristup) su odgovorni za praćenje i postupanje označenog sadržaja i drugim "
+"izvještajima korisnika, te imaju pravo i odgovornost ukloniti ili urediti "
+"sadržaj koji nije u skladu s pravilima ove instance, ili suspendirati, "
+"blokirati ili zabraniti pristup (privremeno ili stalno) bilo koji račun, "
+"zajednicu ili instancu zbog kršenja ovih uvjeta ili zbog drugih ponašanja "
+"koja se smatraju neprikladnima, prijetećima, uvredljivima ili štetnima."
 
 #: lib/web/templates/api/terms.html.heex:7
 #, elixir-autogen, elixir-format
 msgctxt "terms"
 msgid "<b>%{instance_name}</b> will not use or transmit or resell your personal data"
 msgstr ""
-"<b>%{instance_name}</b> neće koristiti, prenositi niti preprodavati tvoje "
-"osobne podatke"
+"Instanca <b>%{instance_name}</b> neće koristiti, prenositi niti preprodavati "
+"tvoje osobne podatke"
 
 #: lib/web/templates/api/terms.html.heex:113
 #, elixir-autogen, elixir-format
 msgctxt "terms"
 msgid "If you discover or suspect any Service security breaches, please let us know as soon as possible. For security holes in the Mobilizon software itself, please contact <a href=\"https://framagit.org/framasoft/mobilizon/\">its contributors</a> directly."
 msgstr ""
+"Ako otkriješ ili sumnjaš na bilo kakvo sigurnosno kršenje Usluge, obavijesti "
+"nas čim prije. Za sigurnosne propuste u samom Mobilizon softveru kontaktiraj "
+"izravno <a href=\"https://framagit.org/framasoft/mobilizon/\">njegove "
+"suradnike</a>."
 
 #: lib/web/templates/api/terms.html.heex:240
 #, elixir-autogen, elixir-format
 msgctxt "terms"
 msgid "Instance administrators should ensure that every community hosted on the instance is properly moderated according to the defined rules."
 msgstr ""
+"Administratori instance trebali bi osigurati da se svaka zajednica koja je "
+"smještena na instanci pravilno moderira prema definiranim pravilima."
 
 #: lib/web/templates/api/terms.html.heex:321
 #, elixir-autogen, elixir-format
 msgctxt "terms"
 msgid "Originally adapted from the <a href=\"https://joindiaspora.com/terms\">Diaspora*</a> and <a href=\"https://github.com/appdotnet/terms-of-service\">App.net</a> privacy policies, also licensed under <a href=\"https://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA</a>."
 msgstr ""
+"Izvorno prilagođeno iz <a href=\"https://joindiaspora.com/terms\">Diaspora*</"
+"a> i <a href=\"https://github.com/appdotnet/terms-of-service\">App.net</a> "
+"politika privatnosti, koje su također licencirane pod <a href=\"https://"
+"creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA.</a>."
 
 #: lib/web/templates/api/privacy.html.heex:173
 #, elixir-autogen, elixir-format
 msgctxt "terms"
 msgid "Originally adapted from the <a href=\"https://mastodon.social/terms\">Mastodon</a> and <a href=\"https://github.com/discourse/discourse\">Discourse</a> privacy policies, also licensed under <a href=\"https://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA</a>."
 msgstr ""
+"Izvorno prilagođeno iz <a href=\"https://mastodon.social/terms\">Mastodon</"
+"a> i <a href=\"https://github.com/discourse/discourse\">Discourse</a> "
+"politika privatnosti, koje su također licencirane pod <a href=\"https://"
+"creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA.</a>."
 
 #: lib/web/templates/api/terms.html.heex:3
 #, elixir-autogen, elixir-format
@@ -757,7 +860,7 @@ msgstr ""
 msgctxt "terms"
 msgid "You must respect other people and <b>%{instance_name}</b>'s rules when using the service"
 msgstr ""
-"Moraš poštovati druge ljude i pravila instance <b>%{instance_name}</b> kad "
+"Moraš poštovati druge ljude i pravila instance <b>%{instance_name}</b> kada "
 "koristiš uslugu"
 
 #: lib/web/templates/api/terms.html.heex:15
@@ -787,8 +890,8 @@ msgstr "Potvrdi tvoju e-mail adresu"
 #, elixir-autogen, elixir-format
 msgid "Hi there! You just registered to join this event: « %{title} ». Please confirm the e-mail address you provided:"
 msgstr ""
-"Bok! Upravo si se registrirao/la za pridruživanje ovom događaju: „%{title}”. "
-"Potvrdi upisanu e-mail adresu:"
+"Zravo! Upravo si se registrirao/la za pridruživanje ovom događaju: „%{title}"
+"”. Potvrdi upisanu e-mail adresu:"
 
 #: lib/web/templates/email/email.html.heex:142
 #: lib/web/templates/email/email.text.eex:8
@@ -839,12 +942,12 @@ msgstr[0] ""
 "gornje poveznice i pritisni gumb „Prisustvovanje”."
 msgstr[1] ""
 "Ako želiš otkazati svoje prisustvovanje za jedan ili nekoliko događaja, "
-"posjeti stranice događaja putem gornje poveznice i pritisni gumb "
-"„Prisustvovanje”."
+"posjeti stranice događaja putem gornje poveznice i pritisni gumb „"
+"Prisustvovanje”."
 msgstr[2] ""
 "Ako želiš otkazati svoje prisustvovanje za jedan ili nekoliko događaja, "
-"posjeti stranice događaja putem gornje poveznice i pritisni gumb "
-"„Prisustvovanje”."
+"posjeti stranice događaja putem gornje poveznice i pritisni gumb „"
+"Prisustvovanje”."
 
 #: lib/web/templates/email/email.text.eex:11
 #, elixir-autogen, elixir-format
@@ -902,15 +1005,17 @@ msgstr ""
 #, elixir-autogen, elixir-format
 msgid "Hi there! It seems like you wanted to change the email address linked to your account on <b>%{instance}</b>. If you still wish to do so, please click the button below to confirm the change. You will then be able to log in to %{instance} with this new email address."
 msgstr ""
-"Bok! Čini se da želiš promijeniti e-mail adresu koja je povezana s tvojim "
+"Zravo! Čini se da želiš promijeniti e-mail adresu koja je povezana s tvojim "
 "računom na instanci <b>%{instance}</b>. Ako želiš nastaviti, pritisni donji "
-"gumb za potvrđivanje promjene. Nakon toga ćeš se moći prijaviti na instanci "
-"%{instance} s ovom novom e-mail adresom."
+"gumb za potvrđivanje promjene. Nakon toga ćeš se moći prijaviti na instanci %"
+"{instance} s ovom novom e-mail adresom."
 
 #: lib/web/templates/email/email_changed_old.text.eex:3
 #, elixir-autogen, elixir-format
 msgid "Hi there! Just a quick note to confirm that the email address linked to your account on %{host} has been changed from this one to:"
 msgstr ""
+"Zravo! Samo kratka napomena da potvrđivanje da je e-mail adresa povezana s "
+"tvojim računom na %{host} promijenjena s ove u:"
 
 #: lib/web/templates/email/email_changed_old.html.heex:79
 #: lib/web/templates/email/email_changed_old.text.eex:5
@@ -987,13 +1092,14 @@ msgstr "Razlozi za izvještaj"
 #: lib/web/templates/email/report.html.heex:48
 #, elixir-autogen, elixir-format
 msgid "Someone on <b>%{instance}</b> reported the following content for you to analyze:"
-msgstr "Netko na <b>%{instance}</b> je prijavio sljedeći sadržaj za analizu:"
+msgstr ""
+"Netko na <b>%{instance}</b> je prijavio sljedeći sadržaj tebi za analizu:"
 
 #: lib/web/templates/email/event_participation_rejected.html.heex:18
 #: lib/web/templates/email/event_participation_rejected.text.eex:1
 #, elixir-autogen, elixir-format
 msgid "Sorry! You're not going."
-msgstr ""
+msgstr "Žao nam je! Ne ideš."
 
 #: lib/web/templates/email/event_updated.html.heex:93
 #, elixir-autogen, elixir-format
@@ -1040,12 +1146,12 @@ msgstr "Potvrdi tvoju e-mail adresu"
 #: lib/web/templates/email/report.html.heex:235
 #, elixir-autogen, elixir-format
 msgid "View report"
-msgstr "Pogledaj izvještaj"
+msgstr "Prikaži izvještaj"
 
 #: lib/web/templates/email/report.text.eex:26
 #, elixir-autogen, elixir-format
 msgid "View report:"
-msgstr "Pogledaj izvještaj:"
+msgstr "Prikaži izvještaj:"
 
 #: lib/web/templates/email/email_anonymous_activity.html.heex:85
 #: lib/web/templates/email/email_anonymous_activity.html.heex:182
@@ -1079,8 +1185,8 @@ msgstr "Što je danas na redu?"
 msgid "Would you wish to update or cancel your attendance, simply access the event page through the link above and click on the Attending button."
 msgstr ""
 "Ako želiš aktualizirati ili otkazati svoje prisustvovanje, jednostavno "
-"pristupi stranici događaja putem gornje poveznice i klikni na gumb "
-"„Prisustvovanje”."
+"pristupi stranici događaja putem gornje poveznice i klikni na gumb „"
+"Prisustvovanje”."
 
 #: lib/web/templates/email/pending_participation_notification.html.heex:106
 #: lib/web/templates/email/pending_participation_notification.text.eex:10
@@ -1089,8 +1195,8 @@ msgid "You are receiving this email because you chose to get notifications for p
 msgstr ""
 "Primaš ovu e-mail poruku jer si odabrao/la primati obavijesti o neriješenim "
 "zahtjevima za prisustvovanje tvojim događajima. Postavke obavijesti možeš "
-"deaktivirati ili promijeniti u postavkama korisničkog računa pod "
-"„Obavijesti”."
+"deaktivirati ili promijeniti u postavkama korisničkog računa pod „Obavijesti"
+"”."
 
 #: lib/web/templates/email/event_participation_rejected.text.eex:5
 #, elixir-autogen, elixir-format
@@ -1108,19 +1214,21 @@ msgstr "Nedavno si zatražio/la prisustvovati događaju %{title}."
 #: lib/web/templates/email/event_participation_confirmed.text.eex:1
 #, elixir-autogen, elixir-format
 msgid "You're going!"
-msgstr ""
+msgstr "Ideš!"
 
 #: lib/web/templates/email/email_changed_new.html.heex:85
 #: lib/web/templates/email/email_changed_new.text.eex:5
 #, elixir-autogen, elixir-format
 msgid "If you didn't trigger the change yourself, please ignore this message."
-msgstr ""
+msgstr "Ako promjenu nisi ti pokrenuo/la, zanemari ovu poruku."
 
 #: lib/web/templates/email/group_member_removal.html.heex:64
 #: lib/web/templates/email/group_member_removal.text.eex:5
 #, elixir-autogen, elixir-format
 msgid "If you feel this is an error, you may contact the group's administrators so that they can add you back."
 msgstr ""
+"Ako smatraš da se radi o grešci, kontaktiraj administratore grupe kako bi te "
+"ponovo dodali."
 
 #: lib/web/email/member.ex:114
 #, elixir-autogen, elixir-format
@@ -1138,8 +1246,8 @@ msgstr ""
 #, elixir-autogen, elixir-format
 msgid "<b>%{inviter}</b> just invited you to join their group %{link_start}<b>%{group}</b>%{link_end}"
 msgstr ""
-"<b>%{inviter}</b> te je upravo pozvao/la da se pridružiš grupi "
-"%{link_start}<b>%{group}</b>%{link_end}"
+"<b>%{inviter}</b> te je upravo pozvao/la da se pridružiš grupi %{link_start}"
+"<b>%{group}</b>%{link_end}"
 
 #: lib/web/templates/email/group_member_removal.html.heex:47
 #, elixir-autogen, elixir-format
@@ -1153,6 +1261,8 @@ msgstr ""
 #, elixir-autogen, elixir-format
 msgid "As this group was located on another instance, it will continue to work for other instances than this one."
 msgstr ""
+"Budući da je ova grupa bila smještena na jednoj drugoj instanci, nastavit će "
+"raditi i za druge instance osim ove."
 
 #: lib/web/templates/email/group_suspension.html.heex:18
 #: lib/web/templates/email/group_suspension.text.eex:1
@@ -1164,8 +1274,8 @@ msgstr "Grupa %{group} je suspendirana na instanci %{instance}!"
 #, elixir-autogen, elixir-format
 msgid "Your instance's moderation team has decided to suspend %{group_name} (%{group_address}). You are no longer a member of this group."
 msgstr ""
-"Tim za moderiranje tvoje instance je odlučio suspendirati %{group_name} "
-"(%{group_address}). Više nisi član ove grupe."
+"Tim za moderiranje tvoje instance je odlučio suspendirati %{group_name} (%"
+"{group_address}). Više nisi član ove grupe."
 
 #: lib/web/email/group.ex:106
 #, elixir-autogen, elixir-format
@@ -1177,18 +1287,24 @@ msgstr "Grupa %{group} je suspendirana na instanci %{instance}"
 msgctxt "terms"
 msgid "By accessing or using the Service, this means you agree to be bound by all the terms below. If these terms are in any way unclear, please let us know by contacting %{contact}."
 msgstr ""
+"Pristupom ili korištenjem Usluge znači da prihvaćaš uvjete u nastavku. Ako "
+"su ovi uvjeti na bilo koji način nejasni, obavijesti nas putem %{contact}."
 
 #: lib/web/templates/api/terms.html.heex:96
 #, elixir-autogen, elixir-format
 msgctxt "terms"
 msgid "For information about how we collect and use information about users of the Service, please check our <a href=\"/privacy\">privacy policy</a>."
 msgstr ""
+"Za informacije o tome kako prikupljamo i koristimo podatke o korisnicima "
+"Usluge, pogledaj našu <a href=\"/privacy\">politiku privatnosti</a>."
 
 #: lib/web/templates/api/terms.html.heex:88
 #, elixir-autogen, elixir-format
 msgctxt "terms"
 msgid "If you continue to use the Service after the revised Terms go into effect, you accept the revised Terms."
 msgstr ""
+"Ako nastaviš koristiti Uslugu nakon što revidirani uvjeti stupe na snagu, "
+"prihvaćaš revidirane Uvjete."
 
 #: lib/web/templates/api/privacy.html.heex:109
 #, elixir-autogen, elixir-format
@@ -1201,12 +1317,20 @@ msgstr "Ako izbrišeš ove podatke morat ćeš se ponovo prijaviti."
 msgctxt "terms"
 msgid "If you're not connected, we don't store any information on your device, unless you participate in an event anonymously. In this specific case we store the hash of an unique identifier for the event and participation status in your browser so that we may display participation status. Deleting this information will only stop displaying participation status in your browser."
 msgstr ""
+"Ako nisi povezan/a, ne spremamo nikakve informacije na tvom uređaju, osim "
+"ako u događaju sudjeluješ anonimno. U ovom konkretnom slučaju spremamo hash "
+"jedinstvenog identifikatora događaja i statusa sudjelovanja u tvom "
+"pregledniku kako bismo prikazali status sudjelovanja. Brisanjem tih "
+"informacija će se samo prestati prikazivati status sudjelovanja u tvom "
+"pregledniku."
 
 #: lib/web/templates/api/privacy.html.heex:117
 #, elixir-autogen, elixir-format
 msgctxt "terms"
 msgid "Note: This information is stored in your localStorage and not your cookies."
 msgstr ""
+"Napomena: Ove se informacije spremaju u tvom lokalnom spremištu, a ne u "
+"kolačićima."
 
 #: lib/web/templates/api/terms.html.heex:231
 #, elixir-autogen, elixir-format
@@ -1228,8 +1352,8 @@ msgstr ""
 msgctxt "terms"
 msgid "Some terms, technical or otherwise, used in the text below may cover concepts that are difficult to grasp. We have provided <a href=\"/glossary\">a glossary</a> to help you understand them better."
 msgstr ""
-"Neki tehnički ili drugi izrazi koji se koriste u daljnjem tekstu mogu "
-"pokrivati pojmove koji se teško razumiju. Za lakše razumijevanje pojmova "
+"Neki tehnički ili drugi pojmovi koji se koriste u daljnjem tekstu mogu "
+"pokrivati koncepte koji se teško razumiju. Za lakše razumijevanje pojmova "
 "postoji <a href=\"/glossary\">glosar</a>."
 
 #: lib/web/templates/api/terms.html.heex:120
@@ -1245,18 +1369,36 @@ msgstr ""
 msgctxt "terms"
 msgid "We cannot be held responsible should a programming or administrative error make your content visible to a larger audience than intended. Aside from our limited right to your content, you retain all of your rights to the content you post, link and otherwise make available on or through the Service."
 msgstr ""
+"Ne možemo snositi odgovornost ako programerska ili administrativna greška "
+"omogući vidljivost sadržaj široj publici nego što je bilo predviđeno. Osim "
+"našeg ograničenog prava na tvoj sadržaj, zadržavaš sva svoja prava na "
+"sadržaj koji objavljuješ, povezuješ ili na druge načine omogućiš pristup "
+"sadržaju na ili putem Usluge."
 
 #: lib/web/templates/api/privacy.html.heex:15
 #, elixir-autogen, elixir-format
 msgctxt "terms"
 msgid "We collect information from you when you register on this instance and gather data when you participate in the platform by reading, writing, and interacting with content shared here. If you register on this instance, you will be asked to enter <b>an email address, a password</b> (hashed) and at least <b>an username</b>. Your email address will be verified by an email containing a unique link. Once the link is activated, we know you control that email address. You may also enter additional profile information such as <b>a display name and biography, and upload a profile picture and header image</b>. The username, display name, biography, profile picture and header image <b>are always listed publicly</b>. <b>You may however visit this instance without registering</b>."
 msgstr ""
+"Prikupljamo informacije od tebe kada se registriraš na ovoj instanci i "
+"prikupljamo podatke kada sudjeluješ na platformi čitajući, pišući i "
+"interagirajući sa sadržajem koji se ovdje dijeli. Ako se registriraš na ovoj "
+"instanci, morat ćeš upisati <b>e-mail adresu, lozinku</b> (šifrirano) i "
+"barem <b>korisničko ime</b>. Tvoj e-mail adresa će se potvrditi putem e-"
+"maila koji sadrži jedinstvenu poveznicu. Kada se poveznica aktivira, znamo "
+"da kontroliraš tu e-mail adresu. Također možeš upidati dodatne informacije u "
+"profil kao što su <b>(prikazano ime i biografija, te učitati sliku profila i "
+"sliku naslova</b>. Korisničko ime, prikazano ime, biografija, slika profila "
+"i sliku naslova <b>se uvijek javno prikazuju</b>. <b>Međutim, ovu instancu "
+"možeš posjetiti i bez registracije</b>."
 
 #: lib/web/templates/api/terms.html.heex:76
 #, elixir-autogen, elixir-format
 msgctxt "terms"
 msgid "We reserve the right to modify these Terms at any time. For instance, we may need to change these Terms if we come out with a new feature."
 msgstr ""
+"Zadržavamo pravo mijenjati ove uvjete u bilo kojem trenutku. Na primjer, "
+"možda ćemo morati promijeniti ove uvjete ako uvedemo novu funkciju."
 
 #: lib/web/templates/api/terms.html.heex:105
 #, elixir-autogen, elixir-format
@@ -1265,26 +1407,46 @@ msgid "When you create an account you agree to maintain the security and confide
 msgstr ""
 "Kada otvoriš račun, slažeš se da ćeš održavati sigurnost i povjerljivost "
 "tvoje lozinke i da prihvaćaš sve rizike neovlaštenog pristupa podacima tvog "
-"računa i svim drugim informacijama koje pružaš na instanci "
-"<b>%{instance_name}</b>."
+"računa i svim drugim informacijama koje pružaš na instanci <b>%"
+"{instance_name}</b>."
 
 #: lib/web/templates/api/terms.html.heex:134
 #, elixir-autogen, elixir-format
 msgctxt "terms"
 msgid "When you post, link or otherwise make available content to the Service, you grant us the right and license to display and distribute your content on or through the Service (including via applications). We may format your content for display throughout the Service, but we will not edit or revise the substance of your content itself. The displaying and distribution of your content happens only according to the visibility rules you have set for the content. We will not modify the visibility of the content you have set."
 msgstr ""
+"Kada objavite, povežete ili na drugi način učinite sadržaj dostupnim Usluzi, "
+"daješ nam pravo i licencu za prikazivanje i distribuciju tvog sadržaja na "
+"Usluzi ili putem Usluge (uključujući aplikacije). Tvoj sadržaj možemo "
+"formatirati za prikaz kroz Uslugu, ali nećemo uređivati ili mijenjati samu "
+"bit tvog sadržaja. Prikazivanje i distribucija našeg sadržaja se odvija "
+"isključivo prema pravilima vidljivosti koja si postavio/la za sadržaj. "
+"Nećemo mijenjati vidljivost sadržaja koju si sam/a postavio/la."
 
 #: lib/web/templates/api/privacy.html.heex:25
 #, elixir-autogen, elixir-format
 msgctxt "terms"
 msgid "Your <b>events</b> and <b>comments</b> are delivered to other instances that follow your own, meaning they are delivered to different instances and copies are stored there. When you delete events or comments, this is likewise delivered to these other instances. All interactions related to event features - such as joining an event - or group features - such as managing resources - are federated as well. Please keep in mind that the operators of the instance and any receiving instances may view such messages and information, and that recipients may screenshot, copy or otherwise re-share them."
 msgstr ""
+"Tvoji <b>događaji</b> i <b>komentari</b> dostavljaju se drugim instancama "
+"koje prate tvoju instancu, što znači da se šalju na različite instance i "
+"tamo se spremaju njihove kopije. Kada izbrišeš događaje ili komentare, to se "
+"isto tako dostavlja tim drugim instancama. Sve interakcije u vezi s "
+"događajem (poput pridruživanja događaju) ili značajke grupa (poput "
+"upravljanja resursima) se također federiraju. Imaj na umu da operateri "
+"instance i bilo koje primajuće instance mogu vidjeti takve poruke i "
+"informacije, te da primatelji mogu snimiti snimku ekrana, kopirati ili na "
+"jedan drugi način ponovo dijeliti te informacije."
 
 #: lib/web/templates/api/privacy.html.heex:132
 #, elixir-autogen, elixir-format
 msgctxt "terms"
 msgid "Your content may be downloaded by other instances in the network. Your public events and comments are delivered to the instances following your own instance. Content created through a group is forwarded to all the instances of all the members of the group, insofar as these members reside on a different instance than this one."
 msgstr ""
+"Tvoj sadržaj mogu preuzeti druge instance u mreži. Tvoji javni događaji i "
+"komentari dostavljaju se instancama koje slijede nakon tvoje instance. "
+"Sadržaj kreiran kroz grupu se prosljeđuje svim instancama svih članova "
+"grupe, ukoliko se ti članovi nalaze na jednoj drugoj instanci od ove."
 
 #: lib/web/templates/email/event_participation_confirmed.text.eex:4
 #, elixir-autogen, elixir-format
@@ -1317,7 +1479,7 @@ msgstr "Grupa %{group} je prijavljena"
 #: lib/web/templates/email/report.html.heex:71
 #, elixir-autogen, elixir-format
 msgid "Group reported"
-msgstr "Prijavljena grupa"
+msgstr "Grupa je prijavljena"
 
 #: lib/web/templates/email/report.text.eex:7
 #, elixir-autogen, elixir-format
@@ -1327,7 +1489,7 @@ msgstr "Profil %{profile} je prijavljen"
 #: lib/web/templates/email/report.html.heex:81
 #, elixir-autogen, elixir-format
 msgid "Profile reported"
-msgstr "Prijavljen profil"
+msgstr "Profil je prijavljen"
 
 #: lib/web/templates/email/event_participation_confirmed.html.heex:61
 #, elixir-autogen, elixir-format
@@ -1355,7 +1517,7 @@ msgstr "%{name} želi pratiti tvoju instancu"
 #: lib/web/templates/email/instance_follow.text.eex:6
 #, elixir-autogen, elixir-format
 msgid "If you accept, this instance will receive all of your public events."
-msgstr "Ako prihvatiš, ovaj će profil primati sve tvoje javne događaje."
+msgstr "Ako prihvatiš, ova će instanca primati sve tvoje javne događaje."
 
 #: lib/web/email/follow.ex:54
 #, elixir-autogen, elixir-format
@@ -1378,8 +1540,8 @@ msgstr "Želiš se povezati?"
 #, elixir-autogen, elixir-format
 msgid "Hi there! You just registered to join this event: « <b>%{title}</b> ». Please confirm the e-mail address you provided:"
 msgstr ""
-"Bok! Upravo si se registrirao/la za pridruživanje ovom događaju: "
-"„<b>%{title}</b>”. Potvrdi upisanu e-mail adresu:"
+"Zravo! Upravo si se registrirao/la za pridruživanje ovom događaju: „<b>%"
+"{title}</b>”. Potvrdi upisanu e-mail adresu:"
 
 #: lib/web/templates/email/event_participation_rejected.html.heex:47
 #, elixir-autogen, elixir-format
@@ -1441,8 +1603,8 @@ msgstr "Feed za %{email} na %{instance}"
 #, elixir-autogen, elixir-format
 msgid "If the issue persists, you may contact the server administrator at %{contact}."
 msgstr ""
-"Ako se problem nastavi pojavljivati obratiti se administratoru servera na "
-"%{contact}."
+"Ako se problem nastavi pojavljivati obratiti se administratoru servera na %"
+"{contact}."
 
 #: lib/web/templates/error/500_page.html.heex:59
 #, elixir-autogen, elixir-format
@@ -1482,8 +1644,8 @@ msgstr ""
 #, elixir-autogen, elixir-format
 msgid "Your instance's moderation team has decided to suspend <b>%{group_name}</b> (%{group_address}). You are no longer a member of this group."
 msgstr ""
-"Tim za moderiranje tvoje instance je odlučio suspendirati grupu "
-"<b>%{group_name}</b> (%{group_address}). Više nisi član ove grupe."
+"Tim za moderiranje tvoje instance je odlučio suspendirati grupu <b>%"
+"{group_name}</b> (%{group_address}). Više nisi član ove grupe."
 
 #: lib/web/templates/email/actor_suspension_participants.html.heex:18
 #: lib/web/templates/email/actor_suspension_participants.text.eex:1
@@ -1537,12 +1699,12 @@ msgstr "Moderator"
 #: lib/service/export/participants/common.ex:38
 #, elixir-autogen, elixir-format
 msgid "Not approved"
-msgstr "Neodobreno"
+msgstr "Nije odobreno"
 
 #: lib/service/export/participants/common.ex:41
 #, elixir-autogen, elixir-format
 msgid "Not confirmed"
-msgstr "Nepotvrđeno"
+msgstr "Nije potvrđeno"
 
 #: lib/service/export/participants/common.ex:47
 #, elixir-autogen, elixir-format
@@ -1722,13 +1884,13 @@ msgstr "Oprosti, ovaj put ne!"
 #: lib/web/templates/email/group_membership_approval.html.heex:76
 #, elixir-autogen, elixir-format
 msgid "View the group"
-msgstr "Pogledaj grupu"
+msgstr "Prikaži grupu"
 
 #: lib/web/templates/email/group_membership_approval.html.heex:18
 #: lib/web/templates/email/group_membership_approval.text.eex:1
 #, elixir-autogen, elixir-format
 msgid "You're in!"
-msgstr ""
+msgstr "Unutra si!"
 
 #: lib/web/email/member.ex:61
 #, elixir-autogen, elixir-format
@@ -1820,7 +1982,7 @@ msgstr "Jedan administrator je aktualizirao tvoju ulogu na instanci %{instance}"
 #, elixir-autogen, elixir-format
 msgid "Hi there! It seems like you wanted to change the email address linked to your account on %{instance}. If you still wish to do so, please click the button below to confirm the change. You will then be able to log in to %{instance} with this new email address."
 msgstr ""
-"Bok! Čini se da želiš promijeniti e-mail adresu koja je povezana s tvojim "
+"Zravo! Čini se da želiš promijeniti e-mail adresu koja je povezana s tvojim "
 "računom na %{instance}. Ako želiš nastaviti, pritisni donji gumb za "
 "potvrđivanje promjene. Nakon toga ćeš se moći prijaviti na %{instance} s "
 "ovom novom e-mail adresom."
@@ -1830,38 +1992,38 @@ msgstr ""
 #, elixir-autogen, elixir-format
 msgid "Hi there! We just wanted to inform you that an administrator from %{instance} just manually changed your account email from %{old_email} (this one) to %{new_email}."
 msgstr ""
-"Bok! Želimo te samo obavijestiti da je administrator instance %{instance} "
+"Zravo! Želimo te samo obavijestiti da je administrator instance %{instance} "
 "upravo ručno promijenio tvoj e-mail račun %{old_email} u %{new_email}."
 
 #: lib/web/templates/email/admin_user_confirmation.text.eex:3
 #, elixir-autogen, elixir-format
 msgid "Hi there! We just wanted to inform you that an administrator from %{instance} just manually confirmed your account."
 msgstr ""
-"Bok! Želimo te samo obavijestiti da je administrator instance %{instance} "
+"Zravo! Želimo te samo obavijestiti da je administrator instance %{instance} "
 "upravo ručno potvrdio tvoj račun."
 
 #: lib/web/templates/email/admin_user_email_changed_old.html.heex:47
 #, elixir-autogen, elixir-format
 msgid "Hi there! We just wanted to inform you that an administrator from <b>%{instance}</b> just manually changed your account email from <b>%{old_email}</b> (this one) to <b>%{new_email}</b>."
 msgstr ""
-"Bok! Želimo te samo obavijestiti da je administrator instance "
-"<b>%{instance}</b> upravo ručno promijenio tvoj e-mail račun "
-"<b>%{old_email}</b> u <b>%{new_email}</b>."
+"Zravo! Želimo te samo obavijestiti da je administrator instance <b>%"
+"{instance}</b> upravo ručno promijenio tvoju e-mail adresu računa <b>%"
+"{old_email}</b> (ova) u <b>%{new_email}</b>."
 
 #: lib/web/templates/email/admin_user_email_changed_new.html.heex:47
 #, elixir-autogen, elixir-format
 msgid "Hi there! We just wanted to inform you that an administrator from <b>%{instance}</b> just manually changed your account email from <b>%{old_email}</b> to <b>%{new_email}</b> (this one)."
 msgstr ""
-"Bok! Želimo te samo obavijestiti da je administrator instance "
-"<b>%{instance}</b> upravo ručno promijenio tvoj e-mail račun "
-"<b>%{old_email}</b> u <b>%{new_email}</b>."
+"Zravo! Želimo te samo obavijestiti da je administrator instance <b>%"
+"{instance}</b> upravo ručno promijenio tvoju e-mail adresu računa <b>%"
+"{old_email}</b> u <b>%{new_email}</b> (ova)."
 
 #: lib/web/templates/email/admin_user_confirmation.html.heex:47
 #, elixir-autogen, elixir-format
 msgid "Hi there! We just wanted to inform you that an administrator from <b>%{instance}</b> just manually confirmed your account."
 msgstr ""
-"Bok! Želimo te samo obavijestiti da je administrator instance "
-"<b>%{instance}</b> upravo ručno potvrdio tvoj račun."
+"Zravo! Želimo te samo obavijestiti da je administrator instance <b>%"
+"{instance}</b> upravo ručno potvrdio tvoj račun."
 
 #: lib/web/templates/email/admin_user_confirmation.html.heex:96
 #: lib/web/templates/email/admin_user_email_changed_new.html.heex:62
@@ -1870,6 +2032,9 @@ msgstr ""
 #, elixir-autogen, elixir-format
 msgid "If something doesn't feel right to you, please contact the instance administrator through the contact methods %{start_link}on the instance's about page%{end_link}."
 msgstr ""
+"Ako nešto ne djeluje ispravno, kontaktiraj administratora instance putem "
+"načina kontaktiranja %{start_link}na stranici informacija o instance%"
+"{end_link}."
 
 #: lib/web/templates/email/admin_user_confirmation.text.eex:7
 #: lib/web/templates/email/admin_user_email_changed_new.text.eex:4
@@ -1878,6 +2043,8 @@ msgstr ""
 #, elixir-autogen, elixir-format
 msgid "If something doesn't feel right to you, please contact the instance administrator through the contact methods on the instance's about page: %{about_page}."
 msgstr ""
+"Ako nešto ne djeluje ispravno, kontaktiraj administratora instance putem "
+"načina kontaktiranja na stranici informacija o instanci: %{about_page}."
 
 #: lib/web/templates/email/admin_user_confirmation.html.heex:79
 #, elixir-autogen, elixir-format
@@ -1924,15 +2091,15 @@ msgstr "Sada se možeš prijaviti koristeći tvoje prijavne podatke na usluzi:"
 #, elixir-autogen, elixir-format
 msgid "Hi there! We just wanted to inform you that an administrator from %{instance} just changed your account role."
 msgstr ""
-"Bok! Samo te želimo obavijestiti da je administrator instance %{instance} "
+"Zravo! Želimo te samo obavijestiti da je administrator instance %{instance} "
 "upravo promijenio ulogu tvog računa."
 
 #: lib/web/templates/email/admin_user_role_changed.html.heex:47
 #, elixir-autogen, elixir-format
 msgid "Hi there! We just wanted to inform you that an administrator from <b>%{instance}</b> just changed your account role."
 msgstr ""
-"Bok! Samo te želimo obavijestiti da je administrator instance "
-"<b>%{instance}</b> upravo promijenio ulogu tvog računa."
+"Zravo! Želimo te samo obavijestiti da je administrator instance <b>%"
+"{instance}</b> upravo promijenio ulogu tvog računa."
 
 #: lib/web/templates/email/instance_follow.text.eex:5
 #, elixir-autogen, elixir-format
@@ -1960,7 +2127,7 @@ msgstr "Za prihvaćanje ove pozivnice, idi na stranicu za upravljanje profila."
 #: lib/web/templates/email/instance_follow.html.heex:120
 #, elixir-autogen, elixir-format
 msgid "View the details"
-msgstr "Pogledaj detalje"
+msgstr "Prikaži detalje"
 
 #: lib/mobilizon/events/categories.ex:32
 #, elixir-autogen, elixir-format
@@ -1980,12 +2147,12 @@ msgstr "Književni klubovi"
 #: lib/mobilizon/events/categories.ex:40
 #, elixir-autogen, elixir-format
 msgid "Business"
-msgstr "Poslovno"
+msgstr "Biznis"
 
 #: lib/mobilizon/events/categories.ex:44
 #, elixir-autogen, elixir-format
 msgid "Causes"
-msgstr "Uzroci"
+msgstr "Svrhe"
 
 #: lib/mobilizon/events/categories.ex:48
 #, elixir-autogen, elixir-format
@@ -2143,9 +2310,11 @@ msgstr "Vidimo se!"
 
 #: lib/web/templates/email/group_suspension.html.heex:67
 #: lib/web/templates/email/group_suspension.text.eex:5
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "As this group was located on this instance, all of its data has been irretrievably deleted."
 msgstr ""
+"Budući da je ova grupa bila locirana na ovoj instanci, svi njezini podaci su "
+"nepovratno izbrisani."
 
 #: lib/web/templates/email/report.text.eex:11
 #, elixir-autogen, elixir-format
@@ -2172,24 +2341,25 @@ msgstr "Otkaži moje prisustvovanje"
 #: lib/web/templates/email/event_participation_confirmed.html.heex:99
 #, elixir-autogen, elixir-format
 msgid "If you wish to cancel your participation, simply click on the link below."
-msgstr ""
+msgstr "Ako želiš otkazati sudjelovanje, jednostavno klikni na donju poveznicu."
 
 #: lib/web/email/admin.ex:158
 #, elixir-autogen, elixir-format
 msgid "Email configuration test for %{instance}"
-msgstr ""
+msgstr "Test konfiguracije e-pošte za %{instance}"
 
 #: lib/web/templates/email/email_configuration_test.html.heex:47
 #: lib/web/templates/email/email_configuration_test.text.eex:3
 #, elixir-autogen, elixir-format
 msgid "If you received this email, the email configuration seems to be correct."
 msgstr ""
+"Ako si primio/la ovaj e-mail, čini se da je konfiguracija e-pošte ispravna."
 
 #: lib/web/templates/email/email_configuration_test.html.heex:18
 #: lib/web/templates/email/email_configuration_test.text.eex:1
 #, elixir-autogen, elixir-format
 msgid "Well done!"
-msgstr ""
+msgstr "Bravo!"
 
 #: lib/web/templates/api/terms.html.heex:55
 #, elixir-autogen, elixir-format
@@ -2201,36 +2371,36 @@ msgstr ""
 "osigurava tim dopinositelja Mobilizona. Ukoliko nije izričito navedeno, ova "
 "je Mobilizon instanca neovisna usluga koja koristi Mobilizonov izvorni kod. "
 "Više informacija o ovoj instanci se mogu pronaći na stranici <a href=\"/"
-"about/instance\">„O ovoj instanci”</a>."
+"about/instance\">„Informacije o instanci”</a>."
 
 #: lib/web/templates/email/user_pending.html.heex:62
 #, elixir-autogen, elixir-format
 msgid "Login to view the list of pending users"
-msgstr ""
+msgstr "Prijavi se za pregled popisa korisnika na čekanju"
 
 #: lib/web/templates/email/user_pending.text.eex:3
 #, elixir-autogen, elixir-format
 msgid "Login to view the list of pending users:"
-msgstr ""
+msgstr "Prijavi se za prikaz popisa korisnika na čekanju:"
 
 #: lib/web/templates/email/user_pending.html.heex:47
 #: lib/web/templates/email/user_pending.text.eex:1
 #, elixir-autogen, elixir-format
 msgid "New pending user from %{user} on %{instance}"
-msgstr ""
+msgstr "Novi korisnik na čekanju od %{user} na instanci %{instance}"
 
 #: lib/web/templates/email/user_pending.html.heex:18
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "New pending user on <b>%{instance}</b>"
-msgstr "Novi izvještaj na <b>%{instance}</b>"
+msgstr "Novi korisnik na čekanju na instanci <b>%{instance}</b>"
 
 #: lib/web/email/admin.ex:38
 #, elixir-autogen, elixir-format
 msgid "New pending user on Mobilizon instance %{instance}"
-msgstr ""
+msgstr "Novi korisnik na čekanju na Mobilizon instanci %{instance}"
 
 #: lib/web/templates/email/admin/_role.html.heex:9
 #: lib/web/templates/email/admin/_role.text.eex:1
 #, elixir-autogen, elixir-format
 msgid "Pending"
-msgstr ""
+msgstr "Na čekanju"

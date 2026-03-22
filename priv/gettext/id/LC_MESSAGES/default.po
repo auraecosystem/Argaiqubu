@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-23 23:41+0000\n"
-"PO-Revision-Date: 2021-07-31 03:15+0000\n"
+"PO-Revision-Date: 2026-03-11 21:42+0000\n"
 "Last-Translator: TA <alt3753.7@gmail.com>\n"
 "Language-Team: Indonesian <https://weblate.framasoft.org/projects/mobilizon/"
 "backend/id/>\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.6.2\n"
+"X-Generator: Weblate 5.16.2\n"
 
 #: lib/web/templates/email/password_reset.html.heex:66
 #, elixir-autogen, elixir-format
@@ -263,9 +263,9 @@ msgid "If this server is in the EU or the EEA: Our site, products and services a
 msgstr ""
 "Jika server ini terletak di EU atau EEA: Situs, produk, dan layanan kami "
 "semuanya ditujukan kepada orang-orang yang berusia setidaknya 16 tahun. Jika "
-"Anda berusia di bawah 16 tahun, sesuai dengan persyaratan GDPR (<a href="
-"\"https://en.wikipedia.org/wiki/General_Data_Protection_Regulation\">General "
-"Data Protection Regulation</a>) jangan gunakan situs ini."
+"Anda berusia di bawah 16 tahun, sesuai dengan persyaratan GDPR (<a "
+"href=\"https://en.wikipedia.org/wiki/General_Data_Protection_Regulation\">"
+"General Data Protection Regulation</a>) jangan gunakan situs ini."
 
 #: lib/web/templates/api/privacy.html.heex:146
 #, elixir-autogen, elixir-format
@@ -274,9 +274,10 @@ msgid "If this server is in the USA: Our site, products and services are all dir
 msgstr ""
 "Jika server terletak di USA: Situs, produk dan layanan kami semuanya "
 "ditujukan kepada orang-orang yang setidaknya berusia 13 tahun. Jika Anda "
-"berusia di bawah 13 tahun, sesuai dengan persyaratan COPPA (<a href=\"https"
-"://en.wikipedia.org/wiki/Children%27s_Online_Privacy_Protection_Act\""
-">Children's Online Privacy Protection Act</a>) jangan gunakan situs ini."
+"berusia di bawah 13 tahun, sesuai dengan persyaratan COPPA (<a "
+"href=\"https://en.wikipedia.org/wiki/"
+"Children%27s_Online_Privacy_Protection_Act\">Children's Online Privacy "
+"Protection Act</a>) jangan gunakan situs ini."
 
 #: lib/web/templates/api/privacy.html.heex:160
 #, elixir-autogen, elixir-format
@@ -562,8 +563,8 @@ msgstr ""
 msgctxt "terms"
 msgid "For full details about the Mobilizon software <a href=\"https://mobilizon.org\">see here</a>."
 msgstr ""
-"Untuk keterangan lebih lanjut tentang perangkat lunak Mobilizon <a href="
-"\"https://mobilizon.org\">lihat di sini</a>."
+"Untuk keterangan lebih lanjut tentang perangkat lunak Mobilizon <a "
+"href=\"https://mobilizon.org\">lihat di sini</a>."
 
 #: lib/web/templates/api/terms.html.heex:47
 #, elixir-autogen, elixir-format
@@ -637,8 +638,8 @@ msgctxt "terms"
 msgid "We love feedback. Please let us know what you think of the Service, these Terms and, in general, <b>%{instance_name}</b>."
 msgstr ""
 "Kami mencintai umpan balik. Harap beritahu kami apa yang Anda pikirkan "
-"tentang Layanan, dan Persyaratan ini dan, secara umum, "
-"<b>%{instance_name}</b>."
+"tentang Layanan, dan Persyaratan ini dan, secara umum, <b>%{instance_name}</"
+"b>."
 
 #: lib/web/templates/api/terms.html.heex:234
 #, elixir-autogen, elixir-format
@@ -1695,7 +1696,7 @@ msgid "An administrator updated your role on %{instance}"
 msgstr ""
 
 #: lib/web/templates/email/email_changed_new.text.eex:3
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "Hi there! It seems like you wanted to change the email address linked to your account on %{instance}. If you still wish to do so, please click the button below to confirm the change. You will then be able to log in to %{instance} with this new email address."
 msgstr ""
 
@@ -1783,34 +1784,34 @@ msgid "You may now login using your credentials on the service:"
 msgstr ""
 
 #: lib/web/templates/email/admin_user_role_changed.text.eex:3
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "Hi there! We just wanted to inform you that an administrator from %{instance} just changed your account role."
 msgstr ""
 
 #: lib/web/templates/email/admin_user_role_changed.html.heex:47
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "Hi there! We just wanted to inform you that an administrator from <b>%{instance}</b> just changed your account role."
 msgstr ""
 
 #: lib/web/templates/email/instance_follow.text.eex:5
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "%{name} just requested to follow your instance."
 msgstr ""
 
 #: lib/web/templates/email/instance_follow.html.heex:47
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "<b>%{name}</b> just requested to follow your instance."
 msgstr ""
 
 #: lib/web/templates/email/instance_follow.html.heex:55
 #: lib/web/templates/email/instance_follow.text.eex:6
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "If you accept, this profile will receive all of your public events."
 msgstr ""
 
 #: lib/web/templates/email/instance_follow.html.heex:88
 #: lib/web/templates/email/instance_follow.text.eex:9
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "To accept this invitation, head over to the profile's admin page."
 msgstr ""
 
@@ -1971,7 +1972,7 @@ msgid "Theatre"
 msgstr ""
 
 #: lib/web/templates/email/participation/event_card.text.eex:9
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "Read more: %{url}"
 msgstr ""
 
@@ -1981,13 +1982,13 @@ msgid "Activate my account:"
 msgstr "Aktifkan akun saya"
 
 #: lib/web/email/follow.ex:49
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "Instance %{domain} requests to follow your instance"
 msgstr ""
 
 #: lib/web/templates/email/instance_follow.html.heex:68
 #: lib/web/templates/email/instance_follow.text.eex:7
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "Note: %{name} following you doesn't necessarily imply that you follow this instance, but you can ask to follow them too."
 msgstr ""
 
@@ -1999,7 +2000,7 @@ msgstr ""
 
 #: lib/web/templates/email/group_suspension.html.heex:67
 #: lib/web/templates/email/group_suspension.text.eex:5
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "As this group was located on this instance, all of its data has been irretrievably deleted."
 msgstr ""
 
@@ -2009,12 +2010,12 @@ msgid "Events"
 msgstr "Acara"
 
 #: lib/web/templates/email/report.html.heex:115
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "Flagged events"
 msgstr ""
 
 #: lib/service/export/participants/common.ex:65
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "Participant registration date"
 msgstr ""
 
@@ -2048,7 +2049,7 @@ msgid "Well done!"
 msgstr ""
 
 #: lib/web/templates/api/terms.html.heex:55
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgctxt "terms"
 msgid "When we say “we”, “our”, or “us” in this document, we are referring to the owners, operators and administrators of this Mobilizon instance. The Mobilizon software is provided by the team of Mobilizon contributors. Unless explicitly stated, this Mobilizon instance is an independent service using Mobilizon's source code. You may find more information about this instance on the <a href=\"/about/instance\">\"About this instance\"</a> page."
 msgstr ""

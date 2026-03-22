@@ -8,15 +8,15 @@
 ## to merge POT files into PO files.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-02-08 19:29+0000\n"
-"Last-Translator: drkfrd <drkfrd@users.noreply.weblate.framasoft.org>\n"
+"PO-Revision-Date: 2026-03-11 21:37+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Swedish <https://weblate.framasoft.org/projects/mobilizon/"
 "activity/sv/>\n"
 "Language: sv\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.3.1\n"
+"X-Generator: Weblate 5.16.2\n"
 
 #: lib/web/templates/email/activity/_member_activity_item.html.heex:14
 #: lib/web/templates/email/activity/_member_activity_item.text.eex:12
@@ -368,8 +368,8 @@ msgstr "%{profile} la till medlemmen %{member} i gruppen %{group}."
 #, elixir-autogen, elixir-format
 msgid "%{profile} approved the membership request from %{member} for group %{group}."
 msgstr ""
-"%{profile} godkände förfrågningen om medlemskap från %{member} för gruppen "
-"%{group}."
+"%{profile} godkände förfrågningen om medlemskap från %{member} för gruppen %"
+"{group}."
 
 #: lib/service/activity/renderer/resource.ex:32
 #, elixir-autogen, elixir-format
@@ -410,8 +410,8 @@ msgstr "%{profile} gick ur gruppen %{group}."
 #, elixir-autogen, elixir-format
 msgid "%{profile} rejected the membership request from %{member} for group %{group}."
 msgstr ""
-"%{profile} avvisade förfrågningen om medlemskap från %{member} för gruppen "
-"%{group}."
+"%{profile} avvisade förfrågningen om medlemskap från %{member} för gruppen %"
+"{group}."
 
 #: lib/service/activity/renderer/resource.ex:44
 #, elixir-autogen, elixir-format

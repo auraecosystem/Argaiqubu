@@ -8,15 +8,15 @@
 ## to merge POT files into PO files.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-04-18 09:03+0000\n"
+"PO-Revision-Date: 2026-03-11 21:39+0000\n"
 "Last-Translator: GSalinas <gsalinastellez@gmail.com>\n"
 "Language-Team: Spanish <https://weblate.framasoft.org/projects/mobilizon/"
 "backend-errors/es/>\n"
 "Language: es\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Weblate 5.4.3\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.16.2\n"
 
 #: lib/mobilizon/discussions/discussion.ex:68
 #, elixir-autogen
@@ -628,8 +628,7 @@ msgstr "No tienes permiso para eliminar este token"
 #: lib/graphql/resolvers/admin.ex:59
 #, elixir-autogen, elixir-format
 msgid "You need to be logged-in and a moderator to list action logs"
-msgstr ""
-"Debe iniciar sesión y un moderador para listar los registros de acción"
+msgstr "Debe iniciar sesión y un moderador para listar los registros de acción"
 
 #: lib/graphql/resolvers/report.ex:36
 #, elixir-autogen, elixir-format
@@ -1156,7 +1155,8 @@ msgstr "Solo puedes eliminar tus propias notas"
 #: lib/graphql/api/reports.ex:121
 #, elixir-autogen, elixir-format
 msgid "You need to be a moderator or an administrator to create a note on a report"
-msgstr "Debes ser un moderador o administrador para crear una nota en un informe"
+msgstr ""
+"Debes ser un moderador o administrador para crear una nota en un informe"
 
 #: lib/graphql/resolvers/user.ex:209
 #, elixir-autogen, elixir-format
@@ -1166,7 +1166,9 @@ msgstr "Tu registro fue detectado como spam y no puede ser procesado."
 #: lib/web/controllers/application_controller.ex:88
 #, elixir-autogen, elixir-format
 msgid "All of name, scope and redirect_uri parameters are required to create an application"
-msgstr "Los parámetros name, scope y redirect_uri son requeridos para crear una aplicación"
+msgstr ""
+"Los parámetros name, scope y redirect_uri son requeridos para crear una "
+"aplicación"
 
 #: lib/graphql/error.ex:119
 #, elixir-autogen, elixir-format
@@ -1191,7 +1193,10 @@ msgstr "Imposible crear una aplicación"
 #: lib/web/controllers/application_controller.ex:353
 #, elixir-autogen, elixir-format
 msgid "Incorrect parameters sent. You need to provide at least the grant_type and client_id parameters, depending on the grant type being used."
-msgstr "Se enviaron parámetros incorrectos. Debes proporcionar al menos los parámetros grant_type y client_id, dependiendo del grant_type que se esté usando."
+msgstr ""
+"Se enviaron parámetros incorrectos. Debes proporcionar al menos los "
+"parámetros grant_type y client_id, dependiendo del grant_type que se esté "
+"usando."
 
 #: lib/web/controllers/application_controller.ex:326
 #, elixir-autogen, elixir-format

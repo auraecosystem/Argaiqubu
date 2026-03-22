@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-11-25 07:55+0000\n"
-"PO-Revision-Date: 2024-03-08 15:25+0000\n"
+"PO-Revision-Date: 2026-03-11 21:38+0000\n"
 "Last-Translator: Milo Ivir <mail@milotype.de>\n"
 "Language-Team: Croatian <https://weblate.framasoft.org/projects/mobilizon/"
 "activity/hr/>\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 5.4.2\n"
+"X-Generator: Weblate 5.16.2\n"
 
 ## This file is a PO Template file.
 ##
@@ -226,8 +226,8 @@ msgstr "%{profile} su odgovorili na komentar događaja %{event}."
 #, elixir-autogen, elixir-format
 msgid "Don't want to receive activity notifications? You may change frequency or disable them in your settings."
 msgstr ""
-"Ne želite dobivati obavijesti o aktivnosti? Možete promjeniti učestalost ili "
-"ih potpuno isključiti u svojim postavkama."
+"Ne želiš primati obavijesti o aktivnostima? Promijeni učestalost primanja "
+"obavijesti ili ih potpuno isključi u postavkama."
 
 #: lib/web/templates/email/email_direct_activity.html.heex:230
 #: lib/web/templates/email/email_direct_activity.text.eex:23
@@ -272,8 +272,8 @@ msgstr "%{profile} su vas spomenuli u komentaru događaja %{event}."
 #, elixir-autogen, elixir-format
 msgid "Don't want to receive activity notifications? You may change frequency or disable them in %{tag_start}your settings%{tag_end}."
 msgstr ""
-"Ne želite dobivati obavijesti o aktivnosti? Možete promijeniti učestalost "
-"ili ih iskljulčiti u %{tag_start}svojim postavkama%{tag_end}."
+"Ne želiš primati obavijesti o aktivnostima? Promijeni učestalost primanja "
+"obavijesti ili ih potpuno isključi u %{tag_start}postavkama%{tag_end}."
 
 #: lib/web/templates/email/email_direct_activity.html.heex:51
 #: lib/web/templates/email/email_direct_activity.text.eex:5
@@ -308,19 +308,19 @@ msgstr "Kratki sadržaj tjedna za %{instance}"
 #: lib/web/templates/email/activity/_comment_activity_item.text.eex:19
 #, elixir-autogen, elixir-format
 msgid "%{profile} has posted a new comment under your event %{event}."
-msgstr "%{profile} su objavili novi komentar na vaš događaj %{event}."
+msgstr "%{profile} su objavili novi komentar na tvoj događaj %{event}."
 
 #: lib/service/activity/renderer/comment.ex:52
 #: lib/web/templates/email/activity/_comment_activity_item.html.heex:22
 #: lib/web/templates/email/activity/_comment_activity_item.text.eex:13
 #, elixir-autogen, elixir-format
 msgid "%{profile} has posted a new reply under your event %{event}."
-msgstr "%{profile} su objavili novi odgovor na vaš događaj %{event}."
+msgstr "%{profile} su objavili novi odgovor na tvoj događaj %{event}."
 
 #: lib/web/email/activity.ex:74
 #, elixir-autogen, elixir-format
 msgid "Announcement for your event %{event}"
-msgstr "Najava za vaš događaj %{event}"
+msgstr "Najava za tvoj događaj %{event}"
 
 #: lib/service/activity/renderer/group.ex:22
 #, elixir-autogen, elixir-format
@@ -376,8 +376,8 @@ msgstr "%{profile} su dodali %{member} u grupu %{group}."
 #, elixir-autogen, elixir-format
 msgid "%{profile} approved the membership request from %{member} for group %{group}."
 msgstr ""
-"%{profile} su odobrili zahtjev za članstvo korisniku %{member} za grupu "
-"%{group}."
+"%{profile} su odobrili zahtjev za članstvo korisniku %{member} za grupu %"
+"{group}."
 
 #: lib/service/activity/renderer/resource.ex:32
 #, elixir-autogen, elixir-format
@@ -418,8 +418,8 @@ msgstr "%{profile} su izašli iz grupe %{group}."
 #, elixir-autogen, elixir-format
 msgid "%{profile} rejected the membership request from %{member} for group %{group}."
 msgstr ""
-"%{profile} su odbili zahtjev za članstvo korisniku %{member} za grupu "
-"%{group}."
+"%{profile} su odbili zahtjev za članstvo korisniku %{member} za grupu %"
+"{group}."
 
 #: lib/service/activity/renderer/resource.ex:44
 #, elixir-autogen, elixir-format

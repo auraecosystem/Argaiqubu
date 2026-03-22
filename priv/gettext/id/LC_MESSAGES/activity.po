@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-30 02:36+0000\n"
-"PO-Revision-Date: 2021-08-04 10:15+0000\n"
+"PO-Revision-Date: 2026-03-11 21:42+0000\n"
 "Last-Translator: TA <alt3753.7@gmail.com>\n"
 "Language-Team: Indonesian <https://weblate.framasoft.org/projects/mobilizon/"
 "activity/id/>\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.6.2\n"
+"X-Generator: Weblate 5.16.2\n"
 
 ## This file is a PO Template file.
 ##
@@ -497,12 +497,12 @@ msgid "%{profile} has posted a public announcement under event %{event}."
 msgstr "%{profile} memposting sebuah pengumuman di acara %{event}."
 
 #: lib/web/templates/email/activity/_conversation_activity_item.html.heex:3
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "%{profile} mentionned you in a %{conversation}."
 msgstr ""
 
 #: lib/web/templates/email/activity/_conversation_activity_item.text.eex:1
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "%{profile} mentionned you in a conversation."
 msgstr ""
 
@@ -512,7 +512,7 @@ msgid "%{profile} replied to your message"
 msgstr ""
 
 #: lib/web/templates/email/activity/_conversation_activity_item.html.heex:10
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "%{profile} replied you in a %{conversation}."
 msgstr ""
 

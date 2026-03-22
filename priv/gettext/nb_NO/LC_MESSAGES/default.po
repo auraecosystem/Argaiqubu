@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-03-06 22:54+0000\n"
-"PO-Revision-Date: 2022-03-07 15:08+0000\n"
+"PO-Revision-Date: 2026-03-11 21:40+0000\n"
 "Last-Translator: Kenneth Aalberg <kenneaal@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <https://weblate.framasoft.org/projects/"
 "mobilizon/backend/nb_NO/>\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.11.2\n"
+"X-Generator: Weblate 5.16.2\n"
 
 #: lib/web/templates/email/password_reset.html.heex:66
 #, elixir-autogen, elixir-format
@@ -1874,7 +1874,7 @@ msgid "Language & Culture"
 msgstr ""
 
 #: lib/mobilizon/events/categories.ex:96
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "Learning"
 msgstr ""
 
@@ -1944,7 +1944,7 @@ msgid "Theatre"
 msgstr ""
 
 #: lib/web/templates/email/participation/event_card.text.eex:9
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "Read more: %{url}"
 msgstr ""
 
@@ -1954,13 +1954,13 @@ msgid "Activate my account:"
 msgstr "Aktiver kontoen min"
 
 #: lib/web/email/follow.ex:49
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "Instance %{domain} requests to follow your instance"
 msgstr ""
 
 #: lib/web/templates/email/instance_follow.html.heex:68
 #: lib/web/templates/email/instance_follow.text.eex:7
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "Note: %{name} following you doesn't necessarily imply that you follow this instance, but you can ask to follow them too."
 msgstr ""
 
@@ -1972,22 +1972,22 @@ msgstr ""
 
 #: lib/web/templates/email/group_suspension.html.heex:67
 #: lib/web/templates/email/group_suspension.text.eex:5
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "As this group was located on this instance, all of its data has been irretrievably deleted."
 msgstr ""
 
 #: lib/web/templates/email/report.text.eex:11
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "Events"
 msgstr ""
 
 #: lib/web/templates/email/report.html.heex:115
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "Flagged events"
 msgstr ""
 
 #: lib/service/export/participants/common.ex:65
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "Participant registration date"
 msgstr ""
 
@@ -2021,7 +2021,7 @@ msgid "Well done!"
 msgstr ""
 
 #: lib/web/templates/api/terms.html.heex:55
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgctxt "terms"
 msgid "When we say “we”, “our”, or “us” in this document, we are referring to the owners, operators and administrators of this Mobilizon instance. The Mobilizon software is provided by the team of Mobilizon contributors. Unless explicitly stated, this Mobilizon instance is an independent service using Mobilizon's source code. You may find more information about this instance on the <a href=\"/about/instance\">\"About this instance\"</a> page."
 msgstr ""
@@ -2043,7 +2043,7 @@ msgid "New pending user from %{user} on %{instance}"
 msgstr ""
 
 #: lib/web/templates/email/user_pending.html.heex:18
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "New pending user on <b>%{instance}</b>"
 msgstr ""
 

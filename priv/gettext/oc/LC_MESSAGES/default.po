@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-24 14:40+0000\n"
-"PO-Revision-Date: 2020-11-04 12:52+0000\n"
+"PO-Revision-Date: 2026-03-11 21:38+0000\n"
 "Last-Translator: Quentin PAGÈS <quentinantonin@free.fr>\n"
 "Language-Team: Occitan <https://weblate.framasoft.org/projects/mobilizon/"
 "backend/oc/>\n"
@@ -12,13 +12,15 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.1\n"
+"X-Generator: Weblate 5.16.2\n"
 
 #: lib/web/templates/email/password_reset.html.heex:66
 #, elixir-autogen, elixir-format
 msgid "If you didn't request this, please ignore this email. Your password won't change until you access the link below and create a new one."
 msgstr ""
-"S’avètz pas demandat aquò, podètz ignorar aqueste corrièl. Vòstre senhal cambiarà pas mentre que cliquetz pas lo ligam çai-jos e ne definiscatz un novèl."
+"S’avètz pas demandat aquò, podètz ignorar aqueste corrièl. Vòstre senhal "
+"cambiarà pas mentre que cliquetz pas lo ligam çai-jos e ne definiscatz un "
+"novèl."
 
 #: lib/web/templates/email/report.html.heex:121
 #, elixir-autogen, elixir-format
@@ -59,7 +61,9 @@ msgstr "Reïnicializar mon senhal"
 #: lib/web/templates/email/password_reset.html.heex:53
 #, elixir-autogen, elixir-format
 msgid "Resetting your password is easy. Just press the button below and follow the instructions. We'll have you up and running in no time."
-msgstr "Reïnicializar vòstre senhal es facil. Clicatz simplament lo boton e seguètz las consignas. Seretz prèst d’aquí un momenton."
+msgstr ""
+"Reïnicializar vòstre senhal es facil. Clicatz simplament lo boton e seguètz "
+"las consignas. Seretz prèst d’aquí un momenton."
 
 #: lib/web/email/user.ex:26
 #, elixir-autogen, elixir-format
@@ -96,12 +100,16 @@ msgstr "Reïnicializacion del senhal"
 #: lib/web/templates/email/password_reset.text.eex:7
 #, elixir-autogen, elixir-format
 msgid "Resetting your password is easy. Just click the link below and follow the instructions. We'll have you up and running in no time."
-msgstr "Reïnicializar vòstre senhal es facil. Clicatz simplament lo boton e seguètz las consignas. Seretz prèst d’aquí un momenton."
+msgstr ""
+"Reïnicializar vòstre senhal es facil. Clicatz simplament lo boton e seguètz "
+"las consignas. Seretz prèst d’aquí un momenton."
 
 #: lib/web/templates/email/registration_confirmation.text.eex:5
 #, elixir-autogen, elixir-format
 msgid "You created an account on %{host} with this email address. You are one click away from activating it. If this wasn't you, please ignore this email."
-msgstr "Avètz creat un compte sus %{host} amb aquesta adreça electronica. Sètz a un clic de l’activar."
+msgstr ""
+"Avètz creat un compte sus %{host} amb aquesta adreça electronica. Sètz a un "
+"clic de l’activar."
 
 #: lib/web/email/participation.ex:115
 #, elixir-autogen, elixir-format
@@ -266,9 +274,9 @@ msgid "If this server is in the EU or the EEA: Our site, products and services a
 msgstr ""
 "S’aqueste servidor es en EU o la EEA : nòstre site, nòstres produches e "
 "servicis son totas a destinacion de monde de mai de 16 ans. S’avètz mens de "
-"16 ans, per cumplir lo RGPD (<a href=\"https://ca.wikipedia.org/wiki/_%C3%"
-"B3_\">Reglament General de Proteccion de Donadas</a>) utilizetz pas aqueste "
-"site."
+"16 ans, per cumplir lo RGPD (<a href=\"https://ca.wikipedia.org/wiki/"
+"_%C3%B3_\">Reglament General de Proteccion de Donadas</a>) utilizetz pas "
+"aqueste site."
 
 #: lib/web/templates/api/privacy.html.heex:146
 #, elixir-autogen, elixir-format
@@ -276,10 +284,10 @@ msgctxt "terms"
 msgid "If this server is in the USA: Our site, products and services are all directed to people who are at least 13 years old. If you are under the age of 13, per the requirements of COPPA (<a href=\"https://en.wikipedia.org/wiki/Children%27s_Online_Privacy_Protection_Act\">Children's Online Privacy Protection Act</a>) do not use this site."
 msgstr ""
 "S’aqueste servidor se tròba en los Estats Units : nòstre site, nòstres "
-"produches e servicis son totas a destinacion de monde de mai de 13 ans. S’"
-"avètz mens de 13 ans, per acontentar las exigéncias del COPPA (<a href="
-"\"https://en.wikipedia.org/wiki/Children%27__Act\">Children's Online Privacy "
-"Protection Act</a>) utilizetz pas aqueste site."
+"produches e servicis son totas a destinacion de monde de mai de 13 ans. "
+"S’avètz mens de 13 ans, per acontentar las exigéncias del COPPA (<a "
+"href=\"https://en.wikipedia.org/wiki/Children%27__Act\">Children's Online "
+"Privacy Protection Act</a>) utilizetz pas aqueste site."
 
 #: lib/web/templates/api/privacy.html.heex:160
 #, elixir-autogen, elixir-format
@@ -418,8 +426,8 @@ msgid "One participation request for event %{title} to process"
 msgid_plural "%{number_participation_requests} participation requests for event %{title} to process"
 msgstr[0] "Una demanda de participacion a l’eveniment %{title} a tractar"
 msgstr[1] ""
-"%{number_participation_requests} demandas de participacion a l’eveniment "
-"%{title} a tractar"
+"%{number_participation_requests} demandas de participacion a l’eveniment %"
+"{title} a tractar"
 
 #: lib/web/templates/email/notification_each_week.html.heex:47
 #: lib/web/templates/email/notification_each_week.text.eex:3
@@ -477,11 +485,11 @@ msgstr "Modificacion d'aquestas condictions d'utilizacion"
 msgctxt "terms"
 msgid "A lot of the content on the Service is from you and others, and we don't review, verify or authenticate it, and it may include inaccuracies or false information. We make no representations, warranties, or guarantees relating to the quality, suitability, truth, accuracy or completeness of any content contained in the Service. You acknowledge sole responsibility for and assume all risk arising from your use of or reliance on any content."
 msgstr ""
-"Fòrça part del contengut del Servici ven de vosautres e dels autres, e l’"
-"examinam pas, lo verificam pas, nimai l’autentificam pas, e pòt conténer "
+"Fòrça part del contengut del Servici ven de vosautres e dels autres, e "
+"l’examinam pas, lo verificam pas, nimai l’autentificam pas, e pòt conténer "
 "inexactitud o informacions falsas. Fasèm pas cap de declaracion, garantida o "
-"assegurança respècte a la qualitat, la pertinéncia, la veracitat, l’"
-"exactitud o del caractèr exaustiu del contengut del Servici. Reconeissètz "
+"assegurança respècte a la qualitat, la pertinéncia, la veracitat, "
+"l’exactitud o del caractèr exaustiu del contengut del Servici. Reconeissètz "
 "èsser lo sol responsable e assumissètz quin risc que siá que resulta de "
 "vòstra utilizacion o de vòstra fisança dins lo contengut."
 
@@ -606,8 +614,8 @@ msgstr ""
 msgctxt "terms"
 msgid "For full details about the Mobilizon software <a href=\"https://mobilizon.org\">see here</a>."
 msgstr ""
-"Per mai de detalhs sul logicial Mobilizon <a href=\"https://joinmobilizon."
-"org\">veire aquí</a>."
+"Per mai de detalhs sul logicial Mobilizon <a href=\"https://"
+"joinmobilizon.org\">veire aquí</a>."
 
 #: lib/web/templates/api/terms.html.heex:47
 #, elixir-autogen, elixir-format
@@ -714,20 +722,20 @@ msgstr ""
 msgctxt "terms"
 msgid "Originally adapted from the <a href=\"https://joindiaspora.com/terms\">Diaspora*</a> and <a href=\"https://github.com/appdotnet/terms-of-service\">App.net</a> privacy policies, also licensed under <a href=\"https://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA</a>."
 msgstr ""
-"Adaptada a l'origina de las politicas de confidencialitat de <a href=\"https"
-"://joindiaspora.com/terms\">Diaspora*</a> e <a href=\"https://github.com/"
-"appdotnet/terms-of-service\">App.net</a>, e jos licéncia <a href=\"https"
-"://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA</a>."
+"Adaptada a l'origina de las politicas de confidencialitat de <a "
+"href=\"https://joindiaspora.com/terms\">Diaspora*</a> e <a href=\"https://"
+"github.com/appdotnet/terms-of-service\">App.net</a>, e jos licéncia <a "
+"href=\"https://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA</a>."
 
 #: lib/web/templates/api/privacy.html.heex:173
 #, elixir-autogen, elixir-format
 msgctxt "terms"
 msgid "Originally adapted from the <a href=\"https://mastodon.social/terms\">Mastodon</a> and <a href=\"https://github.com/discourse/discourse\">Discourse</a> privacy policies, also licensed under <a href=\"https://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA</a>."
 msgstr ""
-"Adaptada a l'origina de las politica de confidencialitat de <a href=\"https"
-"://mastodon.social/terms\">Mastodon</a> et <a href=\"https://github.com/"
-"discourse/discourse\">Discourse</a>, tanben jos licéncia <a href=\"https"
-"://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA</a>."
+"Adaptada a l'origina de las politica de confidencialitat de <a "
+"href=\"https://mastodon.social/terms\">Mastodon</a> et <a href=\"https://"
+"github.com/discourse/discourse\">Discourse</a>, tanben jos licéncia <a "
+"href=\"https://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA</a>."
 
 #: lib/web/templates/api/terms.html.heex:3
 #, elixir-autogen, elixir-format
@@ -1763,7 +1771,7 @@ msgid "An administrator updated your role on %{instance}"
 msgstr ""
 
 #: lib/web/templates/email/email_changed_new.text.eex:3
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "Hi there! It seems like you wanted to change the email address linked to your account on %{instance}. If you still wish to do so, please click the button below to confirm the change. You will then be able to log in to %{instance} with this new email address."
 msgstr ""
 
@@ -1851,28 +1859,28 @@ msgid "You may now login using your credentials on the service:"
 msgstr ""
 
 #: lib/web/templates/email/admin_user_role_changed.text.eex:3
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "Hi there! We just wanted to inform you that an administrator from %{instance} just changed your account role."
 msgstr ""
 
 #: lib/web/templates/email/admin_user_role_changed.html.heex:47
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "Hi there! We just wanted to inform you that an administrator from <b>%{instance}</b> just changed your account role."
 msgstr ""
 
 #: lib/web/templates/email/instance_follow.text.eex:5
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "%{name} just requested to follow your instance."
 msgstr ""
 
 #: lib/web/templates/email/instance_follow.html.heex:47
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "<b>%{name}</b> just requested to follow your instance."
 msgstr ""
 
 #: lib/web/templates/email/instance_follow.html.heex:55
 #: lib/web/templates/email/instance_follow.text.eex:6
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "If you accept, this profile will receive all of your public events."
 msgstr ""
 
@@ -2039,7 +2047,7 @@ msgid "Theatre"
 msgstr ""
 
 #: lib/web/templates/email/participation/event_card.text.eex:9
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "Read more: %{url}"
 msgstr ""
 
@@ -2049,13 +2057,13 @@ msgid "Activate my account:"
 msgstr "Activar mon compte"
 
 #: lib/web/email/follow.ex:49
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "Instance %{domain} requests to follow your instance"
 msgstr ""
 
 #: lib/web/templates/email/instance_follow.html.heex:68
 #: lib/web/templates/email/instance_follow.text.eex:7
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "Note: %{name} following you doesn't necessarily imply that you follow this instance, but you can ask to follow them too."
 msgstr ""
 
@@ -2084,7 +2092,7 @@ msgid "Flagged events"
 msgstr "Comentaris senhalats"
 
 #: lib/service/export/participants/common.ex:65
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "Participant registration date"
 msgstr ""
 
@@ -2118,7 +2126,7 @@ msgid "Well done!"
 msgstr ""
 
 #: lib/web/templates/api/terms.html.heex:55
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgctxt "terms"
 msgid "When we say “we”, “our”, or “us” in this document, we are referring to the owners, operators and administrators of this Mobilizon instance. The Mobilizon software is provided by the team of Mobilizon contributors. Unless explicitly stated, this Mobilizon instance is an independent service using Mobilizon's source code. You may find more information about this instance on the <a href=\"/about/instance\">\"About this instance\"</a> page."
 msgstr ""

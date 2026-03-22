@@ -8,7 +8,7 @@
 ## to merge POT files into PO files.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-02-16 15:32+0000\n"
+"PO-Revision-Date: 2026-03-11 21:34+0000\n"
 "Last-Translator: Vri <vrifox@vrifox.cc>\n"
 "Language-Team: German <https://weblate.framasoft.org/projects/mobilizon/"
 "backend-errors/de/>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.15.2\n"
+"X-Generator: Weblate 5.16.2\n"
 
 #: lib/mobilizon/discussions/discussion.ex:68
 #, elixir-autogen
@@ -1500,6 +1500,6 @@ msgstr ""
 "aktualisieren"
 
 #: lib/graphql/resolvers/invitation.ex:28
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "Impossible to create the invitation"
 msgstr ""

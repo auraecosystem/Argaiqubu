@@ -3,17 +3,17 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-24 14:40+0000\n"
-"PO-Revision-Date: 2021-12-07 14:27+0000\n"
-"Last-Translator: deadmorose <cornerot@gmail.com>\n"
+"PO-Revision-Date: 2026-03-11 21:39+0000\n"
+"Last-Translator: \"Dzmitry K.\" <d@garbata.net>\n"
 "Language-Team: Russian <https://weblate.framasoft.org/projects/mobilizon/"
 "backend/ru/>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 4.9.1\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 5.16.2\n"
 
 #: lib/web/templates/email/password_reset.html.heex:66
 #, elixir-autogen, elixir-format
@@ -286,9 +286,9 @@ msgid "If this server is in the USA: Our site, products and services are all dir
 msgstr ""
 "Если этот сервер находится в США - наш сайт, продукты и услуги предназначены "
 "для людей старше 13 лет. Если вам меньше 13 лет, в соответствии с "
-"требованиями COPPA (<a href=\"https://ru.wikipedia.org/wiki/Children%E2%80%"
-"99s_Online_Privacy_Protection_Act\">Закон о защите конфиденциальности детей "
-"в Интернете</a>) не используйте этот сайт."
+"требованиями COPPA (<a href=\"https://ru.wikipedia.org/wiki/"
+"Children%E2%80%99s_Online_Privacy_Protection_Act\">Закон о защите "
+"конфиденциальности детей в Интернете</a>) не используйте этот сайт."
 
 #: lib/web/templates/api/privacy.html.heex:160
 #, elixir-autogen, elixir-format
@@ -648,8 +648,8 @@ msgstr ""
 msgctxt "terms"
 msgid "Finally, your use of the Service is also subject to acceptance of <a href=\"/rules\">the instance's own specific rules</a> regarding the code of conduct and moderation rules. Breaking those rules may also result in your account being disabled or suspended."
 msgstr ""
-"Наконец, использование Сервиса также требует принятия <a href=\"/rules\""
-">правил конкретного узла</a>, касающихся кодекса поведения и правил "
+"Наконец, использование Сервиса также требует принятия <a href=\"/rules\">"
+"правил конкретного узла</a>, касающихся кодекса поведения и правил "
 "модерации. Нарушение этих правил также может привести к приостановке или "
 "блокировки вашей учетной записи."
 
@@ -658,18 +658,18 @@ msgstr ""
 msgctxt "terms"
 msgid "For full details about the Mobilizon software <a href=\"https://mobilizon.org\">see here</a>."
 msgstr ""
-"Для получения полной информации о Mobilizon <a href=\"https://joinmobilizon."
-"org\">смотреть тут</a>."
+"Для получения полной информации о Mobilizon <a href=\"https://"
+"joinmobilizon.org\">смотреть тут</a>."
 
 #: lib/web/templates/api/terms.html.heex:47
 #, elixir-autogen, elixir-format
 msgctxt "terms"
 msgid "Here are the important things you need to know about accessing and using the <b>%{instance_name}</b> (<a href=\"https://%{instance_url}\">%{instance_url}</a>) website and service (collectively, \"Service\"). These are our terms of service (\"Terms\"). Please read them carefully."
 msgstr ""
-"Вот важные вещи, которые вам нужно знать о доступе и использовании "
-"<b>%{instance_name}</b> (<a href=\"https://%{instance_url}\""
-">%{instance_url}</a>) веб-сайта и сервиса (вместе именуемые \"Сервис\"). Это "
-"наши условия обслуживания (\"Условия\"). Пожалуйста, прочтите их внимательно."
+"Вот важные вещи, которые вам нужно знать о доступе и использовании <b>%"
+"{instance_name}</b> (<a href=\"https://%{instance_url}\">%{instance_url}</"
+"a>) веб-сайта и сервиса (вместе именуемые \"Сервис\"). Это наши условия "
+"обслуживания (\"Условия\"). Пожалуйста, прочтите их внимательно."
 
 #: lib/web/templates/api/terms.html.heex:82
 #, elixir-autogen, elixir-format
@@ -715,8 +715,8 @@ msgstr ""
 msgctxt "terms"
 msgid "These Terms constitute the entire agreement between you and <b>%{instance_name}</b> regarding the use of the Service, superseding any prior agreements between you and <b>%{instance_name}</b> relating to your use of the Service."
 msgstr ""
-"Настоящие Условия представляют собой полное соглашение между вами и "
-"<b>%{instance_name}</b> в отношении использования Сервиса, заменяя все "
+"Настоящие Условия представляют собой полное соглашение между вами и <b>%"
+"{instance_name}</b> в отношении использования Сервиса, заменяя все "
 "предыдущие соглашения между вами и <b>%{instance_name}</b>, касающиеся "
 "использования Сервиса."
 
@@ -772,8 +772,8 @@ msgstr ""
 msgctxt "terms"
 msgid "Instance administrators (and community moderators, given the relevant access) are responsible for monitoring and acting on flagged content and other user reports, and have the right and responsibility to remove or edit content that is not aligned to this Instance set of rules, or to suspend, block or ban (temporarily or permanently) any account, community, or instance for breaking these terms, or for other behaviours that they deem inappropriate, threatening, offensive, or harmful."
 msgstr ""
-"Администраторы узла (и модераторы сообщества, имеющие соответствующий доступ)"
-" несут ответственность за мониторинг помеченного контента и других "
+"Администраторы узла (и модераторы сообщества, имеющие соответствующий "
+"доступ) несут ответственность за мониторинг помеченного контента и других "
 "пользовательских отчётов и действия с ними, а также имеют право и обязаны "
 "удалять или редактировать контент, который не соответствует правилам узла, "
 "или приостановить, заблокировать (временно или навсегда) любую учетную "
@@ -811,20 +811,20 @@ msgstr ""
 msgctxt "terms"
 msgid "Originally adapted from the <a href=\"https://joindiaspora.com/terms\">Diaspora*</a> and <a href=\"https://github.com/appdotnet/terms-of-service\">App.net</a> privacy policies, also licensed under <a href=\"https://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA</a>."
 msgstr ""
-"Изначально взято из политик конфиденциальности <a href=\"https://joindiaspora"
-".com/terms\">Diaspora*</a> и <a href=\"https://github.com/appdotnet/terms-of-"
-"service\">App.net</a>, которые находятся под лицензией <a href=\"https"
-"://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA</a>."
+"Изначально взято из политик конфиденциальности <a href=\"https://"
+"joindiaspora.com/terms\">Diaspora*</a> и <a href=\"https://github.com/"
+"appdotnet/terms-of-service\">App.net</a>, которые находятся под лицензией <a "
+"href=\"https://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA</a>."
 
 #: lib/web/templates/api/privacy.html.heex:173
 #, elixir-autogen, elixir-format
 msgctxt "terms"
 msgid "Originally adapted from the <a href=\"https://mastodon.social/terms\">Mastodon</a> and <a href=\"https://github.com/discourse/discourse\">Discourse</a> privacy policies, also licensed under <a href=\"https://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA</a>."
 msgstr ""
-"Изначально взято из политик конфиденциальности <a href=\"https://mastodon."
-"social/terms\">Mastodon</a> и <a href=\"https://github.com/discourse/"
-"discourse\">Discourse</a>, которые находятся под лицензией <a href=\"https"
-"://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA</a>."
+"Изначально взято из политик конфиденциальности <a href=\"https://"
+"mastodon.social/terms\">Mastodon</a> и <a href=\"https://github.com/"
+"discourse/discourse\">Discourse</a>, которые находятся под лицензией <a "
+"href=\"https://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA</a>."
 
 #: lib/web/templates/api/terms.html.heex:3
 #, elixir-autogen, elixir-format
@@ -890,9 +890,9 @@ msgstr "Подтвердите ваш адрес электронной почт
 #, elixir-autogen, elixir-format
 msgid "Hi there! You just registered to join this event: « %{title} ». Please confirm the e-mail address you provided:"
 msgstr ""
-"Привет! Вы только что зарегистрировались, чтобы присоединиться к мероприятию:"
-" « % {title} ». Пожалуйста, подтвердите адрес электронной почты, который вы "
-"указали:"
+"Привет! Вы только что зарегистрировались, чтобы присоединиться к "
+"мероприятию: « % {title} ». Пожалуйста, подтвердите адрес электронной почты, "
+"который вы указали:"
 
 #: lib/web/templates/email/email.html.heex:142
 #: lib/web/templates/email/email.text.eex:8
@@ -1250,8 +1250,8 @@ msgstr ""
 #, elixir-autogen, elixir-format
 msgid "<b>%{inviter}</b> just invited you to join their group %{link_start}<b>%{group}</b>%{link_end}"
 msgstr ""
-"<b>%{inviter}</b> только что пригласил вас присоединиться к их группе "
-"%{link_start}<b>%{group}</b>%{link_end}"
+"<b>%{inviter}</b> только что пригласил вас присоединиться к их группе %"
+"{link_start}<b>%{group}</b>%{link_end}"
 
 #: lib/web/templates/email/group_member_removal.html.heex:47
 #, elixir-autogen, elixir-format
@@ -1278,8 +1278,8 @@ msgstr "Группа %{group} заблокирована на %{instance}!"
 #, elixir-autogen, elixir-format
 msgid "Your instance's moderation team has decided to suspend %{group_name} (%{group_address}). You are no longer a member of this group."
 msgstr ""
-"Команда модераторов вашего узла приняла решение приостановить работу "
-"%{group_name} (%{group_address}). Вы больше не являетесь участником этой "
+"Команда модераторов вашего узла приняла решение приостановить работу %"
+"{group_name} (%{group_address}). Вы больше не являетесь участником этой "
 "группы."
 
 #: lib/web/email/group.ex:106
@@ -1390,8 +1390,8 @@ msgstr ""
 "Мы собираем информацию о вас, когда вы регистрируетесь на этом узле, и "
 "собираем данные, когда вы используете эту платформе, читая, создавая или "
 "взаимодействуя с публичным контентом. Если вы зарегистрируетесь на этом "
-"узле, вам будет предложено ввести <b>адрес электронной почты, пароль</b> ("
-"хранится в хешированном виде) и, как минимум, <b>имя пользователя</b>. Ваш "
+"узле, вам будет предложено ввести <b>адрес электронной почты, пароль</b> "
+"(хранится в хешированном виде) и, как минимум, <b>имя пользователя</b>. Ваш "
 "адрес электронной почты будет подтвержден электронным письмом, содержащим "
 "уникальную ссылку. Переход по этой ссылке будет являться свидетельством "
 "того, что вы контролируете этот почтовый ящик. Вы также можете добавить в "
@@ -1650,17 +1650,17 @@ msgstr "Ваше участие в %{event} было отменено!"
 #, elixir-autogen, elixir-format
 msgid "Your instance's moderation team has decided to suspend %{actor_name} (%{actor_address}). All of their events have been removed and your participation to event %{event} cancelled."
 msgstr ""
-"Команда модераторов вашего узла приняла решение приостановить работу "
-"%{actor_name} (%{actor_address}). Все их мероприятия были удалены, а ваше "
+"Команда модераторов вашего узла приняла решение приостановить работу %"
+"{actor_name} (%{actor_address}). Все их мероприятия были удалены, а ваше "
 "участие в мероприятии %{event} отменено."
 
 #: lib/web/templates/email/group_suspension.html.heex:50
 #, elixir-autogen, elixir-format
 msgid "Your instance's moderation team has decided to suspend <b>%{group_name}</b> (%{group_address}). You are no longer a member of this group."
 msgstr ""
-"Команда модераторов вашего узла приняла решение приостановить работу "
-"<b>%{group_name}</b> (%{group_address}). Вы больше не являетесь участником "
-"этой группы."
+"Команда модераторов вашего узла приняла решение приостановить работу <b>%"
+"{group_name}</b> (%{group_address}). Вы больше не являетесь участником этой "
+"группы."
 
 #: lib/web/templates/email/actor_suspension_participants.html.heex:18
 #: lib/web/templates/email/actor_suspension_participants.text.eex:1
