@@ -64,6 +64,7 @@ defmodule Mobilizon.Federation.ActivityPub.Utils do
           "ical" => "http://www.w3.org/2002/12/cal/ical#",
           "pt" => "https://joinpeertube.org/ns#",
           "toot" => "http://joinmastodon.org/ns#",
+          "rdfs" => "http://www.w3.org/2000/01/rdf-schema#",
           "discoverable" => "toot:discoverable",
           "manuallyApprovesFollowers" => "as:manuallyApprovesFollowers",
           "Hashtag" => "as:Hashtag",
