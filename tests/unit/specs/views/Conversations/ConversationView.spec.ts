@@ -7,20 +7,16 @@ import { Oruga } from "@oruga-ui/oruga-next";
 import flushPromises from "flush-promises";
 import { getMockClient, requestHandlers } from "../../mocks/client";
 import { htmlRemoveId } from "../../common";
-import EditView from "@/views/Event/EditView.vue";
+import ConversationView from "@/views/Conversations/ConversationView.vue";
+import { DELETE_COMMENT, UPDATE_COMMENT } from "@/graphql/comment";
 import {
-  CREATE_EVENT,
-  EDIT_EVENT,
-  EVENT_PERSON_PARTICIPATION,
-  FETCH_EVENT,
-} from "@/graphql/event";
-import { LOGGED_USER_PARTICIPATIONS } from "@/graphql/participant";
+  CONVERSATION_COMMENT_CHANGED,
+  GET_CONVERSATION,
+  MARK_CONVERSATION_AS_READ,
+  REPLY_TO_PRIVATE_MESSAGE_MUTATION,
+} from "@/graphql/conversations";
 import { MemberRole } from "@/types/enums";
 import { computed } from "vue";
-import { LOGGED_USER_DRAFTS } from "@/graphql/actor";
-import { CONFIG } from "@/graphql/config";
-import { eventParticipantMock } from "../../mocks/event";
-import { configMock } from "../../mocks/config";
 
 vi.mock("@/composition/apollo/actor", () => {
   return {
@@ -92,21 +88,18 @@ beforeEach(async () => {
 
 const generateWrapper = () => {
   const global_data = getMockClient([
-    [FETCH_EVENT, eventParticipantMock],
-    EDIT_EVENT,
-    EVENT_PERSON_PARTICIPATION,
-    CREATE_EVENT,
-    LOGGED_USER_DRAFTS,
-    LOGGED_USER_PARTICIPATIONS,
-    [CONFIG, configMock],
+    CONVERSATION_COMMENT_CHANGED,
+    GET_CONVERSATION,
+    MARK_CONVERSATION_AS_READ,
+    REPLY_TO_PRIVATE_MESSAGE_MUTATION,
+    DELETE_COMMENT,
+    UPDATE_COMMENT,
   ]);
   global_data.provide.dateFnsLocale = enUS;
   global_data.plugins = [router];
-  return mount(EditView, {
+  return mount(ConversationView, {
     props: {
-      eventId: "67e9b659-84d9-4414-99f3-a1baaa88cf2d",
-      isUpdate: true,
-      isDuplicate: false,
+      id: "456789",
     },
     global: {
       ...global_data,
@@ -117,38 +110,25 @@ const generateWrapper = () => {
   });
 };
 
-describe("EditView", () => {
+describe("ConversationView", () => {
   it("Show simple", async () => {
     const wrapper = generateWrapper();
     await wrapper.vm.$nextTick();
     await flushPromises();
     expect(htmlRemoveId(wrapper.html())).toMatchSnapshot();
     expect(requestHandlers.handle_0).toHaveBeenCalledTimes(1);
-    expect(requestHandlers.handle_1).toHaveBeenCalledTimes(0);
+    expect(requestHandlers.handle_1).toHaveBeenCalledTimes(1);
     expect(requestHandlers.handle_2).toHaveBeenCalledTimes(0);
     expect(requestHandlers.handle_3).toHaveBeenCalledTimes(0);
     expect(requestHandlers.handle_4).toHaveBeenCalledTimes(0);
     expect(requestHandlers.handle_5).toHaveBeenCalledTimes(0);
-    expect(requestHandlers.handle_6).toHaveBeenCalledTimes(1);
     expect(requestHandlers.handle_0).toHaveBeenCalledWith({
-      uuid: "67e9b659-84d9-4414-99f3-a1baaa88cf2d",
+      id: "456789",
     });
-    const edit = wrapper.find("input.o-input__input");
-    edit.setValue("new title");
-    const btn = wrapper.find("button.o-button--primary.o-button--expanded");
-    expect(btn.text()).toBe("Update my event");
-    await btn.trigger("click");
-    await wrapper.vm.$nextTick();
-    await flushPromises();
-
-    expect(htmlRemoveId(wrapper.html())).toMatchSnapshot();
-
-    expect(requestHandlers.handle_0).toHaveBeenCalledTimes(1);
-    expect(requestHandlers.handle_1).toHaveBeenCalledTimes(0);
-    expect(requestHandlers.handle_2).toHaveBeenCalledTimes(0);
-    expect(requestHandlers.handle_3).toHaveBeenCalledTimes(0);
-    expect(requestHandlers.handle_4).toHaveBeenCalledTimes(0);
-    expect(requestHandlers.handle_5).toHaveBeenCalledTimes(0);
-    expect(requestHandlers.handle_6).toHaveBeenCalledTimes(1);
+    expect(requestHandlers.handle_1).toHaveBeenCalledWith({
+      id: "456789",
+      limit: 10,
+      page: 1,
+    });
   });
 });

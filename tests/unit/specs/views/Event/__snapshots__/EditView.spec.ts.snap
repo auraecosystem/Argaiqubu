@@ -5,14 +5,14 @@ exports[`EditView > Show simple 1`] = `
   <h1>Update event event-test</h1>
   <form>
     <h2>General information</h2>
-    <div data-oruga="field" class="o-field"><label id="v-0-52" class="o-field__label">Headline picture</label>
+    <div data-oruga="field" class="o-field"><label id="v-0-59" class="o-field__label">Headline picture</label>
       <div><label data-oruga="upload" class="o-upload !flex">
           <div class="o-upload__draggable" role="button" tabindex="0">
             <div class="w-100 text-center p-4 rounded-xl border-dashed border-2 border-gray-600"><span class="mx-auto flex w-fit"><span aria-hidden="true" class="material-design-icon upload-icon" role="img"><svg fill="currentColor" class="material-design-icon__svg" width="24" height="24" viewBox="0 0 24 24"><path d="M9,16V10H5L12,3L19,10H15V16H9M5,20V18H19V20H5Z"><!--v-if--></path></svg></span><span class="capitalize">Click to upload Headline picture</span></span>
               <!--v-if-->
               <!--v-if-->
             </div>
-          </div><input aria-labelledby="v-0-52" type="file" data-oruga-input="file" accept="image/gif,image/png,image/jpeg,image/webp">
+          </div><input aria-labelledby="v-0-59" type="file" data-oruga-input="file" accept="image/gif,image/png,image/jpeg,image/webp">
         </label></div>
       <!--v-if-->
       <!---->
@@ -26,7 +26,15 @@ exports[`EditView > Show simple 1`] = `
       <!---->
     </div>
     <div class="flex flex-wrap gap-4">
-      <!--v-if-->
+      <div data-oruga="field" class="o-field o-field--filled w-full md:max-w-fit"><label id="v-0-52" for="" class="o-field__label">Category</label>
+        <div data-oruga="select" class="o-select o-select--expanded">
+          <!----><select aria-labelledby="v-0-52" id="" data-oruga-input="select" class="o-select__input o-select__input--arrowed" autocomplete="off">
+            <!---->
+          </select>
+          <!---->
+        </div>
+        <!---->
+      </div>
       <div data-oruga="field" class="o-field taginput-field flex-1"><label id="v-0-0-0" for="tag-input-1" class="o-field__label">
           <p class="inline-flex items-center gap-0.5">Add some tags
           <div data-oruga="tooltip" class="o-tooltip">
@@ -124,7 +132,74 @@ exports[`EditView > Show simple 1`] = `
     </div>
     <section class="my-4">
       <h2>Published by</h2>
-      <!--v-if-->
+      <div>
+        <div data-oruga="field" class="o-field">
+          <!---->
+          <div class="bg-white dark:bg-violet-3 border border-gray-300 rounded-lg cursor-pointer">
+            <!-- If we have a current actor (inline) -->
+            <div class="" dir="auto">
+              <div class="flex gap-1 p-4">
+                <div class=""><span aria-hidden="true" class="material-design-icon account-circle-icon" role="img"><svg fill="currentColor" class="material-design-icon__svg" width="48" height="48" viewBox="0 0 24 24"><path d="M12,19.2C9.5,19.2 7.29,17.92 6,16C6.03,14 10,12.9 12,12.9C14,12.9 17.97,14 18,16C16.71,17.92 14.5,19.2 12,19.2M12,5A3,3 0 0,1 15,8A3,3 0 0,1 12,11A3,3 0 0,1 9,8A3,3 0 0,1 12,5M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12C22,6.47 17.5,2 12,2Z"><!--v-if--></path></svg></span></div>
+                <div class="flex-1">
+                  <p class="">test</p>
+                  <p class="">@test</p>
+                </div><button data-oruga="button" type="button" role="button" tabindex="0" class="o-button"><span class="o-button__wrapper"><!----><span class="o-button__label">Change</span>
+                  <!----></span>
+                </button>
+              </div>
+            </div>
+            <!--teleport start-->
+            <transition-stub name="zoom-out" appear="false" persisted="false" css="true">
+              <div has-modal-card="" close-button-aria-label="Close" data-oruga="modal" class="o-modal" tabindex="-1" role="dialog" aria-modal="false" style="display: none;">
+                <div class="o-modal__overlay" tabindex="-1"></div>
+                <div class="o-modal__content" style="max-width: 960px;">
+                  <div class="p-2 rounded">
+                    <header class="">
+                      <h2 class="">Pick a profile or a group</h2>
+                    </header>
+                    <section class="">
+                      <div class="flex flex-wrap gap-2 items-center flex-col lg:flex-row">
+                        <div class="max-h-[400px] overflow-y-auto flex-1 w-full">
+                          <div data-v-4ef6e9b3="" class="max-w-md mx-auto p-5 w-3/4">
+                            <div data-v-4ef6e9b3="" data-oruga="input" class="o-input o-input--expanded">
+                              <!----><input aria-labelledby="v-0-54" dir="auto" class="o-input__input o-input__input--placeholder" id="v-0-2-0" type="text" data-oruga-input="text" autocomplete="off" placeholder="Filter by profile or group name">
+                              <!---->
+                              <!---->
+                            </div>
+                            <transition-group-stub data-v-4ef6e9b3="" tag="ul" enteractiveclass="duration-300 ease-out" enterfromclass="transform opacity-0" entertoclass="opacity-100" leaveactiveclass="duration-200 ease-in" leavefromclass="opacity-100" leavetoclass="transform opacity-0" appear="false" persisted="false" css="true" class="grid grid-cols-1 gap-y-3 m-5 max-w-md mx-auto">
+                              <li data-v-4ef6e9b3="" class="relative focus-within:shadow-lg"><input data-v-4ef6e9b3="" class="sr-only peer" type="radio" name="availableActors" id="availableActor-123" value="[object Object]"><label data-v-4ef6e9b3="" class="flex items-center gap-2 p-3 bg-white hover:bg-gray-50 dark:bg-violet-3 dark:hover:bg-violet-3/60 border border-gray-300 rounded-lg cursor-pointer peer-checked:ring-primary peer-checked:ring-2 peer-checked:border-transparent" for="availableActor-123"><span data-v-4ef6e9b3="" aria-hidden="true" class="material-design-icon account-circle-icon" role="img"><svg fill="currentColor" class="material-design-icon__svg" width="48" height="48" viewBox="0 0 24 24"><path d="M12,19.2C9.5,19.2 7.29,17.92 6,16C6.03,14 10,12.9 12,12.9C14,12.9 17.97,14 18,16C16.71,17.92 14.5,19.2 12,19.2M12,5A3,3 0 0,1 15,8A3,3 0 0,1 12,11A3,3 0 0,1 9,8A3,3 0 0,1 12,5M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12C22,6.47 17.5,2 12,2Z"><!--v-if--></path></svg></span>
+                                  <div data-v-4ef6e9b3="" class="flex-1 w-px">
+                                    <h3 data-v-4ef6e9b3="" class="line-clamp-2">test</h3><small data-v-4ef6e9b3="" class="flex truncate">@test</small>
+                                  </div>
+                                </label></li>
+                              <li data-v-4ef6e9b3="" class="relative focus-within:shadow-lg"><input data-v-4ef6e9b3="" class="sr-only peer" type="radio" name="availableActors" id="availableActor-2" value="[object Object]"><label data-v-4ef6e9b3="" class="flex items-center gap-2 p-3 bg-white hover:bg-gray-50 dark:bg-violet-3 dark:hover:bg-violet-3/60 border border-gray-300 rounded-lg cursor-pointer peer-checked:ring-primary peer-checked:ring-2 peer-checked:border-transparent" for="availableActor-2"><span data-v-4ef6e9b3="" aria-hidden="true" class="material-design-icon account-circle-icon" role="img"><svg fill="currentColor" class="material-design-icon__svg" width="48" height="48" viewBox="0 0 24 24"><path d="M12,19.2C9.5,19.2 7.29,17.92 6,16C6.03,14 10,12.9 12,12.9C14,12.9 17.97,14 18,16C16.71,17.92 14.5,19.2 12,19.2M12,5A3,3 0 0,1 15,8A3,3 0 0,1 12,11A3,3 0 0,1 9,8A3,3 0 0,1 12,5M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12C22,6.47 17.5,2 12,2Z"><!--v-if--></path></svg></span>
+                                  <div data-v-4ef6e9b3="" class="flex-1 w-px">
+                                    <h3 data-v-4ef6e9b3="" class="line-clamp-2">test</h3><small data-v-4ef6e9b3="" class="flex truncate">@test</small>
+                                  </div>
+                                </label></li>
+                            </transition-group-stub>
+                          </div>
+                        </div>
+                        <div class="pl-2 max-h-[400px] overflow-y-auto">
+                          <div class="">
+                            <p>Your profile will be shown as contact.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+                    <footer class="my-2 text-center sm:text-right"><button data-oruga="button" type="button" role="button" tabindex="0" class="o-button o-button--primary w-full sm:w-auto"><span class="o-button__wrapper"><!----><span class="o-button__label">Pick</span>
+                        <!----></span>
+                      </button></footer>
+                  </div><button type="button" class="o-modal__close" aria-label="Close" data-oruga="close" style="display: none;"><span data-oruga="icon" class="o-icon o-icon--medium"><i class="mdi mdi-close mdi-36px"></i></span></button>
+                </div>
+              </div>
+            </transition-stub>
+            <!--teleport end-->
+          </div>
+          <!---->
+        </div>
+        <p>The event will show as attributed to this profile.</p>
+      </div>
     </section>
     <section class="my-4">
       <h2>Event metadata</h2>
@@ -224,7 +299,10 @@ exports[`EditView > Show simple 1`] = `
         <div data-oruga="radio" class="o-radio"><input id="v-0-28" type="radio" data-oruga-input="radio" class="o-radio__input" name="registerOption" autocomplete="off" aria-checked="false" aria-labelledby="v-0-29" value="external"><label id="v-0-29" for="v-0-28" class="o-radio__label">I want to manage the registration with an external provider</label></div>
       </div>
       <!--v-if-->
-      <!--v-if-->
+      <div data-oruga="field" class="o-field"><label id="v-0-56" class="o-field__label" for="v-0-58">Anonymous participations</label>
+        <div data-oruga="switch" class="o-switch o-switch--position o-switch--rounded"><input aria-labelledby="v-0-56" id="v-0-58" type="checkbox" role="switch" data-oruga-input="switch" class="o-switch__input" true-value="true" false-value="false" autocomplete="off" aria-checked="false"><label id="v-0-56" for="v-0-58" class="o-switch__label">I want to allow people to participate without an account. <small><br> Anonymous participants will be asked to confirm their participation through e-mail.</small></label></div>
+        <!---->
+      </div>
       <div data-oruga="field" class="o-field"><label id="v-0-30" class="o-field__label" for="v-0-32">Participation approval</label>
         <div data-oruga="switch" class="o-switch o-switch--position o-switch--rounded"><input aria-labelledby="v-0-30" id="v-0-32" type="checkbox" role="switch" data-oruga-input="switch" class="o-switch__input" true-value="true" false-value="false" autocomplete="off" aria-checked="false"><label id="v-0-30" for="v-0-32" class="o-switch__label">I want to approve every participation request</label></div>
         <!---->
@@ -337,14 +415,14 @@ exports[`EditView > Show simple 2`] = `
   <h1>Update event new title</h1>
   <form>
     <h2>General information</h2>
-    <div data-oruga="field" class="o-field"><label id="v-0-52" class="o-field__label">Headline picture</label>
+    <div data-oruga="field" class="o-field"><label id="v-0-59" class="o-field__label">Headline picture</label>
       <div><label data-oruga="upload" class="o-upload !flex">
           <div class="o-upload__draggable" role="button" tabindex="0">
             <div class="w-100 text-center p-4 rounded-xl border-dashed border-2 border-gray-600"><span class="mx-auto flex w-fit"><span aria-hidden="true" class="material-design-icon upload-icon" role="img"><svg fill="currentColor" class="material-design-icon__svg" width="24" height="24" viewBox="0 0 24 24"><path d="M9,16V10H5L12,3L19,10H15V16H9M5,20V18H19V20H5Z"><!--v-if--></path></svg></span><span class="capitalize">Click to upload Headline picture</span></span>
               <!--v-if-->
               <!--v-if-->
             </div>
-          </div><input aria-labelledby="v-0-52" type="file" data-oruga-input="file" accept="image/gif,image/png,image/jpeg,image/webp">
+          </div><input aria-labelledby="v-0-59" type="file" data-oruga-input="file" accept="image/gif,image/png,image/jpeg,image/webp">
         </label></div>
       <!--v-if-->
       <!---->
@@ -358,7 +436,15 @@ exports[`EditView > Show simple 2`] = `
       <!---->
     </div>
     <div class="flex flex-wrap gap-4">
-      <!--v-if-->
+      <div data-oruga="field" class="o-field o-field--filled w-full md:max-w-fit"><label id="v-0-52" for="" class="o-field__label">Category</label>
+        <div data-oruga="select" class="o-select o-select--expanded">
+          <!----><select aria-labelledby="v-0-52" id="" data-oruga-input="select" class="o-select__input o-select__input--arrowed" autocomplete="off">
+            <!---->
+          </select>
+          <!---->
+        </div>
+        <!---->
+      </div>
       <div data-oruga="field" class="o-field taginput-field flex-1"><label id="v-0-0-0" for="tag-input-1" class="o-field__label">
           <p class="inline-flex items-center gap-0.5">Add some tags
           <div data-oruga="tooltip" class="o-tooltip">
@@ -456,7 +542,74 @@ exports[`EditView > Show simple 2`] = `
     </div>
     <section class="my-4">
       <h2>Published by</h2>
-      <!--v-if-->
+      <div>
+        <div data-oruga="field" class="o-field">
+          <!---->
+          <div class="bg-white dark:bg-violet-3 border border-gray-300 rounded-lg cursor-pointer">
+            <!-- If we have a current actor (inline) -->
+            <div class="" dir="auto">
+              <div class="flex gap-1 p-4">
+                <div class=""><span aria-hidden="true" class="material-design-icon account-circle-icon" role="img"><svg fill="currentColor" class="material-design-icon__svg" width="48" height="48" viewBox="0 0 24 24"><path d="M12,19.2C9.5,19.2 7.29,17.92 6,16C6.03,14 10,12.9 12,12.9C14,12.9 17.97,14 18,16C16.71,17.92 14.5,19.2 12,19.2M12,5A3,3 0 0,1 15,8A3,3 0 0,1 12,11A3,3 0 0,1 9,8A3,3 0 0,1 12,5M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12C22,6.47 17.5,2 12,2Z"><!--v-if--></path></svg></span></div>
+                <div class="flex-1">
+                  <p class="">test</p>
+                  <p class="">@test</p>
+                </div><button data-oruga="button" type="button" role="button" tabindex="0" class="o-button"><span class="o-button__wrapper"><!----><span class="o-button__label">Change</span>
+                  <!----></span>
+                </button>
+              </div>
+            </div>
+            <!--teleport start-->
+            <transition-stub name="zoom-out" appear="false" persisted="false" css="true">
+              <div has-modal-card="" close-button-aria-label="Close" data-oruga="modal" class="o-modal" tabindex="-1" role="dialog" aria-modal="false" style="display: none;">
+                <div class="o-modal__overlay" tabindex="-1"></div>
+                <div class="o-modal__content" style="max-width: 960px;">
+                  <div class="p-2 rounded">
+                    <header class="">
+                      <h2 class="">Pick a profile or a group</h2>
+                    </header>
+                    <section class="">
+                      <div class="flex flex-wrap gap-2 items-center flex-col lg:flex-row">
+                        <div class="max-h-[400px] overflow-y-auto flex-1 w-full">
+                          <div data-v-4ef6e9b3="" class="max-w-md mx-auto p-5 w-3/4">
+                            <div data-v-4ef6e9b3="" data-oruga="input" class="o-input o-input--expanded">
+                              <!----><input aria-labelledby="v-0-54" dir="auto" class="o-input__input o-input__input--placeholder" id="v-0-2-0" type="text" data-oruga-input="text" autocomplete="off" placeholder="Filter by profile or group name">
+                              <!---->
+                              <!---->
+                            </div>
+                            <transition-group-stub data-v-4ef6e9b3="" tag="ul" enteractiveclass="duration-300 ease-out" enterfromclass="transform opacity-0" entertoclass="opacity-100" leaveactiveclass="duration-200 ease-in" leavefromclass="opacity-100" leavetoclass="transform opacity-0" appear="false" persisted="false" css="true" class="grid grid-cols-1 gap-y-3 m-5 max-w-md mx-auto">
+                              <li data-v-4ef6e9b3="" class="relative focus-within:shadow-lg"><input data-v-4ef6e9b3="" class="sr-only peer" type="radio" name="availableActors" id="availableActor-123" value="[object Object]"><label data-v-4ef6e9b3="" class="flex items-center gap-2 p-3 bg-white hover:bg-gray-50 dark:bg-violet-3 dark:hover:bg-violet-3/60 border border-gray-300 rounded-lg cursor-pointer peer-checked:ring-primary peer-checked:ring-2 peer-checked:border-transparent" for="availableActor-123"><span data-v-4ef6e9b3="" aria-hidden="true" class="material-design-icon account-circle-icon" role="img"><svg fill="currentColor" class="material-design-icon__svg" width="48" height="48" viewBox="0 0 24 24"><path d="M12,19.2C9.5,19.2 7.29,17.92 6,16C6.03,14 10,12.9 12,12.9C14,12.9 17.97,14 18,16C16.71,17.92 14.5,19.2 12,19.2M12,5A3,3 0 0,1 15,8A3,3 0 0,1 12,11A3,3 0 0,1 9,8A3,3 0 0,1 12,5M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12C22,6.47 17.5,2 12,2Z"><!--v-if--></path></svg></span>
+                                  <div data-v-4ef6e9b3="" class="flex-1 w-px">
+                                    <h3 data-v-4ef6e9b3="" class="line-clamp-2">test</h3><small data-v-4ef6e9b3="" class="flex truncate">@test</small>
+                                  </div>
+                                </label></li>
+                              <li data-v-4ef6e9b3="" class="relative focus-within:shadow-lg"><input data-v-4ef6e9b3="" class="sr-only peer" type="radio" name="availableActors" id="availableActor-2" value="[object Object]"><label data-v-4ef6e9b3="" class="flex items-center gap-2 p-3 bg-white hover:bg-gray-50 dark:bg-violet-3 dark:hover:bg-violet-3/60 border border-gray-300 rounded-lg cursor-pointer peer-checked:ring-primary peer-checked:ring-2 peer-checked:border-transparent" for="availableActor-2"><span data-v-4ef6e9b3="" aria-hidden="true" class="material-design-icon account-circle-icon" role="img"><svg fill="currentColor" class="material-design-icon__svg" width="48" height="48" viewBox="0 0 24 24"><path d="M12,19.2C9.5,19.2 7.29,17.92 6,16C6.03,14 10,12.9 12,12.9C14,12.9 17.97,14 18,16C16.71,17.92 14.5,19.2 12,19.2M12,5A3,3 0 0,1 15,8A3,3 0 0,1 12,11A3,3 0 0,1 9,8A3,3 0 0,1 12,5M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12C22,6.47 17.5,2 12,2Z"><!--v-if--></path></svg></span>
+                                  <div data-v-4ef6e9b3="" class="flex-1 w-px">
+                                    <h3 data-v-4ef6e9b3="" class="line-clamp-2">test</h3><small data-v-4ef6e9b3="" class="flex truncate">@test</small>
+                                  </div>
+                                </label></li>
+                            </transition-group-stub>
+                          </div>
+                        </div>
+                        <div class="pl-2 max-h-[400px] overflow-y-auto">
+                          <div class="">
+                            <p>Your profile will be shown as contact.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+                    <footer class="my-2 text-center sm:text-right"><button data-oruga="button" type="button" role="button" tabindex="0" class="o-button o-button--primary w-full sm:w-auto"><span class="o-button__wrapper"><!----><span class="o-button__label">Pick</span>
+                        <!----></span>
+                      </button></footer>
+                  </div><button type="button" class="o-modal__close" aria-label="Close" data-oruga="close" style="display: none;"><span data-oruga="icon" class="o-icon o-icon--medium"><i class="mdi mdi-close mdi-36px"></i></span></button>
+                </div>
+              </div>
+            </transition-stub>
+            <!--teleport end-->
+          </div>
+          <!---->
+        </div>
+        <p>The event will show as attributed to this profile.</p>
+      </div>
     </section>
     <section class="my-4">
       <h2>Event metadata</h2>
@@ -556,7 +709,10 @@ exports[`EditView > Show simple 2`] = `
         <div data-oruga="radio" class="o-radio"><input id="v-0-28" type="radio" data-oruga-input="radio" class="o-radio__input" name="registerOption" autocomplete="off" aria-checked="false" aria-labelledby="v-0-29" value="external"><label id="v-0-29" for="v-0-28" class="o-radio__label">I want to manage the registration with an external provider</label></div>
       </div>
       <!--v-if-->
-      <!--v-if-->
+      <div data-oruga="field" class="o-field"><label id="v-0-56" class="o-field__label" for="v-0-58">Anonymous participations</label>
+        <div data-oruga="switch" class="o-switch o-switch--position o-switch--rounded"><input aria-labelledby="v-0-56" id="v-0-58" type="checkbox" role="switch" data-oruga-input="switch" class="o-switch__input" true-value="true" false-value="false" autocomplete="off" aria-checked="false"><label id="v-0-56" for="v-0-58" class="o-switch__label">I want to allow people to participate without an account. <small><br> Anonymous participants will be asked to confirm their participation through e-mail.</small></label></div>
+        <!---->
+      </div>
       <div data-oruga="field" class="o-field"><label id="v-0-30" class="o-field__label" for="v-0-32">Participation approval</label>
         <div data-oruga="switch" class="o-switch o-switch--position o-switch--rounded"><input aria-labelledby="v-0-30" id="v-0-32" type="checkbox" role="switch" data-oruga-input="switch" class="o-switch__input" true-value="true" false-value="false" autocomplete="off" aria-checked="false"><label id="v-0-30" for="v-0-32" class="o-switch__label">I want to approve every participation request</label></div>
         <!---->
