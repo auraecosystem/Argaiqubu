@@ -159,29 +159,23 @@ defmodule Mobilizon.GraphQL.Resolvers.Event do
         %{page: page, limit: limit, roles: roles},
         %{context: %{current_actor: %Actor{} = actor}} = _resolution
       ) do
-    # Check that moderator has right
-    if can_event_be_access_by?(event, actor) do
-      roles =
-        case roles do
-          nil ->
-            []
+    roles =
+      case roles do
+        nil ->
+          []
 
-          "" ->
-            []
+        "" ->
+          []
 
-          roles ->
-            roles
-            |> String.split(",")
-            |> Enum.map(&String.downcase/1)
-            |> Enum.map(&String.to_existing_atom/1)
-        end
+        roles ->
+          roles
+          |> String.split(",")
+          |> Enum.map(&String.downcase/1)
+          |> Enum.map(&String.to_existing_atom/1)
+      end
 
-      participants = Events.list_participants_for_event(event_id, roles, page, limit)
-      {:ok, participants}
-    else
-      {:error,
-       dgettext("errors", "Provided profile doesn't have moderator permissions on this event")}
-    end
+    participants = Events.list_participants_for_event(event_id, roles, page, limit)
+    {:ok, participants}
   end
 
   def list_participants_for_event(_, _args, _resolution) do

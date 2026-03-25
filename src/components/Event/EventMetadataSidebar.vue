@@ -55,25 +55,48 @@
           },
         }"
       >
-        <actor-card
+        <CompactActorCard
           v-if="
             !event.attributedTo || !event.options.hideOrganizerWhenGroupEvent
           "
           :actor="event.attributedTo"
-          :inline="true"
+          :current-actor="currentActor"
         />
       </router-link>
-      <actor-card
+      <router-link
         v-else-if="event.organizerActor"
-        :actor="event.organizerActor"
-        :inline="true"
-      />
-      <actor-card
-        :inline="true"
-        :actor="contact"
+        class="hover:underline"
+        :to="profileRouteTo(event.organizerActor)"
+      >
+        <CompactActorCard
+          :actor="event.organizerActor"
+          :current-actor="currentActor"
+        />
+      </router-link>
+      <!-- fixme: there's a bug where event.contacts is empty after first participant joins event -->
+      <router-link
+        v-if="
+          event.attributedTo &&
+          event.organizerActor &&
+          event.contacts.length == 0
+        "
+        class="hover:underline"
+        :to="profileRouteTo(event.organizerActor)"
+      >
+        <CompactActorCard
+          :actor="event.organizerActor"
+          :current-actor="currentActor"
+        />
+      </router-link>
+      <router-link
+        v-else
         v-for="contact in event.contacts"
         :key="contact.id"
-      />
+        class="hover:underline"
+        :to="profileRouteTo(contact)"
+      >
+        <CompactActorCard :actor="contact" :current-actor="currentActor" />
+      </router-link>
     </event-metadata-block>
     <event-metadata-block
       v-if="event.onlineAddress && urlToHostname(event.onlineAddress)"
@@ -154,6 +177,30 @@
       >
       <span v-else>{{ extra.value }}</span>
     </event-metadata-block>
+    <event-metadata-block
+      :title="t('Participants')"
+      v-if="
+        event.options.hideNumberOfParticipants === false &&
+        event.participants?.elements?.length
+      "
+    >
+      <ul>
+        <li
+          v-for="participant in event.participants?.elements"
+          :key="participant.id"
+        >
+          <router-link
+            class="hover:underline"
+            :to="profileRouteTo(participant.actor)"
+          >
+            <CompactActorCard
+              :actor="participant.actor"
+              :current-actor="currentActor"
+            />
+          </router-link>
+        </li>
+      </ul>
+    </event-metadata-block>
   </div>
 </template>
 <script lang="ts" setup>
@@ -165,7 +212,7 @@ import RouteName from "../../router/name";
 import { usernameWithDomain } from "../../types/actor";
 import EventMetadataBlock from "./EventMetadataBlock.vue";
 import EventFullDate from "./EventFullDate.vue";
-import ActorCard from "../../components/Account/ActorCard.vue";
+import CompactActorCard from "../../components/Account/CompactActorCard.vue";
 import AddressInfo from "../../components/Address/AddressInfo.vue";
 import { IEventMetadataDescription } from "@/types/event-metadata";
 import { eventMetaDataList } from "../../services/EventMetadata";
@@ -174,6 +221,10 @@ import { useI18n } from "vue-i18n";
 import Earth from "vue-material-design-icons/Earth.vue";
 import Calendar from "vue-material-design-icons/Calendar.vue";
 import Link from "vue-material-design-icons/Link.vue";
+import { ICurrentUserRole } from "@/types/enums";
+import { useCurrentActorClient } from "@/composition/apollo/actor";
+import { useCurrentUserClient } from "@/composition/apollo/user";
+import { IActor } from "@/types/actor";
 
 const props = withDefaults(
   defineProps<{
@@ -185,6 +236,18 @@ const props = withDefaults(
 );
 
 const { t } = useI18n({ useScope: "global" });
+
+const { currentActor } = useCurrentActorClient();
+const { currentUser } = useCurrentUserClient();
+
+const profileRouteTo = (actor: IActor) => {
+  if (currentUser.value?.role == ICurrentUserRole.ADMINISTRATOR)
+    return { name: RouteName.ADMIN_PROFILE, params: { id: actor.id } };
+  return {
+    name: RouteName.PROFILE,
+    params: { username: actor.preferredUsername },
+  };
+};
 
 const physicalAddress = computed((): Address | null => {
   if (!props.event.physicalAddress) return null;

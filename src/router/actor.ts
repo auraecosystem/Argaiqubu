@@ -36,4 +36,14 @@ export const actorRoutes: RouteRecordRaw[] = [
       announcer: { message: (): string => t("My groups") as string },
     },
   },
+  {
+    path: "/profiles/@:username",
+    name: ActorRouteName.PROFILE,
+    component: (): Promise<any> => import("@/views/User/ProfileView.vue"),
+    props: true,
+    meta: {
+      requiredAuth: true,
+      announcer: { message: (): string => t("A user profile") as string },
+    },
+  },
 ];
