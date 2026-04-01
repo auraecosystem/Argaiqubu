@@ -90,7 +90,11 @@ beforeEach(async () => {
   // await router.isReady();
 });
 
-const generateWrapper = () => {
+const generateWrapper = (
+  eventId: string | null,
+  isUpdate: boolean,
+  isDuplicate: boolean
+) => {
   const global_data = getMockClient([
     [FETCH_EVENT, eventParticipantMock],
     EDIT_EVENT,
@@ -104,9 +108,9 @@ const generateWrapper = () => {
   global_data.plugins = [router];
   return mount(EditView, {
     props: {
-      eventId: "67e9b659-84d9-4414-99f3-a1baaa88cf2d",
-      isUpdate: true,
-      isDuplicate: false,
+      eventId: eventId,
+      isUpdate: isUpdate,
+      isDuplicate: isDuplicate,
     },
     global: {
       ...global_data,
@@ -118,8 +122,12 @@ const generateWrapper = () => {
 };
 
 describe("EditView", () => {
-  it("Show simple", async () => {
-    const wrapper = generateWrapper();
+  it("Update old event", async () => {
+    const wrapper = generateWrapper(
+      "67e9b659-84d9-4414-99f3-a1baaa88cf2d",
+      true,
+      false
+    );
     await wrapper.vm.$nextTick();
     await flushPromises();
     expect(htmlRemoveId(wrapper.html())).toMatchSnapshot();
@@ -133,10 +141,47 @@ describe("EditView", () => {
     expect(requestHandlers.handle_0).toHaveBeenCalledWith({
       uuid: "67e9b659-84d9-4414-99f3-a1baaa88cf2d",
     });
+    expect(requestHandlers.handle_6).toHaveBeenCalledWith({});
     const edit = wrapper.find("input.o-input__input");
     edit.setValue("new title");
     const btn = wrapper.find("button.o-button--primary.o-button--expanded");
     expect(btn.text()).toBe("Update my event");
+    await btn.trigger("click");
+    await wrapper.vm.$nextTick();
+    await flushPromises();
+
+    expect(htmlRemoveId(wrapper.html())).toMatchSnapshot();
+
+    expect(requestHandlers.handle_0).toHaveBeenCalledTimes(1);
+    expect(requestHandlers.handle_1).toHaveBeenCalledTimes(0);
+    expect(requestHandlers.handle_2).toHaveBeenCalledTimes(0);
+    expect(requestHandlers.handle_3).toHaveBeenCalledTimes(0);
+    expect(requestHandlers.handle_4).toHaveBeenCalledTimes(0);
+    expect(requestHandlers.handle_5).toHaveBeenCalledTimes(0);
+    expect(requestHandlers.handle_6).toHaveBeenCalledTimes(1);
+  });
+
+  it("Create event - draft", async () => {
+    const wrapper = generateWrapper(null, false, false);
+    await wrapper.vm.$nextTick();
+    await flushPromises();
+    expect(htmlRemoveId(wrapper.html())).toMatchSnapshot();
+    expect(requestHandlers.handle_0).toHaveBeenCalledTimes(1);
+    expect(requestHandlers.handle_1).toHaveBeenCalledTimes(0);
+    expect(requestHandlers.handle_2).toHaveBeenCalledTimes(0);
+    expect(requestHandlers.handle_3).toHaveBeenCalledTimes(0);
+    expect(requestHandlers.handle_4).toHaveBeenCalledTimes(0);
+    expect(requestHandlers.handle_5).toHaveBeenCalledTimes(0);
+    expect(requestHandlers.handle_6).toHaveBeenCalledTimes(1);
+    expect(requestHandlers.handle_0).toHaveBeenCalledWith({
+      uuid: null,
+    });
+    expect(requestHandlers.handle_6).toHaveBeenCalledWith({});
+
+    const edit = wrapper.find("input.o-input__input");
+    edit.setValue("new title");
+    const btn = wrapper.find("button.o-button--primary.o-button--expanded");
+    expect(btn.text()).toBe("Create my event");
     await btn.trigger("click");
     await wrapper.vm.$nextTick();
     await flushPromises();
