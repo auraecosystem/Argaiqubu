@@ -89,8 +89,19 @@ beforeEach(async () => {
 });
 
 const generateWrapper = () => {
+  const discussion_mock = {
+    data: {
+      discussion: {
+        __typename: "Discussion",
+        comments: {
+          total: 0,
+          elements: [],
+        },
+      },
+    },
+  };
   const global_data = getMockClient([
-    GET_DISCUSSION,
+    [GET_DISCUSSION, discussion_mock],
     REPLY_TO_DISCUSSION,
     UPDATE_DISCUSSION,
     DELETE_DISCUSSION,

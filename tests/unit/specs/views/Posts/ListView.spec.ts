@@ -82,7 +82,22 @@ beforeEach(async () => {
 });
 
 const generateWrapper = () => {
-  const global_data = getMockClient([PERSON_MEMBERSHIPS, FETCH_GROUP_POSTS]);
+  const group_post_mock = {
+    data: {
+      group: {
+        id: 123456,
+        preferredUsername: "username",
+        posts: {
+          total: 0,
+          elements: [],
+        },
+      },
+    },
+  };
+  const global_data = getMockClient([
+    PERSON_MEMBERSHIPS,
+    [FETCH_GROUP_POSTS, group_post_mock],
+  ]);
   global_data.provide.dateFnsLocale = enUS;
   global_data.plugins = [router];
   return mount(ListView, {

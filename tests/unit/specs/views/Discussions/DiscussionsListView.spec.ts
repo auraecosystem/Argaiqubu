@@ -11,9 +11,23 @@ import DiscussionsListView from "@/views/Discussions/DiscussionsListView.vue";
 import { GROUP_DISCUSSIONS_LIST } from "@/graphql/discussion";
 import { MemberRole } from "@/types/enums";
 import { computed } from "vue";
+import { PERSON_STATUS_GROUP } from "@/graphql/actor";
 
 vi.mock("@/composition/apollo/actor", () => {
   return {
+    useCurrentUserClient: () => {
+      const error = null;
+      const loading = null;
+      const currentUser = computed(() => {
+        return {
+          id: 123,
+          email: "test@mobilizon.test",
+          isLoggedIn: true,
+          role: MemberRole.ADMINISTRATOR,
+        };
+      });
+      return { currentUser, error, loading };
+    },
     useCurrentActorClient: () => {
       const error = null;
       const loading = null;
@@ -81,7 +95,10 @@ beforeEach(async () => {
 });
 
 const generateWrapper = () => {
-  const global_data = getMockClient([GROUP_DISCUSSIONS_LIST]);
+  const global_data = getMockClient([
+    GROUP_DISCUSSIONS_LIST,
+    PERSON_STATUS_GROUP,
+  ]);
   global_data.provide.dateFnsLocale = enUS;
   global_data.plugins = [router];
   return mount(DiscussionsListView, {
@@ -104,5 +121,6 @@ describe("DiscussionsListView", () => {
     await flushPromises();
     expect(htmlRemoveId(wrapper.html())).toMatchSnapshot();
     expect(requestHandlers.handle_0).toHaveBeenCalledTimes(0);
+    expect(requestHandlers.handle_1).toHaveBeenCalledTimes(0);
   });
 });

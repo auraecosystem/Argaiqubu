@@ -30,11 +30,25 @@ beforeEach(async () => {
 });
 
 const generateWrapper = () => {
+  const resource_mock = {
+    data: {
+      resource: {
+        __typename: "Resource",
+        id: 123456,
+        title: "azerty",
+        summary: "AZ ER TY",
+        children: {
+          total: 0,
+          elements: [],
+        },
+      },
+    },
+  };
   const global_data = getMockClient([
     CREATE_RESOURCE,
     DELETE_RESOURCE,
     PREVIEW_RESOURCE_LINK,
-    GET_RESOURCE,
+    [GET_RESOURCE, resource_mock],
     UPDATE_RESOURCE,
   ]);
   global_data.provide.dateFnsLocale = enUS;
@@ -62,7 +76,7 @@ describe("ResourceFolder", () => {
     expect(requestHandlers.handle_0).toHaveBeenCalledTimes(0);
     expect(requestHandlers.handle_1).toHaveBeenCalledTimes(0);
     expect(requestHandlers.handle_2).toHaveBeenCalledTimes(0);
-    expect(requestHandlers.handle_3).toHaveBeenCalledTimes(1);
+    expect(requestHandlers.handle_3).toHaveBeenCalledTimes(2);
     expect(requestHandlers.handle_4).toHaveBeenCalledTimes(0);
     expect(requestHandlers.handle_3).toHaveBeenCalledWith({
       limit: 10,

@@ -28,9 +28,23 @@ beforeEach(async () => {
 });
 
 const generateWrapper = () => {
+  const report_mock = {
+    data: {
+      report: {
+        __typename: "Report",
+        id: 132456,
+        insertedAt: null,
+        updatedAt: null,
+        comments: {
+          total: 0,
+          elements: [],
+        },
+      },
+    },
+  };
   const global_data = getMockClient([
     CREATE_REPORT_NOTE,
-    REPORT,
+    [REPORT, report_mock],
     UPDATE_REPORT,
     DELETE_EVENT,
     DELETE_COMMENT,

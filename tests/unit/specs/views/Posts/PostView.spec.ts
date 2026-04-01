@@ -25,10 +25,23 @@ beforeEach(async () => {
 });
 
 const generateWrapper = () => {
+  const post_mock = {
+    data: {
+      post: {
+        __typename: "Post",
+        id: 123456,
+        title: "azerty",
+        slug: "wxcv",
+        attributedTo: {
+          preferredUsername: "testname",
+        },
+      },
+    },
+  };
   const global_data = getMockClient([
     PERSON_MEMBERSHIPS,
     DELETE_POST,
-    FETCH_POST,
+    [FETCH_POST, post_mock],
   ]);
   global_data.provide.dateFnsLocale = enUS;
   global_data.plugins = [router];

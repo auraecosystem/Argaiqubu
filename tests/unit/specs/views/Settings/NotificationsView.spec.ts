@@ -35,9 +35,25 @@ beforeEach(async () => {
 });
 
 const generateWrapper = () => {
+  const user_notif_mock = {
+    data: {
+      loggedUser: {
+        id: 456789,
+        locale: "en",
+        feedTokens: [
+          {
+            token: "wxcvbqsdfghjkl",
+            actor: {
+              id: 123456,
+            },
+          },
+        ],
+      },
+    },
+  };
   const global_data = getMockClient([
     SET_USER_SETTINGS,
-    USER_NOTIFICATIONS,
+    [USER_NOTIFICATIONS, user_notif_mock],
     UPDATE_ACTIVITY_SETTING,
     USER_FRAGMENT_FEED_TOKENS,
     CREATE_FEED_TOKEN,

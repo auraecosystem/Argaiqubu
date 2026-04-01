@@ -87,9 +87,27 @@ beforeEach(async () => {
 });
 
 const generateWrapper = () => {
+  const conversation_mock = {
+    data: {
+      conversation: {
+        __typename: "Conversation",
+        id: 123456,
+        conversationParticipantId: 987654,
+        participants: [],
+        actor: {
+          __typename: "Person",
+          preferredUsername: "username",
+        },
+        comments: {
+          total: 0,
+          elements: [],
+        },
+      },
+    },
+  };
   const global_data = getMockClient([
     CONVERSATION_COMMENT_CHANGED,
-    GET_CONVERSATION,
+    [GET_CONVERSATION, conversation_mock],
     MARK_CONVERSATION_AS_READ,
     REPLY_TO_PRIVATE_MESSAGE_MUTATION,
     DELETE_COMMENT,

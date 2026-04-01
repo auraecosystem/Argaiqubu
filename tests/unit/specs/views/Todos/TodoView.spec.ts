@@ -24,7 +24,21 @@ beforeEach(async () => {
 });
 
 const generateWrapper = () => {
-  const global_data = getMockClient([GET_TODO]);
+  const todo_mock = {
+    data: {
+      todo: {
+        id: "azerty",
+        title: "AZ ER TY",
+        status: true,
+        dueDate: null,
+        todoList: {
+          id: "azerty",
+          title: "AZ ER TY",
+        },
+      },
+    },
+  };
+  const global_data = getMockClient([[GET_TODO, todo_mock]]);
   global_data.provide.dateFnsLocale = enUS;
   global_data.plugins = [router];
   return mount(TodoView, {

@@ -7,9 +7,8 @@ import { Oruga } from "@oruga-ui/oruga-next";
 import flushPromises from "flush-promises";
 import { getMockClient, requestHandlers } from "../../mocks/client";
 import { htmlRemoveId } from "../../common";
-import TodoLists from "@/views/Todos/TodoLists.vue";
-import { CREATE_TODO_LIST } from "@/graphql/todos";
-import { FETCH_GROUP_PUBLIC } from "@/graphql/group";
+import AuthorizeView from "@/views/OAuth/AuthorizeView.vue";
+import { AUTH_APPLICATION } from "@/graphql/application";
 
 config.global.plugins.push(Oruga);
 
@@ -25,29 +24,11 @@ beforeEach(async () => {
 });
 
 const generateWrapper = () => {
-  const group_mock = {
-    data: {
-      group: {
-        __typename: "Group",
-        preferredUsername: "testname",
-        id: 123456,
-        todoLists: {
-          total: 0,
-          elements: [],
-        },
-      },
-    },
-  };
-  const global_data = getMockClient([
-    [FETCH_GROUP_PUBLIC, group_mock],
-    CREATE_TODO_LIST,
-  ]);
+  const global_data = getMockClient([AUTH_APPLICATION]);
   global_data.provide.dateFnsLocale = enUS;
   global_data.plugins = [router];
-  return mount(TodoLists, {
-    props: {
-      preferredUsername: "testname",
-    },
+  return mount(AuthorizeView, {
+    props: {},
     global: {
       ...global_data,
       stubs: {
@@ -57,16 +38,12 @@ const generateWrapper = () => {
   });
 };
 
-describe("TodoLists", () => {
+describe("AuthorizeView", () => {
   it("Show simple", async () => {
     const wrapper = generateWrapper();
     await wrapper.vm.$nextTick();
     await flushPromises();
     expect(htmlRemoveId(wrapper.html())).toMatchSnapshot();
-    expect(requestHandlers.handle_0).toHaveBeenCalledTimes(1);
-    expect(requestHandlers.handle_1).toHaveBeenCalledTimes(0);
-    expect(requestHandlers.handle_0).toHaveBeenCalledWith({
-      name: "testname",
-    });
+    expect(requestHandlers.handle_0).toHaveBeenCalledTimes(0);
   });
 });
