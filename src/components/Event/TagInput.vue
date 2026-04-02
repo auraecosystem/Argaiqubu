@@ -33,7 +33,7 @@
 </template>
 <script lang="ts" setup>
 import differenceBy from "lodash/differenceBy";
-import { ITag } from "../../types/tag.model";
+import { ITag } from "@/types/tag.model";
 import { computed, onBeforeMount, ref, watch } from "vue";
 import HelpCircleOutline from "vue-material-design-icons/HelpCircleOutline.vue";
 import { useFetchTags } from "@/composition/apollo/tags";

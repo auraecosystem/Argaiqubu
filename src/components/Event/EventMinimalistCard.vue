@@ -142,7 +142,7 @@ import { IEvent, organizer, organizerDisplayName } from "@/types/event.model";
 import DateCalendarIcon from "@/components/Event/DateCalendarIcon.vue";
 import MenuDown from "vue-material-design-icons/MenuDown.vue";
 import { EventStatus, ParticipantRole } from "@/types/enums";
-import RouteName from "../../router/name";
+import RouteName from "@/router/name";
 import LazyImageWrapper from "@/components/Image/LazyImageWrapper.vue";
 import InlineAddress from "@/components/Address/InlineAddress.vue";
 import Video from "vue-material-design-icons/Video.vue";
