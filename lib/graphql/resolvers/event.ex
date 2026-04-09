@@ -367,12 +367,16 @@ defmodule Mobilizon.GraphQL.Resolvers.Event do
   def update_event(
         _parent,
         %{event_id: event_id} = args,
-        %{context: %{current_user: %User{} = user, current_actor: %Actor{} = actor}} = _resolution
+        %{context: %{current_user: %User{} = user}} = _resolution
       ) do
     # See https://github.com/absinthe-graphql/absinthe/issues/490
     args = Map.put(args, :options, args[:options] || %{})
 
+    # Use the first user actor if organizer_actor_id is not given
+    actor_id = args[:organizer_actor_id] || user.actors |> Enum.at(0) |> Map.get(:id)
+
     with {:ok, %Event{} = event} <- Events.get_event_with_preload(event_id),
+         {:is_owned, %Actor{} = actor} <- User.owns_actor(user, actor_id),
          {:ok, args} <- verify_profile_change(args, event, user, actor),
          args <- extract_timezone(args, user.id),
          {:event_can_be_managed, true} <-
@@ -382,6 +386,9 @@ defmodule Mobilizon.GraphQL.Resolvers.Event do
            API.Events.update_event(args, event) do
       {:ok, event}
     else
+      {:is_owned, nil} ->
+        {:error, dgettext("errors", "You don't own the profile given to update this event.")}
+
       {:event_can_be_managed, false} ->
         {:error,
          dgettext(
@@ -410,7 +417,9 @@ defmodule Mobilizon.GraphQL.Resolvers.Event do
     end
   end
 
-  def update_event(_parent, _args, _resolution) do
+  def update_event(_parent, args, _resolution) do
+    # REMOVEME
+    Logger.warning(args)
     {:error, dgettext("errors", "You need to be logged-in to update an event")}
   end
 
