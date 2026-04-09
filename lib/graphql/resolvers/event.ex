@@ -417,9 +417,7 @@ defmodule Mobilizon.GraphQL.Resolvers.Event do
     end
   end
 
-  def update_event(_parent, args, _resolution) do
-    # REMOVEME
-    Logger.warning(args)
+  def update_event(_parent, _args, _resolution) do
     {:error, dgettext("errors", "You need to be logged-in to update an event")}
   end
 
