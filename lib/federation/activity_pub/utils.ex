@@ -539,8 +539,8 @@ defmodule Mobilizon.Federation.ActivityPub.Utils do
       "type" => "Announce",
       "actor" => actor.url,
       "object" => object,
-      "to" => to,
-      "cc" => cc
+      "to" => Map.get(object, "to", to),
+      "cc" => Map.get(object, "cc", cc)
     }
 
     data =
