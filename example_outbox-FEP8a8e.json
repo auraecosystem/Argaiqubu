@@ -16,25 +16,48 @@
     "actor": "https://mobilizon.test/@mobilizon",
     "timezone": "Europe/Paris",
     "startTime": "2026-01-12T12:00:00+02:00",
-    "endTime": null,
+    "endTime": "2026-01-29T23:59:59+02:00",
     "published": "2026-01-12T11:16:47Z",
     "updated": "2026-01-12T11:23:16Z",
-    "location": {
-      "address": {
-        "addressCountry": "France",
-        "addressLocality": "Lyon",
-        "addressRegion": "Auvergne-Rh\u00f4ne-Alpes",
-        "postalCode": "69002",
-        "streetAddress": "Place Bellecour",
-        "type": "PostalAddress"
+    "location": [
+      {
+        "address": {
+          "addressCountry": "France",
+          "addressLocality": "Lyon",
+          "addressRegion": "Auvergne-Rh\u00f4ne-Alpes",
+          "postalCode": "69002",
+          "streetAddress": "Place Bellecour",
+          "type": "PostalAddress"
+        },
+        "id": "https://mobilizon.test/address/a17f316e-5cfd-4308-bffc-3125c88e8301",
+        "latitude": 45.7575158,
+        "longitude": 4.8319952,
+        "name": "Place Bellecour",
+        "type": "Place"
       },
-      "id": "https://mobilizon.test/address/a17f316e-5cfd-4308-bffc-3125c88e8301",
-      "latitude": 45.7575158,
-      "longitude": 4.8319952,
-      "name": "Place Bellecour",
-      "type": "Place"
-    },
+      {
+        "name": "Website",
+        "type": "VirtualLocation",
+        "url": "https://mobilizon.org"
+      }
+    ],
     "category": "SCIENCE_TECH",
+    "organizers": {
+      "items": [
+        {
+          "id": "https://mobilizon.test/@mobilizon",
+          "name": "Test",
+          "type": "Organization"
+        },
+        {
+          "id": "https://mobilizon.test/@mobilizon",
+          "name": "Mobilizon",
+          "type": "Person"
+        }
+      ],
+      "totalItems": 2,
+      "type": "OrganizersCollection"
+    },
     "tag": [
       {
         "href": "https://mobilizon.test/tags/test",
@@ -52,7 +75,7 @@
     ],
     "ical:status": "CONFIRMED",
     "status": "CONFIRMED",
-
+    "eventStatus": "EventScheduled",
     "joinMode": "free",
     "externalParticipationUrl": null,
 
