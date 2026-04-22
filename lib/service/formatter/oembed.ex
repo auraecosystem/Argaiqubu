@@ -6,7 +6,7 @@ defmodule Mobilizon.Service.Formatter.OEmbed do
   require FastSanitize.Sanitizer.Meta
   alias FastSanitize.Sanitizer.Meta
 
-  @valid_schemes ~w(https http)
+  @valid_schemes ~w(https http mailto tel)
 
   Meta.strip_comments()
 
