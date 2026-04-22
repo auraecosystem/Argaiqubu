@@ -1,0 +1,75 @@
+{
+  "actor": "https://mobilizon.test/@mobilizon",
+  "attributedTo": "https://mobilizon.test/@mobilizon",
+  "cc": ["https://mobilizon.test/@mobilizon/followers"],
+  "id": "https://mobilizon.test/events/3a57eb5b-2b64-4448-8edc-968b241ef063/activity",
+  "object": {
+    "id": "https://mobilizon.test/events/3a57eb5b-2b64-4448-8edc-968b241ef063",
+    "url": "https://mobilizon.test/events/3a57eb5b-2b64-4448-8edc-968b241ef063",
+    "uuid": "3a57eb5b-2b64-4448-8edc-968b241ef063",
+    "type": "Event",
+    "name": "Complete Event",
+    "summary": "January 12, 2026, 2:15:00\u202fPM UTC - GMT - Place Bellecour, 69002, Lyon, France",
+    "cc": ["https://mobilizon.test/@mobilizon/followers"],
+    "to": ["https://www.w3.org/ns/activitystreams#Public"],
+    "attributedTo": "https://mobilizon.test/@mobilizon",
+    "actor": "https://mobilizon.test/@mobilizon",
+    "timezone": "Europe/Paris",
+    "startTime": "2026-01-12T12:00:00+02:00",
+    "endTime": null,
+    "published": "2026-01-12T11:16:47Z",
+    "updated": "2026-01-12T11:23:16Z",
+    "location": {
+      "address": {
+        "addressCountry": "France",
+        "addressLocality": "Lyon",
+        "addressRegion": "Auvergne-Rh\u00f4ne-Alpes",
+        "postalCode": "69002",
+        "streetAddress": "Place Bellecour",
+        "type": "PostalAddress"
+      },
+      "id": "https://mobilizon.test/address/a17f316e-5cfd-4308-bffc-3125c88e8301",
+      "latitude": 45.7575158,
+      "longitude": 4.8319952,
+      "name": "Place Bellecour",
+      "type": "Place"
+    },
+    "category": "SCIENCE_TECH",
+    "tag": [
+      {
+        "href": "https://mobilizon.test/tags/test",
+        "name": "#test",
+        "type": "Hashtag"
+      }
+    ],
+    "attachment": [
+      {
+        "href": "https://mobilizon.org",
+        "mediaType": "text/html",
+        "name": "Website",
+        "type": "Link"
+      }
+    ],
+    "ical:status": "CONFIRMED",
+    "status": "CONFIRMED",
+
+    "joinMode": "free",
+    "externalParticipationUrl": null,
+
+    "contacts": ["https://mobilizon.test/@mobilizon"],
+    "draft": false,
+    "isOnline": false,
+    "inLanguage": "en",
+    "repliesModerationOption": "allow_all",
+    "content": "<p>Test of an event</p>",
+    "remainingAttendeeCapacity": null,
+    "anonymousParticipationEnabled": false,
+    "participantCount": 0,
+    "maximumAttendeeCapacity": 0,
+    "commentsEnabled": true,
+    "mediaType": "text/html"
+  },
+  "published": "2026-01-12T14:36:56Z",
+  "to": "https://www.w3.org/ns/activitystreams#Public",
+  "type": "Create"
+}
