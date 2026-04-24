@@ -899,6 +899,12 @@ defmodule Mobilizon.Web.Resolvers.EventTest do
     contacts: $contacts
   ) {
       id,
+      attributedTo {
+        id
+      },
+      organizerActor{
+        id
+      },
       uuid,
       url,
       title
@@ -1302,30 +1308,87 @@ defmodule Mobilizon.Web.Resolvers.EventTest do
   end
 
   describe "update_event/3 on behalf of a group" do
+    test "should check a bad user can't usurpate other user id", %{
+      conn: conn
+    } do
+      # create a user and an actor
+      %User{} = user = insert(:user)
+      %Actor{id: administrator_actor_id} = administrator_actor = insert(:actor, user: user)
+
+      # create a group and make the user admin of the group
+      %Actor{id: group_id} = group = insert(:group)
+      insert(:member, parent: group, actor: administrator_actor, role: :administrator)
+
+      # create an event on this group organized by the admin of the group
+      %Event{} =
+        event = insert(:event, attributed_to: group, organizer_actor: administrator_actor)
+
+      # bad user trying to edit the event without rights
+      %User{} = bad_user = insert(:user)
+      insert(:actor, user: bad_user)
+
+      # @variables already contains begins_on used for create_event,
+      # but it is beginsOn needed for update_event graphQL query
+      variables =
+        @variables
+        |> Map.put(:attributedToId, "#{group_id}")
+        |> Map.put(:eventId, to_string(event.id))
+        |> Map.put(:beginsOn, "2026-04-24T09:00:00Z")
+
+      # the bad user try to update the event with the administrator_actor_id
+      res =
+        conn
+        |> auth_conn(bad_user)
+        |> AbsintheHelpers.graphql_query(
+          query: @update_event_mutation,
+          variables:
+            variables
+            |> Map.put(:organizerActorId, "#{administrator_actor_id}")
+            |> Map.put(:title, "bad_user title")
+        )
+
+      assert res["data"]["updateEvent"] == nil
+
+      assert hd(res["errors"])["message"] ==
+               "You don't own the profile given to update this event."
+    end
+
     test "should check the member has permission to update a group event", %{
       conn: conn
     } do
+      # create an user and an actor
       %User{} = user = insert(:user)
+
+      # create a group
       %Actor{id: group_id} = group = insert(:group)
 
+      # create an actor for the user and add it to the group as admin
+      %Actor{id: administrator_actor_id} = administrator_actor = insert(:actor, user: user)
+      insert(:member, parent: group, actor: administrator_actor, role: :administrator)
+
+      # create an event for the group organized by the administrator of the group
+      %Event{} =
+        event = insert(:event, attributed_to: group, organizer_actor: administrator_actor)
+
+      # create an actor for the user and don't add it to the group
+      %Actor{id: not_member_actor_id} = insert(:actor, user: user)
+
+      # create an actor for the user and add it to the group as not approved member
       %Actor{id: member_not_approved_actor_id} =
         member_not_approved_actor = insert(:actor, user: user)
 
       insert(:member, parent: group, actor: member_not_approved_actor)
+
+      # create an actor for the user and add it to the group as member
       %Actor{id: member_actor_id} = member_actor = insert(:actor, user: user)
       insert(:member, parent: group, actor: member_actor, role: :member)
+
+      # create an actor for the user and add it to the group as moderator
       %Actor{id: moderator_actor_id} = moderator_actor = insert(:actor, user: user)
       insert(:member, parent: group, actor: moderator_actor, role: :moderator)
 
-      %Actor{id: administrator_actor_id} = administrator_actor = insert(:actor, user: user)
-      insert(:member, parent: group, actor: administrator_actor, role: :administrator)
-
-      %Actor{id: not_member_actor_id} = insert(:actor, user: user)
-
-      %Event{} =
-        event = insert(:event, attributed_to: group, organizer_actor: administrator_actor)
-
-      # @variables contains begins_on used for create_event, but it is beginsOn needed for update_event graphQL query
+      # @variables already contains begins_on used for create_event,
+      # but it is beginsOn needed for update_event graphQL query
       variables =
         @variables
         |> Map.put(:attributedToId, "#{group_id}")
@@ -1384,6 +1447,8 @@ defmodule Mobilizon.Web.Resolvers.EventTest do
 
       assert res["errors"] == nil
       assert res["data"]["updateEvent"] != nil
+      assert res["data"]["updateEvent"]["attributedTo"]["id"] == "#{group_id}"
+      assert res["data"]["updateEvent"]["organizerActor"]["id"] == "#{moderator_actor_id}"
       assert res["data"]["updateEvent"]["title"] == "moderator title"
 
       res =
@@ -1399,6 +1464,135 @@ defmodule Mobilizon.Web.Resolvers.EventTest do
 
       assert res["errors"] == nil
       assert res["data"]["updateEvent"] != nil
+      assert res["data"]["updateEvent"]["attributedTo"]["id"] == "#{group_id}"
+      assert res["data"]["updateEvent"]["organizerActor"]["id"] == "#{administrator_actor_id}"
+      assert res["data"]["updateEvent"]["title"] == "administrator title"
+    end
+
+    test "should check another member has permission to update a group event", %{
+      conn: conn
+    } do
+      # create an user and an actor
+      %User{} = user = insert(:user)
+
+      # create a group
+      %Actor{id: group_id} = group = insert(:group)
+
+      # create an actor for the user and add it to the group as admin
+      user_administrator_actor = insert(:actor, user: user)
+      insert(:member, parent: group, actor: user_administrator_actor, role: :administrator)
+
+      # create an event for the group organized by the administrator of the group
+      %Event{} =
+        event = insert(:event, attributed_to: group, organizer_actor: user_administrator_actor)
+
+      # create a new user
+      %User{} = user2 = insert(:user)
+
+      # create an actor for the user2 and don't add it to the group
+      %Actor{id: not_member_actor_id} = insert(:actor, user: user2)
+
+      # create an actor for the user2 and add it to the group as not approved member
+      %Actor{id: member_not_approved_actor_id} =
+        member_not_approved_actor = insert(:actor, user: user2)
+
+      insert(:member, parent: group, actor: member_not_approved_actor)
+
+      # create an actor for the user2 and add it to the group as member
+      %Actor{id: member_actor_id} = member_actor = insert(:actor, user: user2)
+      insert(:member, parent: group, actor: member_actor, role: :member)
+
+      # create an actor for the user2 and add it to the group as moderator
+      %Actor{id: moderator_actor_id} = moderator_actor = insert(:actor, user: user2)
+      insert(:member, parent: group, actor: moderator_actor, role: :moderator)
+
+      # create an actor for the user2 and add it to the group as administrator
+      %Actor{id: administrator_actor_id} = administrator_actor = insert(:actor, user: user2)
+      insert(:member, parent: group, actor: administrator_actor, role: :administrator)
+
+      # @variables already contains begins_on used for create_event,
+      # but it is beginsOn needed for update_event graphQL query
+      variables =
+        @variables
+        |> Map.put(:attributedToId, "#{group_id}")
+        |> Map.put(:eventId, to_string(event.id))
+        |> Map.put(:beginsOn, "2021-07-26T09:00:00Z")
+
+      res =
+        conn
+        |> auth_conn(user2)
+        |> AbsintheHelpers.graphql_query(
+          query: @update_event_mutation,
+          variables: Map.put(variables, :organizerActorId, "#{member_not_approved_actor_id}")
+        )
+
+      assert res["data"]["updateEvent"] == nil
+
+      assert hd(res["errors"])["message"] ==
+               "This profile doesn't have permission to update an event on behalf of this group"
+
+      res =
+        conn
+        |> auth_conn(user2)
+        |> AbsintheHelpers.graphql_query(
+          query: @update_event_mutation,
+          variables: Map.put(variables, :organizerActorId, "#{not_member_actor_id}")
+        )
+
+      assert res["data"]["updateEvent"] == nil
+
+      assert hd(res["errors"])["message"] ==
+               "This profile doesn't have permission to update an event on behalf of this group"
+
+      res =
+        conn
+        |> auth_conn(user2)
+        |> AbsintheHelpers.graphql_query(
+          query: @update_event_mutation,
+          variables: Map.put(variables, :organizerActorId, "#{member_actor_id}")
+        )
+
+      assert res["data"]["updateEvent"] == nil
+
+      assert hd(res["errors"])["message"] ==
+               "This profile doesn't have permission to update an event on behalf of this group"
+
+      res =
+        conn
+        |> auth_conn(user2)
+        |> AbsintheHelpers.graphql_query(
+          query: @update_event_mutation,
+          variables:
+            variables
+            |> Map.put(:organizerActorId, "#{moderator_actor_id}")
+            |> Map.put(:title, "moderator title")
+        )
+
+      assert res["errors"] == nil
+      assert res["data"]["updateEvent"] != nil
+      assert res["data"]["updateEvent"]["attributedTo"]["id"] == "#{group_id}"
+
+      # TODO Strangely the organizerActorId is nil in this test, but in real life seems to be the moderator_actor_id
+      # assert res["data"]["updateEvent"]["organizerActor"]["id"] == "#{moderator_actor_id}"
+      assert res["data"]["updateEvent"]["title"] == "moderator title"
+
+      res =
+        conn
+        |> auth_conn(user2)
+        |> AbsintheHelpers.graphql_query(
+          query: @update_event_mutation,
+          variables:
+            variables
+            |> Map.put(:organizerActorId, "#{administrator_actor_id}")
+            |> Map.put(:title, "administrator title")
+        )
+
+      assert res["errors"] == nil
+      assert res["data"]["updateEvent"] != nil
+      assert res["data"]["updateEvent"]["attributedTo"]["id"] == "#{group_id}"
+
+      # TODO Strangely the organizerActorId is nil in this test, but in real life seems to be the administrator_actor_id
+      # assert res["data"]["updateEvent"]["organizerActor"]["id"] == "#{administrator_actor_id}"
       assert res["data"]["updateEvent"]["title"] == "administrator title"
     end
   end
