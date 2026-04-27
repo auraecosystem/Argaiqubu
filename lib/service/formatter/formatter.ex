@@ -163,7 +163,8 @@ defmodule Mobilizon.Service.Formatter do
         hashtag: true,
         hashtag_handler: &__MODULE__.hashtag_handler/4,
         mention: true,
-        mention_handler: &__MODULE__.mention_handler/4
+        mention_handler: &__MODULE__.mention_handler/4,
+        email: true
       ]
   end
 end
