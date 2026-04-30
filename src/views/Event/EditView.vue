@@ -780,6 +780,7 @@ const initializeNewEvent = () => {
   hideParticipants.value = true;
 };
 
+// OrganizerActor is the visible publisher of the event
 const organizerActor = computed({
   get(): IActor | undefined {
     if (event.value?.attributedTo?.id) {
@@ -791,6 +792,13 @@ const organizerActor = computed({
     return currentActor.value;
   },
   set(actor: IActor | undefined) {
+    if (actor == undefined) {
+      // When the profile is changed, the organizerActor component send an undefined actor
+      // and the original attributedTo and organizerActor was lost
+      // Ideally, the component need to be updated to handle the case
+      console.warn("actor is undefined, ignore the change");
+      return;
+    }
     if (actor?.type === ActorType.GROUP) {
       event.value.attributedTo = actor as IGroup;
       event.value.organizerActor = currentActor.value;
