@@ -1476,11 +1476,9 @@ const maximumAttendeeCapacity = computed({
   },
 });
 
-const {
-  event: fetchedEvent,
-  onResult: onFetchEventResult,
-  loading: onFetchEventLoading,
-} = useFetchEvent(eventId.value);
+const { event: fetchedEvent, loading: onFetchEventLoading } = useFetchEvent(
+  eventId.value
+);
 
 // update the date components if the event changed (after fetching it, for example)
 watch(event, () => {
@@ -1498,20 +1496,14 @@ watch(event, () => {
 
 watch(
   fetchedEvent,
-  () => {
+  async () => {
     if (!fetchedEvent.value) return;
-    event.value = { ...fetchedEvent.value };
+    event.value = new EventModel(fetchedEvent.value);
+    limitedPlaces.value = eventOptions.value.maximumAttendeeCapacity > 0;
+    pictureFile.value = await buildFileFromIMedia(event.value.picture);
   },
   { immediate: true }
 );
-
-onFetchEventResult(async (result) => {
-  if (result.loading || !result.data?.event) return;
-
-  event.value = { ...result.data?.event };
-  limitedPlaces.value = eventOptions.value.maximumAttendeeCapacity > 0;
-  pictureFile.value = await buildFileFromIMedia(event.value.picture);
-});
 
 const groupFederatedUsername = computed(() =>
   usernameWithDomain(fetchedEvent.value?.attributedTo)
