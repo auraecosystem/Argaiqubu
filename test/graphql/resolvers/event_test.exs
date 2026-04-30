@@ -1572,8 +1572,7 @@ defmodule Mobilizon.Web.Resolvers.EventTest do
       assert res["data"]["updateEvent"] != nil
       assert res["data"]["updateEvent"]["attributedTo"]["id"] == "#{group_id}"
 
-      # TODO Strangely the organizerActorId is nil in this test, but in real life seems to be the moderator_actor_id
-      # assert res["data"]["updateEvent"]["organizerActor"]["id"] == "#{moderator_actor_id}"
+      assert res["data"]["updateEvent"]["organizerActor"]["id"] == "#{moderator_actor_id}"
       assert res["data"]["updateEvent"]["title"] == "moderator title"
 
       res =
@@ -1591,8 +1590,7 @@ defmodule Mobilizon.Web.Resolvers.EventTest do
       assert res["data"]["updateEvent"] != nil
       assert res["data"]["updateEvent"]["attributedTo"]["id"] == "#{group_id}"
 
-      # TODO Strangely the organizerActorId is nil in this test, but in real life seems to be the administrator_actor_id
-      # assert res["data"]["updateEvent"]["organizerActor"]["id"] == "#{administrator_actor_id}"
+      assert res["data"]["updateEvent"]["organizerActor"]["id"] == "#{administrator_actor_id}"
       assert res["data"]["updateEvent"]["title"] == "administrator title"
     end
   end

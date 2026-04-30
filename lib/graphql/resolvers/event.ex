@@ -27,16 +27,20 @@ defmodule Mobilizon.GraphQL.Resolvers.Event do
   @spec organizer_for_event(Event.t(), map(), Absinthe.Resolution.t()) ::
           {:ok, Actor.t() | nil} | {:error, String.t()}
   def organizer_for_event(
-        %Event{attributed_to_id: attributed_to_id, organizer_actor_id: organizer_actor_id},
+        %Event{attributed_to_id: group_id, organizer_actor_id: organizer_actor_id},
         _args,
         %{
-          context: %{current_user: %User{role: user_role}, current_actor: %Actor{id: actor_id}}
+          context: %{current_user: %User{role: user_role} = user}
         } = _resolution
       )
-      when not is_nil(attributed_to_id) do
-    with %Actor{id: group_id} <- Actors.get_actor(attributed_to_id),
-         {:member, true} <-
-           {:member, Actors.member?(actor_id, group_id) or is_moderator(user_role)},
+      when not is_nil(group_id) do
+    actor_ids = user.actors |> Enum.map(&Map.get(&1, :id))
+
+    # at least one actor of the user should be member of the group
+    with true <-
+           Enum.any?(actor_ids, fn actor_id ->
+             Actors.member?(actor_id, group_id) or is_moderator(user_role)
+           end),
          %Actor{} = actor <- Actors.get_actor(organizer_actor_id) do
       {:ok, actor}
     else
