@@ -100,7 +100,7 @@ const getFilteredTags = async (newText: string): Promise<void> => {
   if (!res) refetchTags({ filter: newText });
 };
 
-const filteredTags = computed<OptionsPropItem<string>[]>(() => {
+const filteredTags = computed<OptionsPropItem<ITag>[]>(() => {
   return differenceBy(tags.value, propsValue.value, "slug")
     .filter(
       (tag) =>
@@ -109,7 +109,7 @@ const filteredTags = computed<OptionsPropItem<string>[]>(() => {
     )
     .map((tag) => ({
       label: tag.title,
-      value: tag.slug,
+      value: { title: tag.title, slug: tag.slug },
     }));
 });
 
