@@ -1435,21 +1435,21 @@ defmodule Mobilizon.Events do
 
   @spec events_for_categories(Ecto.Queryable.t(), map()) :: Ecto.Query.t()
   defp events_for_categories(query, %{category_one_of: category_one_of})
-       when length(category_one_of) > 0 do
+       when category_one_of != [] do
     where(query, [q], q.category in ^category_one_of)
   end
 
   defp events_for_categories(query, _args), do: query
 
   defp events_for_languages(query, %{language_one_of: language_one_of})
-       when length(language_one_of) > 0 do
+       when language_one_of != [] do
     where(query, [q], q.language in ^language_one_of)
   end
 
   defp events_for_languages(query, _args), do: query
 
   defp events_for_statuses(query, %{status_one_of: status_one_of})
-       when length(status_one_of) > 0 do
+       when status_one_of != [] do
     where(query, [q], q.status in ^status_one_of)
   end
 
