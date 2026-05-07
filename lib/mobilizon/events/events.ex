@@ -1457,10 +1457,20 @@ defmodule Mobilizon.Events do
 
   @spec events_for_tags(Ecto.Queryable.t(), map()) :: Ecto.Query.t()
   defp events_for_tags(query, %{tags: tags}) when is_valid_string(tags) do
+    tag_titles =
+      tags
+      |> String.split(",", trim: true)
+      |> Enum.map(&String.downcase/1)
+
+    tag_ids_query =
+      from(t in Tag,
+        where: fragment("LOWER(?)", t.title) in ^tag_titles,
+        select: t.id
+      )
+
     query
     |> join(:inner, [q], te in "events_tags", on: q.id == te.event_id)
-    |> join(:inner, [q, ..., te], t in Tag, on: te.tag_id == t.id)
-    |> where([q, ..., t], t.title in ^String.split(tags, ",", trim: true))
+    |> where([q, te], te.tag_id in subquery(tag_ids_query))
   end
 
   defp events_for_tags(query, _args), do: query
