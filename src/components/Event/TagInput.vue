@@ -17,7 +17,7 @@
       :modelValue="tagsStrings"
       @update:modelValue="updateTags"
       :options="filteredTags"
-      :allow-autocomplete="true"
+      :autocomplete="true"
       :allow-new="true"
       icon="label"
       :maxlength="20"
@@ -101,6 +101,9 @@ const getFilteredTags = async (newText: string): Promise<void> => {
 };
 
 const filteredTags = computed<OptionsPropItem<ITag>[]>(() => {
+  // Empty list if there is no written text
+  if (text.value == "") return [];
+
   return differenceBy(tags.value, propsValue.value, "slug")
     .filter(
       (tag) =>
@@ -113,16 +116,24 @@ const filteredTags = computed<OptionsPropItem<ITag>[]>(() => {
     }));
 });
 
-const updateTags = (newTagsStrings: string[]) => {
-  const tagEntities = newTagsStrings.map((tag: string | ITag) => {
-    if (typeof tag !== "string") {
-      return tag;
+const updateTags = (newTagsStrings: (string | ITag)[]) => {
+  const seen = new Set<string>();
+
+  const tagEntities = newTagsStrings.reduce<ITag[]>((acc, tag) => {
+    const title = typeof tag === "string" ? tag : tag.title;
+    const lowerTitle = title.toLowerCase();
+
+    // Don't allow the same tag with another case
+    if (!seen.has(lowerTitle)) {
+      seen.add(lowerTitle);
+      acc.push(typeof tag === "string" ? { title: tag, slug: tag } : tag);
     }
-    return { title: tag, slug: tag } as ITag;
-  });
+
+    return acc;
+  }, []);
+
   emit("update:modelValue", tagEntities);
 };
-
 function isArraysEquals(array1: string[], array2: string[]) {
   if (array1.length !== array2.length) {
     return false;
