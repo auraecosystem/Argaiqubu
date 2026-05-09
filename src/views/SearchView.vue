@@ -136,9 +136,7 @@
               class="text-sm text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 mb-2"
               @click="toggleAllCategories"
             >
-              {{
-                allCategoriesSelected ? t("Deselect all") : t("Select all")
-              }}
+              {{ allCategoriesSelected ? t("Deselect all") : t("Select all") }}
             </button>
             <fieldset class="flex flex-col">
               <legend class="sr-only">{{ t("Categories") }}</legend>
