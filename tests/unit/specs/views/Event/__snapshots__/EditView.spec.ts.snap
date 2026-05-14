@@ -51,7 +51,7 @@ exports[`EditView > Create event - draft 1`] = `
           <div class="o-taginput__container">
             <div data-oruga="autocomplete" class="o-dropdown o-dropdown--expanded o-dropdown--position-auto o-autocomplete o-taginput__autocomplete">
               <div class="o-dropdown__trigger" role="combobox" aria-haspopup="listbox" aria-expanded="false" aria-disabled="false" aria-controls="v-0-0-3" aria-labelledby="v-0-0-0">
-                <div data-oruga="input" class="o-input o-input--expanded"><span data-oruga="icon" class="o-icon o-input__icon-left"><i class="mdi mdi-label mdi-24px"></i></span><input aria-labelledby="v-0-0-0" allow-autocomplete="true" dir="auto" has-counter="false" aria-autocomplete="list" aria-controls="v-0-0-3" enterkeyhint="enter" id="tag-input-1" type="text" data-oruga-input="text" class="o-input__input o-taginput__input o-input__input--iconspace-left o-input__input--placeholder" maxlength="20" autocomplete="off" placeholder="Eg: Stockholm, Dance, Chess…">
+                <div data-oruga="input" class="o-input o-input--expanded"><span data-oruga="icon" class="o-icon o-input__icon-left"><i class="mdi mdi-label mdi-24px"></i></span><input aria-labelledby="v-0-0-0" dir="auto" has-counter="false" aria-autocomplete="list" aria-controls="v-0-0-3" enterkeyhint="enter" id="tag-input-1" type="text" data-oruga-input="text" class="o-input__input o-taginput__input o-input__input--iconspace-left o-input__input--placeholder" maxlength="20" autocomplete="true" placeholder="Eg: Stockholm, Dance, Chess…">
                   <!---->
                   <!---->
                 </div>
@@ -461,7 +461,7 @@ exports[`EditView > Create event - draft 2`] = `
           <div class="o-taginput__container">
             <div data-oruga="autocomplete" class="o-dropdown o-dropdown--expanded o-dropdown--position-auto o-autocomplete o-taginput__autocomplete">
               <div class="o-dropdown__trigger" role="combobox" aria-haspopup="listbox" aria-expanded="false" aria-disabled="false" aria-controls="v-0-0-3" aria-labelledby="v-0-0-0">
-                <div data-oruga="input" class="o-input o-input--expanded"><span data-oruga="icon" class="o-icon o-input__icon-left"><i class="mdi mdi-label mdi-24px"></i></span><input aria-labelledby="v-0-0-0" allow-autocomplete="true" dir="auto" has-counter="false" aria-autocomplete="list" aria-controls="v-0-0-3" enterkeyhint="enter" id="tag-input-1" type="text" data-oruga-input="text" class="o-input__input o-taginput__input o-input__input--iconspace-left o-input__input--placeholder" maxlength="20" autocomplete="off" placeholder="Eg: Stockholm, Dance, Chess…">
+                <div data-oruga="input" class="o-input o-input--expanded"><span data-oruga="icon" class="o-icon o-input__icon-left"><i class="mdi mdi-label mdi-24px"></i></span><input aria-labelledby="v-0-0-0" dir="auto" has-counter="false" aria-autocomplete="list" aria-controls="v-0-0-3" enterkeyhint="enter" id="tag-input-1" type="text" data-oruga-input="text" class="o-input__input o-taginput__input o-input__input--iconspace-left o-input__input--placeholder" maxlength="20" autocomplete="true" placeholder="Eg: Stockholm, Dance, Chess…">
                   <!---->
                   <!---->
                 </div>
@@ -871,7 +871,7 @@ exports[`EditView > Update old event 1`] = `
           <div class="o-taginput__container">
             <div data-oruga="autocomplete" class="o-dropdown o-dropdown--expanded o-dropdown--position-auto o-autocomplete o-taginput__autocomplete">
               <div class="o-dropdown__trigger" role="combobox" aria-haspopup="listbox" aria-expanded="false" aria-disabled="false" aria-controls="v-0-0-3" aria-labelledby="v-0-0-0">
-                <div data-oruga="input" class="o-input o-input--expanded"><span data-oruga="icon" class="o-icon o-input__icon-left"><i class="mdi mdi-label mdi-24px"></i></span><input aria-labelledby="v-0-0-0" allow-autocomplete="true" dir="auto" has-counter="false" aria-autocomplete="list" aria-controls="v-0-0-3" enterkeyhint="enter" id="tag-input-1" type="text" data-oruga-input="text" class="o-input__input o-taginput__input o-input__input--iconspace-left o-input__input--placeholder" maxlength="20" autocomplete="off" placeholder="Eg: Stockholm, Dance, Chess…">
+                <div data-oruga="input" class="o-input o-input--expanded"><span data-oruga="icon" class="o-icon o-input__icon-left"><i class="mdi mdi-label mdi-24px"></i></span><input aria-labelledby="v-0-0-0" dir="auto" has-counter="false" aria-autocomplete="list" aria-controls="v-0-0-3" enterkeyhint="enter" id="tag-input-1" type="text" data-oruga-input="text" class="o-input__input o-taginput__input o-input__input--iconspace-left o-input__input--placeholder" maxlength="20" autocomplete="true" placeholder="Eg: Stockholm, Dance, Chess…">
                   <!---->
                   <!---->
                 </div>
@@ -1281,7 +1281,7 @@ exports[`EditView > Update old event 2`] = `
           <div class="o-taginput__container">
             <div data-oruga="autocomplete" class="o-dropdown o-dropdown--expanded o-dropdown--position-auto o-autocomplete o-taginput__autocomplete">
               <div class="o-dropdown__trigger" role="combobox" aria-haspopup="listbox" aria-expanded="false" aria-disabled="false" aria-controls="v-0-0-3" aria-labelledby="v-0-0-0">
-                <div data-oruga="input" class="o-input o-input--expanded"><span data-oruga="icon" class="o-icon o-input__icon-left"><i class="mdi mdi-label mdi-24px"></i></span><input aria-labelledby="v-0-0-0" allow-autocomplete="true" dir="auto" has-counter="false" aria-autocomplete="list" aria-controls="v-0-0-3" enterkeyhint="enter" id="tag-input-1" type="text" data-oruga-input="text" class="o-input__input o-taginput__input o-input__input--iconspace-left o-input__input--placeholder" maxlength="20" autocomplete="off" placeholder="Eg: Stockholm, Dance, Chess…">
+                <div data-oruga="input" class="o-input o-input--expanded"><span data-oruga="icon" class="o-icon o-input__icon-left"><i class="mdi mdi-label mdi-24px"></i></span><input aria-labelledby="v-0-0-0" dir="auto" has-counter="false" aria-autocomplete="list" aria-controls="v-0-0-3" enterkeyhint="enter" id="tag-input-1" type="text" data-oruga-input="text" class="o-input__input o-taginput__input o-input__input--iconspace-left o-input__input--placeholder" maxlength="20" autocomplete="true" placeholder="Eg: Stockholm, Dance, Chess…">
                   <!---->
                   <!---->
                 </div>
