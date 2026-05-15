@@ -60,10 +60,7 @@ defmodule Mobilizon.Federation.ActivityPub.Types.Discussions do
     case Discussions.create_discussion(args) do
       {:ok, %Discussion{} = discussion} ->
         DiscussionActivity.insert_activity(discussion, subject: "discussion_created")
-        discussion_as_data = Convertible.model_to_as(discussion)
-        audience = Audience.get_audience(discussion)
-        create_data = make_create_data(discussion_as_data, Map.merge(audience, additional))
-        {:ok, discussion, create_data}
+        {:ok, discussion, nil}
 
       {:error, _, %Ecto.Changeset{} = err, _} ->
         {:error, err}
@@ -82,10 +79,7 @@ defmodule Mobilizon.Federation.ActivityPub.Types.Discussions do
         )
 
         Cachex.del(:activity_pub, "discussion_#{new_discussion.slug}")
-        discussion_as_data = Convertible.model_to_as(new_discussion)
-        audience = Audience.get_audience(new_discussion)
-        update_data = make_update_data(discussion_as_data, Map.merge(audience, additional))
-        {:ok, new_discussion, update_data}
+        {:ok, new_discussion, nil}
 
       {:error, %Ecto.Changeset{} = err} ->
         {:error, err}

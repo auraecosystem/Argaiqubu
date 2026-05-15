@@ -2,8 +2,8 @@ defmodule Mobilizon.Federation.ActivityPub.Actions.Create do
   @moduledoc """
   Create things
   """
-  alias Mobilizon.Tombstone
   alias Mobilizon.Federation.ActivityPub.{Activity, Types}
+  alias Mobilizon.Tombstone
   require Logger
 
   import Mobilizon.Federation.ActivityPub.Utils,
@@ -43,6 +43,9 @@ defmodule Mobilizon.Federation.ActivityPub.Actions.Create do
     case check_for_tombstones(args) do
       nil ->
         case do_create(type, args, additional) do
+          {:ok, entity, nil} ->
+            {:ok, nil, entity}
+
           {:ok, entity, create_data} ->
             {:ok, activity} = create_activity(create_data, local)
             maybe_federate(activity)
