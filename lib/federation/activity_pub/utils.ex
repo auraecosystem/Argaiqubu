@@ -25,7 +25,11 @@ defmodule Mobilizon.Federation.ActivityPub.Utils do
   @ap_public_audience "https://www.w3.org/ns/activitystreams#Public"
 
   # Wraps an object into an activity
-  @spec create_activity(map(), boolean()) :: {:ok, Activity.t()}
+  @spec create_activity(map(), boolean()) :: {:ok, Activity.t() | nil}
+  def create_activity(nil, _local) do
+    {:ok, nil}
+  end
+
   def create_activity(map, local) when is_map(map) do
     with map <- lazy_put_activity_defaults(map) do
       {:ok,
