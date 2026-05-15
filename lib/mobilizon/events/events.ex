@@ -1460,17 +1460,33 @@ defmodule Mobilizon.Events do
     tag_titles =
       tags
       |> String.split(",", trim: true)
+      |> Enum.map(&String.trim/1)
+      |> Enum.reject(&(&1 == ""))
       |> Enum.map(&String.downcase/1)
+      |> Enum.uniq()
 
-    tag_ids_query =
-      from(t in Tag,
-        where: fragment("LOWER(?)", t.title) in ^tag_titles,
-        select: t.id
+    if tag_titles == [] do
+      query
+    else
+      tag_ids_query =
+        from(t in Tag,
+          where: fragment("LOWER(?)", t.title) in ^tag_titles,
+          select: t.id
+        )
+
+      query
+      |> join(
+        :inner,
+        [event],
+        events_tags in "events_tags",
+        as: :events_tags,
+        on: event.id == events_tags.event_id
       )
-
-    query
-    |> join(:inner, [q], te in "events_tags", on: q.id == te.event_id)
-    |> where([q, te], te.tag_id in subquery(tag_ids_query))
+      |> where(
+        [events_tags: events_tags],
+        events_tags.tag_id in subquery(tag_ids_query)
+      )
+    end
   end
 
   defp events_for_tags(query, _args), do: query
