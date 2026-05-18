@@ -201,9 +201,10 @@
                 )
               "
             />
-            <span v-else>
-              {{ t("You may show some members as contacts.") }}
-            </span>
+            <span
+              v-else
+              v-html="' ' + t('You may show some members as contacts.')"
+            />
           </p>
         </div>
       </section>
