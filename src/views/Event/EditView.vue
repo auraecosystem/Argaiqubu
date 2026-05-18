@@ -786,7 +786,7 @@ const organizerActor = computed({
     if (event.value?.attributedTo?.id) {
       return event.value.attributedTo;
     }
-    if (event.value?.organizerActor?.id) {
+    if (organizerActorIsOwnedByUser.value) {
       return event.value.organizerActor;
     }
     return currentActor.value;
@@ -811,6 +811,13 @@ const organizerActor = computed({
 
 const attributedToAGroup = computed((): boolean => {
   return event.value.attributedTo?.id !== undefined;
+});
+
+const organizerActorIsOwnedByUser = computed((): boolean => {
+  if (!identities.value) return false;
+  return identities.value.some(
+    ({ id }) => id === event.value.organizerActor?.id
+  );
 });
 
 const eventOptions = computed({
@@ -1105,12 +1112,13 @@ const buildVariables = async () => {
     options: eventOptions.value,
   };
 
-  const localOrganizerActor = event.value?.organizerActor?.id
+  // organizerActorId is the currentActor or one actor he owns
+  // but never an actor he don't own (like the original actor creating the event for a group)
+  const localOrganizerActor = organizerActorIsOwnedByUser.value
     ? event.value.organizerActor
-    : organizerActor.value;
-  if (organizerActor.value) {
-    res = { ...res, organizerActorId: localOrganizerActor?.id };
-  }
+    : currentActor.value;
+  res = { ...res, organizerActorId: localOrganizerActor?.id };
+
   const attributedToId = event.value?.attributedTo?.id
     ? event.value?.attributedTo.id
     : null;
