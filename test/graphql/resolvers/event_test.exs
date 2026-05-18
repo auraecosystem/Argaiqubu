@@ -1307,6 +1307,80 @@ defmodule Mobilizon.Web.Resolvers.EventTest do
     end
   end
 
+  test "update_event/3 should check the user can change the event to another profile he owns", %{
+    conn: conn
+  } do
+    # Create 2 actors for an user
+    %User{} = user = insert(:user)
+    %Actor{} = actor1 = insert(:actor, user: user)
+    %Actor{} = actor2 = insert(:actor, user: user)
+
+    # create an event organized by the actor1
+    %Event{} =
+      event = insert(:event, attributed_to: nil, organizer_actor: actor1)
+
+    # @variables already contains begins_on used for create_event,
+    # but it is beginsOn needed for update_event graphQL query
+    variables =
+      @variables
+      |> Map.put(:attributedToId, "")
+      |> Map.put(:eventId, to_string(event.id))
+      |> Map.put(:beginsOn, "2021-07-26T09:00:00Z")
+      |> Map.put(:title, "actor2 event")
+
+    res =
+      conn
+      |> auth_conn(user)
+      |> AbsintheHelpers.graphql_query(
+        query: @update_event_mutation,
+        variables: Map.put(variables, :organizerActorId, "#{actor2.id}")
+      )
+
+    assert res["errors"] == nil
+    assert res["data"]["updateEvent"] != nil
+    assert res["data"]["updateEvent"]["attributedTo"]["id"] == nil
+    assert res["data"]["updateEvent"]["organizerActor"]["id"] == "#{actor2.id}"
+    assert res["data"]["updateEvent"]["title"] == "actor2 event"
+  end
+
+  test "update_event/3 should check the user can't change the event to another profile he don't owns",
+       %{
+         conn: conn
+       } do
+    # Create an actor for an user
+    %User{} = user1 = insert(:user)
+    %Actor{} = actor1 = insert(:actor, user: user1)
+
+    # create an event organized by the actor1
+    %Event{} = event = insert(:event, attributed_to: nil, organizer_actor: actor1)
+
+    # Create an actor for another user
+    %User{} = user2 = insert(:user)
+    %Actor{} = actor2 = insert(:actor, user: user2)
+
+    # @variables already contains begins_on used for create_event,
+    # but it is beginsOn needed for update_event graphQL query
+    variables =
+      @variables
+      |> Map.put(:attributedToId, "")
+      |> Map.put(:eventId, to_string(event.id))
+      |> Map.put(:beginsOn, "2021-07-26T09:00:00Z")
+      |> Map.put(:title, "actor2 event")
+
+    res =
+      conn
+      |> auth_conn(user2)
+      |> AbsintheHelpers.graphql_query(
+        query: @update_event_mutation,
+        variables: Map.put(variables, :organizerActorId, "#{actor2.id}")
+      )
+
+    assert res["data"]["updateEvent"] == nil
+
+    assert hd(res["errors"])["message"] ==
+             "You can't edit this event."
+  end
+
   describe "update_event/3 on behalf of a group" do
     test "should check a bad user can't usurpate other user id", %{
       conn: conn
