@@ -11,7 +11,7 @@ defmodule Mobilizon.Federation.ActivityPub.Types.Discussions do
   alias Mobilizon.GraphQL.API.Utils, as: APIUtils
   alias Mobilizon.Service.Activity.Discussion, as: DiscussionActivity
   alias Mobilizon.Web.Endpoint
-  import Mobilizon.Federation.ActivityPub.Utils, only: [make_create_data: 2, make_update_data: 2]
+  import Mobilizon.Federation.ActivityPub.Utils, only: [make_create_data: 2]
   require Logger
 
   @behaviour Entity
@@ -54,7 +54,7 @@ defmodule Mobilizon.Federation.ActivityPub.Types.Discussions do
   end
 
   @impl Entity
-  def create(args, additional) do
+  def create(args, _additional) do
     args = prepare_args(args)
 
     case Discussions.create_discussion(args) do
@@ -70,7 +70,7 @@ defmodule Mobilizon.Federation.ActivityPub.Types.Discussions do
   @impl Entity
   @spec update(Discussion.t(), map(), map()) ::
           {:ok, Discussion.t(), ActivityStream.t()} | {:error, Ecto.Changeset.t()}
-  def update(%Discussion{} = old_discussion, args, additional) do
+  def update(%Discussion{} = old_discussion, args, _additional) do
     case Discussions.update_discussion(old_discussion, args) do
       {:ok, %Discussion{} = new_discussion} ->
         DiscussionActivity.insert_activity(new_discussion,
