@@ -145,7 +145,7 @@
             class="w-full sm:w-auto"
             @click="pickActor"
           >
-            {{ $t("Pick") }}
+            {{ $t("Close") }}
           </o-button>
         </footer>
       </div>
