@@ -41,6 +41,54 @@
         />
       </o-field>
 
+      <section class="my-4">
+        <o-field :label="t('Published by')" />
+
+        <div v-if="features?.groups && organizerActor?.id">
+          <o-field>
+            <organizer-picker-wrapper
+              v-model="organizerActor"
+              v-model:contacts="event.contacts"
+            />
+          </o-field>
+          <p v-if="!attributedToAGroup && organizerActorEqualToCurrentActor">
+            {{
+              t("The event will show as attributed to your personal profile.")
+            }}
+          </p>
+          <p v-else-if="!attributedToAGroup">
+            {{ t("The event will show as attributed to this profile.") }}
+          </p>
+          <p v-else>
+            <span>{{
+              t("The event will show as attributed to this group.")
+            }}</span>
+            <span
+              v-if="event.contacts && event.contacts.length"
+              v-html="
+                ' ' +
+                t(
+                  '<b>{contact}</b> will be displayed as contact.',
+
+                  {
+                    contact: formatList(
+                      event.contacts.map((contact) =>
+                        escapeHtml(displayNameAndUsername(contact))
+                      )
+                    ),
+                  },
+                  event.contacts.length
+                )
+              "
+            />
+            <span
+              v-else
+              v-html="' ' + t('You may show some members as contacts.')"
+            />
+          </p>
+        </div>
+      </section>
+
       <div class="flex flex-wrap gap-4">
         <o-field
           v-if="orderedCategories"
@@ -161,53 +209,6 @@
         />
       </o-field>
 
-      <section class="my-4">
-        <h2>{{ t("Published by") }}</h2>
-
-        <div v-if="features?.groups && organizerActor?.id">
-          <o-field>
-            <organizer-picker-wrapper
-              v-model="organizerActor"
-              v-model:contacts="event.contacts"
-            />
-          </o-field>
-          <p v-if="!attributedToAGroup && organizerActorEqualToCurrentActor">
-            {{
-              t("The event will show as attributed to your personal profile.")
-            }}
-          </p>
-          <p v-else-if="!attributedToAGroup">
-            {{ t("The event will show as attributed to this profile.") }}
-          </p>
-          <p v-else>
-            <span>{{
-              t("The event will show as attributed to this group.")
-            }}</span>
-            <span
-              v-if="event.contacts && event.contacts.length"
-              v-html="
-                ' ' +
-                t(
-                  '<b>{contact}</b> will be displayed as contact.',
-
-                  {
-                    contact: formatList(
-                      event.contacts.map((contact) =>
-                        escapeHtml(displayNameAndUsername(contact))
-                      )
-                    ),
-                  },
-                  event.contacts.length
-                )
-              "
-            />
-            <span
-              v-else
-              v-html="' ' + t('You may show some members as contacts.')"
-            />
-          </p>
-        </div>
-      </section>
       <section class="my-4">
         <h2>{{ t("Event metadata") }}</h2>
         <p>
