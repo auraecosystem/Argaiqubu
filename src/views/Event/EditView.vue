@@ -86,6 +86,21 @@
               v-html="' ' + t('You may show some members as contacts.')"
             />
           </p>
+          <div v-if="!attributedToAGroup">
+            <p class="text-red-800">
+              {{ t("This event is not published by a group.") }}<br />{{
+                t(
+                  "A group lets you organize events in a calendar, search for them, track them, share them across the fediverse, write posts and announcements."
+                )
+              }}
+            </p>
+            <o-button
+              tag="router-link"
+              variant="primary"
+              :to="{ name: RouteName.CREATE_GROUP }"
+              >{{ t("Create group") }}</o-button
+            >
+          </div>
         </div>
       </section>
 
