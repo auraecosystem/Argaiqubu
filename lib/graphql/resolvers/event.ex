@@ -554,10 +554,10 @@ defmodule Mobilizon.GraphQL.Resolvers.Event do
           timezone,
           Map.get(physical_address, :geom),
           fallback_tz
-        )
+        ) || "Etc/UTC"
 
       _ ->
-        timezone || fallback_tz
+        timezone || fallback_tz || "Etc/UTC"
     end
   end
 end
