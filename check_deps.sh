@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ELIXIR_LIB_EXCLUDE="ueberauth_cas"
+ELIXIR_LIB_EXCLUDE="ueberauth_cas doctor"
 VUEJS_LIB_EXCLUDE="@apollo/client mock-apollo-client @vueuse/core @unhead/vue tailwindcss @oruga-ui/oruga-next @oruga-ui/theme-oruga @types/leaflet.locatecontrol @eslint/js eslint vite vue-router vitest typescript"
 
 let EXITVALUE=0
