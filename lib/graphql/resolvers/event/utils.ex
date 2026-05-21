@@ -9,6 +9,20 @@ defmodule Mobilizon.GraphQL.Resolvers.Event.Utils do
   alias Mobilizon.Federation.ActivityPub.{Permission, Relay}
   import Mobilizon.Service.Guards, only: [is_valid_string: 1]
 
+  @spec can_group_event_be_updated_by?(Event.t(), Actor.t()) ::
+          boolean
+  def can_group_event_be_updated_by?(
+        %Event{attributed_to: %Actor{type: :Group}} = event,
+        %Actor{} = actor_member
+      ) do
+    can_event_be_updated_by?(event, actor_member)
+  end
+
+  def can_group_event_be_updated_by?(_event, _actor_member) do
+    # The event is not a group event, nothing to check
+    true
+  end
+
   @spec can_event_be_updated_by?(Event.t(), Actor.t()) ::
           boolean
   def can_event_be_updated_by?(

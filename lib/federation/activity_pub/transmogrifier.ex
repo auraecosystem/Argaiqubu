@@ -111,7 +111,8 @@ defmodule Mobilizon.Federation.ActivityPub.Transmogrifier do
            object |> Converter.Event.as_to_model_data(),
          {:existing_event, nil} <- {:existing_event, Events.get_event_by_url(object_data.url)},
          {:ok, %Activity{} = activity, %Event{} = event} <-
-           Actions.Create.create(:event, object_data, false) do
+           Actions.Create.create(:event, object_data, false),
+         :ok <- eventually_create_share(object, event, event.organizer_actor.id) do
       {:ok, activity, event}
     else
       {:existing_event, %Event{} = event} ->

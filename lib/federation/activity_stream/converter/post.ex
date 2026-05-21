@@ -15,6 +15,7 @@ defmodule Mobilizon.Federation.ActivityStream.Converter.Post do
 
   import Mobilizon.Federation.ActivityStream.Converter.Utils,
     only: [
+      maybe_fetch_actor_and_attributed_to_id: 1,
       process_pictures: 2,
       visibility_public?: 1
     ]
@@ -67,30 +68,28 @@ defmodule Mobilizon.Federation.ActivityStream.Converter.Post do
   """
   @impl Converter
   @spec as_to_model_data(map) :: map() | {:error, any()}
-  def as_to_model_data(
-        %{"type" => "Article", "actor" => creator, "attributedTo" => group_uri} = object
-      ) do
-    with {:ok, %Actor{id: attributed_to_id} = group} <- get_actor(group_uri),
-         {:ok, %Actor{id: author_id}} <- get_actor(creator) do
-      [description: description, picture_id: picture_id, medias: medias] =
-        process_pictures(object, attributed_to_id)
+  def as_to_model_data(%{"type" => "Article"} = object) do
+    case maybe_fetch_actor_and_attributed_to_id(object) do
+      {:ok, %Actor{id: author_id}, %Actor{id: attributed_to_id} = group} ->
+        [description: description, picture_id: picture_id, medias: medias] =
+          process_pictures(object, attributed_to_id)
 
-      %{
-        title: object["name"],
-        body: description,
-        url: object["id"],
-        attributed_to_id: attributed_to_id,
-        author_id: author_id,
-        local: false,
-        publish_at: object["published"],
-        picture_id: picture_id,
-        medias: medias,
-        visibility: get_visibility(object, group),
-        draft: object["draft"] == true
-      }
-    else
-      {:error, err} -> {:error, err}
-      err -> {:error, err}
+        %{
+          title: object["name"],
+          body: description,
+          url: object["id"],
+          attributed_to_id: attributed_to_id,
+          author_id: author_id,
+          local: false,
+          publish_at: object["published"],
+          picture_id: picture_id,
+          medias: medias,
+          visibility: get_visibility(object, group),
+          draft: object["draft"] == true
+        }
+
+      {:error, err} ->
+        {:error, err}
     end
   end
 

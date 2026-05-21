@@ -67,7 +67,7 @@ import { usernameWithDomain, displayName } from "@/types/actor";
 import { CREATE_TODO_LIST } from "@/graphql/todos";
 import CompactTodo from "@/components/Todo/CompactTodo.vue";
 import { ITodoList } from "@/types/todolist";
-import RouteName from "../../router/name";
+import RouteName from "@/router/name";
 import { useGroup } from "@/composition/apollo/group";
 import { computed, reactive } from "vue";
 import { useHead } from "@/utils/head";

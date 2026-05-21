@@ -186,8 +186,8 @@ import {
   addressFullName,
   addressToPoiInfos,
   resetAddress as resetAddressAction,
-} from "../../types/address.model";
-import AddressInfo from "../../components/Address/AddressInfo.vue";
+} from "@/types/address.model";
+import AddressInfo from "@/components/Address/AddressInfo.vue";
 import {
   computed,
   ref,

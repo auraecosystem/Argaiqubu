@@ -31,7 +31,7 @@
 import { GET_TODO } from "@/graphql/todos";
 import { ITodo } from "@/types/todos";
 import FullTodo from "@/components/Todo/FullTodo.vue";
-import RouteName from "../../router/name";
+import RouteName from "@/router/name";
 import { displayName, usernameWithDomain } from "@/types/actor";
 import { useQuery } from "@vue/apollo-composable";
 import { useHead } from "@/utils/head";
