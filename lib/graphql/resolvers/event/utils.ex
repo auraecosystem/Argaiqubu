@@ -23,6 +23,11 @@ defmodule Mobilizon.GraphQL.Resolvers.Event.Utils do
     true
   end
 
+  @spec actor_is_group_or_nil?(Actor.t() | nil) :: boolean
+  def actor_is_group_or_nil?(%Actor{type: :Group}), do: true
+  def actor_is_group_or_nil?(nil), do: true
+  def actor_is_group_or_nil?(_), do: false
+
   @spec can_event_be_updated_by?(Event.t(), Actor.t()) ::
           boolean
   def can_event_be_updated_by?(

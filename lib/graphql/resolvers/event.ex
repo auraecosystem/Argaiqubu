@@ -386,6 +386,8 @@ defmodule Mobilizon.GraphQL.Resolvers.Event do
          {:event_can_be_managed, true} <-
            {:event_can_be_managed, can_group_event_be_updated_by?(event, actor)},
          new_actor = Actors.get_actor(Map.get(args, :attributed_to_id)),
+         {:new_actor_is_group_or_nil, true} <-
+           {:new_actor_is_group_or_nil, actor_is_group_or_nil?(new_actor)},
          new_event = %{event | attributed_to: new_actor},
          {:new_group_allowed, true} <-
            {:new_group_allowed, can_group_event_be_updated_by?(new_event, actor)},
@@ -402,6 +404,13 @@ defmodule Mobilizon.GraphQL.Resolvers.Event do
          dgettext(
            "errors",
            "This profile doesn't have permission to update an event on behalf of this group"
+         )}
+
+      {:new_actor_is_group_or_nil, false} ->
+        {:error,
+         dgettext(
+           "errors",
+           "Event attributed_to must be an actor or nil"
          )}
 
       {:new_group_allowed, false} ->

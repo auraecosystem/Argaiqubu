@@ -738,6 +738,30 @@ defmodule Mobilizon.Web.Resolvers.EventTest do
       begins_on: "2021-07-26T09:00:00Z"
     }
 
+    test "create_event/3 should check the attributed_to actor is a group", %{
+      conn: conn
+    } do
+      # Create an actor for an user
+      %User{} = user = insert(:user)
+      %Actor{} = actor1 = insert(:actor, user: user)
+
+      # add a wrong attributed_to_id (a person instead of a group)
+      variables = Map.put(@variables, :attributed_to_id, "#{actor1.id}")
+
+      res =
+        conn
+        |> auth_conn(user)
+        |> AbsintheHelpers.graphql_query(
+          query: @create_event_mutation,
+          variables: Map.put(variables, :organizer_actor_id, "#{actor1.id}")
+        )
+
+      assert res["data"]["createEvent"] == nil
+
+      assert hd(res["errors"])["message"] ==
+               "Organizer profile doesn't have permission to create an event on behalf of this group"
+    end
+
     test "create_event/3 should check the member has permission to create a group event", %{
       conn: conn
     } do
@@ -1305,6 +1329,37 @@ defmodule Mobilizon.Web.Resolvers.EventTest do
                }
              ]
     end
+  end
+
+  test "update_event/3 should check the attributed_to actor is a group", %{
+    conn: conn
+  } do
+    # Create an actor for an user
+    %User{} = user = insert(:user)
+    %Actor{} = actor1 = insert(:actor, user: user)
+
+    # create an event organized by the actor1
+    %Event{} = event = insert(:event, attributed_to: nil, organizer_actor: actor1)
+
+    # @variables already contains begins_on used for create_event,
+    # but it is beginsOn needed for update_event graphQL query
+    variables =
+      @variables
+      |> Map.put(:attributedToId, "#{actor1.id}")
+      |> Map.put(:eventId, to_string(event.id))
+      |> Map.put(:beginsOn, "2021-07-26T09:00:00Z")
+      |> Map.put(:title, "actor1 event")
+
+    res =
+      conn
+      |> auth_conn(user)
+      |> AbsintheHelpers.graphql_query(
+        query: @update_event_mutation,
+        variables: Map.put(variables, :organizerActorId, "#{actor1.id}")
+      )
+
+    assert res["data"]["updateEvent"] == nil
+    assert hd(res["errors"])["message"] == "Event attributed_to must be an actor or nil"
   end
 
   test "update_event/3 should check the user can change the event to another profile he owns", %{
