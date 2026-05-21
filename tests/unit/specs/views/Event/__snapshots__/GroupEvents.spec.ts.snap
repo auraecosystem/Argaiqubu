@@ -35,7 +35,7 @@ exports[`GroupEvents > Show simple 1`] = `
                 </div>
               </div>
             </div>
-            <div data-v-107f3c48="" class="p-2">
+            <div data-v-107f3c48="" class="p-2 overflow-hidden">
               <h3 data-v-107f3c48="" class="pb-2 text-lg leading-6 line-clamp-3 font-bold text-violet-title dark:text-white" dir="auto">
                 <!--v-if-->
                 <!--v-if-->
@@ -65,7 +65,7 @@ exports[`GroupEvents > Show simple 1`] = `
                 </div>
               </div>
             </div>
-            <div data-v-107f3c48="" class="p-2">
+            <div data-v-107f3c48="" class="p-2 overflow-hidden">
               <h3 data-v-107f3c48="" class="pb-2 text-lg leading-6 line-clamp-3 font-bold text-violet-title dark:text-white" dir="auto">
                 <!--v-if-->
                 <!--v-if--><span data-v-6955ca87="" data-v-107f3c48="" class="rounded-md truncate text-sm text-black px-2 py-1 bg-yellow-1 mr-2 font-normal" size="medium">Draft</span> brouillon

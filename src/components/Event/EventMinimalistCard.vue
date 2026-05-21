@@ -31,7 +31,7 @@
         />
       </div>
     </div>
-    <div class="p-2">
+    <div class="p-2 overflow-hidden">
       <h3
         class="pb-2 text-lg leading-6 line-clamp-3 font-bold text-violet-title dark:text-white"
         :lang="event.language"
