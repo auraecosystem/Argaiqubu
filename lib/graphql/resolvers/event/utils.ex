@@ -18,7 +18,7 @@ defmodule Mobilizon.GraphQL.Resolvers.Event.Utils do
     can_event_be_updated_by?(event, actor_member)
   end
 
-  def can_group_event_be_updated_by?(_event, _actor_member) do
+  def can_group_event_be_updated_by?(%Event{} = _event, %Actor{} = _actor_member) do
     # The event is not a group event, nothing to check
     true
   end

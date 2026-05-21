@@ -385,6 +385,10 @@ defmodule Mobilizon.GraphQL.Resolvers.Event do
          args <- extract_timezone(args, user.id),
          {:event_can_be_managed, true} <-
            {:event_can_be_managed, can_group_event_be_updated_by?(event, actor)},
+         new_actor = Actors.get_actor(Map.get(args, :attributed_to_id)),
+         new_event = %{event | attributed_to: new_actor},
+         {:new_group_allowed, true} <-
+           {:new_group_allowed, can_group_event_be_updated_by?(new_event, actor)},
          {:event_external, true} <- edit_event_external_checker(args),
          {:ok, %Activity{data: %{"object" => %{"type" => "Event"}}}, %Event{} = event} <-
            API.Events.update_event(args, event) do
@@ -398,6 +402,13 @@ defmodule Mobilizon.GraphQL.Resolvers.Event do
          dgettext(
            "errors",
            "This profile doesn't have permission to update an event on behalf of this group"
+         )}
+
+      {:new_group_allowed, false} ->
+        {:error,
+         dgettext(
+           "errors",
+           "This profile doesn't have permission to add an event to this group"
          )}
 
       {:event_external, false} ->

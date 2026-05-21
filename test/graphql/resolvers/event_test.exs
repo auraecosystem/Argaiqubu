@@ -1323,7 +1323,7 @@ defmodule Mobilizon.Web.Resolvers.EventTest do
     # but it is beginsOn needed for update_event graphQL query
     variables =
       @variables
-      |> Map.put(:attributedToId, "")
+      |> Map.put(:attributedToId, nil)
       |> Map.put(:eventId, to_string(event.id))
       |> Map.put(:beginsOn, "2021-07-26T09:00:00Z")
       |> Map.put(:title, "actor2 event")
@@ -1341,6 +1341,165 @@ defmodule Mobilizon.Web.Resolvers.EventTest do
     assert res["data"]["updateEvent"]["attributedTo"]["id"] == nil
     assert res["data"]["updateEvent"]["organizerActor"]["id"] == "#{actor2.id}"
     assert res["data"]["updateEvent"]["title"] == "actor2 event"
+  end
+
+  test "update_event/3 should check the user can't change a personnal event to a group event without rights",
+       %{
+         conn: conn
+       } do
+    # Create an actor for an user
+    %User{} = user1 = insert(:user)
+    %Actor{} = actor1 = insert(:actor, user: user1)
+
+    # create an event organized by the actor1
+    %Event{} = event = insert(:event, attributed_to: nil, organizer_actor: actor1)
+
+    # create a group
+    %Actor{id: group_id} = insert(:group)
+
+    # @variables already contains begins_on used for create_event,
+    # but it is beginsOn needed for update_event graphQL query
+    variables =
+      @variables
+      |> Map.put(:attributedToId, "#{group_id}")
+      |> Map.put(:eventId, to_string(event.id))
+      |> Map.put(:beginsOn, "2021-07-26T09:00:00Z")
+      |> Map.put(:title, "group event")
+
+    res =
+      conn
+      |> auth_conn(user1)
+      |> AbsintheHelpers.graphql_query(
+        query: @update_event_mutation,
+        variables: Map.put(variables, :organizerActorId, "#{actor1.id}")
+      )
+
+    assert res["data"]["updateEvent"] == nil
+
+    assert hd(res["errors"])["message"] ==
+             "This profile doesn't have permission to add an event to this group"
+  end
+
+  test "update_event/3 should check the user can't change a personnal event to a group event with just member rights",
+       %{
+         conn: conn
+       } do
+    # Create an actor for an user
+    %User{} = user1 = insert(:user)
+    %Actor{} = actor1 = insert(:actor, user: user1)
+
+    # create an event organized by the actor1
+    %Event{} = event = insert(:event, attributed_to: nil, organizer_actor: actor1)
+
+    # create a group
+    %Actor{id: group_id} = group = insert(:group)
+
+    # set the actor as a group member
+    insert(:member, parent: group, actor: actor1, role: :member)
+
+    # @variables already contains begins_on used for create_event,
+    # but it is beginsOn needed for update_event graphQL query
+    variables =
+      @variables
+      |> Map.put(:attributedToId, "#{group_id}")
+      |> Map.put(:eventId, to_string(event.id))
+      |> Map.put(:beginsOn, "2021-07-26T09:00:00Z")
+      |> Map.put(:title, "group event as member")
+
+    res =
+      conn
+      |> auth_conn(user1)
+      |> AbsintheHelpers.graphql_query(
+        query: @update_event_mutation,
+        variables: Map.put(variables, :organizerActorId, "#{actor1.id}")
+      )
+
+    assert res["data"]["updateEvent"] == nil
+
+    assert hd(res["errors"])["message"] ==
+             "This profile doesn't have permission to add an event to this group"
+  end
+
+  test "update_event/3 should check the user can change a personnal event to a group event with moderator rights",
+       %{
+         conn: conn
+       } do
+    # Create an actor for an user
+    %User{} = user1 = insert(:user)
+    %Actor{} = actor1 = insert(:actor, user: user1)
+
+    # create an event organized by the actor1
+    %Event{} = event = insert(:event, attributed_to: nil, organizer_actor: actor1)
+
+    # create a group
+    %Actor{id: group_id} = group = insert(:group)
+
+    # set the actor as a group moderator
+    insert(:member, parent: group, actor: actor1, role: :moderator)
+
+    # @variables already contains begins_on used for create_event,
+    # but it is beginsOn needed for update_event graphQL query
+    variables =
+      @variables
+      |> Map.put(:attributedToId, "#{group_id}")
+      |> Map.put(:eventId, to_string(event.id))
+      |> Map.put(:beginsOn, "2021-07-26T09:00:00Z")
+      |> Map.put(:title, "group event as moderator")
+
+    res =
+      conn
+      |> auth_conn(user1)
+      |> AbsintheHelpers.graphql_query(
+        query: @update_event_mutation,
+        variables: Map.put(variables, :organizerActorId, "#{actor1.id}")
+      )
+
+    assert res["errors"] == nil
+    assert res["data"]["updateEvent"] != nil
+    assert res["data"]["updateEvent"]["attributedTo"]["id"] == "#{group_id}"
+    assert res["data"]["updateEvent"]["organizerActor"]["id"] == "#{actor1.id}"
+    assert res["data"]["updateEvent"]["title"] == "group event as moderator"
+  end
+
+  test "update_event/3 should check the user can change a personnal event to a group event with administrator rights",
+       %{
+         conn: conn
+       } do
+    # Create an actor for an user
+    %User{} = user1 = insert(:user)
+    %Actor{} = actor1 = insert(:actor, user: user1)
+
+    # create an event organized by the actor1
+    %Event{} = event = insert(:event, attributed_to: nil, organizer_actor: actor1)
+
+    # create a group
+    %Actor{id: group_id} = group = insert(:group)
+
+    # set the actor as a group administrator
+    insert(:member, parent: group, actor: actor1, role: :administrator)
+
+    # @variables already contains begins_on used for create_event,
+    # but it is beginsOn needed for update_event graphQL query
+    variables =
+      @variables
+      |> Map.put(:attributedToId, "#{group_id}")
+      |> Map.put(:eventId, to_string(event.id))
+      |> Map.put(:beginsOn, "2021-07-26T09:00:00Z")
+      |> Map.put(:title, "group event as administrator")
+
+    res =
+      conn
+      |> auth_conn(user1)
+      |> AbsintheHelpers.graphql_query(
+        query: @update_event_mutation,
+        variables: Map.put(variables, :organizerActorId, "#{actor1.id}")
+      )
+
+    assert res["errors"] == nil
+    assert res["data"]["updateEvent"] != nil
+    assert res["data"]["updateEvent"]["attributedTo"]["id"] == "#{group_id}"
+    assert res["data"]["updateEvent"]["organizerActor"]["id"] == "#{actor1.id}"
+    assert res["data"]["updateEvent"]["title"] == "group event as administrator"
   end
 
   test "update_event/3 should check the user can't change the event to another profile he don't owns",
@@ -1362,7 +1521,7 @@ defmodule Mobilizon.Web.Resolvers.EventTest do
     # but it is beginsOn needed for update_event graphQL query
     variables =
       @variables
-      |> Map.put(:attributedToId, "")
+      |> Map.put(:attributedToId, nil)
       |> Map.put(:eventId, to_string(event.id))
       |> Map.put(:beginsOn, "2021-07-26T09:00:00Z")
       |> Map.put(:title, "actor2 event")
