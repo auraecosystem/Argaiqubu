@@ -47,7 +47,7 @@ defmodule Mobilizon.Web.FeedController do
 
         "atom" ->
           feed_title =
-            gettext("Feed for %{email} on %{instance}",
+            gettext("Custom search on %{instance}",
               instance: Config.instance_name()
             )
 
