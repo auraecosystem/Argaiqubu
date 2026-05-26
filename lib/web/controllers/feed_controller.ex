@@ -7,6 +7,7 @@ defmodule Mobilizon.Web.FeedController do
   action_fallback(Mobilizon.Web.FallbackController)
   alias Mobilizon.Config
   alias Mobilizon.GraphQL.API.Search
+  alias Mobilizon.Service.Export.Feed
   alias Mobilizon.Service.Export.ICalendar
   require Logger
 
@@ -20,7 +21,7 @@ defmodule Mobilizon.Web.FeedController do
   end
 
   @spec search(Plug.Conn.t(), map()) :: Plug.Conn.t()
-  def search(conn, %{"format" => _format}) do
+  def search(conn, %{"format" => format}) do
     if Config.get([:instance, :enable_search_feeds], false) do
       args = build_search_args(conn)
 
@@ -31,19 +32,38 @@ defmodule Mobilizon.Web.FeedController do
           {:ok, page} -> page.elements
           _ -> {:error, "Failed to fetch events"}
         end
-        |> ICalendar.export_events()
-        |> case do
-          {:ok, events} -> events
-          _ -> {:error, "Failed to convert events"}
-        end
 
-      conn
-      |> put_resp_content_type("text/calendar")
-      |> put_resp_header(
-        "content-disposition",
-        "attachment; filename=\"search.ics\""
-      )
-      |> send_resp(200, data)
+      case format do
+        "ics" ->
+          {:ok, events} = ICalendar.export_events(data)
+
+          conn
+          |> put_resp_content_type("text/calendar")
+          |> put_resp_header(
+            "content-disposition",
+            "attachment; filename=\"search.ics\""
+          )
+          |> send_resp(200, events)
+
+        "atom" ->
+          feed_title =
+            gettext("Feed for %{email} on %{instance}",
+              instance: Config.instance_name()
+            )
+
+          events = Feed.export_events(data, Phoenix.Controller.current_url(conn), feed_title)
+
+          conn
+          |> put_resp_content_type("application/atom+xml")
+          |> put_resp_header(
+            "content-disposition",
+            "attachment; filename=\"search.atom\""
+          )
+          |> send_resp(200, events)
+
+        _ ->
+          send_resp(conn, 401, "Only 'ics' or 'atom' methods are supported.")
+      end
     else
       send_resp(conn, 401, "Search feeds are not enabled.")
     end
