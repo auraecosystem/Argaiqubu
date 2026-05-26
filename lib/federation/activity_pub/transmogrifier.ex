@@ -283,41 +283,6 @@ defmodule Mobilizon.Federation.ActivityPub.Transmogrifier do
 
   def handle_incoming(
         %{
-          "type" => activity_type,
-          "object" => %{"type" => object_type, "id" => object_url} = object
-        } = data
-      )
-      when activity_type in ["Create", "Add"] and
-             object_type in ["Document", "ResourceCollection"] do
-    Logger.info("Handle incoming to create a resource")
-    Logger.debug(inspect(data))
-
-    with {:existing_resource, nil} <-
-           {:existing_resource, Resources.get_resource_by_url(object_url)},
-         object_data when is_map(object_data) <-
-           object |> Converter.Resource.as_to_model_data(),
-         {:member, true} <-
-           {:member, Actors.member?(object_data.creator_id, object_data.actor_id)},
-         {:ok, %Activity{} = activity, %Resource{} = resource} <-
-           Actions.Create.create(:resource, object_data, false) do
-      {:ok, activity, resource}
-    else
-      {:existing_resource, %Resource{} = resource} ->
-        {:ok, nil, resource}
-
-      {:member, false} ->
-        # At some point this should refresh the list of group members
-        # if the group is not local before simply returning an error
-        :error
-
-      {:error, e} ->
-        Logger.debug(inspect(e))
-        :error
-    end
-  end
-
-  def handle_incoming(
-        %{
           "type" => "Accept",
           "object" => accepted_object,
           "actor" => _actor,
@@ -540,30 +505,6 @@ defmodule Mobilizon.Federation.ActivityPub.Transmogrifier do
   end
 
   def handle_incoming(
-        %{"type" => "Update", "object" => %{"type" => type} = object, "actor" => _actor} =
-          update_data
-      )
-      when type in ["ResourceCollection", "Document"] do
-    with actor <- Utils.get_actor(update_data),
-         {:ok, %Actor{url: actor_url, suspended: false}} <-
-           ActivityPubActor.get_or_fetch_actor_by_url(actor),
-         {:ok, %Resource{} = old_resource} <-
-           object |> Utils.get_url() |> ActivityPub.fetch_object_from_url(),
-         object_data <- Converter.Resource.as_to_model_data(object),
-         {:origin_check, true} <-
-           {:origin_check,
-            Utils.origin_check?(actor_url, update_data) ||
-              Permission.can_update_group_object?(actor, old_resource)},
-         {:ok, %Activity{} = activity, %Resource{} = new_resource} <-
-           Actions.Update.update(old_resource, object_data, false) do
-      {:ok, activity, new_resource}
-    else
-      _e ->
-        :error
-    end
-  end
-
-  def handle_incoming(
         %{"type" => "Update", "object" => %{"type" => "Member"} = object, "actor" => _actor} =
           update_data
       ) do
@@ -671,35 +612,6 @@ defmodule Mobilizon.Federation.ActivityPub.Transmogrifier do
         else
           handle_group_being_gone(actor, actor_url, object_id)
         end
-    end
-  end
-
-  def handle_incoming(
-        %{"type" => "Move", "object" => %{"type" => type} = object, "actor" => _actor} = data
-      )
-      when type in ["ResourceCollection", "Document"] do
-    with actor <- Utils.get_actor(data),
-         {:ok, %Actor{url: actor_url, suspended: false} = actor} <-
-           ActivityPubActor.get_or_fetch_actor_by_url(actor),
-         {:ok, %Resource{} = old_resource} <-
-           object |> Utils.get_url() |> ActivityPub.fetch_object_from_url(),
-         object_data <- Converter.Resource.as_to_model_data(object),
-         {:origin_check, true} <-
-           {:origin_check,
-            Utils.origin_check?(actor_url, data) ||
-              Permission.can_update_group_object?(actor, old_resource)},
-         {:ok, activity, new_resource} <-
-           Actions.Move.move(:resource, old_resource, object_data) do
-      {:ok, activity, new_resource}
-    else
-      e ->
-        Logger.debug(inspect(e))
-
-        Sentry.capture_message("Error while handling an Move activity",
-          extra: %{data: data}
-        )
-
-        :error
     end
   end
 
