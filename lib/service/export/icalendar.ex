@@ -143,7 +143,7 @@ defmodule Mobilizon.Service.Export.ICalendar do
       end
 
     icalendar_event =
-      if length(event.tags) > 0 do
+      if event.tags != [] do
         %ICalendar.Event{icalendar_event | categories: event.tags |> Enum.map(& &1.title)}
       else
         icalendar_event
