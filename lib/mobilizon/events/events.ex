@@ -615,6 +615,7 @@ defmodule Mobilizon.Events do
     |> maybe_join_address(args)
     |> events_for_location(args)
     |> events_for_bounding_box(args)
+    |> preload_for_event()
     |> filter_online(args)
     |> filter_draft()
     |> filter_local(if Map.get(args, :local_only, nil) == true, do: true, else: nil)
