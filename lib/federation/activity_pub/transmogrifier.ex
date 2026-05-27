@@ -8,12 +8,11 @@ defmodule Mobilizon.Federation.ActivityPub.Transmogrifier do
   A module to handle coding from internal to wire ActivityPub and back.
   """
 
-  alias Mobilizon.{Actors, Discussions, Events, Posts, Resources, Todos}
+  alias Mobilizon.{Actors, Discussions, Events, Posts, Todos}
   alias Mobilizon.Actors.{Actor, Follower, Member}
   alias Mobilizon.Discussions.Comment
   alias Mobilizon.Events.{Event, Participant}
   alias Mobilizon.Posts.Post
-  alias Mobilizon.Resources.Resource
   alias Mobilizon.Todos.{Todo, TodoList}
 
   alias Mobilizon.Federation.ActivityPub

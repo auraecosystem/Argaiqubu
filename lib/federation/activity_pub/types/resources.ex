@@ -11,9 +11,6 @@ defmodule Mobilizon.Federation.ActivityPub.Types.Resources do
   alias Mobilizon.Service.RichMedia.Parser
   require Logger
 
-  import Mobilizon.Federation.ActivityPub.Utils,
-    only: [make_create_data: 2, make_update_data: 2, make_add_data: 3, make_move_data: 4]
-
   @behaviour Entity
 
   @impl Entity
