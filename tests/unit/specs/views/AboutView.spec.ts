@@ -13,29 +13,29 @@ import { CONFIG } from "@/graphql/config";
 import { MemberRole } from "@/types/enums";
 import { computed } from "vue";
 
-vi.mock("@/composition/apollo/actor", () => {
-  return {
-    useCurrentUserClient: () => {
-      const error = null;
-      const loading = null;
-      const currentUser = computed(() => {
-        return {
-          id: 123,
-          email: "test@mobilizon.test",
-          isLoggedIn: true,
-          role: MemberRole.ADMINISTRATOR,
-        };
-      });
-      return { currentUser, error, loading };
-    },
-  };
-});
-
 config.global.plugins.push(Oruga);
 
 let router: Router;
 
 beforeEach(async () => {
+  vi.mock("@/composition/apollo/actor", () => {
+    return {
+      useCurrentUserClient: () => {
+        const error = null;
+        const loading = null;
+        const currentUser = computed(() => {
+          return {
+            id: 123,
+            email: "test@mobilizon.test",
+            isLoggedIn: true,
+            role: MemberRole.ADMINISTRATOR,
+          };
+        });
+        return { currentUser, error, loading };
+      },
+    };
+  });
+
   router = createRouter({
     history: createWebHistory(),
     routes: routes,

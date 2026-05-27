@@ -13,66 +13,66 @@ import { MemberRole } from "@/types/enums";
 import { PERSON_MEMBERSHIPS } from "@/graphql/actor";
 import { FETCH_GROUP_EVENTS } from "@/graphql/event";
 
-vi.mock("@/composition/apollo/actor", () => {
-  return {
-    useCurrentActorClient: () => {
-      const error = null;
-      const loading = null;
-      const currentActor = computed(() => {
-        return {
-          id: 123,
-          name: "test",
-          domain: null,
-          preferredUsername: "test",
-        };
-      });
-      return { currentActor, error, loading };
-    },
-    useCurrentUserIdentities: () => {
-      const error = null;
-      const loading = null;
-      const identities = computed(() => {
-        return [
-          {
-            __typename: "Person",
-            avatar: null,
-            domain: null,
-            id: "2",
-            name: "test",
-            preferredUsername: "test",
-            summary: null,
-            type: "PERSON",
-            url: "http://mobilizon.test/@test",
-          },
-        ];
-      });
-      return { identities, error, loading };
-    },
-    usePersonStatusGroup: () => {
-      const error = null;
-      const loading = null;
-      const person = computed(() => {
-        return {
-          memberships: {
-            total: 1,
-            elements: [
-              {
-                role: MemberRole.ADMINISTRATOR,
-              },
-            ],
-          },
-        };
-      });
-      return { person, error, loading };
-    },
-  };
-});
-
 config.global.plugins.push(Oruga);
 
 let router: Router;
 
 beforeEach(async () => {
+  vi.mock("@/composition/apollo/actor", () => {
+    return {
+      useCurrentActorClient: () => {
+        const error = null;
+        const loading = null;
+        const currentActor = computed(() => {
+          return {
+            id: 123,
+            name: "test",
+            domain: null,
+            preferredUsername: "test",
+          };
+        });
+        return { currentActor, error, loading };
+      },
+      useCurrentUserIdentities: () => {
+        const error = null;
+        const loading = null;
+        const identities = computed(() => {
+          return [
+            {
+              __typename: "Person",
+              avatar: null,
+              domain: null,
+              id: "2",
+              name: "test",
+              preferredUsername: "test",
+              summary: null,
+              type: "PERSON",
+              url: "http://mobilizon.test/@test",
+            },
+          ];
+        });
+        return { identities, error, loading };
+      },
+      usePersonStatusGroup: () => {
+        const error = null;
+        const loading = null;
+        const person = computed(() => {
+          return {
+            memberships: {
+              total: 1,
+              elements: [
+                {
+                  role: MemberRole.ADMINISTRATOR,
+                },
+              ],
+            },
+          };
+        });
+        return { person, error, loading };
+      },
+    };
+  });
+
   router = createRouter({
     history: createWebHistory(),
     routes: routes,

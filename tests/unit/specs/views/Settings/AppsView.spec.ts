@@ -14,25 +14,25 @@ import {
 } from "@/graphql/application";
 import { computed } from "vue";
 
-vi.mock("@/composition/apollo/actor", () => {
-  return {
-    useLoggedUser: () => {
-      const error = null;
-      const onError = null;
-      const loading = null;
-      const loggedUser = computed(() => {
-        return {};
-      });
-      return { loggedUser, error, onError, loading };
-    },
-  };
-});
-
 config.global.plugins.push(Oruga);
 
 let router: Router;
 
 beforeEach(async () => {
+  vi.mock("@/composition/apollo/actor", () => {
+    return {
+      useLoggedUser: () => {
+        const error = null;
+        const onError = null;
+        const loading = null;
+        const loggedUser = computed(() => {
+          return {};
+        });
+        return { loggedUser, error, onError, loading };
+      },
+    };
+  });
+
   router = createRouter({
     history: createWebHistory(),
     routes: routes,

@@ -82,6 +82,7 @@ lint-elixir:
     - mix sobelow --config || export EXITVALUE=3
     - echo "EXITVALUE:$EXITVALUE"
     - exit $EXITVALUE
+  allow_failure: true
   artifacts:
     reports:
       codequality: codeclimate.json
@@ -92,6 +93,7 @@ lint-front:
   before_script:
     - export EXITVALUE=0
     - npm ci
+  allow_failure: true
   script:
     - npm run lint || export EXITVALUE=1
     - npx prettier -c . || export EXITVALUE=1

@@ -16,29 +16,29 @@ import {
 import { computed } from "vue";
 import { eventParticipantMock } from "../../mocks/event";
 
-vi.mock("@/composition/apollo/actor", () => {
-  return {
-    useCurrentActorClient: () => {
-      const error = null;
-      const loading = null;
-      const currentActor = computed(() => {
-        return {
-          id: 123,
-          name: "test",
-          domain: null,
-          preferredUsername: "test",
-        };
-      });
-      return { currentActor, error, loading };
-    },
-  };
-});
-
 config.global.plugins.push(Oruga);
 
 let router: Router;
 
 beforeEach(async () => {
+  vi.mock("@/composition/apollo/actor", () => {
+    return {
+      useCurrentActorClient: () => {
+        const error = null;
+        const loading = null;
+        const currentActor = computed(() => {
+          return {
+            id: 123,
+            name: "test",
+            domain: null,
+            preferredUsername: "test",
+          };
+        });
+        return { currentActor, error, loading };
+      },
+    };
+  });
+
   router = createRouter({
     history: createWebHistory(),
     routes: routes,
