@@ -87,19 +87,22 @@
             />
           </p>
           <div v-if="!attributedToAGroup">
-            <p class="text-red-800">
-              {{ t("This event is not published by a group.") }}<br />{{
-                t(
-                  "Group pages display all events, activities and posts from an organization and can have followers."
-                )
-              }}
-            </p>
-            <o-button
-              tag="router-link"
-              variant="primary"
-              :to="{ name: RouteName.CREATE_GROUP }"
-              >{{ t("Create group") }}</o-button
-            >
+            <o-notification variant="info">
+              <p class="mb-2">
+                {{ t("This event is not published by a group.") }}
+                {{
+                  t(
+                    "Group pages display all events, activities and posts from an organization and can have followers."
+                  )
+                }}
+              </p>
+              <o-button
+                tag="router-link"
+                variant="primary"
+                :to="{ name: RouteName.CREATE_GROUP }"
+                >{{ t("Create group") }}</o-button
+              >
+            </o-notification>
           </div>
         </div>
       </section>
