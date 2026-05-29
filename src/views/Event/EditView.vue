@@ -53,15 +53,15 @@
           </o-field>
           <p v-if="!attributedToAGroup && organizerActorEqualToCurrentActor">
             {{
-              t("The event will show as attributed to your personal profile.")
+              t("The event will show as published by your personal profile.")
             }}
           </p>
           <p v-else-if="!attributedToAGroup">
-            {{ t("The event will show as attributed to this profile.") }}
+            {{ t("The event will show as published by this profile.") }}
           </p>
           <p v-else>
             <span>{{
-              t("The event will show as attributed to this group.")
+              t("The event will show as published by this group.")
             }}</span>
             <span
               v-if="event.contacts && event.contacts.length"

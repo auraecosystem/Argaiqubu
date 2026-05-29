@@ -95,7 +95,7 @@ exports[`EditView > Create event - draft 1`] = `
           </div>
           <!---->
         </div>
-        <p>The event will show as attributed to this profile.</p>
+        <p>The event will show as published by this profile.</p>
         <div>
           <p class="text-red-800">This event is not published by a group.<br>A group lets you organize events in a calendar, search for them, track them, share them across the fediverse, write posts and announcements.</p><a href="/groups/create" class="o-button o-button--primary" data-oruga="button" role="button" tabindex="0"><span class="o-button__wrapper"><!----><span class="o-button__label">Create group</span>
             <!----></span>
@@ -512,7 +512,7 @@ exports[`EditView > Create event - draft 2`] = `
           </div>
           <!---->
         </div>
-        <p>The event will show as attributed to this profile.</p>
+        <p>The event will show as published by this profile.</p>
         <div>
           <p class="text-red-800">This event is not published by a group.<br>A group lets you organize events in a calendar, search for them, track them, share them across the fediverse, write posts and announcements.</p><a href="/groups/create" class="o-button o-button--primary" data-oruga="button" role="button" tabindex="0"><span class="o-button__wrapper"><!----><span class="o-button__label">Create group</span>
             <!----></span>
@@ -929,7 +929,7 @@ exports[`EditView > Update old event 1`] = `
           </div>
           <!---->
         </div>
-        <p>The event will show as attributed to this profile.</p>
+        <p>The event will show as published by this profile.</p>
         <div>
           <p class="text-red-800">This event is not published by a group.<br>A group lets you organize events in a calendar, search for them, track them, share them across the fediverse, write posts and announcements.</p><a href="/groups/create" class="o-button o-button--primary" data-oruga="button" role="button" tabindex="0"><span class="o-button__wrapper"><!----><span class="o-button__label">Create group</span>
             <!----></span>
@@ -1346,7 +1346,7 @@ exports[`EditView > Update old event 2`] = `
           </div>
           <!---->
         </div>
-        <p>The event will show as attributed to this profile.</p>
+        <p>The event will show as published by this profile.</p>
         <div>
           <p class="text-red-800">This event is not published by a group.<br>A group lets you organize events in a calendar, search for them, track them, share them across the fediverse, write posts and announcements.</p><a href="/groups/create" class="o-button o-button--primary" data-oruga="button" role="button" tabindex="0"><span class="o-button__wrapper"><!----><span class="o-button__label">Create group</span>
             <!----></span>
