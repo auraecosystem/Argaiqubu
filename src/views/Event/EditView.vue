@@ -90,7 +90,7 @@
             <p class="text-red-800">
               {{ t("This event is not published by a group.") }}<br />{{
                 t(
-                  "A group lets you organize events in a calendar, search for them, track them, share them across the fediverse, write posts and announcements."
+                  "Group pages display all events, activities and posts from an organization and can have followers."
                 )
               }}
             </p>
