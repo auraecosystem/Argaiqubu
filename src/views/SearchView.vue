@@ -370,10 +370,7 @@
             variant="success"
             position="left"
           />
-          <o-dropdown
-            v-if="contentType !== ContentType.GROUPS"
-            aria-role="list"
-          >
+          <o-dropdown v-if="contentType == ContentType.EVENTS" aria-role="list">
             <template #trigger>
               <o-button icon-left="rss">{{ t("Subscribe") }}</o-button>
             </template>
