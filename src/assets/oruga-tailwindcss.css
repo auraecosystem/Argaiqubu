@@ -189,7 +189,7 @@ body {
 }
 .dropdown-menu {
   min-width: 12em;
-  @apply bg-white dark:bg-zinc-700 shadow-lg rounded text-start py-2;
+  @apply bg-[#1e7d97] dark:bg-zinc-700 shadow-lg rounded text-start py-2;
 }
 .dropdown-item {
   @apply relative inline-flex gap-1 no-underline p-2 cursor-pointer w-full hover:bg-[#f5f5f5] hover:text-black;
