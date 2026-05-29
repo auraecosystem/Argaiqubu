@@ -385,7 +385,7 @@
                 class="inline-flex gap-1"
               >
                 <CalendarSync />
-                {{ t("ICS/WebCal feed of the actual search") }}
+                {{ t("ICS/WebCal feed for this search") }}
               </a>
             </o-dropdown-item>
             <o-dropdown-item has-link aria-role="menuitem">
@@ -396,7 +396,7 @@
                 class="inline-flex gap-1"
               >
                 <RSS />
-                {{ t("RSS/Atom feed of the actual search") }}
+                {{ t("RSS/Atom feed for this search") }}
               </a>
             </o-dropdown-item>
           </o-dropdown>
