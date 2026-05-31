@@ -1197,6 +1197,64 @@ defmodule Mobilizon.Web.Resolvers.EventTest do
     }
     """
 
+    test "update_event/3 updates an event with a picture UUID", %{
+      conn: conn,
+      actor: actor,
+      user: user
+    } do
+      media = %{name: "my pic", alt: "represents something", file: "picture.png"}
+
+      event = insert(:event, organizer_actor: actor)
+
+      map = %{
+        "query" => @upload_media_mutation,
+        "variables" => media,
+        media.file => %Plug.Upload{
+          path: "test/fixtures/picture.png",
+          filename: media.file
+        }
+      }
+
+      res =
+        conn
+        |> auth_conn(user)
+        |> put_req_header("content-type", "multipart/form-data")
+        |> post(
+          "/api",
+          map
+        )
+        |> json_response(200)
+
+      assert res["errors"] == nil
+      assert res["data"]["uploadMedia"]["name"] == media.name
+      media_uuid = res["data"]["uploadMedia"]["uuid"]
+      assert media_uuid !== "" and not is_nil(media_uuid)
+
+      res =
+        conn
+        |> auth_conn(user)
+        |> AbsintheHelpers.graphql_query(
+          query: @update_event_mutation,
+          variables: %{
+            eventId: event.id,
+            title: "come to my event",
+            description: "it will be fine",
+            begins_on:
+              "#{DateTime.utc_now() |> DateTime.truncate(:second) |> DateTime.to_iso8601()}",
+            organizer_actor_id: "#{actor.id}",
+            category: "PARTY",
+            picture: %{
+              media_uuid: "#{media_uuid}"
+            }
+          }
+        )
+
+      assert res["errors"] == nil
+      assert res["data"]["updateEvent"]["title"] == "come to my event"
+
+      assert res["data"]["updateEvent"]["picture"]["name"] == media.name
+    end
+
     test "respects the draft status", %{conn: conn, actor: actor, user: user} do
       event = insert(:event, organizer_actor: actor, draft: true)
 
