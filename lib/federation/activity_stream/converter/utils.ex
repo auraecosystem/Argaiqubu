@@ -173,6 +173,21 @@ defmodule Mobilizon.Federation.ActivityStream.Converter.Utils do
     end
   end
 
+  # Only when both actor and attributedTo fields are same, we check if it's Group actor (Prepare Issue #1977)
+  def maybe_fetch_actor_and_attributed_to_id(%{
+        "actor" => actor_url,
+        "attributedTo" => attributed_to_url
+      })
+      when actor_url == attributed_to_url do
+    case fetch_actor(actor_url) do
+      {:ok, %Actor{type: actor_type} = actor} ->
+        {:ok, actor, if(actor_type == :Group, do: actor, else: nil)}
+
+      {:error, err} ->
+        {:error, err}
+    end
+  end
+
   # If we only have attributedTo and no actor, take attributedTo as the actor
   def maybe_fetch_actor_and_attributed_to_id(%{
         "attributedTo" => attributed_to_url

@@ -16,8 +16,8 @@
 </template>
 <script lang="ts" setup>
 import debounce from "lodash/debounce";
-import { ITodo } from "../../types/todos";
-import { UPDATE_TODO } from "../../graphql/todos";
+import { ITodo } from "@/types/todos";
+import { UPDATE_TODO } from "@/graphql/todos";
 import { Snackbar } from "@/plugins/snackbar";
 import { computed, inject, ref } from "vue";
 import { useMutation } from "@vue/apollo-composable";

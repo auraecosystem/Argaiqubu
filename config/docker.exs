@@ -70,6 +70,7 @@ config :mobilizon, :instance,
   federating: System.get_env("MOBILIZON_INSTANCE_FEDERATING", "true") == "true",
   enable_instance_feeds:
     System.get_env("MOBILIZON_INSTANCE_ENABLE_INSTANCE_FEEDS", "true") == "true",
+  enable_search_feeds: System.get_env("MOBILIZON_INSTANCE_ENABLE_SEARCH_FEEDS", "true") == "true",
   email_from: System.get_env("MOBILIZON_INSTANCE_EMAIL", "noreply@mobilizon.lan"),
   email_reply_to: System.get_env("MOBILIZON_REPLY_EMAIL", "noreply@mobilizon.lan")
 

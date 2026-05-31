@@ -11,7 +11,7 @@
       ref="mapComponent"
       @ready="onMapReady"
     >
-      <l-tile-layer :url="tiles?.endpoint" :attribution="attribution">
+      <l-tile-layer :url="tiles?.endpoint" :attribution="attribution" :options="{ referrerPolicy: 'strict-origin-when-cross-origin' }">
       </l-tile-layer>
       <l-control-zoom
         position="topleft"

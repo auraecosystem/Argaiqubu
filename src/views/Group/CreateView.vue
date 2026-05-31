@@ -224,9 +224,9 @@
 
 <script lang="ts" setup>
 import { Group, usernameWithDomain, displayName } from "@/types/actor";
-import RouteName from "../../router/name";
-import { convertToUsername } from "../../utils/username";
-import PictureUpload from "../../components/PictureUpload.vue";
+import RouteName from "@/router/name";
+import { convertToUsername } from "@/utils/username";
+import PictureUpload from "@/components/PictureUpload.vue";
 import { ErrorResponse } from "@/types/errors.model";
 import { ServerParseError } from "@apollo/client/link/http";
 import { useCurrentActorClient } from "@/composition/apollo/actor";

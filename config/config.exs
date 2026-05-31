@@ -39,6 +39,7 @@ config :mobilizon, :instance,
   activity_keep_number: 100,
   duration_of_long_event: 30,
   enable_instance_feeds: true,
+  enable_search_feeds: true,
   email_from: "noreply@localhost",
   email_reply_to: "noreply@localhost"
 

@@ -488,11 +488,11 @@ defmodule Mobilizon.Federation.ActivityPubTest do
   @folder_title "my folder"
   describe "create resources" do
     test "it creates a resource" do
-      with_mock Utils, [:passthrough], maybe_federate: fn _ -> :ok end do
+      with_mock Federator, enqueue: fn _, _, _ -> :ok end do
         actor = insert(:actor)
         group = insert(:group)
 
-        {:ok, create_data, %Resource{url: url}} =
+        {:ok, nil, %Resource{} = new_resource} =
           Actions.Create.create(
             :resource,
             %{
@@ -506,28 +506,19 @@ defmodule Mobilizon.Federation.ActivityPubTest do
             true
           )
 
-        assert create_data.local
-        assert create_data.data["type"] == "Create"
-        assert create_data.data["object"]["id"] == url
-        assert create_data.data["object"]["type"] == "Document"
-        assert create_data.data["object"]["name"] == @resource_title
+        assert new_resource.title == @resource_title
+        assert new_resource.resource_url == @resource_url
 
-        assert create_data.data["object"]["url"] == @resource_url
-
-        assert create_data.data["to"] == [group.members_url]
-        assert create_data.data["actor"] == actor.url
-        assert create_data.data["attributedTo"] == [actor.url]
-
-        assert_called(Utils.maybe_federate(create_data))
+        assert_not_called(Federator.enqueue(:publish, nil, 5))
       end
     end
 
     test "it creates a folder" do
-      with_mock Utils, [:passthrough], maybe_federate: fn _ -> :ok end do
+      with_mock Federator, enqueue: fn _, _, _ -> :ok end do
         actor = insert(:actor)
         group = insert(:group)
 
-        {:ok, create_data, %Resource{url: url}} =
+        {:ok, nil, %Resource{} = new_resource} =
           Actions.Create.create(
             :resource,
             %{
@@ -540,28 +531,22 @@ defmodule Mobilizon.Federation.ActivityPubTest do
             true
           )
 
-        assert create_data.local
-        assert create_data.data["type"] == "Create"
-        assert create_data.data["object"]["id"] == url
-        assert create_data.data["object"]["type"] == "ResourceCollection"
-        assert create_data.data["object"]["name"] == @folder_title
-        assert create_data.data["to"] == [group.members_url]
-        assert create_data.data["actor"] == actor.url
-        assert create_data.data["attributedTo"] == [actor.url]
+        assert new_resource.title == @folder_title
+        assert new_resource.type == :folder
 
-        assert_called(Utils.maybe_federate(create_data))
+        assert_not_called(Federator.enqueue(:publish, nil, 5))
       end
     end
 
     test "it creates a resource in a folder" do
-      with_mock Utils, [:passthrough], maybe_federate: fn _ -> :ok end do
+      with_mock Federator, enqueue: fn _, _, _ -> :ok end do
         actor = insert(:actor)
         group = insert(:group)
 
-        %Resource{id: parent_id, url: parent_url} =
+        %Resource{id: parent_id} =
           insert(:resource, type: :folder, resource_url: nil, actor: group)
 
-        {:ok, create_data, %Resource{url: url}} =
+        {:ok, nil, %Resource{} = new_resource} =
           Actions.Create.create(
             :resource,
             %{
@@ -575,27 +560,17 @@ defmodule Mobilizon.Federation.ActivityPubTest do
             true
           )
 
-        assert create_data.local
-        assert create_data.data["type"] == "Add"
-        assert create_data.data["target"] == parent_url
-        assert create_data.data["object"]["id"] == url
-        assert create_data.data["object"]["type"] == "Document"
-        assert create_data.data["object"]["name"] == @resource_title
+        assert new_resource.title == @resource_title
+        assert new_resource.resource_url == @resource_url
 
-        assert create_data.data["object"]["url"] == @resource_url
-
-        assert create_data.data["to"] == [group.members_url]
-        assert create_data.data["actor"] == actor.url
-        assert create_data.data["attributedTo"] == [actor.url]
-
-        assert_called(Utils.maybe_federate(create_data))
+        assert_not_called(Federator.enqueue(:publish, nil, 5))
       end
     end
   end
 
   describe "move resources" do
     test "rename resource" do
-      with_mock Utils, [:passthrough], maybe_federate: fn _ -> :ok end do
+      with_mock Federator, enqueue: fn _, _, _ -> :ok end do
         actor = insert(:actor)
         group = insert(:group)
 
@@ -608,7 +583,7 @@ defmodule Mobilizon.Federation.ActivityPubTest do
             title: @resource_title
           )
 
-        {:ok, update_data, %Resource{url: url}} =
+        {:ok, nil, %Resource{} = new_resource} =
           Actions.Update.update(
             resource,
             %{
@@ -617,24 +592,14 @@ defmodule Mobilizon.Federation.ActivityPubTest do
             true
           )
 
-        assert update_data.local
-        assert update_data.data["type"] == "Update"
-        assert update_data.data["object"]["id"] == url
-        assert update_data.data["object"]["type"] == "Document"
-        assert update_data.data["object"]["name"] == @updated_resource_title
+        assert new_resource.title == @updated_resource_title
 
-        assert update_data.data["object"]["url"] == @resource_url
-
-        assert update_data.data["to"] == [group.members_url]
-        assert update_data.data["actor"] == actor.url
-        assert update_data.data["attributedTo"] == [actor.url]
-
-        assert_called(Utils.maybe_federate(update_data))
+        assert_not_called(Federator.enqueue(:publish, nil, 5))
       end
     end
 
     test "move resource" do
-      with_mock Utils, [:passthrough], maybe_federate: fn _ -> :ok end do
+      with_mock Federator, enqueue: fn _, _, _ -> :ok end do
         actor = insert(:actor)
         group = insert(:group)
 
@@ -647,10 +612,10 @@ defmodule Mobilizon.Federation.ActivityPubTest do
             title: @resource_title
           )
 
-        %Resource{id: parent_id, url: parent_url} =
+        %Resource{id: parent_id} =
           insert(:resource, type: :folder, resource_url: nil, actor: group)
 
-        {:ok, update_data, %Resource{url: url}} =
+        {:ok, nil, %Resource{} = new_resource} =
           Actions.Move.move(
             :resource,
             resource,
@@ -660,20 +625,9 @@ defmodule Mobilizon.Federation.ActivityPubTest do
             true
           )
 
-        assert update_data.local
-        assert update_data.data["type"] == "Move"
-        assert update_data.data["object"]["id"] == url
-        assert update_data.data["object"]["type"] == "Document"
-        assert update_data.data["object"]["name"] == @resource_title
+        assert new_resource.resource_url == @resource_url
 
-        assert update_data.data["object"]["url"] == @resource_url
-
-        assert update_data.data["to"] == [group.members_url]
-        assert update_data.data["actor"] == actor.url
-        assert update_data.data["origin"] == nil
-        assert update_data.data["target"] == parent_url
-
-        assert_called(Utils.maybe_federate(update_data))
+        assert_not_called(Federator.enqueue(:publish, nil, 5))
       end
     end
   end

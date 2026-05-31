@@ -24,9 +24,9 @@
   </div>
 </template>
 <script lang="ts" setup>
-import { ITodo } from "../../types/todos";
-import RouteName from "../../router/name";
-import { UPDATE_TODO } from "../../graphql/todos";
+import { ITodo } from "@/types/todos";
+import RouteName from "@/router/name";
+import { UPDATE_TODO } from "@/graphql/todos";
 import { computed, inject, ref } from "vue";
 import { useMutation } from "@vue/apollo-composable";
 import Account from "vue-material-design-icons/Account.vue";

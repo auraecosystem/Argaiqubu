@@ -17,8 +17,8 @@ defmodule Mobilizon.Web.Router do
     plug(Mobilizon.Web.Plugs.SetLocalePlug)
 
     plug(Mobilizon.Web.Plugs.HTTPSecurityPlug,
-      script_src: ["cdn.jsdelivr.net 'sha256-zkCwvTwqwJMew/8TKv7bTLh94XRSNBvT/o/NZCuf5Kc='"],
-      style_src: ["cdn.jsdelivr.net 'unsafe-inline'"],
+      script_src: ["cdn.jsdelivr.net 'unsafe-inline' "],
+      style_src: ["cdn.jsdelivr.net 'unsafe-inline' "],
       font_src: ["cdn.jsdelivr.net"]
     )
   end
@@ -175,6 +175,7 @@ defmodule Mobilizon.Web.Router do
     get("/events/:uuid/export/:format", FeedController, :event)
     get("/events/going/:token/:format", FeedController, :going)
     get("/feed/instance/:format", FeedController, :instance)
+    get("/feed/search/:format", FeedController, :search)
   end
 
   ## MOBILIZON
@@ -216,10 +217,7 @@ defmodule Mobilizon.Web.Router do
     get("/interact", PageController, :interact)
 
     get("/auth/:provider", AuthController, :request)
-    # Have a look at https://github.com/ueberauth/ueberauth/issues/125 some day
-    # Also possible CSRF issue
     get("/auth/:provider/callback", AuthController, :callback)
-    post("/auth/:provider/callback", AuthController, :callback)
 
     post("/apps", ApplicationController, :create_application)
     get("/oauth/authorize", ApplicationController, :authorize)
@@ -229,6 +227,7 @@ defmodule Mobilizon.Web.Router do
 
   pipeline :login do
     plug(:accepts, ["html", "json"])
+    plug(:put_secure_browser_headers)
   end
 
   scope "/", Mobilizon.Web do

@@ -364,9 +364,60 @@
           </span>
         </p>
         <div class="flex gap-2">
+          <o-tooltip
+            :label="t('URL copied to clipboard')"
+            :active="showCopiedTooltip.atom || showCopiedTooltip.ics"
+            variant="success"
+            position="left"
+          />
+          <o-dropdown
+            v-if="contentType !== ContentType.GROUPS"
+            aria-role="list"
+          >
+            <template #trigger>
+              <o-button icon-left="rss">{{ t("Subscribe") }}</o-button>
+            </template>
+            <o-dropdown-item has-link aria-role="menuitem">
+              <a
+                :href="search_url_ics"
+                :title="t('Atom feed for events')"
+                @click="(e: Event) => copyURL(e, search_url_ics, 'ics')"
+                class="inline-flex gap-1"
+              >
+                <CalendarSync />
+                {{ t("ICS/WebCal feed of the actual search") }}
+              </a>
+            </o-dropdown-item>
+            <o-dropdown-item has-link aria-role="menuitem">
+              <a
+                :href="search_url_atom"
+                :title="t('ICS feed for events')"
+                @click="(e: Event) => copyURL(e, search_url_atom, 'ics')"
+                class="inline-flex gap-1"
+              >
+                <RSS />
+                {{ t("RSS/Atom feed of the actual search") }}
+              </a>
+            </o-dropdown-item>
+          </o-dropdown>
           <label class="sr-only" for="sortOptionSelect">{{
             t("Sort by")
           }}</label>
+          <o-button
+            v-show="!isOnline"
+            @click="
+              () =>
+                (mode = mode === ViewMode.MAP ? ViewMode.LIST : ViewMode.MAP)
+            "
+            :icon-left="mode === ViewMode.MAP ? 'view-list' : 'map'"
+          >
+            <span v-if="mode === ViewMode.LIST">
+              {{ t("Map") }}
+            </span>
+            <span v-else-if="mode === ViewMode.MAP">
+              {{ t("List") }}
+            </span>
+          </o-button>
           <o-select
             v-if="contentType !== ContentType.GROUPS"
             :placeholder="t('Sort by events')"
@@ -395,21 +446,6 @@
               {{ sortOption.label }}
             </option>
           </o-select>
-          <o-button
-            v-show="!isOnline"
-            @click="
-              () =>
-                (mode = mode === ViewMode.MAP ? ViewMode.LIST : ViewMode.MAP)
-            "
-            :icon-left="mode === ViewMode.MAP ? 'view-list' : 'map'"
-          >
-            <span v-if="mode === ViewMode.LIST">
-              {{ t("Map") }}
-            </span>
-            <span v-else-if="mode === ViewMode.MAP">
-              {{ t("List") }}
-            </span>
-          </o-button>
         </div>
       </div>
       <div v-if="mode === ViewMode.LIST">
@@ -620,6 +656,9 @@ import EmptyContent from "@/components/Utils/EmptyContent.vue";
 import SkeletonGroupResultList from "@/components/Group/SkeletonGroupResultList.vue";
 import SkeletonEventResultList from "@/components/Event/SkeletonEventResultList.vue";
 import { arrayTransformer } from "@/utils/route";
+import CalendarSync from "vue-material-design-icons/CalendarSync.vue";
+import RSS from "vue-material-design-icons/Rss.vue";
+import { showCopiedTooltip, tokenToURL, copyURL } from "@/utils/share";
 
 const EventMarkerMap = defineAsyncComponent(
   () => import("@/components/Search/EventMarkerMap.vue")
@@ -1137,4 +1176,53 @@ const { result: searchLongElementsResult } = useQuery<{
   zoom: zoom.value,
   boostLanguages: boostLanguagesQuery.value,
 }));
+
+const search_url_param = computed(() => {
+  const params = new URLSearchParams({
+    ...(search.value && { term: search.value }),
+    ...(tag.value && { tags: tag.value }),
+    ...(geoHashLocation.value && { location: geoHashLocation.value }),
+    ...(geoHashLocation.value &&
+      radius.value && {
+        radius: String(radius.value),
+      }),
+    // "category" is not implemented
+    ...(categoryOneOf.value?.length && {
+      category_one_of: categoryOneOf.value.join(","),
+    }),
+    ...(statusOneOf.value?.length && {
+      status_one_of: statusOneOf.value.join(","),
+    }),
+    ...(languageOneOf.value?.length && {
+      language_one_of: languageOneOf.value.join(","),
+    }),
+    ...(boostLanguagesQuery.value?.length && {
+      boost_languages: boostLanguagesQuery.value.join(","),
+    }),
+    ...(mode.value === ViewMode.MAP &&
+      bbox.value && {
+        bbox: bbox.value,
+      }),
+    ...(mode.value === ViewMode.MAP &&
+      bbox.value &&
+      zoom.value != null && {
+        zoom: String(zoom.value),
+      }),
+    ...(searchTarget.value && {
+      search_target: searchTarget.value,
+    }),
+    ...(isOnline.value && { type: "ONLINE" }),
+    ...(contentType.value == ContentType.EVENTS && { long_events: "false" }),
+    ...(contentType.value == ContentType.LONGEVENTS && { long_events: "true" }),
+  });
+
+  return params.toString();
+});
+
+const search_url_ics = computed(() => {
+  return tokenToURL("feed/search/ics?") + search_url_param.value;
+});
+const search_url_atom = computed(() => {
+  return tokenToURL("feed/search/atom?") + search_url_param.value;
+});
 </script>
