@@ -136,8 +136,8 @@ defmodule Mobilizon.Federation.ActivityStream.Converter.Utils do
       })
       when is_nil(attributed_to_url) do
     case fetch_actor(actor_url) do
-      {:ok, %Actor{} = actor} ->
-        {:ok, actor, nil}
+      {:ok, %Actor{type: actor_type} = actor} ->
+        {:ok, actor, if(actor_type == :Group, do: actor, else: nil)}
 
       {:error, err} ->
         {:error, err}
@@ -150,8 +150,8 @@ defmodule Mobilizon.Federation.ActivityStream.Converter.Utils do
       })
       when is_nil(actor_url) do
     case fetch_actor(attributed_to_url) do
-      {:ok, %Actor{} = actor} ->
-        {:ok, actor, nil}
+      {:ok, %Actor{type: actor_type} = actor} ->
+        {:ok, actor, if(actor_type == :Group, do: actor, else: nil)}
 
       {:error, err} ->
         {:error, err}
@@ -188,13 +188,29 @@ defmodule Mobilizon.Federation.ActivityStream.Converter.Utils do
     end
   end
 
+  # If we only have actor and no attributedTo, take actor as attributedTo if is group
+  def maybe_fetch_actor_and_attributed_to_id(%{
+        "actor" => actor_url
+      }) do
+    case fetch_actor(actor_url) do
+      {:ok, %Actor{type: actor_type} = actor} ->
+        {:ok, actor, if(actor_type == :Group, do: actor, else: nil)}
+
+      {:error, err} ->
+        {:error, err}
+    end
+  end
+
   # If we only have attributedTo and no actor, take attributedTo as the actor
   def maybe_fetch_actor_and_attributed_to_id(%{
         "attributedTo" => attributed_to_url
       }) do
     case fetch_actor(attributed_to_url) do
-      {:ok, %Actor{} = attributed_to} -> {:ok, attributed_to, nil}
-      {:error, err} -> {:error, err}
+      {:ok, %Actor{type: actor_type} = attributed_to} ->
+        {:ok, attributed_to, if(actor_type == :Group, do: attributed_to, else: nil)}
+
+      {:error, err} ->
+        {:error, err}
     end
   end
 

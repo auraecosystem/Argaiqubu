@@ -181,6 +181,186 @@ defmodule Mobilizon.Federation.ActivityPub.TransmogrifierTest do
       end
     end
 
+    test "it works for incoming events with group in actor & attributedTo" do
+      %Actor{url: group_url, id: group_id} = group = insert(:group)
+      relay = Relay.get_actor()
+
+      with_mock ActivityPubActor, [:passthrough],
+        get_or_fetch_actor_by_url: fn url ->
+          case url do
+            ^group_url -> {:ok, group}
+            "https://www.w3.org/ns/activitystreams#Public" -> {:ok, relay}
+          end
+        end do
+        data = File.read!("test/fixtures/mobilizon-post-activity-group.json") |> Jason.decode!()
+
+        object =
+          data["object"] |> Map.put("actor", group_url) |> Map.put("attributedTo", group_url)
+
+        data =
+          data
+          |> Map.put("actor", group_url)
+          |> Map.put("attributedTo", group_url)
+          |> Map.put("object", object)
+
+        assert {:ok, %Activity{data: activity_data, local: false}, %Event{} = event} =
+                 Transmogrifier.handle_incoming(data)
+
+        assert event.organizer_actor_id == group_id
+        assert event.attributed_to_id == group_id
+        assert event.begins_on == ~U[2018-02-12T14:08:20Z]
+        assert event.ends_on == nil
+        assert activity_data["actor"] == group_url
+        assert activity_data["attributedTo"] == group_url
+        assert activity_data["object"]["actor"] == group_url
+        assert activity_data["object"]["attributedTo"] == group_url
+      end
+    end
+
+    test "it works for incoming events with group in attributedTo - actor is nil" do
+      %Actor{url: group_url, id: group_id} = group = insert(:group)
+      relay = Relay.get_actor()
+
+      with_mock ActivityPubActor, [:passthrough],
+        get_or_fetch_actor_by_url: fn url ->
+          case url do
+            ^group_url -> {:ok, group}
+            "https://www.w3.org/ns/activitystreams#Public" -> {:ok, relay}
+          end
+        end do
+        data = File.read!("test/fixtures/mobilizon-post-activity-group.json") |> Jason.decode!()
+
+        object =
+          data["object"] |> Map.put("actor", nil) |> Map.put("attributedTo", group_url)
+
+        data =
+          data
+          |> Map.put("actor", nil)
+          |> Map.put("attributedTo", group_url)
+          |> Map.put("object", object)
+
+        assert {:ok, %Activity{data: activity_data, local: false}, %Event{} = event} =
+                 Transmogrifier.handle_incoming(data)
+
+        assert event.organizer_actor_id == group_id
+        assert event.attributed_to_id == group_id
+        assert event.begins_on == ~U[2018-02-12T14:08:20Z]
+        assert event.ends_on == nil
+        assert activity_data["actor"] == group_url
+        assert activity_data["attributedTo"] == group_url
+        assert activity_data["object"]["actor"] == group_url
+        assert activity_data["object"]["attributedTo"] == group_url
+      end
+    end
+
+    test "it works for incoming events with group in attributedTo - no actor" do
+      %Actor{url: group_url, id: group_id} = group = insert(:group)
+      relay = Relay.get_actor()
+
+      with_mock ActivityPubActor, [:passthrough],
+        get_or_fetch_actor_by_url: fn url ->
+          case url do
+            ^group_url -> {:ok, group}
+            "https://www.w3.org/ns/activitystreams#Public" -> {:ok, relay}
+          end
+        end do
+        data = File.read!("test/fixtures/mobilizon-post-activity-group.json") |> Jason.decode!()
+
+        object =
+          data["object"] |> Map.delete("actor") |> Map.put("attributedTo", group_url)
+
+        data =
+          data
+          |> Map.delete("actor")
+          |> Map.put("attributedTo", group_url)
+          |> Map.put("object", object)
+
+        assert {:ok, %Activity{data: activity_data, local: false}, %Event{} = event} =
+                 Transmogrifier.handle_incoming(data)
+
+        assert event.organizer_actor_id == group_id
+        assert event.attributed_to_id == group_id
+        assert event.begins_on == ~U[2018-02-12T14:08:20Z]
+        assert event.ends_on == nil
+        assert activity_data["actor"] == group_url
+        assert activity_data["attributedTo"] == group_url
+        assert activity_data["object"]["actor"] == group_url
+        assert activity_data["object"]["attributedTo"] == group_url
+      end
+    end
+
+    test "it works for incoming events with group in actor - attributedTo is null" do
+      %Actor{url: group_url, id: group_id} = group = insert(:group)
+      relay = Relay.get_actor()
+
+      with_mock ActivityPubActor, [:passthrough],
+        get_or_fetch_actor_by_url: fn url ->
+          case url do
+            ^group_url -> {:ok, group}
+            "https://www.w3.org/ns/activitystreams#Public" -> {:ok, relay}
+          end
+        end do
+        data = File.read!("test/fixtures/mobilizon-post-activity-group.json") |> Jason.decode!()
+
+        object =
+          data["object"] |> Map.put("actor", group_url) |> Map.put("attributedTo", nil)
+
+        data =
+          data
+          |> Map.put("actor", nil)
+          |> Map.put("attributedTo", group_url)
+          |> Map.put("object", object)
+
+        assert {:ok, %Activity{data: activity_data, local: false}, %Event{} = event} =
+                 Transmogrifier.handle_incoming(data)
+
+        assert event.organizer_actor_id == group_id
+        assert event.attributed_to_id == group_id
+        assert event.begins_on == ~U[2018-02-12T14:08:20Z]
+        assert event.ends_on == nil
+        assert activity_data["actor"] == group_url
+        assert activity_data["attributedTo"] == group_url
+        assert activity_data["object"]["actor"] == group_url
+        assert activity_data["object"]["attributedTo"] == group_url
+      end
+    end
+
+    test "it works for incoming events with group in actor - no attributedTo" do
+      %Actor{url: group_url, id: group_id} = group = insert(:group)
+      relay = Relay.get_actor()
+
+      with_mock ActivityPubActor, [:passthrough],
+        get_or_fetch_actor_by_url: fn url ->
+          case url do
+            ^group_url -> {:ok, group}
+            "https://www.w3.org/ns/activitystreams#Public" -> {:ok, relay}
+          end
+        end do
+        data = File.read!("test/fixtures/mobilizon-post-activity-group.json") |> Jason.decode!()
+
+        object =
+          data["object"] |> Map.put("actor", group_url) |> Map.delete("attributedTo")
+
+        data =
+          data
+          |> Map.put("actor", nil)
+          |> Map.delete("attributedTo")
+          |> Map.put("object", object)
+
+        assert {:ok, %Activity{data: activity_data, local: false}, %Event{} = event} =
+                 Transmogrifier.handle_incoming(data)
+
+        assert event.organizer_actor_id == group_id
+        assert event.attributed_to_id == group_id
+        assert event.begins_on == ~U[2018-02-12T14:08:20Z]
+        assert event.ends_on == nil
+        assert activity_data["actor"] == group_url
+        assert activity_data["attributedTo"] == group_url
+        assert activity_data["object"]["actor"] == group_url
+        assert activity_data["object"]["attributedTo"] == group_url
+      end
+    end
+
     test "it works for incoming events with end date not null" do
       %Actor{url: group_url, id: group_id} = group = insert(:group)
 
