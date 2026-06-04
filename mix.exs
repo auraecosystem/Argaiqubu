@@ -247,7 +247,7 @@ defmodule Mobilizon.Mixfile do
       {:ecto_dev_logger, "~> 0.7"},
       {:castore, "~> 1.0"},
       {:credo_code_climate, "~> 0.1.0", only: [:dev, :test]},
-      {:json_polyfill, "~> 0.2", only: [:dev, :test]}
+      {:json_polyfill, "~> 0.2"}
     ] ++ oauth_deps()
   end
 
