@@ -26,10 +26,7 @@
           t("Federated Group Name")
         }}</label>
         <div class="field-body">
-          <o-field
-            :message="preferredUsernameErrors[0]"
-            :type="preferredUsernameErrors[1]"
-          >
+          <o-field>
             <o-input
               ref="preferredUsernameInput"
               aria-required="true"
@@ -39,12 +36,10 @@
               pattern="[a-z0-9_]+"
               id="group-preferred-username"
               :useHtml5Validation="true"
-              :validation-message="
-                group.preferredUsername
-                  ? t(
-                      'Only alphanumeric lowercased characters and underscores are supported.'
-                    )
-                  : null
+              :title="
+                t(
+                  'Only alphanumeric lowercased characters and underscores are supported.'
+                )
               "
             />
             <p class="control">
@@ -52,6 +47,11 @@
             </p>
           </o-field>
         </div>
+        <o-notification v-if="preferredUsernameErrors" variant="danger">
+          <p class="mb-2">
+            {{ preferredUsernameErrors }}
+          </p>
+        </o-notification>
         <i18n-t
           v-if="currentActor"
           keypath="This is like your federated username ({username}) for groups. It will allow the group to be found on the federation, and is guaranteed to be unique."
@@ -378,13 +378,7 @@ const summaryErrors = computed(() => {
 });
 
 const preferredUsernameErrors = computed(() => {
-  const message = fieldErrors.preferred_username
-    ? fieldErrors.preferred_username
-    : t(
-        "Only alphanumeric lowercased characters and underscores are supported."
-      );
-  const type = fieldErrors.preferred_username ? "danger" : undefined;
-  return [message, type];
+  return fieldErrors.preferred_username ?? null;
 });
 
 const { onDone, onError, mutate, loading } = useCreateGroup();
