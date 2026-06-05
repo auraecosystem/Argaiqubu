@@ -175,5 +175,3 @@ defmodule Mobilizon do
     end
   end
 end
-
-# TOUCHED
