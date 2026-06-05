@@ -388,7 +388,7 @@ defmodule Mobilizon.Actors.Actor do
       add_error(
         changeset,
         :preferred_username,
-        dgettext("errors", "This username is already taken.")
+        dgettext("errors", "A profile or group with that name already exists")
       )
     else
       _ -> changeset
