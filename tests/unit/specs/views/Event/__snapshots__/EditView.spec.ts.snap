@@ -103,7 +103,7 @@ exports[`EditView > Create event - draft 1`] = `
               <div class="o-notification__wrapper">
                 <!---->
                 <div class="o-notification__content">
-                  <p class="mb-2">This event is not published by a group. Group pages display all events, activities and posts from an organization and can have followers.</p><a href="/groups/create" class="o-button o-button--primary" data-oruga="button" role="button" tabindex="0"><span class="o-button__wrapper"><!----><span class="o-button__label">Create group</span>
+                  <p class="mb-2">If the event is published by your organization, you should press "change" to attribute the event to your organization group page. The group page gathers events, activities and posts and can have followers. If your organization doesn't have a group page yet, you can create it now.</p><a href="/groups/create" class="o-button o-button--primary" data-oruga="button" role="button" tabindex="0"><span class="o-button__wrapper"><!----><span class="o-button__label">Create group</span>
                     <!----></span>
                   </a>
                 </div>
@@ -530,7 +530,7 @@ exports[`EditView > Create event - draft 2`] = `
               <div class="o-notification__wrapper">
                 <!---->
                 <div class="o-notification__content">
-                  <p class="mb-2">This event is not published by a group. Group pages display all events, activities and posts from an organization and can have followers.</p><a href="/groups/create" class="o-button o-button--primary" data-oruga="button" role="button" tabindex="0"><span class="o-button__wrapper"><!----><span class="o-button__label">Create group</span>
+                  <p class="mb-2">If the event is published by your organization, you should press "change" to attribute the event to your organization group page. The group page gathers events, activities and posts and can have followers. If your organization doesn't have a group page yet, you can create it now.</p><a href="/groups/create" class="o-button o-button--primary" data-oruga="button" role="button" tabindex="0"><span class="o-button__wrapper"><!----><span class="o-button__label">Create group</span>
                     <!----></span>
                   </a>
                 </div>
@@ -957,7 +957,7 @@ exports[`EditView > Update old event 1`] = `
               <div class="o-notification__wrapper">
                 <!---->
                 <div class="o-notification__content">
-                  <p class="mb-2">This event is not published by a group. Group pages display all events, activities and posts from an organization and can have followers.</p><a href="/groups/create" class="o-button o-button--primary" data-oruga="button" role="button" tabindex="0"><span class="o-button__wrapper"><!----><span class="o-button__label">Create group</span>
+                  <p class="mb-2">If the event is published by your organization, you should press "change" to attribute the event to your organization group page. The group page gathers events, activities and posts and can have followers. If your organization doesn't have a group page yet, you can create it now.</p><a href="/groups/create" class="o-button o-button--primary" data-oruga="button" role="button" tabindex="0"><span class="o-button__wrapper"><!----><span class="o-button__label">Create group</span>
                     <!----></span>
                   </a>
                 </div>
@@ -1384,7 +1384,7 @@ exports[`EditView > Update old event 2`] = `
               <div class="o-notification__wrapper">
                 <!---->
                 <div class="o-notification__content">
-                  <p class="mb-2">This event is not published by a group. Group pages display all events, activities and posts from an organization and can have followers.</p><a href="/groups/create" class="o-button o-button--primary" data-oruga="button" role="button" tabindex="0"><span class="o-button__wrapper"><!----><span class="o-button__label">Create group</span>
+                  <p class="mb-2">If the event is published by your organization, you should press "change" to attribute the event to your organization group page. The group page gathers events, activities and posts and can have followers. If your organization doesn't have a group page yet, you can create it now.</p><a href="/groups/create" class="o-button o-button--primary" data-oruga="button" role="button" tabindex="0"><span class="o-button__wrapper"><!----><span class="o-button__label">Create group</span>
                     <!----></span>
                   </a>
                 </div>

@@ -89,10 +89,9 @@
           <div v-if="!attributedToAGroup">
             <o-notification variant="info">
               <p class="mb-2">
-                {{ t("This event is not published by a group.") }}
                 {{
                   t(
-                    "Group pages display all events, activities and posts from an organization and can have followers."
+                    'If the event is published by your organization, you should press "change" to attribute the event to your organization group page. The group page gathers events, activities and posts and can have followers. If your organization doesn\'t have a group page yet, you can create it now.'
                   )
                 }}
               </p>
