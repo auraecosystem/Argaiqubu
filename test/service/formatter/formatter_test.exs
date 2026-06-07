@@ -129,6 +129,28 @@ defmodule Mobilizon.Service.FormatterTest do
     end
   end
 
+  describe ".add_email_links" do
+    test "turning emails into links" do
+      text = "mailto:owner@ven.ue"
+
+      expected =
+        "<a href=\"#{text}\" target=\"_blank\" rel=\"noopener noreferrer ugc\">#{text}</a>"
+
+      assert {^expected, [], []} = Formatter.linkify(text)
+    end
+  end
+
+  describe ".add_tel_links" do
+    test "turning telephone numbers into links" do
+      text = "tel:+1804222111"
+
+      expected =
+        "<a href=\"#{text}\" target=\"_blank\" rel=\"noopener noreferrer ugc\">#{text}</a>"
+
+      assert {^expected, [], []} = Formatter.linkify(text)
+    end
+  end
+
   describe "add_user_links" do
     test "gives a replacement for user links, using local nicknames in user links text" do
       text = "@gsimg According to @archa_eme_, that is @daggsy. Also hello @archaeme@archae.me"
