@@ -21,6 +21,7 @@ import { LOGGED_USER_DRAFTS } from "@/graphql/actor";
 import { CONFIG } from "@/graphql/config";
 import { eventParticipantMock } from "../../mocks/event";
 import { configMock } from "../../mocks/config";
+import { setup_test_tiptap } from "../../mocks/tiptap";
 
 config.global.plugins.push(Oruga);
 
@@ -87,7 +88,7 @@ beforeEach(async () => {
     routes: routes,
   });
 
-  // await router.isReady();
+  setup_test_tiptap();
 });
 
 const generateWrapper = (

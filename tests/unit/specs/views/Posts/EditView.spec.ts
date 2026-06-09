@@ -16,6 +16,7 @@ import {
 } from "@/graphql/post";
 import { MemberRole } from "@/types/enums";
 import { computed } from "vue";
+import { setup_test_tiptap } from "../../mocks/tiptap";
 
 config.global.plugins.push(Oruga);
 
@@ -82,7 +83,7 @@ beforeEach(async () => {
     routes: routes,
   });
 
-  // await router.isReady();
+  setup_test_tiptap();
 });
 
 const generateWrapper = () => {
