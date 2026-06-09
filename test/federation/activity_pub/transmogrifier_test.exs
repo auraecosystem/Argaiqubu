@@ -15,7 +15,6 @@ defmodule Mobilizon.Federation.ActivityPub.TransmogrifierTest do
   alias Mobilizon.Actors.Actor
   alias Mobilizon.Discussions.Comment
   alias Mobilizon.Events.Event
-  alias Mobilizon.Resources.Resource
   alias Mobilizon.Todos.{Todo, TodoList}
 
   alias Mobilizon.Federation.ActivityPub
@@ -362,9 +361,9 @@ defmodule Mobilizon.Federation.ActivityPub.TransmogrifierTest do
     end
 
     test "it works for incoming events with end date not null" do
-      %Actor{url: group_url, id: group_id} = group = insert(:group)
+      %Actor{url: group_url} = group = insert(:group)
 
-      %Actor{url: actor_url, id: actor_id} =
+      %Actor{url: actor_url} =
         actor =
         insert(:actor,
           domain: "mobilizon.fr",
@@ -397,7 +396,7 @@ defmodule Mobilizon.Federation.ActivityPub.TransmogrifierTest do
           |> Map.put("attributedTo", group_url)
           |> Map.put("object", object)
 
-        assert {:ok, %Activity{data: activity_data, local: false}, %Event{} = event} =
+        assert {:ok, %Activity{local: false}, %Event{} = event} =
                  Transmogrifier.handle_incoming(data)
 
         assert event.begins_on == ~U[2018-02-12T14:08:20Z]
