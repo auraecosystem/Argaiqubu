@@ -73,12 +73,18 @@ defmodule Mobilizon.GraphQL.API.ReportTest do
                data: %{
                  "type" => "Flag",
                  "content" => ^comment,
-                 "object" => [^reported_url, ^comment_1_url, ^comment_2_url],
+                 "object" => object_urls,
                  "to" => [],
                  "cc" => [],
                  "actor" => ^relay_reporter_url
                }
              } = flag_activity
+
+      # Check object URLs contain expected values (order may vary for comments)
+      assert reported_url in object_urls
+      assert comment_1_url in object_urls
+      assert comment_2_url in object_urls
+      assert length(object_urls) == 3
     end
 
     test "creates a report that gets federated" do
@@ -112,12 +118,18 @@ defmodule Mobilizon.GraphQL.API.ReportTest do
                  "actor" => ^relay_reporter_url,
                  "cc" => [^reported_url],
                  "content" => ^encoded_comment,
-                 "object" => [^reported_url, ^comment_1_url, ^comment_2_url],
+                 "object" => object_urls,
                  "to" => []
                },
                local: true,
                recipients: [^reported_url]
              } = flag_activity
+
+      # Check object URLs contain expected values (order may vary for comments)
+      assert reported_url in object_urls
+      assert comment_1_url in object_urls
+      assert comment_2_url in object_urls
+      assert length(object_urls) == 3
     end
 
     test "updates report state" do
